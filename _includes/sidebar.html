@@ -11,7 +11,6 @@
   <p class="sidebar__role">{{ site.tagline }}</p>
 
   <nav class="sidebar__nav" aria-label="Primary">
-    <a href="{{ '/cv/' | relative_url }}"{% if u contains '/cv' %} class="is-active" aria-current="page"{% endif %}>CV</a>
     <a href="{{ '/research/' | relative_url }}"{% if u contains '/research' %} class="is-active" aria-current="page"{% endif %}>Research</a>
     <a href="{{ '/teaching/' | relative_url }}"{% if u contains '/teaching' %} class="is-active" aria-current="page"{% endif %}>Teaching</a>
     <a href="{{ '/posts/' | relative_url }}"{% if u contains '/posts' or page.layout == 'post' %} class="is-active" aria-current="page"{% endif %}>Posts</a>
