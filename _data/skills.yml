@@ -1,0 +1,9 @@
+# Grouped skills shown in the About section. Edit freely.
+- category: Languages
+  items: [Python, JavaScript, TypeScript, Go, SQL]
+
+- category: Frameworks
+  items: [React, Node.js, FastAPI, Django]
+
+- category: Tools & Infra
+  items: [Git, Docker, AWS, Linux, PostgreSQL]

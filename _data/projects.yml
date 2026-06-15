@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────────
+#  Add, remove, or reorder projects here. Each one becomes a card.
+#  `link` and `source` are optional — leave them out to hide a button.
+# ─────────────────────────────────────────────────────────────
+- name: Project One
+  description: >-
+    A one or two sentence description of what this project does, who it's for,
+    and what makes it interesting. Swap this out for something real.
+  tech: [Python, FastAPI, PostgreSQL]
+  link: ""
+  source: https://github.com/menghsuanrexhsieh
+
+- name: Project Two
+  description: >-
+    Another short blurb. Mention the problem you solved and the outcome —
+    "cut load times in half", "used by 2k people", etc.
+  tech: [TypeScript, React, Node.js]
+  link: ""
+  source: https://github.com/menghsuanrexhsieh
+
+- name: Project Three
+  description: >-
+    Keep these punchy. Three to six projects on the homepage is plenty;
+    link out to your GitHub for the rest.
+  tech: [Go, Docker]
+  link: ""
+  source: https://github.com/menghsuanrexhsieh

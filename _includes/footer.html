@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__copy">&copy; {{ 'now' | date: "%Y" }} {{ site.author }}</p>
+
+    <div class="footer__social">
+      {% if site.social.github != "" %}
+        <a href="https://github.com/{{ site.social.github }}" aria-label="GitHub" rel="me noopener" target="_blank">GitHub</a>
+      {% endif %}
+      {% if site.social.linkedin != "" %}
+        <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" aria-label="LinkedIn" rel="me noopener" target="_blank">LinkedIn</a>
+      {% endif %}
+      {% if site.social.twitter != "" %}
+        <a href="https://twitter.com/{{ site.social.twitter }}" aria-label="Twitter" rel="me noopener" target="_blank">Twitter</a>
+      {% endif %}
+      {% if site.social.email != "" %}
+        <a href="mailto:{{ site.social.email }}" aria-label="Email">Email</a>
+      {% endif %}
+    </div>
+  </div>
+</footer>

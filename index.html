@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+<!-- ── Hero ───────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <p class="hero__eyebrow">{{ site.tagline }}</p>
+    <h1 class="hero__title">Hi, I'm {{ site.author }}.</h1>
+    <p class="hero__lead">{{ site.intro }}</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="#projects">View my work</a>
+      <a class="btn btn--ghost" href="mailto:{{ site.email }}">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ──────────────────────────────────────────────── -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section__title">About</h2>
+    <div class="about">
+      <div class="about__bio">
+        <p>
+          Write a few sentences about yourself here — what you do, what you care
+          about, and what you're looking for. This block lives in
+          <code>index.html</code>. Keep it human and specific.
+        </p>
+        <p>
+          When you're done editing, commit and push, and GitHub Pages rebuilds
+          the site automatically in a minute or two.
+        </p>
+      </div>
+
+      <div class="about__skills">
+        {% for group in site.data.skills %}
+          <div class="skill-group">
+            <h3 class="skill-group__title">{{ group.category }}</h3>
+            <ul class="tag-list">
+              {% for item in group.items %}
+                <li class="tag">{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Projects ───────────────────────────────────────────── -->
+<section id="projects" class="section section--alt">
+  <div class="container">
+    <h2 class="section__title">Projects</h2>
+    <div class="project-grid">
+      {% for project in site.data.projects %}
+        <article class="card">
+          <h3 class="card__title">{{ project.name }}</h3>
+          <p class="card__desc">{{ project.description }}</p>
+
+          {% if project.tech %}
+            <ul class="tag-list tag-list--sm">
+              {% for t in project.tech %}
+                <li class="tag tag--sm">{{ t }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          <div class="card__links">
+            {% if project.link and project.link != "" %}
+              <a href="{{ project.link }}" target="_blank" rel="noopener">Live&nbsp;&rarr;</a>
+            {% endif %}
+            {% if project.source and project.source != "" %}
+              <a href="{{ project.source }}" target="_blank" rel="noopener">Source&nbsp;&rarr;</a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ────────────────────────────────────────────── -->
+<section id="contact" class="section">
+  <div class="container container--narrow">
+    <h2 class="section__title">Get in touch</h2>
+    <p class="contact__lead">
+      Have a question, an idea, or just want to say hi? I'd love to hear from you.
+    </p>
+    <a class="btn btn--primary" href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </div>
+</section>

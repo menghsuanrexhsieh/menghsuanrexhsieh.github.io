@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────────────────────
+#  Site settings — edit these to make the site yours.
+# ─────────────────────────────────────────────────────────────
+title: Rex Hsieh
+tagline: Software Engineer & Builder
+description: >-
+  Personal homepage and portfolio of Rex Hsieh — projects, writing, and ways to get in touch.
+author: Rex Hsieh
+email: menghsuan.hsieh0422@gmail.com
+
+# A short intro shown in the hero section (supports a sentence or two).
+intro: >-
+  I build software that's simple, reliable, and a little delightful.
+  Here's some of what I've worked on.
+
+# ─────────────────────────────────────────────────────────────
+#  URLs
+#  This is configured for a USER site: a repo named
+#  "menghsuanrexhsieh.github.io" served at the root URL.
+#  If you instead use a normal project repo, set:
+#    baseurl: "/your-repo-name"
+# ─────────────────────────────────────────────────────────────
+url: "https://menghsuanrexhsieh.github.io"
+baseurl: ""
+
+# ─────────────────────────────────────────────────────────────
+#  Social links — leave a value blank ("") to hide that icon.
+# ─────────────────────────────────────────────────────────────
+social:
+  github: menghsuanrexhsieh
+  linkedin: ""
+  twitter: ""
+  email: menghsuan.hsieh0422@gmail.com
+
+# ─────────────────────────────────────────────────────────────
+#  Build settings — you usually don't need to touch these.
+# ─────────────────────────────────────────────────────────────
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
