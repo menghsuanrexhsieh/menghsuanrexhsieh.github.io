@@ -1,17 +1,15 @@
 ---
 layout: default
+title: Page not found
 permalink: /404.html
 ---
 
 <section class="hero">
-  <div class="container container--narrow">
-    <p class="hero__eyebrow">404</p>
-    <h1 class="hero__title">Page not found</h1>
-    <p class="hero__lead" style="margin-inline:auto;">
-      The page you're looking for doesn't exist or has moved.
-    </p>
-    <div class="hero__actions" style="justify-content:center;">
-      <a class="btn btn--primary" href="{{ '/' | relative_url }}">Back home</a>
-    </div>
+  <p class="hero__eyebrow">404</p>
+  <h1 class="hero__title">Page not found</h1>
+  <p class="hero__lead">The page you're looking for doesn't exist or has moved.</p>
+  <div class="hero__actions">
+    <a class="btn btn--primary" href="{{ '/' | relative_url }}">Back home</a>
+    <a class="btn btn--ghost" href="{{ '/posts/' | relative_url }}">Browse posts</a>
   </div>
 </section>

@@ -1,39 +1,70 @@
 # Personal site
 
-A clean, fast personal portfolio built with [Jekyll](https://jekyllrb.com/) and hosted on GitHub Pages. No external theme — the whole thing is in this repo and easy to edit.
+A clean, fast personal/academic site built with [Jekyll](https://jekyllrb.com/)
+and hosted on GitHub Pages. No external theme — everything is in this repo.
+
+Features: a right-hand vertical nav with a portrait, sections for **CV**,
+**Research**, and **Teaching**, and a **Posts** blog with tags and live
+title + full-text search. Warm cream background (`#FAF8EE`) with a dark mode.
+
+## Structure
+
+```
+index.html        Home (intro, about, recent posts)
+cv.html           /cv/
+research.html     /research/  (interests, publications, projects)
+teaching.html     /teaching/
+posts.html        /posts/     (blog index with search + tag filter)
+_posts/           Your blog posts (one Markdown file each)
+_layouts/         Page shells (default, post)
+_includes/        head, sidebar (portrait + nav), footer
+_data/            projects.yml, skills.yml
+assets/           css/, js/, img/portrait.svg, favicon.svg
+_config.yml       Name, tagline, intro, email, social links
+```
 
 ## Editing your content
 
-Most changes don't require touching HTML:
-
-| What you want to change | Edit this file |
+| What to change | Where |
 | --- | --- |
-| Name, tagline, intro, email, social links | `_config.yml` |
-| Projects (cards) | `_data/projects.yml` |
-| Skills | `_data/skills.yml` |
-| About paragraph, section copy | `index.html` |
-| Colors, fonts, spacing | `assets/css/style.css` (the `:root` / `[data-theme]` blocks) |
+| Name, tagline, intro, email, social | `_config.yml` |
+| Portrait photo | replace `assets/img/portrait.svg` (e.g. with `portrait.jpg`) and update the `src` in `_includes/sidebar.html` |
+| CV / Research / Teaching content | `cv.html`, `research.html`, `teaching.html` |
+| Projects & skills | `_data/projects.yml`, `_data/skills.yml` |
+| Colors, fonts, the cream background | `assets/css/style.css` (`:root` / `[data-theme]` blocks) |
 
-> After editing `_config.yml`, restart the local server for changes to show.
+### Writing a blog post
+
+Create a file in `_posts/` named `YYYY-MM-DD-title.md`:
+
+```markdown
+---
+layout: post
+title: "My post title"
+date: 2026-06-15
+tags: [research, notes]
+---
+
+Your post body in Markdown…
+```
+
+Tags automatically appear as filter buttons on the Posts page, and both the
+title and full body text are searchable from the search box — no extra setup.
 
 ## Preview locally
 
 ```bash
-bundle install          # first time only
-bundle exec jekyll serve # then open http://localhost:4000
+bundle install            # first time only
+bundle exec jekyll serve  # → http://localhost:4000
 ```
 
 ## Deploy
 
-This repo is set up as a **user site** — name the repo `menghsuanrexhsieh.github.io` and it will be served at `https://menghsuanrexhsieh.github.io/`.
+Set up as a **user site**: the repo is named `menghsuanrexhsieh.github.io`, so
+once it's **public** it serves at `https://menghsuanrexhsieh.github.io/`.
 
-1. Push this repo to GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to *Deploy from a branch*, branch `main`, folder `/ (root)`.
-4. Wait ~1–2 minutes for the first build.
+1. Make the repo public (Settings → General → Change visibility).
+2. Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`.
+3. Wait ~1–2 minutes. Every push to `main` rebuilds automatically.
 
-Every push to `main` rebuilds and redeploys automatically.
-
-### Using a normal project repo instead?
-
-If the repo is **not** named `<username>.github.io`, set `baseurl: "/your-repo-name"` in `_config.yml` so asset links resolve correctly. The site will live at `https://menghsuanrexhsieh.github.io/your-repo-name/`.
+> GitHub's free plan only serves Pages from public repos.

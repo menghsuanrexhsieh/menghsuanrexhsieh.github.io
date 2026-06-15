@@ -1,0 +1,57 @@
+---
+layout: default
+title: Research
+permalink: /research/
+---
+
+<header class="page-head">
+  <h1>Research</h1>
+  <p class="page-head__sub">What I work on and the questions that drive it.</p>
+</header>
+
+<section class="cv-section">
+  <h2 class="section__title">Interests</h2>
+  <p>
+    A short paragraph describing your research interests and the broad themes
+    that connect your work. Edit this in <code>research.html</code>.
+  </p>
+</section>
+
+<section class="cv-section">
+  <h2 class="section__title">Publications</h2>
+  <ol class="pub-list">
+    <li class="pub">
+      <span class="pub__title">Title of Your Paper</span><br>
+      <span class="pub__authors">Your Name, A. Coauthor, B. Coauthor.</span>
+      <span class="pub__venue">Venue or Journal, 2025.</span>
+      <span class="pub__links"><a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></span>
+    </li>
+    <li class="pub">
+      <span class="pub__title">Another Paper Title</span><br>
+      <span class="pub__authors">Your Name, C. Coauthor.</span>
+      <span class="pub__venue">Workshop, 2024.</span>
+      <span class="pub__links"><a href="#">PDF</a></span>
+    </li>
+  </ol>
+</section>
+
+<section class="cv-section">
+  <h2 class="section__title">Projects</h2>
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+      <article class="card">
+        <h3 class="card__title">{{ project.name }}</h3>
+        <p class="card__desc">{{ project.description }}</p>
+        {% if project.tech %}
+          <ul class="tag-list tag-list--sm">
+            {% for t in project.tech %}<li class="tag tag--sm">{{ t }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+        <div class="card__links">
+          {% if project.link and project.link != "" %}<a href="{{ project.link }}" target="_blank" rel="noopener">Live&nbsp;&rarr;</a>{% endif %}
+          {% if project.source and project.source != "" %}<a href="{{ project.source }}" target="_blank" rel="noopener">Source&nbsp;&rarr;</a>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

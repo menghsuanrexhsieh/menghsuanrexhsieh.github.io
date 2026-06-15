@@ -4,11 +4,15 @@
   {% include head.html %}
 </head>
 <body>
-  {% include nav.html %}
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <main>
-    {{ content }}
-  </main>
+  <div class="layout">
+    <main id="main" class="layout__main">
+      {{ content }}
+    </main>
+
+    {% include sidebar.html %}
+  </div>
 
   {% include footer.html %}
 

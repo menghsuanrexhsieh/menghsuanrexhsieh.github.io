@@ -1,0 +1,61 @@
+---
+layout: default
+title: CV
+permalink: /cv/
+---
+
+<header class="page-head">
+  <h1>Curriculum Vitae</h1>
+  <p class="page-head__sub">
+    A summary of my background.
+    <a href="{{ '/assets/cv.pdf' | relative_url }}">Download PDF &rarr;</a>
+    <!-- Add your file at assets/cv.pdf for this link to work. -->
+  </p>
+</header>
+
+<section class="cv-section">
+  <h2 class="section__title">Education</h2>
+
+  <div class="entry">
+    <div class="entry__head">
+      <span class="entry__title">Ph.D. in Your Field</span>
+      <span class="entry__date">2023 – Present</span>
+    </div>
+    <p class="entry__org">University Name</p>
+    <p class="entry__desc">Advisor: Prof. Name. One line on your focus or dissertation topic.</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry__head">
+      <span class="entry__title">B.S. in Your Field</span>
+      <span class="entry__date">2019 – 2023</span>
+    </div>
+    <p class="entry__org">University Name</p>
+    <p class="entry__desc">Honors, GPA, or a notable distinction.</p>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2 class="section__title">Experience</h2>
+
+  <div class="entry">
+    <div class="entry__head">
+      <span class="entry__title">Role / Title</span>
+      <span class="entry__date">2024 – Present</span>
+    </div>
+    <p class="entry__org">Organization</p>
+    <p class="entry__desc">What you did and the impact, in a sentence.</p>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2 class="section__title">Awards & Skills</h2>
+  {% for group in site.data.skills %}
+    <div class="skill-group">
+      <h3 class="skill-group__title">{{ group.category }}</h3>
+      <ul class="tag-list">
+        {% for item in group.items %}<li class="tag">{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
