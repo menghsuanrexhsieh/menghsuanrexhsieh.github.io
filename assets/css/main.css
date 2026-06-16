@@ -324,6 +324,27 @@ code {
 .pub__venue { font-style: italic; color: var(--text-muted); font-size: 0.92rem; }
 .pub__links { font-size: 0.88rem; }
 
+/* CV page helpers */
+.cv-subhead { font-size: 1rem; margin: 1.5rem 0 0.6rem; }
+.cv-subhead:first-child { margin-top: 0; }
+.cv-subhead__org { font-weight: 400; color: var(--text-muted); }
+.course-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+.course-row:last-child { border-bottom: 0; }
+.course-row__term { color: var(--text-muted); font-size: 0.88rem; white-space: nowrap; }
+.cv-list { list-style: none; padding: 0; margin: 0; }
+.cv-list > li { padding: 0.35rem 0; }
+.cv-list > li + li { border-top: 1px dashed var(--border); }
+.cv-bullets { margin: 0.5rem 0 0; padding-left: 1.2rem; color: var(--text-muted); font-size: 0.95rem; }
+.cv-bullets li { margin-bottom: 0.35rem; }
+.cv-inline { margin: 0; color: var(--text-muted); }
+
 /* ─────────────────────────────────────────────────────────────
    Posts: search, tag filter, list
    ───────────────────────────────────────────────────────────── */
