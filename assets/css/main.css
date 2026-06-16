@@ -238,9 +238,18 @@ code {
 /* ─────────────────────────────────────────────────────────────
    Sections & page headers
    ───────────────────────────────────────────────────────────── */
-.page-head { padding: 1.5rem 0 1rem; }
-.page-head h1 { font-size: clamp(2rem, 5vw, 2.6rem); margin: 0 0 0.5rem; }
-.page-head__sub { color: var(--text-muted); margin: 0; }
+/* Page title sticks to the top of the viewport while scrolling, alongside
+   the (already sticky) right-hand navigation. */
+.page-head {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1.25rem 0 1rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.page-head h1 { font-size: clamp(1.7rem, 4vw, 2.2rem); margin: 0 0 0.35rem; }
+.page-head__sub { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
 
 .section, .cv-section { padding: 2.25rem 0; border-top: 1px solid var(--border); }
 .section:first-of-type, .hero { border-top: 0; }
