@@ -3,8 +3,9 @@ layout: post
 title: "Notes on starting a research project"
 date: 2026-05-28
 tags: [research, notes]
+excerpt: >-
+  A few habits I keep coming back to when a new project starts. None of this is novel, but writing it down helps me actually do it.
 ---
-
 A few habits I keep coming back to when a new project starts. None of this is
 novel, but writing it down helps me actually do it.
 

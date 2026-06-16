@@ -47,7 +47,7 @@ permalink: /posts/
         <p class="post-card__meta">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
         </p>
-        <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
+        <p class="post-card__excerpt">{{ post.excerpt | strip_html }}</p>
         {% if post.tags.size > 0 %}
           <ul class="tag-list tag-list--sm">
             {% for tag in post.tags %}<li class="tag tag--sm">{{ tag }}</li>{% endfor %}

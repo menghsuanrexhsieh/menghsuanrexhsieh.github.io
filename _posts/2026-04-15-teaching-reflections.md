@@ -3,8 +3,9 @@ layout: post
 title: "Reflections on a semester of teaching"
 date: 2026-04-15
 tags: [teaching, notes]
+excerpt: >-
+  The semester wrapped up last week. A few things I want to remember for next time, while they're still fresh.
 ---
-
 The semester wrapped up last week. A few things I want to remember for next
 time, while they're still fresh.
 

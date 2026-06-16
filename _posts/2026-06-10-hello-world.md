@@ -3,8 +3,9 @@ layout: post
 title: "Hello, world"
 date: 2026-06-10
 tags: [meta, writing]
+excerpt: >-
+  Welcome to the new site. This first post exists mostly to show how writing works here — and to give the search box something to find.
 ---
-
 Welcome to the new site. This first post exists mostly to show how writing
 works here — and to give the search box something to find.
 
