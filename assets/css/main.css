@@ -253,6 +253,7 @@ code {
 
 .section { padding: 2.25rem 0; }
 .cv-section { padding: 2.25rem 0; border-top: 1px solid var(--border); }
+.cv-section--flush { border-top: 0; }
 .hero { border-top: 0; }
 .section__title { font-size: 1.4rem; margin: 0 0 1.5rem; display: inline-block; }
 .section__title::after {
@@ -352,9 +353,7 @@ code {
   align-items: baseline;
   gap: 1rem;
   padding: 0.35rem 0;
-  border-bottom: 1px dashed var(--border);
 }
-.course-row:last-child { border-bottom: 0; }
 .course-row__term { color: var(--text-muted); font-size: 0.88rem; white-space: nowrap; }
 .cv-list { list-style: none; padding: 0; margin: 0; }
 .cv-list > li { padding: 0.35rem 0; }
