@@ -2,7 +2,7 @@
 layout: default
 title: Home
 ---
-
+<!--
 <section class="hero">
   <p class="hero__eyebrow">{{ site.tagline }}</p>
   <h1 class="hero__title">Hello, I'm {{ site.author }}.</h1>
@@ -12,8 +12,15 @@ title: Home
     <a class="btn btn--ghost" href="mailto:{{ site.email }}">Email</a>
   </div>
 </section>
+padding-top: 20px; -->
 
 <section class="section">
+  <div class="hero__actions" style="padding-bottom: 50px;">
+    <a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">CV</a>
+    <a class="btn btn--ghost" href="mailto:{{ site.email }}">Email</a>
+  </div>
+
+
   <div class="about__bio">
     <p>
       I'm a job market candidate in AY2026/2027.

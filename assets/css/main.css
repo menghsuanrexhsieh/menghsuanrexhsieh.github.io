@@ -7,7 +7,7 @@
   --radius: 14px;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
 /* Light theme — warm cream paper (#FAF8EE = rgb(250,248,238)) */
@@ -252,19 +252,9 @@ code {
 .page-head__sub { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
 
 .section { padding: 2.25rem 0; }
-.cv-section { padding: 2.25rem 0; border-top: 1px solid var(--border); }
-.cv-section--flush { border-top: 0; }
+.cv-section { padding: 2.25rem 0; }
 .hero { border-top: 0; }
 .section__title { font-size: 1.4rem; margin: 0 0 1.5rem; display: inline-block; }
-.section__title::after {
-  content: "";
-  display: block;
-  width: 2.25rem;
-  height: 3px;
-  margin-top: 0.45rem;
-  border-radius: 3px;
-  background: var(--accent);
-}
 
 /* About */
 .about { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2.5rem; }
@@ -322,8 +312,7 @@ code {
 /* ─────────────────────────────────────────────────────────────
    CV / Research / Teaching entries
    ───────────────────────────────────────────────────────────── */
-.entry { padding: 1rem 0; border-bottom: 1px dashed var(--border); }
-.entry:last-child { border-bottom: 0; }
+.entry { padding: 1rem 0; }
 .entry__head {
   display: flex;
   justify-content: space-between;
@@ -357,7 +346,6 @@ code {
 .course-row__term { color: var(--text-muted); font-size: 0.88rem; white-space: nowrap; }
 .cv-list { list-style: none; padding: 0; margin: 0; }
 .cv-list > li { padding: 0.35rem 0; }
-.cv-list > li + li { border-top: 1px dashed var(--border); }
 .cv-bullets { margin: 0.5rem 0 0; padding-left: 1.2rem; color: var(--text-muted); font-size: 0.95rem; }
 .cv-bullets li { margin-bottom: 0.35rem; }
 .cv-inline { margin: 0; color: var(--text-muted); }
