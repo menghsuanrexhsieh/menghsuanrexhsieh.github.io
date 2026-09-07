@@ -332,6 +332,36 @@ code {
 .pub__venue { font-style: italic; color: var(--text-muted); font-size: 0.92rem; }
 .pub__links { font-size: 0.88rem; }
 
+/* Collapsible per-paper synopsis */
+.synopsis { margin-top: 0.4rem; }
+.synopsis > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.65rem;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.synopsis > summary::-webkit-details-marker { display: none; }
+.synopsis > summary::before { content: "\25B8"; font-size: 0.75em; }
+.synopsis[open] > summary::before { content: "\25BE"; }
+.synopsis > summary:hover { color: var(--accent-hover); border-color: var(--accent); }
+.synopsis > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.synopsis__text {
+  margin: 0.5rem 0 0;
+  max-width: 62ch;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 /* CV page helpers */
 .cv-subhead { font-size: 1rem; margin: 1.5rem 0 0.4rem; }
 .cv-subhead:first-child { margin-top: 0; }
