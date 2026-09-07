@@ -1,5 +1,6 @@
 # Jekyll build output & caches
 _site/
+_site.nosync/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
