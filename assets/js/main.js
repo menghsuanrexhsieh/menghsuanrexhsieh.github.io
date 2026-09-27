@@ -70,3 +70,40 @@
     });
   }
 })();
+
+// Research page: Synopsis / Abstract panels. At most one panel per paper is
+// open at a time, and clicking an already-open button collapses it. Panels
+// ship with `hidden` set; a <noscript> rule in the head reveals them when
+// JavaScript is unavailable.
+(function () {
+  var rows = document.querySelectorAll('.pub__toggles');
+  if (!rows.length) return;
+
+  Array.prototype.forEach.call(rows, function (row) {
+    var buttons = Array.prototype.slice.call(row.querySelectorAll('.synopsis__btn'));
+
+    function panelFor(btn) {
+      return document.getElementById(btn.getAttribute('aria-controls'));
+    }
+
+    function collapse(btn) {
+      btn.setAttribute('aria-expanded', 'false');
+      var panel = panelFor(btn);
+      if (panel) panel.hidden = true;
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var wasOpen = btn.getAttribute('aria-expanded') === 'true';
+
+        buttons.forEach(collapse);
+
+        if (!wasOpen) {
+          btn.setAttribute('aria-expanded', 'true');
+          var panel = panelFor(btn);
+          if (panel) panel.hidden = false;
+        }
+      });
+    });
+  });
+})();

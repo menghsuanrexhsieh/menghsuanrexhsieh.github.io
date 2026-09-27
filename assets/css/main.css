@@ -5,7 +5,7 @@
   --content-width: 1250px;
   --sidebar-width: 200px;
   --radius: 14px;
-  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+  --font: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
@@ -190,7 +190,7 @@ code {
 /* ─────────────────────────────────────────────────────────────
    Hero (home)
    ───────────────────────────────────────────────────────────── */
-.hero { padding: 1.5rem 0 2.5rem; }
+.hero { padding: 0.98rem 0 1.63rem; }
 .hero__eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -251,8 +251,8 @@ code {
 .page-head h1 { font-size: clamp(1.7rem, 4vw, 2.2rem); margin: 0 0 0.35rem; }
 .page-head__sub { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
 
-.section { padding: 1.75rem 0; }
-.cv-section { padding: 1.75rem 0; }
+.section { padding: 1.35rem 0; }
+.cv-section { padding: 1.25rem 0; }
 .hero { border-top: 0; }
 .section__title { font-size: 1.4rem; margin: 0 0 0.75rem; display: inline-block; }
 
@@ -332,14 +332,17 @@ code {
 .pub__venue { font-style: italic; color: var(--text-muted); font-size: 0.92rem; }
 .pub__links { font-size: 0.88rem; }
 
-/* Collapsible per-paper synopsis */
-.synopsis { margin-top: 0.4rem; }
-.synopsis > summary {
+/* Collapsible per-paper synopsis / abstract.
+   The two buttons live in .pub__toggles; their panels are siblings *after*
+   that row, so an expanding panel is structurally incapable of moving either
+   button. Panels carry `hidden`; main.js flips it, one panel per paper. */
+.pub__toggles { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.45rem; }
+.synopsis__btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  list-style: none;
   cursor: pointer;
+  font-family: inherit;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--accent);
@@ -349,12 +352,12 @@ code {
   padding: 0.1rem 0.65rem;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
-.synopsis > summary::-webkit-details-marker { display: none; }
-.synopsis > summary::before { content: "\25B8"; font-size: 0.75em; }
-.synopsis[open] > summary::before { content: "\25BE"; }
-.synopsis > summary:hover { color: var(--accent-hover); border-color: var(--accent); }
-.synopsis > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.synopsis__btn::before { content: "\25B8"; font-size: 0.75em; }
+.synopsis__btn[aria-expanded="true"]::before { content: "\25BE"; }
+.synopsis__btn:hover { color: var(--accent-hover); border-color: var(--accent); }
+.synopsis__btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .synopsis__text {
+  text-align: justify;
   margin: 0.5rem 0 0;
   max-width: 62ch;
   color: var(--text-muted);
@@ -402,7 +405,7 @@ code {
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
-.tag-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.75rem; }
+.tag-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.14rem; }
 .tag-chip {
   font: inherit;
   font-size: 0.85rem;

@@ -16,11 +16,11 @@
 
 <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
 
-<!-- Fonts: Inter for text, JetBrains Mono for code -->
+<!-- Fonts: Roboto for text, JetBrains Mono for code -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400..600&display=swap">
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400..600&display=swap">
 
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
@@ -37,3 +37,8 @@
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
+<!-- Synopsis / Abstract panels are collapsed via the `hidden` attribute and
+     opened by main.js. With JavaScript off, show them all rather than
+     hiding the text behind buttons that cannot work. -->
+<noscript><style>.synopsis__panel[hidden] { display: block; }</style></noscript>
