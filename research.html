@@ -87,17 +87,33 @@ permalink: /research/
       </div>
     </li>
     <li class="pub">
-      <span class="pub__title">Pricing AI Services with Data-Use Rights</span>
-      <span class="pub__authors">with F. Zhou, Z. Hu &middot; 2026. Submitted.</span>
-      <span class="pub__links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6855578" target="_blank" rel="noopener">working paper</a></span>
+      <span class="pub__title">External Validity in Empirical Public Finance: With an Application to Taxable Income Elasticities</span>
+      <span class="pub__authors">with G. Sanz-Maldonado, J. Slemrod &middot; 2026.</span>
+      <span class="pub__venue">Revision at Journal of Public Economics.</span>
+      <span class="pub__links"><a href="https://drive.google.com/file/d/1ejOOkT7ivZdn1YCucG6xO3wtf8N_5tZy/view?usp=share_link" target="_blank" rel="noopener">working paper</a></span>
       <div class="pub__toggles">
         <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-5-synopsis">Synopsis</button>
         <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-5-abstract">Abstract</button>
       </div>
       <div class="synopsis__panel" id="pub-5-synopsis" hidden>
-        <p class="synopsis__text">An AI platform prices access today while deciding whose conversations it may learn from tomorrow. The price that keeps premium customers from downgrading can be too high to attract useful training data. We show when it pays to buy data from one tier rather than training on everyone or no one, and which data-sharing discounts to retire once their value falls below the rents they cost.</p>
+        <p class="synopsis__text">Estimating how much taxable income responds to tax rates one country at a time throws away what other countries have learned. We give a procedure that borrows across countries according to how similar their tax systems are and how noisy each country's own estimate is, and apply it to 27 OECD countries.</p>
       </div>
       <div class="synopsis__panel" id="pub-5-abstract" hidden>
+        <p class="synopsis__text">Estimates of the elasticity of taxable income (ETI) based on data from only one country implicitly assume nothing can be learned from the experience of other countries. This assumption is wrong, but rigorously relaxing it requires a principled framework to aggregate information from different contexts. We propose a general three-step empirical Bayes framework grounded in statistical decision theory that accomplishes this by modeling cross-country heterogeneity as a function of the structural determinants of the tax system. The framework determines endogenously how much each country's estimate should be informed by external evidence, placing more weight on cross-country evidence for countries whose within-country estimates are imprecise. We apply our framework to 27 OECD countries, characterize how ETI estimates should be revised taking into account evidence from other countries, and outline how to predict behavioral responses for countries that have not adopted a given tax.</p>
+      </div>
+    </li>
+    <li class="pub">
+      <span class="pub__title">Pricing AI Services with Data-Use Rights</span>
+      <span class="pub__authors">with F. Zhou, Z. Hu &middot; 2026. Submitted.</span>
+      <span class="pub__links"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6855578" target="_blank" rel="noopener">working paper</a></span>
+      <div class="pub__toggles">
+        <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-6-synopsis">Synopsis</button>
+        <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-6-abstract">Abstract</button>
+      </div>
+      <div class="synopsis__panel" id="pub-6-synopsis" hidden>
+        <p class="synopsis__text">An AI platform prices access today while deciding whose conversations it may learn from tomorrow. The price that keeps premium customers from downgrading can be too high to attract useful training data. We show when it pays to buy data from one tier rather than training on everyone or no one, and which data-sharing discounts to retire once their value falls below the rents they cost.</p>
+      </div>
+      <div class="synopsis__panel" id="pub-6-abstract" hidden>
         <p class="synopsis__text">AI service platforms sell current access while deciding which customer interactions may be used for future model improvement. This creates a tension absent from standard service menus: the usage price that protects premium restricted-use plans from cannibalization may be too high to procure valuable training usage, while the price that buys data may undermine premium separation. We study nonlinear service menus in which each contract specifies an access fee, a usage price, and a data-use right. Against blanket data policies that either train on all served usage or restrict all served usage, we characterize when targeted data procurement is optimal. A low-tier data-sharing plan can buy useful interactions and, when premium users have higher training-use burdens, make the cheap plan less attractive to them. The relevant value of data is menu-adjusted: continuation-value gains net of user burdens, information rents, and any repair needed to preserve self-selection. Numerical analyses illustrate that targeted procurement can outperform train-all policies even while collecting less raw data. The analysis yields a select--price--repair--retire rule: select tiers whose data value survives these costs, price data sharing as procurement rather than a generic subsidy, repair menus that create positive self-selection cycles, and retire discounts once marginal continuation value falls below the rent burden.</p>
       </div>
     </li>
@@ -106,30 +122,14 @@ permalink: /research/
       <span class="pub__authors">2026. Submitted.</span>
       <span class="pub__links"><a href="https://arxiv.org/abs/2604.22982" target="_blank" rel="noopener">working paper</a></span>
       <div class="pub__toggles">
-        <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-6-synopsis">Synopsis</button>
-        <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-6-abstract">Abstract</button>
-      </div>
-      <div class="synopsis__panel" id="pub-6-synopsis" hidden>
-        <p class="synopsis__text">I extend the stacked difference-in-differences design to triple differences, comparing each treated group with a clean comparison group inside self-contained blocks. Unlike the standard three-way fixed-effects regression when treatment starts at different times, this provably averages the underlying effects with positive weights.</p>
-      </div>
-      <div class="synopsis__panel" id="pub-6-abstract" hidden>
-        <p class="synopsis__text">Triple differences (DDD) is a workhorse quasi-experimental design in applied economics. But, under staggered adoption, its conventional three-way fixed-effects (3WFE) implementation inherits the interpretation issues now well understood in the difference-in-differences literature. I introduce stacked DDD. I extend the stacked difference-in-differences approach to the DDD setting by creating self-contained stacks, each consisting of four cells over an event window: treated and clean comparison cohorts, each with treatment-eligible and treatment-ineligible units. Appending these stacks yields a unified dataset for estimating treatment effects. I prove that, at each post-treatment event-time, a linear regression with fully saturated fixed-effects applied to the stacked dataset identifies a strictly positive, cell-size-weighted average of stack-level conditional average treatment effects, with stack weights proportional to stack-level cell sizes. Building on this characterization, I outline alternative weighting schemes that recover causal estimands with clear interpretations. Stacked DDD complements recent GMM and imputation-based frameworks by trading efficiency for regression-based transparency, pairwise (rather than global) parallel changes-in-trends, and direct control over both the comparison group for each treated unit and the aggregation weights. I provide two empirical illustrations where stacked DDD yields substantially different quantitative conclusions compared to existing procedures.</p>
-      </div>
-    </li>
-    <li class="pub">
-      <span class="pub__title">External Validity in Empirical Public Finance: With an Application to Taxable Income Elasticities</span>
-      <span class="pub__authors">with G. Sanz-Maldonado, J. Slemrod &middot; 2026.</span>
-      <span class="pub__venue">Revision at Journal of Public Economics.</span>
-      <span class="pub__links"><a href="https://drive.google.com/file/d/1ejOOkT7ivZdn1YCucG6xO3wtf8N_5tZy/view?usp=share_link" target="_blank" rel="noopener">working paper</a></span>
-      <div class="pub__toggles">
         <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-7-synopsis">Synopsis</button>
         <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-7-abstract">Abstract</button>
       </div>
       <div class="synopsis__panel" id="pub-7-synopsis" hidden>
-        <p class="synopsis__text">Estimating how much taxable income responds to tax rates one country at a time throws away what other countries have learned. We give a procedure that borrows across countries according to how similar their tax systems are and how noisy each country's own estimate is, and apply it to 27 OECD countries.</p>
+        <p class="synopsis__text">I extend the stacked difference-in-differences design to triple differences, comparing each treated group with a clean comparison group inside self-contained blocks. Unlike the standard three-way fixed-effects regression when treatment starts at different times, this provably averages the underlying effects with positive weights.</p>
       </div>
       <div class="synopsis__panel" id="pub-7-abstract" hidden>
-        <p class="synopsis__text">Estimates of the elasticity of taxable income (ETI) based on data from only one country implicitly assume nothing can be learned from the experience of other countries. This assumption is wrong, but rigorously relaxing it requires a principled framework to aggregate information from different contexts. We propose a general three-step empirical Bayes framework grounded in statistical decision theory that accomplishes this by modeling cross-country heterogeneity as a function of the structural determinants of the tax system. The framework determines endogenously how much each country's estimate should be informed by external evidence, placing more weight on cross-country evidence for countries whose within-country estimates are imprecise. We apply our framework to 27 OECD countries, characterize how ETI estimates should be revised taking into account evidence from other countries, and outline how to predict behavioral responses for countries that have not adopted a given tax.</p>
+        <p class="synopsis__text">Triple differences (DDD) is a workhorse quasi-experimental design in applied economics. But, under staggered adoption, its conventional three-way fixed-effects (3WFE) implementation inherits the interpretation issues now well understood in the difference-in-differences literature. I introduce stacked DDD. I extend the stacked difference-in-differences approach to the DDD setting by creating self-contained stacks, each consisting of four cells over an event window: treated and clean comparison cohorts, each with treatment-eligible and treatment-ineligible units. Appending these stacks yields a unified dataset for estimating treatment effects. I prove that, at each post-treatment event-time, a linear regression with fully saturated fixed-effects applied to the stacked dataset identifies a strictly positive, cell-size-weighted average of stack-level conditional average treatment effects, with stack weights proportional to stack-level cell sizes. Building on this characterization, I outline alternative weighting schemes that recover causal estimands with clear interpretations. Stacked DDD complements recent GMM and imputation-based frameworks by trading efficiency for regression-based transparency, pairwise (rather than global) parallel changes-in-trends, and direct control over both the comparison group for each treated unit and the aggregation weights. I provide two empirical illustrations where stacked DDD yields substantially different quantitative conclusions compared to existing procedures.</p>
       </div>
     </li>
     <li class="pub">
@@ -146,16 +146,6 @@ permalink: /research/
       <div class="synopsis__panel" id="pub-8-abstract" hidden>
         <p class="synopsis__text">I study whether the rise in knowledge-intensive economic activities led to increased economic disparities in U.S. cities over three decades. While existing works have sought to combine patenting activities and patenting citations to construct shiftshare instruments for knowledge-intensive economic activities, I argue this strategy does not apply cleanly, because it requires fixing the set of patent shocks a priori, whereas patenting activities arise randomly and differentially across regions. I propose a shift-share-like instrumental variable framework that leverages regional-level shocks and inter-region diffusion links as inputs in its construction. I allow shocks to arise randomly and differentially across regions, and I allow the observed diffusion network to be endogenous. Identification is achieved through assuming shocks are "as good as randomly assigned". I show that the asymptotic framework does not require observing a large set of regions, but rather large numbers of realized shocks across regions. Using the proposed instrumental variable framework, I find local expansion in knowledgeintensive activities leads to positive and nontrivial increases in income and education segregation in U.S. cities, but its effect on occupation segregation is statistically insignificant.</p>
       </div>
-    </li>
-  </ol>
-</section>
-
-<section class="cv-section">
-  <h2 class="section__title">Works in Progress</h2>
-  <ol class="pub-list" start="10">
-    <li class="pub">
-      <span class="pub__title">Externally Valid Sufficient Statistics</span>
-      <span class="pub__authors">2026.</span>
     </li>
   </ol>
 </section>
