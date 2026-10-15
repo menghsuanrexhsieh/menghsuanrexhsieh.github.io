@@ -14,22 +14,90 @@ title: Home
 </section>
 padding-top: 20px; -->
 
+<header class="page-head page-head--spacer" aria-hidden="true">
+  <h1>Home</h1>
+</header>
+
 <section class="section">
-  <div class="hero__actions" style="padding-bottom: 50px;">
-    <a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">CV</a>
+  <div class="hero__actions hero__actions--home">
+    <a class="btn btn--primary btn--cv" href="{{ '/cv/' | relative_url }}">CV</a>
     <a class="btn btn--ghost" href="mailto:{{ site.email }}">Email</a>
   </div>
 
 
   <div class="about__bio">
     <p>
-      I'm a job market candidate in AY2026/2027. My job market paper is <a href="https://drive.google.com/file/d/1_AwCSsWlZyj-3BpVLXEmRCDtdekqcVyW/view?usp=share_link" target="_blank" rel="noopener">Mediated Interference</a>.
-    </p>
-    <p>
-      Please find my research, teaching, and miscellaneous writings on the right.
+      I study econometrics. <strong>I'm a job market candidate in AY2026/2027.</strong>
     </p>
     <p>
       - Rex.
     </p>
   </div>
+</section>
+
+<section class="cv-section">
+  <div class="pub">
+    <h2 class="section__title section__title--sub">Job Market Paper: Mediated Interference <span class="pub__year">(2026)</span></h2>
+    <div class="pub__toggles">
+      <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-mediated-synopsis">Synopsis</button>
+      <button class="synopsis__btn" type="button" aria-expanded="false" aria-controls="pub-mediated-abstract">Abstract</button>
+      <a class="tag tag--sm" href="https://drive.google.com/file/d/1_AwCSsWlZyj-3BpVLXEmRCDtdekqcVyW/view?usp=share_link" target="_blank" rel="noopener">Job Market Paper</a>
+    </div>
+    <ul class="pub__awards">
+      <li>Best Ph.D. Student Paper Award at the 2026 International Association for Applied Econometrics (IAAE) Annual Conference</li>
+    </ul>
+    <div class="synopsis__panel" id="pub-mediated-synopsis" hidden>
+      <p class="synopsis__text">I develop a framework for separately identifying direct effects, network-mediated effects, and their interaction when treatment itself changes social connections. The main identifying restriction is that pretreatment networks and covariates capture the common causes of network formation and outcomes.</p>
+    </div>
+    <div class="synopsis__panel" id="pub-mediated-abstract" hidden>
+      <p class="synopsis__text">Randomized saturation experiments measure how outcomes respond to own treatment and to the proportion assigned treatment. When treatment changes social connections, these comparisons do not reveal how much of the response operates through network changes. I propose a framework that decomposes the outcome difference between treated individuals and untreated individuals at different saturations into direct, network-mediated, treatment&ndash;network interaction, and saturation-spillover components without imposing functional-form restrictions on potential outcomes. I give conditions under which these components can be identified leveraging pretreatment networks and covariates, without estimating a network formation model. The main restriction, baseline network sufficiency, requires that network-formation factors contain no further information about the shocks governing outcomes at fixed treatment and exposure after conditioning on baseline characteristics. Under neighborhood stability and regularity conditions, I propose an estimation procedure based on debiased machine learning without sample splitting that accommodates network dependence. I propose an inference procedure that conditions on realized saturations, which is valid as cluster sizes grow while the number of clusters stays fixed. Reanalyzing an agronomy-training experiment in Rwanda, I find a negative network-mediated effect on input use for untreated farmers and a positive treatment&ndash;network interaction; these opposing effects reveal a network channel obscured by the small total effect and suggest that training changes how social connections shape the allocation of shared inputs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cv-section">
+  <h2 class="section__title section__title--sub">Publications</h2>
+  <ol class="pub-list">
+    <li class="pub">
+      <span class="pub__title">How Taxes Affect Growth: Evidence from Cross-Country Panel Data <span class="pub__meta"><span class="pub__year">(2026)</span> <a class="tag tag--sm pub__title-link" href="https://doi.org/10.1007/s10797-025-09901-z" target="_blank" rel="noopener">DOI</a></span></span>
+      <span class="pub__authors">with <a href="https://sites.google.com/site/laurakawano/home?authuser=0" target="_blank" rel="noopener">L. Kawano</a>, <a href="https://www.johnsolson.com/" target="_blank" rel="noopener">J. Olson</a>, <a href="https://michiganross.umich.edu/faculty-research/faculty/joel-slemrod" target="_blank" rel="noopener">J. Slemrod</a></span>
+      <span class="pub__venue"><span class="pub__separator" aria-hidden="true">&middot;&nbsp;</span>International Tax and Public Finance, 33(2), 375&ndash;444.</span>
+    </li>
+    <li class="pub">
+      <span class="pub__title">Tangential Wasserstein Projections <span class="pub__meta"><span class="pub__year">(2024)</span> <a class="tag tag--sm pub__title-link" href="https://www.jmlr.org/papers/v25/23-0708.html" target="_blank" rel="noopener">DOI</a></span></span>
+      <span class="pub__authors">with <a href="https://www.floriangunsilius.com/" target="_blank" rel="noopener">F. Gunsilius</a> &amp; M. Lee</span>
+      <span class="pub__venue"><span class="pub__separator" aria-hidden="true">&middot;&nbsp;</span>Journal of Machine Learning Research, 25(69), 1&ndash;41.</span>
+    </li>
+    <li class="pub">
+      <span class="pub__title">Revisiting the Analysis of Matched-Pair and Stratified Experiments in the Presence of Attrition <span class="pub__meta"><span class="pub__year">(2024)</span> <a class="tag tag--sm pub__title-link" href="https://doi.org/10.1002/jae.3025" target="_blank" rel="noopener">DOI</a></span></span>
+      <span class="pub__authors">with <a href="https://yuehaob.github.io/" target="_blank" rel="noopener">Y. Bai</a>, <a href="https://ljz0.github.io/" target="_blank" rel="noopener">J. Liu</a> &amp; <a href="https://sites.google.com/site/mtabordmeehan" target="_blank" rel="noopener">M. Tabord-Meehan</a></span>
+      <span class="pub__venue"><span class="pub__separator" aria-hidden="true">&middot;&nbsp;</span>Journal of Applied Econometrics, 39(2), 256&ndash;268.</span>
+    </li>
+  </ol>
+</section>
+
+<section class="cv-section">
+  <h2 class="section__title section__title--sub">Working Papers</h2>
+  <ol class="pub-list" start="4">
+    <li class="pub">
+      <span class="pub__title">Have the Growth Effects of Tax Policy Changed Over Time? <span class="pub__meta"><span class="pub__year">(2026)</span> <a class="tag tag--sm pub__title-link" href="https://drive.google.com/file/d/1R5D1ULFlP5e0gEziYbMKQnGMVApi0XxX/view?usp=share_link" target="_blank" rel="noopener">Working Paper</a></span></span>
+      <span class="pub__authors">with <a href="https://www.brookings.edu/people/william-g-gale/" target="_blank" rel="noopener">W. Gale</a>, <a href="https://sites.google.com/site/laurakawano/home?authuser=0" target="_blank" rel="noopener">L. Kawano</a>, <a href="mailto:sainiarleen2@gmail.com">A. Saini</a>, <a href="mailto:sithorpe102@gmail.com">S. Thorpe</a>, <a href="https://www.linkedin.com/in/sona-wyse/" target="_blank" rel="noopener">S. Wyse</a></span>
+    </li>
+    <li class="pub">
+      <span class="pub__title">External Validity in Empirical Public Finance: With an Application to Taxable Income Elasticities <span class="pub__meta"><span class="pub__year">(2026)</span> <a class="tag tag--sm pub__title-link" href="https://drive.google.com/file/d/1ejOOkT7ivZdn1YCucG6xO3wtf8N_5tZy/view?usp=share_link" target="_blank" rel="noopener">Working Paper</a></span></span>
+      <span class="pub__authors">with G. Sanz-Maldonado, <a href="https://michiganross.umich.edu/faculty-research/faculty/joel-slemrod" target="_blank" rel="noopener">J. Slemrod</a></span>
+      <span class="pub__venue"><span class="pub__separator" aria-hidden="true">&middot;&nbsp;</span>2nd Round Revision at Journal of Public Economics.</span>
+    </li>
+    <li class="pub">
+      <span class="pub__title">Pricing AI Services with Data-Use Rights <span class="pub__meta"><span class="pub__year">(2026)</span> <a class="tag tag--sm pub__title-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6855578" target="_blank" rel="noopener">Working Paper</a></span></span>
+      <span class="pub__authors">with <a href="https://www.zhou.fan/" target="_blank" rel="noopener">F. Zhou</a>, <a href="https://business.fullerton.edu/academics/isds/faculty-profiles?user=zhhu@fullerton.edu" target="_blank" rel="noopener">Z. Hu</a> &middot; Submitted.</span>
+    </li>
+    <li class="pub">
+      <span class="pub__title">Stacked Triple Differences <span class="pub__meta"><span class="pub__year">(2026)</span> <a class="tag tag--sm pub__title-link" href="https://arxiv.org/abs/2604.22982" target="_blank" rel="noopener">Working Paper</a></span></span>
+      <span class="pub__authors">Submitted.</span>
+    </li>
+    <li class="pub">
+      <span class="pub__title">The Rise of Within-Region Inequality: Analysis Using a Shift-Share-Like Instrument <span class="pub__meta"><span class="pub__year">(2024)</span> <a class="tag tag--sm pub__title-link" href="https://drive.google.com/file/d/1h0TBhlGA7qXzoDzaFfmGOy3q2NfWlHqO/view?usp=sharing" target="_blank" rel="noopener">Working Paper</a></span></span>
+    </li>
+  </ol>
 </section>

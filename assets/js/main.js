@@ -19,9 +19,42 @@
   });
 })();
 
-// Posts page: live search (title + content + tags) and tag filtering.
-// All post text is embedded in data-* attributes, so this works offline
-// with no network request.
+// Ordinary inline math uses its natural baseline. Only formulas wider than
+// their paragraph need a separate scrolling row, especially on phones.
+(function () {
+  var article = document.querySelector('.post-body');
+  if (!article) return;
+  var pending = false;
+  function fitMath() {
+    pending = false;
+    var formulas = article.querySelectorAll('.math.inline');
+    formulas.forEach(function (formula) {
+      formula.classList.remove('math-inline-scroll');
+      var rendered = formula.querySelector('mjx-container');
+      if (!rendered) return;
+      var paragraph = formula.closest('p, li, td, th') || article;
+      var width = paragraph.clientWidth;
+      var style = getComputedStyle(paragraph);
+      width -= parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
+      if (rendered.getBoundingClientRect().width > width + 1) {
+        formula.classList.add('math-inline-scroll');
+      }
+    });
+  }
+  function afterTypeset() {
+    if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
+      MathJax.startup.promise.then(fitMath);
+    }
+  }
+  var script = document.getElementById('MathJax-script');
+  if (script) script.addEventListener('load', afterTypeset);
+  afterTypeset();
+  window.addEventListener('resize', function () {
+    if (!pending) { pending = true; window.requestAnimationFrame(fitMath); }
+  });
+})();
+
+// Search and tag filtering operate on the full collection before pagination.
 (function () {
   var search = document.getElementById('post-search');
   var list = document.getElementById('post-list');
@@ -29,46 +62,116 @@
 
   var items = Array.prototype.slice.call(list.querySelectorAll('.post-item'));
   var empty = document.getElementById('post-empty');
+  var status = document.getElementById('post-results');
+  var pager = document.getElementById('posts-pagination');
   var tagFilter = document.getElementById('tag-filter');
+  var chips = tagFilter ? Array.prototype.slice.call(tagFilter.querySelectorAll('.tag-chip')) : [];
+  var pageSize = Number(list.getAttribute('data-page-size')) || 20;
   var activeTag = '*';
+  var page = 1;
+  var entries = items.map(function (item) {
+    var tags = JSON.parse(item.getAttribute('data-tags') || '[]').map(function (tag) {
+      return tag.trim().toLowerCase();
+    });
+    return {
+      item: item,
+      tags: tags,
+      text: [item.getAttribute('data-title'), tags.join(' '), item.getAttribute('data-content')].join(' ').toLowerCase()
+    };
+  });
 
-  function haystack(item) {
-    return (
-      item.getAttribute('data-title') + ' ' +
-      item.getAttribute('data-tags') + ' ' +
-      item.getAttribute('data-content')
-    );
+  function readLocation() {
+    var params = new URLSearchParams(window.location.search);
+    activeTag = params.get('tag') || '*';
+    activeTag = ({geometry: 'differential geometry', probability: 'probability theory'})[activeTag] || activeTag;
+    if (!chips.some(function (chip) { return chip.getAttribute('data-tag') === activeTag; })) activeTag = '*';
+    if (search) search.value = params.get('q') || '';
+    page = Math.max(1, Math.floor(Number(params.get('page')) || 1));
+  }
+
+  function saveLocation(replace) {
+    var url = new URL(window.location.href);
+    var q = search ? search.value.trim() : '';
+    if (q) url.searchParams.set('q', q); else url.searchParams.delete('q');
+    if (activeTag !== '*') url.searchParams.set('tag', activeTag); else url.searchParams.delete('tag');
+    if (page > 1) url.searchParams.set('page', page); else url.searchParams.delete('page');
+    if (url.href !== window.location.href) {
+      window.history[replace ? 'replaceState' : 'pushState']({}, '', url);
+    }
+  }
+
+  function pageButton(label, target, disabled, current) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'page-button';
+    button.textContent = label;
+    button.disabled = disabled;
+    button.setAttribute('data-page', target);
+    button.setAttribute('aria-label', /^\d+$/.test(label) ? 'Page ' + label : label + ' page');
+    if (current) button.setAttribute('aria-current', 'page');
+    pager.appendChild(button);
   }
 
   function apply() {
     var q = search ? search.value.trim().toLowerCase() : '';
-    var visible = 0;
+    var textMatches = entries.filter(function (entry) { return !q || entry.text.indexOf(q) !== -1; });
+    var matches = textMatches.filter(function (entry) { return activeTag === '*' || entry.tags.indexOf(activeTag) !== -1; });
+    var pages = Math.ceil(matches.length / pageSize);
+    page = Math.min(page, Math.max(1, pages));
+    var first = (page - 1) * pageSize;
+    entries.forEach(function (entry) { entry.item.hidden = true; });
+    matches.slice(first, first + pageSize).forEach(function (entry) { entry.item.hidden = false; });
 
-    items.forEach(function (item) {
-      var matchesText = !q || haystack(item).indexOf(q) !== -1;
-      var tags = (item.getAttribute('data-tags') || '').split(' ');
-      var matchesTag = activeTag === '*' || tags.indexOf(activeTag) !== -1;
-      var show = matchesText && matchesTag;
-      item.hidden = !show;
-      if (show) visible++;
+    chips.forEach(function (chip) {
+      var tag = chip.getAttribute('data-tag');
+      var count = tag === '*' ? textMatches.length : textMatches.filter(function (entry) { return entry.tags.indexOf(tag) !== -1; }).length;
+      var selected = tag === activeTag;
+      chip.classList.toggle('is-active', selected);
+      chip.setAttribute('aria-pressed', String(selected));
+      // Keep the active filter available even when the search has no matches.
+      chip.hidden = count === 0 && !selected && tag !== '*';
+      chip.disabled = count === 0 && !selected && tag !== '*';
     });
-
-    if (empty) empty.hidden = visible !== 0;
+    if (empty) empty.hidden = matches.length !== 0;
+    if (status) status.textContent = matches.length ? (first + 1) + '–' + Math.min(first + pageSize, matches.length) + ' of ' + matches.length + (matches.length === 1 ? ' post' : ' posts') : '0 posts';
+    if (pager) {
+      pager.replaceChildren();
+      pager.hidden = pages <= 1;
+      if (pages > 1) {
+        pageButton('Previous', page - 1, page === 1, false);
+        var lastShown = 0;
+        for (var n = 1; n <= pages; n++) {
+          if (n !== 1 && n !== pages && Math.abs(n - page) > 2) continue;
+          if (lastShown && n - lastShown > 1) {
+            var gap = document.createElement('span');
+            gap.className = 'page-gap'; gap.textContent = '…'; pager.appendChild(gap);
+          }
+          pageButton(String(n), n, false, n === page);
+          lastShown = n;
+        }
+        pageButton('Next', page + 1, page === pages, false);
+      }
+    }
   }
 
-  if (search) search.addEventListener('input', apply);
-
-  if (tagFilter) {
-    tagFilter.addEventListener('click', function (e) {
-      var btn = e.target.closest('.tag-chip');
-      if (!btn) return;
-      activeTag = btn.getAttribute('data-tag');
-      tagFilter.querySelectorAll('.tag-chip').forEach(function (b) {
-        b.classList.toggle('is-active', b === btn);
-      });
-      apply();
-    });
-  }
+  if (search) search.addEventListener('input', function () {
+    page = 1; apply(); saveLocation(true);
+  });
+  if (tagFilter) tagFilter.addEventListener('click', function (e) {
+    var button = e.target.closest('.tag-chip');
+    if (!button || button.disabled) return;
+    activeTag = button.getAttribute('data-tag');
+    page = 1; apply(); saveLocation(false);
+  });
+  if (pager) pager.addEventListener('click', function (e) {
+    var button = e.target.closest('[data-page]');
+    if (!button || button.disabled) return;
+    page = Number(button.getAttribute('data-page'));
+    apply(); saveLocation(false);
+    if (status) { status.focus({preventScroll: true}); status.scrollIntoView({block: 'start'}); }
+  });
+  window.addEventListener('popstate', function () { readLocation(); apply(); });
+  readLocation(); apply(); saveLocation(true);
 })();
 
 // Research page: Synopsis / Abstract panels. At most one panel per paper is

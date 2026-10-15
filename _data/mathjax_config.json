@@ -1,0 +1,5 @@
+{
+  "version": "3.2.2",
+  "packages": ["base", "ams", "newcommand", "configmacros", "mathtools", "cancel", "boldsymbol"],
+  "load": ["[tex]/mathtools", "[tex]/cancel", "[tex]/boldsymbol"]
+}

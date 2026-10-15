@@ -1,0 +1,3955 @@
+[
+  {
+    "key": "02-0",
+    "file": "_posts/2022-02-05-differentiable-manifolds-charts-constructions-and-examples.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        0,
+        16
+      ],
+      [
+        16,
+        42
+      ]
+    ],
+    "former_posts": [
+      "02-0",
+      "02-16"
+    ],
+    "citations": [
+      "carmo_riemannian_1992",
+      "hatcher_algebraic_2002"
+    ],
+    "date": "2022-02-05",
+    "title": "Differentiable Manifolds: Charts, Constructions, and Examples",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-42",
+    "file": "_posts/2022-03-04-topological-tools-for-manifolds.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        42,
+        65
+      ]
+    ],
+    "former_posts": [
+      "02-42"
+    ],
+    "citations": [],
+    "date": "2022-03-04",
+    "title": "Topological Tools for Manifolds",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-65",
+    "file": "_posts/2022-03-17-tangent-spaces-and-riemannian-metrics.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        65,
+        83
+      ],
+      [
+        83,
+        94
+      ]
+    ],
+    "former_posts": [
+      "02-65",
+      "02-83"
+    ],
+    "citations": [],
+    "date": "2022-03-17",
+    "title": "Tangent Spaces and Riemannian Metrics",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-94",
+    "file": "_posts/2022-04-13-geodesics-and-the-energy-functional.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        94,
+        117
+      ],
+      [
+        166,
+        173
+      ]
+    ],
+    "former_posts": [
+      "02-94",
+      "02-166"
+    ],
+    "citations": [],
+    "date": "2022-04-13",
+    "title": "Geodesics and the Energy Functional",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-117",
+    "file": "_posts/2022-04-27-hopf-rinow.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        117,
+        125
+      ]
+    ],
+    "former_posts": [
+      "02-117"
+    ],
+    "citations": [],
+    "date": "2022-04-27",
+    "title": "Hopf-Rinow",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-125",
+    "file": "_posts/2022-05-11-connections-lie-brackets-and-curvature.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        125,
+        141
+      ],
+      [
+        141,
+        154
+      ],
+      [
+        173,
+        182
+      ],
+      [
+        182,
+        199
+      ]
+    ],
+    "former_posts": [
+      "02-125",
+      "02-141",
+      "02-173",
+      "02-182"
+    ],
+    "citations": [],
+    "date": "2022-05-11",
+    "title": "Connections, Lie Brackets, and Curvature",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-154",
+    "file": "_posts/2022-06-07-frobenius-theorem.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        154,
+        166
+      ]
+    ],
+    "former_posts": [
+      "02-154"
+    ],
+    "citations": [],
+    "date": "2022-06-07",
+    "title": "Frobenius Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-199",
+    "file": "_posts/2022-07-31-first-variation-formula.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        199,
+        215
+      ]
+    ],
+    "former_posts": [
+      "02-199"
+    ],
+    "citations": [
+      "carmo_riemannian_1992"
+    ],
+    "date": "2022-07-31",
+    "title": "First Variation Formula",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-215",
+    "file": "_posts/2022-08-14-parallel-transport.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        215,
+        229
+      ]
+    ],
+    "former_posts": [
+      "02-215"
+    ],
+    "citations": [
+      "carmo_riemannian_1992"
+    ],
+    "date": "2022-08-14",
+    "title": "Parallel Transport",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-229",
+    "file": "_posts/2022-08-27-sectional-curvature-ricci-curvature-and-space-forms.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        229,
+        248
+      ],
+      [
+        271,
+        278
+      ]
+    ],
+    "former_posts": [
+      "02-229",
+      "02-271"
+    ],
+    "citations": [],
+    "date": "2022-08-27",
+    "title": "Sectional Curvature, Ricci Curvature, and Space Forms",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-248",
+    "file": "_posts/2022-09-10-planar-geometry-and-gauss-bonnet.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        248,
+        271
+      ]
+    ],
+    "former_posts": [
+      "02-248"
+    ],
+    "citations": [
+      "do_carmo_differential_1994"
+    ],
+    "date": "2022-09-10",
+    "title": "Planar Geometry and Gauss-Bonnet",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-278",
+    "file": "_posts/2022-10-07-lie-groups-and-their-lie-algebras.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        278,
+        312
+      ],
+      [
+        337,
+        347
+      ]
+    ],
+    "former_posts": [
+      "02-278",
+      "02-337"
+    ],
+    "citations": [],
+    "date": "2022-10-07",
+    "title": "Lie Groups and Their Lie Algebras",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-312",
+    "file": "_posts/2022-10-21-lie-subgroups-the-exponential-map-and-cartans-theorem.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        312,
+        337
+      ],
+      [
+        347,
+        363
+      ],
+      [
+        363,
+        372
+      ]
+    ],
+    "former_posts": [
+      "02-312",
+      "02-347",
+      "02-363"
+    ],
+    "citations": [],
+    "date": "2022-10-21",
+    "title": "Lie Subgroups, the Exponential Map, and Cartan’s Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-372",
+    "file": "_posts/2022-12-14-the-second-fundamental-form-and-the-gauss-equations.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        372,
+        385
+      ],
+      [
+        385,
+        401
+      ],
+      [
+        401,
+        409
+      ]
+    ],
+    "former_posts": [
+      "02-372",
+      "02-385",
+      "02-401"
+    ],
+    "citations": [],
+    "date": "2022-12-14",
+    "title": "The Second Fundamental Form and the Gauss Equations",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-409",
+    "file": "_posts/2023-01-24-jacobi-fields-and-conjugate-points.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        409,
+        433
+      ],
+      [
+        433,
+        443
+      ]
+    ],
+    "former_posts": [
+      "02-409",
+      "02-433"
+    ],
+    "citations": [],
+    "date": "2023-01-24",
+    "title": "Jacobi Fields and Conjugate Points",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-443",
+    "file": "_posts/2023-02-20-second-variation-and-minimizing-geodesics.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        443,
+        460
+      ],
+      [
+        460,
+        471
+      ]
+    ],
+    "former_posts": [
+      "02-443",
+      "02-460"
+    ],
+    "citations": [],
+    "date": "2023-02-20",
+    "title": "Second Variation and Minimizing Geodesics",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-471",
+    "file": "_posts/2023-03-19-application-cartans-theorem.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        471,
+        476
+      ]
+    ],
+    "former_posts": [
+      "02-471"
+    ],
+    "citations": [],
+    "date": "2023-03-19",
+    "title": "Application: Cartan’s Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-476",
+    "file": "_posts/2023-04-02-application-morse-index-theorem.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        476,
+        497
+      ]
+    ],
+    "former_posts": [
+      "02-476"
+    ],
+    "citations": [],
+    "date": "2023-04-02",
+    "title": "Application: Morse Index Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-497",
+    "file": "_posts/2023-04-16-curvature-bounds-and-global-geometric-consequences.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        497,
+        503
+      ],
+      [
+        503,
+        508
+      ]
+    ],
+    "former_posts": [
+      "02-497",
+      "02-503"
+    ],
+    "citations": [],
+    "date": "2023-04-16",
+    "title": "Curvature Bounds and Global Geometric Consequences",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-508",
+    "file": "_posts/2023-05-13-the-cut-locus-and-closed-geodesics.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        508,
+        530
+      ],
+      [
+        530,
+        535
+      ]
+    ],
+    "former_posts": [
+      "02-508",
+      "02-530"
+    ],
+    "citations": [],
+    "date": "2023-05-13",
+    "title": "The Cut Locus and Closed Geodesics",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-535",
+    "file": "_posts/2023-06-09-morse-functions-and-changes-in-topology.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        535,
+        548
+      ],
+      [
+        548,
+        567
+      ],
+      [
+        595,
+        608
+      ]
+    ],
+    "former_posts": [
+      "02-535",
+      "02-548",
+      "02-595"
+    ],
+    "citations": [
+      "hatcher_algebraic_2002"
+    ],
+    "date": "2023-06-09",
+    "title": "Morse Functions and Changes in Topology",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-567",
+    "file": "_posts/2023-07-06-the-isotopy-lemma-and-injectivity-radius.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        567,
+        581
+      ],
+      [
+        581,
+        595
+      ]
+    ],
+    "former_posts": [
+      "02-567",
+      "02-581"
+    ],
+    "citations": [
+      "milnor_morse_1963"
+    ],
+    "date": "2023-07-06",
+    "title": "The Isotopy Lemma and Injectivity Radius",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-608",
+    "file": "_posts/2023-08-16-comparison-theory.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        608,
+        624
+      ]
+    ],
+    "former_posts": [
+      "02-608"
+    ],
+    "citations": [
+      "cheeger_comparison_1975"
+    ],
+    "date": "2023-08-16",
+    "title": "Comparison Theory",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-624",
+    "file": "_posts/2023-08-29-hessian-and-laplacian-comparison.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        624,
+        638
+      ],
+      [
+        638,
+        643
+      ],
+      [
+        1006,
+        1010
+      ]
+    ],
+    "former_posts": [
+      "02-624",
+      "02-638",
+      "02-1006"
+    ],
+    "citations": [],
+    "date": "2023-08-29",
+    "title": "Hessian and Laplacian Comparison",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-643",
+    "file": "_posts/2023-09-26-toponogov-theorem.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        643,
+        651
+      ]
+    ],
+    "former_posts": [
+      "02-643"
+    ],
+    "citations": [
+      "carmo_riemannian_1992"
+    ],
+    "date": "2023-09-26",
+    "title": "Toponogov Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-651",
+    "file": "_posts/2023-10-09-sphere-theorem.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        651,
+        669
+      ]
+    ],
+    "former_posts": [
+      "02-651"
+    ],
+    "citations": [
+      "brendle_manifolds_2008",
+      "carmo_riemannian_1992",
+      "chang_conformally_2003",
+      "petersen_classification_2008"
+    ],
+    "date": "2023-10-09",
+    "title": "Sphere Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-669",
+    "file": "_posts/2023-10-23-minimal-submanifolds-and-first-variation.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        669,
+        676
+      ],
+      [
+        676,
+        683
+      ],
+      [
+        683,
+        697
+      ]
+    ],
+    "former_posts": [
+      "02-669",
+      "02-676",
+      "02-683"
+    ],
+    "citations": [
+      "carmo_riemannian_1992"
+    ],
+    "date": "2023-10-23",
+    "title": "Minimal Submanifolds and First Variation",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-697",
+    "file": "_posts/2023-12-03-bernsteins-theorem-and-the-gauss-map.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        697,
+        709
+      ],
+      [
+        1003,
+        1006
+      ]
+    ],
+    "former_posts": [
+      "02-697",
+      "02-1003"
+    ],
+    "citations": [],
+    "date": "2023-12-03",
+    "title": "Bernstein’s Theorem and the Gauss Map",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-709",
+    "file": "_posts/2023-12-16-hausdorff-measure-lipschitz-maps-and-densities.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        709,
+        740
+      ],
+      [
+        740,
+        751
+      ]
+    ],
+    "former_posts": [
+      "02-709",
+      "02-740"
+    ],
+    "citations": [],
+    "date": "2023-12-16",
+    "title": "Hausdorff Measure, Lipschitz Maps, and Densities",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-751",
+    "file": "_posts/2024-01-12-the-area-and-coarea-formulas.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        751,
+        763
+      ],
+      [
+        763,
+        773
+      ]
+    ],
+    "former_posts": [
+      "02-751",
+      "02-763"
+    ],
+    "citations": [],
+    "date": "2024-01-12",
+    "title": "The Area and Coarea Formulas",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-773",
+    "file": "_posts/2024-02-09-rectifiability.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        773,
+        801
+      ]
+    ],
+    "former_posts": [
+      "02-773"
+    ],
+    "citations": [],
+    "date": "2024-02-09",
+    "title": "Rectifiability",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-801",
+    "file": "_posts/2024-02-22-vector-fields-and-their-flows.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        801,
+        829
+      ],
+      [
+        829,
+        856
+      ]
+    ],
+    "former_posts": [
+      "02-801",
+      "02-829"
+    ],
+    "citations": [],
+    "date": "2024-02-22",
+    "title": "Vector Fields and Their Flows",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-856",
+    "file": "_posts/2024-03-20-vector-bundles.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        856,
+        906
+      ]
+    ],
+    "former_posts": [
+      "02-856"
+    ],
+    "citations": [],
+    "date": "2024-03-20",
+    "title": "Vector Bundles",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-906",
+    "file": "_posts/2024-04-03-cotangent-bundle.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        906,
+        947
+      ]
+    ],
+    "former_posts": [
+      "02-906"
+    ],
+    "citations": [],
+    "date": "2024-04-03",
+    "title": "Cotangent Bundle",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-947",
+    "file": "_posts/2024-04-17-covering-spaces-and-the-fundamental-group-of-the-circle.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        947,
+        973
+      ],
+      [
+        973,
+        990
+      ]
+    ],
+    "former_posts": [
+      "02-947",
+      "02-973"
+    ],
+    "citations": [
+      "hatcher_algebraic_2002"
+    ],
+    "date": "2024-04-17",
+    "title": "Covering Spaces and the Fundamental Group of the Circle",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-990",
+    "file": "_posts/2024-05-14-why-complex-projective-space-is-hausdorff.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        990,
+        1003
+      ]
+    ],
+    "former_posts": [
+      "02-990"
+    ],
+    "citations": [],
+    "date": "2024-05-14",
+    "title": "Why Complex Projective Space Is Hausdorff",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-1010",
+    "file": "_posts/2024-06-24-sobolev-spaces-embeddings-and-bounded-variation.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        1010,
+        1036
+      ],
+      [
+        1036,
+        1048
+      ],
+      [
+        1048,
+        1057
+      ]
+    ],
+    "former_posts": [
+      "02-1010",
+      "02-1036",
+      "02-1048"
+    ],
+    "citations": [],
+    "date": "2024-06-24",
+    "title": "Sobolev Spaces, Embeddings, and Bounded Variation",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "02-1057",
+    "file": "_posts/2024-08-03-graph-laplacians-isoperimetry-and-diameter-bounds.md",
+    "source": "assets/notes/Differential Geometry - Notes/diff-geo.tex",
+    "blocks": [
+      [
+        1057,
+        1071
+      ],
+      [
+        1071,
+        1087
+      ],
+      [
+        1087,
+        1095
+      ]
+    ],
+    "former_posts": [
+      "02-1057",
+      "02-1071",
+      "02-1087"
+    ],
+    "citations": [
+      "ford_maximal_1956"
+    ],
+    "date": "2024-08-03",
+    "title": "Graph Laplacians, Isoperimetry, and Diameter Bounds",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "03-0",
+    "file": "_posts/2023-03-04-local-asymptotic-normality.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Asymptotic Normality and Efficiency (Chapters 7 and 8)/main.tex",
+    "blocks": [
+      [
+        0,
+        8
+      ]
+    ],
+    "former_posts": [
+      "03-0"
+    ],
+    "citations": [],
+    "date": "2023-03-04",
+    "title": "Local Asymptotic Normality",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "03-8",
+    "file": "_posts/2023-04-25-regular-estimators-limit-experiments-and-asymptotic-efficiency.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Asymptotic Normality and Efficiency (Chapters 7 and 8)/main.tex",
+    "blocks": [
+      [
+        8,
+        16
+      ],
+      [
+        16,
+        42
+      ]
+    ],
+    "former_posts": [
+      "03-8",
+      "03-16"
+    ],
+    "citations": [],
+    "date": "2023-04-25",
+    "title": "Regular Estimators, Limit Experiments, and Asymptotic Efficiency",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "04-0",
+    "file": "_posts/2023-03-04-bootstrap-distributions-and-consistency.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Bootstrapping, Subsampling/stats.tex",
+    "blocks": [
+      [
+        0,
+        9
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        13,
+        23
+      ]
+    ],
+    "former_posts": [
+      "04-0",
+      "04-9",
+      "04-13"
+    ],
+    "citations": [],
+    "date": "2023-03-04",
+    "title": "Bootstrap Distributions and Consistency",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "04-23",
+    "file": "_posts/2023-05-01-bootstrapping-the-mean-and-coverage-accuracy.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Bootstrapping, Subsampling/stats.tex",
+    "blocks": [
+      [
+        23,
+        37
+      ],
+      [
+        37,
+        44
+      ]
+    ],
+    "former_posts": [
+      "04-23",
+      "04-37"
+    ],
+    "citations": [],
+    "date": "2023-05-01",
+    "title": "Bootstrapping the Mean and Coverage Accuracy",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "04-44",
+    "file": "_posts/2023-06-10-subsampling.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Bootstrapping, Subsampling/stats.tex",
+    "blocks": [
+      [
+        44,
+        54
+      ]
+    ],
+    "former_posts": [
+      "04-44"
+    ],
+    "citations": [],
+    "date": "2023-06-10",
+    "title": "Subsampling",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "05-0",
+    "file": "_posts/2024-01-06-mixing-conditions-and-a-nonmixing-ar-1-process.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex",
+    "blocks": [
+      [
+        0,
+        17
+      ],
+      [
+        97,
+        110
+      ]
+    ],
+    "former_posts": [
+      "05-0",
+      "05-97"
+    ],
+    "citations": [
+      "andrews_non-strong_1984",
+      "doukhan_mixing_1994",
+      "hall_martingale_1980"
+    ],
+    "date": "2024-01-06",
+    "title": "Mixing Conditions and a Nonmixing AR(1) Process",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "05-17",
+    "file": "_posts/2024-02-17-steins-method.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex",
+    "blocks": [
+      [
+        17,
+        36
+      ]
+    ],
+    "former_posts": [
+      "05-17"
+    ],
+    "citations": [],
+    "date": "2024-02-17",
+    "title": "Stein’s Method",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "05-36",
+    "file": "_posts/2024-03-30-the-hot-hand-statistics-for-streaks.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex",
+    "blocks": [
+      [
+        36,
+        71
+      ]
+    ],
+    "former_posts": [
+      "05-36"
+    ],
+    "citations": [
+      "miller_surprised_2018",
+      "ritzwoller_uncertainty_2022"
+    ],
+    "date": "2024-03-30",
+    "title": "The Hot Hand: Statistics for Streaks",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/05-36.md"
+  },
+  {
+    "key": "05-71",
+    "file": "_posts/2024-05-11-the-hot-hand-limit-theory-and-proofs.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex",
+    "blocks": [
+      [
+        71,
+        97
+      ]
+    ],
+    "former_posts": [
+      "05-71"
+    ],
+    "citations": [
+      "ritzwoller_uncertainty_2022"
+    ],
+    "date": "2024-05-11",
+    "title": "The Hot Hand: Limit Theory and Proofs",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/05-71.md"
+  },
+  {
+    "key": "06-0",
+    "file": "_posts/2022-09-03-empirical-processes-tensorization-and-the-entropy-method.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        11,
+        25
+      ]
+    ],
+    "former_posts": [
+      "06-0",
+      "06-3",
+      "06-11"
+    ],
+    "citations": [],
+    "date": "2022-09-03",
+    "title": "Empirical Processes, Tensorization, and the Entropy Method",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-25",
+    "file": "_posts/2022-09-13-concentration-inequalities.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        25,
+        64
+      ]
+    ],
+    "former_posts": [
+      "06-25"
+    ],
+    "citations": [],
+    "date": "2022-09-13",
+    "title": "Concentration Inequalities",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-64",
+    "file": "_posts/2022-09-17-log-sobolev-inequality.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        64,
+        89
+      ]
+    ],
+    "former_posts": [
+      "06-64"
+    ],
+    "citations": [],
+    "date": "2022-09-17",
+    "title": "Log-Sobolev Inequality",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-89",
+    "file": "_posts/2022-09-20-symmetrization-bracketing-and-covering-numbers.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        89,
+        97
+      ],
+      [
+        97,
+        99
+      ],
+      [
+        99,
+        105
+      ],
+      [
+        105,
+        117
+      ]
+    ],
+    "former_posts": [
+      "06-89",
+      "06-97",
+      "06-99",
+      "06-105"
+    ],
+    "citations": [],
+    "date": "2022-09-20",
+    "title": "Symmetrization, Bracketing, and Covering Numbers",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-117",
+    "file": "_posts/2022-10-04-maximal-inequalities-via-concentration.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        117,
+        135
+      ]
+    ],
+    "former_posts": [
+      "06-117"
+    ],
+    "citations": [],
+    "date": "2022-10-04",
+    "title": "Maximal Inequalities via Concentration",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-135",
+    "file": "_posts/2022-10-08-stochastic-equicontinuity.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        135,
+        145
+      ]
+    ],
+    "former_posts": [
+      "06-135"
+    ],
+    "citations": [
+      "pollard_convergence_1984"
+    ],
+    "date": "2022-10-08",
+    "title": "Stochastic Equicontinuity",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-145",
+    "file": "_posts/2022-10-11-chaining.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        145,
+        163
+      ]
+    ],
+    "former_posts": [
+      "06-145"
+    ],
+    "citations": [
+      "pollard_convergence_1984"
+    ],
+    "date": "2022-10-11",
+    "title": "Chaining",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-163",
+    "file": "_posts/2022-10-15-maximal-inequalities-via-uniform-entropy-and-bracketing.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        163,
+        193
+      ]
+    ],
+    "former_posts": [
+      "06-163"
+    ],
+    "citations": [
+      "van_der_vaart_weak_2000"
+    ],
+    "date": "2022-10-15",
+    "title": "Maximal Inequalities via Uniform Entropy and Bracketing",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-193",
+    "file": "_posts/2022-10-18-local-bracketing-bounds-from-bernsteins-inequality.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        193,
+        198
+      ],
+      [
+        198,
+        201
+      ],
+      [
+        201,
+        216
+      ]
+    ],
+    "former_posts": [
+      "06-193",
+      "06-198",
+      "06-201"
+    ],
+    "citations": [],
+    "date": "2022-10-18",
+    "title": "Local Bracketing Bounds from Bernstein’s Inequality",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-216",
+    "file": "_posts/2022-10-29-uniform-laws-via-entropy-and-symmetrization.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        216,
+        233
+      ],
+      [
+        233,
+        248
+      ]
+    ],
+    "former_posts": [
+      "06-216",
+      "06-233"
+    ],
+    "citations": [
+      "van_der_vaart_weak_2000"
+    ],
+    "date": "2022-10-29",
+    "title": "Uniform Laws via Entropy and Symmetrization",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-248",
+    "file": "_posts/2022-11-05-localization-and-the-uniform-law.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        248,
+        261
+      ]
+    ],
+    "former_posts": [
+      "06-248"
+    ],
+    "citations": [],
+    "date": "2022-11-05",
+    "title": "Localization and the Uniform Law",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-261",
+    "file": "_posts/2022-11-08-vc-dimension-and-uniform-entropy-bounds.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        261,
+        263
+      ],
+      [
+        263,
+        299
+      ]
+    ],
+    "former_posts": [
+      "06-261",
+      "06-263"
+    ],
+    "citations": [],
+    "date": "2022-11-08",
+    "title": "VC Dimension and Uniform Entropy Bounds",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-299",
+    "file": "_posts/2022-11-15-donsker-class.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        299,
+        313
+      ]
+    ],
+    "former_posts": [
+      "06-299"
+    ],
+    "citations": [],
+    "date": "2022-11-15",
+    "title": "Donsker Class",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-313",
+    "file": "_posts/2022-11-19-gaussian-process.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        313,
+        324
+      ]
+    ],
+    "former_posts": [
+      "06-313"
+    ],
+    "citations": [],
+    "date": "2022-11-19",
+    "title": "Gaussian Process",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-324",
+    "file": "_posts/2022-11-22-gaussian-comparison-and-sudakovs-inequality.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        324,
+        333
+      ],
+      [
+        333,
+        343
+      ],
+      [
+        343,
+        351
+      ]
+    ],
+    "former_posts": [
+      "06-324",
+      "06-333",
+      "06-343"
+    ],
+    "citations": [],
+    "date": "2022-11-22",
+    "title": "Gaussian Comparison and Sudakov’s Inequality",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-351",
+    "file": "_posts/2022-12-03-rademacher-and-gaussian-complexity.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        351,
+        360
+      ],
+      [
+        360,
+        369
+      ]
+    ],
+    "former_posts": [
+      "06-351",
+      "06-360"
+    ],
+    "citations": [],
+    "date": "2022-12-03",
+    "title": "Rademacher and Gaussian Complexity",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-369",
+    "file": "_posts/2022-12-10-nonparametric-least-squares-and-rates-of-convergence.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        369,
+        386
+      ],
+      [
+        386,
+        400
+      ]
+    ],
+    "former_posts": [
+      "06-369",
+      "06-386"
+    ],
+    "citations": [],
+    "date": "2022-12-10",
+    "title": "Nonparametric Least Squares and Rates of Convergence",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-400",
+    "file": "_posts/2022-12-17-random-matrices-eigenvalue-and-operator-norm-bounds.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        400,
+        408
+      ],
+      [
+        408,
+        412
+      ],
+      [
+        412,
+        418
+      ],
+      [
+        418,
+        426
+      ]
+    ],
+    "former_posts": [
+      "06-400",
+      "06-408",
+      "06-412",
+      "06-418"
+    ],
+    "citations": [],
+    "date": "2022-12-17",
+    "title": "Random Matrices: Eigenvalue and Operator-Norm Bounds",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "06-426",
+    "file": "_posts/2022-12-31-universality.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex",
+    "blocks": [
+      [
+        426,
+        437
+      ]
+    ],
+    "former_posts": [
+      "06-426"
+    ],
+    "citations": [],
+    "date": "2022-12-31",
+    "title": "Universality",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "07-0",
+    "file": "_posts/2023-04-08-quadratic-mean-differentiability.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Invariant Tests and Quadratic Mean Differentiability/stats.tex",
+    "blocks": [
+      [
+        0,
+        17
+      ]
+    ],
+    "former_posts": [
+      "07-0"
+    ],
+    "citations": [],
+    "date": "2023-04-08",
+    "title": "Quadratic Mean Differentiability",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "07-17",
+    "file": "_posts/2023-05-03-asymptotic-power-relative-efficiency-and-optimal-tests.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Invariant Tests and Quadratic Mean Differentiability/stats.tex",
+    "blocks": [
+      [
+        17,
+        21
+      ],
+      [
+        21,
+        40
+      ],
+      [
+        40,
+        50
+      ]
+    ],
+    "former_posts": [
+      "07-17",
+      "07-21",
+      "07-40"
+    ],
+    "citations": [
+      "van_der_vaart_asymptotic_2007"
+    ],
+    "date": "2023-05-03",
+    "title": "Asymptotic Power, Relative Efficiency, and Optimal Tests",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "08-0",
+    "file": "_posts/2022-05-07-contiguity-change-of-measure-and-m-estimation.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/M-Estimation and Contiguity/main.tex",
+    "blocks": [
+      [
+        0,
+        16
+      ],
+      [
+        16,
+        21
+      ]
+    ],
+    "former_posts": [
+      "08-0",
+      "08-16"
+    ],
+    "citations": [
+      "van_der_vaart1998asymptotic",
+      "van_der_vaart_weak_2000"
+    ],
+    "date": "2022-05-07",
+    "title": "Contiguity, Change of Measure, and M-Estimation",
+    "adaptation": "expanded-notes",
+    "manuscript": "scripts/notes/topic-notes/08-0.md"
+  },
+  {
+    "key": "09-0",
+    "file": "_posts/2023-01-07-martingales-maximal-and-upcrossing-inequalities.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Martingales - Prob and Statistics/stats.tex",
+    "blocks": [
+      [
+        0,
+        20
+      ]
+    ],
+    "former_posts": [
+      "09-0"
+    ],
+    "citations": [],
+    "date": "2023-01-07",
+    "title": "Martingales: Maximal and Upcrossing Inequalities",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "09-20",
+    "file": "_posts/2023-02-18-martingale-square-function-inequalities.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Martingales - Prob and Statistics/stats.tex",
+    "blocks": [
+      [
+        20,
+        36
+      ]
+    ],
+    "former_posts": [
+      "09-20"
+    ],
+    "citations": [
+      "bass_probabilistic_1995"
+    ],
+    "date": "2023-02-18",
+    "title": "Martingale Square-Function Inequalities",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "10-0",
+    "file": "_posts/2024-01-13-network-tmle-structural-models-dimension-reduction-and-inference.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        0,
+        9
+      ],
+      [
+        9,
+        23
+      ],
+      [
+        23,
+        42
+      ],
+      [
+        42,
+        59
+      ]
+    ],
+    "former_posts": [
+      "10-0",
+      "10-9",
+      "10-23",
+      "10-42"
+    ],
+    "citations": [
+      "van_der_laan_causal_2014"
+    ],
+    "date": "2024-01-13",
+    "title": "Network TMLE: Structural Models, Dimension Reduction, and Inference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-0.md"
+  },
+  {
+    "key": "10-59",
+    "file": "_posts/2024-03-19-causal-inference-from-a-single-social-network.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        59,
+        76
+      ],
+      [
+        76,
+        90
+      ],
+      [
+        90,
+        104
+      ]
+    ],
+    "former_posts": [
+      "10-59",
+      "10-76",
+      "10-90"
+    ],
+    "citations": [
+      "ogburn_causal_2024"
+    ],
+    "date": "2024-03-19",
+    "title": "Causal Inference from a Single Social Network",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-59.md"
+  },
+  {
+    "key": "10-104",
+    "file": "_posts/2024-06-26-two-stage-experiments-under-partial-interference-effects-variance-and-limits.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        104,
+        128
+      ],
+      [
+        128,
+        141
+      ],
+      [
+        162,
+        182
+      ]
+    ],
+    "former_posts": [
+      "10-104",
+      "10-128",
+      "10-162"
+    ],
+    "citations": [
+      "hudgens_toward_2008",
+      "liu_large_2014"
+    ],
+    "date": "2024-06-26",
+    "title": "Two-Stage Experiments under Partial Interference: Effects, Variance, and Limits",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-104.md"
+  },
+  {
+    "key": "10-141",
+    "file": "_posts/2024-06-10-finite-sample-inference-under-interference.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        141,
+        162
+      ]
+    ],
+    "former_posts": [
+      "10-141"
+    ],
+    "citations": [
+      "tchetgen-tchetgen_causal_2012"
+    ],
+    "date": "2024-06-10",
+    "title": "Finite-Sample Inference under Interference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-141.md"
+  },
+  {
+    "key": "10-182",
+    "file": "_posts/2024-07-13-exposure-mappings-and-horvitzthompson-inference.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        182,
+        195
+      ],
+      [
+        195,
+        235
+      ]
+    ],
+    "former_posts": [
+      "10-182",
+      "10-195"
+    ],
+    "citations": [
+      "aronow_estimating_2017"
+    ],
+    "date": "2024-07-13",
+    "title": "Exposure Mappings and Horvitz–Thompson Inference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-182.md"
+  },
+  {
+    "key": "10-235",
+    "file": "_posts/2024-08-15-ordering-free-dependence-and-resampling.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        235,
+        259
+      ],
+      [
+        259,
+        266
+      ]
+    ],
+    "former_posts": [
+      "10-235",
+      "10-259"
+    ],
+    "citations": [
+      "song_ordering-free_2018"
+    ],
+    "date": "2024-08-15",
+    "title": "Ordering-Free Dependence and Resampling",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-235.md"
+  },
+  {
+    "key": "10-266",
+    "file": "_posts/2024-09-17-resampled-statistics-size-and-local-power.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        266,
+        298
+      ]
+    ],
+    "former_posts": [
+      "10-266"
+    ],
+    "citations": [
+      "song_ordering-free_2018"
+    ],
+    "date": "2024-09-17",
+    "title": "Resampled Statistics: Size and Local Power",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-266.md"
+  },
+  {
+    "key": "10-356",
+    "file": "_posts/2024-12-09-dependence-robust-resampling-and-moment-tests.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        356,
+        375
+      ],
+      [
+        375,
+        381
+      ],
+      [
+        381,
+        399
+      ]
+    ],
+    "former_posts": [
+      "10-356",
+      "10-375",
+      "10-381"
+    ],
+    "citations": [
+      "leung_dependencerobust_2022"
+    ],
+    "date": "2024-12-09",
+    "title": "Dependence-Robust Resampling and Moment Tests",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-356.md"
+  },
+  {
+    "key": "10-406",
+    "file": "_posts/2025-02-14-randomized-saturation-designs-and-their-optimal-allocation.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        406,
+        425
+      ],
+      [
+        425,
+        447
+      ]
+    ],
+    "former_posts": [
+      "10-406",
+      "10-425"
+    ],
+    "citations": [
+      "baird_optimal_2018"
+    ],
+    "date": "2025-02-14",
+    "title": "Randomized Saturation Designs and Their Optimal Allocation",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-406.md"
+  },
+  {
+    "key": "10-447",
+    "file": "_posts/2025-03-19-network-formation-and-identification-with-missing-links.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        447,
+        477
+      ],
+      [
+        477,
+        508
+      ],
+      [
+        508,
+        520
+      ]
+    ],
+    "former_posts": [
+      "10-447",
+      "10-477",
+      "10-508"
+    ],
+    "citations": [
+      "battaglini_endogenous_2022",
+      "bramoulle_risk_2007",
+      "leung_two-step_2015"
+    ],
+    "date": "2025-03-19",
+    "title": "Network Formation and Identification with Missing Links",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-447.md"
+  },
+  {
+    "key": "10-520",
+    "file": "_posts/2025-05-08-missing-network-links-and-spillover-bias.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        520,
+        538
+      ],
+      [
+        538,
+        556
+      ]
+    ],
+    "former_posts": [
+      "10-520",
+      "10-538"
+    ],
+    "citations": [
+      "zhang_spillovers_2024"
+    ],
+    "date": "2025-05-08",
+    "title": "Missing Network Links and Spillover Bias",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-520.md"
+  },
+  {
+    "key": "10-556",
+    "file": "_posts/2025-06-10-network-policy-targeting-identification-and-known-propensities.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        556,
+        578
+      ],
+      [
+        578,
+        608
+      ],
+      [
+        608,
+        628
+      ]
+    ],
+    "former_posts": [
+      "10-556",
+      "10-578",
+      "10-608"
+    ],
+    "citations": [
+      "viviano_policy_2025"
+    ],
+    "date": "2025-06-10",
+    "title": "Network Policy Targeting: Identification and Known Propensities",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-556.md"
+  },
+  {
+    "key": "10-628",
+    "file": "_posts/2025-09-01-learning-network-policies-nuisance-estimation-regret-and-transport.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
+    "blocks": [
+      [
+        628,
+        643
+      ],
+      [
+        643,
+        650
+      ],
+      [
+        650,
+        656
+      ],
+      [
+        656,
+        663
+      ],
+      [
+        663,
+        674
+      ],
+      [
+        674,
+        679
+      ],
+      [
+        679,
+        697
+      ]
+    ],
+    "former_posts": [
+      "10-628",
+      "10-643",
+      "10-650",
+      "10-656",
+      "10-663",
+      "10-674",
+      "10-679"
+    ],
+    "citations": [
+      "viviano_policy_2025"
+    ],
+    "date": "2025-09-01",
+    "title": "Learning Network Policies: Nuisance Estimation, Regret, and Transport",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/10-628.md"
+  },
+  {
+    "key": "11-0",
+    "file": "_posts/2023-02-11-the-gaussian-sequence-model-and-pinskers-theorem.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Asympotic Efficiency of Nonparametric Estimators/stats.tex",
+    "blocks": [
+      [
+        0,
+        4
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        11,
+        18
+      ]
+    ],
+    "former_posts": [
+      "11-0",
+      "11-4",
+      "11-11"
+    ],
+    "citations": [],
+    "date": "2023-02-11",
+    "title": "The Gaussian Sequence Model and Pinsker’s Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "11-18",
+    "file": "_posts/2023-05-11-steins-identity-shrinkage-and-unbiased-risk-estimation.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Asympotic Efficiency of Nonparametric Estimators/stats.tex",
+    "blocks": [
+      [
+        18,
+        30
+      ],
+      [
+        30,
+        32
+      ]
+    ],
+    "former_posts": [
+      "11-18",
+      "11-30"
+    ],
+    "citations": [],
+    "date": "2023-05-11",
+    "title": "Stein’s Identity, Shrinkage, and Unbiased Risk Estimation",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "12-0",
+    "file": "_posts/2025-01-11-wild-cluster-bootstrap-with-few-large-clusters.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex",
+    "blocks": [
+      [
+        0,
+        15
+      ]
+    ],
+    "former_posts": [
+      "12-0"
+    ],
+    "citations": [
+      "canay_wild_2021"
+    ],
+    "date": "2025-01-11",
+    "title": "Wild Cluster Bootstrap with Few Large Clusters",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/12-0.md"
+  },
+  {
+    "key": "12-15",
+    "file": "_posts/2025-02-21-heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex",
+    "blocks": [
+      [
+        15,
+        29
+      ],
+      [
+        133,
+        138
+      ],
+      [
+        29,
+        41
+      ],
+      [
+        127,
+        133
+      ]
+    ],
+    "former_posts": [
+      "12-15",
+      "12-133",
+      "12-29",
+      "12-127"
+    ],
+    "citations": [
+      "chiang_inconsistency_2024"
+    ],
+    "date": "2025-02-21",
+    "title": "Heavy-Tailed Cluster Inference: Bootstrap Failure and Score Subsampling",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/12-15.md"
+  },
+  {
+    "key": "12-41",
+    "file": "_posts/2025-03-13-when-to-cluster-sampling-assignment-and-fixed-effects.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex",
+    "blocks": [
+      [
+        41,
+        74
+      ],
+      [
+        74,
+        81
+      ],
+      [
+        81,
+        97
+      ],
+      [
+        97,
+        108
+      ]
+    ],
+    "former_posts": [
+      "12-41",
+      "12-74",
+      "12-81",
+      "12-97"
+    ],
+    "citations": [
+      "abadie_when_2022"
+    ],
+    "date": "2025-03-13",
+    "title": "When to Cluster: Sampling, Assignment, and Fixed Effects",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/12-41.md"
+  },
+  {
+    "key": "12-108",
+    "file": "_posts/2025-06-03-network-cluster-robust-inference.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex",
+    "blocks": [
+      [
+        108,
+        127
+      ]
+    ],
+    "former_posts": [
+      "12-108"
+    ],
+    "citations": [
+      "leung_network_2023"
+    ],
+    "date": "2025-06-03",
+    "title": "Network Cluster-Robust Inference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/12-108.md"
+  },
+  {
+    "key": "13-0",
+    "file": "_posts/2023-01-14-nonparametric-minimax-risk-and-the-varshamovgilbert-lemma.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Fundamentals of Nonparametric Estimation/nonparametric.tex",
+    "blocks": [
+      [
+        0,
+        3
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "former_posts": [
+      "13-0",
+      "13-3"
+    ],
+    "citations": [],
+    "date": "2023-01-14",
+    "title": "Nonparametric Minimax Risk and the Varshamov–Gilbert Lemma",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "13-7",
+    "file": "_posts/2023-03-29-kernel-density-estimation-pointwise-and-integrated-risk.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Fundamentals of Nonparametric Estimation/nonparametric.tex",
+    "blocks": [
+      [
+        7,
+        17
+      ],
+      [
+        17,
+        19
+      ],
+      [
+        19,
+        28
+      ]
+    ],
+    "former_posts": [
+      "13-7",
+      "13-17",
+      "13-19"
+    ],
+    "citations": [],
+    "date": "2023-03-29",
+    "title": "Kernel Density Estimation: Pointwise and Integrated Risk",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "13-28",
+    "file": "_posts/2023-07-19-nonparametric-regression-and-local-polynomial-estimators.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Fundamentals of Nonparametric Estimation/nonparametric.tex",
+    "blocks": [
+      [
+        28,
+        31
+      ],
+      [
+        31,
+        49
+      ]
+    ],
+    "former_posts": [
+      "13-28",
+      "13-31"
+    ],
+    "citations": [],
+    "date": "2023-07-19",
+    "title": "Nonparametric Regression and Local Polynomial Estimators",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "13-49",
+    "file": "_posts/2023-10-02-projection-estimators-and-linear-minimax-risk.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Fundamentals of Nonparametric Estimation/nonparametric.tex",
+    "blocks": [
+      [
+        49,
+        55
+      ],
+      [
+        55,
+        61
+      ],
+      [
+        61,
+        68
+      ]
+    ],
+    "former_posts": [
+      "13-49",
+      "13-55",
+      "13-61"
+    ],
+    "citations": [],
+    "date": "2023-10-02",
+    "title": "Projection Estimators and Linear Minimax Risk",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "15-0",
+    "file": "_posts/2024-08-21-novelty-detection-mixture-identification-and-statistical-guarantees.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on ML Novelty Detection/stats.tex",
+    "blocks": [
+      [
+        0,
+        11
+      ],
+      [
+        11,
+        16
+      ],
+      [
+        16,
+        32
+      ],
+      [
+        32,
+        44
+      ]
+    ],
+    "former_posts": [
+      "15-0",
+      "15-11",
+      "15-16",
+      "15-32"
+    ],
+    "citations": [
+      "blanchard_semi-supervised_2010"
+    ],
+    "date": "2024-08-21",
+    "title": "Novelty Detection: Mixture Identification and Statistical Guarantees",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/15-0.md"
+  },
+  {
+    "key": "16-0",
+    "file": "_posts/2025-01-18-taxable-income-elasticities-and-what-kinks-identify.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex",
+    "blocks": [
+      [
+        0,
+        13
+      ],
+      [
+        13,
+        25
+      ],
+      [
+        41,
+        51
+      ]
+    ],
+    "former_posts": [
+      "16-0",
+      "16-13",
+      "16-41"
+    ],
+    "citations": [
+      "kleven_bunching_2016",
+      "saez_taxpayers_2010"
+    ],
+    "date": "2025-01-18",
+    "title": "Taxable-Income Elasticities and What Kinks Identify",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/16-0.md"
+  },
+  {
+    "key": "16-25",
+    "file": "_posts/2025-02-25-bunching-at-notches-and-extensive-responses.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex",
+    "blocks": [
+      [
+        25,
+        41
+      ],
+      [
+        183,
+        188
+      ]
+    ],
+    "former_posts": [
+      "16-25",
+      "16-183"
+    ],
+    "citations": [
+      "kleven_using_2013"
+    ],
+    "date": "2025-02-25",
+    "title": "Bunching at Notches and Extensive Responses",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/16-25.md"
+  },
+  {
+    "key": "16-51",
+    "file": "_posts/2025-04-24-bunching-identification-density-bounds-and-control-groups.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex",
+    "blocks": [
+      [
+        51,
+        59
+      ],
+      [
+        175,
+        183
+      ],
+      [
+        59,
+        83
+      ]
+    ],
+    "former_posts": [
+      "16-51",
+      "16-175",
+      "16-59"
+    ],
+    "citations": [
+      "bertanha_bunching_2023",
+      "blomquist_bunching_2021",
+      "coles_how_2022"
+    ],
+    "date": "2025-04-24",
+    "title": "Bunching Identification: Density Bounds and Control Groups",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/16-51.md"
+  },
+  {
+    "key": "16-83",
+    "file": "_posts/2025-06-22-bunching-and-endogeneity-testing-identification-and-correction.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex",
+    "blocks": [
+      [
+        83,
+        110
+      ],
+      [
+        110,
+        121
+      ],
+      [
+        121,
+        150
+      ]
+    ],
+    "former_posts": [
+      "16-83",
+      "16-110",
+      "16-121"
+    ],
+    "citations": [
+      "caetano_correcting_2023",
+      "caetano_test_2015"
+    ],
+    "date": "2025-06-22",
+    "title": "Bunching and Endogeneity: Testing, Identification, and Correction",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/16-83.md"
+  },
+  {
+    "key": "16-150",
+    "file": "_posts/2025-07-11-treatment-effects-at-an-overtime-notch.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex",
+    "blocks": [
+      [
+        150,
+        175
+      ]
+    ],
+    "former_posts": [
+      "16-150"
+    ],
+    "citations": [
+      "caetano_identification_2022"
+    ],
+    "date": "2025-07-11",
+    "title": "Treatment Effects at an Overtime Notch",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/16-150.md"
+  },
+  {
+    "key": "16-188",
+    "file": "_posts/2025-09-07-estimating-elasticities-under-nonlinear-budget-sets.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex",
+    "blocks": [
+      [
+        188,
+        196
+      ],
+      [
+        196,
+        201
+      ]
+    ],
+    "former_posts": [
+      "16-188",
+      "16-196"
+    ],
+    "citations": [
+      "aronsson_maximum_2024",
+      "blomquist_econometrics_2023",
+      "blomquist_nonparametric_2002"
+    ],
+    "date": "2025-09-07",
+    "title": "Estimating Elasticities under Nonlinear Budget Sets",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/16-188.md"
+  },
+  {
+    "key": "17-15",
+    "file": "_posts/2025-02-02-instrumental-variables-for-taxable-income-elasticities.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/stats.tex",
+    "blocks": [
+      [
+        15,
+        20
+      ]
+    ],
+    "former_posts": [
+      "17-15"
+    ],
+    "citations": [
+      "gruber_elasticity_2002",
+      "kumar_estimating_2020",
+      "weber_toward_2014"
+    ],
+    "date": "2025-02-02",
+    "title": "Instrumental Variables for Taxable-Income Elasticities",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/17-15.md"
+  },
+  {
+    "key": "19-0",
+    "file": "_posts/2024-03-02-post-double-selection-orthogonality-assumptions-and-inference.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Post-Double-Selection Lasso/stats.tex",
+    "blocks": [
+      [
+        0,
+        8
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        13,
+        22
+      ]
+    ],
+    "former_posts": [
+      "19-0",
+      "19-8",
+      "19-13"
+    ],
+    "citations": [
+      "belloni_inference_2014"
+    ],
+    "date": "2024-03-02",
+    "title": "Post-Double Selection: Orthogonality, Assumptions, and Inference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/19-0.md"
+  },
+  {
+    "key": "19-22",
+    "file": "_posts/2024-06-29-probability-bounds-behind-post-double-selection.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Post-Double-Selection Lasso/stats.tex",
+    "blocks": [
+      [
+        22,
+        45
+      ]
+    ],
+    "former_posts": [
+      "19-22"
+    ],
+    "citations": [
+      "belloni_inference_2014"
+    ],
+    "date": "2024-06-29",
+    "title": "Probability Bounds Behind Post-Double Selection",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/19-22.md"
+  },
+  {
+    "key": "20-0",
+    "file": "_posts/2024-07-13-regression-discontinuity-with-measurement-error.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on RDD Measurement Error (Dong Kolesar)/stats.tex",
+    "blocks": [
+      [
+        0,
+        6
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        13,
+        20
+      ],
+      [
+        20,
+        23
+      ]
+    ],
+    "former_posts": [
+      "20-0",
+      "20-6",
+      "20-13",
+      "20-20"
+    ],
+    "citations": [
+      "dong_when_2023"
+    ],
+    "date": "2024-07-13",
+    "title": "Regression Discontinuity with Measurement Error",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/20-0.md"
+  },
+  {
+    "key": "21-1",
+    "file": "_posts/2023-01-21-brownian-motion-markov-properties-and-path-continuity.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        1,
+        13
+      ],
+      [
+        13,
+        17
+      ],
+      [
+        17,
+        23
+      ]
+    ],
+    "former_posts": [
+      "21-1",
+      "21-13",
+      "21-17"
+    ],
+    "citations": [
+      "le_gall_brownian_2016"
+    ],
+    "date": "2023-01-21",
+    "title": "Brownian Motion: Markov Properties and Path Continuity",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-23",
+    "file": "_posts/2023-05-08-brownian-path-oscillations-and-continuity-bounds.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        23,
+        29
+      ],
+      [
+        29,
+        37
+      ],
+      [
+        37,
+        42
+      ]
+    ],
+    "former_posts": [
+      "21-23",
+      "21-29",
+      "21-37"
+    ],
+    "citations": [],
+    "date": "2023-05-08",
+    "title": "Brownian Path Oscillations and Continuity Bounds",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-42",
+    "file": "_posts/2023-08-23-quadratic-variation-and-the-doobmeyer-decomposition.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        42,
+        52
+      ],
+      [
+        52,
+        61
+      ]
+    ],
+    "former_posts": [
+      "21-42",
+      "21-52"
+    ],
+    "citations": [
+      "bass_probabilistic_1995",
+      "bass_stochastic_2011",
+      "karatzas_brownian_1996",
+      "meyer_decomposition_1962"
+    ],
+    "date": "2023-08-23",
+    "title": "Quadratic Variation and the Doob–Meyer Decomposition",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-61",
+    "file": "_posts/2023-11-02-construction-of-the-stochastic-integral.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        61,
+        71
+      ]
+    ],
+    "former_posts": [
+      "21-61"
+    ],
+    "citations": [],
+    "date": "2023-11-02",
+    "title": "Construction of the Stochastic Integral",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-71",
+    "file": "_posts/2023-12-08-itos-formula-applications-and-stratonovich-integration.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        71,
+        79
+      ],
+      [
+        79,
+        86
+      ],
+      [
+        105,
+        108
+      ]
+    ],
+    "former_posts": [
+      "21-71",
+      "21-79",
+      "21-105"
+    ],
+    "citations": [
+      "bass_stochastic_2011",
+      "le_gall_brownian_2016"
+    ],
+    "date": "2023-12-08",
+    "title": "Itō’s Formula, Applications, and Stratonovich Integration",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-86",
+    "file": "_posts/2024-02-18-burkholder-davis-gundy-inequalities.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        86,
+        96
+      ]
+    ],
+    "former_posts": [
+      "21-86"
+    ],
+    "citations": [
+      "bass_probabilistic_1995"
+    ],
+    "date": "2024-02-18",
+    "title": "Burkholder-Davis-Gundy inequalities",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-96",
+    "file": "_posts/2024-03-24-girsanovs-theorem.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        96,
+        105
+      ]
+    ],
+    "former_posts": [
+      "21-96"
+    ],
+    "citations": [],
+    "date": "2024-03-24",
+    "title": "Girsanov’s Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-108",
+    "file": "_posts/2024-06-04-further-results-on-stochastic-integrals.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        108,
+        144
+      ]
+    ],
+    "former_posts": [
+      "21-108"
+    ],
+    "citations": [
+      "le_gall_brownian_2016"
+    ],
+    "date": "2024-06-04",
+    "title": "Further Results on Stochastic Integrals",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-144",
+    "file": "_posts/2024-07-10-continuous-semimartingales-and-the-monotone-class-argument.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        144,
+        151
+      ],
+      [
+        151,
+        174
+      ]
+    ],
+    "former_posts": [
+      "21-144",
+      "21-151"
+    ],
+    "citations": [
+      "le_gall_brownian_2016"
+    ],
+    "date": "2024-07-10",
+    "title": "Continuous Semimartingales and the Monotone-Class Argument",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-174",
+    "file": "_posts/2024-09-19-a-strict-local-martingale-and-the-meaning-of-boundedness.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        174,
+        178
+      ]
+    ],
+    "former_posts": [
+      "21-174"
+    ],
+    "citations": [],
+    "date": "2024-09-19",
+    "title": "A Strict Local Martingale and the Meaning of Boundedness",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "21-178",
+    "file": "_posts/2024-10-25-skorokhod-representation-and-tightness-on-path-space.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex",
+    "blocks": [
+      [
+        178,
+        188
+      ],
+      [
+        188,
+        194
+      ]
+    ],
+    "former_posts": [
+      "21-178",
+      "21-188"
+    ],
+    "citations": [],
+    "date": "2024-10-25",
+    "title": "Skorokhod Representation and Tightness on Path Space",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "22-0",
+    "file": "_posts/2025-05-05-the-fragility-of-sparsity-coordinates-geometry-and-specification-tests.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Sparsity (Kolesar Ulrich S)/stats.tex",
+    "blocks": [
+      [
+        0,
+        5
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        13,
+        18
+      ],
+      [
+        18,
+        21
+      ],
+      [
+        21,
+        26
+      ]
+    ],
+    "former_posts": [
+      "22-0",
+      "22-5",
+      "22-9",
+      "22-13",
+      "22-18",
+      "22-21"
+    ],
+    "citations": [
+      "kolesar_fragility_2024"
+    ],
+    "date": "2025-05-05",
+    "title": "The Fragility of Sparsity: Coordinates, Geometry, and Specification Tests",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/22-0.md"
+  },
+  {
+    "key": "23-0",
+    "file": "_posts/2025-07-05-testing-mediation-principal-strata-and-observable-bounds.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Testing Mechanisms/stats.tex",
+    "blocks": [
+      [
+        0,
+        11
+      ],
+      [
+        11,
+        20
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        34,
+        59
+      ]
+    ],
+    "former_posts": [
+      "23-0",
+      "23-11",
+      "23-20",
+      "23-34"
+    ],
+    "citations": [
+      "kwon_testing_2024"
+    ],
+    "date": "2025-07-05",
+    "title": "Testing Mediation: Principal Strata and Observable Bounds",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/23-0.md"
+  },
+  {
+    "key": "23-59",
+    "file": "_posts/2025-10-28-sharp-mechanism-bounds-average-effects-and-inference.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Testing Mechanisms/stats.tex",
+    "blocks": [
+      [
+        59,
+        73
+      ],
+      [
+        73,
+        85
+      ],
+      [
+        85,
+        94
+      ]
+    ],
+    "former_posts": [
+      "23-59",
+      "23-73",
+      "23-85"
+    ],
+    "citations": [
+      "kwon_testing_2024"
+    ],
+    "date": "2025-10-28",
+    "title": "Sharp Mechanism Bounds, Average Effects, and Inference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/23-59.md"
+  },
+  {
+    "key": "23-94",
+    "file": "_posts/2026-01-23-randomization-inference-for-multiple-outcomes-over-time.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Testing Mechanisms/stats.tex",
+    "blocks": [
+      [
+        94,
+        109
+      ],
+      [
+        109,
+        123
+      ]
+    ],
+    "former_posts": [
+      "23-94",
+      "23-109"
+    ],
+    "citations": [
+      "cattaneo_randomization_2024"
+    ],
+    "date": "2026-01-23",
+    "title": "Randomization Inference for Multiple Outcomes over Time",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/23-94.md"
+  },
+  {
+    "key": "24-0",
+    "file": "_posts/2024-09-07-weak-instruments-and-the-tf-critical-value.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Weak Instruments/stats.tex",
+    "blocks": [
+      [
+        0,
+        12
+      ],
+      [
+        12,
+        24
+      ],
+      [
+        24,
+        26
+      ]
+    ],
+    "former_posts": [
+      "24-0",
+      "24-12",
+      "24-24"
+    ],
+    "citations": [
+      "lee_valid_2022"
+    ],
+    "date": "2024-09-07",
+    "title": "Weak Instruments and the tF Critical Value",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/24-0.md"
+  },
+  {
+    "key": "25-0",
+    "file": "_posts/2024-05-18-e-values-betting-calibration-and-merging.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Notes on e-Values/stats.tex",
+    "blocks": [
+      [
+        0,
+        8
+      ],
+      [
+        8,
+        16
+      ],
+      [
+        16,
+        23
+      ],
+      [
+        23,
+        29
+      ]
+    ],
+    "former_posts": [
+      "25-0",
+      "25-8",
+      "25-16",
+      "25-23"
+    ],
+    "citations": [
+      "shafer_betting_2021",
+      "vovk_wang_evalues_2021"
+    ],
+    "date": "2024-05-18",
+    "title": "E-Values: Betting, Calibration, and Merging",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/25-0.md"
+  },
+  {
+    "key": "26-0",
+    "file": "_posts/2023-02-25-confidence-bounds-conditioning-and-unbiased-tests.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Permutation and Randomization Inference/stats.tex",
+    "blocks": [
+      [
+        0,
+        14
+      ],
+      [
+        14,
+        20
+      ],
+      [
+        20,
+        39
+      ]
+    ],
+    "former_posts": [
+      "26-0",
+      "26-14",
+      "26-20"
+    ],
+    "citations": [],
+    "date": "2023-02-25",
+    "title": "Confidence Bounds, Conditioning, and Unbiased Tests",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "26-39",
+    "file": "_posts/2023-03-25-randomization-tests-invariance-ties-and-validity.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Permutation and Randomization Inference/stats.tex",
+    "blocks": [
+      [
+        39,
+        45
+      ],
+      [
+        45,
+        53
+      ],
+      [
+        53,
+        77
+      ]
+    ],
+    "former_posts": [
+      "26-39",
+      "26-45",
+      "26-53"
+    ],
+    "citations": [],
+    "date": "2023-03-25",
+    "title": "Randomization Tests: Invariance, Ties, and Validity",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "26-77",
+    "file": "_posts/2026-01-03-conditional-stochastic-dominance-with-nearest-observations.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Permutation and Randomization Inference/stats.tex",
+    "blocks": [
+      [
+        77,
+        82
+      ],
+      [
+        82,
+        90
+      ],
+      [
+        90,
+        101
+      ]
+    ],
+    "former_posts": [
+      "26-77",
+      "26-82",
+      "26-90"
+    ],
+    "citations": [
+      "bugni_testing_2025"
+    ],
+    "date": "2026-01-03",
+    "title": "Conditional Stochastic Dominance with Nearest Observations",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/26-77.md"
+  },
+  {
+    "key": "26-101",
+    "file": "_posts/2026-04-12-size-control-for-conditional-stochastic-dominance.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Permutation and Randomization Inference/stats.tex",
+    "blocks": [
+      [
+        101,
+        110
+      ],
+      [
+        110,
+        135
+      ]
+    ],
+    "former_posts": [
+      "26-101",
+      "26-110"
+    ],
+    "citations": [
+      "bugni_testing_2025"
+    ],
+    "date": "2026-04-12",
+    "title": "Size Control for Conditional Stochastic Dominance",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/26-101.md"
+  },
+  {
+    "key": "26-135",
+    "file": "_posts/2023-02-11-the-neymanpearson-lemma-and-unbiased-testing.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Permutation and Randomization Inference/stats.tex",
+    "blocks": [
+      [
+        135,
+        145
+      ],
+      [
+        145,
+        161
+      ]
+    ],
+    "former_posts": [
+      "26-135",
+      "26-145"
+    ],
+    "citations": [],
+    "date": "2023-02-11",
+    "title": "The Neyman–Pearson Lemma and Unbiased Testing",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "27-0",
+    "file": "_posts/2022-03-05-projection-methods-and-u-statistics.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Projections and U- and Sign-Statistics (Chapters 11-13)/main.tex",
+    "blocks": [
+      [
+        0,
+        14
+      ],
+      [
+        14,
+        32
+      ]
+    ],
+    "former_posts": [
+      "27-0",
+      "27-14"
+    ],
+    "citations": [],
+    "date": "2022-03-05",
+    "title": "Projection Methods and U-Statistics",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "27-32",
+    "file": "_posts/2022-05-28-rank-and-signed-rank-statistics.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Projections and U- and Sign-Statistics (Chapters 11-13)/main.tex",
+    "blocks": [
+      [
+        32,
+        47
+      ],
+      [
+        47,
+        52
+      ],
+      [
+        52,
+        63
+      ]
+    ],
+    "former_posts": [
+      "27-32",
+      "27-47",
+      "27-52"
+    ],
+    "citations": [],
+    "date": "2022-05-28",
+    "title": "Rank and Signed-Rank Statistics",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-1",
+    "file": "_posts/2021-10-02-probability-spaces-independence-and-countable-constructions.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        1,
+        27
+      ],
+      [
+        27,
+        34
+      ]
+    ],
+    "former_posts": [
+      "28-1",
+      "28-27"
+    ],
+    "citations": [],
+    "date": "2021-10-02",
+    "title": "Probability Spaces, Independence, and Countable Constructions",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-34",
+    "file": "_posts/2021-11-09-convergence-and-large-sample-probability.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        34,
+        45
+      ],
+      [
+        103,
+        111
+      ],
+      [
+        111,
+        118
+      ]
+    ],
+    "former_posts": [
+      "28-34",
+      "28-103",
+      "28-111"
+    ],
+    "citations": [],
+    "date": "2021-11-09",
+    "title": "Convergence and Large-Sample Probability",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-45",
+    "file": "_posts/2021-11-29-the-radon-nikodym-theorem.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        45,
+        57
+      ]
+    ],
+    "former_posts": [
+      "28-45"
+    ],
+    "citations": [],
+    "date": "2021-11-29",
+    "title": "The Radon-Nikodym Theorem",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-57",
+    "file": "_posts/2021-12-18-conditioning-and-conditional-expectation.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        57,
+        71
+      ],
+      [
+        71,
+        81
+      ]
+    ],
+    "former_posts": [
+      "28-57",
+      "28-71"
+    ],
+    "citations": [],
+    "date": "2021-12-18",
+    "title": "Conditioning and Conditional Expectation",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-81",
+    "file": "_posts/2022-01-26-martingales.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        81,
+        103
+      ]
+    ],
+    "former_posts": [
+      "28-81"
+    ],
+    "citations": [],
+    "date": "2022-01-26",
+    "title": "Martingales",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-118",
+    "file": "_posts/2022-03-25-central-limit-theorems-and-worked-examples.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        118,
+        132
+      ],
+      [
+        132,
+        135
+      ]
+    ],
+    "former_posts": [
+      "28-118",
+      "28-132"
+    ],
+    "citations": [],
+    "date": "2022-03-25",
+    "title": "Central Limit Theorems and Worked Examples",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-135",
+    "file": "_posts/2022-05-02-central-limit-theorem-with-random-number-of-summands.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        135,
+        142
+      ]
+    ],
+    "former_posts": [
+      "28-135"
+    ],
+    "citations": [],
+    "date": "2022-05-02",
+    "title": "Central Limit Theorem with Random Number of Summands",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-142",
+    "file": "_posts/2022-05-22-normal-approximation-under-local-dependence.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        142,
+        162
+      ]
+    ],
+    "former_posts": [
+      "28-142"
+    ],
+    "citations": [],
+    "date": "2022-05-22",
+    "title": "Normal Approximation under Local Dependence",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-162",
+    "file": "_posts/2022-06-10-nonparametric-inference-for-the-mean.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        162,
+        187
+      ]
+    ],
+    "former_posts": [
+      "28-162"
+    ],
+    "citations": [],
+    "date": "2022-06-10",
+    "title": "Nonparametric Inference for the Mean",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "28-187",
+    "file": "_posts/2022-06-29-moment-inequalities-and-random-series.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex",
+    "blocks": [
+      [
+        187,
+        197
+      ],
+      [
+        197,
+        205
+      ],
+      [
+        205,
+        218
+      ],
+      [
+        218,
+        237
+      ]
+    ],
+    "former_posts": [
+      "28-187",
+      "28-197",
+      "28-205",
+      "28-218"
+    ],
+    "citations": [],
+    "date": "2022-06-29",
+    "title": "Moment Inequalities and Random Series",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "29-0",
+    "file": "_posts/2021-11-06-modes-of-stochastic-convergence.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Stochastic Convergence Notes (Chapters 2 and 18)/main.tex",
+    "blocks": [
+      [
+        0,
+        23
+      ]
+    ],
+    "former_posts": [
+      "29-0"
+    ],
+    "citations": [],
+    "date": "2021-11-06",
+    "title": "Modes of Stochastic Convergence",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "29-23",
+    "file": "_posts/2021-12-28-weak-convergence-tightness-and-metric-spaces.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Stochastic Convergence Notes (Chapters 2 and 18)/main.tex",
+    "blocks": [
+      [
+        23,
+        28
+      ],
+      [
+        28,
+        46
+      ]
+    ],
+    "former_posts": [
+      "29-23",
+      "29-28"
+    ],
+    "citations": [],
+    "date": "2021-12-28",
+    "title": "Weak Convergence, Tightness, and Metric Spaces",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "30-0",
+    "file": "_posts/2025-04-30-conditional-c-dependence-sharp-distribution-and-treatment-effect-bounds.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Unconfoundedness (Notes)/stats.tex",
+    "blocks": [
+      [
+        0,
+        12
+      ],
+      [
+        12,
+        25
+      ],
+      [
+        25,
+        30
+      ],
+      [
+        30,
+        41
+      ],
+      [
+        41,
+        52
+      ],
+      [
+        52,
+        61
+      ],
+      [
+        61,
+        66
+      ]
+    ],
+    "former_posts": [
+      "30-0",
+      "30-12",
+      "30-25",
+      "30-30",
+      "30-41",
+      "30-52",
+      "30-61"
+    ],
+    "citations": [
+      "masten_identification_2018"
+    ],
+    "date": "2025-04-30",
+    "title": "Conditional c-Dependence: Sharp Distribution and Treatment-Effect Bounds",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/30-0.md"
+  },
+  {
+    "key": "30-66",
+    "file": "_posts/2025-10-30-inference-for-sensitivity-bounds-limit-laws-bootstrap-and-breakdown-points.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/Unconfoundedness (Notes)/stats.tex",
+    "blocks": [
+      [
+        66,
+        73
+      ],
+      [
+        73,
+        77
+      ],
+      [
+        77,
+        85
+      ],
+      [
+        85,
+        93
+      ],
+      [
+        93,
+        101
+      ],
+      [
+        101,
+        105
+      ],
+      [
+        105,
+        109
+      ],
+      [
+        109,
+        118
+      ],
+      [
+        118,
+        123
+      ],
+      [
+        123,
+        128
+      ],
+      [
+        128,
+        132
+      ],
+      [
+        132,
+        135
+      ],
+      [
+        135,
+        145
+      ],
+      [
+        145,
+        154
+      ]
+    ],
+    "former_posts": [
+      "30-66",
+      "30-73",
+      "30-77",
+      "30-85",
+      "30-93",
+      "30-101",
+      "30-105",
+      "30-109",
+      "30-118",
+      "30-123",
+      "30-128",
+      "30-132",
+      "30-135",
+      "30-145"
+    ],
+    "citations": [
+      "fang_inference_2018",
+      "masten_assessing_2024"
+    ],
+    "date": "2025-10-30",
+    "title": "Inference for Sensitivity Bounds: Limit Laws, Bootstrap, and Breakdown Points",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/30-66.md"
+  },
+  {
+    "key": "31-0",
+    "file": "_posts/2024-01-27-prediction-powered-inference-rectifiers-estimators-and-validity.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/prediction powered inference notes/ideas.tex",
+    "blocks": [
+      [
+        0,
+        7
+      ],
+      [
+        7,
+        17
+      ],
+      [
+        17,
+        24
+      ],
+      [
+        24,
+        29
+      ]
+    ],
+    "former_posts": [
+      "31-0",
+      "31-7",
+      "31-17",
+      "31-24"
+    ],
+    "citations": [
+      "angelopoulos_prediction-powered_2023"
+    ],
+    "date": "2024-01-27",
+    "title": "Prediction-Powered Inference: Rectifiers, Estimators, and Validity",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/31-0.md"
+  },
+  {
+    "key": "31-29",
+    "file": "_posts/2024-05-25-prediction-powered-inference-beyond-convex-losses.md",
+    "source": "assets/notes/Overleaf Projects (32 items)/prediction powered inference notes/ideas.tex",
+    "blocks": [
+      [
+        29,
+        35
+      ]
+    ],
+    "former_posts": [
+      "31-29"
+    ],
+    "citations": [
+      "angelopoulos_prediction-powered_2023"
+    ],
+    "date": "2024-05-25",
+    "title": "Prediction-Powered Inference Beyond Convex Losses",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/31-29.md"
+  },
+  {
+    "key": "34-0",
+    "file": "_posts/2023-08-05-shift-share-iv-exogenous-shares-and-rotemberg-weights.md",
+    "source": "assets/notes/Shift-Share - Old and New/ss-on.tex",
+    "blocks": [
+      [
+        0,
+        18
+      ],
+      [
+        18,
+        48
+      ],
+      [
+        97,
+        102
+      ]
+    ],
+    "former_posts": [
+      "34-0",
+      "34-18",
+      "34-97"
+    ],
+    "citations": [
+      "goldsmith-pinkham_bartik_2020"
+    ],
+    "date": "2023-08-05",
+    "title": "Shift-Share IV: Exogenous Shares and Rotemberg Weights",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/34-0.md"
+  },
+  {
+    "key": "34-48",
+    "file": "_posts/2023-12-03-shift-share-iv-with-exogenous-shocks-identification-and-inference.md",
+    "source": "assets/notes/Shift-Share - Old and New/ss-on.tex",
+    "blocks": [
+      [
+        48,
+        71
+      ],
+      [
+        71,
+        97
+      ],
+      [
+        102,
+        117
+      ],
+      [
+        117,
+        121
+      ],
+      [
+        121,
+        124
+      ]
+    ],
+    "former_posts": [
+      "34-48",
+      "34-71",
+      "34-102",
+      "34-117",
+      "34-121"
+    ],
+    "citations": [
+      "adao_shift-share_2019",
+      "borusyak_quasi-experimental_2022"
+    ],
+    "date": "2023-12-03",
+    "title": "Shift-Share IV with Exogenous Shocks: Identification and Inference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/34-48.md"
+  },
+  {
+    "key": "35-0",
+    "file": "_posts/2022-07-02-uniform-laws-of-large-numbers-and-stochastic-equicontinuity.md",
+    "source": "assets/notes/Uniform Law of Large Numbers/main.tex",
+    "blocks": [
+      [
+        0,
+        7
+      ]
+    ],
+    "former_posts": [
+      "35-0"
+    ],
+    "citations": [],
+    "date": "2022-07-02",
+    "title": "Uniform Laws of Large Numbers and Stochastic Equicontinuity",
+    "adaptation": "notes",
+    "manuscript": null
+  },
+  {
+    "key": "scq-orders",
+    "file": "_posts/2021-11-20-stochastic-convergence-exercises-slutsky-tightness-and-order-symbols.md",
+    "source": "assets/notes/stochastic-convergence-questions-1-23.md",
+    "blocks": [],
+    "former_posts": [],
+    "citations": [],
+    "date": "2021-11-20",
+    "title": "Stochastic Convergence Exercises: Slutsky, Tightness, and Order Symbols",
+    "adaptation": "exercise-solutions",
+    "manuscript": "scripts/notes/exercise-notes/scq-orders.md"
+  },
+  {
+    "key": "scq-laws",
+    "file": "_posts/2022-01-08-stochastic-convergence-exercises-joint-laws-and-continuity-sets.md",
+    "source": "assets/notes/stochastic-convergence-questions-1-23.md",
+    "blocks": [],
+    "former_posts": [],
+    "citations": [],
+    "date": "2022-01-08",
+    "title": "Stochastic Convergence Exercises: Joint Laws and Continuity Sets",
+    "adaptation": "exercise-solutions",
+    "manuscript": "scripts/notes/exercise-notes/scq-laws.md"
+  },
+  {
+    "key": "scq-consistency",
+    "file": "_posts/2022-01-15-stochastic-convergence-exercises-rare-events-and-consistent-estimation.md",
+    "source": "assets/notes/stochastic-convergence-questions-1-23.md",
+    "blocks": [],
+    "former_posts": [],
+    "citations": [],
+    "date": "2022-01-15",
+    "title": "Stochastic Convergence Exercises: Rare Events and Consistent Estimation",
+    "adaptation": "exercise-solutions",
+    "manuscript": "scripts/notes/exercise-notes/scq-consistency.md"
+  },
+  {
+    "key": "scq-gaussian",
+    "file": "_posts/2022-01-29-stochastic-convergence-exercises-student-laws-and-gaussian-directions.md",
+    "source": "assets/notes/stochastic-convergence-questions-1-23.md",
+    "blocks": [],
+    "former_posts": [],
+    "citations": [],
+    "date": "2022-01-29",
+    "title": "Stochastic Convergence Exercises: Student Laws and Gaussian Directions",
+    "adaptation": "exercise-solutions",
+    "manuscript": "scripts/notes/exercise-notes/scq-gaussian.md"
+  },
+  {
+    "key": "scq-averages",
+    "file": "_posts/2022-02-19-stochastic-convergence-exercises-poisson-limits-cauchy-averages-and-joint-clts.md",
+    "source": "assets/notes/stochastic-convergence-questions-1-23.md",
+    "blocks": [],
+    "former_posts": [],
+    "citations": [],
+    "date": "2022-02-19",
+    "title": "Stochastic Convergence Exercises: Poisson Limits, Cauchy Averages, and Joint CLTs",
+    "adaptation": "exercise-solutions",
+    "manuscript": "scripts/notes/exercise-notes/scq-averages.md"
+  }
+]

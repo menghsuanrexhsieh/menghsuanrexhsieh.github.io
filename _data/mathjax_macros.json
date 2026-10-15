@@ -1,0 +1,85 @@
+{
+  "mathds": [
+    "\\mathbb{#1}",
+    1
+  ],
+  "abs": [
+    "\\left|#2\\right|",
+    2,
+    ""
+  ],
+  "norm": [
+    "\\left\\lVert#2\\right\\rVert",
+    2,
+    ""
+  ],
+  "set": [
+    "\\left\\{#1\\right\\}",
+    1
+  ],
+  "dif": "\\mathrm{d}",
+  "Dif": "\\mathrm{D}",
+  "pd": [
+    "\\frac{\\partial^{#1}#2}{\\partial {#3}^{#1}}",
+    3,
+    ""
+  ],
+  "dpd": [
+    "\\dfrac{\\partial^{#1}#2}{\\partial {#3}^{#1}}",
+    3,
+    ""
+  ],
+  "od": [
+    "\\frac{\\mathrm{d}^{#1}#2}{\\mathrm{d} {#3}^{#1}}",
+    3,
+    ""
+  ],
+  "dod": [
+    "\\dfrac{\\mathrm{d}^{#1}#2}{\\mathrm{d} {#3}^{#1}}",
+    3,
+    ""
+  ],
+  "Ddot": [
+    "\\ddot{#1}",
+    1
+  ],
+  "Breve": [
+    "\\breve{#1}",
+    1
+  ],
+  "widecheck": [
+    "\\check{#1}",
+    1
+  ],
+  "llbracket": "\\lbrack\\!\\lbrack",
+  "rrbracket": "\\rbrack\\!\\rbrack",
+  "eval": [
+    "\\left.#1\\right|",
+    1
+  ],
+  "fullfunction": [
+    "\\begin{array}{rcl}#1:#2&\\longrightarrow&#3\\\\#4&\\longmapsto&#5\\end{array}",
+    5
+  ],
+  "EE": "\\mathbb{E}",
+  "PP": "\\mathbb{P}",
+  "P": "\\mathbb{P}",
+  "L": "L",
+  "uline": [
+    "\\underline{#1}",
+    1
+  ],
+  "fint": "\\mathop{\\rlap{\\kern0.2em-}\\int}\\nolimits",
+  "ensuremath": [
+    "#1",
+    1
+  ],
+  "Circled": [
+    "\\text{(#1)}",
+    1
+  ],
+  "textsc": [
+    "\\mathrm{#1}",
+    1
+  ]
+}

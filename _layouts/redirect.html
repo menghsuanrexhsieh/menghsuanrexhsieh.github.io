@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <link rel="canonical" href="{{ page.redirect.to | escape }}">
+    {% assign redirect_target = page.redirect.to %}
+    {% assign site_url_length = site.url | size %}
+    {% assign redirect_origin = redirect_target | slice: 0, site_url_length %}
+    {% if site_url_length > 0 and redirect_origin == site.url %}
+      {% assign redirect_target = redirect_target | remove_first: site.url %}
+    {% endif %}
+    <script>
+      const destination = new URL({{ redirect_target | jsonify }}, window.location.href);
+      if (!destination.hash) destination.hash = window.location.hash;
+      window.location.replace(destination.href);
+    </script>
+    <meta http-equiv="refresh" content="0; url={{ redirect_target | escape }}">
+    <meta name="robots" content="noindex">
+  </head>
+  <body>
+    <h1>Redirecting…</h1>
+    <p><a href="{{ redirect_target | escape }}">Continue to the updated post.</a></p>
+  </body>
+</html>

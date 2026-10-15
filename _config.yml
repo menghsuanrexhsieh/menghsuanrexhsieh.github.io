@@ -2,7 +2,10 @@
 #  Site settings — edit these to make the site yours.
 # ─────────────────────────────────────────────────────────────
 title: Meng-Hsuan "Rex" Hsieh
-tagline: Ph.D. Candidate in Economics @ University of Michigan, Ross School of Business
+tagline: |-
+  Ph.D. Candidate in Business Economics
+  University of Michigan
+  Ross School of Business
 description: >-
   Personal homepage and portfolio of Meng-Hsuan "Rex" Hsieh — projects, writing, and ways to get in touch.
 author: Meng-Hsuan "Rex" Hsieh
@@ -40,6 +43,7 @@ permalink: pretty
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 exclude:
   - README.md
@@ -48,3 +52,5 @@ exclude:
   - vendor
   - .bundle
   - .claude
+  - scripts
+  - assets/notes
