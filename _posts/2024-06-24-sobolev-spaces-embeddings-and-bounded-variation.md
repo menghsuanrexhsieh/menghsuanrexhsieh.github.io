@@ -120,7 +120,9 @@ redirect_from: ["/2024/06/24/sobolev-space/", "/2024/07/07/sobolev-inequalities/
 
 </div>
 <figure id="fig:lipschitz-boundary">
-
+<div class="note-diagram" style="--diagram-width: 696px; --diagram-min-width: 522px">
+<div class="note-diagram__canvas" tabindex="0" role="region" aria-label="A Lipschitz boundary chart of a domain U: the cube Q(x,r) about a boundary point x with its inward normal n(x), the smaller cube Q-tilde(x,r-tilde), and a ball of radius epsilon about the inward-shifted point y^epsilon that stays inside U."><a href="{{ '/assets/images/notes/02/lipschitz.svg' | relative_url }}?v=46c0a0e42ce1" title="Open diagram at full size"><img src="{{ '/assets/images/notes/02/lipschitz.svg' | relative_url }}?v=46c0a0e42ce1" alt="A Lipschitz boundary chart of a domain U: the cube Q(x,r) about a boundary point x with its inward normal n(x), the smaller cube Q-tilde(x,r-tilde), and a ball of radius epsilon about the inward-shifted point y^epsilon that stays inside U." loading="lazy" decoding="async"></a></div>
+</div>
 <figcaption>Lipschitz boundary.</figcaption>
 </figure>
 <p>Rademacher’s theorem and the area formula imply that the graph has a tangent plane and an outward unit normal at {% raw %}<span class="math inline">\(\mathcal H^{n-1}\)</span>{% endraw %}-almost every boundary point. In coordinates where {% raw %}<span class="math inline">\(U\)</span>{% endraw %} lies above {% raw %}<span class="math inline">\(\gamma\)</span>{% endraw %}, this normal is </p>
@@ -366,6 +368,6 @@ redirect_from: ["/2024/06/24/sobolev-space/", "/2024/07/07/sobolev-inequalities/
 
 <nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2022-03-04-topological-tools-for-manifolds %}">Topological Tools for Manifolds</a>.</p></nav>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-05-14-why-complex-projective-space-is-hausdorff %}">Why Complex Projective Space Is Hausdorff</a> · Next: <a href="{% post_url 2024-08-03-graph-laplacians-isoperimetry-and-diameter-bounds %}">Graph Laplacians, Isoperimetry, and Diameter Bounds</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-01-27-why-complex-projective-space-is-hausdorff %}">Why Complex Projective Space Is Hausdorff</a> · Next: <a href="{% post_url 2024-08-03-graph-laplacians-isoperimetry-and-diameter-bounds %}">Graph Laplacians, Isoperimetry, and Diameter Bounds</a></p></nav>
 
 </div>

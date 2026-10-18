@@ -203,6 +203,6 @@ This matches the ordinary t-test under the same normal local model, giving effic
 
 <nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2023-02-25-confidence-bounds-conditioning-and-unbiased-tests %}">Confidence Bounds, Conditioning, and Unbiased Tests</a>.</p></nav>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-02-25-confidence-bounds-conditioning-and-unbiased-tests %}">Confidence Bounds, Conditioning, and Unbiased Tests</a> · Next: <a href="{% post_url 2026-01-03-conditional-stochastic-dominance-with-nearest-observations %}">Conditional Stochastic Dominance with Nearest Observations</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-02-25-confidence-bounds-conditioning-and-unbiased-tests %}">Confidence Bounds, Conditioning, and Unbiased Tests</a> · Next: <a href="{% post_url 2025-12-15-conditional-stochastic-dominance-with-nearest-observations %}">Conditional Stochastic Dominance with Nearest Observations</a></p></nav>
 
 </div>

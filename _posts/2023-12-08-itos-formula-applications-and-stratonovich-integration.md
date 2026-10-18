@@ -40,7 +40,7 @@ redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-fo
 \end{aligned}\]</div>{% endraw %}
 <p>The Taylor expansion explains the extra term, but a proof must also justify the limit of the remainder. We establish the product rule first and then use polynomial approximation to obtain the change-of-variables formula.</p>
 
-<p>To see the validity, we start with integration by parts of continuous semimartingales. Suppose {% raw %}<span class="math inline">\(\{X_t\}_{t \geq 0}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\{Y_t\}_{t \geq 0}\)</span>{% endraw %} are two continuous semimartingales. The product rule isolates the covariation term that ordinary integration by parts does not have; see the <a href="{% post_url 2024-07-10-continuous-semimartingales-and-the-monotone-class-argument %}#sec:cts-semimartingales">continuous-semimartingale notes</a> for the underlying integral and covariation properties. Then, the process {% raw %}<span class="math inline">\(\{X_t Y_t\}_{t \geq 0}\)</span>{% endraw %} is a continuous semimartingale, and we have </p>
+<p>To see the validity, we start with integration by parts of continuous semimartingales. Suppose {% raw %}<span class="math inline">\(\{X_t\}_{t \geq 0}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\{Y_t\}_{t \geq 0}\)</span>{% endraw %} are two continuous semimartingales. The product rule isolates the covariation term that ordinary integration by parts does not have; see the <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}#sec:cts-semimartingales">continuous-semimartingale notes</a> for the underlying integral and covariation properties. Then, the process {% raw %}<span class="math inline">\(\{X_t Y_t\}_{t \geq 0}\)</span>{% endraw %} is a continuous semimartingale, and we have </p>
 
 {% raw %}<div class="math display">\[\begin{aligned}
     X_t Y_t = X_0 Y_0 + \int_0^t X_s \dif Y_s + \int_0^t Y_s \dif X_s + \langle X,Y \rangle_t  \:\:, \quad \forall t \geq 0 ~.
@@ -199,7 +199,7 @@ Le Gall, Jean-François. 2016. <em>Brownian Motion, Martingales, and Stochastic 
 <p class="note-reading">Reading: Le Gall (2016), Brownian Motion, Martingales, and Stochastic Calculus.</p>
 
 
-<nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2024-07-10-continuous-semimartingales-and-the-monotone-class-argument %}">Continuous Semimartingales and the Monotone-Class Argument</a>.</p></nav>
+<nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}">Continuous Semimartingales and the Monotone-Class Argument</a>.</p></nav>
 
 <nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-11-02-construction-of-the-stochastic-integral %}">Construction of the Stochastic Integral</a> · Next: <a href="{% post_url 2024-02-18-burkholder-davis-gundy-inequalities %}">Burkholder-Davis-Gundy inequalities</a></p></nav>
 

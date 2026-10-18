@@ -18,7 +18,7 @@ note_source: "assets/notes/Differential Geometry - Notes/diff-geo.tex"
 <p>We develop these ingredients in that order. Local finiteness makes the eventual sums smooth: near any fixed point, only finitely many terms remain.</p>
 
 <div id="lem:top-M-existence-basis" class="lemma" data-note-number="1" data-note-kind="Lemma">
-<p><strong>Lemma 1</strong>.  Let {% raw %}<span class="math inline">\(M\)</span>{% endraw %} be a toplogical manifold. Then, there exists a countable collection of open sets {% raw %}<span class="math inline">\(\{X_i\}_{i \in \mathbb N}\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\overline X_j\)</span>{% endraw %} is compact and {% raw %}<span class="math inline">\(\overline X_j \subset X_{j+1}\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(j\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(M = \bigcup_j X_j\)</span>{% endraw %}.</p>
+<p><strong>Lemma 1</strong>.  Let {% raw %}<span class="math inline">\(M\)</span>{% endraw %} be a topological manifold. Then, there exists a countable collection of open sets {% raw %}<span class="math inline">\(\{X_i\}_{i \in \mathbb N}\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\overline X_j\)</span>{% endraw %} is compact and {% raw %}<span class="math inline">\(\overline X_j \subset X_{j+1}\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(j\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(M = \bigcup_j X_j\)</span>{% endraw %}.</p>
 
 </div>
 <div class="proof">

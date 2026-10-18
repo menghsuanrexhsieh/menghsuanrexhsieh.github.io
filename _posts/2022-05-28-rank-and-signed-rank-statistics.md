@@ -37,10 +37,12 @@ For uniform order statistics {% raw %}<span class="math inline">\(U_{N(k)}\)</sp
 For any integrable {% raw %}<span class="math inline">\(H\)</span>{% endraw %} and permutation {% raw %}<span class="math inline">\(r\)</span>{% endraw %},
 {% raw %}<div class="math display">\[E[H(X_1,\ldots,X_N)\mid R_N=r]=E H(X_{N(r_1)},\ldots,X_{N(r_N)}).\]</div>{% endraw %}
 Finally, for {% raw %}<span class="math inline">\(N\ge2\)</span>{% endraw %},
-{% raw %}<div class="math display">\[ET_N=N\overline C_N\overline a_N,\qquad \operatorname{Var}T_N=\frac{\sum_i(C_{Ni}-\overline C_N)^2\sum_k(a_{Nk}-\overline a_N)^2}{N-1}.\]</div>{% endraw %}
-Proof. Exchangeability assigns the same probability to each ordering even after restricting the ordered values to any measurable set. The ordering events partition the sample space, so each has conditional probability {% raw %}<span class="math inline">\(1/N!\)</span>{% endraw %}. This proves uniformity, independence, and the conditional identity. With a density, summing the {% raw %}<span class="math inline">\(N!\)</span>{% endraw %} permuted joint densities gives the ordered joint density. For the marginal, choose which observation is at {% raw %}<span class="math inline">\(x\)</span>{% endraw %}, which {% raw %}<span class="math inline">\(k-1\)</span>{% endraw %} lie below it, and integrate the remaining coordinates above it. For uniforms, integrating powers against this beta density yields {% raw %}<span class="math inline">\(EU_{N(k)}=k/(N+1)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(EU_{N(k)}^2=k(k+1)/[(N+1)(N+2)]\)</span>{% endraw %}, giving the variance.</p>
+{% raw %}<div class="math display">\[ET_N=N\overline C_N\overline a_N,\qquad \operatorname{Var}T_N=\frac{\sum_i(C_{Ni}-\overline C_N)^2\sum_k(a_{Nk}-\overline a_N)^2}{N-1}.\]</div>{% endraw %}</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Exchangeability assigns the same probability to each ordering even after restricting the ordered values to any measurable set. The ordering events partition the sample space, so each has conditional probability {% raw %}<span class="math inline">\(1/N!\)</span>{% endraw %}. This proves uniformity, independence, and the conditional identity. With a density, summing the {% raw %}<span class="math inline">\(N!\)</span>{% endraw %} permuted joint densities gives the ordered joint density. For the marginal, choose which observation is at {% raw %}<span class="math inline">\(x\)</span>{% endraw %}, which {% raw %}<span class="math inline">\(k-1\)</span>{% endraw %} lie below it, and integrate the remaining coordinates above it. For uniforms, integrating powers against this beta density yields {% raw %}<span class="math inline">\(EU_{N(k)}=k/(N+1)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(EU_{N(k)}^2=k(k+1)/[(N+1)(N+2)]\)</span>{% endraw %}, giving the variance.</p>
 
-<p>Put {% raw %}<span class="math inline">\(v_a=N^{-1}\sum_k(a_{Nk}-\overline a_N)^2\)</span>{% endraw %}. A single random score has variance {% raw %}<span class="math inline">\(v_a\)</span>{% endraw %}. Two scores at distinct positions have covariance {% raw %}<span class="math inline">\(-v_a/(N-1)\)</span>{% endraw %}, since they are drawn without replacement, or because their total is constant. Expanding the variance of {% raw %}<span class="math inline">\(\sum_i(C_{Ni}-\overline C_N)a_{N,R_{Ni}}\)</span>{% endraw %} and using {% raw %}<span class="math inline">\(\sum_i(C_{Ni}-\overline C_N)=0\)</span>{% endraw %} gives the stated formula.</p>
+<p>Put {% raw %}<span class="math inline">\(v_a=N^{-1}\sum_k(a_{Nk}-\overline a_N)^2\)</span>{% endraw %}. A single random score has variance {% raw %}<span class="math inline">\(v_a\)</span>{% endraw %}. Two scores at distinct positions have covariance {% raw %}<span class="math inline">\(-v_a/(N-1)\)</span>{% endraw %}, since they are drawn without replacement, or because their total is constant. Expanding the variance of {% raw %}<span class="math inline">\(\sum_i(C_{Ni}-\overline C_N)a_{N,R_{Ni}}\)</span>{% endraw %} and using {% raw %}<span class="math inline">\(\sum_i(C_{Ni}-\overline C_N)=0\)</span>{% endraw %} gives the stated formula. ◻</p>
 </div>
 
 <div id="result-3" class="example" data-note-number="3" data-note-kind="Example">
@@ -63,8 +65,10 @@ Here {% raw %}<span class="math inline">\(U_{N(k)}\)</span>{% endraw %} is the {
 For exact scores {% raw %}<span class="math inline">\(d=a\)</span>{% endraw %},
 {% raw %}<div class="math display">\[ET_N=E\widetilde T_N,\qquad\frac{E(T_N-\widetilde T_N)^2}{\operatorname{Var}T_N}\longrightarrow0.\]</div>{% endraw %}
 The same conclusion holds for grid scores {% raw %}<span class="math inline">\(d=b\)</span>{% endraw %} if {% raw %}<span class="math inline">\(\varphi\)</span>{% endraw %} is continuous almost everywhere and
-{% raw %}<div class="math display">\[\frac1N\sum_{k=1}^N\varphi^2\left(\frac{k}{N+1}\right)\longrightarrow\int_0^1\varphi^2(u)\,du.\]</div>{% endraw %}
-Proof for exact scores. Set {% raw %}<span class="math inline">\(U_i=F(X_i)\)</span>{% endraw %}; these are independent uniforms and their ranks agree with those of {% raw %}<span class="math inline">\(X_i\)</span>{% endraw %} almost surely. The preceding conditional identity gives {% raw %}<span class="math inline">\(a_{N,R_{Ni}}=E[\varphi(U_i)\mid R_N]\)</span>{% endraw %}, whence {% raw %}<span class="math inline">\(T_N=E[\widetilde T_N\mid R_N]\)</span>{% endraw %}. This already proves equality of means.</p>
+{% raw %}<div class="math display">\[\frac1N\sum_{k=1}^N\varphi^2\left(\frac{k}{N+1}\right)\longrightarrow\int_0^1\varphi^2(u)\,du.\]</div>{% endraw %}</p>
+</div>
+<div class="proof">
+<p><em>Proof for exact scores.</em> Set {% raw %}<span class="math inline">\(U_i=F(X_i)\)</span>{% endraw %}; these are independent uniforms and their ranks agree with those of {% raw %}<span class="math inline">\(X_i\)</span>{% endraw %} almost surely. The preceding conditional identity gives {% raw %}<span class="math inline">\(a_{N,R_{Ni}}=E[\varphi(U_i)\mid R_N]\)</span>{% endraw %}, whence {% raw %}<span class="math inline">\(T_N=E[\widetilde T_N\mid R_N]\)</span>{% endraw %}. This already proves equality of means.</p>
 
 <p>The sigma-fields {% raw %}<span class="math inline">\(\mathcal G_N=\sigma(R_N)\)</span>{% endraw %} increase: deleting the last label from a rank vector recovers the earlier vector. Also,
 {% raw %}<div class="math display">\[\frac{R_{N1}}N=\frac1N+\frac1N\sum_{j=2}^N\mathbf1\{U_j\le U_1\}\longrightarrow U_1\quad\text{almost surely}.\]</div>{% endraw %}
@@ -72,11 +76,11 @@ For each fixed value {% raw %}<span class="math inline">\(u\)</span>{% endraw %}
 {% raw %}<div class="math display">\[E\left[a_{N,R_{N1}}-\varphi(U_1)\right]^2\longrightarrow0.\]</div>{% endraw %}
 The limit is the variable {% raw %}<span class="math inline">\(\varphi(U_1)\)</span>{% endraw %} itself, not its expectation. In particular {% raw %}<span class="math inline">\(\operatorname{Var}(a_{N,R_{N1}})\to\sigma_\varphi^2=\operatorname{Var}\varphi(U_1)&gt;0\)</span>{% endraw %}. The exact variance formula gives
 {% raw %}<div class="math display">\[\frac{\operatorname{Var}T_N}{\operatorname{Var}\widetilde T_N}=\frac{N}{N-1}\frac{\operatorname{Var}(a_{N,R_{N1}})}{\sigma_\varphi^2}\longrightarrow1.\]</div>{% endraw %}
-Since {% raw %}<span class="math inline">\(T_N\)</span>{% endraw %} is a projection of {% raw %}<span class="math inline">\(\widetilde T_N\)</span>{% endraw %}, its mean square error is the difference of these variances. This proves the first assertion.</p>
+Since {% raw %}<span class="math inline">\(T_N\)</span>{% endraw %} is a projection of {% raw %}<span class="math inline">\(\widetilde T_N\)</span>{% endraw %}, its mean square error is the difference of these variances. This proves the first assertion. ◻</p>
 
-<p>Proof for grid scores. The rank convergence, almost-everywhere continuity, and the assumed second moments imply {% raw %}<span class="math inline">\(b_{N,R_{N1}}\to\varphi(U_1)\)</span>{% endraw %} in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}. Explicitly, convergence in probability together with convergence of the squared expectations gives uniform integrability of the squares; then {% raw %}<span class="math inline">\(|b_{N,R_{N1}}-\varphi(U_1)|^2\le2b_{N,R_{N1}}^2+2\varphi(U_1)^2\)</span>{% endraw %} and truncation give convergence of the mean square error. Combining this with the exact-score limit gives
+<p><em>Proof for grid scores.</em> The rank convergence, almost-everywhere continuity, and the assumed second moments imply {% raw %}<span class="math inline">\(b_{N,R_{N1}}\to\varphi(U_1)\)</span>{% endraw %} in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}. Explicitly, convergence in probability together with convergence of the squared expectations gives uniform integrability of the squares; then {% raw %}<span class="math inline">\(|b_{N,R_{N1}}-\varphi(U_1)|^2\le2b_{N,R_{N1}}^2+2\varphi(U_1)^2\)</span>{% endraw %} and truncation give convergence of the mean square error. Combining this with the exact-score limit gives
 {% raw %}<div class="math display">\[\frac1N\sum_k(b_{Nk}-a_{Nk})^2\longrightarrow0.\]</div>{% endraw %}
-Apply Lemma 2 to the centered difference of the two rank statistics. Its variance is at most {% raw %}<span class="math inline">\(A_N(N-1)^{-1}\sum_k(b_{Nk}-a_{Nk})^2=o(A_N)\)</span>{% endraw %}, while either statistic has variance asymptotic to {% raw %}<span class="math inline">\(A_N\sigma_\varphi^2\)</span>{% endraw %}. Their centered independent approximations coincide. The triangle inequality in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} therefore proves the assertion for grid scores, including the respective deterministic means.</p>
+Apply Lemma 2 to the centered difference of the two rank statistics. Its variance is at most {% raw %}<span class="math inline">\(A_N(N-1)^{-1}\sum_k(b_{Nk}-a_{Nk})^2=o(A_N)\)</span>{% endraw %}, while either statistic has variance asymptotic to {% raw %}<span class="math inline">\(A_N\sigma_\varphi^2\)</span>{% endraw %}. Their centered independent approximations coincide. The triangle inequality in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} therefore proves the assertion for grid scores, including the respective deterministic means. ◻</p>
 </div>
 
 <div id="result-5" class="remark" data-note-number="5" data-note-kind="Remark">
@@ -133,8 +137,10 @@ For a derivation, {% raw %}<span class="math inline">\(-\log(1-U_i)\)</span>{% e
 
 <div id="result-10" class="lemma" data-note-number="10" data-note-kind="Lemma">
 <p><strong>Lemma 10.</strong> Under i.i.d. sampling from a continuous distribution symmetric about zero, the sign vector consists of independent uniform signs and is independent of the absolute sample and its ranks. The absolute-rank vector is uniform on the {% raw %}<span class="math inline">\(N!\)</span>{% endraw %} permutations, and
-{% raw %}<div class="math display">\[ET_N=0,\qquad\operatorname{Var}T_N=\sum_{k=1}^Na_{Nk}^2.\]</div>{% endraw %}
-Proof. For any measurable {% raw %}<span class="math inline">\(B\subset(0,\infty)\)</span>{% endraw %}, symmetry gives {% raw %}<span class="math inline">\(P(|X|\in B,X&gt;0)=P(|X|\in B,X&lt;0)=P(|X|\in B)/2\)</span>{% endraw %}. There is no mass at zero. This proves independence of sign and magnitude; independence across observations gives the vector statement. The magnitude distribution is continuous, so Lemma 2 gives the rank permutation law. Conditional on the magnitudes, the signs are independent, centered, and have variance one. Thus the conditional variance is {% raw %}<span class="math inline">\(\sum_i a_{N,R_{Ni}^+}^2=\sum_ka_{Nk}^2\)</span>{% endraw %}, a deterministic quantity.</p>
+{% raw %}<div class="math display">\[ET_N=0,\qquad\operatorname{Var}T_N=\sum_{k=1}^Na_{Nk}^2.\]</div>{% endraw %}</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> For any measurable {% raw %}<span class="math inline">\(B\subset(0,\infty)\)</span>{% endraw %}, symmetry gives {% raw %}<span class="math inline">\(P(|X|\in B,X&gt;0)=P(|X|\in B,X&lt;0)=P(|X|\in B)/2\)</span>{% endraw %}. There is no mass at zero. This proves independence of sign and magnitude; independence across observations gives the vector statement. The magnitude distribution is continuous, so Lemma 2 gives the rank permutation law. Conditional on the magnitudes, the signs are independent, centered, and have variance one. Thus the conditional variance is {% raw %}<span class="math inline">\(\sum_i a_{N,R_{Ni}^+}^2=\sum_ka_{Nk}^2\)</span>{% endraw %}, a deterministic quantity. ◻</p>
 </div>
 
 <div id="result-11" class="theorem" data-note-number="11" data-note-kind="Theorem">
@@ -143,10 +149,11 @@ Proof. For any measurable {% raw %}<span class="math inline">\(B\subset(0,\infty
 Then {% raw %}<span class="math inline">\(N^{-1}E(T_N-\widetilde T_N)^2\to0\)</span>{% endraw %} and
 {% raw %}<div class="math display">\[\frac{T_N}{\sqrt N}\Rightarrow N\left(0,\int_0^1\varphi^2(u)\,du\right).\]</div>{% endraw %}
 The same holds for grid scores if {% raw %}<span class="math inline">\(\varphi\)</span>{% endraw %} is continuous almost everywhere and satisfies the grid second-moment condition in Theorem 4.</p>
-
-<p>Proof. The score errors are functions of the magnitudes. Conditioning on them, all cross terms involving distinct signs vanish. Exchangeability then gives
+</div>
+<div class="proof">
+<p><em>Proof.</em> The score errors are functions of the magnitudes. Conditioning on them, all cross terms involving distinct signs vanish. Exchangeability then gives
 {% raw %}<div class="math display">\[\frac1NE(T_N-\widetilde T_N)^2=E\{a_{N,R_{N1}^+}-\varphi(F^+(|X_1|))\}^2\longrightarrow0\]</div>{% endraw %}
-by the scalar score convergence proved in Theorem 4; its argument does not require the score to be nonconstant. The summands of {% raw %}<span class="math inline">\(\widetilde T_N\)</span>{% endraw %} are i.i.d., centered, with variance {% raw %}<span class="math inline">\(\int\varphi^2\)</span>{% endraw %}. The ordinary CLT and the mean-square approximation prove the assertion. The same scalar convergence for grid scores proves their version.</p>
+by the scalar score convergence proved in Theorem 4; its argument does not require the score to be nonconstant. The summands of {% raw %}<span class="math inline">\(\widetilde T_N\)</span>{% endraw %} are i.i.d., centered, with variance {% raw %}<span class="math inline">\(\int\varphi^2\)</span>{% endraw %}. The ordinary CLT and the mean-square approximation prove the assertion. The same scalar convergence for grid scores proves their version. ◻</p>
 </div>
 
 <div id="result-12" class="example" data-note-number="12" data-note-kind="Example">
@@ -180,8 +187,10 @@ The integrals are Stieltjes integrals against a finite signed measure. The appro
 
 <div id="result-14" class="lemma" data-note-number="14" data-note-kind="Lemma">
 <p><strong>Lemma 14.</strong> For {% raw %}<span class="math inline">\(\varphi\in C^2[0,1]\)</span>{% endraw %}, a universal constant {% raw %}<span class="math inline">\(K\)</span>{% endraw %} satisfies
-{% raw %}<div class="math display">\[\operatorname{Var}(T_N-\widetilde T_N)\le\frac KN\sum_i(C_{Ni}-\overline C_N)^2\left(\|\varphi'\|_\infty^2+\|\varphi''\|_\infty^2\right).\]</div>{% endraw %}
-Proof. Suppress the {% raw %}<span class="math inline">\(N\)</span>{% endraw %} subscripts, and replace {% raw %}<span class="math inline">\(C_i\)</span>{% endraw %} by {% raw %}<span class="math inline">\(c_i=C_i-\overline C\)</span>{% endraw %}. This changes {% raw %}<span class="math inline">\(T\)</span>{% endraw %} by a constant. It also changes {% raw %}<span class="math inline">\(\widetilde T\)</span>{% endraw %} by a constant, since continuity of {% raw %}<span class="math inline">\(\overline F\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(\int_x^\infty\varphi'(\overline F(t))\,d\overline F(t)=\varphi(1)-\varphi(\overline F(x))\)</span>{% endraw %}. Thus we may assume {% raw %}<span class="math inline">\(\sum_i c_i=0\)</span>{% endraw %}.</p>
+{% raw %}<div class="math display">\[\operatorname{Var}(T_N-\widetilde T_N)\le\frac KN\sum_i(C_{Ni}-\overline C_N)^2\left(\|\varphi'\|_\infty^2+\|\varphi''\|_\infty^2\right).\]</div>{% endraw %}</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Suppress the {% raw %}<span class="math inline">\(N\)</span>{% endraw %} subscripts, and replace {% raw %}<span class="math inline">\(C_i\)</span>{% endraw %} by {% raw %}<span class="math inline">\(c_i=C_i-\overline C\)</span>{% endraw %}. This changes {% raw %}<span class="math inline">\(T\)</span>{% endraw %} by a constant. It also changes {% raw %}<span class="math inline">\(\widetilde T\)</span>{% endraw %} by a constant, since continuity of {% raw %}<span class="math inline">\(\overline F\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(\int_x^\infty\varphi'(\overline F(t))\,d\overline F(t)=\varphi(1)-\varphi(\overline F(x))\)</span>{% endraw %}. Thus we may assume {% raw %}<span class="math inline">\(\sum_i c_i=0\)</span>{% endraw %}.</p>
 
 <p>Set {% raw %}<span class="math inline">\(\delta_i=R_i/(N+1)-\overline F(X_i)\)</span>{% endraw %}. The rank identity and independence give
 {% raw %}<div class="math display">\[E(\delta_i\mid X_i)=b_i=\frac{1-F_i(X_i)-\overline F(X_i)}{N+1},\qquad |b_i|\le\frac1{N+1}.\]</div>{% endraw %}
@@ -201,10 +210,9 @@ Subtracting {% raw %}<span class="math inline">\(\widehat Q\)</span>{% endraw %}
 {% raw %}<div class="math display">\[\frac{c_i d_i\mathbf1(X_j\le X_i)+c_jd_j\mathbf1(X_i\le X_j)}{N+1};\]</div>{% endraw %}
 the omitted {% raw %}<span class="math inline">\(F_j(X_i)\)</span>{% endraw %} terms depend on a single coordinate and have zero pair projection. Thus
 {% raw %}<div class="math display">\[E(Q-\widehat Q)^2\le\frac{2M^2}{(N+1)^2}\sum_{i&lt;j}(c_i^2+c_j^2)\le\frac{2M^2}{N}\sum_i c_i^2.\]</div>{% endraw %}
-Combining the four bounds, using {% raw %}<span class="math inline">\(\operatorname{Var}(\sum_{j=1}^4Z_j)\le4\sum_j\operatorname{Var}Z_j\)</span>{% endraw %}, proves the lemma.</p>
-
-<p>To use it for a CLT, the error bound must be small relative to the relevant variance, and the independent approximation must satisfy an appropriate CLT condition. Smoothness alone does not remove the need for Lindeberg or another sufficient normality condition.</p>
+Combining the four bounds, using {% raw %}<span class="math inline">\(\operatorname{Var}(\sum_{j=1}^4Z_j)\le4\sum_j\operatorname{Var}Z_j\)</span>{% endraw %}, proves the lemma. ◻</p>
 </div>
+<p>To use it for a CLT, the error bound must be small relative to the relevant variance, and the independent approximation must satisfy an appropriate CLT condition. Smoothness alone does not remove the need for Lindeberg or another sufficient normality condition.</p>
 
 <nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2022-03-05-projection-methods-and-u-statistics %}">Projection Methods and U-Statistics</a></p></nav>
 

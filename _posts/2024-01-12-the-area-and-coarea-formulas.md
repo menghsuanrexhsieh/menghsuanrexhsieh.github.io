@@ -178,7 +178,9 @@ redirect_from: ["/2024/01/12/area-formula/", "/2024/01/26/coarea-formula/"]
 <p> It follows by applying weighted coarea to {% raw %}<span class="math inline">\(f=\mathbb1_A\mathbb1_{\{|\nabla h|&gt;0\}}/|\nabla h|\)</span>{% endraw %}. The critical set must be added separately when computing all of {% raw %}<span class="math inline">\(\operatorname{Vol}(A)\)</span>{% endraw %}; for example, a constant {% raw %}<span class="math inline">\(h\)</span>{% endraw %} has zero gradient everywhere. The illustration depicts the regular-point thickness calculation.</p>
 
 <figure id="fig:coarea">
-
+<div class="note-diagram" style="--diagram-width: 696px; --diagram-min-width: 522px">
+<div class="note-diagram__canvas" tabindex="0" role="region" aria-label="A region A in n-dimensional space is sliced by a level set f^{-1}(y); the map f sends A onto the segment f(A) in m-dimensional space, and the slice lies over the point y."><a href="{{ '/assets/images/notes/02/coarea.svg' | relative_url }}?v=038a71da1c96" title="Open diagram at full size"><img src="{{ '/assets/images/notes/02/coarea.svg' | relative_url }}?v=038a71da1c96" alt="A region A in n-dimensional space is sliced by a level set f^{-1}(y); the map f sends A onto the segment f(A) in m-dimensional space, and the slice lies over the point y." loading="lazy" decoding="async"></a></div>
+</div>
 <figcaption>Coarea formula.</figcaption>
 </figure>
 

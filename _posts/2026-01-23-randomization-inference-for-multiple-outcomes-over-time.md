@@ -42,7 +42,7 @@ T(z)=\frac1n\sum_i(2z_i-1)d_i.
 
 <p>A contemporaneous shock can move all units in the same direction. Increasing their number need not remove its contribution to the calendar contrast. The finite-sample result is conditional on the assignment law and potential-outcome restrictions.</p>
 
-<p>The same principle underlies the <a href="{% post_url 2024-03-30-the-hot-hand-statistics-for-streaks %}">streak permutation test</a>: exactness comes from a justified invariance or assignment law, not from the act of rearranging observations.</p>
+<p>The same principle underlies the <a href="{% post_url 2024-04-14-the-hot-hand-statistics-for-streaks %}">streak permutation test</a>: exactness comes from a justified invariance or assignment law, not from the act of rearranging observations.</p>
 
 <h3 data-note-section="5" id="23-94-distinguishing-calendar-contrasts-from-treatment-contrasts">5. Distinguishing calendar contrasts from treatment contrasts</h3>
 <p>Write {% raw %}<span class="math inline">\(a_i(d)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(b_i(d)\)</span>{% endraw %} for unit {% raw %}<span class="math inline">\(i\)</span>{% endraw %}’s fixed pre- and post-block potential means under state {% raw %}<span class="math inline">\(d\)</span>{% endraw %}. Under assignment {% raw %}<span class="math inline">\(Z_i\)</span>{% endraw %}, observed block means are</p>
@@ -137,6 +137,6 @@ Cattaneo, Matias D., Carlos Diaz, and Rocio Titiunik. 2024. <span>“Randomizati
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2025-10-28-sharp-mechanism-bounds-average-effects-and-inference %}">Sharp Mechanism Bounds, Average Effects, and Inference</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-07-18-sharp-mechanism-bounds-average-effects-and-inference %}">Sharp Mechanism Bounds, Average Effects, and Inference</a></p></nav>
 
 </div>

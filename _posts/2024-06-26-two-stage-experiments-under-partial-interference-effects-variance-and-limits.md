@@ -42,7 +42,7 @@ redirect_from: ["/2024/05/08/partial-interference-and-two-stage-randomization/",
 
 <p>Stratified interference supplies such a relation: at a given treatment count, only a person’s own treatment matters, not the identities of treated peers. This gives two fixed potential-outcome vectors at that count and permits the usual sampling-without-replacement calculation.</p>
 
-<p>The <a href="{% post_url 2024-06-10-finite-sample-inference-under-interference %}">finite-sample bounds</a> take another route by exploiting bounded outcomes and the assignment design. Large-cluster limits explain what increasing group size can achieve when the number of groups remains small.</p>
+<p>The <a href="{% post_url 2024-03-13-finite-sample-inference-under-interference %}">finite-sample bounds</a> take another route by exploiting bounded outcomes and the assignment design. Large-cluster limits explain what increasing group size can achieve when the number of groups remains small.</p>
 
 <h3 data-note-section="5" id="10-104-unbiasedness-through-both-randomization-stages">5. Unbiasedness through both randomization stages</h3>
 <p>Within a group of size {% raw %}<span class="math inline">\(n_g\)</span>{% endraw %}, suppose strategy {% raw %}<span class="math inline">\(s\)</span>{% endraw %} treats exactly {% raw %}<span class="math inline">\(K_g\)</span>{% endraw %} individuals. The treated sample mean is</p>
@@ -141,7 +141,7 @@ v_j=\frac{y_j(1;s)}K+\frac{y_j(0;s)}{n-K}.
 
 <p>The allocation strategy is part of each group effect {% raw %}<span class="math inline">\(\tau_g\)</span>{% endraw %}. Changing saturation can therefore change both the target and its variance. The two-stage definitions keep the same strategy in the expectation and variance calculations, so an ordinary no-interference formula cannot be carried over while changing the strategy it refers to.</p>
 
-<p>For instance, selecting one of two groups with effects zero and two leaves an equal mixture at zero and two after within-group noise disappears. Centering at the overall effect one gives deviations of minus one and plus one, not an increasingly precise normal estimate. More individuals within a group and more randomized groups address different variance components. The <a href="{% post_url 2025-01-11-wild-cluster-bootstrap-with-few-large-clusters %}">few-cluster sign test</a> uses a different model to obtain inference from a finite collection of large-cluster scores.</p>
+<p>For instance, selecting one of two groups with effects zero and two leaves an equal mixture at zero and two after within-group noise disappears. Centering at the overall effect one gives deviations of minus one and plus one, not an increasingly precise normal estimate. More individuals within a group and more randomized groups address different variance components. The <a href="{% post_url 2023-10-08-wild-cluster-bootstrap-with-few-large-clusters %}">few-cluster sign test</a> uses a different model to obtain inference from a finite collection of large-cluster scores.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-hudgens_toward_2008" class="csl-entry" role="listitem">
@@ -152,6 +152,6 @@ Liu, Lan, and Michael G. Hudgens. 2014. <span>“Large Sample Randomization Infe
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-19-causal-inference-from-a-single-social-network %}">Causal Inference from a Single Social Network</a> · Next: <a href="{% post_url 2024-06-10-finite-sample-inference-under-interference %}">Finite-Sample Inference under Interference</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-19-causal-inference-from-a-single-social-network %}">Causal Inference from a Single Social Network</a> · Next: <a href="{% post_url 2024-03-13-finite-sample-inference-under-interference %}">Finite-Sample Inference under Interference</a></p></nav>
 
 </div>

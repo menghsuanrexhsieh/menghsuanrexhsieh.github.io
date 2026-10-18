@@ -16,7 +16,7 @@ note_question_source: "assets/notes/VdW/07.0_pp_5_24_Stochastic_Convergence.pdf"
 
 <p>These are Exercises 9, 10, 11, 12, 3, 18 from A. W. van der Vaart, <em>Asymptotic Statistics</em> (1998), Chapter 2, p. 24. The question numbers identify the original exercises. Write {% raw %}<span class="math inline">\(X_n\Rightarrow X\)</span>{% endraw %} for convergence in distribution and {% raw %}<span class="math inline">\(X_n\xrightarrow{P}X\)</span>{% endraw %} for convergence in probability.</p>
 
-<p>For the underlying definitions, see <a href="{% post_url 2021-11-06-modes-of-stochastic-convergence %}">modes of stochastic convergence</a>.</p>
+<p>For the underlying definitions, see <a href="{% post_url 2021-10-13-modes-of-stochastic-convergence %}">modes of stochastic convergence</a>.</p>
 
 <h3 data-note-section="1" id="scq-orders-exercise-9">1. Deterministic limits</h3>
 <p><strong>Question (Exercise 9).</strong> If {% raw %}<span class="math inline">\(\mathbb P(X_n=x_n)=1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(x_n\to x\)</span>{% endraw %}, prove {% raw %}<span class="math inline">\(X_n\Rightarrow x\)</span>{% endraw %}: (i) using distribution functions; (ii) using Theorem 2.7 of the chapter.</p>

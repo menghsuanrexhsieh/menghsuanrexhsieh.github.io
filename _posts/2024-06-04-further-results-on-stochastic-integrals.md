@@ -196,6 +196,6 @@ Le Gall, Jean-François. 2016. <em>Brownian Motion, Martingales, and Stochastic 
 <p class="note-reading">Reading: Le Gall (2016), Brownian Motion, Martingales, and Stochastic Calculus.</p>
 
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-24-girsanovs-theorem %}">Girsanov’s Theorem</a> · Next: <a href="{% post_url 2024-07-10-continuous-semimartingales-and-the-monotone-class-argument %}">Continuous Semimartingales and the Monotone-Class Argument</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-24-girsanovs-theorem %}">Girsanov’s Theorem</a> · Next: <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}">Continuous Semimartingales and the Monotone-Class Argument</a></p></nav>
 
 </div>

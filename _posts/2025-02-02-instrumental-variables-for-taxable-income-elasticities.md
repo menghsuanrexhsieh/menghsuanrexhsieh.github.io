@@ -53,7 +53,7 @@ Y=\varepsilon_iX+U.
 \]</div>{% endraw %}
 <p>The first-stage identity remains {% raw %}<span class="math inline">\(\operatorname{Cov}(Z,X)=\operatorname{Cov}(\overline Z(X),X)\)</span>{% endraw %}, since {% raw %}<span class="math inline">\(\operatorname{Cov}(Z,X\mid X)=0\)</span>{% endraw %}. Thus the residual conditional covariance in the numerator is an additive term, not the numerator of a second IV ratio: its proposed denominator would be identically zero.</p>
 
-<p>The <a href="{% post_url 2025-01-18-taxable-income-elasticities-and-what-kinks-identify %}">bunching approach</a> uses local density information and faces a different counterfactual problem. Comparing its elasticity with an IV estimate requires comparing their effect weights as well as their identifying assumptions.</p>
+<p>The <a href="{% post_url 2023-08-11-taxable-income-elasticities-and-what-kinks-identify %}">bunching approach</a> uses local density information and faces a different counterfactual problem. Comparing its elasticity with an IV estimate requires comparing their effect weights as well as their identifying assumptions.</p>
 
 <h3 data-note-section="5" id="17-15-deriving-the-weights-rather-than-naming-an-average">5. Deriving the weights rather than naming an average</h3>
 <p>For a binary instrument with {% raw %}<span class="math inline">\(\pi=\mathbb P(Z=1)\in(0,1)\)</span>{% endraw %},</p>

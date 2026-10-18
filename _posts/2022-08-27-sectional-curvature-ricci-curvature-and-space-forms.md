@@ -96,7 +96,7 @@ redirect_from: ["/2022/08/27/sectional-curvature-and-ricci-curvature/", "/2022/0
 </div>
 <div class="proof">
 <p><em>Proof.</em> The contracted second Bianchi identity is</p>
-<p> {% raw %}<div class="math display">\[\operatorname{div}\operatorname{Ric}=\frac12,d\operatorname{Scal},\qquad \operatorname{Scal}=\operatorname{tr}_g\operatorname{Ric}.\]</div>{% endraw %}</p>
+<p> {% raw %}<div class="math display">\[\operatorname{div}\operatorname{Ric}=\frac12\,d\operatorname{Scal},\qquad \operatorname{Scal}=\operatorname{tr}_g\operatorname{Ric}.\]</div>{% endraw %}</p>
 <p> Here is the contraction with our signs. At a point use a normal orthonormal frame and write {% raw %}<span class="math inline">\(C_{abcd}=\langle R(e_a,e_b)e_c,e_d\rangle\)</span>{% endraw %}, so {% raw %}<span class="math inline">\(\operatorname{Ric}_{bd}=\sum_a C_{abad}\)</span>{% endraw %}. Contracting the second Bianchi identity in its derivative index and the third curvature slot gives</p>
 <p> {% raw %}<div class="math display">\[\sum_i\nabla_i C_{jk i m}-\nabla_j\operatorname{Ric}_{km}+\nabla_k\operatorname{Ric}_{jm}=0.\]</div>{% endraw %}</p>
 <p> Now set {% raw %}<span class="math inline">\(m=k\)</span>{% endraw %} and sum over {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. The first term is {% raw %}<span class="math inline">\(\sum_i\nabla_i\operatorname{Ric}_{ji}\)</span>{% endraw %}, the second is {% raw %}<span class="math inline">\(-\nabla_j\operatorname{Scal}\)</span>{% endraw %}, and the third is another copy of the first. This proves the contracted identity.</p>

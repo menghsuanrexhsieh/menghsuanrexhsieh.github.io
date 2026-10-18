@@ -11,7 +11,7 @@ redirect_from: ["/2023/04/25/asymptotic-efficiency-and-regular-estimators/", "/2
 
 <div class="note-content" markdown="0">
 
-<p>Consider a parametric experiment {% raw %}<span class="math inline">\((P_\theta^n)\)</span>{% endraw %} near a fixed {% raw %}<span class="math inline">\(\theta\)</span>{% endraw %}. Local alternatives have the form {% raw %}<span class="math inline">\(\theta+h/\sqrt n\)</span>{% endraw %}; {% raw %}<span class="math inline">\(I_\theta\)</span>{% endraw %} is the Fisher information. The likelihood expansion is proved in <a href="{% post_url 2023-03-04-local-asymptotic-normality %}">local asymptotic normality</a>, and the change-of-measure argument uses <a href="{% post_url 2022-05-07-contiguity-change-of-measure-and-m-estimation %}">contiguity</a>.</p>
+<p>Consider a parametric experiment {% raw %}<span class="math inline">\((P_\theta^n)\)</span>{% endraw %} near a fixed {% raw %}<span class="math inline">\(\theta\)</span>{% endraw %}. Local alternatives have the form {% raw %}<span class="math inline">\(\theta+h/\sqrt n\)</span>{% endraw %}; {% raw %}<span class="math inline">\(I_\theta\)</span>{% endraw %} is the Fisher information. The likelihood expansion is proved in <a href="{% post_url 2023-03-04-local-asymptotic-normality %}">local asymptotic normality</a>, and the change-of-measure argument uses <a href="{% post_url 2022-01-09-contiguity-change-of-measure-and-m-estimation %}">contiguity</a>.</p>
 
 <div id="basics-of-asymptotic-efficiency" data-note-section="title">
 

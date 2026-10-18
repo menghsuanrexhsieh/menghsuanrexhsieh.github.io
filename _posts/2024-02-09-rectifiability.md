@@ -80,7 +80,7 @@ Fix {% raw %}<span class="math inline">\(\varepsilon=(4\cdot16^n)^{-1}\)</span>{
 
 </div>
 {% raw %}<div class="math display">\[\mu(B_r(x))\geq(1-\varepsilon)\omega_nr^n,\qquad\mu(X_{1/2}(\Pi_x,x)\cap B_r(x))\leq\varepsilon\omega_nr^n.\tag{1}\]</div>{% endraw %}
-<p> Their union contains all the remaining points. This countable uniform-scale decomposition supplies the uniform estimates used in the source’s Egorov argument.</p>
+<p> Their union contains all the remaining points. This countable uniform-scale decomposition supplies the uniform estimates that replace the Egorov step of the classical proof.</p>
 <p>The normal-plane Grassmannian is compact in projection-matrix norm. Choose finitely many {% raw %}<span class="math inline">\(m\)</span>{% endraw %}-planes {% raw %}<span class="math inline">\(\Pi_j\)</span>{% endraw %} so every {% raw %}<span class="math inline">\(\Pi_x\)</span>{% endraw %} has {% raw %}<span class="math inline">\(\|q_{\Pi_x}-q_{\Pi_j}\|&lt;1/16\)</span>{% endraw %} for some {% raw %}<span class="math inline">\(j\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(E_{k,j}\)</span>{% endraw %} be the points satisfying (1) and that plane bound. We claim that distinct {% raw %}<span class="math inline">\(x,y\in E_{k,j}\)</span>{% endraw %} with {% raw %}<span class="math inline">\(r=|y-x|&lt;1/(2k)\)</span>{% endraw %} obey </p>
 {% raw %}<div class="math display">\[|q_{\Pi_j}(y-x)|&gt;r/4.\]</div>{% endraw %}
 <p> Otherwise, for {% raw %}<span class="math inline">\(z\in B_{r/8}(y)\)</span>{% endraw %}, </p>

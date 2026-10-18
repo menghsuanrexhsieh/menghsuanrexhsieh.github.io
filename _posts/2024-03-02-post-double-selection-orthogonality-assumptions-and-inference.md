@@ -76,7 +76,7 @@ Y=\alpha_0D+g(Z)+\zeta,\qquad D=m(Z)+v,
 \sqrt n(\widehat\alpha-\alpha_0)
 =(\mathbb{E}[v^2])^{-1}\frac1{\sqrt n}\sum_{i=1}^n v_i\zeta_i+o_P(1).
 \]</div>{% endraw %}
-<p>The CLT applies once selection errors are absent from the leading term. Establishing that reduction is most of the argument. The <a href="{% post_url 2025-05-05-the-fragility-of-sparsity-coordinates-geometry-and-specification-tests %}">fragility of sparsity</a> concerns whether a proposed dictionary admits the required approximation; the inference theorem assumes that property within its specified class.</p>
+<p>The CLT applies once selection errors are absent from the leading term. Establishing that reduction is most of the argument. The <a href="{% post_url 2024-04-27-the-fragility-of-sparsity-coordinates-geometry-and-specification-tests %}">fragility of sparsity</a> concerns whether a proposed dictionary admits the required approximation; the inference theorem assumes that property within its specified class.</p>
 
 <h3 data-note-section="4" id="19-0-expand-the-regression-remainder">4. Expand the regression remainder</h3>
 <p>Let {% raw %}<span class="math inline">\(P\)</span>{% endraw %} project onto the selected union, {% raw %}<span class="math inline">\(M=I-P\)</span>{% endraw %}, and put {% raw %}<span class="math inline">\(r_m=Mm\)</span>{% endraw %} and {% raw %}<span class="math inline">\(r_g=Mg\)</span>{% endraw %}, treating the evaluated functions as sample vectors. Since {% raw %}<span class="math inline">\(D=m+v\)</span>{% endraw %}, the residualized treatment is {% raw %}<span class="math inline">\(MD=r_m+Mv\)</span>{% endraw %}. The final regression obeys the exact identity</p>

@@ -27,7 +27,9 @@ redirect_from: ["/2022/12/14/second-fundamental-form/", "/2022/12/28/second-fund
 <p>A recap of basic facts from algebraic topology can be found in Appendix <a href="{% post_url 2024-04-17-covering-spaces-and-the-fundamental-group-of-the-circle %}#app:algebraic-topology" data-reference-type="ref" data-reference="app:algebraic-topology">Covering Spaces and the Fundamental Group of the Circle</a>.</p>
 
 <figure id="fig:covering-map">
-
+<div class="note-diagram" style="--diagram-width: 524px; --diagram-min-width: 393px">
+<div class="note-diagram__canvas" tabindex="0" role="region" aria-label="A covering map p from M-tilde onto M: the preimage of an evenly covered neighbourhood U of a point m is a stack of disjoint sheets, each mapped homeomorphically onto U."><a href="{{ '/assets/images/notes/02/covering-map.svg' | relative_url }}?v=b120db83bbd1" title="Open diagram at full size"><img src="{{ '/assets/images/notes/02/covering-map.svg' | relative_url }}?v=b120db83bbd1" alt="A covering map p from M-tilde onto M: the preimage of an evenly covered neighbourhood U of a point m is a stack of disjoint sheets, each mapped homeomorphically onto U." loading="lazy" decoding="async"></a></div>
+</div>
 <figcaption>Covering map.</figcaption>
 </figure>
 <div id="result-2" class="definition" data-note-number="2" data-note-kind="Definition">

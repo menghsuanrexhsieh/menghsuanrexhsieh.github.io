@@ -11,7 +11,7 @@ redirect_from: ["/2023/02/20/second-variation-formula/", "/2023/03/06/applicatio
 
 <div class="note-content" markdown="0">
 
-<p>Let {% raw %}<span class="math inline">\((M,g)\)</span>{% endraw %} be a smooth Riemannian manifold, with Levi–Civita connection {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %}. For an immersed submanifold, the tangent and normal parts of {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %} give the induced connection and second fundamental form. See the <a href="{% post_url 2022-05-11-connections-lie-brackets-and-curvature %}">connection notes</a> for the notation.</p>
+<p>Let {% raw %}<span class="math inline">\((M,g)\)</span>{% endraw %} be a smooth Riemannian manifold, with Levi–Civita connection {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %}. See the <a href="{% post_url 2022-05-11-connections-lie-brackets-and-curvature %}">connection notes</a> for the notation.</p>
 
 <div id="second-variation-formula" data-note-section="title">
 
@@ -187,7 +187,7 @@ redirect_from: ["/2023/02/20/second-variation-formula/", "/2023/03/06/applicatio
 
 </div>
 <div class="proof">
-<p>Rescale the parameter to {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %}. Choose a nonzero Jacobi field {% raw %}<span class="math inline">\(J\)</span>{% endraw %} vanishing at zero and {% raw %}<span class="math inline">\(d\in(0,1)\)</span>{% endraw %}; its tangential component is affine and vanishes at both times, so it is normal. Initial-value uniqueness gives {% raw %}<span class="math inline">\(J'(d)\ne0\)</span>{% endraw %}. Parallel transport {% raw %}<span class="math inline">\(-J'(d)\)</span>{% endraw %} along {% raw %}<span class="math inline">\(\gamma\)</span>{% endraw %} and multiply it by a smooth bump equal to one at {% raw %}<span class="math inline">\(d\)</span>{% endraw %} and zero near both endpoints. This constructs a smooth <em>normal</em> field {% raw %}<span class="math inline">\(K\)</span>{% endraw %} with {% raw %}<span class="math inline">\(K(0)=K(1)=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(K(d)=-J'(d)\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %}, define</p>
+<p><em>Proof.</em> Rescale the parameter to {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %}. Choose a nonzero Jacobi field {% raw %}<span class="math inline">\(J\)</span>{% endraw %} vanishing at zero and {% raw %}<span class="math inline">\(d\in(0,1)\)</span>{% endraw %}; its tangential component is affine and vanishes at both times, so it is normal. Initial-value uniqueness gives {% raw %}<span class="math inline">\(J'(d)\ne0\)</span>{% endraw %}. Parallel transport {% raw %}<span class="math inline">\(-J'(d)\)</span>{% endraw %} along {% raw %}<span class="math inline">\(\gamma\)</span>{% endraw %} and multiply it by a smooth bump equal to one at {% raw %}<span class="math inline">\(d\)</span>{% endraw %} and zero near both endpoints. This constructs a smooth <em>normal</em> field {% raw %}<span class="math inline">\(K\)</span>{% endraw %} with {% raw %}<span class="math inline">\(K(0)=K(1)=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(K(d)=-J'(d)\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %}, define</p>
 
 {% raw %}<div class="math display">\[N_\varepsilon (t) = \begin{cases}
             J(t) + \varepsilon K(t) &amp; \quad 0 \leq t \leq d \\

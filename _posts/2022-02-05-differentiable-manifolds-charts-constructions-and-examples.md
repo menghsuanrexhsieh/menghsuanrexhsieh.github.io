@@ -345,7 +345,7 @@ Hatcher, Allen. 2002. <em>Algebraic Topology</em>. Cambridge ; New York: Cambr
 <p class="note-reading">Reading: Carmo (1992), Riemannian geometry.</p>
 
 
-<nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2024-05-14-why-complex-projective-space-is-hausdorff %}">Why Complex Projective Space Is Hausdorff</a>; <a href="{% post_url 2022-10-07-lie-groups-and-their-lie-algebras %}">Lie Groups and Their Lie Algebras</a>.</p></nav>
+<nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2023-01-27-why-complex-projective-space-is-hausdorff %}">Why Complex Projective Space Is Hausdorff</a>; <a href="{% post_url 2022-10-07-lie-groups-and-their-lie-algebras %}">Lie Groups and Their Lie Algebras</a>.</p></nav>
 
 <nav class="note-series" aria-label="Notes in this series"><p>Next: <a href="{% post_url 2022-03-04-topological-tools-for-manifolds %}">Topological Tools for Manifolds</a></p></nav>
 

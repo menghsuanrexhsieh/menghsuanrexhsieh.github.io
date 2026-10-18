@@ -16,7 +16,7 @@ note_question_source: "assets/notes/VdW/07.0_pp_5_24_Stochastic_Convergence.pdf"
 
 <p>These are Exercises 5, 6, 7, 8 from A. W. van der Vaart, <em>Asymptotic Statistics</em> (1998), Chapter 2, p. 24. The question numbers identify the original exercises. Write {% raw %}<span class="math inline">\(X_n\Rightarrow X\)</span>{% endraw %} for convergence in distribution and {% raw %}<span class="math inline">\(X_n\xrightarrow{P}X\)</span>{% endraw %} for convergence in probability.</p>
 
-<p>For the underlying definitions, see <a href="{% post_url 2021-11-06-modes-of-stochastic-convergence %}">weak convergence and tightness</a>.</p>
+<p>For the underlying definitions, see <a href="{% post_url 2021-10-13-modes-of-stochastic-convergence %}">weak convergence and tightness</a>.</p>
 
 <h3 data-note-section="1" id="scq-laws-exercise-5">1. Marginals do not determine joint convergence</h3>
 <p><strong>Question (Exercise 5).</strong> Find sequences with {% raw %}<span class="math inline">\(X_n\Rightarrow X\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y_n\Rightarrow Y\)</span>{% endraw %} for which {% raw %}<span class="math inline">\((X_n,Y_n)\)</span>{% endraw %} does not converge in distribution.</p>

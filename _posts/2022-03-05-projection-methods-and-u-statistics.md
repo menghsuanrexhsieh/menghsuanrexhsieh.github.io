@@ -29,21 +29,24 @@ redirect_from: ["/2022/03/05/l2-projections-and-conditional-expectations/", "/20
 <p><strong>Proposition 2.</strong> The projection exists, is unique almost surely, and is characterized by
 {% raw %}<div class="math display">\[\widehat S\in\mathsf S,\qquad E[(T-\widehat S)S]=0\quad(S\in\mathsf S).\]</div>{% endraw %}
 If constants belong to {% raw %}<span class="math inline">\(\mathsf S\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(E\widehat S=ET\)</span>{% endraw %}, and the residual is uncorrelated with every member of {% raw %}<span class="math inline">\(\mathsf S\)</span>{% endraw %}.</p>
-
-<p>Proof. Write {% raw %}<span class="math inline">\(d=\inf_{S\in\mathsf S}\|T-S\|_2\)</span>{% endraw %}, and choose a minimizing sequence {% raw %}<span class="math inline">\(S_j\)</span>{% endraw %}. The parallelogram identity gives
+</div>
+<div class="proof">
+<p><em>Proof.</em> Write {% raw %}<span class="math inline">\(d=\inf_{S\in\mathsf S}\|T-S\|_2\)</span>{% endraw %}, and choose a minimizing sequence {% raw %}<span class="math inline">\(S_j\)</span>{% endraw %}. The parallelogram identity gives
 {% raw %}<div class="math display">\[\|S_j-S_k\|_2^2=2\|T-S_j\|_2^2+2\|T-S_k\|_2^2-4\left\|T-\frac{S_j+S_k}{2}\right\|_2^2\longrightarrow0,\]</div>{% endraw %}
 because the last squared norm is at least {% raw %}<span class="math inline">\(d^2\)</span>{% endraw %}. Completeness and closedness give a limit {% raw %}<span class="math inline">\(\widehat S\in\mathsf S\)</span>{% endraw %} with distance {% raw %}<span class="math inline">\(d\)</span>{% endraw %}. For any {% raw %}<span class="math inline">\(S\in\mathsf S\)</span>{% endraw %}, the quadratic {% raw %}<span class="math inline">\(t\mapsto\|T-\widehat S-tS\|_2^2\)</span>{% endraw %} is minimized at zero, so its linear coefficient vanishes. Conversely, orthogonality gives
 {% raw %}<div class="math display">\[\|T-S\|_2^2=\|T-\widehat S\|_2^2+\|\widehat S-S\|_2^2.\]</div>{% endraw %}
-This proves optimality and uniqueness. Taking {% raw %}<span class="math inline">\(S=1\)</span>{% endraw %} proves equality of means; the covariance assertion then follows from the same orthogonality.</p>
+This proves optimality and uniqueness. Taking {% raw %}<span class="math inline">\(S=1\)</span>{% endraw %} proves equality of means; the covariance assertion then follows from the same orthogonality. ◻</p>
 </div>
 
 <div id="result-3" class="theorem" data-note-number="3" data-note-kind="Theorem">
 <p><strong>Theorem 3.</strong> Suppose {% raw %}<span class="math inline">\(\mathsf S_n\)</span>{% endraw %} contains constants, {% raw %}<span class="math inline">\(T_n\in L^2\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\widehat S_n\)</span>{% endraw %} is its projection. Assume both variances are positive eventually and {% raw %}<span class="math inline">\(\operatorname{Var}(T_n)/\operatorname{Var}(\widehat S_n)\to1\)</span>{% endraw %}. Then
 {% raw %}<div class="math display">\[\frac{T_n-ET_n}{\sqrt{\operatorname{Var}T_n}}-\frac{\widehat S_n-E\widehat S_n}{\sqrt{\operatorname{Var}\widehat S_n}}\longrightarrow0\quad\text{in }L^2,\]</div>{% endraw %}
 and hence in probability.</p>
-
-<p>Proof. Put {% raw %}<span class="math inline">\(v_n=\operatorname{Var}T_n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(w_n=\operatorname{Var}\widehat S_n\)</span>{% endraw %}. Orthogonality implies {% raw %}<span class="math inline">\(E(T_n-\widehat S_n)^2=v_n-w_n\)</span>{% endraw %}. The difference in the display is the sum of the residual divided by {% raw %}<span class="math inline">\(\sqrt{v_n}\)</span>{% endraw %} and {% raw %}<span class="math inline">\((\widehat S_n-E\widehat S_n)(v_n^{-1/2}-w_n^{-1/2})\)</span>{% endraw %}. These two terms are orthogonal, so its squared {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} norm is
+</div>
+<div class="proof">
+<p><em>Proof.</em> Put {% raw %}<span class="math inline">\(v_n=\operatorname{Var}T_n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(w_n=\operatorname{Var}\widehat S_n\)</span>{% endraw %}. Orthogonality implies {% raw %}<span class="math inline">\(E(T_n-\widehat S_n)^2=v_n-w_n\)</span>{% endraw %}. The difference in the display is the sum of the residual divided by {% raw %}<span class="math inline">\(\sqrt{v_n}\)</span>{% endraw %} and {% raw %}<span class="math inline">\((\widehat S_n-E\widehat S_n)(v_n^{-1/2}-w_n^{-1/2})\)</span>{% endraw %}. These two terms are orthogonal, so its squared {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} norm is
 {% raw %}<div class="math display">\[1-\frac{w_n}{v_n}+\left(\sqrt{\frac{w_n}{v_n}}-1\right)^2\longrightarrow0.\]</div>{% endraw %}</p>
+<p>◻</p>
 </div>
 
 <span id="Eq:HajekProjections"></span>
@@ -58,8 +61,10 @@ It is the orthogonal sum of the constants and the {% raw %}<span class="math inl
 
 <div id="Thm:HajekProjection" class="theorem" data-note-number="5" data-note-kind="Theorem">
 <p><strong>Theorem 5.</strong> For {% raw %}<span class="math inline">\(T\in L^2\)</span>{% endraw %}, its Hájek projection is
-{% raw %}<div class="math display">\[\widehat S=ET+\sum_{i=1}^n\{E[T\mid X_i]-ET\}=\sum_{i=1}^nE[T\mid X_i]-(n-1)ET.\]</div>{% endraw %}
-Proof. The constant projection is {% raw %}<span class="math inline">\(ET\)</span>{% endraw %}. Conditional expectation is an {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} contraction, so each summand is square integrable and centered. For a centered {% raw %}<span class="math inline">\(g_i(X_i)\)</span>{% endraw %}, conditioning shows {% raw %}<span class="math inline">\(E[Tg_i]=E[E(T\mid X_i)g_i]\)</span>{% endraw %}. Every other centered coordinate term has zero inner product with {% raw %}<span class="math inline">\(g_i\)</span>{% endraw %}, by independence. Thus the displayed residual is orthogonal to all additive functions, and Proposition 2 applies.</p>
+{% raw %}<div class="math display">\[\widehat S=ET+\sum_{i=1}^n\{E[T\mid X_i]-ET\}=\sum_{i=1}^nE[T\mid X_i]-(n-1)ET.\]</div>{% endraw %}</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> The constant projection is {% raw %}<span class="math inline">\(ET\)</span>{% endraw %}. Conditional expectation is an {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} contraction, so each summand is square integrable and centered. For a centered {% raw %}<span class="math inline">\(g_i(X_i)\)</span>{% endraw %}, conditioning shows {% raw %}<span class="math inline">\(E[Tg_i]=E[E(T\mid X_i)g_i]\)</span>{% endraw %}. Every other centered coordinate term has zero inner product with {% raw %}<span class="math inline">\(g_i\)</span>{% endraw %}, by independence. Thus the displayed residual is orthogonal to all additive functions, and Proposition 2 applies. ◻</p>
 </div>
 
 <p>For {% raw %}<span class="math inline">\(A\subseteq[n]=\{1,\ldots,n\}\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(E_AT=E[T\mid X_i:i\in A]\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(E_\emptyset T=ET\)</span>{% endraw %}. Distinguish the full coordinate space {% raw %}<span class="math inline">\(L_A=L^2(\sigma(X_i:i\in A))\)</span>{% endraw %} from the canonical interaction space
@@ -74,19 +79,19 @@ The zero conditional means are part of the definition; arbitrary functions of {%
 Moreover,
 {% raw %}<div class="math display">\[E_AT=\sum_{B\subseteq A}P_BT,\qquad L_A=\bigoplus_{B\subseteq A}\mathcal H_B.\]</div>{% endraw %}
 In particular, if {% raw %}<span class="math inline">\(T\)</span>{% endraw %} is a function of all {% raw %}<span class="math inline">\(n\)</span>{% endraw %} coordinates, then {% raw %}<span class="math inline">\(T=\sum_{A\subseteq[n]}P_AT\)</span>{% endraw %} in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\operatorname{Var}T=\sum_{A\ne\emptyset}E(P_AT)^2\)</span>{% endraw %}.</p>
-
-<p>Proof. Fix a proper subset {% raw %}<span class="math inline">\(C\subsetneq A\)</span>{% endraw %} and an index {% raw %}<span class="math inline">\(i\in A\setminus C\)</span>{% endraw %}. In {% raw %}<span class="math inline">\(E_CP_AT\)</span>{% endraw %}, pair each {% raw %}<span class="math inline">\(B\)</span>{% endraw %} not containing {% raw %}<span class="math inline">\(i\)</span>{% endraw %} with {% raw %}<span class="math inline">\(B\cup\{i\}\)</span>{% endraw %}. Their signs are opposite and their intersections with {% raw %}<span class="math inline">\(C\)</span>{% endraw %} coincide, so every pair cancels. Consequently {% raw %}<span class="math inline">\(E_CP_AT=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(P_AT\in\mathcal H_A\)</span>{% endraw %}.</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fix a proper subset {% raw %}<span class="math inline">\(C\subsetneq A\)</span>{% endraw %} and an index {% raw %}<span class="math inline">\(i\in A\setminus C\)</span>{% endraw %}. In {% raw %}<span class="math inline">\(E_CP_AT\)</span>{% endraw %}, pair each {% raw %}<span class="math inline">\(B\)</span>{% endraw %} not containing {% raw %}<span class="math inline">\(i\)</span>{% endraw %} with {% raw %}<span class="math inline">\(B\cup\{i\}\)</span>{% endraw %}. Their signs are opposite and their intersections with {% raw %}<span class="math inline">\(C\)</span>{% endraw %} coincide, so every pair cancels. Consequently {% raw %}<span class="math inline">\(E_CP_AT=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(P_AT\in\mathcal H_A\)</span>{% endraw %}.</p>
 
 <p>For {% raw %}<span class="math inline">\(g\in\mathcal H_A\)</span>{% endraw %}, we have {% raw %}<span class="math inline">\(E[(T-E_AT)g]=0\)</span>{% endraw %} by conditioning on {% raw %}<span class="math inline">\(X_A\)</span>{% endraw %}. Every other term {% raw %}<span class="math inline">\(E_BT\)</span>{% endraw %}, {% raw %}<span class="math inline">\(B\subsetneq A\)</span>{% endraw %}, is orthogonal to {% raw %}<span class="math inline">\(g\)</span>{% endraw %}, since {% raw %}<span class="math inline">\(E_Bg=0\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(E[(T-P_AT)g]=0\)</span>{% endraw %}, proving the projection formula.</p>
 
 <p>To sum the components, the coefficient of {% raw %}<span class="math inline">\(E_CT\)</span>{% endraw %} in {% raw %}<span class="math inline">\(\sum_{B\subseteq A}P_BT\)</span>{% endraw %} is
 {% raw %}<div class="math display">\[\sum_{B:C\subseteq B\subseteq A}(-1)^{|B|-|C|}=(1-1)^{|A|-|C|},\]</div>{% endraw %}
-which is one when {% raw %}<span class="math inline">\(C=A\)</span>{% endraw %} and zero otherwise. This proves the identity and the direct-sum decomposition. It also proves the source's assertion that {% raw %}<span class="math inline">\(T\perp\mathcal H_B\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(B\subseteq A\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(E_AT=0\)</span>{% endraw %}. For a general {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, the sum over {% raw %}<span class="math inline">\(B\subseteq A\)</span>{% endraw %} is {% raw %}<span class="math inline">\(E_AT\)</span>{% endraw %}, not {% raw %}<span class="math inline">\(T\)</span>{% endraw %} unless {% raw %}<span class="math inline">\(T\)</span>{% endraw %} is {% raw %}<span class="math inline">\(X_A\)</span>{% endraw %}-measurable.</p>
-
+which is one when {% raw %}<span class="math inline">\(C=A\)</span>{% endraw %} and zero otherwise. This proves the identity and the direct-sum decomposition. It also proves the source's assertion that {% raw %}<span class="math inline">\(T\perp\mathcal H_B\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(B\subseteq A\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(E_AT=0\)</span>{% endraw %}. For a general {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, the sum over {% raw %}<span class="math inline">\(B\subseteq A\)</span>{% endraw %} is {% raw %}<span class="math inline">\(E_AT\)</span>{% endraw %}, not {% raw %}<span class="math inline">\(T\)</span>{% endraw %} unless {% raw %}<span class="math inline">\(T\)</span>{% endraw %} is {% raw %}<span class="math inline">\(X_A\)</span>{% endraw %}-measurable. ◻</p>
+</div>
 <p>The first components are {% raw %}<span class="math inline">\(P_\emptyset T=ET\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_{\{i\}}T=E[T\mid X_i]-ET\)</span>{% endraw %}, and
 {% raw %}<div class="math display">\[P_{\{i,j\}}T=E[T\mid X_i,X_j]-E[T\mid X_i]-E[T\mid X_j]+ET.\]</div>{% endraw %}
 The projection on interactions of order at most {% raw %}<span class="math inline">\(p\)</span>{% endraw %} is {% raw %}<span class="math inline">\(\sum_{|A|\le p}P_AT\)</span>{% endraw %}.</p>
-</div>
 
 <h2 data-note-section="1" id="basics-of-unbiased-statistics">1. Basics of Unbiased Statistics</h2>
 
@@ -122,14 +127,15 @@ This is the Hájek projection of the centered statistic; {% raw %}<span class="m
 <p><strong>Theorem 10.</strong> If {% raw %}<span class="math inline">\(Eh(X_1,\ldots,X_r)^2&lt;\infty\)</span>{% endraw %}, then
 {% raw %}<div class="math display">\[\sqrt n(U_n-\theta-\widehat U_n)\to0\quad\text{in }L^2,\qquad \sqrt n(U_n-\theta)\Rightarrow \mathcal{N}(0,r^2\zeta_1),\]</div>{% endraw %}
 where {% raw %}<span class="math inline">\(\zeta_1=E h_1(X_1)^2\)</span>{% endraw %}. The result includes {% raw %}<span class="math inline">\(\zeta_1=0\)</span>{% endraw %}, with a point mass at zero as the limit; a different scaling may then be needed for a nondegenerate limit.</p>
-
-<p>Proof. For {% raw %}<span class="math inline">\(0\le c\le r\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(\zeta_c\)</span>{% endraw %} be the covariance of two kernel evaluations sharing exactly {% raw %}<span class="math inline">\(c\)</span>{% endraw %} observations and using independent observations otherwise. Conditional independence given the shared variables gives
+</div>
+<div class="proof">
+<p><em>Proof.</em> For {% raw %}<span class="math inline">\(0\le c\le r\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(\zeta_c\)</span>{% endraw %} be the covariance of two kernel evaluations sharing exactly {% raw %}<span class="math inline">\(c\)</span>{% endraw %} observations and using independent observations otherwise. Conditional independence given the shared variables gives
 {% raw %}<div class="math display">\[\zeta_c=\operatorname{Var}(E[h(X_1,\ldots,X_r)\mid X_1,\ldots,X_c]),\quad \zeta_0=0.\]</div>{% endraw %}
 Each is finite. Fix the first subset {% raw %}<span class="math inline">\(A\)</span>{% endraw %}. A second subset overlaps it in {% raw %}<span class="math inline">\(c\)</span>{% endraw %} indices in exactly {% raw %}<span class="math inline">\(\binom rc\binom{n-r}{r-c}\)</span>{% endraw %} ways. Consequently, with impossible binomial coefficients interpreted as zero,
 {% raw %}<div class="math display">\[\operatorname{Var}U_n=\sum_{c=1}^r\frac{\binom rc\binom{n-r}{r-c}}{\binom nr}\zeta_c.\]</div>{% endraw %}
 For fixed {% raw %}<span class="math inline">\(r\)</span>{% endraw %}, the coefficient for {% raw %}<span class="math inline">\(c=1\)</span>{% endraw %} is {% raw %}<span class="math inline">\(r^2/n+O(n^{-2})\)</span>{% endraw %}, by expanding its finite product of linear factors; the coefficient for {% raw %}<span class="math inline">\(c\ge2\)</span>{% endraw %} is {% raw %}<span class="math inline">\(O(n^{-c})\)</span>{% endraw %}, by comparing polynomial degrees. Therefore
 {% raw %}<div class="math display">\[\operatorname{Var}U_n=\frac{r^2\zeta_1}{n}+O(n^{-2}).\]</div>{% endraw %}
-The projection has variance exactly {% raw %}<span class="math inline">\(r^2\zeta_1/n\)</span>{% endraw %}. Orthogonality now gives {% raw %}<span class="math inline">\(E(U_n-\theta-\widehat U_n)^2=O(n^{-2})\)</span>{% endraw %}, proving the first assertion without dividing by a potentially zero variance. The i.i.d. CLT applied to {% raw %}<span class="math inline">\(h_1(X_i)\)</span>{% endraw %}, followed by Slutsky, proves the second.</p>
+The projection has variance exactly {% raw %}<span class="math inline">\(r^2\zeta_1/n\)</span>{% endraw %}. Orthogonality now gives {% raw %}<span class="math inline">\(E(U_n-\theta-\widehat U_n)^2=O(n^{-2})\)</span>{% endraw %}, proving the first assertion without dividing by a potentially zero variance. The i.i.d. CLT applied to {% raw %}<span class="math inline">\(h_1(X_i)\)</span>{% endraw %}, followed by Slutsky, proves the second. ◻</p>
 </div>
 
 <div id="result-11" class="example" data-note-number="11" data-note-kind="Example">
@@ -168,12 +174,13 @@ where {% raw %}<span class="math inline">\(h_{1,0}(x)=E[h(x,X_2,\ldots,X_r,Y_1,\
 {% raw %}<div class="math display">\[\sqrt N(U_{m,n}-\theta-\widehat U_{m,n})\to0\quad\text{in }L^2,\]</div>{% endraw %}
 {% raw %}<div class="math display">\[\sqrt N(U_{m,n}-\theta)\Rightarrow N\left(0,\frac{r^2\zeta_{1,0}}\lambda+\frac{s^2\zeta_{0,1}}{1-\lambda}\right).\]</div>{% endraw %}
 Here {% raw %}<span class="math inline">\(\zeta_{a,b}\)</span>{% endraw %} is the covariance of kernel evaluations sharing {% raw %}<span class="math inline">\(a\)</span>{% endraw %} of the {% raw %}<span class="math inline">\(X\)</span>{% endraw %}'s and {% raw %}<span class="math inline">\(b\)</span>{% endraw %} of the {% raw %}<span class="math inline">\(Y\)</span>{% endraw %}'s, with independent remaining coordinates. Equivalently it is the variance of the kernel's conditional expectation given those shared variables.</p>
-
-<p>Proof. Independently count the overlapping subsets in the two samples to obtain
+</div>
+<div class="proof">
+<p><em>Proof.</em> Independently count the overlapping subsets in the two samples to obtain
 {% raw %}<div class="math display">\[\operatorname{Var}U_{m,n}=\sum_{a=0}^r\sum_{b=0}^s\frac{\binom ra\binom{m-r}{r-a}}{\binom mr}\frac{\binom sb\binom{n-s}{s-b}}{\binom ns}\zeta_{a,b}.\]</div>{% endraw %}
 The {% raw %}<span class="math inline">\((0,0)\)</span>{% endraw %} term is zero. The coefficients of {% raw %}<span class="math inline">\((1,0)\)</span>{% endraw %} and {% raw %}<span class="math inline">\((0,1)\)</span>{% endraw %} are {% raw %}<span class="math inline">\(r^2/m+O(N^{-2})\)</span>{% endraw %} and {% raw %}<span class="math inline">\(s^2/n+O(N^{-2})\)</span>{% endraw %}: the zero-overlap coefficient in the other sample is {% raw %}<span class="math inline">\(1+O(N^{-1})\)</span>{% endraw %}. All terms with {% raw %}<span class="math inline">\(a+b\ge2\)</span>{% endraw %} are {% raw %}<span class="math inline">\(O(N^{-2})\)</span>{% endraw %}. It follows that
 {% raw %}<div class="math display">\[\operatorname{Var}U_{m,n}=\frac{r^2\zeta_{1,0}}m+\frac{s^2\zeta_{0,1}}n+O(N^{-2}).\]</div>{% endraw %}
-The first two terms are exactly the projection variance, so orthogonality proves the remainder bound. The two independent sample means in the projection satisfy their respective CLTs; multiplying them by {% raw %}<span class="math inline">\(r\sqrt{N/m}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(s\sqrt{N/n}\)</span>{% endraw %} gives the stated variance. This also covers a zero limiting variance.</p>
+The first two terms are exactly the projection variance, so orthogonality proves the remainder bound. The two independent sample means in the projection satisfy their respective CLTs; multiplying them by {% raw %}<span class="math inline">\(r\sqrt{N/m}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(s\sqrt{N/n}\)</span>{% endraw %} gives the stated variance. This also covers a zero limiting variance. ◻</p>
 </div>
 
 <div id="result-14" class="example" data-note-number="14" data-note-kind="Example">

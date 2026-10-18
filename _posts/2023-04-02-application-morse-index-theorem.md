@@ -10,7 +10,7 @@ note_source: "assets/notes/Differential Geometry - Notes/diff-geo.tex"
 
 <div class="note-content" markdown="0">
 
-<p>Let {% raw %}<span class="math inline">\((M,g)\)</span>{% endraw %} be a smooth Riemannian manifold, with Levi–Civita connection {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %}. For an immersed submanifold, the tangent and normal parts of {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %} give the induced connection and second fundamental form. See the <a href="{% post_url 2022-05-11-connections-lie-brackets-and-curvature %}">connection notes</a> for the notation.</p>
+<p>Let {% raw %}<span class="math inline">\((M,g)\)</span>{% endraw %} be a smooth Riemannian manifold, with Levi–Civita connection {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %}. See the <a href="{% post_url 2022-05-11-connections-lie-brackets-and-curvature %}">connection notes</a> for the notation.</p>
 
 <div id="application-morse-index-theorem" data-note-section="title">
 

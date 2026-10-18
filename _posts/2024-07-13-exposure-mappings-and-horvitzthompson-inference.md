@@ -158,6 +158,6 @@ Aronow, Peter M., and Cyrus Samii. 2017. <span>“Estimating Average Causal Effe
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-06-10-finite-sample-inference-under-interference %}">Finite-Sample Inference under Interference</a> · Next: <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}">Ordering-Free Dependence and Resampling</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-13-finite-sample-inference-under-interference %}">Finite-Sample Inference under Interference</a> · Next: <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}">Ordering-Free Dependence and Resampling</a></p></nav>
 
 </div>
