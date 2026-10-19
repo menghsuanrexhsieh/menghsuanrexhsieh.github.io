@@ -326,9 +326,24 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 <span id="eq:step1"></span><span id="eq:step2"></span><span id="eq:step3"></span><span id="eq:step4"></span><span id="eq:step5"></span><span id="eq:step6"></span>
 <div class="proof">
 <p><em>Proof.</em> First, interchanging {% raw %}<span class="math inline">\(X,Y\)</span>{% endraw %} in Definition 21 changes the sign of both the commutator and the bracket. For the first Bianchi identity it suffices, by tensoriality, to take coordinate fields at a point. Insert formula (5) and sum cyclically in {% raw %}<span class="math inline">\(i,j,k\)</span>{% endraw %}. The derivative terms cancel in pairs because {% raw %}<span class="math inline">\(\Gamma^m_{ij}=\Gamma^m_{ji}\)</span>{% endraw %}. The product terms cancel too: for instance {% raw %}<span class="math inline">\(\Gamma^p_{ik}\Gamma^m_{jp}\)</span>{% endraw %} cancels {% raw %}<span class="math inline">\(-\Gamma^p_{ki}\Gamma^m_{jp}\)</span>{% endraw %} from the next cyclic term. This proves the cyclic identity without any assumption that the fields commute away from that coordinate choice.</p>
+<p>There is also an invariant calculation of the first Bianchi identity. By torsion-freeness, grouping the second covariant derivatives in the cyclic sum gives</p>
+{% raw %}<div class="math display">\[\begin{aligned}
+&amp;R(X,Y)Z+R(Y,Z)X+R(Z,X)Y\\
+&amp;=\nabla_Y[X,Z]+\nabla_Z[Y,X]+\nabla_X[Z,Y]
++\nabla_{[X,Y]}Z+\nabla_{[Y,Z]}X+\nabla_{[Z,X]}Y\\
+&amp;=[Y,[X,Z]]+[Z,[Y,X]]+[X,[Z,Y]]=0,
+\end{aligned}\]</div>{% endraw %}
+<p>where the final equality is the Jacobi identity for Lie brackets.</p>
 <p>For skew-adjointness, apply the scalar operator {% raw %}<span class="math inline">\(YX-XY+[X,Y]\)</span>{% endraw %}, which is zero, to {% raw %}<span class="math inline">\(g(Z,W)\)</span>{% endraw %}. Metric compatibility expands this into</p>
 <p> {% raw %}<div class="math display">\[0=g(R(X,Y)Z,W)+g(Z,R(X,Y)W);\]</div>{% endraw %}</p>
 <p> the terms involving one derivative on each of {% raw %}<span class="math inline">\(Z,W\)</span>{% endraw %} cancel between the two orders. This gives the third symmetry.</p>
+<p>To obtain pair exchange from these identities, write {% raw %}<span class="math inline">\(C(X,Y,Z,W)=g(R(X,Y)Z,W)\)</span>{% endraw %}. The first Bianchi identity and skew-symmetry in the last pair give the first equality below. Applying Bianchi to each term gives the second:</p>
+{% raw %}<div class="math display">\[\begin{aligned}
+C(X,Y,Z,W)&amp;=C(Y,Z,W,X)+C(Z,X,W,Y)\\
+&amp;=2C(Z,W,X,Y)+C(W,Y,X,Z)+C(X,W,Y,Z)\\
+&amp;=2C(Z,W,X,Y)-C(X,Y,Z,W).
+\end{aligned}\]</div>{% endraw %}
+<p>For the last equality, apply Bianchi to {% raw %}<span class="math inline">\((W,Y,X)\)</span>{% endraw %}, then use skew-symmetry in both pairs. Moving the final term to the left and dividing by two proves pair exchange.</p>
 <p>For pair exchange, a direct normal-coordinate computation avoids an implicit permutation argument. At a chosen point {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, {% raw %}<span class="math inline">\(g_{ij}=\delta_{ij}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\partial_k g_{ij}=0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\Gamma^m_{ij}=0\)</span>{% endraw %}. Insert the Christoffel formula into (5), then lower the output index according to (4). Cancellation of the {% raw %}<span class="math inline">\(g_{ij,k\ell}\)</span>{% endraw %} terms gives</p>
 <p> {% raw %}<div class="math display">\[R_{ijk\ell}(p)=\frac12\bigl(g_{ik,j\ell}-g_{jk,i\ell}-g_{i\ell,jk}+g_{j\ell,ik}\bigr)(p).\tag{6}\]</div>{% endraw %}</p>
 <p> Here commas denote ordinary partial derivatives. Exchanging the index pairs {% raw %}<span class="math inline">\((i,j)\)</span>{% endraw %} and {% raw %}<span class="math inline">\((k,\ell)\)</span>{% endraw %} leaves this expression unchanged, using symmetry of the metric and commutation of its mixed partials. Thus the pair-exchange identity holds at {% raw %}<span class="math inline">\(p\)</span>{% endraw %}. Since both sides are tensors and {% raw %}<span class="math inline">\(p\)</span>{% endraw %} was arbitrary, it holds everywhere in every chart. This computation also independently verifies the minus signs in both skew symmetries. ◻</p>
@@ -353,7 +368,14 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 <div class="proof">
 <p><em>Proof.</em> In ambient coordinates {% raw %}<span class="math inline">\(x^i\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(F^i=x^i\circ F\)</span>{% endraw %} and {% raw %}<span class="math inline">\(V=v^k\partial_k\)</span>{% endraw %}. Then</p>
 <p> {% raw %}<div class="math display">\[(D_sv)^m=\partial_sv^m+\Gamma^m_{ik}(F)\,\partial_sF^i\,v^k,\]</div>{% endraw %}</p>
-<p> and similarly for {% raw %}<span class="math inline">\(D_t\)</span>{% endraw %}. Expand {% raw %}<span class="math inline">\(D_tD_sV-D_sD_tV\)</span>{% endraw %}. Mixed second derivatives of {% raw %}<span class="math inline">\(v\)</span>{% endraw %} cancel; the terms involving first derivatives of {% raw %}<span class="math inline">\(v\)</span>{% endraw %} also cancel; and the coefficients of {% raw %}<span class="math inline">\(\partial_{st}F^i-\partial_{ts}F^i\)</span>{% endraw %} are zero. The remaining component is</p>
+<p>Writing {% raw %}<span class="math inline">\(F_s^i=\partial_sF^i\)</span>{% endraw %} and {% raw %}<span class="math inline">\(F_t^j=\partial_tF^j\)</span>{% endraw %}, with all Christoffel coefficients evaluated at {% raw %}<span class="math inline">\(F(s,t)\)</span>{% endraw %}, we obtain</p>
+{% raw %}<div class="math display">\[\begin{aligned}
+(D_tD_sV)^m&amp;=\partial_{ts}v^m+(\partial_j\Gamma^m_{ik})F_t^jF_s^iv^k+\Gamma^m_{ik}F_{ts}^iv^k\\
+&amp;\quad+\Gamma^m_{ik}F_s^i\partial_tv^k+\Gamma^m_{jp}F_t^j\partial_sv^p+\Gamma^m_{jp}\Gamma^p_{ik}F_t^jF_s^iv^k,\\
+(D_sD_tV)^m&amp;=\partial_{st}v^m+(\partial_i\Gamma^m_{jk})F_s^iF_t^jv^k+\Gamma^m_{jk}F_{st}^jv^k\\
+&amp;\quad+\Gamma^m_{jk}F_t^j\partial_sv^k+\Gamma^m_{ip}F_s^i\partial_tv^p+\Gamma^m_{ip}\Gamma^p_{jk}F_s^iF_t^jv^k.
+\end{aligned}\]</div>{% endraw %}
+<p>Subtract the two expansions to obtain {% raw %}<span class="math inline">\(D_tD_sV-D_sD_tV\)</span>{% endraw %}. Mixed second derivatives of {% raw %}<span class="math inline">\(v\)</span>{% endraw %} cancel; the terms involving first derivatives of {% raw %}<span class="math inline">\(v\)</span>{% endraw %} also cancel; and the coefficients of {% raw %}<span class="math inline">\(\partial_{st}F^i-\partial_{ts}F^i\)</span>{% endraw %} are zero. The remaining component is</p>
 <p> {% raw %}<div class="math display">\[\partial_sF^i\,\partial_tF^j\,v^k \bigl(\partial_j\Gamma^m_{ik}-\partial_i\Gamma^m_{jk} +\Gamma^p_{ik}\Gamma^m_{jp}-\Gamma^p_{jk}\Gamma^m_{ip}\bigr).\]</div>{% endraw %}</p>
 <p> By (5) this is the {% raw %}<span class="math inline">\(m\)</span>{% endraw %}-th component of {% raw %}<span class="math inline">\(R(S,T)V\)</span>{% endraw %}. This coordinate proof takes derivatives of the pullback bundle and never treats the parameter derivatives as independent ambient coordinate fields. ◻</p>
 </div>

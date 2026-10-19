@@ -80,15 +80,38 @@ redirect_from: ["/2022/04/13/geodesics/", "/2022/06/20/the-hamiltonian-formulati
 <div id="result-5" class="example" data-note-number="5" data-note-kind="Example">
 <p><strong>Example 5 (Geodesics of a round sphere).</strong> For a sphere of radius {% raw %}<span class="math inline">\(R&gt;0\)</span>{% endraw %}, use</p>
 <p> {% raw %}<div class="math display">\[X(\theta,\varphi)=(R\sin\theta\cos\varphi,R\sin\theta\sin\varphi,R\cos\theta),\quad0&lt;\theta&lt;\pi.\]</div>{% endraw %}</p>
-<p> The coordinate vectors have inner products {% raw %}<span class="math inline">\(\langle X_\theta,X_\theta\rangle=R^2\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\langle X_\theta,X_\varphi\rangle=0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\langle X_\varphi,X_\varphi\rangle=R^2\sin^2\theta\)</span>{% endraw %}. Therefore</p>
+<p>Differentiating the parametrization gives</p>
+{% raw %}<div class="math display">\[\begin{aligned}dx&amp;=R\cos\theta\cos\varphi\,d\theta-R\sin\theta\sin\varphi\,d\varphi,\\dy&amp;=R\cos\theta\sin\varphi\,d\theta+R\sin\theta\cos\varphi\,d\varphi,\\dz&amp;=-R\sin\theta\,d\theta.\end{aligned}\]</div>{% endraw %}
+<p>Squaring and adding, the mixed terms cancel, and</p>
+{% raw %}<div class="math display">\[\begin{aligned}dx^2+dy^2+dz^2
+&amp;=R^2\bigl(\cos^2\theta(\cos^2\varphi+\sin^2\varphi)+\sin^2\theta\bigr)d\theta^2\\
+&amp;\quad+R^2\sin^2\theta(\sin^2\varphi+\cos^2\varphi)d\varphi^2\\
+&amp;=R^2(d\theta^2+\sin^2\theta\,d\varphi^2).
+\end{aligned}\]</div>{% endraw %}
+<p>Thus the coordinate vectors have inner products {% raw %}<span class="math inline">\(\langle X_\theta,X_\theta\rangle=R^2\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\langle X_\theta,X_\varphi\rangle=0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\langle X_\varphi,X_\varphi\rangle=R^2\sin^2\theta\)</span>{% endraw %}. Therefore</p>
 <p> {% raw %}<div class="math display">\[ds^2=R^2(d\theta^2+\sin^2\theta\,d\varphi^2),\qquad (g_{ij})=\begin{pmatrix}R^2&amp;0\\0&amp;R^2\sin^2\theta\end{pmatrix},\quad (g^{ij})=\begin{pmatrix}R^{-2}&amp;0\\0&amp;R^{-2}\sin^{-2}\theta\end{pmatrix}.\]</div>{% endraw %}</p>
-<p> The only nonzero first-kind symbols are {% raw %}<span class="math inline">\(\Gamma_{\theta\varphi,\varphi}=\Gamma_{\varphi\theta,\varphi}=R^2\sin\theta\cos\theta\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Gamma_{\varphi\varphi,\theta}=-R^2\sin\theta\cos\theta\)</span>{% endraw %}. Raising the last index gives {% raw %}<span class="math inline">\(\Gamma^\theta_{\varphi\varphi}=-\sin\theta\cos\theta\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Gamma^\varphi_{\theta\varphi}=\Gamma^\varphi_{\varphi\theta}=\cot\theta\)</span>{% endraw %}. Thus</p>
+<p>Using {% raw %}<span class="math inline">\(\Gamma_{ij,k}=\frac12(\partial_i g_{jk}+\partial_jg_{ik}-\partial_kg_{ij})\)</span>{% endraw %}, the complete list of first-kind coefficients is</p>
+{% raw %}<div class="math display">\[\begin{aligned}
+\Gamma_{\theta\theta,\theta}&amp;=0,&amp;\Gamma_{\theta\varphi,\theta}=\Gamma_{\varphi\theta,\theta}&amp;=0,&amp;\Gamma_{\varphi\varphi,\theta}&amp;=-R^2\sin\theta\cos\theta,\\
+\Gamma_{\theta\theta,\varphi}&amp;=0,&amp;\Gamma_{\theta\varphi,\varphi}=\Gamma_{\varphi\theta,\varphi}&amp;=R^2\sin\theta\cos\theta,&amp;\Gamma_{\varphi\varphi,\varphi}&amp;=0.
+\end{aligned}\]</div>{% endraw %}
+<p>Raising the last index gives</p>
+{% raw %}<div class="math display">\[\begin{aligned}
+\Gamma^\theta_{\theta\theta}&amp;=0,&amp;\Gamma^\theta_{\theta\varphi}=\Gamma^\theta_{\varphi\theta}&amp;=0,&amp;\Gamma^\theta_{\varphi\varphi}&amp;=-\sin\theta\cos\theta,\\
+\Gamma^\varphi_{\theta\theta}&amp;=0,&amp;\Gamma^\varphi_{\theta\varphi}=\Gamma^\varphi_{\varphi\theta}&amp;=\cot\theta,&amp;\Gamma^\varphi_{\varphi\varphi}&amp;=0.
+\end{aligned}\]</div>{% endraw %}
+<p>Substituting into the geodesic equations, we obtain</p>
 <p> {% raw %}<div class="math display">\[\ddot\theta-\sin\theta\cos\theta\,\dot\varphi^2=0,\qquad \ddot\varphi+2\cot\theta\,\dot\theta\dot\varphi=0.\tag{8}\]</div>{% endraw %}</p>
 <p> The second equation, without division by {% raw %}<span class="math inline">\(\dot\varphi\)</span>{% endraw %}, is</p>
 <p> {% raw %}<div class="math display">\[\frac d{dt}(\sin^2\theta\,\dot\varphi)=0,\qquad\sin^2\theta\,\dot\varphi=C.\]</div>{% endraw %}</p>
 <p> The squared speed {% raw %}<span class="math inline">\(c^2=R^2(\dot\theta^2+\sin^2\theta\,\dot\varphi^2)\)</span>{% endraw %} is constant along a geodesic. When {% raw %}<span class="math inline">\(c&gt;0\)</span>{% endraw %}, rescale the affine parameter to arrange {% raw %}<span class="math inline">\(c=1\)</span>{% endraw %}. On an interval where {% raw %}<span class="math inline">\(\dot\theta\ne0\)</span>{% endraw %}, this yields</p>
 <p> {% raw %}<div class="math display">\[\dot\theta=\pm R^{-1}\sqrt{1-R^2C^2/\sin^2\theta},\qquad \frac{d\varphi}{d\theta}=\pm\frac{RC}{\sin\theta\sqrt{\sin^2\theta-R^2C^2}}.\]</div>{% endraw %}</p>
-<p> For {% raw %}<span class="math inline">\(0&lt;|RC|&lt;1\)</span>{% endraw %}, substitute {% raw %}<span class="math inline">\(u=RC\cot\theta/\sqrt{1-R^2C^2}\)</span>{% endraw %}. Integration gives {% raw %}<span class="math inline">\(\varphi=\varphi_0\pm\arccos u\)</span>{% endraw %}, so</p>
+<p>For {% raw %}<span class="math inline">\(0&lt;|RC|&lt;1\)</span>{% endraw %}, put {% raw %}<span class="math inline">\(a=RC\)</span>{% endraw %} and substitute</p>
+{% raw %}<div class="math display">\[u=\frac{a\cot\theta}{\sqrt{1-a^2}},\qquad du=-\frac{a\csc^2\theta}{\sqrt{1-a^2}}\,d\theta,\qquad 1-a^2\csc^2\theta=(1-a^2)(1-u^2).\]</div>{% endraw %}
+<p>On an interval where {% raw %}<span class="math inline">\(\dot\theta\ne0\)</span>{% endraw %}, this gives</p>
+{% raw %}<div class="math display">\[\varphi-\varphi_0=\pm\int\frac{a\csc^2\theta}{\sqrt{1-a^2\csc^2\theta}}\,d\theta
+=\mp\int\frac{du}{\sqrt{1-u^2}}=\pm\arccos u,\]</div>{% endraw %}
+<p>where the sign is chosen on that interval and the integration constant is absorbed into {% raw %}<span class="math inline">\(\varphi_0\)</span>{% endraw %}. Taking cosines gives</p>
 <p> {% raw %}<div class="math display">\[\sin\theta\cos(\varphi-\varphi_0)=\frac{RC}{\sqrt{1-R^2C^2}}\cos\theta.\]</div>{% endraw %}</p>
 <p> In Cartesian coordinates this is the equation of a plane through the origin. Its intersection with the sphere is a great circle. The omitted cases are also great circles: {% raw %}<span class="math inline">\(C=0\)</span>{% endraw %} gives meridians, while {% raw %}<span class="math inline">\(|RC|=1\)</span>{% endraw %} forces {% raw %}<span class="math inline">\(\theta=\pi/2\)</span>{% endraw %} and gives the equator. A zero-speed geodesic is constant.</p>
 <p>A coordinate-independent check completes the argument through poles and turning points. For an induced metric, the first variation gives that an energy-stationary curve has ambient acceleration perpendicular to the sphere: test against all endpoint-zero tangent fields and integrate the Euclidean energy by parts. Therefore {% raw %}<span class="math inline">\(\gamma''=\lambda\gamma\)</span>{% endraw %}. Differentiating {% raw %}<span class="math inline">\(|\gamma|^2=R^2\)</span>{% endraw %} twice gives {% raw %}<span class="math inline">\(\lambda=-c^2/R^2\)</span>{% endraw %}, while {% raw %}<span class="math inline">\(\langle\gamma'',\gamma'\rangle=0\)</span>{% endraw %} gives constant speed. Solving this constant-coefficient equation gives, for {% raw %}<span class="math inline">\(c&gt;0\)</span>{% endraw %},</p>

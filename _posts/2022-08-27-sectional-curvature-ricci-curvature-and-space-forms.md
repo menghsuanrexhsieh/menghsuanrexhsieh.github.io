@@ -73,6 +73,16 @@ redirect_from: ["/2022/08/27/sectional-curvature-and-ricci-curvature/", "/2022/0
 <p> {% raw %}<div class="math display">\[D(X,Z;Y,W)=a-c,\qquad D(X,W;Y,Z)=-a-b.\tag{6}\]</div>{% endraw %}</p>
 <p> Their difference is {% raw %}<span class="math inline">\(2a+b-c=3a\)</span>{% endraw %}, proving (3). Thus no mixed curvature entry remains undetermined. In particular, if all sectional curvatures at {% raw %}<span class="math inline">\(p\)</span>{% endraw %} equal {% raw %}<span class="math inline">\(f(p)\)</span>{% endraw %}, compare with the algebraic tensor {% raw %}<span class="math inline">\(R_0(X,Y)Z=f(p)(\langle X,Z\rangle Y-\langle Y,Z\rangle X)\)</span>{% endraw %}: it has the same {% raw %}<span class="math inline">\(Q\)</span>{% endraw %}, and polarization proves {% raw %}<span class="math inline">\(R=R_0\)</span>{% endraw %} at that point. ◻</p>
 </div>
+<p>Expanding the two polarizations gives an explicit formula involving only {% raw %}<span class="math inline">\(Q\)</span>{% endraw %}:</p>
+{% raw %}<div class="math display">\[\begin{aligned}
+6C(X,Y,Z,W)={}&amp;-Q(X+W,Y+Z)+Q(X,Y+Z)+Q(W,Y+Z)\\
+&amp;+Q(X+W,Y)-Q(W,Y)+Q(X+W,Z)-Q(X,Z)\\
+&amp;+Q(Y+W,Z+X)-Q(Y,Z+X)-Q(W,Z+X)\\
+&amp;-Q(Y+W,Z)+Q(Y,Z)-Q(Y+W,X)+Q(W,X).
+\end{aligned}\]</div>{% endraw %}
+<p>For example, multilinearity first gives</p>
+{% raw %}<div class="math display">\[Q(X+W,Y+Z)-Q(X,Y+Z)-Q(W,Y+Z)=2C(X,Y+Z,W,Y+Z).\]</div>{% endraw %}
+<p>Expanding the remaining two slots and using Bianchi combines the mixed terms into {% raw %}<span class="math inline">\(6C(X,Y,Z,W)\)</span>{% endraw %} in the displayed formula. If one instead writes {% raw %}<span class="math inline">\(K(X,Y)=C(X,Y,Y,X)\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(K=-Q\)</span>{% endraw %} and every sign in the formula is reversed. This distinction is required by the curvature convention above.</p>
 <div id="result-6" class="definition" data-note-number="6" data-note-kind="Definition">
 <p><strong>Definition 6</strong>.  Let {% raw %}<span class="math inline">\(M\)</span>{% endraw %} be a differentiable manifold. {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is called a <em>space form</em>, or a space of <em>constant sectional curvature</em>, if {% raw %}<span class="math inline">\(\kappa (X,Y) = K = \text{constant}\)</span>{% endraw %} for all linearly independent tangent vectors {% raw %}<span class="math inline">\(X,Y \in T_p M\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(p \in M\)</span>{% endraw %}.</p>
 
