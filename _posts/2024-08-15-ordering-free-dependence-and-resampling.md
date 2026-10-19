@@ -293,6 +293,6 @@ Song, Kyungchul. 2018. <span>“Ordering-Free Inference from Locally Dependent D
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">Exposure Mappings and Horvitz–Thompson Inference</a> · Next: <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">Resampled Statistics: Size and Local Power</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">Exposure Mappings and Horvitz–Thompson</a> · Next: <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">Resampled Statistics: Size and Local Power</a></p></nav>
 
 </div>
