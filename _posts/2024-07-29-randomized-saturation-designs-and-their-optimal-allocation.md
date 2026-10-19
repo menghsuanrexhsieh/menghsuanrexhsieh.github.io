@@ -1,12 +1,12 @@
 ---
 layout: "post"
 title: "Randomized Saturation Designs and Their Optimal Allocation"
-date: "2025-02-14"
+date: "2024-07-29"
 tags: ["econometrics", "networks"]
 excerpt: "A randomized saturation design first assigns treatment fractions to clusters and then assigns individuals within clusters."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
-redirect_from: ["/2025/02/14/randomized-saturation-designs/", "/2025/03/02/optimal-saturation-and-combining-clusters/"]
+redirect_from: ["/2025/02/14/randomized-saturation-designs/", "/2025/03/02/optimal-saturation-and-combining-clusters/", "/2025/02/14/randomized-saturation-designs-and-their-optimal-allocation/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -153,6 +153,6 @@ Baird, Sarah, J. Aislinn Bohren, Craig McIntosh, and Berk Özler. 2018. <span>�
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">Dependence-Robust Resampling and Moment Tests</a> · Next: <a href="{% post_url 2025-03-19-network-formation-and-identification-with-missing-links %}">Network Formation and Identification with Missing Links</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">Dependence-Robust Resampling and Moment Tests</a> · Next: <a href="{% post_url 2025-02-18-network-formation-and-identification-with-missing-links %}">Network Formation and Identification with Missing Links</a></p></nav>
 
 </div>

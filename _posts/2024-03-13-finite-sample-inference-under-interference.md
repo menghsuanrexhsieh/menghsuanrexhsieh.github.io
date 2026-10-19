@@ -147,6 +147,6 @@ Tchetgen-Tchetgen, Eric J Tchetgen, and Tyler J VanderWeele. 2012. <span>“On C
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference-effects-variance-and-limits %}">Two-Stage Experiments under Partial Interference: Effects, Variance, and Limits</a> · Next: <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">Exposure Mappings and Horvitz–Thompson Inference</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference-effects-variance-and-limits %}">Two-Stage Experiments under Partial Interference: Effects, Variance, and Limits</a> · Next: <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">Exposure Mappings and Horvitz–Thompson Inference</a></p></nav>
 
 </div>

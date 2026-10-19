@@ -303,6 +303,6 @@ Le Gall, Jean-François. 2016. <em>Brownian Motion, Martingales, and Stochastic 
 
 <nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2023-05-08-brownian-path-oscillations-and-continuity-bounds %}">Brownian Path Oscillations and Continuity Bounds</a>.</p></nav>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-06-04-further-results-on-stochastic-integrals %}">Further Results on Stochastic Integrals</a> · Next: <a href="{% post_url 2024-09-19-a-strict-local-martingale-and-the-meaning-of-boundedness %}">A Strict Local Martingale and the Meaning of Boundedness</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-06-04-further-results-on-stochastic-integrals %}">Further Results on Stochastic Integrals</a> · Next: <a href="{% post_url 2024-09-19-a-strict-local-martingale-and-the-meaning-of-boundedness %}">A Strict Local Martingale and the Meaning of Boundedness</a></p></nav>
 
 </div>

@@ -133,6 +133,6 @@ Kwon, Soonwoo, and Jonathan Roth. 2024. <span>“Testing Mechanisms.”</span> a
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-07-13-testing-mediation-principal-strata-and-observable-bounds %}">Testing Mediation: Principal Strata and Observable Bounds</a> · Next: <a href="{% post_url 2026-01-23-randomization-inference-for-multiple-outcomes-over-time %}">Randomization Inference for Multiple Outcomes over Time</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-07-13-testing-mediation-principal-strata-and-observable-bounds %}">Testing Mediation: Principal Strata and Observable Bounds</a></p></nav>
 
 </div>

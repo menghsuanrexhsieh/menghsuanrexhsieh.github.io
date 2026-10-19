@@ -1906,7 +1906,7 @@
   },
   {
     "key": "10-406",
-    "file": "_posts/2025-02-14-randomized-saturation-designs-and-their-optimal-allocation.md",
+    "file": "_posts/2024-07-29-randomized-saturation-designs-and-their-optimal-allocation.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -1925,14 +1925,14 @@
     "citations": [
       "baird_optimal_2018"
     ],
-    "date": "2025-02-14",
+    "date": "2024-07-29",
     "title": "Randomized Saturation Designs and Their Optimal Allocation",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-406.md"
   },
   {
     "key": "10-447",
-    "file": "_posts/2025-03-19-network-formation-and-identification-with-missing-links.md",
+    "file": "_posts/2025-02-18-network-formation-and-identification-with-missing-links.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -1958,7 +1958,7 @@
       "bramoulle_risk_2007",
       "leung_two-step_2015"
     ],
-    "date": "2025-03-19",
+    "date": "2025-02-18",
     "title": "Network Formation and Identification with Missing Links",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-447.md"
@@ -1991,7 +1991,7 @@
   },
   {
     "key": "10-556",
-    "file": "_posts/2025-06-10-network-policy-targeting-identification-and-known-propensities.md",
+    "file": "_posts/2024-06-10-network-policy-targeting-identification-and-known-propensities.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -2015,14 +2015,14 @@
     "citations": [
       "viviano_policy_2025"
     ],
-    "date": "2025-06-10",
+    "date": "2024-06-10",
     "title": "Network Policy Targeting: Identification and Known Propensities",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-556.md"
   },
   {
     "key": "10-628",
-    "file": "_posts/2025-09-01-learning-network-policies-nuisance-estimation-regret-and-transport.md",
+    "file": "_posts/2024-09-01-learning-network-policies-nuisance-estimation-regret-and-transport.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -2066,7 +2066,7 @@
     "citations": [
       "viviano_policy_2025"
     ],
-    "date": "2025-09-01",
+    "date": "2024-09-01",
     "title": "Learning Network Policies: Nuisance Estimation, Regret, and Transport",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-628.md"
@@ -3045,32 +3045,6 @@
     "title": "Sharp Mechanism Bounds, Average Effects, and Inference",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/23-59.md"
-  },
-  {
-    "key": "23-94",
-    "file": "_posts/2026-01-23-randomization-inference-for-multiple-outcomes-over-time.md",
-    "source": "assets/notes/Overleaf Projects (32 items)/Notes on Testing Mechanisms/stats.tex",
-    "blocks": [
-      [
-        94,
-        109
-      ],
-      [
-        109,
-        123
-      ]
-    ],
-    "former_posts": [
-      "23-94",
-      "23-109"
-    ],
-    "citations": [
-      "cattaneo_randomization_2024"
-    ],
-    "date": "2026-01-23",
-    "title": "Randomization Inference for Multiple Outcomes over Time",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/23-94.md"
   },
   {
     "key": "24-0",

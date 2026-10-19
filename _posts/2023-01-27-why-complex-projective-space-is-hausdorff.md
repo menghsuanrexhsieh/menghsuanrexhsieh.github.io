@@ -102,6 +102,6 @@ redirect_from: ["/2024/05/14/why-complex-projective-space-is-hausdorff/"]
 <p class="note-reading">Reading: Carmo (1992), Riemannian geometry.</p>
 
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-04-17-covering-spaces-and-the-fundamental-group-of-the-circle %}">Covering Spaces and the Fundamental Group of the Circle</a> · Next: <a href="{% post_url 2024-06-24-sobolev-spaces-embeddings-and-bounded-variation %}">Sobolev Spaces, Embeddings, and Bounded Variation</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-04-17-covering-spaces-and-the-fundamental-group-of-the-circle %}">Covering Spaces and the Fundamental Group of the Circle</a> · Next: <a href="{% post_url 2024-06-24-sobolev-spaces-embeddings-and-bounded-variation %}">Sobolev Spaces, Embeddings, and Bounded Variation</a></p></nav>
 
 </div>

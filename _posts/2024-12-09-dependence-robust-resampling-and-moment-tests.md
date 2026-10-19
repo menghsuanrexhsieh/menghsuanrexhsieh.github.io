@@ -160,6 +160,6 @@ Leung, Michael P. 2022. <span>“Dependence‐robust Inference Using Resampled S
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">Resampled Statistics: Size and Local Power</a> · Next: <a href="{% post_url 2025-02-14-randomized-saturation-designs-and-their-optimal-allocation %}">Randomized Saturation Designs and Their Optimal Allocation</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">Resampled Statistics: Size and Local Power</a> · Additional reading: <a href="{% post_url 2024-07-29-randomized-saturation-designs-and-their-optimal-allocation %}">Randomized Saturation Designs and Their Optimal Allocation</a></p></nav>
 
 </div>

@@ -98,6 +98,6 @@ redirect_from: ["/2024/10/25/skorokhod-representation-and-tightness-on-path-spac
 <p class="note-reading">Reading: Le Gall (2016), Brownian Motion, Martingales, and Stochastic Calculus.</p>
 
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-09-19-a-strict-local-martingale-and-the-meaning-of-boundedness %}">A Strict Local Martingale and the Meaning of Boundedness</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-09-19-a-strict-local-martingale-and-the-meaning-of-boundedness %}">A Strict Local Martingale and the Meaning of Boundedness</a></p></nav>
 
 </div>

@@ -152,6 +152,6 @@ Liu, Lan, and Michael G. Hudgens. 2014. <span>“Large Sample Randomization Infe
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-19-causal-inference-from-a-single-social-network %}">Causal Inference from a Single Social Network</a> · Next: <a href="{% post_url 2024-03-13-finite-sample-inference-under-interference %}">Finite-Sample Inference under Interference</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-19-causal-inference-from-a-single-social-network %}">Causal Inference from a Single Social Network</a> · Additional reading: <a href="{% post_url 2024-03-13-finite-sample-inference-under-interference %}">Finite-Sample Inference under Interference</a></p></nav>
 
 </div>

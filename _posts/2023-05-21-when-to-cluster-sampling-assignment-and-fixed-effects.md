@@ -188,6 +188,6 @@ Abadie, Alberto, Susan Athey, Guido Imbens, and Jeffrey Wooldridge. 2022. <span>
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling %}">Heavy-Tailed Cluster Inference: Bootstrap Failure and Score Subsampling</a> · Next: <a href="{% post_url 2024-03-04-network-cluster-robust-inference %}">Network Cluster-Robust Inference</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling %}">Heavy-Tailed Cluster Inference: Bootstrap Failure and Score Subsampling</a> · Next: <a href="{% post_url 2024-03-04-network-cluster-robust-inference %}">Network Cluster-Robust Inference</a></p></nav>
 
 </div>

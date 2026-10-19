@@ -1,12 +1,12 @@
 ---
 layout: "post"
 title: "Network Formation and Identification with Missing Links"
-date: "2025-03-19"
+date: "2025-02-18"
 tags: ["econometrics", "networks"]
 excerpt: "Network formation models ask why links are present before using those links to explain outcomes."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
-redirect_from: ["/2025/03/19/strategic-network-formation/", "/2025/04/04/network-competitive-equilibrium-and-unobserved-links/", "/2025/04/21/network-formation-and-missing-network-data/"]
+redirect_from: ["/2025/03/19/strategic-network-formation/", "/2025/04/04/network-competitive-equilibrium-and-unobserved-links/", "/2025/04/21/network-formation-and-missing-network-data/", "/2025/03/19/network-formation-and-identification-with-missing-links/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -162,6 +162,6 @@ Leung, Michael P. 2015. <span>“Two-Step Estimation of Network-Formation Models
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2025-02-14-randomized-saturation-designs-and-their-optimal-allocation %}">Randomized Saturation Designs and Their Optimal Allocation</a> · Next: <a href="{% post_url 2025-05-08-missing-network-links-and-spillover-bias %}">Missing Network Links and Spillover Bias</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-07-29-randomized-saturation-designs-and-their-optimal-allocation %}">Randomized Saturation Designs and Their Optimal Allocation</a> · Next: <a href="{% post_url 2025-05-08-missing-network-links-and-spillover-bias %}">Missing Network Links and Spillover Bias</a></p></nav>
 
 </div>

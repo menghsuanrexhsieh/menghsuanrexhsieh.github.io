@@ -79,6 +79,6 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic
 
 <nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2023-05-08-brownian-path-oscillations-and-continuity-bounds %}">Brownian Path Oscillations and Continuity Bounds</a>.</p></nav>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}">Continuous Semimartingales and the Monotone-Class Argument</a> · Next: <a href="{% post_url 2023-05-29-skorokhod-representation-and-tightness-on-path-space %}">Skorokhod Representation and Tightness on Path Space</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}">Continuous Semimartingales and the Monotone-Class Argument</a> · Additional reading: <a href="{% post_url 2023-05-29-skorokhod-representation-and-tightness-on-path-space %}">Skorokhod Representation and Tightness on Path Space</a></p></nav>
 
 </div>

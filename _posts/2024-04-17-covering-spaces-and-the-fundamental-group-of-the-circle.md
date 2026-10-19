@@ -238,6 +238,6 @@ Hatcher, Allen. 2002. <em>Algebraic Topology</em>. Cambridge ; New York: Cambr
 <p class="note-reading">Reading: Carmo (1992), Riemannian geometry.</p>
 
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-04-03-cotangent-bundle %}">Cotangent Bundle</a> · Next: <a href="{% post_url 2023-01-27-why-complex-projective-space-is-hausdorff %}">Why Complex Projective Space Is Hausdorff</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-04-03-cotangent-bundle %}">Cotangent Bundle</a> · Additional reading: <a href="{% post_url 2023-01-27-why-complex-projective-space-is-hausdorff %}">Why Complex Projective Space Is Hausdorff</a></p></nav>
 
 </div>

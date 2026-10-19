@@ -198,6 +198,6 @@ Bugni, Federico A., Ivan A. Canay, and Deborah Kim. 2025. <span>“Testing Condi
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2025-12-15-conditional-stochastic-dominance-with-nearest-observations %}">Conditional Stochastic Dominance with Nearest Observations</a> · Next: <a href="{% post_url 2023-02-11-the-neymanpearson-lemma-and-unbiased-testing %}">The Neyman–Pearson Lemma and Unbiased Testing</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2025-12-15-conditional-stochastic-dominance-with-nearest-observations %}">Conditional Stochastic Dominance with Nearest Observations</a> · Additional reading: <a href="{% post_url 2023-02-11-the-neymanpearson-lemma-and-unbiased-testing %}">The Neyman–Pearson Lemma and Unbiased Testing</a></p></nav>
 
 </div>

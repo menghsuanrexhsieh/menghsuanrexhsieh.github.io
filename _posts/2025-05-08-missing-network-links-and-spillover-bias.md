@@ -150,7 +150,7 @@ m(1,s,n,z)-m(0,s,n,z)
 \]</div>{% endraw %}
 <p>The own-treatment effect is therefore averaged with nonnegative weights summing to one. Changing {% raw %}<span class="math inline">\(s\)</span>{% endraw %} changes the exposure mixture itself, so a spillover contrast also compares different latent configurations. This is the source of the difference between the two comparisons.</p>
 
-<p>For a policy that changes neighbor assignments, the latent distribution induced by that policy is needed to evaluate welfare. Substituting the observed network into the rule can miss both neighbors and their induced outcomes. The <a href="{% post_url 2025-06-10-network-policy-targeting-identification-and-known-propensities %}">network-policy notes</a> presume the exposure information needed by their identifying model; incomplete networks require this additional observation-model step.</p>
+<p>For a policy that changes neighbor assignments, the latent distribution induced by that policy is needed to evaluate welfare. Substituting the observed network into the rule can miss both neighbors and their induced outcomes. The <a href="{% post_url 2024-06-10-network-policy-targeting-identification-and-known-propensities %}">network-policy notes</a> presume the exposure information needed by their identifying model; incomplete networks require this additional observation-model step.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-zhang_spillovers_2024" class="csl-entry" role="listitem">
@@ -158,6 +158,6 @@ Zhang, Lina. 2024. <span>“Spillovers of Program Benefits with Missing Network 
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2025-03-19-network-formation-and-identification-with-missing-links %}">Network Formation and Identification with Missing Links</a> · Next: <a href="{% post_url 2025-06-10-network-policy-targeting-identification-and-known-propensities %}">Network Policy Targeting: Identification and Known Propensities</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2025-02-18-network-formation-and-identification-with-missing-links %}">Network Formation and Identification with Missing Links</a> · Additional reading: <a href="{% post_url 2024-06-10-network-policy-targeting-identification-and-known-propensities %}">Network Policy Targeting: Identification and Known Propensities</a></p></nav>
 
 </div>

@@ -128,6 +128,6 @@ Chiang, Harold D., Yuya Sasaki, and Yulong Wang. 2024. <span>“On the Inconsist
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-10-08-wild-cluster-bootstrap-with-few-large-clusters %}">Wild Cluster Bootstrap with Few Large Clusters</a> · Next: <a href="{% post_url 2023-05-21-when-to-cluster-sampling-assignment-and-fixed-effects %}">When to Cluster: Sampling, Assignment, and Fixed Effects</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-10-08-wild-cluster-bootstrap-with-few-large-clusters %}">Wild Cluster Bootstrap with Few Large Clusters</a> · Additional reading: <a href="{% post_url 2023-05-21-when-to-cluster-sampling-assignment-and-fixed-effects %}">When to Cluster: Sampling, Assignment, and Fixed Effects</a></p></nav>
 
 </div>

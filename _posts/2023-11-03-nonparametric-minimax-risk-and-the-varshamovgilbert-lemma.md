@@ -74,6 +74,6 @@ redirect_from: ["/2023/01/14/nonparametric-estimation/", "/2023/01/14/nonparamet
 
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Next: <a href="{% post_url 2023-03-16-kernel-density-estimation-pointwise-and-integrated-risk %}">Kernel Density Estimation: Pointwise and Integrated Risk</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2023-03-16-kernel-density-estimation-pointwise-and-integrated-risk %}">Kernel Density Estimation: Pointwise and Integrated Risk</a></p></nav>
 
 </div>

@@ -137,7 +137,7 @@ redirect_from: ["/2023/03/29/kernel-density-estimation-bias-and-variance/", "/20
 
 <p>Square integrability alone does not make the local and global conditions equivalent. For example, take an even multiplier equal to one near zero and with spikes of height {% raw %}<span class="math inline">\(m\)</span>{% endraw %} on disjoint intervals of length {% raw %}<span class="math inline">\(2^{-m}m^{-4}\)</span>{% endraw %} inside {% raw %}<span class="math inline">\((2,3)\)</span>{% endraw %}, with reflected spikes in {% raw %}<span class="math inline">\((-3,-2)\)</span>{% endraw %}, and zero elsewhere. It lies in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} and satisfies the local condition, while the global essential supremum is infinite. The boundedness hypothesis is therefore substantive.</p>
 </div>
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-11-03-nonparametric-minimax-risk-and-the-varshamovgilbert-lemma %}">Nonparametric Minimax Risk and the Varshamov–Gilbert Lemma</a> · Next: <a href="{% post_url 2023-10-13-nonparametric-regression-and-local-polynomial-estimators %}">Nonparametric Regression and Local Polynomial Estimators</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2023-11-03-nonparametric-minimax-risk-and-the-varshamovgilbert-lemma %}">Nonparametric Minimax Risk and the Varshamov–Gilbert Lemma</a> · Next: <a href="{% post_url 2023-10-13-nonparametric-regression-and-local-polynomial-estimators %}">Nonparametric Regression and Local Polynomial Estimators</a></p></nav>
 
 
 </div>
