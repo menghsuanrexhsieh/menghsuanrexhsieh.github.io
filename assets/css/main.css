@@ -695,14 +695,32 @@ a.tag:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
   .page-head--spacer { display: none; }
   .hero__actions--home { padding-bottom: 1.25rem; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+  }
   .synopsis__text { max-width: 100%; text-align: left; }
 
   .sidebar__nav a, .synopsis__btn, .pub__toggles a, .pub__title-link, .tag-chip, .page-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+  .sidebar__nav a, .tag-chip, .page-button {
     min-width: 44px;
     min-height: 44px;
+  }
+  /* Small paper controls need less visual weight than the main navigation.
+     Use a 32px minimum at the default font size, with room to grow for text. */
+  .synopsis__btn, .pub__toggles a, .pub__title-link {
+    min-width: 2rem;
+    min-height: 2rem;
+    line-height: 1.35;
   }
   .pub__toggles { gap: 0.5rem; }
 }
