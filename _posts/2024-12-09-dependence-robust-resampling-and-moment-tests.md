@@ -3,7 +3,7 @@ layout: "post"
 title: "Dependence-Robust Resampling and Moment Tests"
 date: "2024-12-09"
 tags: ["econometrics", "networks"]
-excerpt: "Random draws create a tractable reference fluctuation, while the original sample mean determines how many repetitions inference can tolerate."
+excerpt: "Resampling produces an asymptotically normal statistic conditional on the data; the original estimation error determines the admissible growth rate of the resampling count."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2023/10/07/pointwise-and-uniform-coverage-in-moment-inequality-models/", "/2024/12/09/dependence-robust-moment-tests/", "/2024/12/26/resampled-moment-inequality-tests/", "/2025/01/12/limit-theory-for-dependence-robust-tests/", "/2025/01/28/technical-bounds-for-dependence-robust-inference/"]
@@ -11,11 +11,11 @@ redirect_from: ["/2023/10/07/pointwise-and-uniform-coverage-in-moment-inequality
 
 <div class="note-content" markdown="0">
 
-<p>Suppose that a sample mean is {% raw %}<span class="math inline">\(\sqrt{n}\)</span>{% endraw %}-consistent, but its sampling variance is difficult to estimate. This can happen with network data: the observations may be informative about a population mean even when the links needed to estimate their covariances are unavailable. <span class="citation" data-cites="leung_dependencerobust_2022"><a href="#ref-leung_dependencerobust_2022" role="doc-biblioref">Leung (2022)</a></span> constructs a test by drawing observations at random from the realized sample. Conditional on that sample, the new draws are independent and their variance is known. The proof then asks how many draws can be accumulated before the original sample’s estimation error becomes appreciable.</p>
+<p>Suppose that a sample mean is {% raw %}<span class="math inline">\(\sqrt{n}\)</span>{% endraw %}-consistent, but its sampling variance is difficult to estimate. This can happen with network data: the observations may be informative about a population mean even when the links needed to estimate their covariances are unavailable. <span class="citation" data-cites="leung_dependencerobust_2022"><a href="#ref-leung_dependencerobust_2022" role="doc-biblioref">Leung (2022)</a></span> constructs a test by drawing observations at random from the realized sample. Conditional on that sample, the draws are independent across repetitions, with conditional moments determined by the empirical distribution. The proof establishes how quickly {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} can grow while the contribution of {% raw %}<span class="math inline">\(\overline X-\mu_0\)</span>{% endraw %} remains asymptotically negligible.</p>
 
-<p>The useful distinction is between the two sources of randomness. The original observations determine an empirical distribution, which may be displaced from the population distribution. Resampling introduces a fluctuation around that empirical distribution. Leung (2022) proposes to choose the resampling count so that this second fluctuation dominates the displacement. The mean statistic makes this argument transparent; the pair statistic exploits a cancellation that permits substantially more draws. The moment-inequality test uses a further idea: remove the quadratic drift whenever the sample mean points into the null.</p>
+<p>The proof separates the resampling variation from the original estimation error. Conditional on the data, the centered resampled statistic satisfies an i.i.d. central limit theorem. The conditional mean of the original statistic depends on {% raw %}<span class="math inline">\(\overline X-\mu_0\)</span>{% endraw %}, and the restriction on {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} makes this term asymptotically negligible. For the U-type statistic, cancellation of the linear term makes this dependence quadratic, permitting a faster growth rate for {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}. The moment-inequality procedure additionally recenters each coordinate statistic when its sample mean is negative.</p>
 
-<h3 data-note-section="1" id="10-356-the-main-limit-theorem">1. A conditional experiment with a known variance</h3>
+<h3 data-note-section="1" id="10-356-the-main-limit-theorem">1. Conditional resampling and the mean-type central limit theorem</h3>
 
 <p>Let {% raw %}<span class="math inline">\(\mathbf X=(X_1,\ldots,X_n)\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(X_i\in\mathbb R^m\)</span>{% endraw %} and {% raw %}<span class="math inline">\(m\)</span>{% endraw %} is fixed. The observations may be dependent, and their distribution may vary with {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Write</p>
 
@@ -44,7 +44,7 @@ T_U(\mu)
 (X_{J_r}-\mu)'\widehat\Sigma^{-1}(X_{K_r}-\mu).
 \]</div>{% endraw %}
 
-<p>Here and below, {% raw %}<span class="math inline">\(\|\cdot\|\)</span>{% endraw %} is the Euclidean norm, and the inverse square root is symmetric. All expressions involving {% raw %}<span class="math inline">\(\widehat\Sigma^{-1}\)</span>{% endraw %} are defined on its nonsingularity event; the assumptions below make this event have probability tending to one.</p>
+<p>Here and below, {% raw %}<span class="math inline">\(\|\cdot\|\)</span>{% endraw %} denotes the Euclidean norm for vectors and the induced operator norm for matrices; the inverse square root is symmetric. All expressions involving {% raw %}<span class="math inline">\(\widehat\Sigma^{-1}\)</span>{% endraw %} are defined on its nonsingularity event; the assumptions below make this event have probability tending to one.</p>
 
 <div id="dependence-resampling" class="theorem" data-note-number="1" data-note-kind="Theorem">
 <p><strong>Theorem 1</strong>. Suppose that, for some {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %} and a positive definite matrix {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %},</p>
@@ -58,10 +58,10 @@ T_U(\mu)
 <p>If {% raw %}<span class="math inline">\(R_n\to\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(R_n/n\to0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(\widetilde T_M(\mu_0)\Rightarrow\mathcal N(0,I_m)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(T_M(\mu_0)\Rightarrow\chi_m^2\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(R_n\to\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sqrt{R_n}/n\to0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(T_U(\mu_0)\Rightarrow\mathcal N(0,1)\)</span>{% endraw %}. The corresponding limits also hold with {% raw %}<span class="math inline">\(\mu_0\)</span>{% endraw %} replaced by {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}. For each scalar statistic, its conditional CDF converges in probability, uniformly over the evaluation point, to the stated continuous limit CDF.</p>
 </div>
 
-<p>The theorem only requires tightness of the original mean at the {% raw %}<span class="math inline">\(\sqrt{n}\)</span>{% endraw %} scale. It does not require a Gaussian limit for that mean. Nor does {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} denote its long-run covariance. The role of {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} is to standardize the observations drawn from the empirical distribution. The distinction matters because the cross-observation covariances that make conventional inference difficult are absent from this conditional variance calculation.</p>
+<p>The theorem only requires boundedness in probability of {% raw %}<span class="math inline">\(\sqrt n(\overline X-\mu_0)\)</span>{% endraw %}. It does not require a Gaussian limit for that mean. Nor does {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} denote its long-run covariance. The role of {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} is to standardize the observations drawn from the empirical distribution. The distinction matters because the cross-observation covariances that make conventional inference difficult are absent from this conditional variance calculation.</p>
 
 <span id="10-356-whiten-the-empirical-distribution-first"></span>
-<p>To see this, center and whiten the observations before doing any probability calculation:</p>
+<p>Define the empirically centered and standardized observations:</p>
 
 {% raw %}<div class="math display">\[
 Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X),
@@ -86,12 +86,12 @@ Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X),
 
 {% raw %}<div class="math display">\[
 \widetilde T_M(\mu_0)
-=\underbracket{\frac1{\sqrt{R_n}}\sum_{r=1}^{R_n}Z_{I_r}}_{\text{conditional fluctuation}}
+=\underbracket{\frac1{\sqrt{R_n}}\sum_{r=1}^{R_n}Z_{I_r}}_{\text{centered resampling sum}}
 +\underbracket{\sqrt{R_n}\,\widehat\Sigma^{-1/2}
-(\overline X-\mu_0)}_{\text{conditional drift}}.
+(\overline X-\mu_0)}_{\text{conditional mean}}.
 \]</div>{% endraw %}
 
-<p>The second term is {% raw %}<span class="math inline">\(O_p(\sqrt{R_n/n})\)</span>{% endraw %}, which explains the restriction {% raw %}<span class="math inline">\(R_n/n\to0\)</span>{% endraw %}. This completes the mean-statistic proof. The normal fluctuation comes from a conditional i.i.d. CLT; the assumption about dependence enters through the size of the drift. Squaring the norm gives the chi-square limit. Continuity of the limit CDF upgrades pointwise conditional CDF convergence to uniform convergence over its argument: a finite grid controls the central region by monotonicity, and two tail points control the rest. This uniformity over a CDF argument is distinct from uniformity over data-generating processes, which will matter for moment inequalities.</p>
+<p>The second term is {% raw %}<span class="math inline">\(O_p(\sqrt{R_n/n})\)</span>{% endraw %}, which explains the restriction {% raw %}<span class="math inline">\(R_n/n\to0\)</span>{% endraw %}. This completes the mean-statistic proof. The conditionally centered term is asymptotically normal by a conditional i.i.d. CLT; the assumption about dependence enters through the order of the conditional mean. Squaring the norm gives the chi-square limit. Continuity of the limit CDF implies that pointwise convergence of the conditional CDF is uniform over its argument: a finite grid controls the central region by monotonicity, and two tail points control the rest. This uniformity over a CDF argument is distinct from uniformity over data-generating processes, which will matter for moment inequalities.</p>
 
 <p>For a scalar mean, inversion produces the particularly simple interval</p>
 
@@ -102,18 +102,18 @@ Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X),
 \overline X^*=\frac1{R_n}\sum_{r=1}^{R_n}X_{I_r}.
 \]</div>{% endraw %}
 
-<p>Its center is the resampled mean. Replacing that center by {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %} would remove the fluctuation used to obtain the stated calibration.</p>
+<p>Its center is the resampled mean. Replacing that center by {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %} would remove the resampling variation on which the stated coverage result depends.</p>
 
-<h3 data-note-section="2" id="10-356-why-pairs-allow-more-repetitions">2. The pair statistic: cancellation, normality, and tuning</h3>
+<h3 data-note-section="2" id="10-356-why-pairs-allow-more-repetitions">2. The U-type statistic: asymptotic normality and local power</h3>
 
-<p>The gain from using pairs can be read from one expansion. For a candidate {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %}, put {% raw %}<span class="math inline">\(b_n=\widehat\Sigma^{-1/2}(\overline X-\mu)\)</span>{% endraw %}. A resampled product is</p>
+<p>The following expansion explains the weaker rate restriction for the U-type statistic. For a candidate {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %}, put {% raw %}<span class="math inline">\(b_n=\widehat\Sigma^{-1/2}(\overline X-\mu)\)</span>{% endraw %}. A resampled product is</p>
 
 {% raw %}<div class="math display">\[
 (X_J-\mu)'\widehat\Sigma^{-1}(X_K-\mu)
 =Z_J'Z_K+b_n'(Z_J+Z_K)+\|b_n\|^2.
 \]</div>{% endraw %}
 
-<p>The clever trick is that the linear term has conditional mean zero, leaving a displacement quadratic in the sample-mean error. Under the null, this changes its order from {% raw %}<span class="math inline">\(n^{-1/2}\)</span>{% endraw %} to {% raw %}<span class="math inline">\(n^{-1}\)</span>{% endraw %}, allowing {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} to grow much faster. To turn that observation into a proof, we need the mean and variance of the centered product and a bound on its higher moments.</p>
+<p>A clever feature of the U-type statistic is the cancellation of the linear term in its conditional mean. The sample-mean error therefore enters the conditional mean through the squared norm {% raw %}<span class="math inline">\(\|b_n\|^2\)</span>{% endraw %}. Under the null, the linear estimation error is {% raw %}<span class="math inline">\(O_p(n^{-1/2})\)</span>{% endraw %}, whereas its squared norm is {% raw %}<span class="math inline">\(O_p(n^{-1})\)</span>{% endraw %}. This permits a faster growth rate for {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}. To prove asymptotic normality, we need the conditional mean and variance of the product of empirically centered observations and a bound on its higher moments.</p>
 
 <span id="10-356-the-distinct-pair-second-moment"></span>
 <p>Let {% raw %}<span class="math inline">\(H=Z_J'Z_K\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(J\ne K\)</span>{% endraw %}. Since the centered observations sum to zero,</p>
@@ -126,7 +126,7 @@ Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X),
 \mathbb E_\pi H=-\frac{m}{n-1}.
 \]</div>{% endraw %}
 
-<p>Thus the product is not exactly centered at zero. Excluding the diagonal leaves a small negative mean. The second moment follows from the same method: first sum over all pairs, then remove the diagonal. The trace makes the all-pairs sum easy to evaluate:</p>
+<p>Thus the product of empirically centered observations has conditional mean {% raw %}<span class="math inline">\(-m/(n-1)\)</span>{% endraw %}, rather than zero. For the second moment, first sum over all ordered pairs, then subtract the diagonal terms. The sum over all ordered pairs can be evaluated using the following trace identity:</p>
 
 {% raw %}<div class="math display">\[
 \sum_{j,k}(Z_j'Z_k)^2
@@ -142,12 +142,12 @@ Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X),
 =\frac{n^2m-\sum_j\|Z_j\|^4}{n(n-1)}.
 \]</div>{% endraw %}
 
-<p>A fourth power appears here, although the theorem assumes only a {% raw %}<span class="math inline">\(2+\delta\)</span>{% endraw %} moment. A clever trick in this variance calculation is to exploit the {% raw %}<span class="math inline">\(n^2\)</span>{% endraw %} denominator before imposing any stronger moment condition. We only need to rule out a single observation carrying a nonvanishing fraction of the empirical second moment. Indeed,</p>
+<p>A fourth power appears here, although the theorem assumes only a {% raw %}<span class="math inline">\(2+\delta\)</span>{% endraw %} moment. We can bound {% raw %}<span class="math inline">\(n^{-2}\sum_j\|Z_j\|^4\)</span>{% endraw %} using the maximum squared norm and the empirical second moment. It suffices to rule out a single observation contributing a nonvanishing proportion of {% raw %}<span class="math inline">\(\sum_j\|Z_j\|^2\)</span>{% endraw %}. Indeed,</p>
 
 {% raw %}<div class="math display">\[
 \frac{\max_j\|Z_j\|^2}{n}
 \leq n^{-\delta/(2+\delta)}
-M_{2+\delta,n}^{,2/(2+\delta)}=o_p(1),
+M_{2+\delta,n}^{2/(2+\delta)}=o_p(1),
 \]</div>{% endraw %}
 
 {% raw %}<div class="math display">\[
@@ -160,7 +160,7 @@ M_{2+\delta,n}^{,2/(2+\delta)}=o_p(1),
 <p>It follows that {% raw %}<span class="math inline">\(\operatorname{Var}_\pi(H)\xrightarrow{p}m\)</span>{% endraw %}. This explains the normalization {% raw %}<span class="math inline">\(\sqrt{mR_n}\)</span>{% endraw %}.</p>
 
 <span id="10-356-the-moment-bound-needed-for-the-pair-clt"></span>
-<p>The same moment condition also gives the CLT. Cauchy–Schwarz bounds each inner product by a product of norms, and adding the omitted nonnegative diagonal terms factors the double sum:</p>
+<p>The same moment condition also gives the CLT. Cauchy–Schwarz bounds each inner product by a product of norms. Including the diagonal terms then gives an upper bound that factors into a product of empirical moments:</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
@@ -179,7 +179,7 @@ V_n=\frac1{\sqrt{mR_n}}\sum_{r=1}^{R_n}
 \Rightarrow\mathcal N(0,1)
 \]</div>{% endraw %}
 
-<p>conditionally in probability. The two indices within a pair need not be independent. The CLT uses independence of the pairs across repetitions.</p>
+<p>conditionally in probability. The two indices within a pair need not be independent. The CLT uses conditional independence across resampling repetitions.</p>
 
 <span id="10-356-add-back-a-candidate-mean"></span>
 <p>We can now collect the terms in the original statistic:</p>
@@ -196,16 +196,16 @@ b_n'(Z_{J_r}+Z_{K_r}).
 \end{aligned}
 \]</div>{% endraw %}
 
-<p>This decomposition separates the centered product, a random linear term, and a drift. To bound the linear term, use {% raw %}<span class="math inline">\(\mathbb E_\pi[Z_JZ_K']=-I_m/(n-1)\)</span>{% endraw %}. Then</p>
+<p>This decomposition separates the normalized sum {% raw %}<span class="math inline">\(V_n\)</span>{% endraw %} of conditionally centered products, a conditionally mean-zero linear term, and the conditional mean of the statistic. To bound the linear term, use {% raw %}<span class="math inline">\(\mathbb E_\pi[Z_JZ_K']=-I_m/(n-1)\)</span>{% endraw %}. Then</p>
 
 {% raw %}<div class="math display">\[
 \operatorname{Var}_\pi\{L_n(b_n)\}
 =\frac{2(n-2)}{m(n-1)}\|b_n\|^2.
 \]</div>{% endraw %}
 
-<p>There is no growing factor of {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} in this variance: the sum is centered and divided by {% raw %}<span class="math inline">\(\sqrt{R_n}\)</span>{% endraw %}. Under the null, {% raw %}<span class="math inline">\(b_n=O_p(n^{-1/2})\)</span>{% endraw %}, hence {% raw %}<span class="math inline">\(L_n(b_n)=o_p(1)\)</span>{% endraw %}. No independence between {% raw %}<span class="math inline">\(L_n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(V_n\)</span>{% endraw %} is needed. The remaining drift is {% raw %}<span class="math inline">\(O_p(\sqrt{R_n}/n)\)</span>{% endraw %}. Therefore {% raw %}<span class="math inline">\(\sqrt{R_n}/n\to0\)</span>{% endraw %} completes the U-type proof, including its empirical-center version {% raw %}<span class="math inline">\(b_n=0\)</span>{% endraw %}.</p>
+<p>There is no growing factor of {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} in this variance: the sum is centered and divided by {% raw %}<span class="math inline">\(\sqrt{R_n}\)</span>{% endraw %}. Under the null, {% raw %}<span class="math inline">\(b_n=O_p(n^{-1/2})\)</span>{% endraw %}, hence {% raw %}<span class="math inline">\(L_n(b_n)=o_p(1)\)</span>{% endraw %}. No independence between {% raw %}<span class="math inline">\(L_n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(V_n\)</span>{% endraw %} is needed. The conditional mean is {% raw %}<span class="math inline">\(O_p(\sqrt{R_n}/n)\)</span>{% endraw %}. Therefore {% raw %}<span class="math inline">\(\sqrt{R_n}/n\to0\)</span>{% endraw %} completes the U-type proof, including the statistic evaluated at {% raw %}<span class="math inline">\(\mu=\overline X\)</span>{% endraw %}, for which {% raw %}<span class="math inline">\(b_n=0\)</span>{% endraw %}.</p>
 
-<p>Keeping the centering explicit also resolves a shortcut in the paper’s appendix. An uncentered resampled sum satisfies</p>
+<p>This decomposition also makes explicit a conditional-mean term omitted from the intermediate order calculation in the paper’s appendix. An uncentered resampled sum satisfies</p>
 
 {% raw %}<div class="math display">\[
 \frac1{\sqrt{R_n}}\sum_{r=1}^{R_n}(X_{I_r}-\mu_0)
@@ -216,18 +216,18 @@ b_n'(Z_{J_r}+Z_{K_r}).
 <p>It need not be {% raw %}<span class="math inline">\(O_p(1)\)</span>{% endraw %} under the U-type restriction, which allows {% raw %}<span class="math inline">\(R_n/n\)</span>{% endraw %} to diverge. In the recentering argument it is multiplied by {% raw %}<span class="math inline">\(\overline X-\mu_0\)</span>{% endraw %}, giving {% raw %}<span class="math inline">\(O_p(n^{-1/2})+O_p(\sqrt{R_n}/n)=o_p(1)\)</span>{% endraw %}. The desired conclusion follows, but the growing conditional mean must be retained.</p>
 
 <span id="10-356-a-scalar-numerical-identity"></span>
-<p>The diagonal correction also explains a small-sample extreme. With {% raw %}<span class="math inline">\(m=1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n=2\)</span>{% endraw %}, centered observations with empirical variance one are {% raw %}<span class="math inline">\(1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-1\)</span>{% endraw %}, up to order. Every distinct-pair product is {% raw %}<span class="math inline">\(-1\)</span>{% endraw %}, so its conditional variance is zero. As {% raw %}<span class="math inline">\(n\)</span>{% endraw %} grows, the moment condition makes the discarded diagonal share vanish. The trace identity shows exactly which finite-sample obstruction the assumption removes.</p>
+<p>The diagonal correction also explains the degenerate case {% raw %}<span class="math inline">\(m=1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(n=2\)</span>{% endraw %}. The centered observations with empirical variance one are {% raw %}<span class="math inline">\(1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-1\)</span>{% endraw %}, up to order. Every distinct-pair product is {% raw %}<span class="math inline">\(-1\)</span>{% endraw %}, so its conditional variance is zero. As {% raw %}<span class="math inline">\(n\)</span>{% endraw %} grows, the moment condition makes the normalized diagonal contribution {% raw %}<span class="math inline">\(n^{-2}\sum_j\|Z_j\|^4\)</span>{% endraw %} vanish. The trace identity shows why this contribution must vanish for the conditional variance to converge to {% raw %}<span class="math inline">\(m\)</span>{% endraw %}.</p>
 
-<p><strong>Local power and the choice of {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}.</strong> Suppose the hypotheses of the theorem continue to hold along local alternatives. If {% raw %}<span class="math inline">\(\mu_0-\mu=hR_n^{-1/2}\)</span>{% endraw %}, the mean vector has limit {% raw %}<span class="math inline">\(\mathcal N(\Sigma^{-1/2}h,I_m)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(T_M(\mu)\)</span>{% endraw %} has a noncentral chi-square limit with noncentrality {% raw %}<span class="math inline">\(h'\Sigma^{-1}h\)</span>{% endraw %}. For the pair statistic, take {% raw %}<span class="math inline">\(\mu_0-\mu=hR_n^{-1/4}\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(R_n^{1/4}/\sqrt n\to0\)</span>{% endraw %}, the original sample error is negligible at this scale, and the decomposition gives</p>
+<p><strong>Local power and the choice of {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}.</strong> Suppose the hypotheses of the theorem continue to hold along local alternatives. If {% raw %}<span class="math inline">\(\mu_0-\mu=hR_n^{-1/2}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\widetilde T_M(\mu)\)</span>{% endraw %} converges in distribution to {% raw %}<span class="math inline">\(\mathcal N(\Sigma^{-1/2}h,I_m)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(T_M(\mu)\)</span>{% endraw %} has a noncentral chi-square limit with noncentrality {% raw %}<span class="math inline">\(h'\Sigma^{-1}h\)</span>{% endraw %}. For the pair statistic, take {% raw %}<span class="math inline">\(\mu_0-\mu=hR_n^{-1/4}\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(R_n^{1/4}/\sqrt n\to0\)</span>{% endraw %}, the original sample error is negligible at this scale, and the decomposition gives</p>
 
 {% raw %}<div class="math display">\[
 T_U(\mu)\Rightarrow
 \mathcal N\left(\frac{h'\Sigma^{-1}h}{\sqrt m},1\right).
 \]</div>{% endraw %}
 
-<p>The quadratic signal is nonnegative in every direction. Thus a two-sided test of the mean rejects in the upper tail, {% raw %}<span class="math inline">\(T_U(\mu)&gt;z_{1-\alpha}\)</span>{% endraw %}, without taking the absolute value of {% raw %}<span class="math inline">\(T_U\)</span>{% endraw %}. The corresponding mean-type test rejects when {% raw %}<span class="math inline">\(T_M(\mu)&gt;\chi^2_{m,1-\alpha}\)</span>{% endraw %}.</p>
+<p>Since {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} is positive definite, {% raw %}<span class="math inline">\(h'\Sigma^{-1}h&gt;0\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(h\ne0\)</span>{% endraw %}. Thus every nonzero local alternative increases the limiting mean of {% raw %}<span class="math inline">\(T_U(\mu)\)</span>{% endraw %}. This justifies the upper-tail rejection rule {% raw %}<span class="math inline">\(T_U(\mu)&gt;z_{1-\alpha}\)</span>{% endraw %} for the two-sided hypothesis {% raw %}<span class="math inline">\(\mu_0=\mu\)</span>{% endraw %}. The corresponding mean-type test rejects when {% raw %}<span class="math inline">\(T_M(\mu)&gt;\chi^2_{m,1-\alpha}\)</span>{% endraw %}.</p>
 
-<p>At the same repetition count, the mean statistic detects smaller shifts: {% raw %}<span class="math inline">\(R_n^{-1/2}\)</span>{% endraw %} versus {% raw %}<span class="math inline">\(R_n^{-1/4}\)</span>{% endraw %}. The advantage of pairs comes from their larger admissible repetition count. The practical rule minimizes the sum of a drift order and a detectable-shift scale:</p>
+<p>At the same repetition count, the mean statistic has nontrivial asymptotic power against local alternatives of smaller order: {% raw %}<span class="math inline">\(R_n^{-1/2}\)</span>{% endraw %} versus {% raw %}<span class="math inline">\(R_n^{-1/4}\)</span>{% endraw %}. The U-type statistic permits a larger resampling count. The practical rule minimizes the sum of the order of the conditional mean under the null and the local-alternative rate:</p>
 
 {% raw %}<div class="math display">\[
 g_M(R_n)=\sqrt{R_n/n}+R_n^{-1/2},
@@ -235,7 +235,7 @@ g_M(R_n)=\sqrt{R_n/n}+R_n^{-1/2},
 g_U(R_n)=\frac{\sqrt{R_n}}n+R_n^{-1/4}.
 \]</div>{% endraw %}
 
-<p>Differentiating the continuous versions and rounding to integers gives</p>
+<p>Treating {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} as a positive real variable, minimizing these expressions, and rounding the minimizers to integers gives</p>
 
 {% raw %}<div class="math display">\[
 R_n^M\approx\sqrt n,
@@ -243,11 +243,11 @@ R_n^M\approx\sqrt n,
 R_n^U\approx(n/2)^{4/3}.
 \]</div>{% endraw %}
 
-<p>The resulting detectable scales are {% raw %}<span class="math inline">\(n^{-1/4}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n^{-1/3}\)</span>{% endraw %}, respectively. These objectives are tuning heuristics. In particular, {% raw %}<span class="math inline">\(R_n^{-1/4}\)</span>{% endraw %} describes a mean shift that the U-type test can detect; it is not a bound on the error of its normal approximation. The comparison with <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">Song’s resampled statistics</a> likewise depends on allowing different repetition counts for the two tests.</p>
+<p>The resulting local-alternative rates are {% raw %}<span class="math inline">\(n^{-1/4}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n^{-1/3}\)</span>{% endraw %}, respectively. These objectives are tuning heuristics. In particular, {% raw %}<span class="math inline">\(R_n^{-1/4}\)</span>{% endraw %} describes a mean shift that the U-type test can detect; it is not a bound on the error of its normal approximation. The comparison with <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">Song’s resampled statistics</a> likewise depends on allowing different repetition counts for the two tests.</p>
 
-<h3 data-note-section="3" id="moment-inequalities">3. Moment inequalities: using a sign without having to estimate it everywhere</h3>
+<h3 data-note-section="3" id="moment-inequalities">3. Moment inequalities and uniform asymptotic size</h3>
 
-<p>Consider first the scalar null {% raw %}<span class="math inline">\(H_0:\mu_0\leq0\)</span>{% endraw %}, and write {% raw %}<span class="math inline">\(\widehat\sigma^2=\widehat\Sigma\)</span>{% endraw %}. A pair statistic at zero grows when the population mean is far from zero in either direction. Consequently, a large negative mean, which satisfies the null, produces the same quadratic drift as a positive alternative. The correction removes this drift on the negative side.</p>
+<p>Consider first the scalar null {% raw %}<span class="math inline">\(H_0:\mu_0\leq0\)</span>{% endraw %}, and write {% raw %}<span class="math inline">\(\widehat\sigma^2=\widehat\Sigma\)</span>{% endraw %}. The leading term in the conditional mean of {% raw %}<span class="math inline">\(T_U(0)\)</span>{% endraw %} is proportional to {% raw %}<span class="math inline">\(\sqrt{R_n}\mu_0^2\)</span>{% endraw %}, so it increases under fixed positive and fixed negative means. Means {% raw %}<span class="math inline">\(\mu_0=-c\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\mu_0=c\)</span>{% endraw %}, for {% raw %}<span class="math inline">\(c&gt;0\)</span>{% endraw %}, produce the same leading quadratic term. The correction replaces {% raw %}<span class="math inline">\(T_U(0)\)</span>{% endraw %} by {% raw %}<span class="math inline">\(T_U(\overline X)\)</span>{% endraw %} when {% raw %}<span class="math inline">\(\overline X&lt;0\)</span>{% endraw %}.</p>
 
 <p>The correction is easiest to understand as an exact difference between two statistics computed from the same pairs:</p>
 
@@ -275,7 +275,7 @@ T_U(0),&amp;\overline X\geq0.
 \end{aligned}
 \]</div>{% endraw %}
 
-<p>If the observed mean is negative, use the empirical center; if it is nonnegative, retain the candidate center zero. For {% raw %}<span class="math inline">\(m=1\)</span>{% endraw %}, reject when {% raw %}<span class="math inline">\(Q_n&gt;z_{1-\alpha}\)</span>{% endraw %}, or use the conditional quantile of {% raw %}<span class="math inline">\(T_U(\overline X)\)</span>{% endraw %}. The subtraction has already been made in {% raw %}<span class="math inline">\(Q_n\)</span>{% endraw %}; it is applied once.</p>
+<p>If the observed mean is negative, evaluate the statistic at {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}; if it is nonnegative, evaluate the statistic at zero. For {% raw %}<span class="math inline">\(m=1\)</span>{% endraw %}, reject when {% raw %}<span class="math inline">\(Q_n&gt;z_{1-\alpha}\)</span>{% endraw %}, or use the conditional quantile of {% raw %}<span class="math inline">\(T_U(\overline X)\)</span>{% endraw %}. The subtraction has already been made in {% raw %}<span class="math inline">\(Q_n\)</span>{% endraw %}; it is applied once.</p>
 
 <p>The sign may remain uncertain when the mean is close to zero. To see why this is harmless, center the resampled sum in the correction. With</p>
 
@@ -302,13 +302,13 @@ R_n^{1/4}\overline X
 =d+o_p(1).
 \]</div>{% endraw %}
 
-<p>If {% raw %}<span class="math inline">\(d&lt;0\)</span>{% endraw %}, the sign is negative with probability tending to one, so the correction leaves only the centered statistic. If {% raw %}<span class="math inline">\(d=0\)</span>{% endraw %}, the sign may remain uncertain, but {% raw %}<span class="math inline">\(\widehat\lambda=o_p(1)\)</span>{% endraw %}: the choice between the two statistics becomes immaterial. If {% raw %}<span class="math inline">\(d&gt;0\)</span>{% endraw %}, the sign is eventually positive and {% raw %}<span class="math inline">\(\widehat\lambda\xrightarrow{p}d^2/\sigma^2\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\widehat\sigma^2\xrightarrow{p}\sigma^2\)</span>{% endraw %}. The test then has limiting rejection probability</p>
+<p>If {% raw %}<span class="math inline">\(d&lt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\Pr(\overline X&lt;0)\to1\)</span>{% endraw %}, so the procedure uses {% raw %}<span class="math inline">\(T_U(\overline X)\)</span>{% endraw %} with probability tending to one. If {% raw %}<span class="math inline">\(d=0\)</span>{% endraw %}, the sign may remain uncertain, but {% raw %}<span class="math inline">\(\widehat\lambda=o_p(1)\)</span>{% endraw %}: the two statistics differ by {% raw %}<span class="math inline">\(o_p(1)\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(d&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\Pr(\overline X&gt;0)\to1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\lambda\xrightarrow{p}d^2/\sigma^2\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\widehat\sigma^2\xrightarrow{p}\sigma^2\)</span>{% endraw %}. The test then has limiting rejection probability</p>
 
 {% raw %}<div class="math display">\[
 1-\Phi\left(z_{1-\alpha}-\frac{d^2}{\sigma^2}\right)&gt;\alpha.
 \]</div>{% endraw %}
 
-<p>A fixed positive mean makes the drift diverge and gives power tending to one. A fixed negative mean gives the centered statistic with probability tending to one, so rejection still tends to {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}, even in the interior of the null. The test deliberately retains resampling noise there. Its exact asymptotic size throughout the null is a consequence of this construction.</p>
+<p>A fixed positive mean makes the conditional mean diverge and gives power tending to one. A fixed negative mean gives the centered statistic with probability tending to one, so rejection still tends to {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}, even in the interior of the null. The empirically centered resampled statistic has the same nondegenerate limiting distribution at interior and boundary null values. Its exact asymptotic size throughout the null is a consequence of this construction.</p>
 
 <p>The boundary argument can also be checked directly. Under {% raw %}<span class="math inline">\(\mu_0\leq0\)</span>{% endraw %}, on the event {% raw %}<span class="math inline">\(\overline X\geq0\)</span>{% endraw %},</p>
 
@@ -316,7 +316,7 @@ R_n^{1/4}\overline X
 0\leq\overline X\leq|\overline X-\mu_0|.
 \]</div>{% endraw %}
 
-<p>Therefore, whenever the sign sends us to the uncentered statistic under the null, its estimated mean is no larger than the original estimation error. The exact correction identity yields</p>
+<p>On the event {% raw %}<span class="math inline">\(\{\overline X\geq0\}\)</span>{% endraw %}, where the procedure uses {% raw %}<span class="math inline">\(T_U(0)\)</span>{% endraw %}, the null restriction therefore bounds {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %} by {% raw %}<span class="math inline">\(|\overline X-\mu_0|\)</span>{% endraw %}. The exact correction identity yields</p>
 
 {% raw %}<div class="math display">\[
 |\widehat\lambda|\mathbf1\{\overline X\geq0\}
@@ -326,9 +326,9 @@ R_n^{1/4}\overline X
 =o_p(1).
 \]</div>{% endraw %}
 
-<p>The clever trick is to arrange for the correction to vanish precisely where the sign may remain uncertain. This makes consistent estimation of the sign unnecessary at the boundary.</p>
+<p>The clever step in the moment-inequality argument is that the correction is asymptotically negligible along boundary sequences for which the sign cannot be consistently estimated. Consistent estimation of the sign is therefore unnecessary at the boundary.</p>
 
-<p><strong>Several inequalities and uniform size.</strong> Now test {% raw %}<span class="math inline">\(\mu_{0k}\leq0\)</span>{% endraw %} for {% raw %}<span class="math inline">\(k=1,\ldots,m\)</span>{% endraw %}. Standardize each coordinate by {% raw %}<span class="math inline">\(\widehat\sigma_k^2=\widehat\Sigma_{kk}\)</span>{% endraw %}. A general whitening matrix would mix the inequalities and need not preserve their directions. To make the normalization explicit, use the scalar U-type statistic separately for each coordinate:</p>
+<p><strong>Several inequalities and uniform size.</strong> Now test {% raw %}<span class="math inline">\(\mu_{0k}\leq0\)</span>{% endraw %} for {% raw %}<span class="math inline">\(k=1,\ldots,m\)</span>{% endraw %}. Standardize each coordinate by {% raw %}<span class="math inline">\(\widehat\sigma_k^2=\widehat\Sigma_{kk}\)</span>{% endraw %}. A general whitening transformation need not preserve the componentwise restriction {% raw %}<span class="math inline">\(\mu_0\leq0\)</span>{% endraw %}. To make the normalization explicit, use the scalar U-type statistic separately for each coordinate:</p>
 
 {% raw %}<div class="math display">\[
 U_{n,k}(a)=\frac1{\widehat\sigma_k^2\sqrt{R_n}}
@@ -347,21 +347,21 @@ Q_n&amp;=\max_{1\leq k\leq m}
 \end{aligned}
 \]</div>{% endraw %}
 
-<p>Reject when {% raw %}<span class="math inline">\(Q_n&gt;c_{n,1-\alpha}\)</span>{% endraw %}, the conditional {% raw %}<span class="math inline">\((1-\alpha)\)</span>{% endraw %}-quantile of {% raw %}<span class="math inline">\(\widetilde Q_n\)</span>{% endraw %}. To approximate that quantile, draw {% raw %}<span class="math inline">\(L\)</span>{% endraw %} independent batches, each containing {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} pairs, and compute {% raw %}<span class="math inline">\(\widetilde Q_n\)</span>{% endraw %} for each batch. Increasing {% raw %}<span class="math inline">\(L\)</span>{% endraw %} improves the Monte Carlo approximation to the critical value; changing {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} changes the test statistic and its drift. The size argument below uses the ideal conditional quantile; taking {% raw %}<span class="math inline">\(L\to\infty\)</span>{% endraw %} makes its simulation error vanish.</p>
+<p>Reject when {% raw %}<span class="math inline">\(Q_n&gt;c_{n,1-\alpha}\)</span>{% endraw %}, the conditional {% raw %}<span class="math inline">\((1-\alpha)\)</span>{% endraw %}-quantile of {% raw %}<span class="math inline">\(\widetilde Q_n\)</span>{% endraw %}. To approximate that quantile, draw {% raw %}<span class="math inline">\(L\)</span>{% endraw %} independent batches, each containing {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} pairs, and compute {% raw %}<span class="math inline">\(\widetilde Q_n\)</span>{% endraw %} for each batch. Increasing {% raw %}<span class="math inline">\(L\)</span>{% endraw %} improves the Monte Carlo approximation to the critical value; changing {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} changes the test statistic and its conditional mean. The size argument below uses the ideal conditional quantile; taking {% raw %}<span class="math inline">\(L\to\infty\)</span>{% endraw %} makes its simulation error vanish.</p>
 
-<p>The joint Gaussian limit records the dependence between the coordinate tests. Put {% raw %}<span class="math inline">\(Z_{i,k}^{\mathrm{s}}=(X_{i,k}-\overline X_k)/\widehat\sigma_k\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\rho_{k\ell}=n^{-1}\sum_i Z_{i,k}^{\mathrm{s}}Z_{i,\ell}^{\mathrm{s}}\)</span>{% endraw %}. The all-pairs calculation gives</p>
+<p>The covariance matrix of the joint Gaussian limit characterizes the asymptotic dependence between the coordinate statistics. Put {% raw %}<span class="math inline">\(Z_{i,k}^{\mathrm{s}}=(X_{i,k}-\overline X_k)/\widehat\sigma_k\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\rho_{k\ell}=n^{-1}\sum_i Z_{i,k}^{\mathrm{s}}Z_{i,\ell}^{\mathrm{s}}\)</span>{% endraw %}. The all-pairs calculation gives</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
 &amp;\mathbb E_\pi
 \big[(Z_{J,k}^{\mathrm{s}}Z_{K,k}^{\mathrm{s}})
 (Z_{J,\ell}^{\mathrm{s}}Z_{K,\ell}^{\mathrm{s}})\big]\\
-&amp;\qquad=\frac{n^2\widehat\rho_{k\ell}^{,2}
+&amp;\qquad=\frac{n^2\widehat\rho_{k\ell}^{2}
 -\sum_i(Z_{i,k}^{\mathrm{s}}Z_{i,\ell}^{\mathrm{s}})^2}{n(n-1)}.
 \end{aligned}
 \]</div>{% endraw %}
 
-<p>The diagonal term vanishes by the same maximum bound used above. Thus the centered coordinate vector converges conditionally to {% raw %}<span class="math inline">\(G\sim\mathcal N(0,\Omega)\)</span>{% endraw %}, where</p>
+<p>The normalized diagonal contribution vanishes by the same maximum bound used above. Thus the centered coordinate vector converges conditionally to {% raw %}<span class="math inline">\(G\sim\mathcal N(0,\Omega)\)</span>{% endraw %}, where</p>
 
 {% raw %}<div class="math display">\[
 \Omega_{k\ell}=\rho_{k\ell}^2,
@@ -369,7 +369,7 @@ Q_n&amp;=\max_{1\leq k\leq m}
 \rho_{k\ell}=\frac{\Sigma_{k\ell}}{\sqrt{\Sigma_{kk}\Sigma_{\ell\ell}}}.
 \]</div>{% endraw %}
 
-<p>The limit need not have independent coordinates. Positive definiteness of the correlation matrix implies positive definiteness of its entrywise square {% raw %}<span class="math inline">\(\Omega\)</span>{% endraw %}, and the Gaussian maximum has a continuous, strictly increasing CDF. Joint resampling reproduces this law automatically. Resampling each coordinate independently would instead remove the off-diagonal entries of {% raw %}<span class="math inline">\(\Omega\)</span>{% endraw %}.</p>
+<p>The limit need not have independent coordinates. Positive definiteness of the correlation matrix implies positive definiteness of its entrywise square {% raw %}<span class="math inline">\(\Omega\)</span>{% endraw %}, and the Gaussian maximum has a continuous, strictly increasing CDF. Using the same resampled pairs across coordinates yields the limiting covariance matrix {% raw %}<span class="math inline">\(\Omega\)</span>{% endraw %}. Resampling each coordinate independently would instead remove the off-diagonal entries of {% raw %}<span class="math inline">\(\Omega\)</span>{% endraw %}.</p>
 
 <p>Under any null sequence for which the assumptions hold, the scalar correction bound applies to every coordinate. Since {% raw %}<span class="math inline">\(m\)</span>{% endraw %} is fixed,</p>
 
@@ -380,7 +380,7 @@ Q_n&amp;=\max_{1\leq k\leq m}
 =o_p(1).
 \]</div>{% endraw %}
 
-<p>Conditional CDF convergence gives convergence of the reference quantile, and continuity of the Gaussian maximum makes the vanishing difference harmless at that quantile. Hence the rejection probability tends to {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}. Along alternatives with {% raw %}<span class="math inline">\(R_n^{1/4}\mu_{0k}\to d_k\in\mathbb R\)</span>{% endraw %}, the limit becomes</p>
+<p>Conditional CDF convergence gives convergence of the reference quantile. Continuity of the Gaussian maximum’s distribution implies that replacing {% raw %}<span class="math inline">\(\widetilde Q_n\)</span>{% endraw %} by {% raw %}<span class="math inline">\(Q_n=\widetilde Q_n+o_p(1)\)</span>{% endraw %} does not change the limiting rejection probability. Hence the rejection probability tends to {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}. Along alternatives with {% raw %}<span class="math inline">\(R_n^{1/4}\mu_{0k}\to d_k\in\mathbb R\)</span>{% endraw %}, the limit becomes</p>
 
 {% raw %}<div class="math display">\[
 \max_k\left\{G_k+
@@ -389,16 +389,16 @@ Q_n&amp;=\max_{1\leq k\leq m}
 
 <p>Any strictly positive {% raw %}<span class="math inline">\(d_k\)</span>{% endraw %} produces power above {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}. A fixed positive coordinate gives consistency. Means converging to the boundary from the negative side contribute no limiting shift.</p>
 
-<p>Uniform size requires that this argument remain valid when the data-generating process changes with {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Specifically, over a nonempty null class {% raw %}<span class="math inline">\(\mathcal P_0\)</span>{% endraw %}, require uniform tightness at the {% raw %}<span class="math inline">\(\sqrt{n}\)</span>{% endraw %} scale, a common {% raw %}<span class="math inline">\(2+\delta\)</span>{% endraw %} moment bound in probability, and covariance convergence along the sequences under consideration, with eigenvalues bounded away from zero and infinity by common constants. These are the uniform premises of the paper’s size theorem. If uniform size control failed, there would be a sequence {% raw %}<span class="math inline">\(P_n\in\mathcal P_0\)</span>{% endraw %} whose rejection probability exceeded {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} by a fixed amount. The preceding argument applies along that sequence and gives a contradiction. A fixed member of the null class has limiting rejection probability {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}, so</p>
+<p>Uniform size requires that this argument remain valid when the data-generating process changes with {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Specifically, over a nonempty null class {% raw %}<span class="math inline">\(\mathcal P_0\)</span>{% endraw %}, require {% raw %}<span class="math inline">\(\sqrt n(\overline X-\mu_0)\)</span>{% endraw %} to be uniformly bounded in probability, a common {% raw %}<span class="math inline">\(2+\delta\)</span>{% endraw %} moment bound in probability, and covariance convergence along the sequences under consideration, with eigenvalues bounded away from zero and infinity by common constants. These are the uniform premises of the paper’s size theorem. If uniform size control failed, there would be a sequence {% raw %}<span class="math inline">\(P_n\in\mathcal P_0\)</span>{% endraw %} whose rejection probability exceeded {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} by a fixed amount. The preceding argument applies along that sequence and gives a contradiction. A fixed member of the null class has limiting rejection probability {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}, so</p>
 
 {% raw %}<div class="math display">\[
 \sup_{P\in\mathcal P_0}\Pr_P\{Q_n&gt;c_{n,1-\alpha}\}
 \longrightarrow\alpha.
 \]</div>{% endraw %}
 
-<p>Checking only fixed negative means and the exact boundary would miss the moving null sequences needed for this conclusion. The two-case argument above covers them: a reliably negative mean selects the centered statistic, while an uncertain sign is attached to a negligible correction.</p>
+<p>Checking only fixed negative means and the exact boundary would omit the sequences of null data-generating processes {% raw %}<span class="math inline">\(P_n\)</span>{% endraw %} needed for this conclusion. Along subsequences for which {% raw %}<span class="math inline">\(R_n^{1/4}\mu_{0k}\)</span>{% endraw %} has a limit in {% raw %}<span class="math inline">\([-\infty,0]\)</span>{% endraw %}, either {% raw %}<span class="math inline">\(\Pr(\overline X_k&lt;0)\to1\)</span>{% endraw %}, or the correction term is {% raw %}<span class="math inline">\(o_p(1)\)</span>{% endraw %}. The direct bound above establishes negligibility of the applied correction along every null sequence satisfying the assumptions.</p>
 
-<h3 data-note-section="4" id="10-356-extensions-and-limits">4. What the original sample must still supply</h3>
+<h3 data-note-section="4" id="10-356-extensions-and-limits">4. Estimated scores and alternative convergence rates</h3>
 
 <p>The conditional calculations depend on empirical moments and the sample-mean error, so they can also be applied to estimated scores. Suppose an estimator admits</p>
 
@@ -408,7 +408,7 @@ Q_n&amp;=\max_{1\leq k\leq m}
 \psi(W_i;\beta_0,\widehat\theta)+o_p(1).
 \]</div>{% endraw %}
 
-<p>To test a candidate {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %}, form {% raw %}<span class="math inline">\(X_i(\beta)=\psi(W_i;\beta,\widehat\theta)\)</span>{% endraw %} and apply the resampling test to a zero target. At the true parameter, the displayed expansion and {% raw %}<span class="math inline">\(\sqrt{n}\)</span>{% endraw %}-consistency supply tightness of the score sum. One must also verify convergence of the empirical score covariance and its {% raw %}<span class="math inline">\(2+\delta\)</span>{% endraw %} moment bound after estimating {% raw %}<span class="math inline">\(\theta\)</span>{% endraw %}. Smoothness and control of the first-stage error can establish these conditions; consistency of the nuisance estimator alone does not establish all of them.</p>
+<p>To test a candidate {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %}, form {% raw %}<span class="math inline">\(X_i(\beta)=\psi(W_i;\beta,\widehat\theta)\)</span>{% endraw %} and apply the resampling test with hypothesized mean zero. At the true parameter, the displayed expansion and {% raw %}<span class="math inline">\(\sqrt{n}\)</span>{% endraw %}-consistency imply that the normalized score sum {% raw %}<span class="math inline">\(n^{-1/2}\sum_i\psi(W_i;\beta_0,\widehat\theta)\)</span>{% endraw %} is {% raw %}<span class="math inline">\(O_p(1)\)</span>{% endraw %}. One must also verify convergence of the empirical score covariance and its {% raw %}<span class="math inline">\(2+\delta\)</span>{% endraw %} moment bound after estimating {% raw %}<span class="math inline">\(\theta\)</span>{% endraw %}. Smoothness and control of the first-stage error can establish these conditions; consistency of the nuisance estimator alone does not establish all of them.</p>
 
 <p>For example, write {% raw %}<span class="math inline">\(\widehat Q=n^{-1}\sum_iD_iD_i'\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(e_j\)</span>{% endraw %} select regression coefficient {% raw %}<span class="math inline">\(j\)</span>{% endraw %}, and define {% raw %}<span class="math inline">\(w_{ji}=e_j'\widehat Q^{-1}D_i\)</span>{% endraw %}. Then</p>
 
@@ -420,7 +420,7 @@ X_i(\beta_j)=w_{ji}Y_i-\beta_j,
 \overline X(\beta_j)=\widehat\beta_j-\beta_j.
 \]</div>{% endraw %}
 
-<p>This is the paper’s regression construction. The weights use the full sample, and the resampling is applied to the resulting contributions. The same principle applies to the paper’s spillover example, where a contrast of exposure-cell means can be estimated from observed local neighborhoods even when the path distances needed for a conventional variance estimate are unavailable. Identification of the contrast, adequate exposure-cell probabilities, and the required rate of its estimator remain conditions to verify in that application.</p>
+<p>This is the paper’s regression construction. The weights use the full sample, and the resampling is applied to the resulting contributions. The same principle applies to the paper’s spillover example, where a contrast of exposure-cell means can be estimated from observed local neighborhoods even when the path distances needed for a conventional variance estimate are unavailable. That application requires identification of the contrast and verification of the exposure-cell probability conditions needed for the estimator’s convergence rate and moment bounds.</p>
 
 <span id="10-356-what-slower-original-sample-rates-would-require"></span>
 <p>If the known rate is slower, write {% raw %}<span class="math inline">\(\overline X-\mu_0=O_p(a_n^{-1})\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(a_n\to\infty\)</span>{% endraw %}, retaining the covariance and empirical moment assumptions. The same decompositions give the conditions</p>
@@ -437,13 +437,13 @@ X_i(\beta_j)=w_{ji}Y_i-\beta_j,
 \quad\text{for the pair statistic}.
 \]</div>{% endraw %}
 
-<p>The second pair restriction controls the excluded diagonal; the first controls the squared estimation error. Consistency makes the random linear term negligible, and the centered conditional CLT is unchanged. Thus a slower known rate can be accommodated by reducing {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}, provided the remaining empirical assumptions hold. Here {% raw %}<span class="math inline">\(a_n\)</span>{% endraw %} denotes the original estimator’s rate and {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} the resampling count.</p>
+<p>The second pair restriction makes the diagonal correction asymptotically negligible; the first does the same for the squared estimation error. Consistency makes the random linear term negligible, and the centered conditional CLT is unchanged. Thus a slower known rate can be accommodated by reducing {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}, provided the remaining empirical assumptions hold. Here {% raw %}<span class="math inline">\(a_n\)</span>{% endraw %} denotes the original estimator’s rate and {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} the resampling count.</p>
 
-<p>A persistent common shock illustrates the limitation. If {% raw %}<span class="math inline">\(X_i=\mu_0+U+\varepsilon_i\)</span>{% endraw %}, with a nondegenerate mean-zero common shock {% raw %}<span class="math inline">\(U\)</span>{% endraw %} and an idiosyncratic average tending to zero, then {% raw %}<span class="math inline">\(\overline X-\mu_0\to U\)</span>{% endraw %}. The sample variance can remain well behaved because centering removes {% raw %}<span class="math inline">\(U\)</span>{% endraw %}, but the mean is not consistent. Increasing the number of resampling draws magnifies the resulting drift. The original observations must supply consistent information about the target before this method can provide inference.</p>
+<p>A persistent common shock illustrates the limitation. If {% raw %}<span class="math inline">\(X_i=\mu_0+U+\varepsilon_i\)</span>{% endraw %}, with a nondegenerate mean-zero common shock {% raw %}<span class="math inline">\(U\)</span>{% endraw %} and an idiosyncratic average tending to zero, then {% raw %}<span class="math inline">\(\overline X-\mu_0\to U\)</span>{% endraw %}. The sample variance may still converge to a finite positive limit because centering removes {% raw %}<span class="math inline">\(U\)</span>{% endraw %}, but the mean is not consistent. Increasing the number of resampling draws magnifies the resulting conditional mean. The original observations must yield a consistent estimator of the target before this method can provide inference.</p>
 
 <p>Finally, the resampling draws are part of the test’s randomization. In particular, a null conditional rejection probability tending to {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} does not make two independent runs agree with probability tending to one. A fixed seed makes a calculation reproducible; averaging rejection indicators changes the testing rule. The paper discusses a separate randomized confidence-function construction for reducing sensitivity to the draws. Ordinary critical-value simulation, controlled by {% raw %}<span class="math inline">\(L\)</span>{% endraw %}, should be distinguished from that construction and from the choice of {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}.</p>
 
-<p>The method is useful when the original mean has a defensible convergence rate but its long-run variance is hard to estimate. The price is visible in the local-power calculation: under the suggested tuning choices, the mean and pair tests detect shifts at scales {% raw %}<span class="math inline">\(n^{-1/4}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n^{-1/3}\)</span>{% endraw %}. The proofs explain both sides of that trade-off. Conditional resampling supplies a known reference fluctuation, and the original sample’s error determines how much of it can be accumulated.</p>
+<p>The method is useful when the original mean has an established convergence rate but its long-run variance is hard to estimate. The loss of local power is quantified by the local-alternative rates: under the suggested tuning choices, the mean-type and U-type tests have nontrivial asymptotic power against mean shifts of orders {% raw %}<span class="math inline">\(n^{-1/4}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n^{-1/3}\)</span>{% endraw %}. Conditional resampling produces an asymptotically pivotal statistic, subject to a restriction on {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} determined by the original estimator’s convergence rate.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-leung_dependencerobust_2022" class="csl-entry" role="listitem">
