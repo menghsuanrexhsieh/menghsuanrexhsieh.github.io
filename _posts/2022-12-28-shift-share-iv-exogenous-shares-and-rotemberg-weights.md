@@ -11,7 +11,7 @@ redirect_from: ["/2023/08/05/shift-share-instruments-setup-and-panel-structure/"
 
 <div class="note-content" markdown="0">
 
-<p>A shift-share instrument adds exposure shares multiplied by aggregate shocks. Which part supplies the identifying variation? In the share-exogeneity argument of <span class="citation" data-cites="goldsmith-pinkham_bartik_2020">(<a href="#ref-goldsmith-pinkham_bartik_2020" role="doc-biblioref">Goldsmith-Pinkham, Sorkin, and Swift 2020</a>)</span>, the shares are the excluded instruments and the shocks determine their combination. Decomposing the IV ratio makes the resulting weights explicit.</p>
+<p>A shift-share instrument adds exposure shares multiplied by aggregate shocks. Which part supplies the identifying variation? In the share-exogeneity argument of <span class="citation" data-cites="goldsmith-pinkham_bartik_2020"><a href="#ref-goldsmith-pinkham_bartik_2020" role="doc-biblioref">Goldsmith-Pinkham, Sorkin, and Swift (2020)</a></span>, the shares are the excluded instruments and the shocks determine their combination. Decomposing the IV ratio makes the resulting weights explicit.</p>
 
 <h3 data-note-section="1" id="34-0-two-exact-decompositions">1. Two exact decompositions</h3>
 <p>After partialling out controls, write the endogenous regressor and outcome as {% raw %}<span class="math inline">\(X^\perp,Y^\perp\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} collect the share vectors and let {% raw %}<span class="math inline">\(g\)</span>{% endraw %} collect the shocks, so the Bartik instrument is {% raw %}<span class="math inline">\(B=Zg\)</span>{% endraw %}.</p>
@@ -138,17 +138,17 @@ L-A_-(U-L)\quad\text{to}\quad U+A_-(U-L).
 
 <h3 id="34-0-relating-a-weight-to-a-component-first-stage-statistic">Relating a weight to a component first-stage statistic</h3>
 <p>A Rotemberg weight is not itself a first-stage {% raw %}<span class="math inline">\(F\)</span>{% endraw %} statistic. To make the distinction exact, use the same residualization and sample for every variable and write {% raw %}<span class="math inline">\(S_B=B^{\perp\prime}B^\perp\)</span>{% endraw %} and {% raw %}<span class="math inline">\(S_k=Z_k^{\perp\prime}Z_k^\perp\)</span>{% endraw %}. The individual and aggregate first-stage coefficients are {% raw %}<span class="math inline">\(\widehat\pi_k=Z_k^{\perp\prime}X^\perp/S_k\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\pi=B^{\perp\prime}X^\perp/S_B\)</span>{% endraw %}. Thus</p>
-<p>{% raw %}<div class="math display">\[
+{% raw %}<div class="math display">\[
 \widehat\alpha_k
 =\frac{g_k\widehat\pi_kS_k}{\widehat\pi S_B}.
-\]</div>{% endraw %}</p>
+\]</div>{% endraw %}
 <p>Let {% raw %}<span class="math inline">\(\widehat v_k,\widehat v\)</span>{% endraw %} be the estimated variances of these coefficients, and define the one-coefficient Wald statistics {% raw %}<span class="math inline">\(F_k=\widehat\pi_k^2/\widehat v_k\)</span>{% endraw %} and {% raw %}<span class="math inline">\(F=\widehat\pi^2/\widehat v\)</span>{% endraw %}. When the displayed denominators and {% raw %}<span class="math inline">\(g_k\)</span>{% endraw %} are nonzero,</p>
-<p>{% raw %}<div class="math display">\[
+{% raw %}<div class="math display">\[
 \frac{F_k}{F}
 =\widehat\alpha_k^2
 \left(\frac{S_B}{g_kS_k}\right)^2
 \frac{\widehat v}{\widehat v_k}.
-\]</div>{% endraw %}</p>
+\]</div>{% endraw %}
 <p>The exposure-variance ratio is squared because an {% raw %}<span class="math inline">\(F\)</span>{% endraw %} statistic squares its coefficient. Dropping this square would not follow from the weight identity. The formula also depends on instrument scales and coefficient uncertainty, so a large absolute Rotemberg weight alone cannot establish a strong component first stage. If an instrument has zero residual variance or its coefficient is unidentified, use the original aggregate moment rather than this decomposition.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">

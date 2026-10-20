@@ -11,7 +11,7 @@ redirect_from: ["/2025/07/30/learning-network-policies-with-estimated-nuisance-f
 
 <div class="note-content" markdown="0">
 
-<p>When exposure probabilities are estimated, inverse weighting inherits their estimation error. An outcome regression can reduce that error, provided the correction uses both estimates in the right combination. For the network-policy score in <span class="citation" data-cites="viviano_policy_2025">(<a href="#ref-viviano_policy_2025" role="doc-biblioref">Viviano 2025</a>)</span>, the leading bias is a product of the two errors. Learning a policy requires this cancellation to hold uniformly over the exposures that candidate rules can induce.</p>
+<p>When exposure probabilities are estimated, inverse weighting inherits their estimation error. An outcome regression can reduce that error, provided the correction uses both estimates in the right combination. For the network-policy score in <span class="citation" data-cites="viviano_policy_2025"><a href="#ref-viviano_policy_2025" role="doc-biblioref">Viviano (2025)</a></span>, the leading bias is a product of the two errors. Learning a policy requires this cancellation to hold uniformly over the exposures that candidate rules can induce.</p>
 
 <h3 data-note-section="1" id="10-628-the-augmented-score">1. The augmented score</h3>
 <p>For a rule {% raw %}<span class="math inline">\(\pi\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(m_i(\pi)\)</span>{% endraw %} be the conditional mean outcome at its induced own treatment and peer exposure. Define</p>

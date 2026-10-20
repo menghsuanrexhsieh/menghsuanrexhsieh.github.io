@@ -11,7 +11,7 @@ redirect_from: ["/2025/03/08/the-fragility-of-sparsity-setup/", "/2025/03/08/why
 
 <div class="note-content" markdown="0">
 
-<p>Changing coordinates can leave a regression’s fitted control space unchanged and alter which coefficients are zero. Variable selection depends on those zeros. <span class="citation" data-cites="kolesar_fragility_2024">(<a href="#ref-kolesar_fragility_2024" role="doc-biblioref">Kolesár, Müller, and Roelsgaard 2024</a>)</span> studies this dependence on representation and asks what supports the coordinates in which sparsity is assumed.</p>
+<p>Changing coordinates can leave a regression’s fitted control space unchanged and alter which coefficients are zero. Variable selection depends on those zeros. <span class="citation" data-cites="kolesar_fragility_2024"><a href="#ref-kolesar_fragility_2024" role="doc-biblioref">Kolesár, Müller, and Roelsgaard (2024)</a></span> study this dependence on representation and ask what supports the coordinates in which sparsity is assumed.</p>
 
 <h3 data-note-section="1" id="22-0-what-the-rotation-result-says">1. What the rotation result says</h3>
 <p>Consider {% raw %}<span class="math inline">\(Y_i=\beta D_i+W_i&#x27;\gamma+U_i\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(\Sigma=\mathbb{E}[W_iW_i&#x27;]\)</span>{% endraw %} and suppose its eigenvalues are bounded above and away from zero, with {% raw %}<span class="math inline">\(\|\gamma\|_2\asymp1\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(\widetilde W_i=RW_i\)</span>{% endraw %} for an orthogonal matrix {% raw %}<span class="math inline">\(R\)</span>{% endraw %}, the same control function has coefficient vector {% raw %}<span class="math inline">\(R\gamma\)</span>{% endraw %}.</p>
@@ -202,6 +202,6 @@ Kolesár, Michal, Ulrich K. Müller, and Sebastian T. Roelsgaard. 2024. <span>�
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p></p></nav>
+
 
 </div>

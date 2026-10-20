@@ -1,9 +1,9 @@
 {% assign u = page.url %}
 <aside class="sidebar">
   <!-- Portrait: replace assets/img/portrait.png to update your photo. -->
-  <a class="sidebar__portrait" href="{{ '/' | relative_url }}" aria-label="Home — {{ site.author }}">
+  <a class="sidebar__portrait" href="{{ '/' | relative_url }}" aria-label="Home — {{ site.author | escape }}">
     <img src="{{ '/assets/img/portrait.png' | relative_url }}"
-         alt="Portrait of {{ site.author }}" width="234" height="234">
+         alt="Portrait of {{ site.author | escape }}" width="234" height="234">
   </a>
 
   <p class="sidebar__name">{{ site.author }}</p>

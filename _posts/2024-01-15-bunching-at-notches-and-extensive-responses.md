@@ -11,7 +11,7 @@ redirect_from: ["/2025/02/25/bunching-at-notches-and-extensive-responses/", "/20
 
 <div class="note-content" markdown="0">
 
-<p>A notch imposes a discrete consumption loss when earnings cross a threshold. Some earnings choices can then require more work while delivering less consumption than staying at the threshold. <span class="citation" data-cites="kleven_using_2013">(<a href="#ref-kleven_using_2013" role="doc-biblioref">Kleven and Waseem 2013</a>)</span> uses this dominated region together with bunching below the notch to study both behavioral responses and incomplete adjustment.</p>
+<p>A notch imposes a discrete consumption loss when earnings cross a threshold. Some earnings choices can then require more work while delivering less consumption than staying at the threshold. <span class="citation" data-cites="kleven_using_2013"><a href="#ref-kleven_using_2013" role="doc-biblioref">Kleven and Waseem (2013)</a></span> use this dominated region together with bunching below the notch to study both behavioral responses and incomplete adjustment.</p>
 
 <h3 data-note-section="1" id="16-25-derive-the-dominated-interval">1. Derive the dominated interval</h3>
 <p>Let the tax schedule be {% raw %}<span class="math inline">\(T(z)=tz+(\Delta T+\Delta t\,z)1\{z&gt;K\}\)</span>{% endraw %}, with a positive tax jump. Put {% raw %}<span class="math inline">\(r=1-t\)</span>{% endraw %} and {% raw %}<span class="math inline">\(r&#x27;=1-t-\Delta t&gt;0\)</span>{% endraw %}. Consumption is {% raw %}<span class="math inline">\(rz\)</span>{% endraw %} below the notch and {% raw %}<span class="math inline">\(r&#x27;z-\Delta T\)</span>{% endraw %} above it.</p>
@@ -137,8 +137,8 @@ M_D=\lambda H_D,
 
 <h3 id="16-25-selecting-the-unique-feasible-indifference-root">Selecting the unique feasible indifference root</h3>
 <p>The dimensionless equation has a unique root on the economically relevant region {% raw %}<span class="math inline">\(v&gt;1\)</span>{% endraw %} under the positive-jump condition. Define {% raw %}<span class="math inline">\(F(v)=v+\varepsilon v^{-1/\varepsilon}\)</span>{% endraw %}. Then</p>
-<p>{% raw %}<div class="math display">\[F&#39;(v)=1-v^{-1-1/\varepsilon}&gt;0\quad(v&gt;1),\qquad
-F(1)=1+\varepsilon,\qquad F(v)\to\infty.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[F&#39;(v)=1-v^{-1-1/\varepsilon}&gt;0\quad(v&gt;1),\qquad
+F(1)=1+\varepsilon,\qquad F(v)\to\infty.\]</div>{% endraw %}
 <p>Moreover, {% raw %}<span class="math inline">\(J&gt;0\)</span>{% endraw %} is exactly {% raw %}<span class="math inline">\(1+d&gt;\rho\)</span>{% endraw %}, so {% raw %}<span class="math inline">\((1+\varepsilon)(1+d)/\rho&gt;F(1)\)</span>{% endraw %}. Continuity and strict monotonicity prove existence and uniqueness of the root {% raw %}<span class="math inline">\(v&gt;1\)</span>{% endraw %}. At {% raw %}<span class="math inline">\(v\le z_D/K\)</span>{% endraw %}, the proposed upper choice would be dominated by {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, so it could not solve the indifference equation; thus the feasible root lies strictly above {% raw %}<span class="math inline">\(z_D/K\)</span>{% endraw %}. For the standard downward-slope case {% raw %}<span class="math inline">\(0&lt;\rho\le1\)</span>{% endraw %}, types whose upper-segment unconstrained choice is at most {% raw %}<span class="math inline">\(K\)</span>{% endraw %} prefer the threshold to every feasible upper choice. For larger types, the utility difference has the sign of {% raw %}<span class="math inline">\(F(v)-(1+\varepsilon)(1+d)/\rho\)</span>{% endraw %}, so it crosses once. This establishes the threshold sorting used in the bunching-mass calculation.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">

@@ -11,7 +11,7 @@ redirect_from: ["/2025/09/07/estimating-elasticities-under-nonlinear-budget-sets
 
 <div class="note-content" markdown="0">
 
-<p>Latent bunchers all choose the kink, yet their observed earnings may form a broad peak because of measurement error or imperfect adjustment. Counting observations in a chosen window then misses some bunchers and includes some nonbunchers. The likelihood approach in <span class="citation" data-cites="aronsson_maximum_2024">(<a href="#ref-aronsson_maximum_2024" role="doc-biblioref">Aronsson, Jenderny, and Lanot 2024</a>)</span> models the peak and both tails together to recover behavioral and error parameters.</p>
+<p>Latent bunchers all choose the kink, yet their observed earnings may form a broad peak because of measurement error or imperfect adjustment. Counting observations in a chosen window then misses some bunchers and includes some nonbunchers. The likelihood approach in <span class="citation" data-cites="aronsson_maximum_2024"><a href="#ref-aronsson_maximum_2024" role="doc-biblioref">Aronsson, Jenderny, and Lanot (2024)</a></span> models the peak and both tails together to recover behavioral and error parameters.</p>
 
 <h3 data-note-section="1" id="16-188-convolve-the-optimal-choice-distribution">1. Convolve the optimal-choice distribution</h3>
 <p>Let optimal earnings {% raw %}<span class="math inline">\(Z^*\)</span>{% endraw %} have continuous density {% raw %}<span class="math inline">\(f_-\)</span>{% endraw %} below {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, continuous density {% raw %}<span class="math inline">\(f_+\)</span>{% endraw %} above {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, and an atom of mass {% raw %}<span class="math inline">\(B\)</span>{% endraw %} at {% raw %}<span class="math inline">\(K\)</span>{% endraw %}. Suppose observed earnings are {% raw %}<span class="math inline">\(Z=Z^*E\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(E&gt;0\)</span>{% endraw %} is independent with density {% raw %}<span class="math inline">\(g\)</span>{% endraw %}.</p>
@@ -39,7 +39,7 @@ h(z)=\frac{B}{K}g(z/K)
 <h3 data-note-section="3" id="16-188-extending-beyond-one-kink">3. Extending beyond one kink</h3>
 <p>For a piecewise-linear budget, each segment has a net wage and a virtual income. A monotone scalar heterogeneity index partitions individuals into segment interiors and kink points. Expected labor supply is obtained by integrating the segment-specific choices over those regions and adding kink masses.</p>
 
-<p>The representation in <span class="citation" data-cites="blomquist_nonparametric_2002 blomquist_econometrics_2023">(<a href="#ref-blomquist_nonparametric_2002" role="doc-biblioref">Soren Blomquist and Newey 2002</a>; <a href="#ref-blomquist_econometrics_2023" role="doc-biblioref">Sören Blomquist, Hausman, and Newey 2023</a>)</span> reorganizes these integrals into a baseline final-segment expectation plus adjacent-segment corrections. The reason is telescoping: each interior boundary adds the contribution of the segment below it and subtracts the continuation of the segment above it.</p>
+<p>The representation in <span class="citation" data-cites="blomquist_nonparametric_2002 blomquist_econometrics_2023"><a href="#ref-blomquist_nonparametric_2002" role="doc-biblioref">Blomquist and Newey (2002)</a> and <a href="#ref-blomquist_econometrics_2023" role="doc-biblioref">Blomquist, Hausman, and Newey (2023)</a></span> reorganizes these integrals into a baseline final-segment expectation plus adjacent-segment corrections. The reason is telescoping: each interior boundary adds the contribution of the segment below it and subtracts the continuation of the segment above it.</p>
 
 <p>The partition requires monotonicity in the type index and integrability. Zero-hours corners need an additional region unless excluded. Since type determines the chosen segment, the observed marginal rate is selected together with earnings; inserting it in a linear labor-supply regression need not recover this optimization model.</p>
 
@@ -119,7 +119,7 @@ k(z,K)(f_\eta(b)b&#x27;-f_\eta(a)a&#x27;),\qquad
 \]</div>{% endraw %}
 <p>They cancel. At either boundary, the smooth segment’s chosen earnings equal {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, so its measurement-error kernel agrees with the atom’s kernel. Mass moving between adjacent regions cannot create or destroy observed probability by itself. The remaining derivative comes from how choices, heterogeneity, or error densities change inside the regions.</p>
 
-<p>For the score, all three moving-boundary terms must be considered together. Keeping only the derivative of the bunching mass gives the wrong result. Their cancellation here follows from matching kernels at the boundaries; it is not a general permission to omit moving-boundary terms.</p>
+<p>For the score, all three moving-boundary terms must be considered together. Keeping only the derivative of the bunching mass gives the wrong result. Their cancellation here follows from matching kernels at the boundaries; moving-boundary terms cannot be omitted in general.</p>
 
 <p>The same elasticity changes choices along the continuous branches and changes which types bunch. The cancellation shows how the likelihood combines these movements without creating or losing probability at a boundary.</p>
 
@@ -158,6 +158,6 @@ Blomquist, Soren, and Whitney Newey. 2002. <span>“Nonparametric Estimation wit
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-16-treatment-effects-at-an-overtime-notch %}">Treatment Effects at an Overtime Notch</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-16-treatment-effects-at-an-overtime-notch %}">Treatment Effects at a Bunching Boundary</a></p></nav>
 
 </div>

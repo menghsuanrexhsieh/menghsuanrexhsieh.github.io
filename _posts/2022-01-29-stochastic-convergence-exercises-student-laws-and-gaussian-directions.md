@@ -12,7 +12,7 @@ note_question_source: "assets/notes/VdW/07.0_pp_5_24_Stochastic_Convergence.pdf"
 
 <div class="note-content" markdown="0">
 
-<p>A sum of independent squared standard normals has mean equal to the number of terms and relative fluctuations that tend to zero. Dividing by this sum therefore has a simple limiting effect: Student variables approach a normal law, and fixed coordinates of a uniform spherical direction become Gaussian after rescaling. The exercises below prove these assertions and distinguish convergence in law from the stronger tail control needed for convergence of moments.</p>
+<p>A sum of independent squared standard normals has mean equal to the number of terms and relative fluctuations that tend to zero. Dividing by this sum therefore has a simple limiting effect: Student t variables converge in distribution to a standard normal law, and fixed coordinates of a uniform spherical direction become Gaussian after rescaling. The exercises below prove these assertions and distinguish convergence in law from the stronger tail control needed for convergence of moments.</p>
 
 <p>These are Exercises 1, 2, 4, 16, 17 from A. W. van der Vaart, <em>Asymptotic Statistics</em> (1998), Chapter 2, p. 24. The question numbers identify the original exercises. Write {% raw %}<span class="math inline">\(X_n\Rightarrow X\)</span>{% endraw %} for convergence in distribution and {% raw %}<span class="math inline">\(X_n\xrightarrow{P}X\)</span>{% endraw %} for convergence in probability.</p>
 

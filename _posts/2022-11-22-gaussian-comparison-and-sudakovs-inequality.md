@@ -28,7 +28,7 @@ redirect_from: ["/2022/11/22/gaussian-integration-by-parts-and-interpolation/", 
 
 {% raw %}<div class="math display">\[\int f'(x)\phi(x)\,dx=[f(x)\phi(x)]_{-\infty}^{\infty}-\int f(x)\phi'(x)\,dx=\int xf(x)\phi(x)\,dx.\]</div>{% endraw %}
 
-<p>Polynomial growth kills the boundary term and makes both integrals absolutely convergent. More generally the same identity holds for locally absolutely continuous {% raw %}<span class="math inline">\(f\)</span>{% endraw %} whenever the relevant integrals and vanishing boundary term are justified; arbitrary differentiability alone does not ensure this. ◻</p>
+<p>Polynomial growth makes the boundary term vanish and makes both integrals absolutely convergent. More generally the same identity holds for locally absolutely continuous {% raw %}<span class="math inline">\(f\)</span>{% endraw %} whenever the relevant integrals and vanishing boundary term are justified; arbitrary differentiability alone does not ensure this. ◻</p>
 
 <div id="lem:gaussian-i-b-p-multivariate" class="lemma" data-note-number="2" data-note-kind="Lemma">
 <p>Lemma 2 (Multivariate integration by parts). Let {% raw %}<span class="math inline">\(X\sim \mathcal{N}(0,\Sigma)\)</span>{% endraw %}, allowing singular {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(f:\mathbb R^n\to\mathbb R\)</span>{% endraw %} be continuously differentiable with {% raw %}<span class="math inline">\(f\)</span>{% endraw %} and its first derivatives of polynomial growth. Then</p>

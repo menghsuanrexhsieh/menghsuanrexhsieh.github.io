@@ -11,7 +11,7 @@ redirect_from: ["/2024/07/06/novelty-detection-and-statistical-guarantees/", "/2
 
 <div class="note-content" markdown="0">
 
-<p>Suppose we have labeled examples of an ordinary class and an unlabeled sample that also contains novel observations. The novel distribution is unknown, so its likelihood ratio cannot be estimated directly from labeled examples. <span class="citation" data-cites="blanchard_semi-supervised_2010">(<a href="#ref-blanchard_semi-supervised_2010" role="doc-biblioref">Blanchard, Lee, and Scott 2010</a>)</span> shows that comparing the ordinary distribution with the mixture can nevertheless recover the same optimal rejection ordering.</p>
+<p>Suppose we have labeled examples of an ordinary class and an unlabeled sample that also contains novel observations. The novel distribution is unknown, so its likelihood ratio cannot be estimated directly from labeled examples. <span class="citation" data-cites="blanchard_semi-supervised_2010"><a href="#ref-blanchard_semi-supervised_2010" role="doc-biblioref">Blanchard, Lee, and Scott (2010)</a></span> show that comparing the ordinary distribution with the mixture can nevertheless recover the same optimal rejection ordering.</p>
 
 <h3 data-note-section="1" id="15-0-the-population-result">1. The population result</h3>
 <p>Let {% raw %}<span class="math inline">\(P_X=(1-\pi)P_0+\pi P_1\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(\pi&gt;0\)</span>{% endraw %}. A classifier {% raw %}<span class="math inline">\(f=1\)</span>{% endraw %} declares novelty. Write</p>
@@ -161,8 +161,8 @@ P_X=(1-\pi(1-\eta))P_0+\pi(1-\eta)Q.
 <h3 id="15-0-a-finite-sample-form-of-the-nonidentification-obstruction">A finite-sample form of the nonidentification obstruction</h3>
 <p>Let {% raw %}<span class="math inline">\(P_0\)</span>{% endraw %} be uniform on {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %} and let {% raw %}<span class="math inline">\(Q_\varepsilon\)</span>{% endraw %} be uniform on {% raw %}<span class="math inline">\([\varepsilon,1]\)</span>{% endraw %}. Their total variation distance is {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %}, yet the identifiable novelty fraction is zero for mixture law {% raw %}<span class="math inline">\(P_0\)</span>{% endraw %} and one for mixture law {% raw %}<span class="math inline">\(Q_\varepsilon\)</span>{% endraw %}. Couple one draw from the two laws to be equal with probability {% raw %}<span class="math inline">\(1-\varepsilon\)</span>{% endraw %}; independent copies give a coupling of {% raw %}<span class="math inline">\(n\)</span>{% endraw %} observations that differs with probability at most {% raw %}<span class="math inline">\(n\varepsilon\)</span>{% endraw %}. The nominal labeled samples can be coupled identically, since their law is the same in the two experiments.</p>
 <p>For any test {% raw %}<span class="math inline">\(\varphi\)</span>{% endraw %} of the two mixture laws with values in {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %}, this gives</p>
-<p>{% raw %}<div class="math display">\[\mathbb E_{P_0^n}\varphi+\mathbb E_{Q_\varepsilon^n}(1-\varphi)
-\ge 1-n\varepsilon.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\mathbb E_{P_0^n}\varphi+\mathbb E_{Q_\varepsilon^n}(1-\varphi)
+\ge 1-n\varepsilon.\]</div>{% endraw %}
 <p>If an estimator recovered the novelty fraction to error strictly less than {% raw %}<span class="math inline">\(1/2\)</span>{% endraw %} with uniformly high probability, thresholding it at {% raw %}<span class="math inline">\(1/2\)</span>{% endraw %} would give a test with both errors small. Choosing {% raw %}<span class="math inline">\(\varepsilon=o(1/n)\)</span>{% endraw %} contradicts the displayed inequality. This proves failure of unrestricted uniform consistency, while leaving pointwise consistency for a fixed distribution entirely possible. It also explains why a uniformly valid upper confidence bound must be nearly vacuous at the nominal law when such alternatives are allowed.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
@@ -171,6 +171,6 @@ Blanchard, Gilles, Gyemin Lee, and Clayton Scott. 2010. <span>“Semi-Supervised
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p></p></nav>
+
 
 </div>

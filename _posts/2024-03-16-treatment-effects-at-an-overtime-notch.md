@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Treatment Effects at an Overtime Notch"
+title: "Treatment Effects at a Bunching Boundary"
 date: "2024-03-16"
 tags: ["econometrics", "bunching"]
 excerpt: "The marginal slope of an observed outcome regression combines a causal response with selection."
@@ -11,7 +11,7 @@ redirect_from: ["/2025/07/11/treatment-effects-at-an-overtime-notch/"]
 
 <div class="note-content" markdown="0">
 
-<p>The slope of an observed outcome regression combines a causal response with changing composition of the treated population. <span class="citation" data-cites="caetano_identification_2022">(<a href="#ref-caetano_identification_2022" role="doc-biblioref">Caetano, Caetano, and Nielsen 2022</a>)</span> uses the latent choices pooled at a treatment boundary to identify the selection component under additional assumptions. In its overtime application, the identifying calculation is a transformation of densities at the boundary.</p>
+<p>The slope of an observed outcome regression combines a causal response with changing composition of the treated population. <span class="citation" data-cites="caetano_identification_2022"><a href="#ref-caetano_identification_2022" role="doc-biblioref">Caetano, Caetano, and Nielsen (2022)</a></span> use the latent choices pooled at a treatment boundary to identify the selection component under additional assumptions. The identifying calculation is a transformation of densities at a lower treatment boundary. The application below concerns TV watching and children’s skills.</p>
 
 <h3 data-note-section="1" id="16-150-separate-response-and-selection">1. Separate response and selection</h3>
 <p>For positive treatment values, let {% raw %}<span class="math inline">\(m(t)=\mathbb{E}[Y\mid T=t]\)</span>{% endraw %} and define the average marginal response {% raw %}<span class="math inline">\(\beta(t)=\mathbb{E}[Y&#x27;(t)\mid T=t]\)</span>{% endraw %}. Under differentiability and interchange-of-expectation conditions, write</p>
@@ -26,7 +26,7 @@ B(t)=\int_0^t\beta(s)\,ds,\quad u(t)=m(t)-B(t).
 <p>Suppose {% raw %}<span class="math inline">\(T=\max(T^*,0)\)</span>{% endraw %} and extend the selection function to the censored latent range by {% raw %}<span class="math inline">\(u(t^*)=\mathbb{E}[Y(0)\mid T^*=t^*]\)</span>{% endraw %} for {% raw %}<span class="math inline">\(t^*\leq0\)</span>{% endraw %}. Assume this extension is monotone and joins the positive-side selection function with the smoothness required below. This is an additional restriction on latent selection, not a consequence of decomposing the observed regression alone. Let {% raw %}<span class="math inline">\(V=u(T^*)\)</span>{% endraw %} among those with {% raw %}<span class="math inline">\(T=0\)</span>{% endraw %}.</p>
 
 <div id="overtime-density" class="proposition" data-note-number="1" data-note-kind="Proposition">
-<p><strong>Proposition 1</strong>. Under the paper’s smoothness, monotonicity, nondegeneracy, and deconvolution-identification conditions, the boundary response is identified by</p>
+<p><strong>Proposition 1</strong>. Under the boundary smoothness, monotonicity, nondegeneracy, and deconvolution conditions described below (see also the sufficient model in <a href="#boundary-tv-application">Section 9</a>), the boundary response is identified by</p>
 
 {% raw %}<div class="math display">\[
 \beta(0)=m&#x27;(0+)-u&#x27;(0),
@@ -153,18 +153,60 @@ f_V(v)=\frac1{2\pi}\int_{\mathbb R}e^{-isv}
 
 <h3 id="16-150-connecting-the-latent-and-observed-derivatives-at-zero">Connecting the latent and observed derivatives at zero</h3>
 <p>Let {% raw %}<span class="math inline">\(H(t,s)=\mathbb E[Y(t)\mid T^*=s]\)</span>{% endraw %} be continuously differentiable near {% raw %}<span class="math inline">\((0,0)\)</span>{% endraw %}, with differentiation under the conditional expectation justified. For {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(m(t)=H(t,t)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\beta(t)=\partial_1H(t,t)\)</span>{% endraw %}. The chain rule gives</p>
-<p>{% raw %}<div class="math display">\[
+{% raw %}<div class="math display">\[
 u&#39;(t)=m&#39;(t)-\beta(t)=\partial_2H(t,t).
-\]</div>{% endraw %}</p>
+\]</div>{% endraw %}
 <p>For {% raw %}<span class="math inline">\(s\leq0\)</span>{% endraw %}, the latent extension is {% raw %}<span class="math inline">\(u(s)=H(0,s)\)</span>{% endraw %}, so its left derivative at zero is {% raw %}<span class="math inline">\(\partial_2H(0,0)\)</span>{% endraw %}. Continuity therefore matches this derivative to {% raw %}<span class="math inline">\(u&#39;(0+)\)</span>{% endraw %} from the observed positive side. In contrast, the observed atom mean is</p>
-<p>{% raw %}<div class="math display">\[
+{% raw %}<div class="math display">\[
 \mathbb E[Y\mid T=0]=\mathbb E[H(0,T^*)\mid T^*\leq0],
-\]</div>{% endraw %}</p>
+\]</div>{% endraw %}
 <p>which averages the whole censored range and generally differs from {% raw %}<span class="math inline">\(H(0,0)=m(0+)\)</span>{% endraw %}. The density transformation recovers the slope at the edge of that range. It does not replace the boundary causal response by an average over all censored individuals.</p>
+
+<h3 data-note-section="9" id="boundary-tv-application">9. A corner-bunching application: TV watching and skills</h3>
+<p><a href="https://www.aeaweb.org/conference/2023/program/paper/Sdi85hYi">Caetano, Caetano, and Nielsen (April 2022, §5)</a> study children’s cognitive and non-cognitive skills as outcomes and weekly hours of TV watching as treatment, using the PSID Child Development Supplement. The relevant boundary is zero hours. Their paper’s overtime reference is to a separate study by Goff; it is not this application.</p>
+<p>The distinction matters mathematically. For a covered worker paid a fixed hourly rate {% raw %}<span class="math inline">\(w\)</span>{% endraw %} and a time-and-a-half premium beyond 40 hours, the usual overtime schedule has the form</p>
+{% raw %}<div class="math display">\[
+C(h)=w\min(h,40)+1.5w(h-40)_+.
+\]</div>{% endraw %}
+<p>The <a href="https://www.dol.gov/agencies/whd/overtime">Department of Labor’s description of the federal overtime rule</a> supplies this premium for nonexempt covered workers. In this simple schedule, total compensation is continuous at 40 and its slope changes: this is a kink, not a notch. Replacing total hours by {% raw %}<span class="math inline">\((h-40)_+\)</span>{% endraw %} would pool every observation below 40, and would require the outcome to depend on hours only through that recoded treatment. Neither the premium rule nor the recoding establishes the latent smoothness and deconvolution conditions used here. The present result concerns a lower boundary of actual treatment.</p>
+<p>For the TV example, write {% raw %}<span class="math inline">\(T_i\)</span>{% endraw %} for observed weekly hours and {% raw %}<span class="math inline">\(Y_i(t)\)</span>{% endraw %} for a skill score under {% raw %}<span class="math inline">\(t\)</span>{% endraw %} hours. A simple illustrative choice problem makes the boundary representation explicit:</p>
+{% raw %}<div class="math display">\[
+\max_{t\geq0}\{a_i t-t^2/2\}.
+\]</div>{% endraw %}
+<p>Its unconstrained optimum is {% raw %}<span class="math inline">\(T_i^*=a_i\)</span>{% endraw %}; strict concavity and the first-order condition give {% raw %}<span class="math inline">\(T_i=\max(a_i,0)\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(a_i\)</span>{% endraw %} has positive probability below zero, households with negative net inclination to watch TV choose zero. The objective is an illustration, not a utility specification estimated in the paper. Negative {% raw %}<span class="math inline">\(T_i^*\)</span>{% endraw %} indexes heterogeneity at the corner; it is not negative observed TV time. The treatment entering {% raw %}<span class="math inline">\(Y_i(t)\)</span>{% endraw %} is fully observed, even though the latent index is censored by the choice rule.</p>
+<p>In this interpretation, {% raw %}<span class="math inline">\(\beta(0)\)</span>{% endraw %} is the limiting skill-score response per additional weekly hour among children marginally selecting into positive TV time. It is a derivative at zero, not the effect of a discrete move from zero to one hour and not an average over all children who watch no TV. The selection derivative {% raw %}<span class="math inline">\(u&#39;(0)\)</span>{% endraw %} measures how the zero-treatment skill mean changes with the latent index at that boundary.</p>
+<p>One transparent sufficient model for the density calculation is</p>
+{% raw %}<div class="math display">\[
+Y_i(t)=g(t)+v(T_i^*)+E_i,\qquad
+g(0)=0,\quad \mathbb EE_i=0,\quad E_i\perp T_i^*.
+\]</div>{% endraw %}
+<p>Assume {% raw %}<span class="math inline">\(g\)</span>{% endraw %} is continuously differentiable near zero, {% raw %}<span class="math inline">\(v\)</span>{% endraw %} is continuously differentiable across zero and strictly monotone on the negative latent support, and {% raw %}<span class="math inline">\(v&#39;(0)\ne0\)</span>{% endraw %}. Assume {% raw %}<span class="math inline">\(T^*\)</span>{% endraw %} has a density continuous and positive at zero, {% raw %}<span class="math inline">\(0&lt;\pi_0=P(T=0)&lt;1\)</span>{% endraw %}, and the relevant means are finite. Require the conditional density of {% raw %}<span class="math inline">\(v(T^*)\)</span>{% endraw %} within the atom to have a finite positive interior limit at {% raw %}<span class="math inline">\(v(0)\)</span>{% endraw %}. Finally, require {% raw %}<span class="math inline">\(\varphi_E(s)\ne0\)</span>{% endraw %} for every real {% raw %}<span class="math inline">\(s\)</span>{% endraw %}. These are sufficient restrictions for this illustration, stronger than a generic smooth potential-outcome model; the existence of the atom alone does not imply them.</p>
+<p>Here {% raw %}<span class="math inline">\(m(t)=g(t)+v(t)\)</span>{% endraw %} for {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\beta(t)=g&#39;(t)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(u=v\)</span>{% endraw %}. The residual distribution {% raw %}<span class="math inline">\(Y-m(t)\mid T=t\)</span>{% endraw %} equals the law of {% raw %}<span class="math inline">\(E\)</span>{% endraw %}, so observations with arbitrarily small positive treatment identify its limiting law. Outcomes within the atom identify the convolution of that law with {% raw %}<span class="math inline">\(V=v(T^*)\mid T=0\)</span>{% endraw %}. Dividing their characteristic functions identifies the law of {% raw %}<span class="math inline">\(V\)</span>{% endraw %}; its continuous interior density and boundary limit then identify the denominator in Proposition 1. The atom frequency and the positive-side treatment density identify {% raw %}<span class="math inline">\(f_T(0+)/\pi_0\)</span>{% endraw %}. Thus the two density values use different observed groups and the noise-stability restriction connects them.</p>
+<p>The sign is also observable under these restrictions. Since {% raw %}<span class="math inline">\(\mathbb E[Y\mid T=0]=\mathbb E[v(T^*)\mid T^*\leq0]\)</span>{% endraw %},</p>
+{% raw %}<div class="math display">\[
+\Delta=m(0+)-\mathbb E[Y\mid T=0]
+=v(0)-\mathbb E[v(T^*)\mid T^*\leq0].
+\]</div>{% endraw %}
+<p>For increasing {% raw %}<span class="math inline">\(v\)</span>{% endraw %}, strict monotonicity and positive latent density just below zero make {% raw %}<span class="math inline">\(\Delta&gt;0\)</span>{% endraw %}; for decreasing {% raw %}<span class="math inline">\(v\)</span>{% endraw %}, they make {% raw %}<span class="math inline">\(\Delta&lt;0\)</span>{% endraw %}. Its sign agrees with {% raw %}<span class="math inline">\(v&#39;(0)\ne0\)</span>{% endraw %}. Subtracting the signed density ratio from {% raw %}<span class="math inline">\(m&#39;(0+)\)</span>{% endraw %} consequently identifies {% raw %}<span class="math inline">\(g&#39;(0)\)</span>{% endraw %}.</p>
+<p>For a worked calculation, specialize the uniform-index example in Section 7 to {% raw %}<span class="math inline">\(g(t)=b_0t\)</span>{% endraw %}, {% raw %}<span class="math inline">\(v(t)=u_0+\lambda t\)</span>{% endraw %}, and independent {% raw %}<span class="math inline">\(E\sim\mathcal N(0,\sigma^2)\)</span>{% endraw %} with {% raw %}<span class="math inline">\(\sigma&gt;0\)</span>{% endraw %}. These choices satisfy the stated sufficient conditions when {% raw %}<span class="math inline">\(\lambda\ne0\)</span>{% endraw %}. The two observed groups have</p>
+{% raw %}<div class="math display">\[
+\begin{aligned}
+Y\mid T=t&amp;=u_0+(b_0+\lambda)t+E &amp;&amp;(t&gt;0),\\
+Y\mid T=0&amp;=u_0+\lambda U+E,
+\qquad U\sim\operatorname{Unif}[-a,0],\quad U\perp E.
+\end{aligned}
+\]</div>{% endraw %}
+<p>The continuous-side residual law is Gaussian with nonvanishing characteristic function. Deconvolution at the atom identifies the uniform selection law, whose interior endpoint density is {% raw %}<span class="math inline">\(1/(|\lambda|a)\)</span>{% endraw %}. Therefore</p>
+{% raw %}<div class="math display">\[
+\beta(0)=(b_0+\lambda)
+-\operatorname{sgn}(\Delta)\frac{1/a}{1/(|\lambda|a)}=b_0,
+\qquad \Delta=\lambda a/2.
+\]</div>{% endraw %}
+<p>This calculation illustrates identification without reporting an empirical estimate. It also clarifies an endpoint issue in Section 8: the uniform selection density jumps at its support endpoint, and its characteristic function is not absolutely integrable. Direct Fourier inversion exactly at that endpoint is not justified by the sufficient integrability condition stated there. Recover the distribution first and use the limit of its density from inside the support, or equivalently the limit of one-sided difference quotients of its cdf. That is the boundary density required by the change-of-variables argument.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-caetano_identification_2022" class="csl-entry" role="listitem">
-Caetano, Carolina, Gregorio Caetano, and Eric Nielsen. 2022. <span>“Identification and Estimation of Average Marginal Treatment Effects with a Bunching Design.”</span>
+Caetano, Carolina, Gregorio Caetano, and Eric Nielsen. 2022. <span>“Identification and Estimation of Average Marginal Treatment Effects with a Bunching Design.”</span> April manuscript, §3, Theorems 3.2–3.3 and Lemmas 1–3; application in §5. <a href="https://www.aeaweb.org/conference/2023/program/paper/Sdi85hYi">Author manuscript hosted by the AEA</a>.
 </div>
 </div>
 

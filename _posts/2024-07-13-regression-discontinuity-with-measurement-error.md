@@ -11,7 +11,7 @@ redirect_from: ["/2024/07/13/when-measurement-error-can-be-ignored-in-regression
 
 <div class="note-content" markdown="0">
 
-<p>An RD comparison relies on knowing which side of the assignment cutoff an observation occupies. Measurement error may preserve that classification even while changing which latent values occur near the observed cutoff. <span class="citation" data-cites="dong_when_2023">(<a href="#ref-dong_when_2023" role="doc-biblioref">Dong and Kolesár 2023</a>)</span> separates these questions: whether the observed jump identifies an effect, and which population’s effect it identifies.</p>
+<p>An RD comparison relies on knowing which side of the assignment cutoff an observation occupies. Measurement error may preserve that classification even while changing which latent values occur near the observed cutoff. <span class="citation" data-cites="dong_when_2023"><a href="#ref-dong_when_2023" role="doc-biblioref">Dong and Kolesár (2023)</a></span> separate these questions: whether the observed jump identifies an effect, and which population’s effect it identifies.</p>
 
 <h3 data-note-section="1" id="20-0-what-the-observed-discontinuity-identifies">1. What the observed discontinuity identifies</h3>
 <p>Let {% raw %}<span class="math inline">\(X^*=X+e\)</span>{% endraw %} be the latent running variable, with cutoff zero. Suppose assignment agrees almost surely with {% raw %}<span class="math inline">\(Z=1\{X\ge0\}\)</span>{% endraw %}. This is a substantive restriction on the measurement process; ordinary additive noise need not satisfy it.</p>
@@ -164,6 +164,6 @@ Dong, Yingying, and Michal Kolesár. 2023. <span>“When Can We Ignore Measureme
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p></p></nav>
+
 
 </div>

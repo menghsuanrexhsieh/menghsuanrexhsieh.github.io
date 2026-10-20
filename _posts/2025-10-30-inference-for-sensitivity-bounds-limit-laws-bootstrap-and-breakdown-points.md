@@ -11,7 +11,7 @@ redirect_from: ["/2025/06/30/estimating-sensitivity-bounds-and-their-limit-laws/
 
 <div class="note-content" markdown="0">
 
-<p>The <a href="{% post_url 2025-04-30-conditional-c-dependence-sharp-distribution-and-treatment-effect-bounds %}">population sensitivity bounds</a> contain minima and maxima. If two branches agree in the population, sampling noise determines which branch the plug-in estimate selects. The limit can therefore be non-Gaussian even when the inputs have Gaussian limits. <span class="citation" data-cites="masten_assessing_2024">(<a href="#ref-masten_assessing_2024" role="doc-biblioref">Masten, Poirier, and Zhang 2024</a>)</span> treats this problem with directional derivatives.</p>
+<p>The <a href="{% post_url 2025-04-30-conditional-c-dependence-sharp-distribution-and-treatment-effect-bounds %}">population sensitivity bounds</a> contain minima and maxima. If two branches agree in the population, sampling noise determines which branch the plug-in estimate selects. The limit can therefore be non-Gaussian even when the inputs have Gaussian limits. <span class="citation" data-cites="masten_assessing_2024"><a href="#ref-masten_assessing_2024" role="doc-biblioref">Masten, Poirier, and Zhang (2024)</a></span> treat this problem with directional derivatives.</p>
 
 <h3 data-note-section="1" id="30-66-the-estimators-and-their-limits">1. The estimators and their limits</h3>
 <p>Estimate the propensity score by a correctly specified parametric model and the conditional quantile function by the paper’s quantile-regression specification. Evaluate the bound formulas at those estimates and integrate to obtain mean-effect bounds.</p>

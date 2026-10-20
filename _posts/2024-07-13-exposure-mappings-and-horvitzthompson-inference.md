@@ -11,7 +11,7 @@ redirect_from: ["/2024/07/13/exposure-mappings-and-general-interference/", "/202
 
 <div class="note-content" markdown="0">
 
-<p>A treatment vector has one coordinate for every unit, but an outcome may depend on only a few features of that vector. An exposure mapping records those features. If the mapping is sufficient for the outcome and each unit has a known, positive probability of the exposure of interest, inverse exposure probabilities yield an unbiased mean estimator. The analysis of <span class="citation" data-cites="aronow_estimating_2017">(<a href="#ref-aronow_estimating_2017" role="doc-biblioref">Aronow and Samii 2017</a>)</span> also shows why estimating its variance is a harder problem.</p>
+<p>A treatment vector has one coordinate for every unit, but an outcome may depend on only a few features of that vector. An exposure mapping records those features. If the mapping is sufficient for the outcome and each unit has a known, positive probability of the exposure of interest, inverse exposure probabilities yield an unbiased mean estimator. The analysis of <span class="citation" data-cites="aronow_estimating_2017"><a href="#ref-aronow_estimating_2017" role="doc-biblioref">Aronow and Samii (2017)</a></span> also shows why estimating its variance is a harder problem.</p>
 
 <h3 data-note-section="1" id="10-182-the-main-identity">1. The main identity</h3>
 <p>Consider a fixed population of {% raw %}<span class="math inline">\(N\)</span>{% endraw %} units. Let {% raw %}<span class="math inline">\(D_i=f(\mathbf Z,\theta_i)\)</span>{% endraw %} be unit {% raw %}<span class="math inline">\(i\)</span>{% endraw %}’s exposure, where {% raw %}<span class="math inline">\(\theta_i\)</span>{% endraw %} contains fixed information such as its network position. Assume assignments producing the same exposure also produce the same fixed potential outcome {% raw %}<span class="math inline">\(y_i(d)\)</span>{% endraw %}, and that the observed outcome satisfies {% raw %}<span class="math inline">\(Y_i=y_i(D_i)\)</span>{% endraw %}. All probabilities, expectations, and variances below refer to the random assignment. For each exposure being compared, require known probabilities {% raw %}<span class="math inline">\(\pi_i(d)=\Pr(D_i=d)&gt;0\)</span>{% endraw %} for every unit in the target population.</p>
@@ -113,7 +113,7 @@ y_i(d)y_j(d).
 <h3 data-note-section="7" id="10-182-why-some-variance-terms-lack-an-unbiased-estimator">7. Why some variance terms lack an unbiased estimator</h3>
 <p>For the same individual and distinct exposures, {% raw %}<span class="math inline">\(I_i(d)I_i(e)=0\)</span>{% endraw %} always, so {% raw %}<span class="math inline">\(\pi_{ii}(d,e)=0\)</span>{% endraw %}. The two potential outcomes are never observed together. Some cross-individual pairs can also be impossible under constrained randomization or the graph mapping.</p>
 
-<p>To see a conservative repair, consider an unobservable contribution with magnitude {% raw %}<span class="math inline">\(2|y_i(d)y_j(e)|\)</span>{% endraw %}. Young’s inequality gives</p>
+<p>To obtain a conservative bound, consider an unobservable contribution with magnitude {% raw %}<span class="math inline">\(2|y_i(d)y_j(e)|\)</span>{% endraw %}. Young’s inequality gives</p>
 
 {% raw %}<div class="math display">\[
 2|y_i(d)y_j(e)|\leq y_i(d)^2+y_j(e)^2.

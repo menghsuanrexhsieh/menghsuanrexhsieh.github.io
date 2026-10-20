@@ -38,7 +38,7 @@ note_source: "assets/notes/Differential Geometry - Notes/diff-geo.tex"
 <li><p><span id="thm:hopf-rinow-c" data-label="thm:hopf-rinow-c"></span> There exists {% raw %}<span class="math inline">\(p \in M\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\exp_p\)</span>{% endraw %} is defined on the entirety of {% raw %}<span class="math inline">\(T_p M\)</span>{% endraw %}.</p></li>
 <li><p><span id="thm:hopf-rinow-d" data-label="thm:hopf-rinow-d"></span> {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is geodesically complete.</p></li>
 </ol>
-<p>Furthermore, any one of <a href="#thm:hopf-rinow-a" data-reference-type="ref" data-reference="thm:hopf-rinow-a">3</a> through <a href="#thm:hopf-rinow-d" data-reference-type="ref" data-reference="thm:hopf-rinow-d">3</a> implies</p>
+<p>Any of conditions <a href="#thm:hopf-rinow-a" data-reference-type="ref" data-reference="thm:hopf-rinow-a">(a)</a>–<a href="#thm:hopf-rinow-d" data-reference-type="ref" data-reference="thm:hopf-rinow-d">(d)</a> in Theorem 3 implies</p>
 
 <ol>
 <li><p><span id="thm:hopf-rinow-e" data-label="thm:hopf-rinow-e"></span> Any two points {% raw %}<span class="math inline">\(p,q \in M\)</span>{% endraw %} can be joined by a minimizing geodesic.</p></li>

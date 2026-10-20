@@ -10,7 +10,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/prediction powered infer
 
 <div class="note-content" markdown="0">
 
-<p>A zero population gradient need not identify a minimizer of a nonconvex risk. We can instead compare the risk of a candidate with that of a separately chosen benchmark: a true global minimizer cannot have greater risk. <span class="citation" data-cites="angelopoulos_prediction-powered_2023">(<a href="#ref-angelopoulos_prediction-powered_2023" role="doc-biblioref">Angelopoulos et al. 2023</a>)</span> combines this inequality with prediction-error correction to construct a confidence set.</p>
+<p>A zero population gradient need not identify a minimizer of a nonconvex risk. We can instead compare the risk of a candidate with that of a separately chosen benchmark: a true global minimizer cannot have greater risk. <span class="citation" data-cites="angelopoulos_prediction-powered_2023"><a href="#ref-angelopoulos_prediction-powered_2023" role="doc-biblioref">Angelopoulos et al. (2023)</a></span> combine this inequality with prediction-error correction to construct a confidence set.</p>
 
 <h3 data-note-section="1" id="31-29-the-coverage-statement">1. The coverage statement</h3>
 <p>Write {% raw %}<span class="math inline">\(L(\theta)=\mathbb{E}[\ell_\theta(X,Y)]\)</span>{% endraw %} and let {% raw %}<span class="math inline">\(\theta^*\)</span>{% endraw %} be a population minimizer. Split the unlabeled data. Use the first part to choose a benchmark {% raw %}<span class="math inline">\(\widehat\theta^f\)</span>{% endraw %} by minimizing predicted loss, and reserve the other part for inference. Define</p>

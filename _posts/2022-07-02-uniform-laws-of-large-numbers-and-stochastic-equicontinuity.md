@@ -133,11 +133,11 @@ note_source: "assets/notes/Uniform Law of Large Numbers/main.tex"
 
 {% raw %}<div class="math display">\[\frac{1}{n} \sum_{i=1}^{n} g_{\theta} (X_i) - \mathbb{E}g_{\theta} = \int g_{\theta} \dif (\mathbb{P}_n - \mathop{\mathrm{\mathds{P}}})\]</div>{% endraw %}
 
-<nav class="note-series" aria-label="Notes in this series"><p></p></nav>
+
 
 <p>For a random index, the population integral means {% raw %}<span class="math inline">\(Pg_{\widehat\theta_n}(\omega)=\int g_{\widehat\theta_n(\omega)}(x)\,P(dx)\)</span>{% endraw %}, with the fitted index held fixed while integrating over a fresh variable {% raw %}<span class="math inline">\(x\)</span>{% endraw %}. It generally differs from the unconditional expectation of {% raw %}<span class="math inline">\(g_{\widehat\theta_n}(X_i)\)</span>{% endraw %}, because {% raw %}<span class="math inline">\(X_i\)</span>{% endraw %} helped choose the index. The pathwise inequality</p>
 
 {% raw %}<div class="math display">\[|(P_n-P)g_{\widehat\theta_n}|\le\sup_{\theta\in\Theta}|(P_n-P)g_\theta|\]</div>{% endraw %}
 
-<p>is the entire justification for the substitution. As usual, the supremum must be measurable (for example, for a pointwise measurable class); otherwise the statement is interpreted using outer probability and outer almost-sure convergence.</p>
+<p>justifies the substitution. As usual, the supremum must be measurable (for example, for a pointwise measurable class); otherwise the statement is interpreted using outer probability and outer almost-sure convergence.</p>
 </div>

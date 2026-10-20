@@ -11,7 +11,7 @@ redirect_from: ["/2024/03/19/causal-inference-for-social-network-data/", "/2024/
 
 <div class="note-content" markdown="0">
 
-<p>Suppose each observed outcome contains a disturbance shared with its neighbors. Adding more observations then adds some new information and some repeated information. The theory of <span class="citation" data-cites="ogburn_causal_2024">(<a href="#ref-ogburn_causal_2024" role="doc-biblioref">Ogburn et al. 2024</a>)</span> asks when an intervention mean can nevertheless be estimated with a normal limit from a single growing network.</p>
+<p>Suppose each observed outcome contains a disturbance shared with its neighbors. Adding more observations then adds some new information and some repeated information. The theory of <span class="citation" data-cites="ogburn_causal_2024"><a href="#ref-ogburn_causal_2024" role="doc-biblioref">Ogburn et al. (2024)</a></span> asks when an intervention mean can nevertheless be estimated with a normal limit from a single growing network.</p>
 
 <h3 data-note-section="1" id="10-59-the-main-result">1. The main result</h3>
 <p>Let {% raw %}<span class="math inline">\(K_{\max,n}\)</span>{% endraw %} be the largest network neighborhood size and let {% raw %}<span class="math inline">\(\psi_n\)</span>{% endraw %} be the intervention mean for the network of size {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Under the paper’s causal structure, summary-map, nuisance-estimation, moment, and dependence conditions:</p>

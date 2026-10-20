@@ -50,7 +50,7 @@ redirect_from: ["/2023/06/10/subsampling/"]
 <p> where {% raw %}<span class="math inline">\(\hat \theta_{n,m,i}\)</span>{% endraw %} is the statistic {% raw %}<span class="math inline">\(\hat \theta_m\)</span>{% endraw %} evaluated using the subsample {% raw %}<span class="math inline">\(Y_i\)</span>{% endraw %}.</p></li>
 </ol>
 </div>
-<p>Note that as the result of this procedure, we have, for any {% raw %}<span class="math inline">\(i\)</span>{% endraw %}, {% raw %}<span class="math inline">\(Y_i\)</span>{% endraw %} is actually a random sample of {% raw %}<span class="math inline">\(m\)</span>{% endraw %} i.i.d. observations from {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. Hence, the exact distribution of {% raw %}<span class="math inline">\(\tau_m (\hat \theta_{n,m,i} - \theta (P))\)</span>{% endraw %} is {% raw %}<span class="math inline">\(J_m (P)\)</span>{% endraw %}. We hope that the empirical distribution of the {% raw %}<span class="math inline">\(N_n\)</span>{% endraw %} values of this exact distribution serves as a good approximation to {% raw %}<span class="math inline">\(J_n (P)\)</span>{% endraw %}, under some assumptions. This leads us to the following consistency result for this approximation procedure.</p>
+<p>Under this procedure, for any {% raw %}<span class="math inline">\(i\)</span>{% endraw %}, {% raw %}<span class="math inline">\(Y_i\)</span>{% endraw %} is a random sample of {% raw %}<span class="math inline">\(m\)</span>{% endraw %} i.i.d. observations from {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. Hence, the exact distribution of {% raw %}<span class="math inline">\(\tau_m (\hat \theta_{n,m,i} - \theta (P))\)</span>{% endraw %} is {% raw %}<span class="math inline">\(J_m (P)\)</span>{% endraw %}. We hope that the empirical distribution of the {% raw %}<span class="math inline">\(N_n\)</span>{% endraw %} values of this exact distribution serves as a good approximation to {% raw %}<span class="math inline">\(J_n (P)\)</span>{% endraw %}, under some assumptions. This leads us to the following consistency result for this approximation procedure.</p>
 
 <div id="thm:subsampling-consistency" class="theorem" data-note-number="3" data-note-kind="Theorem">
 <p><strong>Theorem 3</strong>. Assume the estimator is a measurable symmetric function of its observations and that the normalizing constants are positive. Assume {% raw %}<span class="math inline">\(\frac{m}{n} \to 0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\frac{\tau_m}{\tau_n} \to 0\)</span>{% endraw %} as {% raw %}<span class="math inline">\(m,n \to \infty\)</span>{% endraw %}. Furthermore, suppose Assumption <a href="#as:subsampling" data-reference-type="ref" data-reference="as:subsampling">1</a> holds. Then,</p>
@@ -91,7 +91,7 @@ redirect_from: ["/2023/06/10/subsampling/"]
 
 <p>The many overlapping subsamples need not be independent. Independence is used only for the disjoint blocks before taking their conditional average.</p>
 <p>Since {% raw %}<span class="math inline">\(m/n\to0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(k\to\infty\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(U_n(x)-J_m(x,P)\to_P0\)</span>{% endraw %}, and Assumption 1 gives {% raw %}<span class="math inline">\(U_n(x)\to_PJ(x,P)\)</span>{% endraw %} at every continuity point.</p>
-<p>The difference between the two centerings is {% raw %}<span class="math inline">\(D_n=\tau_m(\widehat\theta_n-\theta(P))=(\tau_m/\tau_n)R_n=o_P(1)\)</span>{% endraw %}, because the limiting law makes {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} tight. Exactly, {% raw %}<span class="math inline">\(K_{n,m}(x)=U_n(x+D_n)\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(\{|D_n|\le\epsilon\}\)</span>{% endraw %},</p>
+<p>The difference between the two centerings is {% raw %}<span class="math inline">\(D_n=\tau_m(\widehat\theta_n-\theta(P))=(\tau_m/\tau_n)R_n=o_P(1)\)</span>{% endraw %}, because the limiting law makes {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %} tight. More precisely, {% raw %}<span class="math inline">\(K_{n,m}(x)=U_n(x+D_n)\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(\{|D_n|\le\epsilon\}\)</span>{% endraw %},</p>
 <span id="eq:subsampling-consistency-a-1"></span>
 {% raw %}<div class="math display">\[U_n(x-\epsilon)\le K_{n,m}(x)\le U_n(x+\epsilon).\tag{1}\]</div>{% endraw %}
 <p>Choose {% raw %}<span class="math inline">\(x\pm\epsilon\)</span>{% endraw %} among continuity points and let {% raw %}<span class="math inline">\(\epsilon\downarrow0\)</span>{% endraw %}; this proves part (a). If {% raw %}<span class="math inline">\(J\)</span>{% endraw %} is continuous, a finite grid whose successive cdf increments are small, together with monotonicity and tail bounds, upgrades pointwise convergence in probability to uniform convergence. The deterministic cdfs {% raw %}<span class="math inline">\(J_n\)</span>{% endraw %} also converge uniformly to {% raw %}<span class="math inline">\(J\)</span>{% endraw %}. The triangle inequality proves part (b).</p>
@@ -102,6 +102,113 @@ redirect_from: ["/2023/06/10/subsampling/"]
 <p>For part (b), choose a finite grid spanning all but {% raw %}<span class="math inline">\(\eta\)</span>{% endraw %} of each limiting tail, with successive limiting cdf increments at most {% raw %}<span class="math inline">\(\eta\)</span>{% endraw %}. The union bound makes the maximum error on this finite grid tend to zero in probability; monotonicity bounds every intervening error by the grid error plus {% raw %}<span class="math inline">\(\eta\)</span>{% endraw %}. Thus no uncountable intersection of probability-one events is required.</p>
 <p>For part (c), let {% raw %}<span class="math inline">\(c=c(1-\alpha,P)\)</span>{% endraw %}. Continuity and strict increase at this quantile mean that, for every {% raw %}<span class="math inline">\(\epsilon&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(J(c-\epsilon,P)&lt;1-\alpha&lt;J(c+\epsilon,P)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(J(c,P)=1-\alpha\)</span>{% endraw %}. If either endpoint is a discontinuity, choose nearby continuity points still on the respective sides of the quantile. Cdf convergence at these continuity points traps the empirical quantile between them with probability tending to one, so {% raw %}<span class="math inline">\(c_{n,m}(1-\alpha)\to_Pc\)</span>{% endraw %}. The limit law of {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}, continuity at {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, and Slutsky's theorem then give the stated coverage. □</p>
 </div>
+
+<h2 id="multivariate-confidence-regions">
+Multivariate confidence regions
+</h2>
+<p>Keep the iid sample and all {% raw %}<span class="math inline">\(\binom nm\)</span>{% endraw %} subsets from Algorithm 2. Now let {% raw %}<span class="math inline">\(\theta(P)\in\mathbb R^d\)</span>{% endraw %}, with fixed {% raw %}<span class="math inline">\(d\)</span>{% endraw %}, and let the estimation rule be measurable and symmetric at every sample size. Choose a fixed norm {% raw %}<span class="math inline">\(\|\cdot\|\)</span>{% endraw %} and known positive constants {% raw %}<span class="math inline">\(\tau_n\to\infty\)</span>{% endraw %}. Suppose</p>
+{% raw %}<div class="math display">\[
+\tau_n\{\hat\theta_n-\theta(P)\}\rightsquigarrow Z
+\quad\text{in }\mathbb R^d,
+\qquad m\to\infty,\quad m/n\to0,\quad\tau_m/\tau_n\to0.
+\]</div>{% endraw %}
+<p>The scalar root is now {% raw %}<span class="math inline">\(R_n^{\|\cdot\|}=\tau_n\|\hat\theta_n-\theta(P)\|\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(J^{\|\cdot\|}(x,P)=P(\|Z\|\leq x)\)</span>{% endraw %}, and define</p>
+{% raw %}<div class="math display">\[
+\begin{aligned}
+K^{\|\cdot\|}_{n,m}(x)
+&amp;=\binom nm^{-1}\sum_{|A|=m}
+\mathbf1\{\tau_m\|\hat\theta_m(X_A)-\hat\theta_n\|\leq x\},\\
+c^{\|\cdot\|}_{n,m}(1-\alpha)
+&amp;=\inf\{x:K^{\|\cdot\|}_{n,m}(x)\geq1-\alpha\}.
+\end{aligned}
+\]</div>{% endraw %}
+<p>For {% raw %}<span class="math inline">\(0&lt;\alpha&lt;1\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(c=\inf\{x:J^{\|\cdot\|}(x,P)\geq1-\alpha\}\)</span>{% endraw %}. Assume {% raw %}<span class="math inline">\(c\)</span>{% endraw %} is finite, {% raw %}<span class="math inline">\(J^{\|\cdot\|}\)</span>{% endraw %} is continuous at {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, and, for every {% raw %}<span class="math inline">\(\epsilon&gt;0\)</span>{% endraw %},</p>
+{% raw %}<div class="math display">\[
+J^{\|\cdot\|}(c-\epsilon,P)&lt;1-\alpha
+&lt;J^{\|\cdot\|}(c+\epsilon,P).
+\]</div>{% endraw %}
+<p>In particular, {% raw %}<span class="math inline">\(J^{\|\cdot\|}(c,P)=1-\alpha\)</span>{% endraw %}. These conditions exclude an atom or a flat quantile at the desired level; weak convergence by itself does not exclude either.</p>
+<p><strong>Proposition.</strong> Under these assumptions, {% raw %}<span class="math inline">\(K^{\|\cdot\|}_{n,m}(x)\to_P J^{\|\cdot\|}(x,P)\)</span>{% endraw %} at every continuity point, {% raw %}<span class="math inline">\(c^{\|\cdot\|}_{n,m}(1-\alpha)\to_P c\)</span>{% endraw %}, and the region</p>
+{% raw %}<div class="math display">\[
+C_n=\left\{\vartheta\in\mathbb R^d:
+\|\hat\theta_n-\vartheta\|\leq
+\frac{c^{\|\cdot\|}_{n,m}(1-\alpha)}{\tau_n}\right\}
+\]</div>{% endraw %}
+<p>satisfies {% raw %}<span class="math inline">\(P\{\theta(P)\in C_n\}\to1-\alpha\)</span>{% endraw %}. This is a pointwise statement for each distribution {% raw %}<span class="math inline">\(P\)</span>{% endraw %} satisfying the assumptions, not a uniform assertion over a class of populations.</p>
+<p><em>Proof.</em> Center the subsample norm at {% raw %}<span class="math inline">\(\theta(P)\)</span>{% endraw %} and call its empirical cdf {% raw %}<span class="math inline">\(U_n^{\|\cdot\|}\)</span>{% endraw %}. The disjoint-block argument in Theorem 3 applies to any measurable symmetric indicator kernel. Its expectation is the cdf of {% raw %}<span class="math inline">\(\tau_m\|\hat\theta_m-\theta(P)\|\)</span>{% endraw %}, and its variance is at most {% raw %}<span class="math inline">\(1/(4\lfloor n/m\rfloor)\)</span>{% endraw %}. The norm is continuous, so the assumed vector convergence gives convergence of this root to {% raw %}<span class="math inline">\(\|Z\|\)</span>{% endraw %}.</p>
+<p>The scalar proof’s exact translation identity must be replaced by the reverse triangle inequality:</p>
+{% raw %}<div class="math display">\[
+\left|\tau_m\|\hat\theta_m(X_A)-\hat\theta_n\|
+-\tau_m\|\hat\theta_m(X_A)-\theta(P)\|\right|
+\leq D_n,
+\qquad
+D_n=\frac{\tau_m}{\tau_n}
+\|\tau_n(\hat\theta_n-\theta(P))\|=o_P(1).
+\]</div>{% endraw %}
+<p>This bound holds for every subset at once. On {% raw %}<span class="math inline">\(\{D_n\leq\epsilon\}\)</span>{% endraw %} it gives</p>
+{% raw %}<div class="math display">\[
+U_n^{\|\cdot\|}(x-\epsilon)
+\leq K^{\|\cdot\|}_{n,m}(x)
+\leq U_n^{\|\cdot\|}(x+\epsilon).
+\]</div>{% endraw %}
+<p>The same continuity-point sandwich proves cdf convergence. Choose the bracketing points to be continuity points of the limiting cdf; this is possible because its discontinuities are countable. The strict inequalities at {% raw %}<span class="math inline">\(c\)</span>{% endraw %} trap the estimated quantile, just as in Theorem 3(c). Finally, sandwich the coverage event between roots below {% raw %}<span class="math inline">\(c-\epsilon\)</span>{% endraw %} and below {% raw %}<span class="math inline">\(c+\epsilon\)</span>{% endraw %}, allowing the event that the critical value differs from {% raw %}<span class="math inline">\(c\)</span>{% endraw %} by more than {% raw %}<span class="math inline">\(\epsilon\)</span>{% endraw %}. Continuity at {% raw %}<span class="math inline">\(c\)</span>{% endraw %} proves the claimed coverage; the root and critical value need not be independent. □</p>
+<p>The Euclidean norm gives a ball. The maximum norm gives a rectangle with a single critical value calibrated to joint coverage. Separate coordinatewise intervals at level {% raw %}<span class="math inline">\(1-\alpha\)</span>{% endraw %} do not generally have joint coverage {% raw %}<span class="math inline">\(1-\alpha\)</span>{% endraw %}. Fixed weights can rescale coordinates with different units, but estimating those weights or studentizing would require additional justification. Neither is needed here.</p>
+<h2 id="simultaneous-confidence-bands">
+Simultaneous confidence bands
+</h2>
+<p>Let {% raw %}<span class="math inline">\(\mathcal T\)</span>{% endraw %} be a compact metric space and work in the separable Banach space {% raw %}<span class="math inline">\(C(\mathcal T)\)</span>{% endraw %} with norm {% raw %}<span class="math inline">\(\|f\|_\infty=\sup_{t\in\mathcal T}|f(t)|\)</span>{% endraw %}. Suppose {% raw %}<span class="math inline">\(\theta(P)\in C(\mathcal T)\)</span>{% endraw %} and each {% raw %}<span class="math inline">\(\hat\theta_n\)</span>{% endraw %} is a Borel-measurable, symmetric {% raw %}<span class="math inline">\(C(\mathcal T)\)</span>{% endraw %}-valued estimator. Assume the functional limit</p>
+{% raw %}<div class="math display">\[
+\tau_n(\hat\theta_n-\theta(P))\rightsquigarrow Z
+\quad\text{in }C(\mathcal T)
+\]</div>{% endraw %}
+<p>for a tight Borel random element {% raw %}<span class="math inline">\(Z\)</span>{% endraw %}, with the same conditions on {% raw %}<span class="math inline">\(m\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\tau_n\)</span>{% endraw %}. This is convergence in the uniform norm topology. Convergence of a finite collection of evaluations alone would not suffice.</p>
+<p>Use the scalar subsample roots</p>
+{% raw %}<div class="math display">\[
+R_{n,m,A}^{\infty}
+=\tau_m\sup_{t\in\mathcal T}
+|\hat\theta_m(X_A)(t)-\hat\theta_n(t)|,
+\qquad
+K_{n,m}^{\infty}(x)=\binom nm^{-1}\sum_{|A|=m}
+\mathbf1\{R_{n,m,A}^{\infty}\leq x\},
+\]</div>{% endraw %}
+<p>and {% raw %}<span class="math inline">\(c_{n,m}^{\infty}(1-\alpha)=\inf\{x:K_{n,m}^{\infty}(x)\geq1-\alpha\}\)</span>{% endraw %}. The supremum is measurable: for any fixed countable dense {% raw %}<span class="math inline">\(\mathcal T_0\subset\mathcal T\)</span>{% endraw %}, continuity of the paths makes the supremum over {% raw %}<span class="math inline">\(\mathcal T\)</span>{% endraw %} equal to the supremum over {% raw %}<span class="math inline">\(\mathcal T_0\)</span>{% endraw %}. The norm is also a continuous function on {% raw %}<span class="math inline">\(C(\mathcal T)\)</span>{% endraw %}.</p>
+<p>If the cdf of {% raw %}<span class="math inline">\(\|Z\|_\infty\)</span>{% endraw %} satisfies the same continuity and strict quantile conditions as above, the band</p>
+{% raw %}<div class="math display">\[
+L_n(t)=\hat\theta_n(t)-\frac{c_{n,m}^{\infty}(1-\alpha)}{\tau_n},
+\qquad
+U_n(t)=\hat\theta_n(t)+\frac{c_{n,m}^{\infty}(1-\alpha)}{\tau_n}
+\]</div>{% endraw %}
+<p>has simultaneous coverage</p>
+{% raw %}<div class="math display">\[
+P\{L_n(t)\leq\theta(P)(t)\leq U_n(t)
+\text{ for every }t\in\mathcal T\}\longrightarrow1-\alpha.
+\]</div>{% endraw %}
+<p>Indeed, the event is exactly {% raw %}<span class="math inline">\(\{\tau_n\|\hat\theta_n-\theta(P)\|_\infty\leq c_{n,m}^{\infty}(1-\alpha)\}\)</span>{% endraw %}. Apply the preceding proof with the supremum norm: the permutation variance bound is unchanged, and the centering error is bounded by {% raw %}<span class="math inline">\(\tau_m\|\hat\theta_n-\theta(P)\|_\infty=o_P(1)\)</span>{% endraw %}. The additional requirements are functional weak convergence and measurability of the norm root. A general estimator in {% raw %}<span class="math inline">\(\ell^\infty(\mathcal T)\)</span>{% endraw %} need not be a Borel random element; the present {% raw %}<span class="math inline">\(C(\mathcal T)\)</span>{% endraw %} formulation avoids assuming that difficulty away.</p>
+<p>Pointwise coverage controls the probability of covering one fixed {% raw %}<span class="math inline">\(t\)</span>{% endraw %}. Simultaneous coverage controls one event covering the entire curve. Computing a different pointwise quantile at every {% raw %}<span class="math inline">\(t\)</span>{% endraw %} does not provide the displayed simultaneous guarantee.</p>
+<h3 id="subsampling-mean-curve-example">
+Example: a mean curve with random intercept and slope
+</h3>
+<p>Suppose the observations are iid pairs {% raw %}<span class="math inline">\(X_i=(A_i,B_i)\sim\mathcal N_2(\mu,\Sigma)\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} is positive definite and may be unknown. On {% raw %}<span class="math inline">\(\mathcal T=[0,1]\)</span>{% endraw %}, define</p>
+{% raw %}<div class="math display">\[
+\theta(P)(t)=\mathbb E[A_i+tB_i]=\mu_A+t\mu_B,
+\qquad
+\hat\theta_n(t)=\bar A_n+t\bar B_n.
+\]</div>{% endraw %}
+<p>This is the sample-mean problem from the <a href="{% post_url 2022-09-29-bootstrapping-the-mean-and-coverage-accuracy %}">preceding post</a>, applied to two coordinates. Its sampling law is particularly easy to check: for every {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\sqrt n(\bar X_n-\mu)\)</span>{% endraw %} has exactly the law of {% raw %}<span class="math inline">\(G=(G_A,G_B)\sim\mathcal N_2(0,\Sigma)\)</span>{% endraw %}. The continuous map {% raw %}<span class="math inline">\((a,b)\mapsto(t\mapsto a+tb)\)</span>{% endraw %} therefore gives the functional limit {% raw %}<span class="math inline">\(Z(t)=G_A+tG_B\)</span>{% endraw %} without a separate functional central limit theorem. These estimators take values in a two-dimensional subspace of {% raw %}<span class="math inline">\(C[0,1]\)</span>{% endraw %}, so Borel measurability holds as well.</p>
+<p>For an affine function, the triangle inequality gives {% raw %}<span class="math inline">\(|a+tb|\leq(1-t)|a|+t|a+b|\)</span>{% endraw %}, and hence</p>
+{% raw %}<div class="math display">\[
+\|Z\|_\infty=\max\{|G_A|,|G_A+G_B|\}.
+\]</div>{% endraw %}
+<p>The vector {% raw %}<span class="math inline">\((G_A,G_A+G_B)\)</span>{% endraw %} has an everywhere positive density because its linear transformation is invertible and {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} is positive definite. The boundary of {% raw %}<span class="math inline">\([-x,x]^2\)</span>{% endraw %} has probability zero, and every nonempty difference between two such squares has positive probability. Thus the root cdf is continuous and strictly increasing for {% raw %}<span class="math inline">\(x&gt;0\)</span>{% endraw %}, from zero to one. All the quantile conditions hold for {% raw %}<span class="math inline">\(0&lt;\alpha&lt;1\)</span>{% endraw %}.</p>
+<p>Take {% raw %}<span class="math inline">\(m=\lfloor n^{1/2}\rfloor\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\tau_n=\sqrt n\)</span>{% endraw %}. For each subset, the supremum root is computed from just the two endpoints:</p>
+{% raw %}<div class="math display">\[
+R_{n,m,A}^{\infty}
+=\sqrt m\max\left\{
+|\bar A_A-\bar A_n|,
+|\bar A_A+\bar B_A-\bar A_n-\bar B_n|
+\right\}.
+\]</div>{% endraw %}
+<p>Its empirical critical value gives the band above over all {% raw %}<span class="math inline">\(t\in[0,1]\)</span>{% endraw %}. No covariance estimate or unknown scale enters the root. The Gaussian assumption is specific to this checkable example; the general result requires only the stated functional limit and quantile conditions. For a nonlinear random curve, reducing the supremum to its endpoints would generally be wrong.</p>
 
 <nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2022-09-29-bootstrapping-the-mean-and-coverage-accuracy %}">Bootstrapping the Mean and Coverage Accuracy</a></p></nav>
 

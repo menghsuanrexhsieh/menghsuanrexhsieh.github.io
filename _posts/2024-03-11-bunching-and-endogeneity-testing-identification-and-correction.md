@@ -11,7 +11,7 @@ redirect_from: ["/2025/05/14/bunching-and-tests-for-endogeneity/", "/2025/05/14/
 
 <div class="note-content" markdown="0">
 
-<p>At a boundary mass point, nearby observed treatment values can represent very different people. The atom may pool an entire range of latent choices, whereas positive treatment approaching the boundary selects a narrow range. The test in <span class="citation" data-cites="caetano_test_2015">(<a href="#ref-caetano_test_2015" role="doc-biblioref">Caetano 2015</a>)</span> compares their outcome means to detect a consequence of selection under maintained structural continuity.</p>
+<p>At a boundary mass point, nearby observed treatment values can represent very different people. The atom may pool an entire range of latent choices, whereas positive treatment approaching the boundary selects a narrow range. The test in <span class="citation" data-cites="caetano_test_2015"><a href="#ref-caetano_test_2015" role="doc-biblioref">Caetano (2015)</a></span> compares their outcome means to detect a consequence of selection under maintained structural continuity.</p>
 
 <h3 data-note-section="1" id="16-83-the-testable-implication">1. The testable implication</h3>
 <p>Let {% raw %}<span class="math inline">\(Y=Y(T)\)</span>{% endraw %}, with a mass at {% raw %}<span class="math inline">\(T=0\)</span>{% endraw %} and positive treatment values arbitrarily close to zero. Conditional on covariates {% raw %}<span class="math inline">\(X=x\)</span>{% endraw %}, define</p>
@@ -158,8 +158,8 @@ Q^{-1}\frac1{\sqrt n}\sum_iW_i\varepsilon_i
 
 <h3 id="16-83-a-sufficient-continuity-condition-for-the-boundary-comparison">A sufficient continuity condition for the boundary comparison</h3>
 <p>The vanishing causal term in Section 2 concerns changing conditional populations, so pointwise continuity of each response curve alone should not be substituted for its integrability condition. One transparent sufficient condition is</p>
-<p>{% raw %}<div class="math display">\[|Y(t)-Y(0)|\le tH\quad(0&lt;t&lt;t_0),\qquad
-\sup_{0&lt;t&lt;t_0}\mathbb E[H\mid T=t,X=x]&lt;\infty,\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[|Y(t)-Y(0)|\le tH\quad(0&lt;t&lt;t_0),\qquad
+\sup_{0&lt;t&lt;t_0}\mathbb E[H\mid T=t,X=x]&lt;\infty,\]</div>{% endraw %}
 <p>for a nonnegative envelope {% raw %}<span class="math inline">\(H\)</span>{% endraw %}. Then the absolute causal contribution is bounded by {% raw %}<span class="math inline">\(t\mathbb E[H\mid T=t,X=x]\to0\)</span>{% endraw %}. Conditional exogeneity gives another direct route: it replaces this conditional expectation by the common potential-outcome mean, to which dominated continuity can be applied. Either argument states explicitly why approaching the observed boundary removes the causal difference while allowing the selection contrast to remain.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
@@ -171,6 +171,6 @@ Caetano, Carolina, Gregorio Caetano, and Eric Nielsen. 2023. <span>“Correcting
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-02-03-bunching-identification-density-bounds-and-control-groups %}">Bunching Identification: Density Bounds and Control Groups</a> · Next: <a href="{% post_url 2024-03-16-treatment-effects-at-an-overtime-notch %}">Treatment Effects at an Overtime Notch</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-02-03-bunching-identification-density-bounds-and-control-groups %}">Bunching Identification: Density Bounds and Control Groups</a> · Next: <a href="{% post_url 2024-03-16-treatment-effects-at-an-overtime-notch %}">Treatment Effects at a Bunching Boundary</a></p></nav>
 
 </div>

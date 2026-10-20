@@ -11,7 +11,7 @@ redirect_from: ["/2023/10/07/pointwise-and-uniform-coverage-in-moment-inequality
 
 <div class="note-content" markdown="0">
 
-<p>Suppose a mean is root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} consistent, but estimating its long-run variance is difficult. <span class="citation" data-cites="leung_dependencerobust_2022">(<a href="#ref-leung_dependencerobust_2022" role="doc-biblioref">Leung 2022</a>)</span> adds random draws whose variance can be calculated conditional on the data. The resulting test works when the original sample’s error is small relative to this artificial fluctuation. As in <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">ordering-free resampling</a>, this requirement limits how many draws can be used.</p>
+<p>Suppose a mean is root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} consistent, but estimating its long-run variance is difficult. <span class="citation" data-cites="leung_dependencerobust_2022"><a href="#ref-leung_dependencerobust_2022" role="doc-biblioref">Leung (2022)</a></span> adds random draws whose variance can be calculated conditional on the data. The resulting test works when the original sample’s error is small relative to this artificial fluctuation. As in <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">ordering-free resampling</a>, this requirement limits how many draws can be used.</p>
 
 <h3 data-note-section="1" id="10-356-the-main-limit-theorem">1. The main limit theorem</h3>
 <p>Let {% raw %}<span class="math inline">\(X_i\in\mathbb R^m\)</span>{% endraw %}, with sample mean {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %} and sample covariance {% raw %}<span class="math inline">\(\widehat\Sigma=n^{-1}\sum_i(X_i-\overline X)(X_i-\overline X)&#x27;\)</span>{% endraw %}. Draw independent uniform indices {% raw %}<span class="math inline">\(I_r\)</span>{% endraw %} and independent ordered distinct pairs {% raw %}<span class="math inline">\((J_r,K_r)\)</span>{% endraw %}.</p>
@@ -55,7 +55,7 @@ Z_M(\mu_0)=
 <p>The initial root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} consistency assumption already restricts dependence. If the known convergence rate is slower, the allowable {% raw %}<span class="math inline">\(R\)</span>{% endraw %} must shrink accordingly. The artificial draws provide a tractable reference law while retaining the information limitation of the original observations.</p>
 
 <h3 data-note-section="5" id="10-356-whiten-the-empirical-distribution-first">5. Whiten the empirical distribution first</h3>
-<p>Define {% raw %}<span class="math inline">\(Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X)\)</span>{% endraw %}. Exactly, conditional on the original data,</p>
+<p>Define {% raw %}<span class="math inline">\(Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X)\)</span>{% endraw %}. Conditional on the original data, the exact expression is</p>
 
 {% raw %}<div class="math display">\[
 \frac1n\sum_iZ_i=0,\qquad
@@ -145,13 +145,13 @@ Z_M(\mu_0)=
 
 <h3 id="10-356-the-moment-bound-needed-for-the-pair-clt">The moment bound needed for the pair CLT</h3>
 <p>The pair argument does not require an empirical fourth moment to remain bounded. For {% raw %}<span class="math inline">\(r=2+\delta\)</span>{% endraw %} and {% raw %}<span class="math inline">\(M_{r,n}=n^{-1}\sum_i\|Z_i\|^r=O_p(1)\)</span>{% endraw %},</p>
-<p>{% raw %}<div class="math display">\[\mathbb E_\pi|Z_J&#39;Z_K|^r
+{% raw %}<div class="math display">\[\mathbb E_\pi|Z_J&#39;Z_K|^r
 \le\frac1{n(n-1)}\sum_{j\ne k}\|Z_j\|^r\|Z_k\|^r
-\le\frac n{n-1}M_{r,n}^2=O_p(1).\]</div>{% endraw %}</p>
+\le\frac n{n-1}M_{r,n}^2=O_p(1).\]</div>{% endraw %}
 <p>Centering preserves this moment order by {% raw %}<span class="math inline">\(|x-y|^r\le2^{r-1}(|x|^r+|y|^r)\)</span>{% endraw %}. With conditional pair variance tending to {% raw %}<span class="math inline">\(m&gt;0\)</span>{% endraw %}, the Lyapunov ratio for {% raw %}<span class="math inline">\(R\)</span>{% endraw %} independent pairs is therefore {% raw %}<span class="math inline">\(O_p(R^{-\delta/2})\)</span>{% endraw %}. It tends to zero and proves the conditional centered-pair CLT used above.</p>
 <p>The maximum bound in Section 6 is also explicit:</p>
-<p>{% raw %}<div class="math display">\[\frac{\max_i\|Z_i\|^2}{n}
-\le n^{-\delta/(2+\delta)}M_{2+\delta,n}^{2/(2+\delta)}=o_p(1).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\frac{\max_i\|Z_i\|^2}{n}
+\le n^{-\delta/(2+\delta)}M_{2+\delta,n}^{2/(2+\delta)}=o_p(1).\]</div>{% endraw %}
 <p>Thus the same {% raw %}<span class="math inline">\(2+\delta\)</span>{% endraw %} moment assumption both eliminates the discarded diagonal share and supplies the Lyapunov bound. No independence of the original observations is used in these conditional algebraic steps; their original dependence is restricted through the sample-mean and covariance premises.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">

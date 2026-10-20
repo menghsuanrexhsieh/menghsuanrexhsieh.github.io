@@ -124,7 +124,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theo
 {% raw %}<div class="math display">\[\sum_{j=2}^r\binom rj\binom{n-r}{r-j}=O(n^{r-2})\]</div>{% endraw %}
 <p>second subsets intersect it in at least two indices. With {% raw %}<span class="math inline">\(\binom nr=O(n^r)\)</span>{% endraw %} first subsets and Cauchy–Schwarz bounding every covariance by {% raw %}<span class="math inline">\(\mathbb{E}g^2\)</span>{% endraw %}, the residual variance is {% raw %}<span class="math inline">\(O(n^{-2})\)</span>{% endraw %}. Hence {% raw %}<span class="math inline">\(\sqrt n R_n\to0\)</span>{% endraw %} in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}, which justifies the stated Slutsky step.</p>
 <div id="result-5" class="example" data-note-number="5" data-note-kind="Example">
-<p><strong>Example 5</strong>.  The mean is a {% raw %}<span class="math inline">\(U\)</span>{% endraw %}-statistic of degree 1, and the kernel is {% raw %}<span class="math inline">\(h(X_i) = X_i\)</span>{% endraw %}. The {% raw %}<span class="math inline">\(U\)</span>{% endraw %}-statistic in closed form is {% raw %}<span class="math inline">\(\frac{1}{n} \sum_{1 \leq k \leq n} h(X_k)\)</span>{% endraw %}. The central limit theorem gives the (usual) asymptotic normality.</p>
+<p><strong>Example 5</strong>.  The mean is a {% raw %}<span class="math inline">\(U\)</span>{% endraw %}-statistic of degree 1, and the kernel is {% raw %}<span class="math inline">\(h(X_i) = X_i\)</span>{% endraw %}. The {% raw %}<span class="math inline">\(U\)</span>{% endraw %}-statistic in closed form is {% raw %}<span class="math inline">\(\frac{1}{n} \sum_{1 \leq k \leq n} h(X_k)\)</span>{% endraw %}. The central limit theorem gives the usual asymptotic normality.</p>
 
 </div>
 <div id="result-6" class="example" data-note-number="6" data-note-kind="Example">
@@ -132,7 +132,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theo
 
 </div>
 <div id="result-7" class="example" data-note-number="7" data-note-kind="Example">
-<p><strong>Example 7</strong> (Signed Ranked Statistic).  Let {% raw %}<span class="math inline">\(\theta = \mathop{\mathrm{\mathbf{P}}}(X_1 + X_2 &gt; 0)\)</span>{% endraw %} be the parameter of interest. The corresponding kernel function is {% raw %}<span class="math inline">\(h(x,y) = \mathbb 1 \set{x+y &gt; 0}\)</span>{% endraw %} (clearly). The {% raw %}<span class="math inline">\(U\)</span>{% endraw %}-statistic is </p>
+<p><strong>Example 7</strong> (Signed Ranked Statistic).  Let {% raw %}<span class="math inline">\(\theta = \mathop{\mathrm{\mathbf{P}}}(X_1 + X_2 &gt; 0)\)</span>{% endraw %} be the parameter of interest. The corresponding kernel function is {% raw %}<span class="math inline">\(h(x,y) = \mathbb 1 \set{x+y &gt; 0}\)</span>{% endraw %} . The {% raw %}<span class="math inline">\(U\)</span>{% endraw %}-statistic is </p>
 
 {% raw %}<div class="math display">\[\begin{aligned}
         U = \frac{1}{\binom{n}{2}} \sum_{1 \leq j \leq n} \sum_{i &lt; j} \mathbb 1 \set{X_i + X_j &gt; 0}

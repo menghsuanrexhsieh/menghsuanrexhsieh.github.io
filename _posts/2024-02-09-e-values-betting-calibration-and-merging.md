@@ -11,7 +11,7 @@ redirect_from: ["/2024/05/18/e-values-betting-calibration-and-merging/", "/2024/
 
 <div class="note-content" markdown="0">
 
-<p>Consider a nonnegative test payoff whose expected value is at most one under the null. An unusually large payoff can then occur only rarely under that null, by Markov’s inequality. Formally, an {% raw %}<span class="math inline">\(e\)</span>{% endraw %}-variable is a statistic {% raw %}<span class="math inline">\(E\)</span>{% endraw %} satisfying {% raw %}<span class="math inline">\(\mathbb{E}_PE\le1\)</span>{% endraw %} for every null distribution {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. The analyses of <span class="citation" data-cites="shafer_betting_2021 vovk_wang_evalues_2021">(<a href="#ref-shafer_betting_2021" role="doc-biblioref">Shafer 2021</a>; <a href="#ref-vovk_wang_evalues_2021" role="doc-biblioref">Vovk and Wang 2021</a>)</span> develop this expectation constraint into rules for calibration, combination, and sequential testing.</p>
+<p>Consider a nonnegative test payoff whose expected value is at most one under the null. An unusually large payoff can then occur only rarely under that null, by Markov’s inequality. Formally, an {% raw %}<span class="math inline">\(e\)</span>{% endraw %}-variable is a statistic {% raw %}<span class="math inline">\(E\)</span>{% endraw %} satisfying {% raw %}<span class="math inline">\(\mathbb{E}_PE\le1\)</span>{% endraw %} for every null distribution {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. The analyses of <span class="citation" data-cites="shafer_betting_2021 vovk_wang_evalues_2021"><a href="#ref-shafer_betting_2021" role="doc-biblioref">Shafer (2021)</a> and <a href="#ref-vovk_wang_evalues_2021" role="doc-biblioref">Vovk and Wang (2021)</a></span> develop this expectation constraint into rules for calibration, combination, and sequential testing.</p>
 
 <h3 data-note-section="1" id="25-0-the-basic-guarantee">1. The basic guarantee</h3>
 <div id="e-markov" class="proposition" data-note-number="1" data-note-kind="Proposition">
@@ -154,6 +154,6 @@ Vovk, Vladimir, and Ruodu Wang. 2021. <span>“E-Values: Calibration, Combinatio
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p></p></nav>
+
 
 </div>

@@ -87,7 +87,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
 <p>For every fixed {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %}, the preceding bound gives {% raw %}<span class="math inline">\(\limsup_n\|B_n-f\|_\infty\leq\delta(\varepsilon)\)</span>{% endraw %}. Now let {% raw %}<span class="math inline">\(\varepsilon\downarrow0\)</span>{% endraw %}. Uniform continuity gives {% raw %}<span class="math inline">\(\delta(\varepsilon)\to0\)</span>{% endraw %}, proving uniform convergence. ◻</p>
 
 </div>
-<h2 data-note-section="2" id="useful-probabilistic-inequalities">2. Useful Probabilistic (In)equalities</h2>
+<h2 data-note-section="2" id="useful-probabilistic-inequalities">2. Probabilistic inequalities and identities</h2>
 <h3 data-note-section="2.1" id="useful-preliminary-facts">2.1. Useful Preliminary Facts</h3>
 <div id="result-6" class="theorem" data-note-number="6" data-note-kind="Theorem">
 <p><strong>Theorem 6</strong>.  If {% raw %}<span class="math inline">\(\{X_n\}\)</span>{% endraw %} is a sequence of uniformly bounded random variables and {% raw %}<span class="math inline">\(X = \lim\limits_{n\to\infty} X_n\)</span>{% endraw %} with probability {% raw %}<span class="math inline">\(1\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(\mathbb{E} X = \lim\limits_{n\to\infty} \mathbb{E} X_n\)</span>{% endraw %}.</p>
@@ -181,7 +181,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
 <p><em>Proof.</em> Cauchy–Schwarz is Hölder with both exponents equal to two. For {% raw %}<span class="math inline">\(0&lt;p&lt;q\)</span>{% endraw %}, apply Hölder to {% raw %}<span class="math inline">\(|X|^p\)</span>{% endraw %} and {% raw %}<span class="math inline">\(1\)</span>{% endraw %}, with conjugate exponents {% raw %}<span class="math inline">\(q/p\)</span>{% endraw %} and {% raw %}<span class="math inline">\(q/(q-p)\)</span>{% endraw %}. This gives {% raw %}<span class="math inline">\(\mathbb{E}|X|^p\leq(\mathbb{E}|X|^q)^{p/q}\)</span>{% endraw %}; taking the positive {% raw %}<span class="math inline">\(p\)</span>{% endraw %}th root proves Lyapunov’s inequality. ◻</p>
 </div>
 <div id="lem:minkowski" class="lemma" data-note-number="14" data-note-kind="Lemma">
-<p><strong>Lemma 14</strong> (Minkowski).  For {% raw %}<span class="math inline">\(1\leq p<\infty\)</span>{% endraw %}, </p>
+<p><strong>Lemma 14</strong> (Minkowski).  For {% raw %}<span class="math inline">\(1\leq p&lt;\infty\)</span>{% endraw %}, </p>
 
 {% raw %}<div class="math display">\[(\mathbb{E}|X+Y|^p)^{\frac1p} \leq (\mathbb{E}|X|^p)^{\frac1p} + (\mathbb{E}|Y|^p)^{\frac1p} ~.\]</div>{% endraw %}
 </div>
@@ -236,7 +236,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
 
 </div>
 <h3 data-note-section="2.4" id="bounds-on-moments-of-random-series">2.4. Bounds on Moments of Random Series</h3>
-<p>We next compare moments of a sum with moments of its summands. A bound with no assumptions on dependence comes first. Let {% raw %}<span class="math inline">\(X_1,\dots,X_n\)</span>{% endraw %} denote random variables (not requiring independence or identically distributed yet). Set {% raw %}<span class="math inline">\(S_m \triangleq \sum_{1 \leq i \leq m} X_i\)</span>{% endraw %} for {% raw %}<span class="math inline">\(m \leq n\)</span>{% endraw %} to be the {% raw %}<span class="math inline">\(m\)</span>{% endraw %}th partial sum of random variables.</p>
+<p>We next compare moments of a sum with moments of its summands. A bound with no assumptions on dependence comes first. Let {% raw %}<span class="math inline">\(X_1,\dots,X_n\)</span>{% endraw %} denote random variables (not assumed to be independent or identically distributed). Set {% raw %}<span class="math inline">\(S_m \triangleq \sum_{1 \leq i \leq m} X_i\)</span>{% endraw %} for {% raw %}<span class="math inline">\(m \leq n\)</span>{% endraw %} to be the {% raw %}<span class="math inline">\(m\)</span>{% endraw %}th partial sum of random variables.</p>
 
 <p>We begin with a preliminary bound, called the {% raw %}<span class="math inline">\(c_r\)</span>{% endraw %} inequality (due to Loève).</p>
 
@@ -260,7 +260,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
 <p>Cancellation improves the bound for {% raw %}<span class="math inline">\(1\leq p\leq2\)</span>{% endraw %}. The estimates below do not extend unchanged to {% raw %}<span class="math inline">\(p&gt;2\)</span>{% endraw %}: for independent standard normal summands, {% raw %}<span class="math inline">\(\mathbb{E}|S_n|^p=n^{p/2}\mathbb{E}|X_1|^p\)</span>{% endraw %}, which cannot be bounded by a fixed constant times {% raw %}<span class="math inline">\(\sum_i\mathbb{E}|X_i|^p=n\mathbb{E}|X_1|^p\)</span>{% endraw %} when {% raw %}<span class="math inline">\(p&gt;2\)</span>{% endraw %}.</p>
 
 <div id="result-18" class="definition" data-note-number="18" data-note-kind="Definition">
-<p><strong>Definition 18</strong>.  Let {% raw %}<span class="math inline">\(X\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} be random variables. {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} conditioned by {% raw %}<span class="math inline">\(X\)</span>{% endraw %} is <em>symmetric</em> (about {% raw %}<span class="math inline">\(0\)</span>{% endraw %}) if, for all {% raw %}<span class="math inline">\(a \geq 0\)</span>{% endraw %}, </p>
+<p><strong>Definition 18</strong>.  Let {% raw %}<span class="math inline">\(X\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} be random variables. {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} conditional on {% raw %}<span class="math inline">\(X\)</span>{% endraw %} is <em>symmetric</em> (about {% raw %}<span class="math inline">\(0\)</span>{% endraw %}) if, for all {% raw %}<span class="math inline">\(a \geq 0\)</span>{% endraw %}, </p>
 
 {% raw %}<div class="math display">\[\mathop{\mathrm{\mathbf{P}}}(Y &gt; a \mid X) = \mathop{\mathrm{\mathbf{P}}}(Y &lt; -a \mid X) \quad \mathop{\mathrm{\mathrm{a.s.}}}\]</div>{% endraw %}
 </div>
@@ -305,7 +305,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
 <p>For {% raw %}<span class="math inline">\(1\leq p&lt;2\)</span>{% endraw %}, there is also a characteristic-function proof. Conditional symmetry makes the conditional characteristic function real, so the fractional-moment identity applies. The endpoint {% raw %}<span class="math inline">\(p=2\)</span>{% endraw %} follows directly by expanding the square and using conditional mean zero. Define</p>
 
 {% raw %}<div class="math display">\[f_m (t) = \mathbb{E}[\exp(itX_{m+1}) \mid S_m] ~.\]</div>{% endraw %}
-<p> This is the characteristic function of the random variable {% raw %}<span class="math inline">\(X_{m+1}\)</span>{% endraw %} conditioned by {% raw %}<span class="math inline">\(S_m\)</span>{% endraw %}, for all {% raw %}<span class="math inline">\(1 \leq m \leq n-1\)</span>{% endraw %}. By assumptions, it is clear that {% raw %}<span class="math inline">\(f_m (t)\)</span>{% endraw %} is real. Therefore, the characteristic function of {% raw %}<span class="math inline">\(S_{m+1}\)</span>{% endraw %} conditioned by {% raw %}<span class="math inline">\(S_m\)</span>{% endraw %} is given by {% raw %}<span class="math inline">\(\exp(it S_m) f_m(t)\)</span>{% endraw %}. From the arguments above, we have </p>
+<p> This is the characteristic function of the random variable {% raw %}<span class="math inline">\(X_{m+1}\)</span>{% endraw %} conditional on {% raw %}<span class="math inline">\(S_m\)</span>{% endraw %}, for all {% raw %}<span class="math inline">\(1 \leq m \leq n-1\)</span>{% endraw %}. By assumptions, it is clear that {% raw %}<span class="math inline">\(f_m (t)\)</span>{% endraw %} is real. Therefore, the characteristic function of {% raw %}<span class="math inline">\(S_{m+1}\)</span>{% endraw %} conditional on {% raw %}<span class="math inline">\(S_m\)</span>{% endraw %} is given by {% raw %}<span class="math inline">\(\exp(it S_m) f_m(t)\)</span>{% endraw %}. From the arguments above, we have </p>
 
 {% raw %}<div class="math display">\[\begin{aligned}
     \mathbb{E}[|S_{m+1}|^p \mid S_m] = K(p) \int_{-\infty}^{\infty} \frac{1 - \Re \exp(itS_m) f_m(t)}{|t|^{p+1}} \dif t ~.
@@ -392,7 +392,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
 
 </div>
 <div id="result-25" class="remark" data-note-number="25" data-note-kind="Remark">
-<p><strong>Remark 25</strong>.  Conditions required for Theorem <a href="#thm:von-bahr-esseen" data-reference-type="ref" data-reference="thm:von-bahr-esseen">23</a> are satisfied by requiring {% raw %}<span class="math inline">\(X_1,\dots,X_n\)</span>{% endraw %} to be independent and have mean zero, i.e. {% raw %}<span class="math inline">\(\mathbb{E} X_i = 0\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(1 \leq i \leq n\)</span>{% endraw %}.</p>
+<p><strong>Remark 25</strong>.  The conditions of Theorem <a href="#thm:von-bahr-esseen" data-reference-type="ref" data-reference="thm:von-bahr-esseen">23</a> hold when {% raw %}<span class="math inline">\(X_1,\dots,X_n\)</span>{% endraw %} are independent and have mean zero, i.e. {% raw %}<span class="math inline">\(\mathbb{E} X_i = 0\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(1 \leq i \leq n\)</span>{% endraw %}.</p>
 
 </div>
 

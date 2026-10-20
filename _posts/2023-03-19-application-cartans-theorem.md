@@ -23,25 +23,25 @@ note_source: "assets/notes/Differential Geometry - Notes/diff-geo.tex"
 <div id="thm:cartan" class="theorem" data-note-number="1" data-note-kind="Theorem">
 <p><strong>Theorem 1 (Cartan's local isometry theorem).</strong> Let {% raw %}<span class="math inline">\((M,g),(\widetilde M,\widetilde g)\)</span>{% endraw %} have the same dimension, and let {% raw %}<span class="math inline">\(i:T_pM\to T_{\widetilde p}\widetilde M\)</span>{% endraw %} be a linear isometry. Let {% raw %}<span class="math inline">\(U\subset T_pM\)</span>{% endraw %} be an open star-shaped neighborhood of zero such that {% raw %}<span class="math inline">\(\exp_p:U\to V\)</span>{% endraw %} is a diffeomorphism and {% raw %}<span class="math inline">\(\exp_{\widetilde p}\)</span>{% endraw %} is defined on {% raw %}<span class="math inline">\(i(U)\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(f=\exp_{\widetilde p}\circ i\circ\exp_p^{-1}\)</span>{% endraw %}.</p>
 <p>For {% raw %}<span class="math inline">\(v\in U\)</span>{% endraw %}, set {% raw %}<span class="math inline">\(\gamma_v(t)=\exp_p(tv)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\widetilde\gamma_v(t)=\exp_{\widetilde p}(tiv)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(0\leq t\leq1\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(P_t,\widetilde P_t\)</span>{% endraw %} be parallel transports from their initial points, and define</p>
-<p> {% raw %}<div class="math display">\[A_{v,t}=\widetilde P_t\circ i\circ P_t^{-1}:T_{\gamma_v(t)}M\longrightarrow T_{\widetilde\gamma_v(t)}\widetilde M.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[A_{v,t}=\widetilde P_t\circ i\circ P_t^{-1}:T_{\gamma_v(t)}M\longrightarrow T_{\widetilde\gamma_v(t)}\widetilde M.\]</div>{% endraw %}
 <p> Suppose for every such radial segment, every {% raw %}<span class="math inline">\(t\)</span>{% endraw %}, and all {% raw %}<span class="math inline">\(x,y,u,w\in T_{\gamma_v(t)}M\)</span>{% endraw %},</p>
-<p> {% raw %}<div class="math display">\[\langle R(x,y)u,w\rangle=\langle\widetilde R(A_{v,t}x,A_{v,t}y)A_{v,t}u,A_{v,t}w\rangle.\tag{1}\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\langle R(x,y)u,w\rangle=\langle\widetilde R(A_{v,t}x,A_{v,t}y)A_{v,t}u,A_{v,t}w\rangle.\tag{1}\]</div>{% endraw %}
 <p> Then {% raw %}<span class="math inline">\(f\)</span>{% endraw %} is a local isometry and {% raw %}<span class="math inline">\(df_p=i\)</span>{% endraw %}. It suffices to impose (1) at the endpoint of every radial segment, since the truncated segments give the intermediate conditions.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> Fix {% raw %}<span class="math inline">\(v\in U\)</span>{% endraw %} and abbreviate {% raw %}<span class="math inline">\(A_t=A_{v,t}\)</span>{% endraw %}. It is a linear isometry by construction, and parallel transport of the initial velocity gives {% raw %}<span class="math inline">\(A_t\gamma_v'=\widetilde\gamma_v'\)</span>{% endraw %}. It also commutes with covariant differentiation along these curves: in parallel frames both operations merely differentiate the same coefficient functions.</p>
 <p>For any {% raw %}<span class="math inline">\(w\in T_pM\)</span>{% endraw %}, varying the initial velocity yields the Jacobi field</p>
-<p> {% raw %}<div class="math display">\[J_w(t)=(d\exp_p)_{tv}(tw),\qquad J_w(0)=0,\quad J_w'(0)=w.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[J_w(t)=(d\exp_p)_{tv}(tw),\qquad J_w(0)=0,\quad J_w'(0)=w.\]</div>{% endraw %}
 <p> The curvature hypothesis and nondegeneracy of the inner product imply the vector identity</p>
-<p> {% raw %}<div class="math display">\[A_t R(\gamma_v',J_w)\gamma_v'=\widetilde R(\widetilde\gamma_v',A_tJ_w)\widetilde\gamma_v'.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[A_t R(\gamma_v',J_w)\gamma_v'=\widetilde R(\widetilde\gamma_v',A_tJ_w)\widetilde\gamma_v'.\]</div>{% endraw %}
 <p> Thus {% raw %}<span class="math inline">\(A_tJ_w\)</span>{% endraw %} satisfies the target Jacobi equation, with initial data {% raw %}<span class="math inline">\(0,iw\)</span>{% endraw %}. By uniqueness it equals {% raw %}<span class="math inline">\(\widetilde J_w(t)=(d\exp_{\widetilde p})_{tiv}(tiw)\)</span>{% endraw %}.</p>
 <p>For clarity, in parallel orthonormal frames {% raw %}<span class="math inline">\(E_j,\widetilde E_j=A_tE_j\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(J_w=y^jE_j\)</span>{% endraw %}. Both equations are precisely</p>
-<p> {% raw %}<div class="math display">\[(y^j)''+\sum_i\langle R(\gamma_v',E_i)\gamma_v',E_j\rangle y^i=0,\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[(y^j)''+\sum_i\langle R(\gamma_v',E_i)\gamma_v',E_j\rangle y^i=0,\]</div>{% endraw %}
 <p> with corresponding initial coefficients. This states explicitly why matching curvature and parallel transport, rather than only curvature at the base point, determine the metrics here.</p>
 <p>At {% raw %}<span class="math inline">\(t=1\)</span>{% endraw %}, the equality of Jacobi fields gives</p>
-<p> {% raw %}<div class="math display">\[(d\exp_{\widetilde p})_{iv}\,i=A_1(d\exp_p)_v.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[(d\exp_{\widetilde p})_{iv}\,i=A_1(d\exp_p)_v.\]</div>{% endraw %}
 <p> The source differential is invertible on {% raw %}<span class="math inline">\(U\)</span>{% endraw %}, so the chain rule yields</p>
-<p> {% raw %}<div class="math display">\[df_{\exp_p(v)}=(d\exp_{\widetilde p})_{iv}\,i\,(d\exp_p)_v^{-1}=A_1.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[df_{\exp_p(v)}=(d\exp_{\widetilde p})_{iv}\,i\,(d\exp_p)_v^{-1}=A_1.\]</div>{% endraw %}
 <p> Therefore {% raw %}<span class="math inline">\(df\)</span>{% endraw %} preserves all inner products and is invertible; the inverse function theorem gives a local diffeomorphism preserving the metric. At {% raw %}<span class="math inline">\(v=0\)</span>{% endraw %}, both exponential differentials are identities, so {% raw %}<span class="math inline">\(df_p=i\)</span>{% endraw %}. No nonsingularity of the target exponential was assumed—it follows from this calculation. ◻</p>
 </div>
 <div id="result-2" class="remark" data-note-number="2" data-note-kind="Remark">

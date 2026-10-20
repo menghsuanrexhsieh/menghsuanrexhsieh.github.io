@@ -11,7 +11,7 @@ redirect_from: ["/2025/05/08/spillover-effects-with-missing-network-links/", "/2
 
 <div class="note-content" markdown="0">
 
-<p>Suppose treatment is randomized but the observed network omits some links. A person recorded as having no treated neighbors may in fact have several. Randomization identifies the assignment probabilities; it does not reveal these missing exposures. <span class="citation" data-cites="zhang_spillovers_2024">(<a href="#ref-zhang_spillovers_2024" role="doc-biblioref">Zhang 2024</a>)</span> expresses the observed response as a mixture over the true network and derives the implications for spillover estimates.</p>
+<p>Suppose treatment is randomized but the observed network omits some links. A person recorded as having no treated neighbors may in fact have several. Randomization identifies the assignment probabilities; it does not reveal these missing exposures. <span class="citation" data-cites="zhang_spillovers_2024"><a href="#ref-zhang_spillovers_2024" role="doc-biblioref">Zhang (2024)</a></span> expresses the observed response as a mixture over the true network and derives the implications for spillover estimates.</p>
 
 <h3 data-note-section="1" id="10-520-the-latent-and-observed-regressions">1. The latent and observed regressions</h3>
 <p>Let {% raw %}<span class="math inline">\(N_i^*\)</span>{% endraw %} be true degree and {% raw %}<span class="math inline">\(S_i^*\)</span>{% endraw %} the number of treated true neighbors. Write the structural conditional mean as {% raw %}<span class="math inline">\(m^*(d,s^*,n^*,z)\)</span>{% endraw %}. We instead observe degree {% raw %}<span class="math inline">\(N_i\)</span>{% endraw %} and treated-neighbor count {% raw %}<span class="math inline">\(S_i\)</span>{% endraw %}.</p>

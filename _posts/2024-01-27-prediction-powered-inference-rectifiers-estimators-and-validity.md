@@ -11,7 +11,7 @@ redirect_from: ["/2024/01/27/prediction-powered-inference-and-the-mean-rectifier
 
 <div class="note-content" markdown="0">
 
-<p>Suppose predictions are cheap but outcome labels are scarce. Averaging predictions alone may estimate the wrong mean; a smaller labeled sample can estimate and subtract that prediction error. <span class="citation" data-cites="angelopoulos_prediction-powered_2023">(<a href="#ref-angelopoulos_prediction-powered_2023" role="doc-biblioref">Angelopoulos et al. 2023</a>)</span> extends this correction to estimating equations and confidence sets. The correction gives validity, while predictive accuracy determines the possible gain in precision.</p>
+<p>Suppose predictions are cheap but outcome labels are scarce. Averaging predictions alone may estimate the wrong mean; a smaller labeled sample can estimate and subtract that prediction error. <span class="citation" data-cites="angelopoulos_prediction-powered_2023"><a href="#ref-angelopoulos_prediction-powered_2023" role="doc-biblioref">Angelopoulos et al. (2023)</a></span> extend this correction to estimating equations and confidence sets. The correction gives validity, while predictive accuracy determines the possible gain in precision.</p>
 
 <h3 data-note-section="1" id="31-0-the-result-for-an-estimating-equation">1. The result for an estimating equation</h3>
 <p>Let {% raw %}<span class="math inline">\(\theta^*\in\mathbb R^m\)</span>{% endraw %} satisfy {% raw %}<span class="math inline">\(\mathbb{E}[g_{\theta^*}(X,Y)]=0\)</span>{% endraw %}. For a convex loss, this is the population first-order condition, provided the target is an interior minimizer with an appropriate zero-mean gradient or subgradient. Define</p>

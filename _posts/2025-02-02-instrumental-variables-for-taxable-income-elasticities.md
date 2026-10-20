@@ -10,7 +10,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticit
 
 <div class="note-content" markdown="0">
 
-<p>A tax reform changes the schedule, but a person’s realized marginal rate also changes when earnings respond. A simulated instrument holds baseline earnings fixed and applies the new schedule, removing that mechanical feedback. The remaining variation can still be related to mean reversion or differential income trends, as emphasized by <span class="citation" data-cites="gruber_elasticity_2002 weber_toward_2014">(<a href="#ref-gruber_elasticity_2002" role="doc-biblioref">Gruber and Saez 2002</a>; <a href="#ref-weber_toward_2014" role="doc-biblioref">Weber 2014</a>)</span>. The calculations below separate those identification issues from heterogeneous-effect weights.</p>
+<p>A tax reform changes the schedule, but a person’s realized marginal rate also changes when earnings respond. A simulated instrument holds baseline earnings fixed and applies the new schedule, removing that mechanical feedback. The remaining variation can still be related to mean reversion or differential income trends, as emphasized by <span class="citation" data-cites="gruber_elasticity_2002 weber_toward_2014"><a href="#ref-gruber_elasticity_2002" role="doc-biblioref">Gruber and Saez (2002)</a> and <a href="#ref-weber_toward_2014" role="doc-biblioref">Weber (2014)</a></span>. The calculations below separate those identification issues from heterogeneous-effect weights.</p>
 
 <h3 data-note-section="1" id="17-15-start-with-the-population-iv-estimand">1. Start with the population IV estimand</h3>
 <p>Write {% raw %}<span class="math inline">\(X=\Delta\log(1-\tau)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y=\Delta\log z\)</span>{% endraw %}. In a heterogeneous-elasticity model,</p>
@@ -43,7 +43,7 @@ Y=\varepsilon_iX+U.
 
 <p>Changing the lag changes both the relation to transitory shocks and the instrument’s relevance. Exogeneity must be justified for that choice; it does not follow from using an earlier observation.</p>
 
-<h3 data-note-section="4" id="17-15-a-covariance-simplification-worth-keeping">4. A covariance simplification worth keeping</h3>
+<h3 data-note-section="4" id="17-15-a-covariance-simplification-worth-keeping">4. A covariance simplification</h3>
 <p>Let {% raw %}<span class="math inline">\(\overline Z(X)=\mathbb{E}[Z\mid X]\)</span>{% endraw %}. Then</p>
 
 {% raw %}<div class="math display">\[
@@ -55,7 +55,7 @@ Y=\varepsilon_iX+U.
 
 <p>The <a href="{% post_url 2023-08-11-taxable-income-elasticities-and-what-kinks-identify %}">bunching approach</a> uses local density information and faces a different counterfactual problem. Comparing its elasticity with an IV estimate requires comparing their effect weights as well as their identifying assumptions.</p>
 
-<h3 data-note-section="5" id="17-15-deriving-the-weights-rather-than-naming-an-average">5. Deriving the weights rather than naming an average</h3>
+<h3 data-note-section="5" id="17-15-deriving-the-weights-rather-than-naming-an-average">5. Deriving the IV weights</h3>
 <p>For a binary instrument with {% raw %}<span class="math inline">\(\pi=\mathbb P(Z=1)\in(0,1)\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
@@ -156,6 +156,6 @@ Weber, Caroline E. 2014. <span>“Toward Obtaining a Consistent Estimate of the 
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p></p></nav>
+
 
 </div>

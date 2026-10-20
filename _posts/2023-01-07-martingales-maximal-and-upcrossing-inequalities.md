@@ -25,7 +25,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Martingales - Prob and S
 <li><p>{% raw %}<span class="math inline">\(\mathbb{E}[X_{n+1} \mid \mathscr F_n] = X_n\)</span>{% endraw %} with probability one.</p></li>
 </ol>
 </div>
-<p>The filtration is part of the definition: a sequence is called a martingale <em>if it is a martingale relative to some sequence of {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-fields</em>. Therefore, the sequence of {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-fields {% raw %}<span class="math inline">\(\mathscr H_n = \sigma(X_1,\dots,X_n)\)</span>{% endraw %} also works for a process already known to be a martingale. The tower property gives the required conditional expectation when we pass to this smaller filtration. This is referred to as the <em>smallest {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-fields with respect to which {% raw %}<span class="math inline">\(X_n\)</span>{% endraw %} are a martingale</em>.</p>
+<p>The filtration is part of the definition: a sequence is called a martingale <em>if it is a martingale relative to some sequence of {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-fields</em>. Therefore, the sequence of {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-fields {% raw %}<span class="math inline">\(\mathscr H_n = \sigma(X_1,\dots,X_n)\)</span>{% endraw %} also works for a process already known to be a martingale. The tower property gives the required conditional expectation when we pass to this smaller filtration. These are the <em>smallest {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-fields with respect to which the sequence {% raw %}<span class="math inline">\((X_n)\)</span>{% endraw %} is a martingale</em>.</p>
 
 <div id="result-2" class="remark" data-note-number="2" data-note-kind="Remark">
 <p><strong>Remark 2</strong>.  Note that {% raw %}<span class="math inline">\(\mathbb{E}[X_{n+1} \mid \mathscr F_n] = X_n\)</span>{% endraw %} with probability one gives rise to the following relation for all {% raw %}<span class="math inline">\(n\)</span>{% endraw %}: </p>
@@ -35,7 +35,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Martingales - Prob and S
 
 </div>
 <div id="result-3" class="remark" data-note-number="3" data-note-kind="Remark">
-<p><strong>Remark 3</strong>.  It is equivalent to give the defining conditions of a martingale using <em>differences</em>; to do so, let {% raw %}<span class="math inline">\(\Delta_n = X_n - X_{n-1}\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(\Delta_1 = X_1\)</span>{% endraw %}. Then, by linearity, the condition {% raw %}<span class="math inline">\(\mathbb{E}[X_{n+1} \mid \mathscr F_n] = X_n\)</span>{% endraw %} is equivalent to {% raw %}<span class="math inline">\(\mathbb{E}[\Delta_{n+1} \mid \mathscr F_n] = 0\)</span>{% endraw %}, by linearity. Therefore, the sets {% raw %}<span class="math inline">\(X_1, \dots, X_n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Delta_1, \dots, \Delta_n\)</span>{% endraw %} generate the <em>same</em> {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-field.</p>
+<p><strong>Remark 3</strong>.  It is equivalent to give the defining conditions of a martingale using <em>differences</em>; to do so, let {% raw %}<span class="math inline">\(\Delta_n = X_n - X_{n-1}\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(\Delta_1 = X_1\)</span>{% endraw %}. Then, by linearity, the condition {% raw %}<span class="math inline">\(\mathbb{E}[X_{n+1} \mid \mathscr F_n] = X_n\)</span>{% endraw %} is equivalent to {% raw %}<span class="math inline">\(\mathbb{E}[\Delta_{n+1} \mid \mathscr F_n] = 0\)</span>{% endraw %}. Therefore, the sets {% raw %}<span class="math inline">\(X_1, \dots, X_n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Delta_1, \dots, \Delta_n\)</span>{% endraw %} generate the <em>same</em> {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-field.</p>
 
 </div>
 <div id="result-4" class="example" data-note-number="4" data-note-kind="Example">
@@ -68,7 +68,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Martingales - Prob and S
 <li><p>{% raw %}<span class="math inline">\(\mathbb{E}[X_{n+1} \mid \mathscr F_n] \geq X_n\)</span>{% endraw %} with probability one.</p></li>
 </ol>
 </div>
-<p>By way of nomenclature, a sequence is called a <em>supermartingale</em> if {% raw %}<span class="math inline">\(\mathbb{E}[X_{n+1} \mid \mathscr F_n] \leq X_n\)</span>{% endraw %} with probability one.</p>
+<p>A sequence is called a <em>supermartingale</em> if {% raw %}<span class="math inline">\(\mathbb{E}[X_{n+1} \mid \mathscr F_n] \leq X_n\)</span>{% endraw %} with probability one.</p>
 
 <div id="prop:convex-function-martingale-submartingale" class="proposition" data-note-number="8" data-note-kind="Proposition">
 <p><strong>Proposition 8</strong>.  </p>

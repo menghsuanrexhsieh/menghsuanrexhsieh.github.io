@@ -22,17 +22,17 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 <p>We first specify the bundles and tensor fields on which these operations act. The local trivializations keep track of how a vector space varies with its base point.</p>
 
 <div id="def:vector-bundle-diff" class="definition" data-note-number="1" data-note-kind="Definition">
-<p><strong>Definition 1</strong>.  A triple {% raw %}<span class="math inline">\((\mathcal E, \Pi, M)\)</span>{% endraw %} is called a <em>differentiable vector bundle of rank {% raw %}<span class="math inline">\(n\)</span>{% endraw %}</em> if {% raw %}<span class="math inline">\(\mathcal E\)</span>{% endraw %} and {% raw %}<span class="math inline">\(M\)</span>{% endraw %} are differentiable manifolds, {% raw %}<span class="math inline">\(\Pi : \mathcal E \to M\)</span>{% endraw %} is a differentiable projection map, and each fibre {% raw %}<span class="math inline">\(\mathcal E_X \triangleq \Pi^{-1} (X)\)</span>{% endraw %} for {% raw %}<span class="math inline">\(X \in M\)</span>{% endraw %} carries the structure of a {% raw %}<span class="math inline">\(n\)</span>{% endraw %}-dimensional vector space. Furthermore, the following <em>local triviality condition</em> holds: for all {% raw %}<span class="math inline">\(X \in M\)</span>{% endraw %}, there exists a neighbourhood {% raw %}<span class="math inline">\(U\)</span>{% endraw %} and a diffeomorphism {% raw %}<span class="math inline">\(\varphi : \Pi^{-1} (U) \to U \times \mathbb R^n\)</span>{% endraw %} with the property that for all {% raw %}<span class="math inline">\(y \in U\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\varphi_y \triangleq \varphi\big|_{\mathcal E_y} : \mathcal E_y \to \{y\} \times \mathbb R^n\)</span>{% endraw %} is a vector space isomorphism. By way of nomenclature, {% raw %}<span class="math inline">\((\varphi, U)\)</span>{% endraw %} is a bundle chart.</p>
+<p><strong>Definition 1</strong>.  A triple {% raw %}<span class="math inline">\((\mathcal E, \Pi, M)\)</span>{% endraw %} is called a <em>differentiable vector bundle of rank {% raw %}<span class="math inline">\(n\)</span>{% endraw %}</em> if {% raw %}<span class="math inline">\(\mathcal E\)</span>{% endraw %} and {% raw %}<span class="math inline">\(M\)</span>{% endraw %} are differentiable manifolds, {% raw %}<span class="math inline">\(\Pi : \mathcal E \to M\)</span>{% endraw %} is a differentiable projection map, and each fibre {% raw %}<span class="math inline">\(\mathcal E_X \triangleq \Pi^{-1} (X)\)</span>{% endraw %} for {% raw %}<span class="math inline">\(X \in M\)</span>{% endraw %} carries the structure of a {% raw %}<span class="math inline">\(n\)</span>{% endraw %}-dimensional vector space. Furthermore, the following <em>local triviality condition</em> holds: for all {% raw %}<span class="math inline">\(X \in M\)</span>{% endraw %}, there exists a neighbourhood {% raw %}<span class="math inline">\(U\)</span>{% endraw %} and a diffeomorphism {% raw %}<span class="math inline">\(\varphi : \Pi^{-1} (U) \to U \times \mathbb R^n\)</span>{% endraw %} with the property that for all {% raw %}<span class="math inline">\(y \in U\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\varphi_y \triangleq \varphi\big|_{\mathcal E_y} : \mathcal E_y \to \{y\} \times \mathbb R^n\)</span>{% endraw %} is a vector space isomorphism. The pair {% raw %}<span class="math inline">\((\varphi, U)\)</span>{% endraw %} is called a bundle chart.</p>
 
 </div>
 <div id="result-2" class="definition" data-note-number="2" data-note-kind="Definition">
-<p><strong>Definition 2</strong>.  A <em>{% raw %}<span class="math inline">\(p\)</span>{% endraw %}-times contravariant, {% raw %}<span class="math inline">\(q\)</span>{% endraw %}-times covariant tensor field</em> on differentiable manifold {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is a <em>section</em> of </p>
+<p><strong>Definition 2</strong>.  A <em>{% raw %}<span class="math inline">\(p\)</span>{% endraw %}-times contravariant, {% raw %}<span class="math inline">\(q\)</span>{% endraw %}-times covariant tensor field</em> on a differentiable manifold {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is a <em>section</em> of </p>
 
 {% raw %}<div class="math display">\[\underbrace{TM \otimes \cdots \otimes TM}_{p \text{ times}} \otimes \underbrace{T^* M \otimes \cdots \otimes T^* M}_{q \text{ times}} ~.\]</div>{% endraw %}
 </div>
 <div id="result-3" class="definition" data-note-number="3" data-note-kind="Definition">
 <p><strong>Definition 3.</strong> For a finite-dimensional real vector space {% raw %}<span class="math inline">\(V\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(V^*=\operatorname{Hom}(V,\mathbb R)\)</span>{% endraw %}. The space {% raw %}<span class="math inline">\(T^r_s(V)\)</span>{% endraw %} consists of multilinear maps</p>
-<p> {% raw %}<div class="math display">\[(V^*)^r\times V^s\longrightarrow\mathbb R.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[(V^*)^r\times V^s\longrightarrow\mathbb R.\]</div>{% endraw %}
 <p> It is canonically isomorphic to {% raw %}<span class="math inline">\(V^{\otimes r}\otimes(V^*)^{\otimes s}\)</span>{% endraw %}, by evaluating each vector against the corresponding covector and each covector against the corresponding vector. In a basis, the coefficients on basis arguments determine a multilinear map uniquely, proving this identification. The space {% raw %}<span class="math inline">\(\Lambda^s(V^*)\)</span>{% endraw %} is the subspace of alternating {% raw %}<span class="math inline">\((0,s)\)</span>{% endraw %}-tensors; {% raw %}<span class="math inline">\(\Lambda^0(V^*)=\mathbb R\)</span>{% endraw %}.</p>
 </div>
 <div id="def:section-contravariant-covariant" class="definition" data-note-number="4" data-note-kind="Definition">
@@ -63,9 +63,9 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 </div>
 <div id="result-9" class="definition" data-note-number="9" data-note-kind="Definition">
 <p><strong>Definition 9 (Pullback bundle).</strong> If {% raw %}<span class="math inline">\(f:M\to N\)</span>{% endraw %} is smooth and {% raw %}<span class="math inline">\(\pi:E\to N\)</span>{% endraw %} is a rank-{% raw %}<span class="math inline">\(r\)</span>{% endraw %} smooth vector bundle, define</p>
-<p> {% raw %}<div class="math display">\[f^*E=\{(p,e)\in M\times E:\pi(e)=f(p)\},\qquad\pi_f(p,e)=p.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[f^*E=\{(p,e)\in M\times E:\pi(e)=f(p)\},\qquad\pi_f(p,e)=p.\]</div>{% endraw %}
 <p> Its fibre at {% raw %}<span class="math inline">\(p\)</span>{% endraw %} is the vector space {% raw %}<span class="math inline">\(E_{f(p)}\)</span>{% endraw %}. If a bundle chart has the form {% raw %}<span class="math inline">\(\varphi(e)=(\pi(e),\xi(e))\)</span>{% endraw %} over {% raw %}<span class="math inline">\(U\subset N\)</span>{% endraw %}, the induced chart is</p>
-<p> {% raw %}<div class="math display">\[(p,e)\longmapsto(p,\xi(e))\in f^{-1}(U)\times\mathbb R^r.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[(p,e)\longmapsto(p,\xi(e))\in f^{-1}(U)\times\mathbb R^r.\]</div>{% endraw %}
 <p> On overlaps the fibre-coordinate change is the original transition matrix evaluated at {% raw %}<span class="math inline">\(f(p)\)</span>{% endraw %}, hence is smooth and linear. These charts define the smooth vector-bundle structure. The expression {% raw %}<span class="math inline">\(\varphi\circ f\)</span>{% endraw %} alone is ill-typed, since {% raw %}<span class="math inline">\(f\)</span>{% endraw %} takes values in the base, not in {% raw %}<span class="math inline">\(E\)</span>{% endraw %}.</p>
 </div>
 <div id="result-10" class="definition" data-note-number="10" data-note-kind="Definition">
@@ -94,7 +94,7 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 <p>The Leibniz calculation below proves that the bracket is a derivation. Its smoothness is also explicit: in a chart, the second derivatives of the test function cancel, leaving coefficients {% raw %}<span class="math inline">\(X^i\partial_iY^j-Y^i\partial_iX^j\)</span>{% endraw %}, which are smooth. Thus the derivation corresponds to a smooth tangent-vector field.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Linearity follows from the definition. The product rule is the substantive check: the two mixed terms must cancel. For any {% raw %}<span class="math inline">\(f,g \in \mathscr C^\infty (M)\)</span>{% endraw %}, </p>
+<p><em>Proof.</em> Linearity follows from the definition. To verify the product rule, we show that the two mixed terms cancel. For any {% raw %}<span class="math inline">\(f,g \in \mathscr C^\infty (M)\)</span>{% endraw %}, </p>
 
 {% raw %}<div class="math display">\[\begin{aligned}
         [X,Y](fg) &amp;= XY (fg) - YX(fg) = X(f Yg + g Yf) - Y(f Xg + g Xf) \\
@@ -237,9 +237,9 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 
 <p><em>Proof of existence and uniqueness.</em> Metric compatibility gives the three identities for {% raw %}<span class="math inline">\(Xg(Y,Z)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(Yg(Z,X)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(Zg(X,Y)\)</span>{% endraw %}. Add the first two and subtract the third. Use torsion-freeness to replace {% raw %}<span class="math inline">\(\nabla_YX\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\nabla_XY-[X,Y]\)</span>{% endraw %}, and similarly for the other two interchanges. Collecting terms yields exactly twice {% raw %}<span class="math inline">\(g(\nabla_XY,Z)\)</span>{% endraw %}, which is the displayed Koszul formula. Since the metric is nondegenerate, it determines {% raw %}<span class="math inline">\(\nabla_XY\)</span>{% endraw %} uniquely.</p>
 <p>For existence, call the right-hand side {% raw %}<span class="math inline">\(K(X,Y,Z)\)</span>{% endraw %}. It is {% raw %}<span class="math inline">\(C^\infty(M)\)</span>{% endraw %}-linear in {% raw %}<span class="math inline">\(Z\)</span>{% endraw %}: expanding {% raw %}<span class="math inline">\(K(X,Y,fZ)\)</span>{% endraw %} by the product rule and {% raw %}<span class="math inline">\([X,fZ]=f[X,Z]+(Xf)Z\)</span>{% endraw %} makes every derivative-of-{% raw %}<span class="math inline">\(f\)</span>{% endraw %} term cancel. Thus {% raw %}<span class="math inline">\(Z\mapsto K(X,Y,Z)\)</span>{% endraw %} is a smooth one-form, and the inverse metric gives a unique smooth vector field {% raw %}<span class="math inline">\(\nabla_XY\)</span>{% endraw %}. Expanding the same formula gives</p>
-<p> {% raw %}<div class="math display">\[K(fX,Y,Z)=fK(X,Y,Z),\quad K(X,fY,Z)=fK(X,Y,Z)+(Xf)g(Y,Z).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[K(fX,Y,Z)=fK(X,Y,Z),\quad K(X,fY,Z)=fK(X,Y,Z)+(Xf)g(Y,Z).\]</div>{% endraw %}
 <p> It is real-bilinear in {% raw %}<span class="math inline">\(X,Y\)</span>{% endraw %}, so these identities are the connection rules. Subtracting the formula with {% raw %}<span class="math inline">\(X,Y\)</span>{% endraw %} exchanged gives {% raw %}<span class="math inline">\(K(X,Y,Z)-K(Y,X,Z)=g([X,Y],Z)\)</span>{% endraw %}, proving torsion-freeness. Adding the formulas for {% raw %}<span class="math inline">\(K(X,Y,Z)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(K(X,Z,Y)\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(Xg(Y,Z)\)</span>{% endraw %}, proving metric compatibility. In coordinate fields the brackets vanish; solving for coefficients recovers</p>
-<p> {% raw %}<div class="math display">\[\nabla_{\partial_i}\partial_j=\Gamma^k_{ij}\partial_k,\qquad \Gamma^k_{ij}=\frac12g^{k\ell}(\partial_i g_{j\ell}+\partial_jg_{i\ell}-\partial_\ell g_{ij}).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\nabla_{\partial_i}\partial_j=\Gamma^k_{ij}\partial_k,\qquad \Gamma^k_{ij}=\frac12g^{k\ell}(\partial_i g_{j\ell}+\partial_jg_{i\ell}-\partial_\ell g_{ij}).\]</div>{% endraw %}
 <p> This constructs the connection and checks every required property. ◻</p>
 </div>
 <p>Through Theorem <a href="#thm:levi-civita" data-reference-type="ref" data-reference="thm:levi-civita">19</a>, we can do two things. One, we can define a geodesic through the Levi-Civita connection {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %}.</p>
@@ -250,9 +250,9 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 </div>
 <div class="proof">
 <p><em>Proof.</em> For a vector field {% raw %}<span class="math inline">\(V=V^k(t)\partial_k\)</span>{% endraw %} along {% raw %}<span class="math inline">\(\gamma\)</span>{% endraw %}, the induced covariant derivative is</p>
-<p> {% raw %}<div class="math display">\[D_tV=\left(\dot V^k+\Gamma^k_{ij}(\gamma(t))\dot\gamma^i V^j\right)\partial_k.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[D_tV=\left(\dot V^k+\Gamma^k_{ij}(\gamma(t))\dot\gamma^i V^j\right)\partial_k.\]</div>{% endraw %}
 <p> The derivative of the component is a time derivative; there is no extra factor {% raw %}<span class="math inline">\(\dot\gamma^i\)</span>{% endraw %} in front of it. Taking {% raw %}<span class="math inline">\(V=\dot\gamma\)</span>{% endraw %} yields</p>
-<p> {% raw %}<div class="math display">\[D_t\dot\gamma=(\ddot\gamma^k+\Gamma^k_{ij}\dot\gamma^i\dot\gamma^j)\partial_k.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[D_t\dot\gamma=(\ddot\gamma^k+\Gamma^k_{ij}\dot\gamma^i\dot\gamma^j)\partial_k.\]</div>{% endraw %}
 <p> The coordinate basis is linearly independent, so this is zero exactly when each geodesic-equation component is zero. Hence the equivalence holds in both directions. ◻</p>
 </div>
 <h3 data-note-section="4" id="subsec:riemann-curvature">4. Riemann Curvature</h3>
@@ -261,7 +261,7 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 <span id="eq:riemannian-curvature-tensor"></span>
 <div id="result-21" class="definition" data-note-number="21" data-note-kind="Definition">
 <p><strong>Definition 21 (Curvature convention).</strong> We use</p>
-<p> {% raw %}<div class="math display">\[R(X,Y)Z=\nabla_Y\nabla_XZ-\nabla_X\nabla_YZ+\nabla_{[X,Y]}Z.\tag{3}\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R(X,Y)Z=\nabla_Y\nabla_XZ-\nabla_X\nabla_YZ+\nabla_{[X,Y]}Z.\tag{3}\]</div>{% endraw %}
 <p> This is the negative of the convention with {% raw %}<span class="math inline">\(\nabla_X\nabla_Y\)</span>{% endraw %} first. The plus sign before the bracket is essential with the order chosen here: it is precisely what makes the expression tensorial. With this convention, sectional curvature is {% raw %}<span class="math inline">\(g(R(X,Y)X,Y)\)</span>{% endraw %} for an orthonormal pair.</p>
 </div>
 <div id="result-22" class="proposition" data-note-number="22" data-note-kind="Proposition">
@@ -285,7 +285,7 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 </ol>
 <p><em>Proof.</em> Additivity follows from the connection rules. For multiplication in the first slot, use {% raw %}<span class="math inline">\([fX,Y]=f[X,Y]-(Yf)X\)</span>{% endraw %}. The term {% raw %}<span class="math inline">\((Yf)\nabla_XZ\)</span>{% endraw %} from {% raw %}<span class="math inline">\(\nabla_Y(f\nabla_XZ)\)</span>{% endraw %} cancels the corresponding term from the bracket. Hence {% raw %}<span class="math inline">\(R(fX,Y)Z=fR(X,Y)Z\)</span>{% endraw %}. Skew-symmetry in {% raw %}<span class="math inline">\(X,Y\)</span>{% endraw %}, immediate from Definition 21, gives the second-slot statement.</p>
 <p>For the third slot, expansion gives</p>
-<p> {% raw %}<div class="math display">\[R(X,Y)(fZ)=fR(X,Y)Z+\{Y(Xf)-X(Yf)+[X,Y]f\}Z.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R(X,Y)(fZ)=fR(X,Y)Z+\{Y(Xf)-X(Yf)+[X,Y]f\}Z.\]</div>{% endraw %}
 <p> The mixed terms {% raw %}<span class="math inline">\((Xf)\nabla_YZ\)</span>{% endraw %} and {% raw %}<span class="math inline">\((Yf)\nabla_XZ\)</span>{% endraw %} cancel before this expression is obtained. The scalar coefficient shown is zero by the definition of the Lie bracket. Therefore {% raw %}<span class="math inline">\(R\)</span>{% endraw %} is {% raw %}<span class="math inline">\(C^\infty\)</span>{% endraw %}-linear in all three slots and defines a {% raw %}<span class="math inline">\((1,3)\)</span>{% endraw %}-tensor. ◻</p>
 </div>
 <p>Since {% raw %}<span class="math inline">\(R\)</span>{% endraw %} is tensorial, it makes sense to describe it through (any) coordinates. In particular, consider the coordinate vector fields {% raw %}<span class="math inline">\(X = \dpd{}{{x^i}}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(Y = \dpd{}{{x^j}}\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(Z = \dpd{}{{x^{k}}}\)</span>{% endraw %}. This gives us a description of {% raw %}<span class="math inline">\(R\)</span>{% endraw %} in coordinates, which we denote {% raw %}<span class="math inline">\(R_{k\ell ij}\)</span>{% endraw %}.</p>
@@ -293,9 +293,9 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 <span id="eq:riemann-curvature-coordinates"></span><span id="eq:riemann-curvature-coefficients"></span>
 <div id="result-23" class="proposition" data-note-number="23" data-note-kind="Proposition">
 <p><strong>Proposition 23 (Coordinate conventions).</strong> Write</p>
-<p> {% raw %}<div class="math display">\[R(\partial_i,\partial_j)\partial_k=R^m_{ijk}\partial_m,\qquad R_{k\ell ij}:=g(R(\partial_i,\partial_j)\partial_\ell,\partial_k) =g_{km}R^m_{ij\ell}.\tag{4}\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R(\partial_i,\partial_j)\partial_k=R^m_{ijk}\partial_m,\qquad R_{k\ell ij}:=g(R(\partial_i,\partial_j)\partial_\ell,\partial_k) =g_{km}R^m_{ij\ell}.\tag{4}\]</div>{% endraw %}
 <p> Then</p>
-<p> {% raw %}<div class="math display">\[R^m_{ijk}=\partial_j\Gamma^m_{ik}-\partial_i\Gamma^m_{jk} +\Gamma^p_{ik}\Gamma^m_{jp}-\Gamma^p_{jk}\Gamma^m_{ip}.\tag{5}\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R^m_{ijk}=\partial_j\Gamma^m_{ik}-\partial_i\Gamma^m_{jk} +\Gamma^p_{ik}\Gamma^m_{jp}-\Gamma^p_{jk}\Gamma^m_{ip}.\tag{5}\]</div>{% endraw %}
 <p> The four-index order is fixed by the scalar-product definition, rather than inferred from a permutation of three-index subscripts.</p>
 </div>
 <div class="proof">
@@ -313,15 +313,15 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 <span id="prop:symmetries-first-bianchi"></span>
 <div id="prop:symmetries-riemannian-curvature-tensor" class="proposition" data-note-number="24" data-note-kind="Proposition">
 <p><strong>Proposition 24 (Curvature symmetries).</strong> For the Levi–Civita connection,</p>
-<p> {% raw %}<div class="math display">\[R(X,Y)Z=-R(Y,X)Z,\]</div>{% endraw %}</p>
-<p></p>
-<p> {% raw %}<div class="math display">\[R(X,Y)Z+R(Y,Z)X+R(Z,X)Y=0,\]</div>{% endraw %}</p>
-<p></p>
-<p> {% raw %}<div class="math display">\[g(R(X,Y)Z,W)=-g(R(X,Y)W,Z),\]</div>{% endraw %}</p>
-<p></p>
-<p> {% raw %}<div class="math display">\[g(R(X,Y)Z,W)=g(R(Z,W)X,Y).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R(X,Y)Z=-R(Y,X)Z,\]</div>{% endraw %}
+
+{% raw %}<div class="math display">\[R(X,Y)Z+R(Y,Z)X+R(Z,X)Y=0,\]</div>{% endraw %}
+
+{% raw %}<div class="math display">\[g(R(X,Y)Z,W)=-g(R(X,Y)W,Z),\]</div>{% endraw %}
+
+{% raw %}<div class="math display">\[g(R(X,Y)Z,W)=g(R(Z,W)X,Y).\]</div>{% endraw %}
 <p> In the four-index convention of Proposition 23, these read</p>
-<p> {% raw %}<div class="math display">\[R_{k\ell ij}=-R_{k\ell ji},\quad R_{k\ell ij}+R_{ki j\ell}+R_{kj\ell i}=0,\quad R_{k\ell ij}=-R_{\ell kij},\quad R_{k\ell ij}=R_{ijk\ell}.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R_{k\ell ij}=-R_{k\ell ji},\quad R_{k\ell ij}+R_{ki j\ell}+R_{kj\ell i}=0,\quad R_{k\ell ij}=-R_{\ell kij},\quad R_{k\ell ij}=R_{ijk\ell}.\]</div>{% endraw %}
 </div>
 <span id="eq:step1"></span><span id="eq:step2"></span><span id="eq:step3"></span><span id="eq:step4"></span><span id="eq:step5"></span><span id="eq:step6"></span>
 <div class="proof">
@@ -335,7 +335,7 @@ redirect_from: ["/2022/05/11/affine-connection-riemann-curvature-parallel-transp
 \end{aligned}\]</div>{% endraw %}
 <p>where the final equality is the Jacobi identity for Lie brackets.</p>
 <p>For skew-adjointness, apply the scalar operator {% raw %}<span class="math inline">\(YX-XY+[X,Y]\)</span>{% endraw %}, which is zero, to {% raw %}<span class="math inline">\(g(Z,W)\)</span>{% endraw %}. Metric compatibility expands this into</p>
-<p> {% raw %}<div class="math display">\[0=g(R(X,Y)Z,W)+g(Z,R(X,Y)W);\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[0=g(R(X,Y)Z,W)+g(Z,R(X,Y)W);\]</div>{% endraw %}
 <p> the terms involving one derivative on each of {% raw %}<span class="math inline">\(Z,W\)</span>{% endraw %} cancel between the two orders. This gives the third symmetry.</p>
 <p>To obtain pair exchange from these identities, write {% raw %}<span class="math inline">\(C(X,Y,Z,W)=g(R(X,Y)Z,W)\)</span>{% endraw %}. The first Bianchi identity and skew-symmetry in the last pair give the first equality below. Applying Bianchi to each term gives the second:</p>
 {% raw %}<div class="math display">\[\begin{aligned}
@@ -345,29 +345,29 @@ C(X,Y,Z,W)&amp;=C(Y,Z,W,X)+C(Z,X,W,Y)\\
 \end{aligned}\]</div>{% endraw %}
 <p>For the last equality, apply Bianchi to {% raw %}<span class="math inline">\((W,Y,X)\)</span>{% endraw %}, then use skew-symmetry in both pairs. Moving the final term to the left and dividing by two proves pair exchange.</p>
 <p>For pair exchange, a direct normal-coordinate computation avoids an implicit permutation argument. At a chosen point {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, {% raw %}<span class="math inline">\(g_{ij}=\delta_{ij}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\partial_k g_{ij}=0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\Gamma^m_{ij}=0\)</span>{% endraw %}. Insert the Christoffel formula into (5), then lower the output index according to (4). Cancellation of the {% raw %}<span class="math inline">\(g_{ij,k\ell}\)</span>{% endraw %} terms gives</p>
-<p> {% raw %}<div class="math display">\[R_{ijk\ell}(p)=\frac12\bigl(g_{ik,j\ell}-g_{jk,i\ell}-g_{i\ell,jk}+g_{j\ell,ik}\bigr)(p).\tag{6}\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R_{ijk\ell}(p)=\frac12\bigl(g_{ik,j\ell}-g_{jk,i\ell}-g_{i\ell,jk}+g_{j\ell,ik}\bigr)(p).\tag{6}\]</div>{% endraw %}
 <p> Here commas denote ordinary partial derivatives. Exchanging the index pairs {% raw %}<span class="math inline">\((i,j)\)</span>{% endraw %} and {% raw %}<span class="math inline">\((k,\ell)\)</span>{% endraw %} leaves this expression unchanged, using symmetry of the metric and commutation of its mixed partials. Thus the pair-exchange identity holds at {% raw %}<span class="math inline">\(p\)</span>{% endraw %}. Since both sides are tensors and {% raw %}<span class="math inline">\(p\)</span>{% endraw %} was arbitrary, it holds everywhere in every chart. This computation also independently verifies the minus signs in both skew symmetries. ◻</p>
 </div>
 <div id="prop:second-bianchi-identity" class="proposition" data-note-number="25" data-note-kind="Proposition">
 <p><strong>Proposition 25 (Second Bianchi identity).</strong> The covariant derivative of the curvature tensor satisfies</p>
-<p> {% raw %}<div class="math display">\[(\nabla_XR)(Y,Z)W+(\nabla_YR)(Z,X)W+(\nabla_ZR)(X,Y)W=0.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[(\nabla_XR)(Y,Z)W+(\nabla_YR)(Z,X)W+(\nabla_ZR)(X,Y)W=0.\]</div>{% endraw %}
 <p> The parentheses mean the tensor derivative:</p>
-<p> {% raw %}<div class="math display">\[(\nabla_XR)(Y,Z)W=\nabla_X(R(Y,Z)W)-R(\nabla_XY,Z)W-R(Y,\nabla_XZ)W-R(Y,Z)\nabla_XW.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[(\nabla_XR)(Y,Z)W=\nabla_X(R(Y,Z)W)-R(\nabla_XY,Z)W-R(Y,\nabla_XZ)W-R(Y,Z)\nabla_XW.\]</div>{% endraw %}
 <p> Without these correction terms the asserted identity is generally false for varying vector fields.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> The tensor-derivative expression is tensorial in all four arguments, so fix a point {% raw %}<span class="math inline">\(p\)</span>{% endraw %} and choose normal coordinates there. Use coordinate vectors for {% raw %}<span class="math inline">\(X,Y,Z,W\)</span>{% endraw %}. At {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, covariant differentiation of the components is ordinary partial differentiation, since all Christoffel coefficients vanish. Differentiate the general formula (5), not an identity known only at a single point. A derivative of either quadratic Christoffel term contains an undifferentiated Christoffel factor and therefore vanishes at {% raw %}<span class="math inline">\(p\)</span>{% endraw %}. Thus</p>
-<p> {% raw %}<div class="math display">\[\partial_a R^m_{bc d}(p)=\partial_a\partial_c\Gamma^m_{bd}(p)-\partial_a\partial_b\Gamma^m_{cd}(p).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\partial_a R^m_{bc d}(p)=\partial_a\partial_c\Gamma^m_{bd}(p)-\partial_a\partial_b\Gamma^m_{cd}(p).\]</div>{% endraw %}
 <p> Adding the corresponding expressions with {% raw %}<span class="math inline">\((a,b,c)\)</span>{% endraw %} replaced by {% raw %}<span class="math inline">\((b,c,a)\)</span>{% endraw %} and {% raw %}<span class="math inline">\((c,a,b)\)</span>{% endraw %} cancels all six terms by equality of mixed partial derivatives. This proves the required cyclic sum at {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, and tensoriality proves it on the manifold. ◻</p>
 </div>
 <div id="lem:covariant-derivative-symmetry" class="lemma" data-note-number="26" data-note-kind="Lemma">
 <p><strong>Lemma 26 (Commuting derivatives along a variation).</strong> Let {% raw %}<span class="math inline">\(F:(-\varepsilon,\varepsilon)\times[a,b]\to M\)</span>{% endraw %} be smooth, put {% raw %}<span class="math inline">\(S=\partial_sF\)</span>{% endraw %}, {% raw %}<span class="math inline">\(T=\partial_tF\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(V\)</span>{% endraw %} be a smooth vector field along {% raw %}<span class="math inline">\(F\)</span>{% endraw %}. Denoting the pullback covariant derivatives by {% raw %}<span class="math inline">\(D_s,D_t\)</span>{% endraw %}, our curvature convention gives</p>
-<p> {% raw %}<div class="math display">\[D_tD_sV-D_sD_tV=R(S,T)V.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[D_tD_sV-D_sD_tV=R(S,T)V.\]</div>{% endraw %}
 <p> No immersion assumption on {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is needed.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> In ambient coordinates {% raw %}<span class="math inline">\(x^i\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(F^i=x^i\circ F\)</span>{% endraw %} and {% raw %}<span class="math inline">\(V=v^k\partial_k\)</span>{% endraw %}. Then</p>
-<p> {% raw %}<div class="math display">\[(D_sv)^m=\partial_sv^m+\Gamma^m_{ik}(F)\,\partial_sF^i\,v^k,\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[(D_sv)^m=\partial_sv^m+\Gamma^m_{ik}(F)\,\partial_sF^i\,v^k,\]</div>{% endraw %}
 <p>Writing {% raw %}<span class="math inline">\(F_s^i=\partial_sF^i\)</span>{% endraw %} and {% raw %}<span class="math inline">\(F_t^j=\partial_tF^j\)</span>{% endraw %}, with all Christoffel coefficients evaluated at {% raw %}<span class="math inline">\(F(s,t)\)</span>{% endraw %}, we obtain</p>
 {% raw %}<div class="math display">\[\begin{aligned}
 (D_tD_sV)^m&amp;=\partial_{ts}v^m+(\partial_j\Gamma^m_{ik})F_t^jF_s^iv^k+\Gamma^m_{ik}F_{ts}^iv^k\\
@@ -376,32 +376,32 @@ C(X,Y,Z,W)&amp;=C(Y,Z,W,X)+C(Z,X,W,Y)\\
 &amp;\quad+\Gamma^m_{jk}F_t^j\partial_sv^k+\Gamma^m_{ip}F_s^i\partial_tv^p+\Gamma^m_{ip}\Gamma^p_{jk}F_s^iF_t^jv^k.
 \end{aligned}\]</div>{% endraw %}
 <p>Subtract the two expansions to obtain {% raw %}<span class="math inline">\(D_tD_sV-D_sD_tV\)</span>{% endraw %}. Mixed second derivatives of {% raw %}<span class="math inline">\(v\)</span>{% endraw %} cancel; the terms involving first derivatives of {% raw %}<span class="math inline">\(v\)</span>{% endraw %} also cancel; and the coefficients of {% raw %}<span class="math inline">\(\partial_{st}F^i-\partial_{ts}F^i\)</span>{% endraw %} are zero. The remaining component is</p>
-<p> {% raw %}<div class="math display">\[\partial_sF^i\,\partial_tF^j\,v^k \bigl(\partial_j\Gamma^m_{ik}-\partial_i\Gamma^m_{jk} +\Gamma^p_{ik}\Gamma^m_{jp}-\Gamma^p_{jk}\Gamma^m_{ip}\bigr).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\partial_sF^i\,\partial_tF^j\,v^k \bigl(\partial_j\Gamma^m_{ik}-\partial_i\Gamma^m_{jk} +\Gamma^p_{ik}\Gamma^m_{jp}-\Gamma^p_{jk}\Gamma^m_{ip}\bigr).\]</div>{% endraw %}
 <p> By (5) this is the {% raw %}<span class="math inline">\(m\)</span>{% endraw %}-th component of {% raw %}<span class="math inline">\(R(S,T)V\)</span>{% endraw %}. This coordinate proof takes derivatives of the pullback bundle and never treats the parameter derivatives as independent ambient coordinate fields. ◻</p>
 </div>
 <div id="result-27" class="remark" data-note-number="27" data-note-kind="Remark">
-<p><strong>Remark 27</strong>.  For the covariant derivative along a curve {% raw %}<span class="math inline">\(c:[a,b]\to M\)</span>{% endraw %}, it is frequently the case that texts write {% raw %}<span class="math inline">\(\frac{\Dif}{\Dif t}\)</span>{% endraw %} in place of {% raw %}<span class="math inline">\(\nabla_{\dif c/\!\dif t}\)</span>{% endraw %}. Wherever the context is clear, we write {% raw %}<span class="math inline">\(\nabla_{\dif/\!\dif t}\)</span>{% endraw %} for covariant derivative along curve {% raw %}<span class="math inline">\(c\)</span>{% endraw %} parametrized by {% raw %}<span class="math inline">\(t\)</span>{% endraw %} only. By analogy, in the sequel, we write {% raw %}<span class="math inline">\(\nabla_{\partial/\partial t}\)</span>{% endraw %} for covariant derivatives “in the {% raw %}<span class="math inline">\(t\)</span>{% endraw %} direction”, along variations parametrized by {% raw %}<span class="math inline">\((s,t)\)</span>{% endraw %}.</p>
+<p><strong>Remark 27</strong>.  For the covariant derivative along a curve {% raw %}<span class="math inline">\(c:[a,b]\to M\)</span>{% endraw %}, many texts write {% raw %}<span class="math inline">\(\frac{\Dif}{\Dif t}\)</span>{% endraw %} in place of {% raw %}<span class="math inline">\(\nabla_{\dif c/\!\dif t}\)</span>{% endraw %}. Wherever the context is clear, we write {% raw %}<span class="math inline">\(\nabla_{\dif/\!\dif t}\)</span>{% endraw %} for the covariant derivative along the curve {% raw %}<span class="math inline">\(c\)</span>{% endraw %} parametrized by {% raw %}<span class="math inline">\(t\)</span>{% endraw %} only. By analogy, in the sequel, we write {% raw %}<span class="math inline">\(\nabla_{\partial/\partial t}\)</span>{% endraw %} for covariant derivatives “in the {% raw %}<span class="math inline">\(t\)</span>{% endraw %} direction”, along variations parametrized by {% raw %}<span class="math inline">\((s,t)\)</span>{% endraw %}.</p>
 
 </div>
 <div id="result-28" class="remark" data-note-number="28" data-note-kind="Remark">
 <p><strong>Remark 28 (Normal-coordinate Taylor terms).</strong> The later Jacobi-field calculation gives, in the four-index convention (4),</p>
-<p> {% raw %}<div class="math display">\[g_{ij}(x)=\delta_{ij}-\frac13R_{ik\ell j}(p)x^kx^\ell+O(|x|^3).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[g_{ij}(x)=\delta_{ij}-\frac13R_{ik\ell j}(p)x^kx^\ell+O(|x|^3).\]</div>{% endraw %}
 <p> The coefficients in this polynomial are evaluated at {% raw %}<span class="math inline">\(p\)</span>{% endraw %}. Taylor's theorem for the smooth metric, including its differentiated remainders, gives</p>
-<p> {% raw %}<div class="math display">\[\partial_r g_{ij}(x)=-\frac13(R_{ir\ell j}(p)x^\ell+R_{ikrj}(p)x^k)+O(|x|^2),\]</div>{% endraw %}</p>
-<p></p>
-<p> {% raw %}<div class="math display">\[\partial_s\partial_rg_{ij}(x)=-\frac13(R_{irsj}(p)+R_{isrj}(p))+O(|x|).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\partial_r g_{ij}(x)=-\frac13(R_{ir\ell j}(p)x^\ell+R_{ikrj}(p)x^k)+O(|x|^2),\]</div>{% endraw %}
+
+{% raw %}<div class="math display">\[\partial_s\partial_rg_{ij}(x)=-\frac13(R_{irsj}(p)+R_{isrj}(p))+O(|x|).\]</div>{% endraw %}
 <p> The minus signs persist under differentiation, and the remainder order drops with each derivative. This conclusion uses a smooth Taylor remainder; differentiating an arbitrary big-O bound alone would not justify it. The next lemma is proved directly from the connection, so no circular use of this later Taylor expansion is needed.</p>
 </div>
 <span id="eq:curvature-normal-coordinates"></span>
 <div id="result-29" class="lemma" data-note-number="29" data-note-kind="Lemma">
 <p><strong>Lemma 29.</strong> In normal coordinates centred at {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(R_{ijk\ell}=g(R(\partial_k,\partial_\ell)\partial_j,\partial_i)\)</span>{% endraw %},</p>
-<p> {% raw %}<div class="math display">\[R_{ijk\ell}(p)=\frac12\left(\partial_j\partial_\ell g_{ik}-\partial_i\partial_\ell g_{jk}-\partial_j\partial_k g_{i\ell}+\partial_i\partial_k g_{j\ell}\right)(0).\tag{7}\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R_{ijk\ell}(p)=\frac12\left(\partial_j\partial_\ell g_{ik}-\partial_i\partial_\ell g_{jk}-\partial_j\partial_k g_{i\ell}+\partial_i\partial_k g_{j\ell}\right)(0).\tag{7}\]</div>{% endraw %}
 </div>
 <div class="proof">
 <p><em>Proof.</em> At the origin, the quadratic Christoffel terms vanish and {% raw %}<span class="math inline">\(g_{im}=\delta_{im}\)</span>{% endraw %}, so</p>
-<p> {% raw %}<div class="math display">\[R_{ijk\ell}=\partial_\ell\Gamma^i_{kj}-\partial_k\Gamma^i_{\ell j}.\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[R_{ijk\ell}=\partial_\ell\Gamma^i_{kj}-\partial_k\Gamma^i_{\ell j}.\]</div>{% endraw %}
 <p> Since {% raw %}<span class="math inline">\(\partial g^{im}(0)=0\)</span>{% endraw %}, differentiating the Christoffel formula at zero gives</p>
-<p> {% raw %}<div class="math display">\[\partial_\ell\Gamma^i_{kj}=\frac12(g_{ji,k\ell}+g_{ki,j\ell}-g_{kj,i\ell}),\quad \partial_k\Gamma^i_{\ell j}=\frac12(g_{ji,\ell k}+g_{\ell i,jk}-g_{\ell j,ik}).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\partial_\ell\Gamma^i_{kj}=\frac12(g_{ji,k\ell}+g_{ki,j\ell}-g_{kj,i\ell}),\quad \partial_k\Gamma^i_{\ell j}=\frac12(g_{ji,\ell k}+g_{\ell i,jk}-g_{\ell j,ik}).\]</div>{% endraw %}
 <p> Subtract; the first terms cancel by equality of mixed partials, leaving (7). For a unit sphere, this convention gives {% raw %}<span class="math inline">\(R_{1221}=1\)</span>{% endraw %}, consistent with positive sectional curvature and the negative quadratic normal-coordinate metric term. ◻</p>
 </div>
 

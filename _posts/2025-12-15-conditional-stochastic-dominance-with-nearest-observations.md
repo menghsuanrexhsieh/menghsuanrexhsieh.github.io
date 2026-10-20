@@ -11,7 +11,7 @@ redirect_from: ["/2026/01/03/conditional-stochastic-dominance-with-nearest-obser
 
 <div class="note-content" markdown="0">
 
-<p>Suppose we want to compare two outcome distributions at one covariate value. A growing sample supplies observations ever closer to that value, even if we retain only a fixed number of them. <span class="citation" data-cites="bugni_testing_2025">(<a href="#ref-bugni_testing_2025" role="doc-biblioref">Bugni, Canay, and Kim 2025</a>)</span> uses this observation to reduce conditional stochastic dominance to a finite-sample limit experiment.</p>
+<p>Suppose we want to compare two outcome distributions at one covariate value. A growing sample supplies observations ever closer to that value, even if we retain only a fixed number of them. <span class="citation" data-cites="bugni_testing_2025"><a href="#ref-bugni_testing_2025" role="doc-biblioref">Bugni, Canay, and Kim (2025)</a></span> use this observation to reduce conditional stochastic dominance to a finite-sample limit experiment.</p>
 
 <h3 data-note-section="1" id="26-77-the-result">1. The result</h3>
 <p>Observe independent i.i.d. samples from {% raw %}<span class="math inline">\((Y,Z)\)</span>{% endraw %} and {% raw %}<span class="math inline">\((X,Z)\)</span>{% endraw %}. At distinct, fixed points {% raw %}<span class="math inline">\(z_1,\ldots,z_L\)</span>{% endraw %}, the null is</p>
@@ -122,7 +122,7 @@ T(S_n)\triangleq\sup_t(\widehat F_{n,Y}(t)-\widehat F_{n,X}(t)).
 
 <p>The joint-cdf bound controls lower rectangles. It does not directly control every rank event, particularly one sensitive to ties. The <a href="{% post_url 2025-12-16-size-control-for-conditional-stochastic-dominance %}">atom-preservation calculation</a> completes that part of the validity proof.</p>
 
-<h3 data-note-section="6" id="26-77-what-is-actually-computed-and-what-more-data-buy">6. What is actually computed, and what more data buy</h3>
+<h3 data-note-section="6" id="26-77-what-is-actually-computed-and-what-more-data-buy">6. Computing the statistic and the role of sample size</h3>
 <p>To compute {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, sort the distinct retained outcomes {% raw %}<span class="math inline">\(v_1&lt;\cdots&lt;v_K\)</span>{% endraw %}. Both empirical cdfs are constant between these values, so</p>
 
 {% raw %}<div class="math display">\[

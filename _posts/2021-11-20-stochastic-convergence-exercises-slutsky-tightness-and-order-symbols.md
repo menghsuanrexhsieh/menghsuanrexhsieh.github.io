@@ -169,7 +169,7 @@ A_n+B_n=O_P(1).
 {% raw %}<div class="math display">\[
 {A_n+B_n=O_P(1).}
 \]</div>{% endraw %}
-<p>The argument uses only the triangle inequality and the union bound, so it applies to any joint distribution of the two sequences. Independence would add no useful information here.</p>
+<p>The argument uses only the triangle inequality and the union bound, so it applies to any joint distribution of the two sequences. No independence assumption is needed.</p>
 
 <p>Suppose that, for each {% raw %}<span class="math inline">\(\eta&gt;0\)</span>{% endraw %}, there exist {% raw %}<span class="math inline">\(M_0&lt;\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(N\)</span>{% endraw %} such that</p>
 
@@ -326,7 +326,7 @@ R(X_n)
 \]</div>{% endraw %}
 <p>The condition on {% raw %}<span class="math inline">\(R\)</span>{% endraw %} only controls its behavior near zero, whereas this sequence approaches {% raw %}<span class="math inline">\(1\)</span>{% endraw %}.</p>
 
-<p>The function in (ii) is Borel measurable and finite everywhere, including at {% raw %}<span class="math inline">\(h=1\)</span>{% endraw %}. Because {% raw %}<span class="math inline">\(X_n\ne0\)</span>{% endraw %}, a representation {% raw %}<span class="math inline">\(R(X_n)=Y_nX_n\)</span>{% endraw %} forces {% raw %}<span class="math inline">\(Y_n=n+1\)</span>{% endraw %}; a different choice of bounded factor cannot repair the conclusion. Lemma 2.12 requires {% raw %}<span class="math inline">\(X_n\xrightarrow{P}0\)</span>{% endraw %}, precisely the condition missing in both examples.</p>
+<p>The function in (ii) is Borel measurable and finite everywhere, including at {% raw %}<span class="math inline">\(h=1\)</span>{% endraw %}. Because {% raw %}<span class="math inline">\(X_n\ne0\)</span>{% endraw %}, a representation {% raw %}<span class="math inline">\(R(X_n)=Y_nX_n\)</span>{% endraw %} forces {% raw %}<span class="math inline">\(Y_n=n+1\)</span>{% endraw %}; choosing a different bounded factor does not make the conclusion valid. Lemma 2.12 requires {% raw %}<span class="math inline">\(X_n\xrightarrow{P}0\)</span>{% endraw %}, precisely the condition missing in both examples.</p>
 
 <h3 data-note-section="5" id="scq-orders-exercise-3">5. Multiplication by a consistent factor</h3>
 <p><strong>Question (Exercise 3).</strong> If {% raw %}<span class="math inline">\(X_n\Rightarrow \mathcal{N}(0,1)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y_n\xrightarrow{P}\sigma\)</span>{% endraw %}, show that {% raw %}<span class="math inline">\(X_nY_n\Rightarrow \mathcal{N}(0,\sigma^2)\)</span>{% endraw %}.</p>

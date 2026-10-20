@@ -11,7 +11,7 @@ redirect_from: ["/2026/03/07/size-control-in-the-dominance-limit-experiment/", "
 
 <div class="note-content" markdown="0">
 
-<p>Why should a critical value computed from uniforms control a test of conditional dominance? The nearest-observation argument of <span class="citation" data-cites="bugni_testing_2025">(<a href="#ref-bugni_testing_2025" role="doc-biblioref">Bugni, Canay, and Kim 2025</a>)</span> first gives a finite limit experiment. Within that experiment, a quantile coupling bounds every null statistic by the uniform statistic. The remaining task is to transfer that bound back to the observed sample when outcomes may tie.</p>
+<p>Why should a critical value computed from uniforms control a test of conditional dominance? The nearest-observation argument of <span class="citation" data-cites="bugni_testing_2025"><a href="#ref-bugni_testing_2025" role="doc-biblioref">Bugni, Canay, and Kim (2025)</a></span> first gives a finite limit experiment. Within that experiment, a quantile coupling bounds every null statistic by the uniform statistic. The remaining task is to transfer that bound back to the observed sample when outcomes may tie.</p>
 
 <h3 data-note-section="1" id="26-101-main-result-and-its-scope">1. Main result and its scope</h3>
 <p>Use the independent samples and fixed retained sample sizes from the <a href="{% post_url 2025-12-15-conditional-stochastic-dominance-with-nearest-observations %}">nearest-observation construction</a>. At the target {% raw %}<span class="math inline">\(z_0\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(F_Y(t)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(F_X(t)\)</span>{% endraw %} for the conditional cdfs. The statistic and critical value are</p>
@@ -36,7 +36,7 @@ T(S_n)\triangleq\sup_t(\widehat F_{n,Y}(t)-\widehat F_{n,X}(t)),
 </div>
 <p>The asymptotic assertion is pointwise in the data-generating distribution. It does not, as stated, put a supremum over distributions inside the limit. Also, {% raw %}<span class="math inline">\(\bar\alpha\)</span>{% endraw %} need not equal {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}: fixed sample sizes give a discrete rank statistic, even with continuous outcomes.</p>
 
-<h3 data-note-section="2" id="26-101-the-useful-calculation-couple-the-two-samples">2. The useful calculation: couple the two samples</h3>
+<h3 data-note-section="2" id="26-101-the-useful-calculation-couple-the-two-samples">2. Coupling the two samples</h3>
 <p>Let {% raw %}<span class="math inline">\(Q_Y,Q_X\)</span>{% endraw %} be generalized quantile functions and construct the limit observations as {% raw %}<span class="math inline">\(Y_j=Q_Y(U_j)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(X_j=Q_X(U_{q_y+j})\)</span>{% endraw %}. Define</p>
 
 {% raw %}<div class="math display">\[

@@ -11,7 +11,7 @@ redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 
 <div class="note-content" markdown="0">
 
-<p>The <a href="{% post_url 2024-04-14-the-hot-hand-statistics-for-streaks %}">streak tests</a> are ratios of dependent counts. To obtain their limiting laws, first replace each random denominator by its probability limit and identify the error from doing so. Following <span class="citation" data-cites="ritzwoller_uncertainty_2022">(<a href="#ref-ritzwoller_uncertainty_2022" role="doc-biblioref">Ritzwoller and Romano 2022</a>)</span>, this note uses the first-order terms for variance and the second-order terms for bias.</p>
+<p>The <a href="{% post_url 2024-04-14-the-hot-hand-statistics-for-streaks %}">streak tests</a> are ratios of dependent counts. To obtain their limiting laws, first replace each random denominator by its probability limit and identify the error from doing so. Following <span class="citation" data-cites="ritzwoller_uncertainty_2022"><a href="#ref-ritzwoller_uncertainty_2022" role="doc-biblioref">Ritzwoller and Romano (2022)</a></span>, this note uses the first-order terms for variance and the second-order terms for bias.</p>
 
 <h3 data-note-section="1" id="05-71-the-first-order-expansion">1. The first-order expansion</h3>
 <p>Use {% raw %}<span class="math inline">\(A_t=\prod_{j=1}^kX_{t-j}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B_t=\prod_{j=1}^k(1-X_{t-j})\)</span>{% endraw %}. Under i.i.d. Bernoulli sampling with {% raw %}<span class="math inline">\(0&lt;p&lt;1\)</span>{% endraw %}, the eligible-count averages converge to {% raw %}<span class="math inline">\(p^k\)</span>{% endraw %} and {% raw %}<span class="math inline">\((1-p)^k\)</span>{% endraw %}. Consequently</p>
@@ -80,7 +80,7 @@ redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 
 <p>The omitted product has smaller stochastic order than the leading fluctuation, but its expectation can be nonzero. This is why a correct first-order normal approximation can coexist with finite-sample bias.</p>
 
-<h3 data-note-section="6" id="05-71-checking-the-martingale-variance-carefully">6. Checking the martingale variance carefully</h3>
+<h3 data-note-section="6" id="05-71-checking-the-martingale-variance-carefully">6. The martingale variance calculation</h3>
 <p>Write {% raw %}<span class="math inline">\(H_t=A_t/p^k-1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(W_t=(X_t-p)H_t\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(s&lt;t\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(W_s\)</span>{% endraw %} and {% raw %}<span class="math inline">\(H_t\)</span>{% endraw %} are measurable with respect to {% raw %}<span class="math inline">\(\mathcal F_{t-1}\)</span>{% endraw %}. Thus</p>
 
 {% raw %}<div class="math display">\[
@@ -173,16 +173,16 @@ h_{uv}=-v^{-2},\qquad h_{vv}=2u v^{-3}.
 
 <h3 id="05-71-completing-the-expectation-remainder">Completing the expectation remainder</h3>
 <p>Here is a direct justification of the bias coefficient, with any fixed bounded value assigned when {% raw %}<span class="math inline">\(\overline A=0\)</span>{% endraw %}. Put {% raw %}<span class="math inline">\(E_m=\{|\overline A-q|\le q/2\}\)</span>{% endraw %}. Split the run indicators into their {% raw %}<span class="math inline">\(k\)</span>{% endraw %} residue classes: indicators in one class depend on disjoint blocks of tosses and are independent. A union bound and the bounded-variable exponential inequality give {% raw %}<span class="math inline">\(\mathbb P(E_m^c)\le C e^{-cm}\)</span>{% endraw %} for fixed {% raw %}<span class="math inline">\(p,k\)</span>{% endraw %}, with constants depending on them. The same splitting, or expansion of a fourth moment, gives</p>
-<p>{% raw %}<div class="math display">\[\mathbb E(\overline A-q)^4=O(m^{-2}),\qquad \mathbb E\overline Z^2=O(m^{-1}).\]</div>{% endraw %}</p>
+{% raw %}<div class="math display">\[\mathbb E(\overline A-q)^4=O(m^{-2}),\qquad \mathbb E\overline Z^2=O(m^{-1}).\]</div>{% endraw %}
 <p>For the fourth-moment bound, expand the fourth power of a sum of centered bounded independent variables within a residue class. Only terms in which each index occurs at least twice survive, giving {% raw %}<span class="math inline">\(O(m^2)\)</span>{% endraw %} terms before division by {% raw %}<span class="math inline">\(m^4\)</span>{% endraw %}. Combining the finitely many classes preserves the order. The second-moment bound follows from the martingale covariances already computed.</p>
 <p>On {% raw %}<span class="math inline">\(E_m\)</span>{% endraw %}, the absolute expectation of the exact remainder is at most</p>
-<p>{% raw %}<div class="math display">\[\frac{2}{q^3}\mathbb E\{|\overline Z|(\overline A-q)^2\}
+{% raw %}<div class="math display">\[\frac{2}{q^3}\mathbb E\{|\overline Z|(\overline A-q)^2\}
 \le \frac{2}{q^3}(\mathbb E\overline Z^2)^{1/2}
-(\mathbb E(\overline A-q)^4)^{1/2}=O(m^{-3/2}).\]</div>{% endraw %}</p>
+(\mathbb E(\overline A-q)^4)^{1/2}=O(m^{-3/2}).\]</div>{% endraw %}
 <p>On {% raw %}<span class="math inline">\(E_m^c\)</span>{% endraw %}, work with the original bounded ratio minus its first two Taylor terms. All three terms are uniformly bounded for fixed {% raw %}<span class="math inline">\(q&gt;0\)</span>{% endraw %}, so their expectation over that event is {% raw %}<span class="math inline">\(O(e^{-cm})\)</span>{% endraw %}. This also covers the zero-denominator convention. Therefore</p>
-<p>{% raw %}<div class="math display">\[\mathbb E\widehat P_k-p=\frac{p(1-p^{-k})}{m}+o(m^{-1})
-=\frac{p(1-p^{-k})}{n}+o(n^{-1}).\]</div>{% endraw %}</p>
-<p>This argument proves the leading term; it does not claim the stronger {% raw %}<span class="math inline">\(O(n^{-2})\)</span>{% endraw %} remainder written in the archival Taylor sketch. The negative covariance sign in the mixed Hessian term is essential.</p>
+{% raw %}<div class="math display">\[\mathbb E\widehat P_k-p=\frac{p(1-p^{-k})}{m}+o(m^{-1})
+=\frac{p(1-p^{-k})}{n}+o(n^{-1}).\]</div>{% endraw %}
+<p>This argument proves the leading term; it does not claim the stronger {% raw %}<span class="math inline">\(O(n^{-2})\)</span>{% endraw %} remainder suggested by a formal Taylor expansion. The negative covariance sign in the mixed Hessian term is essential.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-ritzwoller_uncertainty_2022" class="csl-entry" role="listitem">

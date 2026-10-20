@@ -11,7 +11,7 @@ redirect_from: ["/2024/09/07/the-tf-test-and-weak-instrument-inference/", "/2024
 
 <div class="note-content" markdown="0">
 
-<p>The usual IV {% raw %}<span class="math inline">\(t\)</span>{% endraw %} statistic divides by a quantity estimated using the first stage. When that stage is weak, the resulting null distribution can differ substantially from the normal approximation. The {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} procedure of <span class="citation" data-cites="lee_valid_2022">(<a href="#ref-lee_valid_2022" role="doc-biblioref">Lee et al. 2022</a>)</span> uses the reported first-stage {% raw %}<span class="math inline">\(F\)</span>{% endraw %} to choose a critical value that accounts for this distortion.</p>
+<p>The usual IV {% raw %}<span class="math inline">\(t\)</span>{% endraw %} statistic divides by a quantity estimated using the first stage. When that stage is weak, the resulting null distribution can differ substantially from the normal approximation. The {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} procedure of <span class="citation" data-cites="lee_valid_2022"><a href="#ref-lee_valid_2022" role="doc-biblioref">Lee et al. (2022)</a></span> uses the reported first-stage {% raw %}<span class="math inline">\(F\)</span>{% endraw %} to choose a critical value that accounts for this distortion.</p>
 
 <h3 data-note-section="1" id="24-0-a-useful-identity">1. A useful identity</h3>
 <p>Let {% raw %}<span class="math inline">\(\widehat\Gamma\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\pi\)</span>{% endraw %} be the reduced-form and first-stage coefficients, so {% raw %}<span class="math inline">\(\widehat\beta=\widehat\Gamma/\widehat\pi\)</span>{% endraw %}. Under {% raw %}<span class="math inline">\(H_0:\beta=\beta_0\)</span>{% endraw %}, write</p>
@@ -159,6 +159,6 @@ Lee, David S., Justin McCrary, Marcelo J. Moreira, and Jack Porter. 2022. <span>
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p></p></nav>
+
 
 </div>

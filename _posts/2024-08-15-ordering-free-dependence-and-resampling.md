@@ -11,7 +11,7 @@ redirect_from: ["/2024/08/15/ordering-free-inference-for-weakly-dependent-data/"
 
 <div class="note-content" markdown="0">
 
-<p>A block bootstrap needs to know which observations belong together. If dependence has no observed ordering, that choice may be unavailable. <span class="citation" data-cites="song_ordering-free_2018">(<a href="#ref-song_ordering-free_2018" role="doc-biblioref">Song 2018</a>)</span> instead draws small random subsets and builds a statistic whose randomization law can be controlled when dependence is weak on average.</p>
+<p>A block bootstrap needs to know which observations belong together. If dependence has no observed ordering, that choice may be unavailable. <span class="citation" data-cites="song_ordering-free_2018"><a href="#ref-song_ordering-free_2018" role="doc-biblioref">Song (2018)</a></span> instead draws small random subsets and builds a statistic whose randomization law can be controlled when dependence is weak on average.</p>
 
 <h3 data-note-section="1" id="10-235-measure-how-often-dependence-matters">1. Measure how often dependence matters</h3>
 <p>The dependence coefficients average over index sets, so relabeling observations changes none of them. This allows assumptions about the frequency of dependence without locating each dependent pair. A time-series mixing coefficient uses different information: separation in a known temporal order.</p>

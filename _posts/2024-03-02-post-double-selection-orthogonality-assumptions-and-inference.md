@@ -140,16 +140,16 @@ D&#x27;MD=v&#x27;v-v&#x27;Pv+2v&#x27;r_m+r_m&#x27;r_m.
 <h3 id="19-0-the-remaining-correlations-with-selected-model-errors">The remaining correlations with selected-model errors</h3>
 <p>The two terms {% raw %}<span class="math inline">\(r_m&#39;\zeta\)</span>{% endraw %} and {% raw %}<span class="math inline">\(v&#39;r_g\)</span>{% endraw %} need an argument beyond the product bound. Here is one sufficient version, under independent observations, bounded conditional error variances, and the simultaneous sparse-projection bound already established. Write {% raw %}<span class="math inline">\(m=X\beta_m+a_m\)</span>{% endraw %} with oracle support of size at most {% raw %}<span class="math inline">\(s\)</span>{% endraw %}, and suppose both {% raw %}<span class="math inline">\(\|a_m\|_{2,n}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\|r_m\|_{2,n}\)</span>{% endraw %} are {% raw %}<span class="math inline">\(O_p(r_n)\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(r_n=\sqrt{s\log(p\vee n)/n}\)</span>{% endraw %}. Use the same approximation for {% raw %}<span class="math inline">\(g\)</span>{% endraw %}.</p>
 <p>Let {% raw %}<span class="math inline">\(A\)</span>{% endraw %} be the span of the selected dictionary columns together with the oracle support for {% raw %}<span class="math inline">\(m\)</span>{% endraw %}. Its dimension is {% raw %}<span class="math inline">\(O(s)\)</span>{% endraw %}. The vector {% raw %}<span class="math inline">\(MX\beta_m\)</span>{% endraw %} lies in {% raw %}<span class="math inline">\(A\)</span>{% endraw %}, even though the choice of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} is random, and</p>
-<p>{% raw %}<div class="math display">\[
+{% raw %}<div class="math display">\[
 \|MX\beta_m\|_{2,n}
 \leq\|r_m\|_{2,n}+\|Ma_m\|_{2,n}=O_p(r_n).
-\]</div>{% endraw %}</p>
+\]</div>{% endraw %}
 <p>The score bound holds simultaneously over all such supports, so {% raw %}<span class="math inline">\(\|P_A\zeta\|_{2,n}=O_p(r_n)\)</span>{% endraw %}. Consequently</p>
-<p>{% raw %}<div class="math display">\[
+{% raw %}<div class="math display">\[
 \frac{|(MX\beta_m)&#39;\zeta|}{\sqrt n}
 \leq\sqrt n\|MX\beta_m\|_{2,n}\|P_A\zeta\|_{2,n}
 =O_p(\sqrt n r_n^2)=o_p(1).
-\]</div>{% endraw %}</p>
+\]</div>{% endraw %}
 <p>For the approximation residual, decompose {% raw %}<span class="math inline">\(a_m&#39;M\zeta=a_m&#39;\zeta-a_m&#39;P\zeta\)</span>{% endraw %}. Conditional on the covariates, {% raw %}<span class="math inline">\(a_m\)</span>{% endraw %} is fixed and the first term divided by {% raw %}<span class="math inline">\(\sqrt n\)</span>{% endraw %} has mean zero and variance at most {% raw %}<span class="math inline">\(C\|a_m\|_{2,n}^2=o_p(1)\)</span>{% endraw %}. Conditional Chebyshev, restricting first to events where this norm is small, makes it {% raw %}<span class="math inline">\(o_p(1)\)</span>{% endraw %}. The second term divided by {% raw %}<span class="math inline">\(\sqrt n\)</span>{% endraw %} is bounded by {% raw %}<span class="math inline">\(\sqrt n\|a_m\|_{2,n}\|P\zeta\|_{2,n}=O_p(\sqrt n r_n^2)\)</span>{% endraw %}. This proves {% raw %}<span class="math inline">\(r_m&#39;\zeta/\sqrt n=o_p(1)\)</span>{% endraw %}.</p>
 <p>The identical decomposition of {% raw %}<span class="math inline">\(r_g\)</span>{% endraw %} uses {% raw %}<span class="math inline">\(\mathbb E[v\mid Z]=0\)</span>{% endraw %} and the sparse-projection bound for {% raw %}<span class="math inline">\(v\)</span>{% endraw %} to prove {% raw %}<span class="math inline">\(v&#39;r_g/\sqrt n=o_p(1)\)</span>{% endraw %}. All four numerator remainders are now controlled. These sufficient bounded-variance conditions explain the mechanism; the paper’s more general uniform theorem uses its stated moment and approximation conditions. Conditioning on the selected model itself would not justify either calculation.</p>
 

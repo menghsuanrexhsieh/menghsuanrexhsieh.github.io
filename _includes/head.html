@@ -3,7 +3,11 @@
 <meta name="theme-color" content="#faf8ee">
 
 <!-- SEO tags (title, description, Open Graph, Twitter cards) -->
-{% seo %}
+{% capture seo_tags %}{% seo %}{% endcapture %}
+{% comment %}jekyll-seo-tag 2.8 emits the author meta attribute without HTML escaping.{% endcomment %}
+{% capture author_meta %}<meta name="author" content="{{ site.author }}" />{% endcapture %}
+{% capture escaped_author_meta %}<meta name="author" content="{{ site.author | escape }}" />{% endcapture %}
+{{ seo_tags | replace: author_meta, escaped_author_meta }}
 
 <!-- Set the theme before paint to avoid a flash of the wrong colors -->
 <script>

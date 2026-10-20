@@ -11,7 +11,7 @@ redirect_from: ["/2022/05/07/absolute-continuity-and-contiguity/", "/2022/05/07/
 
 <div class="note-content" markdown="0">
 
-<p>Contiguity becomes useful when the data-generating law changes with the sample size. A calculation made under one law can then remain valid under nearby alternatives, even though the limiting distribution of the statistic changes. We will keep the two tasks separate: transferring a negligible error and calculating a new limiting law.</p>
+<p>Contiguity becomes useful when the data-generating law changes with the sample size. A calculation made under one law can then remain valid under nearby alternatives, even though the limiting distribution of the statistic changes. This involves two steps: transferring a negligible error and calculating the new limiting law.</p>
 
 <p>We will start with a calibration problem, prove the three Le Cam lemmas, and then prove the argmax theorem. The last theorem answers a different question: how convergence of an entire objective function determines the limit of its maximizer. Together, these results explain how to derive an estimator’s law under local alternatives without repeating its analysis from the beginning.</p>
 
@@ -662,7 +662,7 @@ M_n(h)=-h^2+2\mathbf1_{\{h=c_n\}}.
 {% raw %}<div class="math display">\[
 M_n(h)=-h^2+(n^2+1)\mathbf1_{\{h=n\}}.
 \]</div>{% endraw %}
-<p>Every fixed compact eventually sees exactly {% raw %}<span class="math inline">\(-h^2\)</span>{% endraw %}, but the global maximizer is {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Compact containment is therefore a separate assertion to prove, usually through a rate bound or a bound on the objective outside a large ball.</p>
+<p>On every fixed compact set, the criterion eventually equals {% raw %}<span class="math inline">\(-h^2\)</span>{% endraw %}, but the global maximizer is {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Compact containment is therefore a separate assertion to prove, usually through a rate bound or a bound on the objective outside a large ball.</p>
 
 <h3 data-note-section="9" id="08-0-argmax-applications">9. Two applications: consistency and a local Gaussian law</h3>
 <p>For consistency, let {% raw %}<span class="math inline">\(M\)</span>{% endraw %} be deterministic with a well-separated maximizer {% raw %}<span class="math inline">\(\theta_0\)</span>{% endraw %}:</p>
@@ -743,6 +743,6 @@ Vaart, Aad W. van der, and Jon A. Wellner. 2000. <em>Weak Convergence and Empiri
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p></p></nav>
+
 
 </div>

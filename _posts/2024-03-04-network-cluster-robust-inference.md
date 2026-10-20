@@ -11,7 +11,7 @@ redirect_from: ["/2025/06/03/network-cluster-robust-inference/"]
 
 <div class="note-content" markdown="0">
 
-<p>A cluster test needs group scores that are approximately independent. Dividing a network into named groups does not ensure this: links crossing a boundary may transmit dependence between their averages. <span class="citation" data-cites="leung_network_2023">(<a href="#ref-leung_network_2023" role="doc-biblioref">Leung 2023</a>)</span> gives conditions connecting the geometry of a partition to the stochastic independence needed for inference.</p>
+<p>A cluster test needs group scores that are approximately independent. Dividing a network into named groups does not ensure this: links crossing a boundary may transmit dependence between their averages. <span class="citation" data-cites="leung_network_2023"><a href="#ref-leung_network_2023" role="doc-biblioref">Leung (2023)</a></span> gives conditions connecting the geometry of a partition to the stochastic independence needed for inference.</p>
 
 <h3 data-note-section="1" id="12-108-the-inferential-requirement">1. The inferential requirement</h3>
 <p>Let {% raw %}<span class="math inline">\(g(W_i,\theta_0)\)</span>{% endraw %} be a centered moment function on an observed network, and let {% raw %}<span class="math inline">\(\mathcal C_1,\ldots,\mathcal C_L\)</span>{% endraw %} be a partition. Define {% raw %}<span class="math inline">\(\widehat G_\ell=n_\ell^{-1}\sum_{i\in\mathcal C_\ell}g(W_i,\theta_0)\)</span>{% endraw %}.</p>
@@ -131,9 +131,9 @@ h_i=\begin{cases}
 
 <h3 id="12-108-why-zero-limiting-covariance-is-enough-only-after-the-clt">Why zero limiting covariance is enough only after the CLT</h3>
 <p>Suppose the normalized cluster vector converges jointly to a centered Gaussian vector {% raw %}<span class="math inline">\(Z=(Z_1&#39;,\ldots,Z_L&#39;)&#39;\)</span>{% endraw %} with block covariance {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %}. If the boundary calculation makes every off-diagonal block zero, its characteristic function factorizes:</p>
-<p>{% raw %}<div class="math display">\[\mathbb E e^{i\sum_\ell t_\ell&#39;Z_\ell}
+{% raw %}<div class="math display">\[\mathbb E e^{i\sum_\ell t_\ell&#39;Z_\ell}
 =\exp\left(-\frac12\sum_\ell t_\ell&#39;\Sigma_{\ell\ell}t_\ell\right)
-=\prod_\ell\mathbb E e^{it_\ell&#39;Z_\ell}.\]</div>{% endraw %}</p>
+=\prod_\ell\mathbb E e^{it_\ell&#39;Z_\ell}.\]</div>{% endraw %}
 <p>This factorization proves independence of the limiting blocks. Centered Gaussian blocks are separately invariant under sign changes, giving the limiting symmetry required by a cluster sign test. Without joint Gaussian convergence, covariance zero alone is insufficient: if {% raw %}<span class="math inline">\(U\)</span>{% endraw %} is standard normal, {% raw %}<span class="math inline">\(U\)</span>{% endraw %} and {% raw %}<span class="math inline">\(U^2-1\)</span>{% endraw %} are uncorrelated but dependent. The partition argument must therefore be combined with the joint CLT, not substituted for it.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
