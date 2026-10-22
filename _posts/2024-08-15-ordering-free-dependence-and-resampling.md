@@ -3,7 +3,7 @@ layout: "post"
 title: "Ordering-Free Dependence and Resampling"
 date: "2024-08-15"
 tags: ["econometrics", "networks"]
-excerpt: "When the ordering of dependence is unknown, a block bootstrap may be impossible to implement: there is no reliable way to choose blocks that preserve the dependence."
+excerpt: "Randomized subsampling creates a tractable reference distribution; local dependence limits how strongly aggregation can amplify the original sample-mean error."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2024/08/15/ordering-free-inference-for-weakly-dependent-data/", "/2024/09/01/ordering-free-local-dependence/"]
@@ -11,285 +11,310 @@ redirect_from: ["/2024/08/15/ordering-free-inference-for-weakly-dependent-data/"
 
 <div class="note-content" markdown="0">
 
-<p>A block bootstrap needs to know which observations belong together. If dependence has no observed ordering, that choice may be unavailable. <span class="citation" data-cites="song_ordering-free_2018"><a href="#ref-song_ordering-free_2018" role="doc-biblioref">Song (2018)</a></span> instead draws small random subsets and builds a statistic whose randomization law can be controlled when dependence is weak on average.</p>
+<p>Suppose that observations are connected through an unobserved network. Their average may estimate a population mean accurately, even though we do not know which observations move together. The difficulty is inference: estimating the variance of the average ordinarily requires information about those connections. A block bootstrap faces the same problem because the dependence structure determines which observations should be resampled together.</p>
 
-<h3 data-note-section="1" id="10-235-measure-how-often-dependence-matters">1. Measure how often dependence matters</h3>
-<p>The dependence coefficients average over index sets, so relabeling observations changes none of them. This allows assumptions about the frequency of dependence without locating each dependent pair. A time-series mixing coefficient uses different information: separation in a known temporal order.</p>
+<p><span class="citation" data-cites="song_ordering-free_2018"><a href="#ref-song_ordering-free_2018" role="doc-biblioref">Song (2018)</a></span> constructs a statistic by repeatedly drawing small random subsets. Conditional on the observed sample, the draws are independent across repetitions and their distribution is under our control. The original data still matter through the error in the sample mean. The method works when this error, after aggregation, is small relative to the variation introduced by resampling.</p>
 
-<p>Write {% raw %}<span class="math inline">\(X_1,\ldots,X_n\in\mathbb R^p\)</span>{% endraw %}, suppressing the triangular-array subscript. Start with the case without a common shock. For disjoint nonempty sets {% raw %}<span class="math inline">\(A_1,A_2\)</span>{% endraw %}, define</p>
+<p>This decomposition explains both the validity of the procedure and its cost. Increasing the number of repetitions strengthens the response to a false null, but also magnifies the error in the original sample. The mean-type statistic carries that error linearly. The U-type statistic makes its conditional mean depend on the squared error, allowing more repetitions under comparable dependence conditions. The proof combines these algebraic observations with bounds on how frequently small sets of observations are dependent.</p>
 
-{% raw %}<div class="math display">\[
-c_n(A_1,A_2)\triangleq
-\sup_{f\in\mathcal F_{|A_1|},\,g\in\mathcal F_{|A_2|}}
-\left|\operatorname{Corr}(f(X_{A_1}),g(X_{A_2}))\right|.
-\]</div>{% endraw %}
-<p>The function classes specify which forms of dependence matter. Take them to be invariant under permutations of their arguments, with square-integrable evaluations; a zero-variance correlation is assigned value zero. The paper uses coordinate monomials up to a fixed degree for its moment arguments.</p>
+<h3 data-note-section="1" id="ordering-free-construction">1. Constructing the randomized statistic</h3>
 
-<p>Let {% raw %}<span class="math inline">\(\mathcal P(A)\)</span>{% endraw %} denote the partitions of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} into two nonempty sets. For {% raw %}<span class="math inline">\(|A|\ge2\)</span>{% endraw %}, put</p>
+<p>Let {% raw %}<span class="math inline">\(X_1,\ldots,X_n\in\mathbb R^p\)</span>{% endraw %}, with fixed {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, have a common mean {% raw %}<span class="math inline">\(\mu_0\)</span>{% endraw %}. We suppress the triangular-array subscript and initially work without a common shock. Define</p>
 
 {% raw %}<div class="math display">\[
-c_n(A)\triangleq\min_{\{A_1,A_2\}\in\mathcal P(A)}c_n(A_1,A_2),
+\overline X=\frac1n\sum_{i=1}^nX_i,
 \qquad
-\lambda_n(k)\triangleq\binom nk^{-1}\sum_{|A|=k}c_n(A).
+\widehat\Sigma=\frac1n\sum_{i=1}^n
+(X_i-\overline X)(X_i-\overline X)'.
 \]</div>{% endraw %}
-<p>The minimum asks whether there is at least one independent split of the selected set. Such a split makes {% raw %}<span class="math inline">\(c_n(A)=0\)</span>{% endraw %}, even if some observations within {% raw %}<span class="math inline">\(A\)</span>{% endraw %} are dependent. It does not compare the set with its complement in the sample. The singleton convention is {% raw %}<span class="math inline">\(c_n(A)=1\)</span>{% endraw %}, so decay assertions begin at {% raw %}<span class="math inline">\(k\ge2\)</span>{% endraw %}.</p>
 
-<p>To recover the permutation definition, each {% raw %}<span class="math inline">\(k\)</span>{% endraw %}-element set appears as the first {% raw %}<span class="math inline">\(k\)</span>{% endraw %} entries of exactly {% raw %}<span class="math inline">\(k!(n-k)!\)</span>{% endraw %} permutations. Thus</p>
+<p>The matrix {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} standardizes variation across observations in the empirical distribution. It does not estimate all the cross-observation covariances in</p>
 
 {% raw %}<div class="math display">\[
-\frac1{n!}\sum_\pi c_n(\{\pi(1),\ldots,\pi(k)\})
-=\frac{k!(n-k)!}{n!}\sum_{|A|=k}c_n(A)
-=\lambda_n(k).
+\operatorname{Var}(\sqrt n\,\overline X)
+=\frac1n\sum_{i,j=1}^n\operatorname{Cov}(X_i,X_j).
 \]</div>{% endraw %}
-<p>If {% raw %}<span class="math inline">\(Y_i=X_{\sigma(i)}\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(c_n^Y(A)=c_n^X(\sigma(A))\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(A\mapsto\sigma(A)\)</span>{% endraw %} is a bijection on the {% raw %}<span class="math inline">\(k\)</span>{% endraw %}-element sets, the last average is unchanged. This is the precise sense in which the coefficient is ordering-free.</p>
 
-<p>The conditional version replaces correlations by correlations given {% raw %}<span class="math inline">\(\mathcal C_n\)</span>{% endraw %}. Its mean-inference setup also requires {% raw %}<span class="math inline">\(\mathbb{E}[X_i\mid\mathcal C_n]=\mu_0\)</span>{% endraw %}: a common shock cannot shift the mean being tested arbitrarily.</p>
+<p>That distinction is the reason to change the statistic. We will calibrate its resampling variation directly, while requiring the contribution of the original sample mean to vanish.</p>
 
-<div id="ordering-free-graph" class="proposition" data-note-number="1" data-note-kind="Proposition">
-<p><strong>Proposition 1</strong>. Suppose {% raw %}<span class="math inline">\(G_n\)</span>{% endraw %} is a dependency graph: whenever two disjoint vertex sets have no edges between them, their observation vectors are independent. If its maximum degree is {% raw %}<span class="math inline">\(d_n\)</span>{% endraw %}, then for each fixed {% raw %}<span class="math inline">\(k\ge2\)</span>{% endraw %} and sufficiently large {% raw %}<span class="math inline">\(n\)</span>{% endraw %},</p>
+<p>For each repetition {% raw %}<span class="math inline">\(r=1,\ldots,R\)</span>{% endraw %}, independently draw a uniform permutation {% raw %}<span class="math inline">\(\pi_r\)</span>{% endraw %} of the observation indices and retain its first {% raw %}<span class="math inline">\(b\)</span>{% endraw %} entries. Here {% raw %}<span class="math inline">\(b=b_n\)</span>{% endraw %} is the subsample size and {% raw %}<span class="math inline">\(R=R_n\)</span>{% endraw %} is the number of repetitions used to construct one statistic. Sampling is without replacement within a repetition; different repetitions can reuse observations. The permutations are independent of the data. Throughout, {% raw %}<span class="math inline">\(\mathbb E_\pi\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\operatorname{Var}_\pi\)</span>{% endraw %} condition on the entire observed sample.</p>
+
+<p>For a candidate mean {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %}, the mean contribution and its aggregate are</p>
 
 {% raw %}<div class="math display">\[
-\lambda_n(k)\le C_k n^{-(k-1)}d_n^{k-1}.
+M_r(\mu)=\frac1{\sqrt{pb}}\sum_{j=1}^b
+\widehat\Sigma^{-1/2}(X_{\pi_r(j)}-\mu),
+\qquad
+S_M(\mu)=\left\|\frac1{\sqrt R}\sum_{r=1}^RM_r(\mu)\right\|^2.
 \]</div>{% endraw %}
-<p>The constant {% raw %}<span class="math inline">\(C_k\)</span>{% endraw %} depends only on {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. The same bound holds almost surely for the conditional coefficient when the graph is a conditional dependency graph.</p>
 
+<p>The inverse square root is symmetric, and the norm is Euclidean. Expressions involving {% raw %}<span class="math inline">\(\widehat\Sigma^{-1}\)</span>{% endraw %} are defined on its nonsingularity event; the assumptions used below must make that event have probability tending to one. Song uses the adjusted statistic {% raw %}<span class="math inline">\(T_M(\mu)=S_M(\mu)-Rb/n\)</span>{% endraw %}. We return to the adjustment after explaining the main decomposition.</p>
+
+<h3 data-note-section="2" id="10-235-conditional-mean-and-variance-of-the-mean-statistic">2. Separating resampling variation from estimation error</h3>
+
+<p>Center at the sample mean first. Put</p>
+
+{% raw %}<div class="math display">\[
+Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X),
+\qquad a(\mu)=\widehat\Sigma^{-1/2}(\overline X-\mu).
+\]</div>{% endraw %}
+
+<p>The empirical centering and standardization give exact identities:</p>
+
+{% raw %}<div class="math display">\[
+\sum_iZ_i=0,
+\qquad \frac1n\sum_iZ_iZ_i'=I_p,
+\qquad
+\mathbb E_\pi[Z_{\pi_r(1)}Z_{\pi_r(2)}']=-\frac{I_p}{n-1}.
+\]</div>{% endraw %}
+
+<p>For the last identity, sum over distinct indices and use {% raw %}<span class="math inline">\(\sum_{i\ne j}Z_iZ_j'=-\sum_iZ_iZ_i'=-nI_p\)</span>{% endraw %}. The negative covariance comes from sampling without replacement from a centered finite population. It does not describe the sign of dependence in the process that generated the data.</p>
+
+<p>Counting the diagonal and off-diagonal terms in a subsample sum now gives</p>
+
+{% raw %}<div class="math display">\[
+\mathbb E_\pi M_r(\mu)=\sqrt{b/p}\,a(\mu),
+\qquad
+\operatorname{Var}_\pi M_r(\mu)=\frac{n-b}{p(n-1)}I_p.
+\]</div>{% endraw %}
+
+<span id="10-235-from-conditional-randomization-to-a-limit-theorem"></span>
+<p>Define {% raw %}<span class="math inline">\(W_n=R^{-1/2}\sum_r M_r(\overline X)\)</span>{% endraw %}. Adding and subtracting the sample mean yields the central identity:</p>
+
+{% raw %}<div class="math display">\[
+S_M(\mu)
+=\left\|W_n+\sqrt{Rb/p}\,a(\mu)\right\|^2.
+\]</div>{% endraw %}
+
+<p>Conditional on the data, {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} is a sum of independent, centered resampling contributions. Its covariance is known exactly. The other term is fixed by the observed sample and is multiplied by {% raw %}<span class="math inline">\(\sqrt{Rb}\)</span>{% endraw %}. Under the null it contains estimation error; under an alternative it also contains the population mean shift. Repeating the resampling cannot distinguish these two sources of drift.</p>
+
+<div id="ordering-free-mean-limit" class="proposition" data-note-number="1" data-note-kind="Proposition">
+<p><strong>Proposition 1 (a sufficient mean-statistic argument)</strong>. Suppose {% raw %}<span class="math inline">\(p\)</span>{% endraw %} is fixed, {% raw %}<span class="math inline">\(R\to\infty\)</span>{% endraw %}, {% raw %}<span class="math inline">\(Rb/n\to0\)</span>{% endraw %}, and, for some {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %},</p>
+
+{% raw %}<div class="math display">\[
+\mathbb E_\pi\|M_r(\overline X)\|^{2+\delta}=O_p(1),
+\qquad
+Rb\,\|a(\mu_0)\|^2\xrightarrow{p}0.
+\]</div>{% endraw %}
+
+<p>Then the conditional distribution of {% raw %}<span class="math inline">\(T_M(\mu_0)\)</span>{% endraw %} converges in probability to {% raw %}<span class="math inline">\(\chi_p^2/p\)</span>{% endraw %}, and the same limit holds unconditionally.</p>
 </div>
-<h3 data-note-section="2" id="10-235-count-connected-sets-correctly">2. Count connected sets correctly</h3>
-<p>If {% raw %}<span class="math inline">\(G_n[A]\)</span>{% endraw %} is disconnected, its components give a partition without crossing edges. Independence across that partition implies {% raw %}<span class="math inline">\(c_n(A)=0\)</span>{% endraw %}. On connected sets, the absolute correlation bound of one gives</p>
+
+<p>The proof has two steps. First, the conditional Lyapunov sum satisfies</p>
 
 {% raw %}<div class="math display">\[
-0\le c_n(A)\le\mathbf1\{G_n[A]\text{ is connected}\}.
+\sum_{r=1}^R\mathbb E_\pi
+\left\|\frac{M_r(\overline X)}{\sqrt R}\right\|^{2+\delta}
+=R^{-\delta/2}\mathbb E_\pi\|M_r(\overline X)\|^{2+\delta}
+=o_p(1).
 \]</div>{% endraw %}
-<p>The selected vertices need only induce a connected subgraph; they need not form an entire connected component of {% raw %}<span class="math inline">\(G_n\)</span>{% endraw %}.</p>
 
-<p>Now count growth orders of distinct vertices. There are {% raw %}<span class="math inline">\(n\)</span>{% endraw %} choices for the root. Once {% raw %}<span class="math inline">\(j\)</span>{% endraw %} vertices have been selected, the next vertex must be adjacent to at least one of them. There are at most {% raw %}<span class="math inline">\(jd_n\)</span>{% endraw %} choices, even before excluding repeated vertices. Therefore</p>
+<p>Since {% raw %}<span class="math inline">\(b/n\to0\)</span>{% endraw %}, the covariance of {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} converges to {% raw %}<span class="math inline">\(I_p/p\)</span>{% endraw %}. Apply the conditional triangular-array CLT. One justification is to take a further subsequence along which the Lyapunov sum tends to zero and the covariance converges almost surely, then apply the ordinary CLT to those fixed arrays. Second, the drift in the central identity and the adjustment {% raw %}<span class="math inline">\(Rb/n\)</span>{% endraw %} vanish. Squaring the Gaussian norm proves the result. Bounded conditional characteristic functions also give unconditional convergence after taking expectations.</p>
+
+<p>The proposition separates the proof obligations. Independent permutations provide the conditional independence needed for a CLT. Dependence and moment assumptions on the original observations must still establish the displayed moment and drift bounds. The remainder of the post explains how local dependence supplies that control.</p>
+
+<h3 data-note-section="3" id="10-235-the-quadratic-term-and-the-bias-adjustments">3. Why the quadratic statistic permits more repetitions</h3>
+
+<p>The U-type construction aggregates products within each subsample. For {% raw %}<span class="math inline">\(b\ge2\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(a=a(\mu)\)</span>{% endraw %} and define</p>
 
 {% raw %}<div class="math display">\[
-\#\{\text{growth orders of length }k\}
-\le n\prod_{j=1}^{k-1}(jd_n)
-=n(k-1)!d_n^{k-1}.
+U_r(\mu)=\frac1{pb}\sum_{\substack{1\le j,\ell\le b\\j\ne\ell}}
+(Z_{\pi_r(j)}+a)'(Z_{\pi_r(\ell)}+a),
+\qquad
+S_U(\mu)=\frac1{\sqrt R}\sum_{r=1}^R U_r(\mu).
 \]</div>{% endraw %}
-<p>Every connected set has at least one such order: root a spanning tree and list parents before children. A connected set has {% raw %}<span class="math inline">\(k!\)</span>{% endraw %} arbitrary orderings, so the number of ordered distinct tuples inducing a connected graph is at most {% raw %}<span class="math inline">\(k!\)</span>{% endraw %} times the growth-order count. If {% raw %}<span class="math inline">\((n)_k\triangleq n(n-1)\cdots(n-k+1)\)</span>{% endraw %}, it follows that</p>
+
+<p>Removing diagonal products has a purpose. For independent, mean-zero observations, a product involving two distinct observations has expectation zero, whereas a squared observation contributes its variance. The resulting statistic responds to a departure of the mean through a quadratic term.</p>
+
+<p>The empirical calculation also contains a finite-population correction. There are {% raw %}<span class="math inline">\(b(b-1)\)</span>{% endraw %} ordered pairs, so</p>
+
+{% raw %}<div class="math display">\[
+\mathbb E_\pi U_r(\mu)
+=(b-1)\left(\frac{\|a\|^2}{p}-\frac1{n-1}\right).
+\]</div>{% endraw %}
+
+<p>The linear term cancels in this conditional expectation because {% raw %}<span class="math inline">\(\mathbb E_\pi Z_{\pi_r(j)}=0\)</span>{% endraw %}. It remains in the random statistic. To see its size, compare the two centerings using the same permutations. Each selected observation appears {% raw %}<span class="math inline">\(b-1\)</span>{% endraw %} times in each cross-term, which gives</p>
+
+{% raw %}<div class="math display">\[
+S_U(\mu)-S_U(\overline X)
+=\underbracket{\frac{2(b-1)}{\sqrt{pb}}a'W_n}_{\text{centered linear term}}
++\underbracket{\frac{\sqrt R(b-1)}p\|a\|^2}_{\text{quadratic drift}}.
+\]</div>{% endraw %}
+
+<p>The linear term has conditional mean zero and variance</p>
+
+{% raw %}<div class="math display">\[
+\frac{4(b-1)^2(n-b)}{p^2b(n-1)}\|a\|^2.
+\]</div>{% endraw %}
+
+<p>If {% raw %}<span class="math inline">\(\|a(\mu_0)\|=O_p(n^{-1/2})\)</span>{% endraw %}, this term is {% raw %}<span class="math inline">\(O_p(\sqrt{b/n})\)</span>{% endraw %}, while the drift is {% raw %}<span class="math inline">\(O_p(\sqrt R\,b/n)\)</span>{% endraw %}. For the mean statistic the drift inside the squared norm is {% raw %}<span class="math inline">\(O_p(\sqrt{Rb/n})\)</span>{% endraw %}. Thus the quadratic construction replaces the mean restriction {% raw %}<span class="math inline">\(Rb/n\to0\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\sqrt R\,b/n\to0\)</span>{% endraw %}, provided the conditional variance and higher moments are also controlled. The improvement comes from cancellation in the conditional mean, not from eliminating every linear term.</p>
+
+<p>There is one normalization to keep explicit. Set {% raw %}<span class="math inline">\(v_n^2=\operatorname{Var}_\pi U_r(\overline X)\)</span>{% endraw %}. If this variance stays bounded away from zero and the conditional Lyapunov condition holds, the centered sum divided by {% raw %}<span class="math inline">\(v_n\)</span>{% endraw %} is asymptotically standard normal. The raw sum need not have unit variance. For example, for independent vectors {% raw %}<span class="math inline">\(Y_1,\ldots,Y_b\)</span>{% endraw %} with mean zero and covariance {% raw %}<span class="math inline">\(I_p\)</span>{% endraw %},</p>
+
+{% raw %}<div class="math display">\[
+\operatorname{Var}\left(\frac1{pb}\sum_{j\ne\ell}Y_j'Y_\ell\right)
+=\frac{2(b-1)}{pb}.
+\]</div>{% endraw %}
+
+<p>Only identical and reversed pairs contribute to this variance. This benchmark explains why a Gaussian approximation must retain its scale. Using the conditional distribution of {% raw %}<span class="math inline">\(S_U(\overline X)\)</span>{% endraw %} for critical values incorporates that scale directly. The argument here establishes the exact drift comparison; a full U-type limit additionally requires the variance and moment conditions.</p>
+
+<h3 data-note-section="4" id="10-235-measure-how-often-dependence-matters">4. Measuring local dependence without locating it</h3>
+
+<p>Consider independent clusters whose memberships are unobserved. Observations within a cluster can be strongly dependent. Nevertheless, a small random set will usually meet several clusters when there are many small clusters. We can then split the set into independent groups. This motivates a coefficient that asks whether a selected set admits a weakly dependent split.</p>
+
+<p>For disjoint nonempty sets {% raw %}<span class="math inline">\(A_1,A_2\)</span>{% endraw %}, define</p>
+
+{% raw %}<div class="math display">\[
+c_n(A_1,A_2)=
+\sup_{f\in\mathcal F_{|A_1|},\,g\in\mathcal F_{|A_2|}}
+\left|\operatorname{Corr}\big(f(X_{A_1}),g(X_{A_2})\big)\right|.
+\]</div>{% endraw %}
+
+<p>The function classes specify which forms of dependence the argument controls. They must be closed under permutations of their arguments and have square-integrable evaluations; a zero-variance correlation is assigned value zero. Polynomial products are useful for the moment bounds below. Let {% raw %}<span class="math inline">\(\mathcal P(A)\)</span>{% endraw %} be the partitions of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} into two nonempty sets. For {% raw %}<span class="math inline">\(k\ge2\)</span>{% endraw %}, set</p>
+
+{% raw %}<div class="math display">\[
+c_n(A)=\min_{\{A_1,A_2\}\in\mathcal P(A)}c_n(A_1,A_2),
+\qquad
+\lambda_n(k)=\binom nk^{-1}\sum_{|A|=k}c_n(A).
+\]</div>{% endraw %}
+
+<p>The minimum is essential: one independent split makes {% raw %}<span class="math inline">\(c_n(A)=0\)</span>{% endraw %}, even if there is substantial dependence within either part. With restricted function classes, a zero coefficient need not imply full independence. The coefficient averages over every set of size {% raw %}<span class="math inline">\(k\)</span>{% endraw %}, so relabeling observations leaves it unchanged. Equivalently, average over uniform permutations: each set appears as the first {% raw %}<span class="math inline">\(k\)</span>{% endraw %} indices in exactly {% raw %}<span class="math inline">\(k!(n-k)!\)</span>{% endraw %} permutations. The singleton convention is {% raw %}<span class="math inline">\(c_n(A)=1\)</span>{% endraw %}, so decay statements begin at {% raw %}<span class="math inline">\(k=2\)</span>{% endraw %}.</p>
+
+<span id="10-235-count-connected-sets-correctly"></span>
+<p>A dependency graph makes this coefficient concrete. Such a graph has the property that observation vectors on disjoint vertex sets are independent whenever there is no edge between the sets. It need not be observed; here it is a device for verifying an assumption.</p>
+
+<div id="ordering-free-graph" class="proposition" data-note-number="2" data-note-kind="Proposition">
+<p><strong>Proposition 2 (connected-set bound)</strong>. If a dependency graph has maximum degree {% raw %}<span class="math inline">\(d_n\)</span>{% endraw %}, then, for each fixed {% raw %}<span class="math inline">\(k\ge2\)</span>{% endraw %} and sufficiently large {% raw %}<span class="math inline">\(n\)</span>{% endraw %},</p>
+
+{% raw %}<div class="math display">\[
+\lambda_n(k)\le C_k\left(\frac{d_n}{n}\right)^{k-1},
+\]</div>{% endraw %}
+
+<p>where {% raw %}<span class="math inline">\(C_k\)</span>{% endraw %} depends only on {% raw %}<span class="math inline">\(k\)</span>{% endraw %}.</p>
+</div>
+
+<p>If the graph induced by a selected set {% raw %}<span class="math inline">\(A\)</span>{% endraw %} is disconnected, its components give an independent split. Hence {% raw %}<span class="math inline">\(c_n(A)\le\mathbf1\{G_n[A]\text{ is connected}\}\)</span>{% endraw %}. To count connected sets, choose a root in {% raw %}<span class="math inline">\(n\)</span>{% endraw %} ways and grow the set one vertex at a time. After {% raw %}<span class="math inline">\(j\)</span>{% endraw %} vertices have been selected, there are at most {% raw %}<span class="math inline">\(jd_n\)</span>{% endraw %} choices adjacent to an earlier vertex. Every connected set admits such a growth order, obtained from a rooted spanning tree. Therefore</p>
 
 {% raw %}<div class="math display">\[
 \lambda_n(k)
-\le\frac{k!(k-1)!n d_n^{k-1}}{(n)_k}
+\le\frac{n\prod_{j=1}^{k-1}(jd_n)}{\binom nk}
 =\frac{k!(k-1)!d_n^{k-1}}{(n-1)\cdots(n-k+1)}.
 \]</div>{% endraw %}
-<p>For {% raw %}<span class="math inline">\(n\ge2k\)</span>{% endraw %}, every denominator factor is at least {% raw %}<span class="math inline">\(n/2\)</span>{% endraw %}, proving the proposition with {% raw %}<span class="math inline">\(C_k=2^{k-1}k!(k-1)!\)</span>{% endraw %}. The constant is loose; the exponent of {% raw %}<span class="math inline">\(n\)</span>{% endraw %} is what is needed.</p>
 
-<p>A connected set need not have a path visiting all its vertices. At each stage the new vertex may attach to any earlier vertex; this includes stars and is why the spanning-tree count covers all connected sets.</p>
+<p>This proves the bound. A new vertex may attach to any earlier vertex, so the count includes stars as well as paths. For pairs, direct edge counting gives the sharper inequality {% raw %}<span class="math inline">\(\lambda_n(2)\le d_n/(n-1)\)</span>{% endraw %}.</p>
 
-<p>For {% raw %}<span class="math inline">\(k=2\)</span>{% endraw %}, count edges directly to obtain the sharper bound</p>
+<span id="10-235-two-calculations-with-random-subsets"></span>
+<p>The same counting explains the small-subsample heuristic. Let {% raw %}<span class="math inline">\(N_E\)</span>{% endraw %} be the number of graph edges among {% raw %}<span class="math inline">\(b\)</span>{% endraw %} uniformly selected distinct observations. Then</p>
 
 {% raw %}<div class="math display">\[
-\lambda_n(2)\le\frac{2|E_n|}{n(n-1)}\le\frac{d_n}{n-1}.
+\mathbb E_\pi N_E
+=\binom b2\frac{2|E_n|}{n(n-1)},
+\qquad
+\Pr_\pi(N_E\ge1)\le\frac{b(b-1)d_n}{2(n-1)}.
 \]</div>{% endraw %}
-<p>Lemma 2.2 of the paper gives the analogous {% raw %}<span class="math inline">\(n^{-(k-1)}\)</span>{% endraw %} rate for separated random fields under its spatial summability conditions. That result requires a spatial argument in addition to the graph calculation above.</p>
 
-<h3 data-note-section="3" id="10-235-two-calculations-with-random-subsets">3. Two calculations with random subsets</h3>
-<p>First consider independent clusters of sizes {% raw %}<span class="math inline">\(m_1,\ldots,m_G\)</span>{% endraw %}. A set meeting two clusters can be split across clusters, so</p>
+<p>Thus {% raw %}<span class="math inline">\(b^2d_n/n\to0\)</span>{% endraw %} suffices for a subsample to contain no dependence edges with probability tending to one. This is a useful intuition, but the formal moment argument can allow some dependent observations in a subsample. Nor does it require all {% raw %}<span class="math inline">\(R\)</span>{% endraw %} subsamples to be simultaneously edgeless: conditional independence across repetitions comes from the resampling design.</p>
+
+<p>For independent clusters of sizes {% raw %}<span class="math inline">\(m_1,\ldots,m_G\)</span>{% endraw %}, the corresponding bound is</p>
 
 {% raw %}<div class="math display">\[
 \lambda_n(k)\le\frac{\sum_{g=1}^G(m_g)_k}{(n)_k},
+\qquad (m)_k=m(m-1)\cdots(m-k+1),
 \]</div>{% endraw %}
-<p>where {% raw %}<span class="math inline">\((m)_k=0\)</span>{% endraw %} when {% raw %}<span class="math inline">\(m&lt;k\)</span>{% endraw %}. This is an equality in the scalar model {% raw %}<span class="math inline">\(X_i=Z_g\)</span>{% endraw %} for every unit in cluster {% raw %}<span class="math inline">\(g\)</span>{% endraw %}, with independent, nondegenerate, square-integrable {% raw %}<span class="math inline">\(Z_g\)</span>{% endraw %} and function classes containing coordinate projections. Within one cluster, every partition has correlation one; across clusters there is an independent split.</p>
 
-<p>For equal cluster size {% raw %}<span class="math inline">\(m\)</span>{% endraw %}, the first two coefficients are therefore</p>
+<p>with {% raw %}<span class="math inline">\((m)_k=0\)</span>{% endraw %} when {% raw %}<span class="math inline">\(m&lt;k\)</span>{% endraw %}. Equality holds in the scalar model {% raw %}<span class="math inline">\(X_i=V_g\)</span>{% endraw %} within cluster {% raw %}<span class="math inline">\(g\)</span>{% endraw %}, where the cluster shocks are independent, nondegenerate, and square-integrable and the function classes include coordinate projections. For equal cluster size {% raw %}<span class="math inline">\(m\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
 \lambda_n(2)=\frac{m-1}{n-1},
 \qquad
 \lambda_n(3)=\frac{(m-1)(m-2)}{(n-1)(n-2)}.
 \]</div>{% endraw %}
-<p>Bounded clusters give the displayed graph rate. With a fixed number of equal clusters, the coefficients instead approach {% raw %}<span class="math inline">\(G^{1-k}\)</span>{% endraw %}. Adding copies within those clusters increases the sample size without reducing the average dependence in the required way.</p>
 
-<p>Second, let {% raw %}<span class="math inline">\(I_1,\ldots,I_b\)</span>{% endraw %} be a uniform draw of distinct indices. Count the graph edges in this subsample:</p>
+<p>Bounded cluster sizes make these coefficients small. A fixed number of growing clusters does not: the coefficients approach {% raw %}<span class="math inline">\(G^{1-k}\)</span>{% endraw %}. In the same example with variance-one cluster shocks, {% raw %}<span class="math inline">\(\operatorname{Var}(\overline X)=1/G=m/n\)</span>{% endraw %}. Increasing the number of copies within each cluster adds observations without adding independent information.</p>
+
+<h3 data-note-section="5" id="ordering-free-proof-techniques">5. Turning local dependence into the required bounds</h3>
+
+<p>The first task is to control the original sample mean. Suppose the dependency graph has maximum degree {% raw %}<span class="math inline">\(d_n\)</span>{% endraw %}, the observations have mean {% raw %}<span class="math inline">\(\mu_0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\max_i\mathbb E\|X_i-\mu_0\|^2\le C\)</span>{% endraw %}. Only diagonal terms and graph edges can contribute to its variance. Cauchy–Schwarz gives</p>
 
 {% raw %}<div class="math display">\[
-N_E\triangleq\sum_{1\le j&lt;\ell\le b}
-\mathbf1\{I_jI_\ell\in E_n\}.
+\mathbb E\|\overline X-\mu_0\|^2
+=\frac1{n^2}\sum_{i,j}\mathbb E[(X_i-\mu_0)'(X_j-\mu_0)]
+\le\frac{C(1+d_n)}n.
 \]</div>{% endraw %}
-<p>Each pair is uniform over distinct population indices, giving</p>
+
+<p>If {% raw %}<span class="math inline">\(\|\widehat\Sigma^{-1}\|=O_p(1)\)</span>{% endraw %}, Markov's inequality yields {% raw %}<span class="math inline">\(\|a(\mu_0)\|^2=O_p((1+d_n)/n)\)</span>{% endraw %}. The mean-statistic drift therefore vanishes when</p>
 
 {% raw %}<div class="math display">\[
-\mathbb{E}_\pi N_E
-=\binom b2\frac{2|E_n|}{n(n-1)},
+\frac{Rb(1+d_n)}n\longrightarrow0.
+\]</div>{% endraw %}
+
+<p>This calculation needs a rate for the sample mean, without requiring a Gaussian limit for it or an estimate of its long-run variance. Under the same bound, the U-type comparison has a linear remainder of order {% raw %}<span class="math inline">\(O_p(\sqrt{b(1+d_n)/n})\)</span>{% endraw %} and a quadratic drift of order {% raw %}<span class="math inline">\(O_p(\sqrt R\,b(1+d_n)/n)\)</span>{% endraw %}.</p>
+
+<p>The second task is to bound the moments needed by the conditional CLT. A proof must do more than observe that a typical pair is weakly dependent. Expanding a fourth moment of a subsample sum produces products with up to four distinct indices; a fourth moment of a quadratic contribution can involve up to eight. Repeated indices must be counted separately because powers of one observation do not become independent.</p>
+
+<p>Song's recursive moment argument groups terms by their distinct indices and multiplicities. For each resulting product, split the distinct indices into two nonempty sets and write</p>
+
+{% raw %}<div class="math display">\[
+\mathbb E[FG]=\operatorname{Cov}(F,G)+\mathbb E[F]\mathbb E[G].
+\]</div>{% endraw %}
+
+<p>Choose a split attaining the minimum in {% raw %}<span class="math inline">\(c_n(A)\)</span>{% endraw %}. The covariance term is bounded by this coefficient times the relevant moment factors. Apply the same argument recursively to the two shorter products. Centered singleton factors vanish; products of nonzero lower-order moments remain. For example, a product involving two independent dependent pairs can have nonzero expectation even though the four-element set has coefficient zero. The recursion retains both pair factors. This is why the minimum over splits is useful, and why it cannot by itself bound every joint moment by a single coefficient.</p>
+
+<p>Averaging over permutations converts the remaining coefficients to {% raw %}<span class="math inline">\(\lambda_n(k)\)</span>{% endraw %}. The count of terms with {% raw %}<span class="math inline">\(k\)</span>{% endraw %} distinct indices explains the conditions on {% raw %}<span class="math inline">\(b^k\lambda_n(k)\)</span>{% endraw %}: Song controls these quantities through {% raw %}<span class="math inline">\(k=4\)</span>{% endraw %} for the mean construction and through {% raw %}<span class="math inline">\(k=8\)</span>{% endraw %} for the quadratic construction, together with moment and covariance assumptions. With bounded graph degree, the connected-set bound gives {% raw %}<span class="math inline">\(b^k\lambda_n(k)=O(b^k/n^{k-1})\)</span>{% endraw %}. The restriction {% raw %}<span class="math inline">\(b^2/n=O(1)\)</span>{% endraw %} bounds these expressions for every fixed {% raw %}<span class="math inline">\(k\ge2\)</span>{% endraw %}. It permits more than the stronger heuristic requirement that a selected subsample be edgeless with probability approaching one.</p>
+
+<p>The same dependence control must justify empirical standardization. With common means, bounded fourth moments, bounded graph degree, and a uniformly positive definite average marginal covariance, applying a variance bound to the entries of {% raw %}<span class="math inline">\(X_iX_i'\)</span>{% endraw %} gives a law of large numbers for the empirical second moments. Subtracting {% raw %}<span class="math inline">\(\overline X\overline X'\)</span>{% endraw %} then controls {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} and its inverse. This verifies an assumption used in the drift calculation; it does not turn {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} into an estimator of the variance of the sample mean.</p>
+
+<h3 data-note-section="6" id="ordering-free-calibration-and-power">6. Calibration, tuning, and the cost in power</h3>
+
+<p>For bounded graph degree, the leading restrictions and signal scales can be read from the two decompositions. The table describes the drift restrictions; conditional variance, moment, and covariance conditions are still required.</p>
+
+<table>
+<thead><tr><th>Quantity</th><th>Mean-type statistic</th><th>U-type statistic</th></tr></thead>
+<tbody>
+<tr><td>Null drift</td><td>{% raw %}<span class="math inline">\(O_p(\sqrt{Rb/n})\)</span>{% endraw %} inside the squared norm</td><td>{% raw %}<span class="math inline">\(O_p(\sqrt R\,b/n)\)</span>{% endraw %}</td></tr>
+<tr><td>Restriction making drift vanish</td><td>{% raw %}<span class="math inline">\(Rb/n\to0\)</span>{% endraw %}</td><td>{% raw %}<span class="math inline">\(Rb^2/n^2\to0\)</span>{% endraw %}</td></tr>
+<tr><td>Local mean-shift scale</td><td>{% raw %}<span class="math inline">\((Rb)^{-1/2}\)</span>{% endraw %}</td><td>{% raw %}<span class="math inline">\(R^{-1/4}b^{-1/2}\)</span>{% endraw %}</td></tr>
+</tbody>
+</table>
+
+<p>To obtain the last row, let the true mean differ from the tested mean by {% raw %}<span class="math inline">\(\Delta_n\)</span>{% endraw %}. The mean statistic responds through {% raw %}<span class="math inline">\(\sqrt{Rb}\,\Sigma^{-1/2}\Delta_n\)</span>{% endraw %}, whereas the quadratic statistic responds through {% raw %}<span class="math inline">\(\sqrt R\,b\,\Delta_n'\Sigma^{-1}\Delta_n\)</span>{% endraw %}, up to fixed normalization constants. Here {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} is a positive definite limiting marginal covariance. Set each signal to order one. These are local-power heuristics under conditions that continue to hold along the alternatives; the <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">size and local-power analysis</a> develops the comparison.</p>
+
+<p>For example, take {% raw %}<span class="math inline">\(b\asymp n^{1/4}\)</span>{% endraw %}. The choices {% raw %}<span class="math inline">\(R_M\asymp n^{1/2}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(R_U\asymp n\)</span>{% endraw %} give null-drift orders of {% raw %}<span class="math inline">\(n^{-1/8}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n^{-1/4}\)</span>{% endraw %}, respectively, while both signal scales are {% raw %}<span class="math inline">\(n^{-3/8}\)</span>{% endraw %}. These choices satisfy the displayed dependence-rate restrictions, subject to the remaining assumptions. They illustrate why permitting more repetitions does not by itself prove a power advantage: the U-type signal also enters quadratically. Song's finer comparison holds size accuracy fixed, including higher-order approximation errors.</p>
+
+<p>Under the respective drift restrictions, both displayed signal scales are larger than {% raw %}<span class="math inline">\(n^{-1/2}\)</span>{% endraw %} by a diverging factor. Even when the data happen to be independent, these sufficient conditions sacrifice sensitivity to root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} alternatives so that the unknown original-sample error is negligible. That is the price of this calibration argument.</p>
+
+<p>The distinction between constructing a statistic and simulating a critical value is equally important. To test a candidate {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %}, compute the adjusted statistic using one batch of {% raw %}<span class="math inline">\(R\)</span>{% endraw %} permutations. Independently generate {% raw %}<span class="math inline">\(L\)</span>{% endraw %} further batches, each also containing {% raw %}<span class="math inline">\(R\)</span>{% endraw %} permutations, and compute {% raw %}<span class="math inline">\(S_M(\overline X)\)</span>{% endraw %} or {% raw %}<span class="math inline">\(S_U(\overline X)\)</span>{% endraw %} in those batches. Reject when the candidate statistic exceeds the empirical {% raw %}<span class="math inline">\(1-\alpha\)</span>{% endraw %} quantile of the centered reference statistics. Increasing {% raw %}<span class="math inline">\(L\)</span>{% endraw %} improves the approximation to this conditional quantile; increasing {% raw %}<span class="math inline">\(R\)</span>{% endraw %} changes the statistic and its sensitivity to original-sample error.</p>
+
+<p>The adjustments in Song's construction are</p>
+
+{% raw %}<div class="math display">\[
+T_M(\mu)=S_M(\mu)-\frac{Rb}{n},
 \qquad
-\Pr_\pi(N_E\ge1)\le\frac{b(b-1)d_n}{2(n-1)}.
+T_U(\mu)=S_U(\mu)-\frac{\sqrt R(b-1)}n.
 \]</div>{% endraw %}
-<p>Thus {% raw %}<span class="math inline">\(b^2d_n/n\to0\)</span>{% endraw %} suffices for the selected graph to be edgeless with probability tending to one. For any fixed edgeless index set, the observations are mutually independent by the dependency-graph assumption. This calculation makes the small-subsample intuition concrete; the full inference theorem need not require every subsample to be edgeless.</p>
 
-<h3 data-note-section="4" id="10-235-conditional-mean-and-variance-of-the-mean-statistic">4. Conditional mean and variance of the mean statistic</h3>
-<p>Assume {% raw %}<span class="math inline">\(n&gt;1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(1\le b&lt;n\)</span>{% endraw %}, and the sample covariance is nonsingular. Let {% raw %}<span class="math inline">\(\overline X=n^{-1}\sum_iX_i\)</span>{% endraw %} and define</p>
+<p>Their benchmark is the contribution of mean-estimation error under independent observations. With a population standardizer and independent observations of common covariance {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\widehat\Sigma\triangleq\frac1n\sum_{i=1}^n(X_i-\overline X)(X_i-\overline X)&#x27;,
-\quad Z_i\triangleq\widehat\Sigma^{-1/2}(X_i-\overline X),
-\quad a\triangleq\widehat\Sigma^{-1/2}(\overline X-\mu).
-\]</div>{% endraw %}
-<p>Here {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %} is the candidate mean, and the inverse square root is symmetric. By construction,</p>
-
-{% raw %}<div class="math display">\[
-\sum_iZ_i=0,\qquad\frac1n\sum_iZ_iZ_i&#x27;=I_p.
-\]</div>{% endraw %}
-<p>Write {% raw %}<span class="math inline">\(\mathbb{E}_\pi\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\operatorname{Var}_\pi\)</span>{% endraw %} for expectation and variance over the random indices conditional on the entire observed sample. For two distinct sampled positions,</p>
-
-{% raw %}<div class="math display">\[
-\begin{aligned}
-\mathbb{E}_\pi[Z_{I_1}Z_{I_2}&#x27;]
-&amp;=\frac1{n(n-1)}\sum_{i\ne j}Z_iZ_j&#x27;\\
-&amp;=\frac{(\sum_iZ_i)(\sum_iZ_i)&#x27;-\sum_iZ_iZ_i&#x27;}{n(n-1)}
-=-\frac{I_p}{n-1}.
-\end{aligned}
-\]</div>{% endraw %}
-<p>Sampling without replacement explains the negative conditional covariance. This identity holds for the fixed observed array and says nothing about the sign of covariance in the original sampling process.</p>
-
-<p>For an independently drawn permutation {% raw %}<span class="math inline">\(\pi_r\)</span>{% endraw %}, the paper’s mean contribution is</p>
-
-{% raw %}<div class="math display">\[
-M_r(\mu)\triangleq\frac1{\sqrt{pb}}\sum_{j=1}^b(Z_{\pi_r(j)}+a).
-\]</div>{% endraw %}
-<p>Its conditional moments follow by counting the {% raw %}<span class="math inline">\(b\)</span>{% endraw %} diagonal terms and {% raw %}<span class="math inline">\(b(b-1)\)</span>{% endraw %} off-diagonal terms:</p>
-
-{% raw %}<div class="math display">\[
-\begin{aligned}
-\mathbb{E}_\pi M_r(\mu)&amp;=\sqrt{b/p}\,a,\\
-\operatorname{Var}_\pi M_r(\mu)
-&amp;=\frac1{pb}\left[bI_p-b(b-1)\frac{I_p}{n-1}\right]
-=\frac{n-b}{p(n-1)}I_p.
-\end{aligned}
-\]</div>{% endraw %}
-<p>These are finite-population identities conditional on the data. Dependence assumptions enter later, when controlling how far the observed sample mean is from the null mean.</p>
-
-<h3 data-note-section="5" id="10-235-from-conditional-randomization-to-a-limit-theorem">5. From conditional randomization to a limit theorem</h3>
-<p>For {% raw %}<span class="math inline">\(R\)</span>{% endraw %} independent permutations, set</p>
-
-{% raw %}<div class="math display">\[
-W_n\triangleq\frac1{\sqrt R}\sum_{r=1}^R
-(M_r(\mu)-\mathbb{E}_\pi M_r(\mu)).
-\]</div>{% endraw %}
-<p>Then the squared-mean statistic has the exact decomposition</p>
-
-{% raw %}<div class="math display">\[
-S_M(\mu)\triangleq\left\|\frac1{\sqrt R}\sum_{r=1}^RM_r(\mu)\right\|^2
-=\left\|W_n+\sqrt{Rb/p}\,a\right\|^2.
-\]</div>{% endraw %}
-<p>The two terms have different sources of randomness. Conditional on the data, {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} fluctuates across repeated subsampling, while {% raw %}<span class="math inline">\(a\)</span>{% endraw %} is fixed. To see the conditional CLT directly, let {% raw %}<span class="math inline">\(\widetilde M_r=M_r-\mathbb{E}_\pi M_r\)</span>{% endraw %} and {% raw %}<span class="math inline">\(V_n=(n-b)I_p/[p(n-1)]\)</span>{% endraw %}. A third-order Taylor bound gives, for fixed {% raw %}<span class="math inline">\(t\in\mathbb R^p\)</span>{% endraw %},</p>
-
-{% raw %}<div class="math display">\[
-\mathbb{E}_\pi e^{it&#x27;\widetilde M_r/\sqrt R}
-=1-\frac{t&#x27;V_nt}{2R}
-+O\!\left(\frac{\|t\|^3\mathbb{E}_\pi\|\widetilde M_r\|^3}{R^{3/2}}\right).
-\]</div>{% endraw %}
-<p>Raise this expression to the {% raw %}<span class="math inline">\(R\)</span>{% endraw %}th power, using conditional independence. If {% raw %}<span class="math inline">\(R\to\infty\)</span>{% endraw %}, {% raw %}<span class="math inline">\(b/n\to0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathbb{E}_\pi\|\widetilde M_r\|^3/\sqrt R\to_p0\)</span>{% endraw %}, the conditional characteristic function approaches {% raw %}<span class="math inline">\(\exp(-\|t\|^2/(2p))\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} has the conditional Gaussian limit {% raw %}<span class="math inline">\(\mathcal{N}(0,I_p/p)\)</span>{% endraw %}.</p>
-
-<p>It remains to control the drift. Under the null, suppose {% raw %}<span class="math inline">\(\mathbb{E}X_i=\mu_0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\max_i\mathbb{E}\|X_i-\mu_0\|^2\le C\)</span>{% endraw %}. A dependency graph leaves at most {% raw %}<span class="math inline">\(nd_n\)</span>{% endraw %} ordered off-diagonal covariance terms. Cauchy–Schwarz then gives</p>
-
-{% raw %}<div class="math display">\[
-\begin{aligned}
-\mathbb{E}\|\overline X-\mu_0\|^2
-&amp;=\frac1{n^2}\sum_{i,j}\mathbb{E}[(X_i-\mu_0)&#x27;(X_j-\mu_0)]\\
-&amp;\le\frac{C n+Cnd_n}{n^2}
-=\frac{C(1+d_n)}n.
-\end{aligned}
-\]</div>{% endraw %}
-<p>If {% raw %}<span class="math inline">\(\|\widehat\Sigma^{-1}\|=O_p(1)\)</span>{% endraw %}, Markov’s inequality implies</p>
-
-{% raw %}<div class="math display">\[
-\|a\|^2=O_p\!\left(\frac{1+d_n}{n}\right),
-\qquad
-\left\|\sqrt{Rb/p}\,a\right\|^2
-=O_p\!\left(\frac{Rb(1+d_n)}n\right).
-\]</div>{% endraw %}
-<div id="ordering-free-mean-limit" class="proposition" data-note-number="2" data-note-kind="Proposition">
-<p><strong>Proposition 2</strong>. For fixed {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, under the moment, covariance, and conditional-CLT premises just stated, {% raw %}<span class="math inline">\(Rb(1+d_n)/n\to0\)</span>{% endraw %} gives</p>
-
-{% raw %}<div class="math display">\[
-T_M(\mu_0)\triangleq S_M(\mu_0)-\frac{Rb}{n}
-\ \Rightarrow\ \frac{\chi_p^2}{p}.
-\]</div>{% endraw %}
-</div>
-<p>Indeed, the drift is {% raw %}<span class="math inline">\(o_p(1)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(Rb/n\to0\)</span>{% endraw %} also makes the displayed adjustment negligible. Apply the conditional CLT and the continuous mapping theorem to the squared norm. The higher-order dependence conditions in the <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">size and power analysis</a> supply primitive ways to verify the moment premises; conditional independence of the permutations alone would not prove them.</p>
-
-<p>For example, with bounded {% raw %}<span class="math inline">\(d_n\)</span>{% endraw %}, {% raw %}<span class="math inline">\(b_n=\lfloor n^{1/4}\rfloor\)</span>{% endraw %} and {% raw %}<span class="math inline">\(R_n=\lfloor n^{1/2}\rfloor\)</span>{% endraw %} give {% raw %}<span class="math inline">\(R_nb_n/n\asymp n^{-1/4}\)</span>{% endraw %}. The graph bounds also give {% raw %}<span class="math inline">\(b_n^k\lambda_n(k)=O(n^{1-3k/4})\)</span>{% endraw %} for fixed {% raw %}<span class="math inline">\(k\ge2\)</span>{% endraw %}. These choices satisfy the dependence-rate restrictions; the data still need the moment and covariance assumptions.</p>
-
-<p>The conditional moments also show what is learned by increasing {% raw %}<span class="math inline">\(R\)</span>{% endraw %} while holding the data fixed. Write {% raw %}<span class="math inline">\(c_{n,b}=(n-b)/(n-1)\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(S_M(\mu)=\|R^{-1/2}\sum_rM_r(\mu)\|^2\)</span>{% endraw %},</p>
-
-{% raw %}<div class="math display">\[
-\mathbb{E}_\pi S_M(\mu)
-=\operatorname{tr}(\operatorname{Var}_\pi W_n)
-+\left\|\sqrt{Rb/p}\,a\right\|^2
-=c_{n,b}+\frac{Rb}{p}\|a\|^2.
-\]</div>{% endraw %}
-<p>The normalization keeps the randomization fluctuation at order one, so the first term stays fixed as repetitions increase. The second term grows with {% raw %}<span class="math inline">\(R\)</span>{% endraw %}. Under a conditional Gaussian approximation,</p>
-
-{% raw %}<div class="math display">\[
-S_M(\mu)\ \approx\ \frac{c_{n,b}}p\,
-\chi_p^2\left(\frac{Rb\|a\|^2}{c_{n,b}}\right),
-\]</div>{% endraw %}
-<p>where the argument is the noncentrality parameter. This is a conditional approximation for the given sample, not a finite-sample chi-square identity. It makes the drift visible even under a true null: {% raw %}<span class="math inline">\(a\)</span>{% endraw %} contains the sample mean’s estimation error, which usually is not exactly zero.</p>
-
-<p>For scalar data consisting of {% raw %}<span class="math inline">\(G\)</span>{% endraw %} independent clusters of {% raw %}<span class="math inline">\(h\)</span>{% endraw %} identical copies of a variance-one shock, {% raw %}<span class="math inline">\(n=Gh\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\operatorname{Var}(\overline X)=1/G=h/n\)</span>{% endraw %}. Using the population standardizer in this illustration, the mean drift has squared size of order {% raw %}<span class="math inline">\(Rb/G\)</span>{% endraw %}. Thus the relevant restriction becomes {% raw %}<span class="math inline">\(Rb/G\to0\)</span>{% endraw %}. Doubling the number of copied observations per cluster while holding {% raw %}<span class="math inline">\(G\)</span>{% endraw %} fixed does not help satisfy it. The average-dependence coefficient {% raw %}<span class="math inline">\((h-1)/(n-1)\)</span>{% endraw %} records precisely this lack of new information.</p>
-
-<p>Randomization removes the need to identify where dependent pairs occur. Their overall frequency still determines the sample mean’s error and thus how many repetitions the statistic can tolerate.</p>
-
-<h3 data-note-section="6" id="10-235-the-quadratic-term-and-the-bias-adjustments">6. The quadratic term and the bias adjustments</h3>
-<p>The off-diagonal statistic makes the same drift appear quadratically. For {% raw %}<span class="math inline">\(b\ge2\)</span>{% endraw %}, use the raw contribution</p>
-
-{% raw %}<div class="math display">\[
-U_r(\mu)\triangleq\frac1{pb}\sum_{\substack{1\le j,\ell\le b\\j\ne\ell}}
-(Z_{\pi_r(j)}+a)&#x27;(Z_{\pi_r(\ell)}+a),
-\qquad S_U(\mu)\triangleq\frac1{\sqrt R}\sum_rU_r(\mu).
-\]</div>{% endraw %}
-<p>There are {% raw %}<span class="math inline">\(b(b-1)\)</span>{% endraw %} ordered pairs. The preceding covariance identity gives</p>
-
-{% raw %}<div class="math display">\[
-\mathbb{E}_\pi U_r(\mu)
-=(b-1)\left(\frac{\|a\|^2}{p}-\frac1{n-1}\right).
-\]</div>{% endraw %}
-<p>In particular, even {% raw %}<span class="math inline">\(U_r(\overline X)\)</span>{% endraw %} has conditional mean {% raw %}<span class="math inline">\(-(b-1)/(n-1)\)</span>{% endraw %}. Removing diagonal products does not make the raw statistic conditionally centered.</p>
-
-<p>More information comes from comparing the two centerings using the same permutations. Expanding each product, every selected {% raw %}<span class="math inline">\(Z_{\pi_r(j)}\)</span>{% endraw %} appears {% raw %}<span class="math inline">\(b-1\)</span>{% endraw %} times in each cross-term, so</p>
-
-{% raw %}<div class="math display">\[
-U_r(\mu)-U_r(\overline X)
-=\frac{2(b-1)}{pb}\,a&#x27;\sum_{j=1}^bZ_{\pi_r(j)}
-+\frac{b-1}{p}\|a\|^2.
-\]</div>{% endraw %}
-<p>After summing over repetitions,</p>
-
-{% raw %}<div class="math display">\[
-S_U(\mu)-S_U(\overline X)
-=\frac{2(b-1)}{\sqrt{pb}}a&#x27;W_n
-+\frac{\sqrt R(b-1)}p\|a\|^2.
-\]</div>{% endraw %}
-<p>The linear term has conditional variance</p>
-
-{% raw %}<div class="math display">\[
-\frac{4(b-1)^2(n-b)}{p^2b(n-1)}\|a\|^2,
-\]</div>{% endraw %}
-<p>while the second term is a conditional drift. Under the null with bounded degree, these have orders {% raw %}<span class="math inline">\(O_p(b/n)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(O_p(\sqrt R\,b/n)\)</span>{% endraw %}, respectively. The second order is for the drift itself, not its variance. This explains why quadratic aggregation leads to a restriction involving {% raw %}<span class="math inline">\(Rb^2/n^2\)</span>{% endraw %}.</p>
-
-<p>Finally, the paper subtracts {% raw %}<span class="math inline">\(Rb/n\)</span>{% endraw %} from {% raw %}<span class="math inline">\(S_M\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sqrt R(b-1)/n\)</span>{% endraw %} from {% raw %}<span class="math inline">\(S_U\)</span>{% endraw %}. To see the benchmark behind both corrections, temporarily use the population covariance {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} and independent observations with this covariance. Then</p>
-
-{% raw %}<div class="math display">\[
-\mathbb{E}\left[\frac{\|\Sigma^{-1/2}(\overline X-\mu_0)\|^2}{p}\right]
-=\frac1p\operatorname{tr}\left(\Sigma^{-1}\frac\Sigma n\right)
+\mathbb E\left[\frac{\|\Sigma^{-1/2}(\overline X-\mu_0)\|^2}{p}\right]
 =\frac1n.
 \]</div>{% endraw %}
-<p>Substitution gives both benchmark adjustments. It averages over independent original observations with a population standardizer, rather than centering exactly conditional on the observed sample. Under dependence, the remaining cross-covariances must be bounded by the rate assumptions.</p>
 
-<p>These identities concern the raw {% raw %}<span class="math inline">\(U\)</span>{% endraw %} statistic and its drift; a Gaussian limit additionally requires its variance normalization and higher-order moment control. The <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">simpler resampled mean and pair statistics</a> make a related tradeoff with a different subsampling construction.</p>
+<p>Substitute this into the quadratic drift in each statistic to obtain the adjustments. They are not exact conditional centerings. In particular, {% raw %}<span class="math inline">\(\mathbb E_\pi U_r(\overline X)=-(b-1)/(n-1)\)</span>{% endraw %}. The drift restrictions make this finite-population term and the displayed adjustments asymptotically negligible, while the adjustments can affect finite-sample calibration.</p>
 
-<h3 data-note-section="7" id="10-235-what-ordering-free-does-not-mean">7. What ordering-free does not mean</h3>
-<p>The procedure therefore replaces knowledge of the dependence locations with a restriction on average dependence. An unrestricted common shock affecting most observations does not satisfy the information requirement merely because subsamples are drawn at random.</p>
+<p>For validity, the statistic under the null and its empirically centered reference must approach the same continuous distribution. The conditional CLT establishes the reference law; the drift bounds establish the comparison. Continuity gives convergence of the relevant quantile, and {% raw %}<span class="math inline">\(L\to\infty\)</span>{% endraw %} removes simulation error. This is an asymptotic argument. Relabeling invariance of the dependence coefficient does not imply exchangeability of the original observations or finite-sample exactness of a permutation test.</p>
 
-<p>Repeated subsampling retains the same full-sample mean error. Its contribution grows with the repetition count, as the two decompositions show. Repetition can therefore improve detection of a false mean only within rates that keep this error negligible under the null.</p>
+<h3 data-note-section="7" id="10-235-what-ordering-free-does-not-mean">7. What information the method still needs</h3>
+
+<p>The procedure can operate without observing the dependence ordering, but the validity argument still needs substantive limits on dependence. In the equal-cluster example, the mean drift is governed by {% raw %}<span class="math inline">\(Rb/G\)</span>{% endraw %}, using the population standardizer. More copies within the same clusters cannot make this quantity small. The number of independent sources of information matters.</p>
+
+<p>A common shock can be accommodated by defining the correlations conditional on a sigma-field {% raw %}<span class="math inline">\(\mathcal C_n\)</span>{% endraw %}, provided the corresponding conditional moment and dependence conditions hold. The mean-inference setup also requires {% raw %}<span class="math inline">\(\mathbb E[X_i\mid\mathcal C_n]=\mu_0\)</span>{% endraw %}. A shock that changes variances while preserving this conditional mean can fit the framework. An additive shock {% raw %}<span class="math inline">\(X_i=\mu_0+V+\varepsilon_i\)</span>{% endraw %} generally does not: conditioning on {% raw %}<span class="math inline">\(V\)</span>{% endraw %} leaves the conditional mean {% raw %}<span class="math inline">\(\mu_0+V\)</span>{% endraw %}, and random subsampling cannot remove that shared displacement.</p>
+
+<p>The reusable proof strategy is to condition on the data, calculate the resampling moments, isolate the full-sample estimation error, and bound that error at the rate induced by aggregation. The <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">related treatment of dependence-robust resampling and moment tests</a> makes the same separation for a simpler construction based on individual observations and pairs. Song's ordering-free coefficients explain how local dependence can justify it without specifying where the dependent observations are located.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-song_ordering-free_2018" class="csl-entry" role="listitem">
-Song, Kyungchul. 2018. <span>“Ordering-Free Inference from Locally Dependent Data.”</span> arXiv. <a href="http://arxiv.org/abs/1604.00447">http://arxiv.org/abs/1604.00447</a>.
+Song, Kyungchul. 2018. <span>“Ordering-Free Inference from Locally Dependent Data.”</span> arXiv:1604.00447v3, June 29. <a href="https://arxiv.org/abs/1604.00447v3">https://arxiv.org/abs/1604.00447v3</a>. Sections 2.2–2.4 and the appendix and supplemental moment arguments.
 </div>
 </div>
 
