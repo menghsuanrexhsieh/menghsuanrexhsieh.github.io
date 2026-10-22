@@ -11,60 +11,43 @@ redirect_from: ["/2024/10/04/weak-dependence-lemmas-for-resampled-statistics/", 
 
 <div class="note-content" markdown="0">
 
-<p>The number of resampling repetitions is part of the definition of a randomized test. Increasing it makes a population mean shift easier to detect, but it also magnifies the estimation error in the observed sample. The tuning restrictions determine how much aggregation is possible before that error affects the null distribution.</p>
+<p>The <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}">preceding post</a> derived the conditional reference distributions and the error introduced by replacing the empirical mean with a tested mean. The remaining choice is how far to increase the subsample size {% raw %}<span class="math inline">\(b\)</span>{% endraw %} and repetition count {% raw %}<span class="math inline">\(R\)</span>{% endraw %}. Both strengthen the response to a population shift; both can also magnify the original estimation error.</p>
 
-<p>This creates two different comparisons between the M-type and U-type procedures. At the same subsample size and repetition count, the M-type statistic detects smaller mean shifts. <span class="citation" data-cites="song_ordering-free_2018"><a href="#ref-song_ordering-free_2018" role="doc-biblioref">Song (2018)</a></span> instead compares the tests at a common rate of size error, the discrepancy between null rejection probability and the nominal level. Each test can use its own repetition count. The U-type construction can then detect smaller shifts because its leading conditional drift accumulates more slowly.</p>
+<p>This creates two different comparisons between the M-type and U-type procedures. At the same subsample size and repetition count, the M-type statistic detects smaller mean shifts. <span class="citation" data-cites="song_ordering-free_2018"><a href="#ref-song_ordering-free_2018" role="doc-biblioref">Song (2018)</a></span> instead compares the tests at a common rate of size error, the discrepancy between null rejection probability and the nominal level. Each test can choose its own subsample size and repetition count. The U-type construction can then detect smaller shifts because its leading conditional drift accumulates more slowly.</p>
 
 <h3 data-note-section="1" id="10-266-conditional-randomness-and-full-sample-error-enter-separately">1. The error inherited from the original sample</h3>
 
-<p>Use the construction from the <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}">ordering-free resampling post</a>. The observations {% raw %}<span class="math inline">\(X_1,\ldots,X_n\in\mathbb R^p\)</span>{% endraw %} have fixed dimension {% raw %}<span class="math inline">\(p\)</span>{% endraw %} and a common mean. We test a candidate {% raw %}<span class="math inline">\(\mu_*\)</span>{% endraw %}. In repetition {% raw %}<span class="math inline">\(r\)</span>{% endraw %}, draw a uniform permutation {% raw %}<span class="math inline">\(\pi_r\)</span>{% endraw %}, independently of the data and of other repetitions, and use its first {% raw %}<span class="math inline">\(b=b_n\)</span>{% endraw %} indices. There are {% raw %}<span class="math inline">\(R=R_n\)</span>{% endraw %} repetitions in one statistic. Take {% raw %}<span class="math inline">\(1\le b&lt;n\)</span>{% endraw %} for the mean construction and {% raw %}<span class="math inline">\(2\le b&lt;n\)</span>{% endraw %} for the quadratic construction.</p>
-
-<p>Let {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} be the empirical mean and covariance, with covariance divisor {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Define</p>
+<p>Keep the preceding notation: {% raw %}<span class="math inline">\(X_i\in\mathbb R^p\)</span>{% endraw %} with fixed {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, empirical covariance divisor {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(R=R_n\)</span>{% endraw %} independent uniform permutations, each contributing {% raw %}<span class="math inline">\(b=b_n\)</span>{% endraw %} distinct observations. The tested mean is {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %}. Take {% raw %}<span class="math inline">\(1\le b&lt;n\)</span>{% endraw %} for M and {% raw %}<span class="math inline">\(2\le b&lt;n\)</span>{% endraw %} for U. Recall</p>
 
 {% raw %}<div class="math display">\[
 Z_i=\widehat\Sigma^{-1/2}(X_i-\overline X),
 \qquad
- a=\widehat\Sigma^{-1/2}(\overline X-\mu_*),
+ a=\widehat\Sigma^{-1/2}(\overline X-\mu),
 \qquad
 W_n=\frac1{\sqrt{pRb}}\sum_{r=1}^R\sum_{j=1}^b Z_{\pi_r(j)}.
 \]</div>{% endraw %}
 
 <p>The inverse square root is symmetric. All inverse-covariance expressions are understood on the nonsingularity event, which the maintained assumptions must give probability tending to one. Conditional on the data, {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} is centered and has covariance {% raw %}<span class="math inline">\((n-b)I_p/[p(n-1)]\)</span>{% endraw %}. Its variation is of order one when {% raw %}<span class="math inline">\(b/n\to0\)</span>{% endraw %}.</p>
 
-<p>The mean statistic and the quadratic statistic before adjustment are</p>
-
-{% raw %}<div class="math display">\[
-S_M(\mu_*)=\left\|W_n+\sqrt{Rb/p}\,a\right\|^2,
-\]</div>{% endraw %}
-
-{% raw %}<div class="math display">\[
-S_U(\mu_*)=
-\frac1{pb\sqrt R}\sum_{r=1}^R
-\sum_{\substack{1\le j,\ell\le b\\j\ne\ell}}
-(Z_{\pi_r(j)}+a)'(Z_{\pi_r(\ell)}+a).
-\]</div>{% endraw %}
-
-<p>Song uses {% raw %}<span class="math inline">\(T_M(\mu_*)=S_M(\mu_*)-Rb/n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(T_U(\mu_*)=S_U(\mu_*)-\sqrt R(b-1)/n\)</span>{% endraw %}. Their reference distributions are generated with the empirical center {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}. To compare a candidate statistic with its reference, use the same permutations for both centerings. Expanding gives the exact identities</p>
+<p>Song uses {% raw %}<span class="math inline">\(T_M(\mu)=S_M(\mu)-Rb/n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(T_U(\mu)=S_U(\mu)-\sqrt R(b-1)/n\)</span>{% endraw %}. Their reference distributions are generated with the empirical center {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}. To compare a candidate statistic with its reference, use the same permutations for both centerings. Expanding gives the exact identities</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
-D_M&amp;:=T_M(\mu_*)-S_M(\overline X)\\
+D_M&amp;:=T_M(\mu)-S_M(\overline X)\\
 &amp;=2\sqrt{Rb/p}\,a'W_n+\frac{Rb}{p}\|a\|^2-\frac{Rb}{n},
 \end{aligned}
 \]</div>{% endraw %}
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
-D_U&amp;:=T_U(\mu_*)-S_U(\overline X)\\
+D_U&amp;:=T_U(\mu)-S_U(\overline X)\\
 &amp;=\frac{2(b-1)}{\sqrt{pb}}a'W_n
 +\frac{\sqrt R(b-1)}p\|a\|^2
 -\frac{\sqrt R(b-1)}n.
 \end{aligned}
 \]</div>{% endraw %}
 
-<p>These identities separate what resampling controls from what it inherits. The centered fluctuation {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} comes from the random indices. Under the null, {% raw %}<span class="math inline">\(a\)</span>{% endraw %} is the standardized error of the full-sample mean. The same error appears in every repetition.</p>
-
-<p>The U-type statistic retains a random term linear in {% raw %}<span class="math inline">\(a\)</span>{% endraw %}, but that term has conditional mean zero. Its conditional drift depends on {% raw %}<span class="math inline">\(\|a\|^2\)</span>{% endraw %}. This cancellation explains the different powers of {% raw %}<span class="math inline">\(R\)</span>{% endraw %} in the two identities.</p>
+<p>Under the null, {% raw %}<span class="math inline">\(a\)</span>{% endraw %} is the standardized sample-mean error. Its coefficient grows with {% raw %}<span class="math inline">\(R\)</span>{% endraw %} in the M comparison. In the U comparison, the centered linear term has no growing factor of {% raw %}<span class="math inline">\(R\)</span>{% endraw %}; only the quadratic drift accumulates with repetitions.</p>
 
 <h3 data-note-section="2" id="10-266-dependence-limits-how-much-to-aggregate">2. What the tuning restrictions control</h3>
 
@@ -98,7 +81,7 @@ r_U=\frac{\sqrt R\,b}{n}+\sqrt{\frac bn}.
 <p>For U, the displayed restriction also implies {% raw %}<span class="math inline">\(b/n\to0\)</span>{% endraw %}, so the linear remainder vanishes. These conditions remain relevant with independent original observations: the sample mean still has estimation error, and repeatedly resampling the same observations does not create a new independent sample of size {% raw %}<span class="math inline">\(Rb\)</span>{% endraw %}.</p>
 
 <span id="10-266-reading-the-tuning-restrictions-as-a-budget"></span>
-<p>The subsample size has another role. The conditional CLT requires higher-moment bounds for each resampled contribution. In Song's ordering-free formulation, these involve {% raw %}<span class="math inline">\(b^k\lambda_n(k)=O(1)\)</span>{% endraw %} through {% raw %}<span class="math inline">\(k=4\)</span>{% endraw %} for M and through {% raw %}<span class="math inline">\(k=8\)</span>{% endraw %} for U, alongside the moment and covariance assumptions. Here {% raw %}<span class="math inline">\(\lambda_n(k)\)</span>{% endraw %} averages dependence across sets of {% raw %}<span class="math inline">\(k\)</span>{% endraw %} observations after choosing their weakest split. The <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}#ordering-free-graph">connected-set bound</a> gives {% raw %}<span class="math inline">\(\lambda_n(k)=O(n^{-(k-1)})\)</span>{% endraw %} for bounded graph degree. Then {% raw %}<span class="math inline">\(b^2/n=O(1)\)</span>{% endraw %} is sufficient for these fixed-order dependence bounds.</p>
+<p>The conditional CLT also requires moment control within a subsample. The <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}#ordering-free-proof-techniques">moment argument in the preceding post</a> explains Song’s conditions on {% raw %}<span class="math inline">\(b^k\lambda_n(k)\)</span>{% endraw %} through orders four for M and eight for U. With bounded graph degree, {% raw %}<span class="math inline">\(b^2/n=O(1)\)</span>{% endraw %} suffices for those dependence bounds, alongside the observation-moment and covariance assumptions.</p>
 
 <p>Writing {% raw %}<span class="math inline">\(b\asymp n^\beta\)</span>{% endraw %} and {% raw %}<span class="math inline">\(R\asymp n^\gamma\)</span>{% endraw %} makes the restrictions easy to compare:</p>
 
@@ -120,12 +103,12 @@ Rb\rho_n^2\to0\quad\text{for M},
 Rb^2\rho_n^4\to0\quad\text{for U},
 \]</div>{% endraw %}
 
-<p>in addition to the conditional CLT conditions. The U restriction and {% raw %}<span class="math inline">\(R\to\infty\)</span>{% endraw %} also make {% raw %}<span class="math inline">\(\sqrt b\,\rho_n\to0\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(G\)</span>{% endraw %} equal-sized independent clusters of identical copies of a variance-one shock, {% raw %}<span class="math inline">\(\rho_n\asymp G^{-1/2}\)</span>{% endraw %}: the two restrictions depend on {% raw %}<span class="math inline">\(G\)</span>{% endraw %}, even if the recorded sample size is much larger. This is why tuning cannot be justified from {% raw %}<span class="math inline">\(n\)</span>{% endraw %} alone.</p>
+<p>in addition to the conditional CLT conditions. For U, {% raw %}<span class="math inline">\(R\to\infty\)</span>{% endraw %} then also gives {% raw %}<span class="math inline">\(\sqrt b\,\rho_n\to0\)</span>{% endraw %}. In the <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}#10-235-two-calculations-with-random-subsets">equal-cluster example</a> with {% raw %}<span class="math inline">\(G\to\infty\)</span>{% endraw %} independent variance-one cluster shocks, {% raw %}<span class="math inline">\(\rho_n\asymp G^{-1/2}\)</span>{% endraw %}. The allowable repetitions depend on the number of clusters, even if the recorded sample size is much larger.</p>
 
 <h3 data-note-section="3" id="10-266-derive-the-local-scales">3. The alternatives each statistic can detect</h3>
 
 <span id="10-266-two-kinds-of-signal"></span>
-<p>Now let the common population mean be {% raw %}<span class="math inline">\(\mu_*+\Delta_n\)</span>{% endraw %}. The standardized discrepancy separates into</p>
+<p>Now let the common population mean be {% raw %}<span class="math inline">\(\mu+\Delta_n\)</span>{% endraw %}. The standardized discrepancy separates into</p>
 
 {% raw %}<div class="math display">\[
 a=\underbracket{\widehat\Sigma^{-1/2}
@@ -149,19 +132,19 @@ a=\underbracket{\widehat\Sigma^{-1/2}
 \delta_U=R^{-1/4}b^{-1/2}.
 \]</div>{% endraw %}
 
-<p>These are rates for the magnitude of a mean shift, so a smaller rate means greater sensitivity. At the same {% raw %}<span class="math inline">\(R,b\)</span>{% endraw %},</p>
+<p>These are rates for the magnitude of a mean shift, so a smaller rate means greater sensitivity. For a common choice of {% raw %}<span class="math inline">\(R,b\)</span>{% endraw %} admissible for both tests,</p>
 
 {% raw %}<div class="math display">\[
 \frac{\delta_U}{\delta_M}=R^{1/4}\longrightarrow\infty.
 \]</div>{% endraw %}
 
-<p>The M-type test has the smaller detection scale in this comparison. The U-type statistic needs a larger shift because its signal is quadratic. Any argument for U-type superiority must account for a different choice of repetition count.</p>
+<p>The M-type test has the smaller detection scale at common tuning because the U-type signal is quadratic. The matched-size comparison below allows the subsample size and repetition count to differ between tests.</p>
 
 <span id="10-266-the-noncentral-limits-explain-the-detection-scales"></span>
 <p>The local limits explain what happens at these scales. Under the conditional CLT and negligible-remainder conditions, the M-type local alternative gives</p>
 
 {% raw %}<div class="math display">\[
-T_M(\mu_*)\Rightarrow
+T_M(\mu)\Rightarrow
 \frac1p\|G+\Sigma^{-1/2}h\|^2,
 \qquad G\sim\mathcal N(0,I_p).
 \]</div>{% endraw %}
@@ -169,7 +152,7 @@ T_M(\mu_*)\Rightarrow
 <p>For U, retain its variance normalization. Let {% raw %}<span class="math inline">\(v_n^2\)</span>{% endraw %} be the conditional variance of a single empirically centered U contribution, and suppose {% raw %}<span class="math inline">\(v_n\to_p v&gt;0\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(b\to\infty\)</span>{% endraw %}, the corresponding limit is</p>
 
 {% raw %}<div class="math display">\[
-\frac{T_U(\mu_*)}{v_n}
+\frac{T_U(\mu)}{v_n}
 \Rightarrow\mathcal N\left(\frac{h'\Sigma^{-1}h}{pv},1\right).
 \]</div>{% endraw %}
 
@@ -279,7 +262,7 @@ R_Mb_M\asymp n\omega_n^2,
 \frac{\delta_U}{\delta_M}\asymp\sqrt{\omega_n}\to0.
 \]</div>{% endraw %}
 
-<p>The quadratic signal grows more slowly with repetitions, but its null drift also grows more slowly. At the matched error scale, the allowable increase in repetitions more than compensates for the quadratic signal. Both detection scales remain larger than {% raw %}<span class="math inline">\(n^{-1/2}\)</span>{% endraw %}: the comparison does not recover the root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} sensitivity of a conventional mean test with a consistently estimable sampling variance.</p>
+<p>The matched error bound permits {% raw %}<span class="math inline">\(\sqrt{R_U}b_U\asymp n\omega_n\)</span>{% endraw %} for U, whereas M is limited to {% raw %}<span class="math inline">\(R_Mb_M\asymp n\omega_n^2\)</span>{% endraw %}. Taking square roots gives the displayed detection scales. Both remain larger than {% raw %}<span class="math inline">\(n^{-1/2}\)</span>{% endraw %}, so neither recovers the sensitivity of a conventional mean test with an estimable sampling variance.</p>
 
 <p>There is a qualification in the term “rate-dominance.” Song's definition requires the common size-error order to be sharp, as well as requiring the ratio of detection scales to vanish. The proposition proves the latter implication conditional on the stated calibration inputs. Matching two upper bounds alone does not prove that they describe the exact size errors. It also does not establish that U has greater power in every finite sample.</p>
 
@@ -307,13 +290,13 @@ R_Mb_M\asymp n\omega_n^2,
 
 <h3 data-note-section="7" id="10-266-why-centered-resampling-can-estimate-a-critical-value">7. Repetitions in the statistic and simulations of its critical value</h3>
 
-<p>The restriction on {% raw %}<span class="math inline">\(R\)</span>{% endraw %} applies to the repetitions that form one test statistic. A second count, {% raw %}<span class="math inline">\(L\)</span>{% endraw %}, determines how many independent batches of that statistic are simulated to estimate its critical value. Each batch uses the same {% raw %}<span class="math inline">\(R,b\)</span>{% endraw %}, but centers the observations at {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}. Increasing {% raw %}<span class="math inline">\(L\)</span>{% endraw %} improves the approximation to this fixed conditional reference distribution.</p>
+<p>The <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}#ordering-free-calibration-and-power">calibration procedure</a> uses {% raw %}<span class="math inline">\(R\)</span>{% endraw %} permutations per statistic and {% raw %}<span class="math inline">\(L\)</span>{% endraw %} independent simulated statistics to estimate its critical value. These counts enter the size comparison differently.</p>
 
 <p>For independent simulated batches, the empirical reference CDF has conditional error {% raw %}<span class="math inline">\(O_p(L^{-1/2})\)</span>{% endraw %}. If the goal is to compare the tests at the finer order {% raw %}<span class="math inline">\(\omega_n\)</span>{% endraw %}, simulation error must also be controlled at that scale. A sufficient choice is {% raw %}<span class="math inline">\(L^{-1/2}=o(\omega_n)\)</span>{% endraw %}, together with the quantile regularity required by the calibration argument. Merely sending {% raw %}<span class="math inline">\(L\to\infty\)</span>{% endraw %} is enough for first-order convergence under the usual conditions, but does not by itself preserve a particular higher-order comparison.</p>
 
-<p>Centering the reference simulations removes the empirical mean discrepancy from those simulations. The tested statistic still contains the original sample-mean error, so increasing the number of reference simulations does not relax the restrictions on {% raw %}<span class="math inline">\(R,b\)</span>{% endraw %}. Repeating an entire randomized test and combining its answers is another procedure; Song analyzes a confidence-function construction for that purpose. It does not follow from the critical-value argument that arbitrary averaging of test decisions or p-values preserves size.</p>
+<p>The reference simulations retain the empirical center {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}, so increasing {% raw %}<span class="math inline">\(L\)</span>{% endraw %} cannot relax the restrictions on {% raw %}<span class="math inline">\(R,b\)</span>{% endraw %}. Repeating an entire test and combining its decisions requires a separate calibration argument; Song’s confidence-function procedure is one such construction.</p>
 
-<p>A tuning comparison should therefore report the subsample sizes and repetition counts, the error order they control, and the resulting mean-shift scales. The <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">simpler resampled mean and pair construction</a> follows the same logic: its range of admissible repetitions comes from the full-sample estimation error, and its power must be evaluated within that range.</p>
+<p>The <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">next post</a> fixes the number of observations drawn per repetition at one for M and two for U. This makes it possible to prove the conditional limit from empirical moment conditions alone and to construct a test for moment inequalities. Its practical tuning rule balances drift against detection scale, a different criterion from matching size-error orders here.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-song_ordering-free_2018" class="csl-entry" role="listitem">
