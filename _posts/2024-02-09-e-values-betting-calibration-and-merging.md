@@ -3,7 +3,7 @@ layout: "post"
 title: "E-Values: Betting, Calibration, and Merging"
 date: "2024-02-09"
 tags: ["statistics", "testing"]
-excerpt: "E-values connect hypothesis tests to betting payoffs; their calibration and combination rules determine which guarantees survive reuse."
+excerpt: "E-value calibration and merging, sequential products, and predictable betting under a conditional null."
 note_series: "E-values"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on e-Values/stats.tex"
 redirect_from: ["/2024/05/18/e-values-betting-calibration-and-merging/", "/2024/05/18/testing-hypotheses-by-betting/", "/2024/06/10/e-values-and-p-values/", "/2024/07/03/calibrating-e-values-and-p-values/", "/2024/07/27/merging-e-values-and-p-values/"]
@@ -102,9 +102,25 @@ f(F_Q^{-1}(U))\le f(U),
 \]</div>{% endraw %}
 <p>contradicting validity. Thus {% raw %}<span class="math inline">\(F(e)\le\max(1,m)\)</span>{% endraw %}. Whenever {% raw %}<span class="math inline">\(F(e)&gt;1\)</span>{% endraw %}, this forces {% raw %}<span class="math inline">\(F(e)\le m\)</span>{% endraw %}. Randomly relabeling the payoffs is what turns the symmetry of the rule into a constraint on every input vector.</p>
 
-<p>Products require more. Independence is sufficient, and sequential conditional validity {% raw %}<span class="math inline">\(\mathbb{E}[E_t\mid\mathcal F_{t-1}]\le1\)</span>{% endraw %} makes {% raw %}<span class="math inline">\(\prod_{s\le t}E_s\)</span>{% endraw %} a nonnegative supermartingale. The tower property proves this one factor at a time. Ville’s inequality then controls the probability that this process ever crosses {% raw %}<span class="math inline">\(1/\alpha\)</span>{% endraw %}; the <a href="{% post_url 2023-01-07-martingales-maximal-and-upcrossing-inequalities %}">martingale maximal-inequality argument</a> explains why stopping at the first crossing preserves the bound.</p>
+<p><strong>Proposition (sequential products).</strong> Let {% raw %}<span class="math inline">\(E_t\geq0\)</span>{% endraw %} be {% raw %}<span class="math inline">\(\mathcal F_t\)</span>{% endraw %}-measurable and satisfy {% raw %}<span class="math inline">\(\mathbb E[E_t\mid\mathcal F_{t-1}]\leq1\)</span>{% endraw %} almost surely for every {% raw %}<span class="math inline">\(t\geq1\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(K_0=1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(K_t=\prod_{s=1}^tE_s\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\((K_t)\)</span>{% endraw %} is a nonnegative supermartingale and, for {% raw %}<span class="math inline">\(0&lt;\alpha&lt;1\)</span>{% endraw %},</p>
 
-<p>Multiplication uses conditional validity or independence, whereas averaging uses only marginal expectation bounds. A collection of fixed-sample {% raw %}<span class="math inline">\(e\)</span>{% endraw %}-values therefore does not automatically justify repeated inspection and stopping.</p>
+{% raw %}<div class="math display">\[\mathbb P\left(\sup_{t\geq0}K_t\geq\alpha^{-1}\right)\leq\alpha.\]</div>{% endraw %}
+
+<p><strong>Proof.</strong> Conditional expectation for nonnegative variables gives</p>
+
+{% raw %}<div class="math display">\[\mathbb E[K_t\mid\mathcal F_{t-1}]=K_{t-1}\mathbb E[E_t\mid\mathcal F_{t-1}]\leq K_{t-1}.\]</div>{% endraw %}
+
+<p>Starting from {% raw %}<span class="math inline">\(\mathbb EK_0=1\)</span>{% endraw %}, induction proves {% raw %}<span class="math inline">\(\mathbb EK_t\leq1\)</span>{% endraw %}, so every {% raw %}<span class="math inline">\(K_t\)</span>{% endraw %} is integrable. For any level {% raw %}<span class="math inline">\(c&gt;1\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(\tau_c=\inf\{t:K_t\geq c\}\)</span>{% endraw %}. Bounded optional sampling and nonnegativity give</p>
+
+{% raw %}<div class="math display">\[1\geq\mathbb EK_{\tau_c\wedge N}\geq c\,\mathbb P(\tau_c\leq N).\]</div>{% endraw %}
+
+<p>First let {% raw %}<span class="math inline">\(N\to\infty\)</span>{% endraw %}. This bounds the probability of ever attaining level {% raw %}<span class="math inline">\(c\)</span>{% endraw %} by {% raw %}<span class="math inline">\(1/c\)</span>{% endraw %}. The supremum need not be attained, so take levels {% raw %}<span class="math inline">\(c\uparrow\alpha^{-1}\)</span>{% endraw %}: the event {% raw %}<span class="math inline">\(\{\sup_tK_t\geq\alpha^{-1}\}\)</span>{% endraw %} is contained in each corresponding crossing event. The bound follows. This is Ville’s inequality. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+
+<p>The proof is valid separately under every probability law in a composite null for which the conditional expectation bounds hold. It requires no independence between successive factors.</p>
+
+
+<p>Marginal bounds {% raw %}<span class="math inline">\(\mathbb EE_t\leq1\)</span>{% endraw %} alone do not justify multiplication. For example, let {% raw %}<span class="math inline">\(E_1=E_2=2\mathbf1_A\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\mathbb P(A)=1/2\)</span>{% endraw %}. Each factor has expectation one, but {% raw %}<span class="math inline">\(\mathbb E(E_1E_2)=2\)</span>{% endraw %}. Independent e-variables satisfy the conditional requirement relative to their natural filtration; dependent factors require that requirement to be checked directly.</p>
+
 
 <h3 data-note-section="5" id="25-0-a-sequential-betting-example">5. A sequential betting example</h3>
 <p>Suppose {% raw %}<span class="math inline">\(X_t\)</span>{% endraw %} is binary and the null requires {% raw %}<span class="math inline">\(\Pr(X_t=1\mid\mathcal F_{t-1})\le p_0\)</span>{% endraw %}. Choose a predictable {% raw %}<span class="math inline">\(q_t\in[p_0,1)\)</span>{% endraw %} and define the next payoff factor by</p>
@@ -121,13 +137,15 @@ L_t\triangleq
 \mathbb{E}[L_t\mid\mathcal F_{t-1}]
 =1+\frac{(p_t-p_0)(q_t-p_0)}{p_0(1-p_0)}\le1.
 \]</div>{% endraw %}
-<p>Multiplying by the already observed {% raw %}<span class="math inline">\(K_{t-1}\)</span>{% endraw %} proves the supermartingale property. To derive the crossing bound, stop at {% raw %}<span class="math inline">\(\tau=\inf\{t:K_t\ge1/\alpha\}\)</span>{% endraw %}. For each finite {% raw %}<span class="math inline">\(N\)</span>{% endraw %}, bounded stopping and nonnegativity give</p>
+<p>The proposition applies with {% raw %}<span class="math inline">\(E_t=L_t\)</span>{% endraw %}, so {% raw %}<span class="math inline">\(K\)</span>{% endraw %} is a nonnegative supermartingale. In particular, for {% raw %}<span class="math inline">\(\tau=\inf\{t:K_t\geq1/\alpha\}\)</span>{% endraw %} and finite {% raw %}<span class="math inline">\(N\)</span>{% endraw %},</p>
+
 
 {% raw %}<div class="math display">\[
 1\ge\mathbb{E}[K_{\tau\wedge N}]
 \ge\alpha^{-1}\Pr(\tau\le N).
 \]</div>{% endraw %}
-<p>The events increase to the event of ever crossing the threshold as {% raw %}<span class="math inline">\(N\)</span>{% endraw %} tends to infinity. Continuity of probability then gives the bound for any number of inspections.</p>
+<p>Letting {% raw %}<span class="math inline">\(N\to\infty\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(\mathbb P(\tau&lt;\infty)\leq\alpha\)</span>{% endraw %}. Thus the probability of rejection at any observation time is at most {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}, including when the number of observations is chosen from the observed history.</p>
+
 
 <p>The power interpretation of a payoff also follows from a short calculation. Suppose, for this illustration, that outcomes are i.i.d. Bernoulli{% raw %}<span class="math inline">\((p)\)</span>{% endraw %} with {% raw %}<span class="math inline">\(p&gt;p_0\)</span>{% endraw %}, and use a fixed betting probability {% raw %}<span class="math inline">\(q\in(p_0,1)\)</span>{% endraw %}. The expected log increment is</p>
 
@@ -141,9 +159,11 @@ L_t\triangleq
 
 <p>By the law of large numbers, {% raw %}<span class="math inline">\(t^{-1}\log K_t\)</span>{% endraw %} converges to this growth rate. A well-chosen alternative therefore accumulates evidence exponentially under the alternative while retaining the null expectation bound. A badly chosen {% raw %}<span class="math inline">\(q\)</span>{% endraw %} can have negative log growth even though every factor is valid. Validity and power impose different requirements.</p>
 
-<p>The alternative specifies which outcomes receive larger payoffs. A predictable choice of {% raw %}<span class="math inline">\(q\)</span>{% endraw %} can learn from the past because it is fixed before the next outcome, preserving the conditional expectation argument. Selecting it after observing that outcome does not. Fixed mixtures allocate the initial stake across alternatives while retaining the bound.</p>
+<p>A predictable {% raw %}<span class="math inline">\(q_t\)</span>{% endraw %} is {% raw %}<span class="math inline">\(\mathcal F_{t-1}\)</span>{% endraw %}-measurable, so the displayed conditional expectation calculation remains valid when {% raw %}<span class="math inline">\(q_t\)</span>{% endraw %} is estimated from past observations. A fixed mixture of such capital processes also satisfies Ville’s inequality: for nonnegative weights summing to one, conditional Tonelli gives the supermartingale inequality for the mixture, whose initial value is one.</p>
 
-<p>Choosing {% raw %}<span class="math inline">\(q_t\)</span>{% endraw %} from the past is permitted; choosing it after seeing {% raw %}<span class="math inline">\(X_t\)</span>{% endraw %} would invalidate the conditional expectation calculation. For example, assigning probability one to whichever outcome just occurred can create a payoff larger than one every round without providing valid evidence.</p>
+
+<p>Predictability cannot be dropped. Under the equality null {% raw %}<span class="math inline">\(p_t=p_0\)</span>{% endraw %}, choosing {% raw %}<span class="math inline">\(q_t=1\)</span>{% endraw %} after a success and {% raw %}<span class="math inline">\(q_t=p_0\)</span>{% endraw %} after a failure gives {% raw %}<span class="math inline">\(L_t=1/p_0\)</span>{% endraw %} on success and {% raw %}<span class="math inline">\(L_t=1\)</span>{% endraw %} on failure. Its conditional expectation is {% raw %}<span class="math inline">\(2-p_0&gt;1\)</span>{% endraw %}. Choosing {% raw %}<span class="math inline">\(q_t&lt;1\)</span>{% endraw %} sufficiently close to one after a success gives the same strict failure while remaining within {% raw %}<span class="math inline">\([p_0,1)\)</span>{% endraw %}.</p>
+
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-shafer_betting_2021" class="csl-entry" role="listitem">

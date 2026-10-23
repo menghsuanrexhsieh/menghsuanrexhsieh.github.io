@@ -3,19 +3,21 @@ layout: "post"
 title: "A Strict Local Martingale and the Meaning of Boundedness"
 date: "2024-09-19"
 tags: ["probability theory", "stochastic processes"]
-excerpt: "A Strict Local Martingale and the Meaning of Boundedness. Notes on stochastic processes."
+excerpt: "A reciprocal three-dimensional Bessel process with strict loss of expectation, and criteria for true martingales."
 note_series: "Stochastic processes"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex"
 ---
 
 <div class="note-content" markdown="0">
 
-<p>Work on a filtered probability space satisfying the usual conditions. {% raw %}<span class="math inline">\(B\)</span>{% endraw %} denotes Brownian motion, and stochastic integrands are predictable with the stated integrability. A local martingale need not be a true martingale: the moment conditions in each claim are essential. See <a href="{% post_url 2023-01-21-brownian-motion-markov-properties-and-path-continuity %}">Brownian motion</a> and <a href="{% post_url 2023-01-07-martingales-maximal-and-upcrossing-inequalities %}">martingale inequalities</a>.</p>
+<p>Let {% raw %}<span class="math inline">\(B\)</span>{% endraw %} be Brownian motion in {% raw %}<span class="math inline">\(\mathbb R^3\)</span>{% endraw %}, started at a fixed {% raw %}<span class="math inline">\(x\ne0\)</span>{% endraw %}, with its completed natural filtration. We prove that {% raw %}<span class="math inline">\(Z_t=|B_t|^{-1}\)</span>{% endraw %} is a strict local martingale although {% raw %}<span class="math inline">\(\sup_{t\geq0}\mathbb E Z_t^2&lt;\infty\)</span>{% endraw %}.</p>
+
 
 <div id="sec:cts-local-martingales-are-not-automatically-martingales" data-note-section="title">
 
 </div>
-<p>It is tempting to think that a continuous local martingale that is uniformly integrable or bounded in {% raw %}<span class="math inline">\(L^p\)</span>{% endraw %} for {% raw %}<span class="math inline">\(p &gt; 1\)</span>{% endraw %} is automatically a martingale. The distinction is between bounds at deterministic times and bounds for the stopped variables used in localisation. A bound on the former family need not justify passing to the limit in the latter.</p>
+<p>The moment bound makes {% raw %}<span class="math inline">\(\{Z_t:t\geq0\}\)</span>{% endraw %} uniformly integrable. Removing a localizing sequence, however, requires control of stopped values such as {% raw %}<span class="math inline">\(Z_{t\wedge\tau_n}\)</span>{% endraw %}. The example shows that uniform integrability at deterministic times does not supply this control.</p>
+
 
 <p>The example is the reciprocal distance of a three-dimensional Brownian motion from the origin. We first analyse radial Brownian motion in dimension {% raw %}<span class="math inline">\(d\geq2\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(B_t=(B_t^1,\ldots,B_t^d)\)</span>{% endraw %} start at {% raw %}<span class="math inline">\(x\in\mathbb R^d\setminus\{0\}\)</span>{% endraw %}. Itō’s formula gives</p>
 
@@ -76,6 +78,24 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic
 <p>The last function of {% raw %}<span class="math inline">\(t\)</span>{% endraw %} is continuous and tends to zero both as {% raw %}<span class="math inline">\(t\downarrow0\)</span>{% endraw %} and as {% raw %}<span class="math inline">\(t\to\infty\)</span>{% endraw %}, so its supremum is finite. Including {% raw %}<span class="math inline">\(Z_0=|x|^{-1}\)</span>{% endraw %}, this proves {% raw %}<span class="math inline">\(\sup_{t\geq0}\mathbb{E}Z_t^2&lt;\infty\)</span>{% endraw %}.</p>
 
 <p>If {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} were a true martingale, its expectations would all equal {% raw %}<span class="math inline">\(|x|^{-1}&gt;0\)</span>{% endraw %}. The deterministic-time {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} bound makes this family uniformly integrable, and its almost-sure limit is zero. Hence {% raw %}<span class="math inline">\(\mathbb{E}Z_t\to0\)</span>{% endraw %}, a contradiction. Thus {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} is a strict local martingale. The example separates uniform integrability at deterministic times from the class-D control over stopped values needed to remove localization. ◻</p>
+
+<h2 id="strictness-at-every-positive-time">Expectation at a positive time</h2>
+<p>The loss of expectation can be computed explicitly. Put {% raw %}<span class="math inline">\(r=|x|\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}, and rotate coordinates so that {% raw %}<span class="math inline">\(x=(0,0,r)\)</span>{% endraw %}. Spherical coordinates in the Gaussian integral give</p>
+
+{% raw %}<div class="math display">\[\begin{aligned}
+\mathbb E_x\frac1{|B_t|}
+&amp;=\frac{2\pi}{(2\pi t)^{3/2}}\int_0^\infty
+\rho e^{-(\rho^2+r^2)/(2t)}
+\left(\int_{-1}^1e^{\rho r u/t}\,du\right)d\rho\\
+&amp;=\frac1{r\sqrt{2\pi t}}\int_0^\infty
+\left(e^{-(\rho-r)^2/(2t)}-e^{-(\rho+r)^2/(2t)}\right)d\rho\\
+&amp;=\frac1{r\sqrt{2\pi t}}\int_{-r}^{r}e^{-u^2/(2t)}\,du
+=\frac{2\Phi(r/\sqrt t)-1}{r}.
+\end{aligned}\]</div>{% endraw %}
+
+<p>All integrands in the original spherical integral are nonnegative, so Tonelli justifies the order of integration. Since {% raw %}<span class="math inline">\(2\Phi(r/\sqrt t)-1&lt;1\)</span>{% endraw %}, the expectation is strictly less than {% raw %}<span class="math inline">\(Z_0=1/r\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}. Thus the process fails to be a martingale on every interval of positive length.</p>
+
+<p>For any localizing sequence {% raw %}<span class="math inline">\(\tau_n\uparrow\infty\)</span>{% endraw %} whose stopped processes are martingales, {% raw %}<span class="math inline">\(\mathbb E Z_{t\wedge\tau_n}=1/r\)</span>{% endraw %}. The almost-sure limit is {% raw %}<span class="math inline">\(Z_t\)</span>{% endraw %}, with strictly smaller expectation. Consequently {% raw %}<span class="math inline">\(\{Z_{t\wedge\tau_n}:n\geq1\}\)</span>{% endraw %} is not uniformly integrable for any fixed {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}.</p>
 
 <nav class="note-related" aria-label="Related notes"><p>Related notes: <a href="{% post_url 2023-05-08-brownian-path-oscillations-and-continuity-bounds %}">Brownian Path Oscillations and Continuity Bounds</a>.</p></nav>
 

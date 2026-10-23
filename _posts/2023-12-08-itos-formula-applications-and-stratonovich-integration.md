@@ -3,7 +3,7 @@ layout: "post"
 title: "Itō’s Formula, Applications, and Stratonovich Integration"
 date: "2023-12-08"
 tags: ["probability theory", "stochastic processes"]
-excerpt: "Itō’s formula is extremely useful, and there are a few direct applications."
+excerpt: "Itō’s formula, Lévy’s characterization, Brownian time changes, and Stratonovich integration."
 note_series: "Stochastic processes"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex"
 redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-formula/", "/2024/04/29/stratonovich-integrals/"]
@@ -11,80 +11,55 @@ redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-fo
 
 <div class="note-content" markdown="0">
 
-<p>Work on a filtered probability space satisfying the usual conditions. {% raw %}<span class="math inline">\(B\)</span>{% endraw %} denotes Brownian motion, and stochastic integrands are predictable with the stated integrability. A local martingale need not be a true martingale: the moment conditions in each claim are essential. See <a href="{% post_url 2023-01-21-brownian-motion-markov-properties-and-path-continuity %}">Brownian motion</a> and <a href="{% post_url 2023-01-07-martingales-maximal-and-upcrossing-inequalities %}">martingale inequalities</a>.</p>
+<p>Let {% raw %}<span class="math inline">\((\Omega,\mathcal F,(\mathcal F_t)_{t\geq0},\mathbb P)\)</span>{% endraw %} satisfy the usual conditions. All semimartingales in this article are continuous. Write {% raw %}<span class="math inline">\(X=X_0+M+A\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(M_0=A_0=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is a local martingale, and {% raw %}<span class="math inline">\(A\)</span>{% endraw %} has finite variation on compact intervals. We use {% raw %}<span class="math inline">\(\langle X,Y\rangle\)</span>{% endraw %} for the covariation of their local-martingale parts. The integral and its covariation identity are constructed in <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}#result-9">the continuous-semimartingale article</a>.</p>
+
 
 <div id="it-s-formula" data-note-section="title">
 
 </div>
-<p>The ordinary chain rule comes from the first-order term in a Taylor expansion. For stochastic integrals, the second-order term may survive summation. To see where the difference enters, first consider a smooth path. Suppose {% raw %}<span class="math inline">\(f: \mathbb R \to \mathbb R\)</span>{% endraw %} is smooth, and {% raw %}<span class="math inline">\(x : \mathbb R \to \mathbb R\)</span>{% endraw %} is a continuously differentiable path. Heuristically, we ought to have, for small {% raw %}<span class="math inline">\(\Delta t &gt; 0\)</span>{% endraw %}, </p>
+<h2 id="product-rule">The product rule</h2>
+<p><strong>Proposition (integration by parts).</strong> For continuous semimartingales {% raw %}<span class="math inline">\(X,Y\)</span>{% endraw %},</p>
 
-{% raw %}<div class="math display">\[\begin{aligned}
-    f(x_{t+\Delta t}) = f(x_t + (x_{t+\Delta t} - x_t)) \approx f(x_t) + f&#x27;(x_t) (x_{t+\Delta t} - x_t) \approx f(x_t) + f&#x27;(x_t) \dif x_t ~.
-\end{aligned}\]</div>{% endraw %}
-<p> This suggests, by summation, the formula </p>
+{% raw %}<div class="math display">\[X_tY_t=X_0Y_0+\int_0^tX_s\,dY_s+\int_0^tY_s\,dX_s+\langle X,Y\rangle_t.\]</div>{% endraw %}
 
-{% raw %}<div class="math display">\[\begin{aligned}
-    f(x_t) = f(x_0) + \int_0^t f&#x27;(x_s) \dif x_s ~.
-\end{aligned}\]</div>{% endraw %}
-<p> For a Brownian motion, since the quadratic variation is not zero, {% raw %}<span class="math inline">\(\langle B \rangle_t = t\)</span>{% endraw %}, so a Taylor expansion needs to be of order two. As such, heuristically, </p>
+<p><strong>Proof.</strong> It suffices by polarisation to prove the assertion for {% raw %}<span class="math inline">\(Y=X\)</span>{% endraw %}. For a deterministic partition {% raw %}<span class="math inline">\(0=t_0&lt;\cdots&lt;t_m=t\)</span>{% endraw %}, the algebraic identity</p>
 
-{% raw %}<div class="math display">\[\begin{aligned}
-    f(B_{t+\Delta t}) &amp;= f(B_t + (B_{t+\Delta t} - B_t)) \\
-    &amp;\approx f(B_t) + f&#x27;(B_t) (B_{t+\Delta t} - B_t) + \frac{f&#x27;&#x27;(B_t)}{2} (B_{t+\Delta t} - B_t)^2 \\
-    &amp;= f(B_t) + f&#x27;(B_t) \dif B_t + \frac{f&#x27;&#x27;(B_t)}{2} \dif t ~.
-\end{aligned}\]</div>{% endraw %}
-<p> Again, by summation, we have the formula </p>
+{% raw %}<div class="math display">\[X_t^2-X_0^2=2\sum_{j=1}^mX_{t_{j-1}}(X_{t_j}-X_{t_{j-1}})+\sum_{j=1}^m(X_{t_j}-X_{t_{j-1}})^2\]</div>{% endraw %}
 
-{% raw %}<div class="math display">\[\begin{aligned}
-    f(B_t) = f(B_0) + \int_0^t f&#x27;(B_s) \dif B_s + \frac{1}{2} \int_0^t f&#x27;&#x27;(B_s) \dif s ~.
-\end{aligned}\]</div>{% endraw %}
-<p>The Taylor expansion explains the extra term, but a proof must also justify the limit of the remainder. We establish the product rule first and then use polynomial approximation to obtain the change-of-variables formula.</p>
+<p>holds pathwise. The last sum converges in probability to {% raw %}<span class="math inline">\(\langle M\rangle_t\)</span>{% endraw %}. Indeed, the martingale square sums converge by <a href="{% post_url 2023-08-23-quadratic-variation-and-the-doobmeyer-decomposition %}">the quadratic-variation construction</a>; the terms involving {% raw %}<span class="math inline">\(A\)</span>{% endraw %} tend to zero because they are bounded by the modulus of continuity of {% raw %}<span class="math inline">\(M\)</span>{% endraw %} or {% raw %}<span class="math inline">\(A\)</span>{% endraw %}, multiplied by the variation of {% raw %}<span class="math inline">\(A\)</span>{% endraw %}.</p>
 
-<p>To see the validity, we start with integration by parts of continuous semimartingales. Suppose {% raw %}<span class="math inline">\(\{X_t\}_{t \geq 0}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\{Y_t\}_{t \geq 0}\)</span>{% endraw %} are two continuous semimartingales. The product rule isolates the covariation term that ordinary integration by parts does not have; see the <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}#sec:cts-semimartingales">continuous-semimartingale notes</a> for the underlying integral and covariation properties. Then, the process {% raw %}<span class="math inline">\(\{X_t Y_t\}_{t \geq 0}\)</span>{% endraw %} is a continuous semimartingale, and we have </p>
+<p>For the first sum, let {% raw %}<span class="math inline">\(H^{\pi}_s=X_{t_{j-1}}\)</span>{% endraw %} on {% raw %}<span class="math inline">\((t_{j-1},t_j]\)</span>{% endraw %}. Localise so that {% raw %}<span class="math inline">\(|X_0|\)</span>{% endraw %}, the range of {% raw %}<span class="math inline">\(X\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\langle M\rangle_t\)</span>{% endraw %}, and the variation of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} are bounded by deterministic constants. Continuity gives {% raw %}<span class="math inline">\(\sup_{s\leq t}|H^{\pi}_s-X_s|\to0\)</span>{% endraw %} almost surely. The isometry and dominated convergence give</p>
 
-{% raw %}<div class="math display">\[\begin{aligned}
-    X_t Y_t = X_0 Y_0 + \int_0^t X_s \dif Y_s + \int_0^t Y_s \dif X_s + \langle X,Y \rangle_t  \:\:, \quad \forall t \geq 0 ~.
-\end{aligned}\]</div>{% endraw %}
-<p> To see this, bilinearity implies we can assume {% raw %}<span class="math inline">\(X=Y\)</span>{% endraw %} without loss of generality. Let us also recentre and assume {% raw %}<span class="math inline">\(X_0=0\)</span>{% endraw %}. For any {% raw %}<span class="math inline">\(t \geq 0\)</span>{% endraw %} and every sequence {% raw %}<span class="math inline">\(\Delta_n[0,t]\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(|\Delta_n[0,t]| \xrightarrow{n\to\infty} 0\)</span>{% endraw %}, we have </p>
+{% raw %}<div class="math display">\[\mathbb E\left|\int_0^t(H^{\pi}_s-X_s)\,dM_s\right|^2
+=\mathbb E\int_0^t|H^{\pi}_s-X_s|^2\,d\langle M\rangle_s\longrightarrow0.\]</div>{% endraw %}
 
-{% raw %}<div class="math display">\[\begin{aligned}
-    \sum_{1 \leq k \leq n} \left( X_{t_k^n} - X_{t_{k-1}^n} \right)^2 = X_t^2 - 2 \sum_{1 \leq k \leq n} X_{t_{k-1}^n} \left( X_{t_k^n} - X_{t_{k-1}^n} \right) ~.
-\end{aligned}\]</div>{% endraw %}
-<p> Taking {% raw %}<span class="math inline">\(n \to \infty\)</span>{% endraw %} gives the desired statement. {% raw %}<span class="math inline">\(\blacksquare\)</span>{% endraw %}</p>
+<p>The finite-variation integral is bounded in absolute value by {% raw %}<span class="math inline">\(\sup|H^{\pi}-X|\operatorname{Var}_{[0,t]}(A)\)</span>{% endraw %}, which tends to zero almost surely. Removing the localisation proves the identity at each fixed {% raw %}<span class="math inline">\(t\)</span>{% endraw %}. Intersecting the probability-one events for rational {% raw %}<span class="math inline">\(t\)</span>{% endraw %} and using continuity proves it simultaneously for all {% raw %}<span class="math inline">\(t\)</span>{% endraw %}. Polarisation completes the proof. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 
-<p>Itō’s formula then follows for this case. Specifically, if {% raw %}<span class="math inline">\(\{X_t\}_{t \geq 0}\)</span>{% endraw %} is a continuous, adapted semimartingale, and {% raw %}<span class="math inline">\(f: \mathbb R \to \mathbb R\)</span>{% endraw %} is a twice continuously differentiable function, then the process {% raw %}<span class="math inline">\(\{f(X_t)\}_{t \geq 0}\)</span>{% endraw %} is a semimartingale, and the following change of variable formula holds: </p>
+<h2 id="change-of-variables">Itō’s formula</h2>
+<p><strong>Theorem (Itō).</strong> If {% raw %}<span class="math inline">\(f\in C^2(\mathbb R)\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(f(X)\)</span>{% endraw %} is a continuous semimartingale and, almost surely for every {% raw %}<span class="math inline">\(t\geq0\)</span>{% endraw %},</p>
+<span id="eq:ito-formula"></span>
+{% raw %}<div class="math display">\[f(X_t)=f(X_0)+\int_0^tf'(X_s)\,dX_s+\frac12\int_0^tf''(X_s)\,d\langle X\rangle_s.\tag{1}\]</div>{% endraw %}
 
-{% raw %}<span id="eq:ito-formula"></span><div class="math display">\[\begin{aligned}
- 
-    f(X_t) = f(X_0) + \int_0^t f&#x27;(X_s) \dif X_s + \frac12 \int_0^t f&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s ~.
-\end{aligned}\tag{1}\]</div>{% endraw %}
-<p> To see this holds, suppose {% raw %}<span class="math inline">\(\{X_t\}_{t \geq 0}\)</span>{% endraw %} is bounded. Then, let {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %} be the set of twice continuously differentiable functions {% raw %}<span class="math inline">\(f\)</span>{% endraw %} such that <a href="#eq:ito-formula" data-reference-type="eqref" data-reference="eq:ito-formula">(1)</a> holds. Then, {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %} is a vector space; we need to show that this is an algebra. If this holds, then {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %} contains the identity function, so {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %} contains all polynomial functions. All functions that are twice continuously differentiable (not necessarily having the expansion <a href="#eq:ito-formula" data-reference-type="eqref" data-reference="eq:ito-formula">(1)</a>) are contained in {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %}; to see this, note that because {% raw %}<span class="math inline">\(\{X_t\}_{t \geq 0}\)</span>{% endraw %} is bounded by assumption, it is possible to find a sequence of polynomials {% raw %}<span class="math inline">\(P_n\)</span>{% endraw %} such that on compact sets, {% raw %}<span class="math inline">\(P_n\)</span>{% endraw %} converges uniformly to {% raw %}<span class="math inline">\(f\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P&#x27;_n\)</span>{% endraw %} converges uniformly to {% raw %}<span class="math inline">\(f&#x27;\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(P&#x27;&#x27;_n\)</span>{% endraw %} converges uniformly to {% raw %}<span class="math inline">\(f&#x27;&#x27;\)</span>{% endraw %}. Passing to the limit in the formula for the polynomials gives the formula for the original function.</p>
+<p><strong>Proof.</strong> First restrict to a bounded range of {% raw %}<span class="math inline">\(X\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %} be the class of {% raw %}<span class="math inline">\(C^2\)</span>{% endraw %} functions for which (1) holds. Constants and the identity belong to {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %} is a vector space. If {% raw %}<span class="math inline">\(f,g\in\mathcal A\)</span>{% endraw %}, the product rule gives</p>
+<span id="eq:prelim-ito"></span>
+{% raw %}<div class="math display">\[f(X_t)g(X_t)=f(X_0)g(X_0)+\int_0^tf(X_s)\,d[g(X_s)]+\int_0^tg(X_s)\,d[f(X_s)]+\langle f(X),g(X)\rangle_t.\tag{2}\]</div>{% endraw %}
 
-<p>To see that {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %} is an algebra, we note that for {% raw %}<span class="math inline">\(f,g \in \mathcal A\)</span>{% endraw %}, applying the integration by parts formula to semimartingales {% raw %}<span class="math inline">\(\{f(X_t)\}_{t \geq 0}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\{g(X_t)\}_{t \geq 0}\)</span>{% endraw %} gives </p>
+<p>The local-martingale parts of {% raw %}<span class="math inline">\(f(X)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(g(X)\)</span>{% endraw %} are {% raw %}<span class="math inline">\(\int f'(X)\,dM\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\int g'(X)\,dM\)</span>{% endraw %}. The covariation and associativity identities for stochastic integrals therefore give</p>
 
-{% raw %}<span id="eq:prelim-ito"></span><div class="math display">\[\begin{aligned}
- 
-    f(X_t) g(X_t) = f(X_0) g(X_0) + \int_0^t f(X_s) \dif g(X_s) + \int_0^t g(X_s) \dif f(X_s) + \langle f(X), g(X) \rangle_t ~.
-\end{aligned}\tag{2}\]</div>{% endraw %}
-<p> Since {% raw %}<span class="math inline">\(f,g \in \mathcal A\)</span>{% endraw %}, it must be that </p>
+{% raw %}<div class="math display">\[\langle f(X),g(X)\rangle_t=\int_0^tf'(X_s)g'(X_s)\,d\langle M\rangle_s.\]</div>{% endraw %}
 
-{% raw %}<div class="math display">\[\begin{aligned}
-    \int_0^t f(X_s) \dif g(X_s) &amp;= \int_0^t f(X_s) g&#x27;(X_s) \dif X_s + \frac12 \int_0^t f(X_s) g&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s ~, \\
-    \int_0^t g(X_s) \dif f(X_s) &amp;= \int_0^t g(X_s) f&#x27;(X_s) \dif X_s + \frac12 \int_0^t g(X_s) f&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s ~, \\
-    \langle f(X), g(X) \rangle_t &amp;= \int_0^t f&#x27;(X_s) g&#x27;(X_s) \dif \, \langle X \rangle_s ~.
-\end{aligned}\]</div>{% endraw %}
-<p> Therefore, </p>
+<p>Substituting (1) for {% raw %}<span class="math inline">\(f\)</span>{% endraw %} and {% raw %}<span class="math inline">\(g\)</span>{% endraw %} in (2), the coefficient of {% raw %}<span class="math inline">\(dX\)</span>{% endraw %} is {% raw %}<span class="math inline">\(fg'+gf'=(fg)'\)</span>{% endraw %}, and the coefficient of {% raw %}<span class="math inline">\(d\langle M\rangle\)</span>{% endraw %} is {% raw %}<span class="math inline">\((fg''+gf''+2f'g')/2=(fg)''/2\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(fg\in\mathcal A\)</span>{% endraw %}, and every polynomial belongs to {% raw %}<span class="math inline">\(\mathcal A\)</span>{% endraw %}.</p>
 
-{% raw %}<div class="math display">\[\begin{gathered}
-    (2) = f(X_0) g(X_0) + \int_0^t f(X_s) g&#x27;(X_s) \dif X_s + \frac12 \int_0^t f(X_s) g&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s \\
-    + \int_0^t g(X_s) f&#x27;(X_s) \dif X_s + \frac12 \int_0^t g(X_s) f&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s
-    + \int_0^t f&#x27;(X_s) g&#x27;(X_s) \dif \, \langle X \rangle_s \\
-    = f(X_0) g(X_0) + \int_0^t (fg)&#x27;(X_s) \dif X_s + \frac12 \int_0^t (fg)&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s ~.
-\end{gathered}\]</div>{% endraw %}
-<p>Thus {% raw %}<span class="math inline">\(fg\in\mathcal A\)</span>{% endraw %}. To justify the polynomial approximation, uniformly approximate {% raw %}<span class="math inline">\(f''\)</span>{% endraw %} on the compact range by polynomials {% raw %}<span class="math inline">\(Q_n\)</span>{% endraw %}, and integrate twice, choosing {% raw %}<span class="math inline">\(P_n(0)=f(0)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_n'(0)=f'(0)\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\(P_n,P_n',P_n''\)</span>{% endraw %} converge uniformly there. Localise {% raw %}<span class="math inline">\(X=X_0+M+A\)</span>{% endraw %} so that its range, {% raw %}<span class="math inline">\(\langle M\rangle\)</span>{% endraw %}, and the variation of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} on the time interval are bounded. The Itō isometry gives convergence of the martingale integrals; the variation bound gives convergence of the other integrals. For an unbounded initial value, first multiply by the {% raw %}<span class="math inline">\(\mathcal F_0\)</span>{% endraw %}-measurable indicators {% raw %}<span class="math inline">\(\{|X_0|\leq m\}\)</span>{% endraw %}. On each of these events, continuous-time hitting times of {% raw %}<span class="math inline">\(|X_t|+\langle M\rangle_t+\operatorname{Var}_{[0,t]}(A)\)</span>{% endraw %}, together with deterministic time cutoffs, provide the required bounds and tend to infinity. Let the bounds, and then {% raw %}<span class="math inline">\(m\)</span>{% endraw %}, increase. This proves (1) simultaneously at all times by continuity.</p>
+<p>On {% raw %}<span class="math inline">\([-K,K]\)</span>{% endraw %}, approximate {% raw %}<span class="math inline">\(f''\)</span>{% endraw %} uniformly by polynomials {% raw %}<span class="math inline">\(Q_n\)</span>{% endraw %}. Define</p>
 
+{% raw %}<div class="math display">\[P_n(x)=f(0)+xf'(0)+\int_0^x(x-y)Q_n(y)\,dy.\]</div>{% endraw %}
+
+<p>Then {% raw %}<span class="math inline">\(P_n,P_n',P_n''\)</span>{% endraw %} converge uniformly to {% raw %}<span class="math inline">\(f,f',f''\)</span>{% endraw %}, respectively. Stop so that the range of {% raw %}<span class="math inline">\(X\)</span>{% endraw %}, its bracket, and the variation of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} are bounded. The isometry bounds the squared error in the martingale integral by {% raw %}<span class="math inline">\(\|P_n'-f'\|_\infty^2\mathbb E\langle M\rangle_t\)</span>{% endraw %}. The other two integral errors are bounded by {% raw %}<span class="math inline">\(\|P_n'-f'\|_\infty\operatorname{Var}_{[0,t]}(A)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\frac12\|P_n''-f''\|_\infty\langle M\rangle_t\)</span>{% endraw %}. Every error tends to zero, so (1) passes from polynomials to {% raw %}<span class="math inline">\(f\)</span>{% endraw %}.</p>
+
+<p>To remove the bounds, first restrict to the {% raw %}<span class="math inline">\(\mathcal F_0\)</span>{% endraw %}-measurable events {% raw %}<span class="math inline">\(\{|X_0|\leq m\}\)</span>{% endraw %}. On each event, stop when {% raw %}<span class="math inline">\(|X_t|+\langle M\rangle_t+\operatorname{Var}_{[0,t]}(A)\)</span>{% endraw %} reaches {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, and also at time {% raw %}<span class="math inline">\(K\)</span>{% endraw %}. These times tend to infinity. Let {% raw %}<span class="math inline">\(K\to\infty\)</span>{% endraw %} and then {% raw %}<span class="math inline">\(m\to\infty\)</span>{% endraw %}. Equality at all rational times, followed by continuity, proves the asserted simultaneous identity. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 <div id="result-1" class="remark" data-note-number="1" data-note-kind="Remark">
-<p><strong>Remark 1</strong>.  The change of variables formula above is contained in <span class="citation" data-cites="bass_stochastic_2011">Bass (<a href="#ref-bass_stochastic_2011" role="doc-biblioref">2011</a>, Theorem 11.1)</span>; the proof therein is substantially more complicated without the integration by parts formula (which they deduce as a consequence of Itō’s formula). <span class="citation" data-cites="bass_stochastic_2011">Bass (<a href="#ref-bass_stochastic_2011" role="doc-biblioref">2011, sec. 17.2</a> and 17.3)</span> contains a presentation of Itō’s formula in a slightly different setting: consider {% raw %}<span class="math inline">\(X_t = M_t + A_t\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(M_t\)</span>{% endraw %} is a square-integrable martingale, and {% raw %}<span class="math inline">\(A_t\)</span>{% endraw %} is a process of bounded variation and whose total variation is integrable.</p>
+<p><strong>Remark 1.</strong> The proof uses the construction of quadratic variation before Itō’s formula. An alternative development proves Itō’s formula directly from Taylor expansion and deduces integration by parts; see Bass (2011, Theorem 11.1). Both arguments require control of the stochastic-integral limit after localisation.</p>
+
 
 </div>
 <div id="result-2" class="remark" data-note-number="2" data-note-kind="Remark">
@@ -97,28 +72,40 @@ redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-fo
 
 </div>
 <div id="result-3" class="remark" data-note-number="3" data-note-kind="Remark">
-<p><strong>Remark 3</strong>.  Itō’s formula is often applied to a function {% raw %}<span class="math inline">\(F\)</span>{% endraw %} that is twice continuously differentiable and defined (only) on an open subset {% raw %}<span class="math inline">\(U \subset \mathbb R^n\)</span>{% endraw %}. See <span class="citation" data-cites="le_gall_brownian_2016">Le Gall (<a href="#ref-le_gall_brownian_2016" role="doc-biblioref">2016, 117</a>)</span> for a discussion for Itō’s formula applied to this case.</p>
+<p><strong>Remark 3 (functions on an open set).</strong> For a function {% raw %}<span class="math inline">\(f\in C^2(U)\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(U\subset\mathbb R\)</span>{% endraw %} is open, formula (1) holds up to the first exit of {% raw %}<span class="math inline">\(X\)</span>{% endraw %} from {% raw %}<span class="math inline">\(U\)</span>{% endraw %}, provided {% raw %}<span class="math inline">\(X_0\in U\)</span>{% endraw %}. Exhaust {% raw %}<span class="math inline">\(U\)</span>{% endraw %} by compact sets lying in its interior, stop on leaving each set, and extend {% raw %}<span class="math inline">\(f\)</span>{% endraw %} to a {% raw %}<span class="math inline">\(C^2\)</span>{% endraw %} function on a neighbourhood of that set. The stopped formula is independent of the extension. Increasing the compact sets proves the assertion before the exit time; equality at a finite exit time requires that the terms have limits there.</p>
+
 
 </div>
 <h3 data-note-section="1" id="application-of-it-s-formula">1. Application of Itō’s formula</h3>
-<p>Itō’s formula recognises Brownian motion from its quadratic variation. Let {% raw %}<span class="math inline">\(M\)</span>{% endraw %} be a continuous local martingale with {% raw %}<span class="math inline">\(M_0=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\langle M\rangle_t=t\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(\theta\in\mathbb R\)</span>{% endraw %}, the complex-valued process {% raw %}<span class="math inline">\(Z_t=\exp(i\theta M_t+\theta^2t/2)\)</span>{% endraw %} is a local martingale by Itō’s formula, with real and imaginary parts understood separately. On each finite time interval its modulus is deterministically bounded, so it is a true martingale. Thus</p>
+<h2 id="levy-characterization">Lévy’s characterization</h2>
+
+<p><strong>Theorem (Lévy’s characterization).</strong> A continuous local martingale {% raw %}<span class="math inline">\(M\)</span>{% endraw %} with {% raw %}<span class="math inline">\(M_0=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\langle M\rangle_t=t\)</span>{% endraw %} is Brownian motion relative to {% raw %}<span class="math inline">\((\mathcal F_t)\)</span>{% endraw %}.</p>
+
+<p><strong>Proof.</strong> For {% raw %}<span class="math inline">\(\theta\in\mathbb R\)</span>{% endraw %}, Itō’s formula, applied separately to real and imaginary parts, shows that {% raw %}<span class="math inline">\(Z_t=\exp(i\theta M_t+\theta^2t/2)\)</span>{% endraw %} is a local martingale. On every finite time interval its modulus is deterministically bounded, so it is a martingale. Consequently</p>
+
 
 {% raw %}<div class="math display">\[\mathbb{E}[e^{i\theta(M_t-M_s)}\mid\mathcal F_s]
 =e^{-\theta^2(t-s)/2},\qquad0\leq s\leq t.\]</div>{% endraw %}
 
 <p>The conditional characteristic function identifies the increment as {% raw %}<span class="math inline">\(\mathcal{N}(0,t-s)\)</span>{% endraw %}, independent of {% raw %}<span class="math inline">\(\mathcal F_s\)</span>{% endraw %}. Together with continuity this proves Lévy’s characterization.</p>
 
-<p>A continuous local martingale with unbounded quadratic variation can therefore be viewed on a Brownian clock. Put {% raw %}<span class="math inline">\(A=\langle M\rangle\)</span>{% endraw %}, assume {% raw %}<span class="math inline">\(A_\infty=\infty\)</span>{% endraw %}, and define the continuous-time inverse</p>
+<h2 id="brownian-time-change">The Brownian time change</h2>
+
+<p><strong>Theorem (Brownian time change).</strong> Let {% raw %}<span class="math inline">\(M\)</span>{% endraw %} be a continuous local martingale with {% raw %}<span class="math inline">\(M_0=0\)</span>{% endraw %}, and suppose {% raw %}<span class="math inline">\(A_\infty=\infty\)</span>{% endraw %} almost surely, where {% raw %}<span class="math inline">\(A=\langle M\rangle\)</span>{% endraw %}. Define</p>
+
 
 {% raw %}<div class="math display">\[\tau(u)=\inf\{t\geq0:A_t&gt;u\},\qquad B_u=M_{\tau(u)},\qquad\mathcal G_u=\mathcal F_{\tau(u)}.\]</div>{% endraw %}
 
 <p>Each {% raw %}<span class="math inline">\(\tau(u)\)</span>{% endraw %} is a finite stopping time; right-continuity of the filtration handles the strict inequality in its definition. Continuity and divergence of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} imply {% raw %}<span class="math inline">\(A_{\tau(u)}=u\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(A\)</span>{% endraw %} is strictly increasing, its inverse is continuous. In general it may have flat intervals, so one extra fact is needed: {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is constant on every interval where {% raw %}<span class="math inline">\(A\)</span>{% endraw %} is constant.</p>
 
-<p>Here is a proof of that fact. Fix rational {% raw %}<span class="math inline">\(a&lt;b\)</span>{% endraw %} and stop {% raw %}<span class="math inline">\(M_t-M_a\)</span>{% endraw %}, for {% raw %}<span class="math inline">\(a\leq t\leq b\)</span>{% endraw %}, when {% raw %}<span class="math inline">\(A_t-A_a\)</span>{% endraw %} first reaches {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %}. The localised isometry and the maximal inequality bound the probability that its absolute maximum exceeds {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\delta/\varepsilon^2\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(\{A_b=A_a\}\)</span>{% endraw %} no such bracket stop occurs. Let {% raw %}<span class="math inline">\(\delta\downarrow0\)</span>{% endraw %}, then intersect over rational {% raw %}<span class="math inline">\(a,b,\varepsilon\)</span>{% endraw %}. Continuity extends constancy to every flat interval, including its endpoints. Consequently {% raw %}<span class="math inline">\(u\mapsto M_{\tau(u)}\)</span>{% endraw %} is continuous even across jumps of the inverse, and {% raw %}<span class="math inline">\(M_t=B_{A_t}\)</span>{% endraw %}.</p>
+<p>To prove constancy on flat intervals, fix rational {% raw %}<span class="math inline">\(0\leq a&lt;b\)</span>{% endraw %}. Stop {% raw %}<span class="math inline">\(M_t-M_a\)</span>{% endraw %}, for {% raw %}<span class="math inline">\(a\leq t\leq b\)</span>{% endraw %}, when {% raw %}<span class="math inline">\(A_t-A_a\)</span>{% endraw %} first reaches {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %}. The stopped bracket is at most {% raw %}<span class="math inline">\(\delta\)</span>{% endraw %}, so the localised isometry and the maximal inequality bound the probability that the absolute maximum exceeds {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\delta/\varepsilon^2\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(\{A_b=A_a\}\)</span>{% endraw %} no bracket stop occurs. Let {% raw %}<span class="math inline">\(\delta\downarrow0\)</span>{% endraw %} and intersect over rational {% raw %}<span class="math inline">\(a,b,\varepsilon\)</span>{% endraw %}. Continuity extends constancy to every flat interval and its endpoints. Hence {% raw %}<span class="math inline">\(u\mapsto M_{\tau(u)}\)</span>{% endraw %} is continuous across every jump of the inverse, and {% raw %}<span class="math inline">\(M_t=B_{A_t}\)</span>{% endraw %}.</p>
 
-<p>For completeness, the stopping argument does give the required integrability. A zero-start local martingale stopped where its bracket is bounded by {% raw %}<span class="math inline">\(v\)</span>{% endraw %} is an {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}-bounded martingale. To see this, first localise to bounded martingales. For two nested localising times, the isometry expresses the squared {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}-distance of the stopped terminal values as the expected bracket increment. Dominated convergence, using the bound {% raw %}<span class="math inline">\(v\)</span>{% endraw %}, makes these values Cauchy in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}. Their limit closes the stopped martingale, and its second moment is the expected stopped bracket. Apply this to {% raw %}<span class="math inline">\(M^{\tau(v)}\)</span>{% endraw %}. Optional sampling at {% raw %}<span class="math inline">\(\tau(u)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(u\leq v\)</span>{% endraw %}, now proves that {% raw %}<span class="math inline">\(B\)</span>{% endraw %} is a martingale on {% raw %}<span class="math inline">\([0,v]\)</span>{% endraw %}. The same argument for {% raw %}<span class="math inline">\(M^2-A\)</span>{% endraw %}, whose stopped family is uniformly integrable, proves that {% raw %}<span class="math inline">\(B_u^2-u\)</span>{% endraw %} is a martingale. Hence {% raw %}<span class="math inline">\(\langle B\rangle_u=u\)</span>{% endraw %}, and Lévy’s characterization proves the Brownian time-change theorem.</p>
 
-<p>The integral form of the square-increment approximation is also useful. For a continuous local martingale {% raw %}<span class="math inline">\(M\)</span>{% endraw %}, fix {% raw %}<span class="math inline">\(T&lt;\infty\)</span>{% endraw %} and a deterministic partition {% raw %}<span class="math inline">\(0=t_0&lt;\cdots&lt;t_m=T\)</span>{% endraw %}. Applying Itō’s formula on each subinterval gives</p>
+<p>The <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}#h2-martingales">square-integrability criterion</a> implies that {% raw %}<span class="math inline">\(M^{\tau(v)}\)</span>{% endraw %} is an {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}-bounded martingale for each {% raw %}<span class="math inline">\(v&lt;\infty\)</span>{% endraw %}, since its bracket is bounded by {% raw %}<span class="math inline">\(v\)</span>{% endraw %}. Optional sampling at {% raw %}<span class="math inline">\(\tau(u)\leq\tau(v)\)</span>{% endraw %} proves that {% raw %}<span class="math inline">\(B\)</span>{% endraw %} is a martingale on {% raw %}<span class="math inline">\([0,v]\)</span>{% endraw %}. Also, {% raw %}<span class="math inline">\((M^{\tau(v)})^2-A^{\tau(v)}\)</span>{% endraw %} has a uniformly integrable stopped family: the square of an {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}-closed martingale is of class D by conditional Jensen, and {% raw %}<span class="math inline">\(A^{\tau(v)}\leq v\)</span>{% endraw %}. Optional sampling therefore shows that {% raw %}<span class="math inline">\(B_u^2-u\)</span>{% endraw %} is a martingale. Thus {% raw %}<span class="math inline">\(\langle B\rangle_u=u\)</span>{% endraw %}, and Lévy’s characterization proves that {% raw %}<span class="math inline">\(B\)</span>{% endraw %} is Brownian motion. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+
+
+<p>The square-increment approximation has an exact integral remainder. For a continuous local martingale {% raw %}<span class="math inline">\(M\)</span>{% endraw %}, fix {% raw %}<span class="math inline">\(T&lt;\infty\)</span>{% endraw %} and a deterministic partition {% raw %}<span class="math inline">\(0=t_0&lt;\cdots&lt;t_m=T\)</span>{% endraw %}. Applying Itō’s formula on each subinterval gives</p>
+
 
 {% raw %}<div class="math display">\[\sum_{j=1}^m(M_{t_j}-M_{t_{j-1}})^2-\langle M\rangle_T
 =2\int_0^T(M_s-M_{\pi(s)})\,dM_s,\]</div>{% endraw %}
@@ -135,7 +122,8 @@ redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-fo
 
 </div>
 <h3 data-note-section="2" id="stratonovich-integrals">2. Stratonovich integrals</h3>
-<p>The Stratonovich integral incorporates half the covariation correction into the definition of the integral. This restores the ordinary form of the chain rule, which is useful when changing coordinates. If {% raw %}<span class="math inline">\(X\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} are continuous semimartingales, we can define the <em>Stratonovich integral</em> as </p>
+<p>For continuous semimartingales {% raw %}<span class="math inline">\(X,Y\)</span>{% endraw %}, define the Stratonovich integral by</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     \int_0^t X_s \circ \dif Y_s = \int_0^t X_s \dif Y_s + \frac12 \langle X, Y \rangle_t ~.
@@ -145,24 +133,28 @@ redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-fo
 {% raw %}<div class="math display">\[\begin{aligned}
     f(X_t) = f(X_0) + \int_0^t f&#x27;(X_s) \circ \dif X_s ~.
 \end{aligned}\]</div>{% endraw %}
-<p> To see this, Itō’s formula applied to the function {% raw %}<span class="math inline">\(f\)</span>{% endraw %} reveals that we ought to show </p>
+<p><strong>Proof.</strong> Comparing with Itō’s formula, it suffices to establish</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     \langle f&#x27;(X), X \rangle_t = \int_0^t f&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s ~.
 \end{aligned}\]</div>{% endraw %}
-<p> But note that because {% raw %}<span class="math inline">\(f&#x27;\)</span>{% endraw %} is twice continuously differentiable, we can apply Itō’s formula to see that </p>
+<p>Since {% raw %}<span class="math inline">\(f'\in C^2\)</span>{% endraw %}, Itō’s formula gives</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     f&#x27;(X_t) = f&#x27;(X_0) + \int_0^t f&#x27;&#x27;(X_s) \dif X_s + \frac12 \int_0^t f&#x27;&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s ~,
 \end{aligned}\]</div>{% endraw %}
-<p> and because quadratic variation processes are nondecreasing, they have finite variations. As such, </p>
+<p>The last integral has finite variation and therefore zero covariation with {% raw %}<span class="math inline">\(X\)</span>{% endraw %}. The stochastic-integral covariation identity yields</p>
 
-{% raw %}<div class="math display">\[\begin{aligned}
-    \langle f&#x27;(X), X \rangle_t = 0 + \int_0^t f&#x27;&#x27;(X_s) \dif \, \langle X,X \rangle_s + \frac12 \int_0^t f&#x27;&#x27;&#x27;(X_s) \dif \, \langle \langle X \rangle_s, X \rangle_s = \int_0^t f&#x27;&#x27;(X_s) \dif \, \langle X \rangle_s ~,
-\end{aligned}\]</div>{% endraw %}
-<p> as desired. {% raw %}<span class="math inline">\(\blacksquare\)</span>{% endraw %}</p>
 
-<p>As a result of this construction, if {% raw %}<span class="math inline">\(X\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} are continuous semimartingales, we can apply the change of variables with {% raw %}<span class="math inline">\(f(x) = x^2\)</span>{% endraw %} to {% raw %}<span class="math inline">\(X+Y\)</span>{% endraw %} and {% raw %}<span class="math inline">\(X-Y\)</span>{% endraw %}, from which we can obtain an analogue to the <em>polarization identity</em>: </p>
+{% raw %}<div class="math display">\[\langle f'(X),X\rangle_t=\left\langle\int_0^\cdot f''(X_s)\,dM_s,M\right\rangle_t=\int_0^tf''(X_s)\,d\langle M\rangle_s.\]</div>{% endraw %}
+
+<p>This proves the chain rule. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+
+
+<p>Applying the chain rule with {% raw %}<span class="math inline">\(f(x)=x^2\)</span>{% endraw %} to {% raw %}<span class="math inline">\(X+Y\)</span>{% endraw %} and {% raw %}<span class="math inline">\(X-Y\)</span>{% endraw %} gives</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     (X_t + Y_t)^2 &amp;= (X_0 + Y_0)^2 + 2 \int_0^t (X_s + Y_s) \circ \dif \, (X_s + Y_s) ~, \\
@@ -185,7 +177,24 @@ redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-fo
     = \sum_{0 \leq k \leq 2^n-1} H_{k t_0 2^{-n}} (X_{(k+1)t_0 2^{-n}} - X_{k t_0 2^{-n}}) 
     + \frac12 \sum_{0 \leq k \leq 2^n-1} (H_{(k+1) t_0 2^{-n}} - H_{k t_0 2^{-n}}) (X_{(k+1)t_0 2^{-n}} - X_{k t_0 2^{-n}}) ~.
 \end{gathered}\]</div>{% endraw %}
-<p> Clearly, the first sum converges to {% raw %}<span class="math inline">\(\int_0^{t_0} H_s \dif X_s\)</span>{% endraw %} in probability. It remains to show that the second term converges to {% raw %}<span class="math inline">\(\frac12 \langle H,X \rangle_{t_0}\)</span>{% endraw %} in probability. This is the increment-product convergence for continuous semimartingales proved in <a href="#result-2">Remark 2</a>. {% raw %}<span class="math inline">\(\blacksquare\)</span>{% endraw %}</p>
+<p>The first sum converges in probability to {% raw %}<span class="math inline">\(\int_0^{t_0}H_s\,dX_s\)</span>{% endraw %} by the isometry and finite-variation estimates in the product-rule proof. Remark 2 gives convergence of the second sum to {% raw %}<span class="math inline">\(\frac12\langle H,X\rangle_{t_0}\)</span>{% endraw %}. Their sum is the Stratonovich integral. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+
+
+<h2 id="multivariate-ito">The multivariate formula</h2>
+<p>Let {% raw %}<span class="math inline">\(X=(X^1,\ldots,X^d)\)</span>{% endraw %} have continuous semimartingale coordinates. For {% raw %}<span class="math inline">\(f\in C^2(\mathbb R^d)\)</span>{% endraw %},</p>
+
+{% raw %}<div class="math display">\[f(X_t)=f(X_0)+\sum_{i=1}^d\int_0^t\partial_i f(X_s)\,dX_s^i
++\frac12\sum_{i,j=1}^d\int_0^t\partial_{ij}f(X_s)\,d\langle X^i,X^j\rangle_s.\]</div>{% endraw %}
+
+<p><strong>Proof.</strong> Localise to a compact range and bounded brackets and finite variations. Taylor expansion on a deterministic partition gives the first-order sums, the Hessian-weighted increment products, and a remainder bounded by</p>
+
+{% raw %}<div class="math display">\[\omega\!\left(\max_k|\Delta X_k|\right)\sum_k|\Delta X_k|^2,\]</div>{% endraw %}
+
+<p>where {% raw %}<span class="math inline">\(\omega(r)\to0\)</span>{% endraw %} as {% raw %}<span class="math inline">\(r\downarrow0\)</span>{% endraw %}, by uniform continuity of the Hessian. The first factor tends to zero almost surely; the second is bounded in probability by the coordinate quadratic-variation limits. Hence the remainder tends to zero in probability.</p>
+
+<p>The first-order sums converge to the integrals by the same isometry and variation bounds as in the product-rule proof. For the second-order sums, first replace the continuous weight {% raw %}<span class="math inline">\(\partial_{ij}f(X_s)\)</span>{% endraw %} by its left-endpoint values on a fixed coarse partition. On each coarse interval, the unweighted increment-product limit is Remark 2. The error from replacing the weight is bounded by its uniform approximation error times {% raw %}<span class="math inline">\(\sum_k|\Delta X_k^i\Delta X_k^j|\)</span>{% endraw %}; Cauchy–Schwarz bounds this last sum by the square roots of the two coordinate square sums, which are bounded in probability. Taking the fine mesh to zero and then the coarse mesh to zero proves convergence to the weighted covariation integral. Finitely many intervals intersecting coarse endpoints have vanishing contribution by continuity. Removing localisation and using continuity in time proves the formula. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+
+<p>For {% raw %}<span class="math inline">\(f\in C^2(U)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(U\subset\mathbb R^d\)</span>{% endraw %} open, the same compact-exhaustion argument as in Remark 3 applies. A deterministic time coordinate has finite variation and zero covariation, so the formula also gives the usual {% raw %}<span class="math inline">\(\partial_t f\,dt\)</span>{% endraw %} term for smooth functions of time and the process.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-bass_stochastic_2011" class="csl-entry" role="listitem">

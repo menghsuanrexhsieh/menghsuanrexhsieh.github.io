@@ -3,22 +3,29 @@ layout: "post"
 title: "Burkholder-Davis-Gundy inequalities"
 date: "2024-02-18"
 tags: ["probability theory", "stochastic processes"]
-excerpt: "Burkholder-Davis-Gundy inequalities. Notes on stochastic processes."
+excerpt: "Continuous-time Burkholder–Davis–Gundy inequalities for every positive moment order."
 note_series: "Stochastic processes"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex"
 ---
 
 <div class="note-content" markdown="0">
 
-<p>Work on a filtered probability space satisfying the usual conditions. {% raw %}<span class="math inline">\(B\)</span>{% endraw %} denotes Brownian motion, and stochastic integrands are predictable with the stated integrability. A local martingale need not be a true martingale: the moment conditions in each claim are essential. See <a href="{% post_url 2023-01-21-brownian-motion-markov-properties-and-path-continuity %}">Brownian motion</a> and <a href="{% post_url 2023-01-07-martingales-maximal-and-upcrossing-inequalities %}">martingale inequalities</a>.</p>
+<p>Let {% raw %}<span class="math inline">\(M\)</span>{% endraw %} be a continuous local martingale on a filtered probability space satisfying the usual conditions, with {% raw %}<span class="math inline">\(M_0=0\)</span>{% endraw %}. Write</p>
+
+{% raw %}<div class="math display">\[M_t^*=\sup_{0\leq s\leq t}|M_s|,\qquad A_t=\langle M\rangle_t.\]</div>{% endraw %}
+
+<p>The Burkholder–Davis–Gundy inequalities compare {% raw %}<span class="math inline">\(\mathbb E(M_T^*)^p\)</span>{% endraw %} with {% raw %}<span class="math inline">\(\mathbb E A_T^{p/2}\)</span>{% endraw %}, with constants depending only on {% raw %}<span class="math inline">\(p&gt;0\)</span>{% endraw %}. Expectations may be infinite. We first prove the estimates for {% raw %}<span class="math inline">\(p\geq2\)</span>{% endraw %} using Itō's formula, and then prove the full range by two tail comparisons.</p>
+
 
 <div id="burckholder-davis-gundy-inequalities" data-note-section="title">
 
 </div>
-<p>The Burkholder–Davis–Gundy inequalities compare the size of a continuous local martingale path with its quadratic variation.</p>
+<p>The maximal inequalities used below are <a href="{% post_url 2023-01-07-martingales-maximal-and-upcrossing-inequalities %}#doob-lp-maximal-inequality">Doob's inequalities</a>. Quadratic variation and its stopped-square identity are constructed in <a href="{% post_url 2024-04-04-continuous-semimartingales-and-the-monotone-class-argument %}#thm:cts-semimartingale-limit-characterization">Theorem 2 of the continuous-semimartingale notes</a>.</p>
+
 
 <div id="thm:continuous-bdg-p-ge-2" class="theorem" data-note-number="1" data-note-kind="Theorem">
-<p><strong>Theorem 1</strong>. Let {% raw %}<span class="math inline">\(M_0=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(M_t^*=\sup_{s\leq t}|M_s|\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(A_t=\langle M\rangle_t\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(2\leq p&lt;\infty\)</span>{% endraw %} and every finite stopping time {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, we will prove</p>
+<p><strong>Theorem 1.</strong> For {% raw %}<span class="math inline">\(2\leq p&lt;\infty\)</span>{% endraw %}, there are finite constants {% raw %}<span class="math inline">\(c_p,C_p\)</span>{% endraw %}, depending only on {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, such that every almost surely finite stopping time {% raw %}<span class="math inline">\(T\)</span>{% endraw %} satisfies</p>
+
 
 {% raw %}<div class="math display">\[\mathbb{E}(M_T^*)^p\leq c_p\mathbb{E} A_T^{p/2},
 \qquad \mathbb{E} A_T^{p/2}\leq C_p\mathbb{E}(M_T^*)^p.\]</div>{% endraw %}
@@ -53,107 +60,90 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic
 
 <p>Division yields {% raw %}<span class="math inline">\(\mathbb{E} A_S^r\leq r^r\mathbb{E}(M_S^*)^{2r}\)</span>{% endraw %}, also covering the zero case. Finally {% raw %}<span class="math inline">\(\tau_K\uparrow\infty\)</span>{% endraw %} almost surely, and both stopped maxima and stopped brackets increase to their values at {% raw %}<span class="math inline">\(T\)</span>{% endraw %}. Monotone convergence gives both estimates without any boundedness assumption. No limit in the fixed stopping time {% raw %}<span class="math inline">\(T\)</span>{% endraw %} is needed.</p>
 
-<p>The following discrete estimates explain a complementary method based on tail comparisons. They are proved in full below, using the stopped square-sum estimate in <a href="{% post_url 2023-02-18-martingale-square-function-inequalities %}#lem:stopping-time-sq-diff">Lemma 1 of the square-function notes</a>. In this discrete discussion set {% raw %}<span class="math inline">\(X_0=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(Y_i=X_i-X_{i-1}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(S_m=(\sum_{i=1}^mY_i^2)^{1/2}\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(X_m^*=\max_{i\leq m}|X_i|\)</span>{% endraw %}.</p>
-
+<h2 id="discrete-comparisons">Discrete square-function estimates</h2>
+<p>The following discrete results are proved in the <a href="{% post_url 2023-02-18-martingale-square-function-inequalities %}#square-functions-inequalities">square-function post</a>. They distinguish the realized square function from predictable quadratic variation and provide the tail-integration lemma used below.</p>
 <div id="lem:max-inequality-truncated-submartingale" class="lemma" data-note-number="2" data-note-kind="Lemma">
-<p><strong>Lemma 2</strong> (Maximal inequality; truncated submartingales). Suppose {% raw %}<span class="math inline">\(X\)</span>{% endraw %} is a nonnegative submartingale. For {% raw %}<span class="math inline">\(\theta&gt;0\)</span>{% endraw %}, put {% raw %}<span class="math inline">\(M=\max(\theta S_n,X_n^*)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\beta=\sqrt{1+2\theta^2}\)</span>{% endraw %}. Then, for every {% raw %}<span class="math inline">\(\lambda&gt;0\)</span>{% endraw %},</p>
+<p><strong>Lemma 2.</strong> For a nonnegative submartingale with {% raw %}<span class="math inline">\(X_0=0\)</span>{% endraw %}, set {% raw %}<span class="math inline">\(S_n^2=\sum_{i=1}^n(X_i-X_{i-1})^2\)</span>{% endraw %}, {% raw %}<span class="math inline">\(X_n^*=\max_{i\leq n}X_i\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(U=\max(\theta S_n,X_n^*)\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(\theta&gt;0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\beta=(1+2\theta^2)^{1/2}\)</span>{% endraw %}, then</p>
 
-</div>
-{% raw %}<div class="math display">\[\lambda\mathbb P(M&gt;\beta\lambda)\leq3\mathbb{E}[X_n\mathbb1_{\{M&gt;\lambda\}}].\]</div>{% endraw %}
+{% raw %}<div class="math display">\[\lambda\mathbb P(U&gt;\beta\lambda)\leq3\mathbb E[X_n\mathbf1_{\{U&gt;\lambda\}}].\]</div>{% endraw %}
 
 <span id="eq:maximal-inequality-truncated-submartingale"></span>
-<p>Consequently, if {% raw %}<span class="math inline">\(1&lt;p&lt;\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(q=p/(p-1)\)</span>{% endraw %}, then</p>
+<p>Consequently, for {% raw %}<span class="math inline">\(p&gt;1\)</span>{% endraw %},</p>
 
-{% raw %}<div class="math display">\[\|S_n\|_p\leq9\sqrt p\,q\|X_n\|_p.\tag{1}\]</div>{% endraw %}
-
-<div class="proof">
-<p><em>Proof.</em> Since {% raw %}<span class="math inline">\(\beta&gt;1\)</span>{% endraw %},</p>
+{% raw %}<div class="math display">\[\|S_n\|_p\leq9\sqrt p\,p(p-1)^{-1}\|X_n\|_p.\tag{1}\]</div>{% endraw %}
 
 <span id="eq:term1"></span>
-{% raw %}<div class="math display">\[\lambda\mathbb P(M&gt;\beta\lambda)
-\leq\lambda\mathbb P(X_n^*&gt;\lambda)
+<p>The proof separates the two contributions by</p>
+
+{% raw %}<div class="math display">\[\lambda\mathbb P(U&gt;\beta\lambda)\leq\lambda\mathbb P(X_n^*&gt;\lambda)
 +\lambda\mathbb P(\theta S_n&gt;\beta\lambda,\ X_n^*\leq\lambda).\tag{2}\]</div>{% endraw %}
-
-<p>The first-crossing proof of Doob’s inequality bounds the first term by {% raw %}<span class="math inline">\(\mathbb{E}[X_n\mathbb1_{\{X_n^*&gt;\lambda\}}]\)</span>{% endraw %}. For the second term, activate the process only after its square function crosses the smaller threshold. Define</p>
-
-{% raw %}<div class="math display">\[\nu=\inf\{1\leq j\leq n:\theta S_j&gt;\lambda\},\qquad
-T_m=X_m\mathbb1_{\{\nu\leq m\}},\qquad T_0=0,\quad Z_i=T_i-T_{i-1}.\]</div>{% endraw %}
-
-<p>Again an empty infimum is infinity. This activation uses information available at time {% raw %}<span class="math inline">\(m\)</span>{% endraw %}; it is not multiplication by a terminal event. Nonnegativity gives</p>
-
-{% raw %}<div class="math display">\[\mathbb{E}[T_m\mid\mathscr F_{m-1}]
-\geq\mathbb1_{\{\nu\leq m-1\}}\mathbb{E}[X_m\mid\mathscr F_{m-1}]
-\geq T_{m-1}.\]</div>{% endraw %}
-
-<p>On {% raw %}<span class="math inline">\(\{\theta S_n&gt;\beta\lambda,\ X_n^*\leq\lambda\}\)</span>{% endraw %}, the crossing time is finite, {% raw %}<span class="math inline">\(\theta^2S_{\nu-1}^2\leq\lambda^2\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(|Y_\nu|\leq\lambda\)</span>{% endraw %} because the process is nonnegative. Also {% raw %}<span class="math inline">\(Z_i=Y_i\)</span>{% endraw %} after {% raw %}<span class="math inline">\(\nu\)</span>{% endraw %}. Therefore</p>
-
-{% raw %}<div class="math display">\[\theta^2\sum_{i=\nu+1}^nZ_i^2
-&gt;\bigl(\beta^2-1-\theta^2\bigr)\lambda^2
-=\theta^2\lambda^2.\]</div>{% endraw %}
-
 <span id="eq:term2"></span>
-<p>In particular {% raw %}<span class="math inline">\(\sum_i Z_i^2&gt;\lambda^2\)</span>{% endraw %}, while {% raw %}<span class="math inline">\(\max_iT_i\leq\lambda\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(\rho\)</span>{% endraw %} be the first crossing of {% raw %}<span class="math inline">\(\lambda\)</span>{% endraw %} by {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, or {% raw %}<span class="math inline">\(n+1\)</span>{% endraw %} if there is none. Markov’s inequality and Lemma 1 yield</p>
-
-{% raw %}<div class="math display">\[\lambda\mathbb P\left(\sum_i Z_i^2&gt;\lambda^2,\ \max_iT_i\leq\lambda\right)
-\leq\lambda^{-1}\mathbb{E}\sum_{i&lt;\rho}Z_i^2
-\leq2\mathbb{E} T_n
-\leq2\mathbb{E}[X_n\mathbb1_{\{M&gt;\lambda\}}].\]</div>{% endraw %}
-
-<p>Adding the two estimates proves the tail bound. Integrate it against {% raw %}<span class="math inline">\(p\lambda^{p-2}\)</span>{% endraw %}. When {% raw %}<span class="math inline">\(X_n\in L^p\)</span>{% endraw %}, every {% raw %}<span class="math inline">\(X_i\in L^p\)</span>{% endraw %} by conditional Jensen, so all moments below are finite:</p>
-
-{% raw %}<div class="math display">\[\mathbb{E} M^p\leq3q\beta^p\mathbb{E}[X_nM^{p-1}]
-\leq3q\beta^p\|X_n\|_p\|M\|_p^{p-1}.\]</div>{% endraw %}
-
-<p>Thus {% raw %}<span class="math inline">\(\theta\|S_n\|_p\leq\|M\|_p\leq3q\beta^p\|X_n\|_p\)</span>{% endraw %}. Choose {% raw %}<span class="math inline">\(\theta=p^{-1/2}\)</span>{% endraw %}; then {% raw %}<span class="math inline">\(\beta^p=(1+2/p)^{p/2}&lt;e&lt;3\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(\|X_n\|_p=\infty\)</span>{% endraw %}, the asserted upper bound is automatic. ◻</p>
+<p>The first term is controlled by the first-crossing inequality. The second is controlled by the stopped square-function estimate in <a href="{% post_url 2023-02-18-martingale-square-function-inequalities %}#eq:term2">the proof of Lemma 2</a>.</p>
 
 </div>
-
-<p>A good-lambda inequality compares a large excursion of one variable with a smaller excursion of another. Integrating the tail estimate gives a comparison of moments.</p>
 
 <div id="lem:moment-comparison-bounds" class="lemma" data-note-number="3" data-note-kind="Lemma">
-<p><strong>Lemma 3</strong> (Good lambda inequality). Let {% raw %}<span class="math inline">\(X,Y\)</span>{% endraw %} be nonnegative random variables. Suppose constants {% raw %}<span class="math inline">\(\beta&gt;1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %} satisfy, for every {% raw %}<span class="math inline">\(\lambda&gt;0\)</span>{% endraw %},</p>
+<p><strong>Lemma 3.</strong> Let {% raw %}<span class="math inline">\(U,V\geq0\)</span>{% endraw %}. Suppose {% raw %}<span class="math inline">\(\beta&gt;1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\varepsilon\geq0\)</span>{% endraw %} satisfy</p>
 
-</div>
 <span id="eq:moment-comparison-hypothesis"></span>
-{% raw %}<div class="math display">\[\mathbb P(X&gt;\beta\lambda,Y\leq\delta\lambda)\leq\varepsilon\mathbb P(X&gt;\lambda).\tag{3}\]</div>{% endraw %}
+{% raw %}<div class="math display">\[\mathbb P(U&gt;\beta\lambda,V\leq\delta\lambda)\leq\varepsilon\mathbb P(U&gt;\lambda)\qquad(\lambda&gt;0).\tag{3}\]</div>{% endraw %}
 
 <p>If {% raw %}<span class="math inline">\(p&gt;0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\varepsilon\beta^p&lt;1\)</span>{% endraw %}, then</p>
 
-{% raw %}<div class="math display">\[\mathbb{E} X^p\leq\frac{\beta^p\delta^{-p}}{1-\varepsilon\beta^p}\mathbb{E} Y^p.\]</div>{% endraw %}
+{% raw %}<div class="math display">\[\mathbb E U^p\leq\frac{\beta^p\delta^{-p}}{1-\varepsilon\beta^p}\mathbb E V^p.\]</div>{% endraw %}
 
-<div class="proof">
-<p><em>Proof.</em> Split according to whether {% raw %}<span class="math inline">\(Y\leq\delta\lambda\)</span>{% endraw %} to obtain {% raw %}<span class="math inline">\(\mathbb P(X&gt;\beta\lambda)\leq\varepsilon\mathbb P(X&gt;\lambda)+\mathbb P(Y&gt;\delta\lambda)\)</span>{% endraw %}. Integrating only up to {% raw %}<span class="math inline">\(R\)</span>{% endraw %} avoids assuming the conclusion’s finiteness:</p>
-
-{% raw %}<div class="math display">\[\mathbb{E}(X\wedge\beta R)^p
-\leq\varepsilon\beta^p\mathbb{E}(X\wedge R)^p
-+\beta^p\delta^{-p}\mathbb{E}(Y\wedge\delta R)^p.\]</div>{% endraw %}
-
-<p>The first truncated moment on the right is at most the one on the left. Absorb it and let {% raw %}<span class="math inline">\(R\uparrow\infty\)</span>{% endraw %} by monotone convergence. This proves the estimate in <a href="#ref-bass_probabilistic_1995">Bass (1995), Lemma 6.9</a> directly. ◻</p>
-
+<p>The same conclusion holds when the right-hand event is {% raw %}<span class="math inline">\(U\geq\lambda\)</span>{% endraw %}, since the tail integrals with {% raw %}<span class="math inline">\(&gt;\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\geq\)</span>{% endraw %} agree.</p>
+<p>Proof: <a href="{% post_url 2023-02-18-martingale-square-function-inequalities %}#lem:moment-comparison-bounds">Lemma 3</a>.</p>
 </div>
 
 <div id="thm:burckholder" class="theorem" data-note-number="4" data-note-kind="Theorem">
-<p><strong>Theorem 4</strong> (Burkholder). For a martingale {% raw %}<span class="math inline">\(X\)</span>{% endraw %} and {% raw %}<span class="math inline">\(1&lt;p&lt;\infty\)</span>{% endraw %}, there are positive constants depending only on {% raw %}<span class="math inline">\(p\)</span>{% endraw %} such that</p>
+<p><strong>Theorem 4.</strong> For a discrete-time martingale with {% raw %}<span class="math inline">\(X_0=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(1&lt;p&lt;\infty\)</span>{% endraw %}, constants {% raw %}<span class="math inline">\(a_p,b_p&gt;0\)</span>{% endraw %} depending only on {% raw %}<span class="math inline">\(p\)</span>{% endraw %} satisfy</p>
 
+{% raw %}<div class="math display">\[a_p\mathbb E S_n^p\leq\mathbb E|X_n|^p\leq b_p\mathbb E S_n^p.\]</div>{% endraw %}
+<p>Proof: <a href="{% post_url 2023-02-18-martingale-square-function-inequalities %}#thm:burckholder">Burkholder's inequality</a>.</p>
 </div>
-{% raw %}<div class="math display">\[C_1(p)\mathbb{E} S_n^p\leq\mathbb{E}|X_n|^p\leq C_2(p)\mathbb{E} S_n^p.\]</div>{% endraw %}
 
-<div class="proof">
-<p><em>Proof.</em> Write {% raw %}<span class="math inline">\(X_n^+=\max(X_n,0)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(X_n^-=\max(-X_n,0)\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(1\leq i\leq n\)</span>{% endraw %}, set {% raw %}<span class="math inline">\(T_i=\mathbb{E}[X_n^+\mid\mathscr F_i]\)</span>{% endraw %} and {% raw %}<span class="math inline">\(U_i=\mathbb{E}[X_n^-\mid\mathscr F_i]\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(T_0=U_0=0\)</span>{% endraw %}. These are nonnegative submartingales, and their differences {% raw %}<span class="math inline">\(W_i=T_i-T_{i-1}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(Z_i=U_i-U_{i-1}\)</span>{% endraw %} satisfy {% raw %}<span class="math inline">\(Y_i=W_i-Z_i\)</span>{% endraw %}. Minkowski’s inequality and Lemma 2 give</p>
+<h2 id="continuous-bdg-all-positive-p">The full moment range</h2>
+<p><strong>Theorem 5 (Burkholder–Davis–Gundy).</strong> For every {% raw %}<span class="math inline">\(p&gt;0\)</span>{% endraw %}, there are constants {% raw %}<span class="math inline">\(0&lt;a_p\leq b_p&lt;\infty\)</span>{% endraw %} such that</p>
 
-{% raw %}<div class="math display">\[\|S_n\|_p\leq\left\|\Bigl(\sum_iW_i^2\Bigr)^{1/2}\right\|_p+
-\left\|\Bigl(\sum_iZ_i^2\Bigr)^{1/2}\right\|_p
-\leq18\sqrt p\,q\|X_n\|_p.\]</div>{% endraw %}
+{% raw %}<div class="math display">\[a_p\mathbb E A_T^{p/2}\leq\mathbb E(M_T^*)^p
+\leq b_p\mathbb E A_T^{p/2}\]</div>{% endraw %}
 
-<p>For the reverse bound, assume {% raw %}<span class="math inline">\(0&lt;\|X_n\|_p&lt;\infty\)</span>{% endraw %}, and put {% raw %}<span class="math inline">\(R_n=\operatorname{sgn}(X_n)|X_n|^{p-1}/\|X_n\|_p^{p-1}\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\(\|R_n\|_q=1\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(R_i=\mathbb{E}[R_n\mid\mathscr F_i]\)</span>{% endraw %} for {% raw %}<span class="math inline">\(i\geq1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(R_0=0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(D_i=R_i-R_{i-1}\)</span>{% endraw %}. Products involving differences from distinct time steps have zero expectation by conditioning just before the later difference. Thus</p>
+<p>for every almost surely finite stopping time {% raw %}<span class="math inline">\(T\)</span>{% endraw %}. The constants do not depend on {% raw %}<span class="math inline">\(M\)</span>{% endraw %} or {% raw %}<span class="math inline">\(T\)</span>{% endraw %}.</p>
 
-{% raw %}<div class="math display">\[\|X_n\|_p=\mathbb{E}[R_nX_n]=\mathbb{E}\sum_iD_iY_i
-\leq\left\|\Bigl(\sum_iD_i^2\Bigr)^{1/2}\right\|_q\|S_n\|_p
-\leq18\sqrt q\,p\|S_n\|_p.\]</div>{% endraw %}
+<p><em>Proof.</em> First stop {% raw %}<span class="math inline">\(M\)</span>{% endraw %} at</p>
 
-<p>The lower estimate just proved also applies to a sequence started at index one with a possibly nonzero mean; its proof used only the nonnegative conditional-expectation submartingales. This justifies its use for {% raw %}<span class="math inline">\(R\)</span>{% endraw %}. Zero norms are immediate. If {% raw %}<span class="math inline">\(S_n\in L^p\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(|X_n|\leq\sqrt n S_n\)</span>{% endraw %}, so the finiteness assumption needed for duality holds; otherwise the upper bound is automatic. We may take {% raw %}<span class="math inline">\(C_1=(18\sqrt p\,q)^{-p}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(C_2=(18\sqrt q\,p)^p\)</span>{% endraw %}. ◻</p>
+{% raw %}<div class="math display">\[\tau_K=\inf\{t\geq0:M_t^*+A_t\geq K\}\wedge K\]</div>{% endraw %}
 
-</div>
+<p>and replace {% raw %}<span class="math inline">\(T\)</span>{% endraw %} by {% raw %}<span class="math inline">\(T\wedge\tau_K\)</span>{% endraw %}. The process and its bracket are then bounded, and all subsequent stopping times may be capped at {% raw %}<span class="math inline">\(K\)</span>{% endraw %}. The square-martingale identity and bounded optional sampling apply to every stopped increment used below.</p>
+
+<p>Fix {% raw %}<span class="math inline">\(\beta&gt;1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\lambda&gt;0\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %} be the first time {% raw %}<span class="math inline">\(|M|\)</span>{% endraw %} reaches {% raw %}<span class="math inline">\(\lambda\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(E=\{\sigma\leq T\}\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(E\)</span>{% endraw %}, start the martingale increment at {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %} and stop it at {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, or when {% raw %}<span class="math inline">\(A_t-A_\sigma\)</span>{% endraw %} reaches {% raw %}<span class="math inline">\(2\delta^2\lambda^2\)</span>{% endraw %}, whichever comes first. Set the increment process to zero on {% raw %}<span class="math inline">\(E^c\)</span>{% endraw %}. The event {% raw %}<span class="math inline">\(E\)</span>{% endraw %} belongs to {% raw %}<span class="math inline">\(\mathcal F_\sigma\)</span>{% endraw %}. Its terminal squared expectation is therefore at most</p>
+
+{% raw %}<div class="math display">\[2\delta^2\lambda^2\,\mathbb P(E).\]</div>{% endraw %}
+
+<p>On {% raw %}<span class="math inline">\(\{M_T^*&gt;\beta\lambda,\ A_T^{1/2}\leq\delta\lambda\}\)</span>{% endraw %}, this increment reaches absolute value greater than {% raw %}<span class="math inline">\((\beta-1)\lambda\)</span>{% endraw %}. The bracket stop cannot occur on this event, since the total bracket is at most {% raw %}<span class="math inline">\(\delta^2\lambda^2\)</span>{% endraw %}. Applying the weak maximal inequality to the squared increment gives</p>
+
+{% raw %}<div class="math display">\[\mathbb P(M_T^*&gt;\beta\lambda,\ A_T^{1/2}\leq\delta\lambda)
+\leq\frac{2\delta^2}{(\beta-1)^2}\mathbb P(M_T^*\geq\lambda).\tag{4}\]</div>{% endraw %}
+
+<p>For the reverse comparison, let {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %} be the first time {% raw %}<span class="math inline">\(A\)</span>{% endraw %} reaches {% raw %}<span class="math inline">\(\lambda^2\)</span>{% endraw %}, and put {% raw %}<span class="math inline">\(E=\{\sigma\leq T\}\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(E\)</span>{% endraw %}, stop the increment after {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %} at the first of {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, the time its absolute value reaches {% raw %}<span class="math inline">\(3\delta\lambda\)</span>{% endraw %}, and the time its bracket reaches {% raw %}<span class="math inline">\((\beta^2-1)\lambda^2\)</span>{% endraw %}. Denote that time by {% raw %}<span class="math inline">\(\rho\)</span>{% endraw %}, and set {% raw %}<span class="math inline">\(\rho=\sigma\)</span>{% endraw %} on {% raw %}<span class="math inline">\(E^c\)</span>{% endraw %}. The increment process is zero on {% raw %}<span class="math inline">\(E^c\)</span>{% endraw %}. Continuity and the isometry give</p>
+
+
+{% raw %}<div class="math display">\[\mathbb E[\mathbf1_E(A_\rho-A_\sigma)]
+=\mathbb E[\mathbf1_E(M_\rho-M_\sigma)^2]
+\leq9\delta^2\lambda^2\mathbb P(E).\]</div>{% endraw %}
+
+<p>On {% raw %}<span class="math inline">\(\{A_T^{1/2}&gt;\beta\lambda,\ M_T^*\leq\delta\lambda\}\)</span>{% endraw %}, every increment from {% raw %}<span class="math inline">\(M_\sigma\)</span>{% endraw %} has absolute value at most {% raw %}<span class="math inline">\(2\delta\lambda\)</span>{% endraw %}. Thus the {% raw %}<span class="math inline">\(3\delta\lambda\)</span>{% endraw %} stop cannot occur before the bracket reaches {% raw %}<span class="math inline">\((\beta^2-1)\lambda^2\)</span>{% endraw %}, and</p>
+
+{% raw %}<div class="math display">\[\mathbb P(A_T^{1/2}&gt;\beta\lambda,\ M_T^*\leq\delta\lambda)
+\leq\frac{9\delta^2}{\beta^2-1}\mathbb P(A_T^{1/2}\geq\lambda).\tag{5}\]</div>{% endraw %}
+
+<p>Take {% raw %}<span class="math inline">\(\beta=2\)</span>{% endraw %}. For the given {% raw %}<span class="math inline">\(p&gt;0\)</span>{% endraw %}, choose {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %} small enough that both coefficients in (4) and (5), multiplied by {% raw %}<span class="math inline">\(2^p\)</span>{% endraw %}, are less than one. Lemma 3 applied in each direction proves the two moment inequalities for the stopped process, uniformly in {% raw %}<span class="math inline">\(K\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(\tau_K\uparrow\infty\)</span>{% endraw %} almost surely, {% raw %}<span class="math inline">\(M_{T\wedge\tau_K}^*\uparrow M_T^*\)</span>{% endraw %} and {% raw %}<span class="math inline">\(A_{T\wedge\tau_K}\uparrow A_T\)</span>{% endraw %}. Monotone convergence removes the stop and permits infinite moments. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+
+<p>For {% raw %}<span class="math inline">\(p\geq1\)</span>{% endraw %}, finiteness of {% raw %}<span class="math inline">\(\mathbb E A_T^{p/2}\)</span>{% endraw %} implies that {% raw %}<span class="math inline">\(M^T\)</span>{% endraw %} is a uniformly integrable martingale. Theorem 5 gives {% raw %}<span class="math inline">\(\mathbb E(M_T^*)^p&lt;\infty\)</span>{% endraw %}, hence an integrable dominating variable {% raw %}<span class="math inline">\(M_T^*\)</span>{% endraw %}; conditional dominated convergence removes a localizing sequence. When {% raw %}<span class="math inline">\(0&lt;p&lt;1\)</span>{% endraw %}, a finite {% raw %}<span class="math inline">\(p\)</span>{% endraw %}-th moment of the maximum need not imply integrability.</p>
+
+<p>The inequalities also hold for stopping times that may equal infinity, with {% raw %}<span class="math inline">\(M_\infty^*=\sup_{t\geq0}|M_t|\)</span>{% endraw %} and {% raw %}<span class="math inline">\(A_\infty=\lim_{t\to\infty}A_t\)</span>{% endraw %}. Apply Theorem 5 at {% raw %}<span class="math inline">\(T\wedge n\)</span>{% endraw %} and use monotone convergence.</p>
+
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-bass_probabilistic_1995" class="csl-entry" role="listitem">

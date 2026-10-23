@@ -1049,8 +1049,8 @@
     ],
     "date": "2023-04-02",
     "title": "Mixing Conditions and a Nonmixing AR(1) Process",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/05-0.md"
   },
   {
     "key": "05-17",
@@ -1111,8 +1111,8 @@
     ],
     "date": "2024-04-15",
     "title": "The Hot Hand: Limit Theory and Proofs",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/05-71.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/05-71.md"
   },
   {
     "key": "06-0",
@@ -1159,8 +1159,8 @@
     "citations": [],
     "date": "2022-09-13",
     "title": "Concentration Inequalities",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/06-25.md"
   },
   {
     "key": "06-64",
@@ -1656,8 +1656,8 @@
     "citations": [],
     "date": "2023-01-07",
     "title": "Martingales: Maximal and Upcrossing Inequalities",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/09-0.md"
   },
   {
     "key": "09-20",
@@ -1677,8 +1677,8 @@
     ],
     "date": "2023-02-18",
     "title": "Martingale Square-Function Inequalities",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/09-20.md"
   },
   {
     "key": "10-0",
@@ -2691,8 +2691,8 @@
     ],
     "date": "2023-01-21",
     "title": "Brownian Motion: Markov Properties and Path Continuity",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-1.md"
   },
   {
     "key": "21-23",
@@ -2720,8 +2720,8 @@
     "citations": [],
     "date": "2023-05-08",
     "title": "Brownian Path Oscillations and Continuity Bounds",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-23.md"
   },
   {
     "key": "21-42",
@@ -2749,8 +2749,8 @@
     ],
     "date": "2023-08-23",
     "title": "Quadratic Variation and the Doob–Meyer Decomposition",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-42.md"
   },
   {
     "key": "21-61",
@@ -2768,8 +2768,8 @@
     "citations": [],
     "date": "2023-11-02",
     "title": "Construction of the Stochastic Integral",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-61.md"
   },
   {
     "key": "21-71",
@@ -2800,8 +2800,8 @@
     ],
     "date": "2023-12-08",
     "title": "Itō’s Formula, Applications, and Stratonovich Integration",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-71.md"
   },
   {
     "key": "21-86",
@@ -2821,8 +2821,8 @@
     ],
     "date": "2024-02-18",
     "title": "Burkholder-Davis-Gundy inequalities",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-86.md"
   },
   {
     "key": "21-96",
@@ -2840,8 +2840,8 @@
     "citations": [],
     "date": "2024-03-24",
     "title": "Girsanov’s Theorem",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-96.md"
   },
   {
     "key": "21-108",
@@ -2861,8 +2861,8 @@
     ],
     "date": "2024-06-04",
     "title": "Further Results on Stochastic Integrals",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-108.md"
   },
   {
     "key": "21-144",
@@ -2887,8 +2887,8 @@
     ],
     "date": "2024-04-04",
     "title": "Continuous Semimartingales and the Monotone-Class Argument",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-144.md"
   },
   {
     "key": "21-174",
@@ -2906,8 +2906,8 @@
     "citations": [],
     "date": "2024-09-19",
     "title": "A Strict Local Martingale and the Meaning of Boundedness",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-174.md"
   },
   {
     "key": "21-178",
@@ -2930,8 +2930,8 @@
     "citations": [],
     "date": "2023-05-29",
     "title": "Skorokhod Representation and Tightness on Path Space",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/21-178.md"
   },
   {
     "key": "22-0",
@@ -3012,8 +3012,8 @@
     ],
     "date": "2024-07-13",
     "title": "Testing Mediation: Principal Strata and Observable Bounds",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/23-0.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/23-0.md"
   },
   {
     "key": "23-59",
@@ -3043,8 +3043,8 @@
     ],
     "date": "2024-07-18",
     "title": "Sharp Mechanism Bounds, Average Effects, and Inference",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/23-59.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/23-59.md"
   },
   {
     "key": "24-0",
@@ -3111,8 +3111,8 @@
     ],
     "date": "2024-02-09",
     "title": "E-Values: Betting, Calibration, and Merging",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/25-0.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/25-0.md"
   },
   {
     "key": "26-0",
@@ -3418,8 +3418,8 @@
     "citations": [],
     "date": "2022-01-26",
     "title": "Martingales",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/28-81.md"
   },
   {
     "key": "28-118",
@@ -3442,8 +3442,8 @@
     "citations": [],
     "date": "2022-03-25",
     "title": "Central Limit Theorems and Worked Examples",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/28-118.md"
   },
   {
     "key": "28-135",

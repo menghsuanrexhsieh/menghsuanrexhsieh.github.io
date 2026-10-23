@@ -3,7 +3,7 @@ layout: "post"
 title: "Concentration Inequalities"
 date: "2022-09-13"
 tags: ["statistics", "empirical processes"]
-excerpt: "The discussion above can be generalized to procedure known as the Chernoff bound."
+excerpt: "Exponential-moment inequalities, conditional martingale bounds, and concentration for functions of independent inputs."
 note_series: "Empirical processes"
 note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.tex"
 ---
@@ -285,30 +285,36 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.
 {% raw %}<div class="math display">\[-\lambda t+\frac{v\lambda^2}{2(1-\lambda/3)}=-\frac{vs^2}{2}=-x.\]</div>{% endraw %}
 <p>Markov now gives the desired {% raw %}<span class="math inline">\(e^{-x}\)</span>{% endraw %} bound. For {% raw %}<span class="math inline">\(x=0\)</span>{% endraw %}, it is again the bound one. ◻</p>
 </div>
-<p>Independent subgaussian variables have subgaussian sums, by multiplying their moment generating functions. For a nonlinear function of independent inputs, however, unconditional bounds on individual pieces need not control its martingale differences. The useful hypothesis is a <em>conditional</em> exponential-moment bound. Entropy tensorization and log-Sobolev inequalities provide another route to such concentration.</p>
+<p>Let {% raw %}<span class="math inline">\((\mathcal F_k)_{k=0}^n\)</span>{% endraw %} be a filtration. Exponential-moment bounds conditional on {% raw %}<span class="math inline">\(\mathcal F_{k-1}\)</span>{% endraw %} can be iterated along a martingale-difference sequence. The following result gives the resulting bound and applies to the Doob martingale of a function of independent observations.</p>
+
 
 <div id="lem:azuma" class="lemma" data-note-number="10" data-note-kind="Lemma">
-<p><strong>Lemma 10</strong> (Azuma).  Let {% raw %}<span class="math inline">\(X_1, \dots, X_n\)</span>{% endraw %} be independent random variables defined on {% raw %}<span class="math inline">\(\mathscr X\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(\Delta_k\)</span>{% endraw %} be a martingale difference array with respect to {% raw %}<span class="math inline">\(X_1, \dots, X_k\)</span>{% endraw %}, defined as </p>
+<p><strong>Lemma 10 (conditional exponential-moment bound).</strong> Let {% raw %}<span class="math inline">\(\Delta_k\)</span>{% endraw %} be integrable, {% raw %}<span class="math inline">\(\mathcal F_k\)</span>{% endraw %}-measurable, with {% raw %}<span class="math inline">\(\mathbb E[\Delta_k\mid\mathcal F_{k-1}]=0\)</span>{% endraw %}. A particular example, for independent {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %} and integrable {% raw %}<span class="math inline">\(f(X_1,\ldots,X_n)\)</span>{% endraw %}, is</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
         \Delta_k = \mathbb{E} [f(X_1, \dots, X_n) \mid X_1, \dots, X_k] - \mathbb{E} [f(X_1, \dots, X_n) \mid X_1, \dots, X_{k-1}] ~,
     
 \end{aligned}\]</div>{% endraw %}
-<p> where {% raw %}<span class="math inline">\(f(X_1,\ldots,X_n)\)</span>{% endraw %} is integrable. Let {% raw %}<span class="math inline">\(\sigma_k^2\geq0\)</span>{% endraw %} be deterministic constants (variance proxies, not necessarily the actual variances). Suppose, for every {% raw %}<span class="math inline">\(\lambda\in\mathbb R\)</span>{% endraw %}, the following conditional subgaussian property holds: </p>
+<p>Assume there are deterministic constants {% raw %}<span class="math inline">\(\sigma_k^2\geq0\)</span>{% endraw %} such that, for every {% raw %}<span class="math inline">\(\lambda\in\mathbb R\)</span>{% endraw %},</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
-        \mathbb{E} [e^{\lambda \Delta_k} \mid X_1, \dots, X_{k-1}] \leq e^{\frac{\lambda^2 \sigma_k^2}{2}} ~~ \rm a.s.
+        \mathbb{E} [e^{\lambda \Delta_k} \mid \mathcal F_{k-1}] \leq e^{\frac{\lambda^2 \sigma_k^2}{2}} ~~ \rm a.s.
     
 \end{aligned}\]</div>{% endraw %}
-<p> Then, the sum {% raw %}<span class="math inline">\(\sum_{1 \leq k \leq n} \Delta_k\)</span>{% endraw %} is subgaussian.</p>
+<p>Then {% raw %}<span class="math inline">\(S_n=\sum_{k=1}^n\Delta_k\)</span>{% endraw %} satisfies {% raw %}<span class="math inline">\(\mathbb E e^{\lambda S_n}\leq e^{\lambda^2 V/2}\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(V=\sum_k\sigma_k^2\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(V&gt;0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\mathbb P(|S_n|\geq t)\leq2e^{-t^2/(2V)}\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(V=0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(S_n=0\)</span>{% endraw %} almost surely.</p>
+
 
 </div>
 <div class="proof">
-<p><em>Proof.</em> Write {% raw %}<span class="math inline">\(\mathcal F_k=\sigma(X_1,\ldots,X_k)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(S_k=\sum_{i=1}^k\Delta_i\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(S_0=0\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(S_{k-1}\)</span>{% endraw %} is {% raw %}<span class="math inline">\(\mathcal F_{k-1}\)</span>{% endraw %}-measurable, the tower property and the conditional hypothesis give</p>
+<p><em>Proof.</em> Put {% raw %}<span class="math inline">\(S_k=\sum_{i=1}^k\Delta_i\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(S_0=0\)</span>{% endraw %}. The measurability of {% raw %}<span class="math inline">\(S_{k-1}\)</span>{% endraw %} and the conditional hypothesis give</p>
+
 {% raw %}<div class="math display">\[\mathbb Ee^{\lambda S_k}=\mathbb E\!\left[e^{\lambda S_{k-1}}\mathbb E(e^{\lambda\Delta_k}\mid\mathcal F_{k-1})\right]\leq e^{\lambda^2\sigma_k^2/2}\mathbb Ee^{\lambda S_{k-1}}.\]</div>{% endraw %}
 <p>Iteration yields {% raw %}<span class="math inline">\(\mathbb Ee^{\lambda S_n}\leq\exp\{\lambda^2\sum_k\sigma_k^2/2\}\)</span>{% endraw %} for all real {% raw %}<span class="math inline">\(\lambda\)</span>{% endraw %}. The tower step is valid initially for nonnegative extended expectations, and the bound proves finiteness inductively. If {% raw %}<span class="math inline">\(V=\sum_k\sigma_k^2&gt;0\)</span>{% endraw %}, optimizing at {% raw %}<span class="math inline">\(\lambda=\pm t/V\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(\mathbb P(|S_n|\geq t)\leq2e^{-t^2/(2V)}\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(V=0\)</span>{% endraw %}, taking {% raw %}<span class="math inline">\(\lambda\to\infty\)</span>{% endraw %} in the one-sided Markov bounds shows {% raw %}<span class="math inline">\(S_n=0\)</span>{% endraw %} almost surely. The same proof works for any filtration and integrable martingale differences satisfying the displayed conditional bounds. ◻</p>
 </div>
-<p>Here is a classical bound for the sum of <em>bounded</em> martingale difference array.</p>
+<p>A deterministic bound on each increment supplies the conditional exponential-moment hypothesis through Hoeffding’s lemma.</p>
+
 
 <div id="lem:azuma-hoeffding" class="lemma" data-note-number="11" data-note-kind="Lemma">
 <p><strong>Lemma 11</strong> (Azuma-Hoeffding).  With the setup of Lemma <a href="#lem:azuma" data-reference-type="ref" data-reference="lem:azuma">10</a>, suppose {% raw %}<span class="math inline">\(|\Delta_i| \leq c_i\)</span>{% endraw %} for some constants {% raw %}<span class="math inline">\(c_i\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(1 \leq i \leq n\)</span>{% endraw %}. Then, the sum {% raw %}<span class="math inline">\(\sum_{1 \leq k \leq n} \Delta_k\)</span>{% endraw %} is subgaussian.</p>
@@ -319,7 +325,8 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.
 {% raw %}<div class="math display">\[\mathbb E(e^{\lambda\Delta_i}\mid\mathcal F_{i-1})\leq\exp\{\lambda^2(2c_i)^2/8\}=\exp\{\lambda^2c_i^2/2\}.\]</div>{% endraw %}
 <p>For negative {% raw %}<span class="math inline">\(\lambda\)</span>{% endraw %}, apply that lemma to {% raw %}<span class="math inline">\(-\Delta_i\)</span>{% endraw %}. Lemma 10, with {% raw %}<span class="math inline">\(\sigma_i^2=c_i^2\)</span>{% endraw %}, now yields {% raw %}<span class="math inline">\(\mathbb Ee^{\lambda\sum_i\Delta_i}\leq e^{\lambda^2\sum_i c_i^2/2}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\mathbb P(|\sum_i\Delta_i|\geq t)\leq2e^{-t^2/(2\sum_i c_i^2)}\)</span>{% endraw %} for {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %} when the denominator is positive. If every {% raw %}<span class="math inline">\(c_i=0\)</span>{% endraw %}, the sum is zero. ◻</p>
 </div>
-<p>From these results, we can deduce the simplest subgaussian concentration inequality. Again, we cannot naïvely apply the tensorization arguments to subgaussian random variables; we can, however, apply a tensorization principle to a martingale difference array, as above. We only require that the functions we consider obey the <em>bounded difference property</em>: a function {% raw %}<span class="math inline">\(f : \mathscr X^n \to \mathbb R\)</span>{% endraw %} satisfies the bounded difference property if there exist nonnegative constants {% raw %}<span class="math inline">\(d_1, \dots, d_n\)</span>{% endraw %} such that </p>
+<p>For independent inputs, the range of each Doob increment can be bounded by changing one coordinate of the function. A measurable {% raw %}<span class="math inline">\(f:\mathscr X^n\to\mathbb R\)</span>{% endraw %} has bounded differences with constants {% raw %}<span class="math inline">\(d_1,\ldots,d_n\geq0\)</span>{% endraw %} if</p>
+
 
 {% raw %}<span id="property:bounded-difference"></span><div class="math display">\[\begin{aligned}
  
@@ -336,7 +343,8 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.
 \end{aligned}\]</div>{% endraw %}
 </div>
 <div class="proof">
-<p><em>Proof.</em> Fix the past {% raw %}<span class="math inline">\(x_1,\ldots,x_{i-1}\)</span>{% endraw %}, and average only over the independent future coordinates:</p>
+<p><em>Proof.</em> Fix any {% raw %}<span class="math inline">\(x^0\in\mathscr X^n\)</span>{% endraw %}. Changing one coordinate at a time gives {% raw %}<span class="math inline">\(|f(x)-f(x^0)|\leq\sum_i d_i\)</span>{% endraw %}; hence {% raw %}<span class="math inline">\(f(X)\)</span>{% endraw %} is bounded and integrable. For fixed past coordinates {% raw %}<span class="math inline">\(x_1,\ldots,x_{i-1}\)</span>{% endraw %}, average over the independent future coordinates:</p>
+
 {% raw %}<div class="math display">\[g_i(x)=\mathbb E f(x_1,\ldots,x_{i-1},x,X_{i+1},\ldots,X_n).\]</div>{% endraw %}
 <p>For any {% raw %}<span class="math inline">\(x,y\)</span>{% endraw %}, the bounded difference assumption and the same future realization give {% raw %}<span class="math inline">\(|g_i(x)-g_i(y)|\leq d_i\)</span>{% endraw %}. Thus, conditional on the past, {% raw %}<span class="math inline">\(g_i(X_i)\)</span>{% endraw %} lies in an interval of width at most {% raw %}<span class="math inline">\(d_i\)</span>{% endraw %}. The martingale difference is {% raw %}<span class="math inline">\(\Delta_i=g_i(X_i)-\mathbb E[g_i(X_i)\mid\mathcal F_{i-1}]\)</span>{% endraw %}; subtracting the mean preserves that interval width. Conditional Hoeffding therefore gives</p>
 {% raw %}<div class="math display">\[\mathbb E(e^{\lambda\Delta_i}\mid\mathcal F_{i-1})\leq e^{\lambda^2d_i^2/8}.\]</div>{% endraw %}

@@ -3,7 +3,7 @@ layout: "post"
 title: "Central Limit Theorems and Worked Examples"
 date: "2022-03-25"
 tags: ["probability theory", "statistics"]
-excerpt: "Sometimes in practice, the Lindeberg condition is difficult to verify."
+excerpt: "Independent-array and martingale central limit theorems, conditional Lindeberg criteria, and worked examples."
 note_series: "Probability and statistics"
 note_source: "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theory - Notes/stats.tex"
 redirect_from: ["/2022/03/25/central-limit-theorems/", "/2022/04/13/examples-of-central-limit-arguments/"]
@@ -87,19 +87,21 @@ redirect_from: ["/2022/03/25/central-limit-theorems/", "/2022/04/13/examples-of-
 <p>◻</p>
 
 </div>
-<p>Dependence can change the limiting distribution even when each increment is centred. The next example gives a mixture of normal laws because a random scale remains in the limit.</p>
+<p>A martingale-difference condition removes predictable means. It does not force the accumulated conditional variance to approach a constant, as the following example shows.</p>
+
 
 
 <div id="result-5" class="example" data-note-number="5" data-note-kind="Example">
-<p><strong>Example 5</strong>. Let {% raw %}<span class="math inline">\((\Delta_i)_{i\geq1}\)</span>{% endraw %} be independent random signs. Put {% raw %}<span class="math inline">\(W=1_{\{\Delta_1=1\}}+2\,1_{\{\Delta_1=-1\}}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(X_n=W\sum_{k=2}^n\Delta_k\)</span>{% endraw %}. With {% raw %}<span class="math inline">\(\mathscr F_n=\sigma(\Delta_1,\ldots,\Delta_n)\)</span>{% endraw %}, {% raw %}<span class="math inline">\((X_n)\)</span>{% endraw %} is a martingale. Conditional on {% raw %}<span class="math inline">\(W\)</span>{% endraw %}, the ordinary CLT applies to the remaining signs, so {% raw %}<span class="math inline">\(X_n/\sqrt n\)</span>{% endraw %} converges to {% raw %}<span class="math inline">\(\frac12\mathcal{N}(0,1)+\frac12\mathcal{N}(0,4)\)</span>{% endraw %}. The random conditional variance prevents a single normal limit.</p>
+<p><strong>Example 5</strong>. Let {% raw %}<span class="math inline">\((\Delta_i)_{i\geq1}\)</span>{% endraw %} be independent random signs. Put {% raw %}<span class="math inline">\(W=1_{\{\Delta_1=1\}}+2\,1_{\{\Delta_1=-1\}}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(X_n=W\sum_{k=2}^n\Delta_k\)</span>{% endraw %}. With {% raw %}<span class="math inline">\(\mathcal F_n=\sigma(\Delta_1,\ldots,\Delta_n)\)</span>{% endraw %}, {% raw %}<span class="math inline">\((X_n)\)</span>{% endraw %} is a martingale. Conditional on {% raw %}<span class="math inline">\(W\)</span>{% endraw %}, the ordinary CLT applies to the remaining signs, so {% raw %}<span class="math inline">\(X_n/\sqrt n\)</span>{% endraw %} converges to {% raw %}<span class="math inline">\(\frac12\mathcal{N}(0,1)+\frac12\mathcal{N}(0,4)\)</span>{% endraw %}. The random conditional variance prevents a single normal limit.</p>
 
 </div>
-<p>For a square-integrable martingale {% raw %}<span class="math inline">\((X_n,\mathscr F_n)_{n\geq0}\)</span>{% endraw %} with {% raw %}<span class="math inline">\(X_0=0\)</span>{% endraw %}, the increments {% raw %}<span class="math inline">\(Y_n=X_n-X_{n-1}\)</span>{% endraw %} have conditional mean zero. Their accumulated conditional variance is the relevant scale. One can introduce the variance-clock stopping time</p>
-{% raw %}<div class="math display">\[\sigma_n^2=\mathbb{E}[Y_n^2\mid\mathscr F_{n-1}],\qquad v_t=\inf\left\{n\geq1:\sum_{k=1}^n\sigma_k^2\geq t\right\},\]</div>{% endraw %}
+<p>For a square-integrable martingale {% raw %}<span class="math inline">\((X_n,\mathcal F_n)\)</span>{% endraw %} with {% raw %}<span class="math inline">\(X_0=0\)</span>{% endraw %}, put {% raw %}<span class="math inline">\(Y_n=X_n-X_{n-1}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(v_n=\mathbb E[Y_n^2\mid\mathcal F_{n-1}]\)</span>{% endraw %}. The accumulated conditional variance is {% raw %}<span class="math inline">\(\sum_{k\leq n}v_k\)</span>{% endraw %}. The finite-row theorem below assumes that this quantity converges after normalisation and controls large increments separately. A random limit for the conditional variance generally gives a different limiting law, as in Example 5.</p>
+
+{% raw %}<div class="math display">\[\sigma_n^2=\mathbb{E}[Y_n^2\mid\mathcal F_{n-1}],\qquad v_t=\inf\left\{n\geq1:\sum_{k=1}^n\sigma_k^2\geq t\right\},\]</div>{% endraw %}
 <p>with the infimum equal to infinity if the level is never reached. This is a stopping time because the partial conditional-variance sums are adapted. A normal limit at this random time requires control of large jumps, the variance overshoot, and finiteness of the stopping time. The following theorem states explicit sufficient conditions directly for finite rows of martingale differences.</p>
 <span id="as:mclt-1"></span><span id="as:mclt-2"></span><span id="eq:II-46"></span><span id="eq:II-52"></span><span id="eq:II-54"></span><span id="eq:II-58"></span>
 <div id="thm:martingale-clt" class="theorem" data-note-number="6" data-note-kind="Theorem">
-<p><strong>Theorem 6</strong>. (Martingale CLT, finite rows). Let {% raw %}<span class="math inline">\(Y_{n,k},\ 1\leq k\leq r_n\)</span>{% endraw %} be square-integrable martingale differences for {% raw %}<span class="math inline">\((\mathscr F_{n,k})\)</span>{% endraw %}: {% raw %}<span class="math inline">\(\mathbb{E}[Y_{n,k}\mid\mathscr F_{n,k-1}]=0\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(v_{n,k}=\mathbb{E}[Y_{n,k}^2\mid\mathscr F_{n,k-1}]\)</span>{% endraw %}. Suppose</p>
+<p><strong>Theorem 6</strong>. (Martingale CLT, finite rows). Let {% raw %}<span class="math inline">\(Y_{n,k},\ 1\leq k\leq r_n\)</span>{% endraw %} be square-integrable martingale differences for {% raw %}<span class="math inline">\((\mathcal F_{n,k})\)</span>{% endraw %}: {% raw %}<span class="math inline">\(\mathbb{E}[Y_{n,k}\mid\mathcal F_{n,k-1}]=0\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(v_{n,k}=\mathbb{E}[Y_{n,k}^2\mid\mathcal F_{n,k-1}]\)</span>{% endraw %}. Suppose</p>
 
 </div>
 {% raw %}<div class="math display">\[V_n=\sum_{k=1}^{r_n}v_{n,k}\xrightarrow{P}\sigma^2&gt;0,\qquad \sum_{k=1}^{r_n}\mathbb{E}[Y_{n,k}^21_{\{|Y_{n,k}|&gt;\varepsilon\}}]\longrightarrow0\quad(\varepsilon&gt;0).\]</div>{% endraw %}<p>Then {% raw %}<span class="math inline">\(\sum_{k=1}^{r_n}Y_{n,k}\Rightarrow \mathcal{N}(0,\sigma^2)\)</span>{% endraw %}. One may append zero increments after {% raw %}<span class="math inline">\(r_n\)</span>{% endraw %} without changing the assertion.</p>
@@ -109,22 +111,57 @@ redirect_from: ["/2022/03/25/central-limit-theorems/", "/2022/04/13/examples-of-
 
 <p>First suppose {% raw %}<span class="math inline">\(V_n\leq c\)</span>{% endraw %} almost surely. Suppress {% raw %}<span class="math inline">\(n\)</span>{% endraw %} and put {% raw %}<span class="math inline">\(S_k=\sum_{j\leq k}Y_j\)</span>{% endraw %}, {% raw %}<span class="math inline">\(V_k=\sum_{j\leq k}v_j\)</span>{% endraw %}. The process {% raw %}<span class="math inline">\(Z_k=\exp(itS_k+t^2V_k/2)\)</span>{% endraw %} satisfies</p>
 
-{% raw %}<div class="math display">\[\mathbb{E}(Z_k-Z_{k-1})=\mathbb{E}\left[e^{itS_{k-1}+t^2V_k/2}\{\mathbb{E}[e^{itY_k}\mid\mathscr F_{k-1}]-e^{-t^2v_k/2}\}\right].\]</div>{% endraw %}<p>Here {% raw %}<span class="math inline">\(S_{k-1}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(V_k\)</span>{% endraw %} are {% raw %}<span class="math inline">\(\mathscr F_{k-1}\)</span>{% endraw %}-measurable. To spell out the error bound, conditional centering and the same Taylor remainder as in Theorem 2 give</p>
-{% raw %}<div class="math display">\[\left|\mathbb{E}[e^{itY_k}\mid\mathscr F_{k-1}]-(1-t^2v_k/2)\right|\leq C_t\left(\mathbb{E}[Y_k^2 1_{\{|Y_k|&gt;\varepsilon\}}\mid\mathscr F_{k-1}]+\varepsilon v_k\right).\]</div>{% endraw %}
-<p>Also {% raw %}<span class="math inline">\(|e^{-t^2v_k/2}-(1-t^2v_k/2)|\leq C_t v_k^2\)</span>{% endraw %}. The multiplier in the preceding telescoping identity has modulus at most {% raw %}<span class="math inline">\(e^{t^2c/2}\)</span>{% endraw %}. These observations justify the next bound term by term.</p>
+{% raw %}<div class="math display">\[\mathbb{E}(Z_k-Z_{k-1})=\mathbb{E}\left[e^{itS_{k-1}+t^2V_k/2}\{\mathbb{E}[e^{itY_k}\mid\mathcal F_{k-1}]-e^{-t^2v_k/2}\}\right].\]</div>{% endraw %}<p>Here {% raw %}<span class="math inline">\(S_{k-1}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(V_k\)</span>{% endraw %} are {% raw %}<span class="math inline">\(\mathcal F_{k-1}\)</span>{% endraw %}-measurable. Conditional centering and the same Taylor remainder as in Theorem 2 give</p>
+{% raw %}<div class="math display">\[\left|\mathbb{E}[e^{itY_k}\mid\mathcal F_{k-1}]-(1-t^2v_k/2)\right|\leq C_t\left(\mathbb{E}[Y_k^2 1_{\{|Y_k|&gt;\varepsilon\}}\mid\mathcal F_{k-1}]+\varepsilon v_k\right).\]</div>{% endraw %}
+<p>Also {% raw %}<span class="math inline">\(|e^{-t^2v_k/2}-(1-t^2v_k/2)|\leq C_t v_k^2\)</span>{% endraw %}. The multiplier in the preceding telescoping identity has modulus at most {% raw %}<span class="math inline">\(e^{t^2c/2}\)</span>{% endraw %}. </p>
 <p>Conditional Taylor expansion, centering, and {% raw %}<span class="math inline">\(V_k\leq c\)</span>{% endraw %} bound the sum of the absolute expectations by</p>
 
-{% raw %}<div class="math display">\[C_{t,c}\left(\sum_k\mathbb{E}Y_k^21_{\{|Y_k|&gt;\varepsilon\}}+\varepsilon\sum_kEv_k+\sum_kEv_k^2\right).\]</div>{% endraw %}<p>Here {% raw %}<span class="math inline">\(\sum_kEv_k\leq c\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sum_kEv_k^2\leq c\mathbb{E}\max_kv_k\)</span>{% endraw %}. Moreover,</p>
+{% raw %}<div class="math display">\[C_{t,c}\left(\sum_k\mathbb{E}Y_k^21_{\{|Y_k|&gt;\varepsilon\}}+\varepsilon\sum_k\mathbb E v_k+\sum_k\mathbb E v_k^2\right).\]</div>{% endraw %}<p>Here {% raw %}<span class="math inline">\(\sum_k\mathbb E v_k\leq c\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sum_k\mathbb E v_k^2\leq c\mathbb{E}\max_kv_k\)</span>{% endraw %}. Also,</p>
 
 {% raw %}<div class="math display">\[\mathbb{E}\max_kv_k\leq\varepsilon^2+\sum_k\mathbb{E}Y_k^21_{\{|Y_k|&gt;\varepsilon\}}.\]</div>{% endraw %}<p>Taking {% raw %}<span class="math inline">\(n\to\infty\)</span>{% endraw %} and then {% raw %}<span class="math inline">\(\varepsilon\downarrow0\)</span>{% endraw %} proves {% raw %}<span class="math inline">\(\mathbb{E}Z_{r_n}\to1\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(V_n\to\sigma^2\)</span>{% endraw %} in probability and {% raw %}<span class="math inline">\(|Z_{r_n}|\leq e^{t^2c/2}\)</span>{% endraw %},</p>
 
-{% raw %}<div class="math display">\[\left|Ee^{itS_{r_n}}-e^{-t^2\sigma^2/2}\mathbb{E}Z_{r_n}\right|\leq e^{t^2c/2}\mathbb{E}\left|e^{-t^2V_n/2}-e^{-t^2\sigma^2/2}\right|\longrightarrow0.\]</div>{% endraw %}<p>This proves characteristic-function convergence in the bounded case.</p>
+{% raw %}<div class="math display">\[\left|\mathbb E e^{itS_{r_n}}-e^{-t^2\sigma^2/2}\mathbb{E}Z_{r_n}\right|\leq e^{t^2c/2}\mathbb{E}\left|e^{-t^2V_n/2}-e^{-t^2\sigma^2/2}\right|\longrightarrow0.\]</div>{% endraw %}<p>This proves characteristic-function convergence in the bounded case.</p>
 
-<p>For the general case choose {% raw %}<span class="math inline">\(c&gt;\sigma^2\)</span>{% endraw %} and replace {% raw %}<span class="math inline">\(Y_{n,k}\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\widetilde Y_{n,k}=Y_{n,k}1_{\{\sum_{j\leq k}v_{n,j}\leq c\}}\)</span>{% endraw %}. The indicator is {% raw %}<span class="math inline">\(\mathscr F_{n,k-1}\)</span>{% endraw %}-measurable. The new total conditional variance is at most {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, its Lindeberg sums do not increase, and it agrees with {% raw %}<span class="math inline">\(V_n\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\{V_n\leq c\}\)</span>{% endraw %}, an event whose probability tends to one. The bounded case applies. The original and truncated sums agree on that same event, proving the result.</p>
+<p>For the general case choose {% raw %}<span class="math inline">\(c&gt;\sigma^2\)</span>{% endraw %} and replace {% raw %}<span class="math inline">\(Y_{n,k}\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\widetilde Y_{n,k}=Y_{n,k}1_{\{\sum_{j\leq k}v_{n,j}\leq c\}}\)</span>{% endraw %}. The indicator is {% raw %}<span class="math inline">\(\mathcal F_{n,k-1}\)</span>{% endraw %}-measurable. The new total conditional variance is at most {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, its Lindeberg sums do not increase, and it agrees with {% raw %}<span class="math inline">\(V_n\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\{V_n\leq c\}\)</span>{% endraw %}, an event whose probability tends to one. The bounded case applies. The original and truncated sums agree on that same event, proving the result.</p>
 
 <p>◻</p>
 
 </div>
+<h2 id="conditional-martingale-clt">Conditional Lindeberg and Lyapunov conditions</h2>
+<p><strong>Corollary (conditional martingale CLT).</strong> Under the martingale-difference and square-integrability assumptions of Theorem 6, suppose</p>
+
+{% raw %}<div class="math display">\[V_n=\sum_{k=1}^{r_n}\mathbb E[Y_{n,k}^2\mid\mathcal F_{n,k-1}]\xrightarrow{P}\sigma^2\in[0,\infty),\]</div>{% endraw %}
+
+<p>and, for every {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %},</p>
+
+{% raw %}<div class="math display">\[L_n(\varepsilon)=\sum_{k=1}^{r_n}\mathbb E[Y_{n,k}^2\mathbf1_{\{|Y_{n,k}|&gt;\varepsilon\}}\mid\mathcal F_{n,k-1}]\xrightarrow{P}0.\]</div>{% endraw %}
+
+<p>Then {% raw %}<span class="math inline">\(\sum_kY_{n,k}\Rightarrow\mathcal N(0,\sigma^2)\)</span>{% endraw %}, with the degenerate law at zero when {% raw %}<span class="math inline">\(\sigma^2=0\)</span>{% endraw %}.</p>
+
+<p><strong>Proof.</strong> Suppose first that {% raw %}<span class="math inline">\(\sigma^2&gt;0\)</span>{% endraw %}. A diagonal choice gives deterministic sequences {% raw %}<span class="math inline">\(\varepsilon_n,\delta_n\downarrow0\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\mathbb P(L_n(\varepsilon_n)&gt;\delta_n)\to0\)</span>{% endraw %}: choose integers {% raw %}<span class="math inline">\(N_j\uparrow\infty\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\mathbb P(L_n(1/j)&gt;1/j)\leq1/j\)</span>{% endraw %} for {% raw %}<span class="math inline">\(n\geq N_j\)</span>{% endraw %}, and use {% raw %}<span class="math inline">\(\varepsilon_n=\delta_n=1/j\)</span>{% endraw %} when {% raw %}<span class="math inline">\(N_j\leq n&lt;N_{j+1}\)</span>{% endraw %}. Write</p>
+
+{% raw %}<div class="math display">\[\ell_{n,k}=\mathbb E[Y_{n,k}^2\mathbf1_{\{|Y_{n,k}|&gt;\varepsilon_n\}}\mid\mathcal F_{n,k-1}],\qquad
+I_{n,k}=\mathbf1_{\{\sum_{j\leq k}v_{n,j}\leq c,\ \sum_{j\leq k}\ell_{n,j}\leq\delta_n\}},\]</div>{% endraw %}
+
+<p>where {% raw %}<span class="math inline">\(c&gt;\sigma^2\)</span>{% endraw %}. Each indicator is {% raw %}<span class="math inline">\(\mathcal F_{n,k-1}\)</span>{% endraw %}-measurable, so {% raw %}<span class="math inline">\(\widetilde Y_{n,k}=I_{n,k}Y_{n,k}\)</span>{% endraw %} is a martingale difference. Since both cumulative sums are nondecreasing, the retained conditional variance is at most {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, and the retained sum of the {% raw %}<span class="math inline">\(\ell_{n,k}\)</span>{% endraw %} is at most {% raw %}<span class="math inline">\(\delta_n\)</span>{% endraw %}. For fixed {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %}, eventually {% raw %}<span class="math inline">\(\varepsilon_n\leq\varepsilon\)</span>{% endraw %}, whence</p>
+
+{% raw %}<div class="math display">\[\sum_k\mathbb E[\widetilde Y_{n,k}^2\mathbf1_{\{|\widetilde Y_{n,k}|&gt;\varepsilon\}}]
+\leq\mathbb E\sum_kI_{n,k}\ell_{n,k}\leq\delta_n.\]</div>{% endraw %}
+
+<p>On {% raw %}<span class="math inline">\(\{V_n\leq c,\ L_n(\varepsilon_n)\leq\delta_n\}\)</span>{% endraw %}, all indicators are one. This event has probability tending to one, so the retained conditional variance still converges in probability to {% raw %}<span class="math inline">\(\sigma^2\)</span>{% endraw %}. Theorem 6 applies to the retained array. The two row sums agree with probability tending to one, which proves the assertion.</p>
+
+<p>If {% raw %}<span class="math inline">\(\sigma^2=0\)</span>{% endraw %}, retain only increments for which {% raw %}<span class="math inline">\(\sum_{j\leq k}v_{n,j}\leq c\)</span>{% endraw %}, with any fixed {% raw %}<span class="math inline">\(c&gt;0\)</span>{% endraw %}. Orthogonality gives a second moment at most {% raw %}<span class="math inline">\(c\)</span>{% endraw %} for the retained sum. Thus</p>
+
+{% raw %}<div class="math display">\[\mathbb P\left(\left|\sum_kY_{n,k}\right|&gt;\eta\right)
+\leq\mathbb P(V_n&gt;c)+c/\eta^2.\]</div>{% endraw %}
+
+<p>Let {% raw %}<span class="math inline">\(n\to\infty\)</span>{% endraw %} and then {% raw %}<span class="math inline">\(c\downarrow0\)</span>{% endraw %}. The sum tends to zero in probability; no Lindeberg assumption is needed in this degenerate case. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+
+<p>A sufficient condition for conditional Lindeberg is, for some {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %},</p>
+
+{% raw %}<div class="math display">\[\sum_k\mathbb E[|Y_{n,k}|^{2+\delta}\mid\mathcal F_{n,k-1}]\xrightarrow{P}0.\]</div>{% endraw %}
+
+<p>Indeed, {% raw %}<span class="math inline">\(L_n(\varepsilon)\)</span>{% endraw %} is bounded by {% raw %}<span class="math inline">\(\varepsilon^{-\delta}\)</span>{% endraw %} times this sum. This conditional Lyapunov criterion permits predictable, random moment bounds; no convergence of their expectations is required.</p>
 <h3 data-note-section="1" id="examples">1. Examples</h3>
 
 <div id="result-7" class="example" data-note-number="7" data-note-kind="Example">

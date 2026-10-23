@@ -3,7 +3,7 @@ layout: "post"
 title: "Brownian Path Oscillations and Continuity Bounds"
 date: "2023-05-08"
 tags: ["probability theory", "stochastic processes"]
-excerpt: "Brownian Path Oscillations and Continuity Bounds. Notes on stochastic processes."
+excerpt: "Brownian moduli of continuity, iterated logarithms, infinite variation, and localisation."
 note_series: "Stochastic processes"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex"
 redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monotonicity/", "/2023/07/18/kolmogorov-continuity-and-brownian-path-bounds/"]
@@ -11,17 +11,20 @@ redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monot
 
 <div class="note-content" markdown="0">
 
-<p>Continuity alone says that sufficiently short increments are small. For Brownian motion, we can ask how small they are, uniformly over an interval, and how often unusually large increments occur. Gaussian tail estimates and the two Borel–Cantelli lemmas answer these questions. The final part introduces finite variation and localisation, which will be needed to compare Brownian paths with integrators from ordinary calculus.</p>
+<p>Let {% raw %}<span class="math inline">\(B\)</span>{% endraw %} be a one-dimensional Brownian motion starting at zero. We establish its uniform modulus of continuity, nonmonotonicity, and the law of the iterated logarithm. The final section develops the stopping and finite-variation arguments used in stochastic integration.</p>
+
 
 <div id="modulus-of-continuity" data-note-section="title">
 
 </div>
-<p>For any continuous function {% raw %}<span class="math inline">\(f:[0,1] \to \mathbb R\)</span>{% endraw %}, the <em>modulus of continuity</em> of {% raw %}<span class="math inline">\(f\)</span>{% endraw %} is defined as the quantity </p>
+<p>For {% raw %}<span class="math inline">\(f\in C[0,1]\)</span>{% endraw %}, define its modulus of continuity by</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     \omega_f (\delta) = \sup_{s,t \in [0,1]:|t-s|&lt;\delta} |f(t)-f(s)| ~.
 \end{aligned}\]</div>{% endraw %}
-<p> For Brownian motion, we seek matching upper and lower bounds for this modulus. The upper bound must control many increments simultaneously; the lower bound can use independence on disjoint intervals. Let {% raw %}<span class="math inline">\(\{B_t\}_{t \geq 0}\)</span>{% endraw %} denote a Brownian motion.</p>
+<p>We prove matching asymptotic bounds for Brownian increments. The upper bound uses a finite grid and a pathwise approximation of the endpoints; the lower bound uses independent increments on disjoint intervals.</p>
+
 
 <p>We first obtain an upper bound with an unspecified constant. For a dyadic interval {% raw %}<span class="math inline">\(I=[k2^{-n},(k+1)2^{-n}]\)</span>{% endraw %}, the exponential maximal inequality gives</p>
 
@@ -38,9 +41,10 @@ redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monot
 {% raw %}<div class="math display">\[\mathbb P\left(\max_{0\leq k&lt;N_n}(B_{(k+1)h_n}-B_{kh_n})\leq c\sqrt{nh_n}\right)
 =(1-p_n)^{N_n}\leq\exp\left[-c_2n^{-1/2}e^{(1-c^2/2)n}\right].\]</div>{% endraw %}
 
-<p>These probabilities are summable. Thus a qualifying increment exists for every sufficiently large {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, almost surely. This proves the required lower bound, including the simultaneous quantifier over arbitrarily small intervals.</p>
+<p>Borel–Cantelli implies that such an increment exists for every sufficiently large {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, almost surely. Dividing by {% raw %}<span class="math inline">\(\sqrt{2h_n\log(1/h_n)}=\sqrt{2nh_n}\)</span>{% endraw %} gives a limiting lower bound {% raw %}<span class="math inline">\(c/\sqrt2\)</span>{% endraw %} along this sequence. A countable choice of {% raw %}<span class="math inline">\(c\uparrow\sqrt2\)</span>{% endraw %} proves that the limsup over all {% raw %}<span class="math inline">\(h\downarrow0\)</span>{% endraw %} is at least one.</p>
 
-<p>For the sharp upper bound, a finer grid avoids losing a fixed constant when endpoints are approximated. Fix {% raw %}<span class="math inline">\(q&gt;1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(0&lt;\delta&lt;1/4\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(c&gt;\sqrt{1+2\delta}\)</span>{% endraw %}. Set {% raw %}<span class="math inline">\(h_n=q^{-n}\)</span>{% endraw %}, and use a grid of spacing {% raw %}<span class="math inline">\(\delta h_n\)</span>{% endraw %}, including the endpoint (1). There are at most {% raw %}<span class="math inline">\(C_\delta/h_n\)</span>{% endraw %} pairs of grid points whose separation is at most {% raw %}<span class="math inline">\((1+2\delta)h_n\)</span>{% endraw %}. A Gaussian tail bound and a union bound give</p>
+
+<p>For the sharp upper bound, a finer grid avoids losing a fixed constant when endpoints are approximated. Fix {% raw %}<span class="math inline">\(q&gt;1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(0&lt;\delta&lt;1/4\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(c&gt;\sqrt{1+2\delta}\)</span>{% endraw %}. Set {% raw %}<span class="math inline">\(h_n=q^{-n}\)</span>{% endraw %}, and use a grid of spacing {% raw %}<span class="math inline">\(\delta h_n\)</span>{% endraw %}, including the endpoint {% raw %}<span class="math inline">\(1\)</span>{% endraw %}. There are at most {% raw %}<span class="math inline">\(C_\delta/h_n\)</span>{% endraw %} pairs of grid points whose separation is at most {% raw %}<span class="math inline">\((1+2\delta)h_n\)</span>{% endraw %}. A Gaussian tail bound and a union bound give</p>
 
 {% raw %}<div class="math display">\[\mathbb P\left(\max_{\substack{u,v\text{ on the grid}\\|u-v|\leq(1+2\delta)h_n}}
 |B_u-B_v|&gt;c\sqrt{2h_n\log(1/h_n)}\right)
@@ -64,10 +68,17 @@ redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monot
 {% raw %}<div class="math display">\[\limsup_{t\to\infty}\frac{B_t}{\sqrt t}=+\infty,
 \qquad\liminf_{t\to\infty}\frac{B_t}{\sqrt t}=-\infty\quad\text{almost surely}.\]</div>{% endraw %}
 
-<p>Both statements follow immediately from the law of the iterated logarithm below, applied to {% raw %}<span class="math inline">\(B\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-B\)</span>{% endraw %}. In particular, the negative fluctuation concerns a limit inferior at positive times; Brownian motion here is indexed by {% raw %}<span class="math inline">\(t\geq0\)</span>{% endraw %}.</p>
+<p>Apply the LIL below to {% raw %}<span class="math inline">\(B\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-B\)</span>{% endraw %}, and use {% raw %}<span class="math inline">\(\sqrt{2\log\log t}\to\infty\)</span>{% endraw %}.</p>
+
 
 <h3 data-note-section="3" id="sec:LIL">3. Law of Iterated Logarithm</h3>
-<p>The law of the iterated logarithm identifies the largest fluctuations at infinity. It requires two different geometric grids: a ratio near one for the upper bound, and a large ratio for independent increments in the lower bound. This also explains the proof given <a href="{% post_url 2023-01-21-brownian-motion-markov-properties-and-path-continuity %}#eq:lil-prelim">earlier</a>. Write {% raw %}<span class="math inline">\(H(t)=\sqrt{2t\log\log t}\)</span>{% endraw %} for sufficiently large {% raw %}<span class="math inline">\(t\)</span>{% endraw %}.</p>
+<p><strong>Theorem (Law of the iterated logarithm).</strong> Almost surely,</p>
+
+{% raw %}<div class="math display">\[\limsup_{t\to\infty}\frac{B_t}{\sqrt{2t\log\log t}}=1,\qquad
+\liminf_{t\to\infty}\frac{B_t}{\sqrt{2t\log\log t}}=-1.\]</div>{% endraw %}
+
+<p>The expressions are considered for {% raw %}<span class="math inline">\(t&gt;e\)</span>{% endraw %}. The upper bound uses a geometric grid with ratio close to one; the lower bound uses independent increments on a grid with a sufficiently large ratio.</p>
+
 
 <p>For the upper bound at infinity, fix {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %} and choose {% raw %}<span class="math inline">\(q&gt;1\)</span>{% endraw %} close enough to one that {% raw %}<span class="math inline">\((1+\varepsilon)^2/q&gt;1\)</span>{% endraw %}. For all sufficiently large {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, the maximal estimate above gives</p>
 
@@ -107,7 +118,7 @@ redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monot
 \qquad\liminf_{t\to\infty}\frac{B_t}{\sqrt{2t\log\log t}}=-1\quad\text{almost surely}.\]</div>{% endraw %}
 
 <h3 data-note-section="4" id="ancillary-facts">4. Ancillary Facts</h3>
-<p>On a filtered probability space {% raw %}<span class="math inline">\((\Omega, \mathcal F, \{\mathcal F_t\}_{t \geq 0} \mathop{\mathrm{\mathbf{P}\!\,}})\)</span>{% endraw %}, a <em>stopping time</em> is a random variable {% raw %}<span class="math inline">\(T: \Omega \to [0,\infty]\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\{T \leq t\} \in \mathcal F_t\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(t \geq 0\)</span>{% endraw %}. The stopped {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-field is defined as </p>
+<p>On a filtered probability space {% raw %}<span class="math inline">\((\Omega, \mathcal F, \{\mathcal F_t\}_{t \geq 0} \mathbb P)\)</span>{% endraw %}, a <em>stopping time</em> is a random variable {% raw %}<span class="math inline">\(T: \Omega \to [0,\infty]\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\{T \leq t\} \in \mathcal F_t\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(t \geq 0\)</span>{% endraw %}. The stopped {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-field is defined as </p>
 
 {% raw %}<div class="math display">\[\begin{aligned}
     \mathcal F_T = \{A \in \mathcal F_\infty : A \cap \{T \leq t\} \in \mathcal F_t \,\,\,,\,\, \forall t \geq 0 \} ~.
@@ -127,7 +138,8 @@ redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monot
 {% raw %}<div class="math display">\[\sum_i|a(t_i^n)-a(t_{i-1}^n)|\geq\sum_{j=1}^m|a(u_j^n)-a(u_{j-1}^n)|
 \longrightarrow\sum_{j=1}^m|a(s_j)-a(s_{j-1})|&gt;V_T(a)-\varepsilon.\]</div>{% endraw %}
 
-<p>Continuity supplies the displayed limit. Letting {% raw %}<span class="math inline">\(\varepsilon\downarrow0\)</span>{% endraw %} proves the claim and avoids treating unrelated partitions as a filtration.</p>
+<p>Continuity gives the displayed limit. Since {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %} is arbitrary, the lower bound and the definition of {% raw %}<span class="math inline">\(V_T(a)\)</span>{% endraw %} prove (1).</p>
+
 
 <p>For processes, finite variation means finite variation on every compact time interval. Work with a filtration satisfying the usual conditions. A continuous adapted process {% raw %}<span class="math inline">\(M\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(M_0\in L^1\)</span>{% endraw %}, is a continuous local martingale if there are stopping times {% raw %}<span class="math inline">\(T_n\uparrow\infty\)</span>{% endraw %} almost surely such that every stopped process {% raw %}<span class="math inline">\(M^{T_n}\)</span>{% endraw %} is a uniformly integrable martingale. This convention allows a nonzero initial value. One can always include a deterministic cutoff in a localising sequence.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 
@@ -145,30 +157,34 @@ redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monot
 <p>If instead {% raw %}<span class="math inline">\(|M_t|\leq Z\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(t\)</span>{% endraw %}, outside one null set, with {% raw %}<span class="math inline">\(Z\in L^1\)</span>{% endraw %}, conditional dominated convergence preserves equality in this argument. The family {% raw %}<span class="math inline">\(\{M_t:t\geq0\}\)</span>{% endraw %} is dominated by {% raw %}<span class="math inline">\(Z\)</span>{% endraw %}, hence uniformly integrable. Thus {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is a uniformly integrable martingale.</p>
 
 <span id="prop:inf-time-reduces-M"></span>
-<p>Finally, {% raw %}<span class="math inline">\(\tau_n=\inf\{t\geq0:|M_t|\geq n\}\)</span>{% endraw %} is a stopping time by continuity and adaptation, and {% raw %}<span class="math inline">\(\tau_n\uparrow\infty\)</span>{% endraw %} since each path is bounded on compact intervals. The stopped process is a local martingale and {% raw %}<span class="math inline">\(|M_{t\wedge\tau_n}|\leq n+|M_0|\)</span>{% endraw %}. The preceding domination argument shows that these hitting times reduce {% raw %}<span class="math inline">\(M\)</span>{% endraw %}. This proof uses only localisation and conditional convergence, not a decomposition of an arbitrary semimartingale.</p>
+<p>For {% raw %}<span class="math inline">\(\tau_n=\inf\{t\geq0:|M_t|\geq n\}\)</span>{% endraw %}, continuity and adaptation give the stopping-time property, and boundedness of each path on compact intervals gives {% raw %}<span class="math inline">\(\tau_n\uparrow\infty\)</span>{% endraw %}. Also, {% raw %}<span class="math inline">\(|M_{t\wedge\tau_n}|\leq n+|M_0|\)</span>{% endraw %}. The preceding domination argument makes {% raw %}<span class="math inline">\(M^{\tau_n}\)</span>{% endraw %} a uniformly integrable martingale. Thus continuous local martingales admit localization by level-hitting times.</p>
+
 
 </div>
 <div id="result-2" class="example" data-note-number="2" data-note-kind="Example">
-<p><strong>Example 2</strong> (Supremum of “Centred” Brownian Motion).  Suppose {% raw %}<span class="math inline">\(\{B_t\}_{t \geq 0}\)</span>{% endraw %} is a Brownian motion starting from zero, and {% raw %}<span class="math inline">\(\mu &gt; 0\)</span>{% endraw %}. We can derive the distribution of the supremum of a “centred” Brownian motion </p>
+<p><strong>Example 2 (Brownian motion with negative drift).</strong> For {% raw %}<span class="math inline">\(\mu&gt;0\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(S=\sup_{t\geq0}(B_t-\mu t)\)</span>{% endraw %}. We prove that {% raw %}<span class="math inline">\(S\)</span>{% endraw %} has an exponential distribution with rate {% raw %}<span class="math inline">\(2\mu\)</span>{% endraw %}.</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
         \sup_{t \geq 0} B_t - \mu t ~.
     
 \end{aligned}\]</div>{% endraw %}
-<p> It is clear that </p>
+<p>Since the process starts at zero,</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
-        \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} B_t - \mu t \geq y \right) = 1 \quad \text{if } y \leq 0 ~.
+        \mathbb P\left( \sup_{t \geq 0} B_t - \mu t \geq y \right) = 1 \quad \text{if } y \leq 0 ~.
     
 \end{aligned}\]</div>{% endraw %}
 <p> For {% raw %}<span class="math inline">\(y &gt; 0\)</span>{% endraw %}, observe that </p>
 
 {% raw %}<div class="math display">\[\begin{gathered}
-        \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} B_t - \mu t \geq y \right) = \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} B_{(\frac{1}{2\mu})^2 t} - \mu \left(\frac{1}{2\mu} \right)^2 t \geq y \right) \\
-        = \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} 2\mu B_{(\frac{1}{2\mu})^2 t} - \frac{t}{2} \geq 2 \mu y \right) = \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} B_t - \frac{t}{2} \geq 2 \mu y \right) = \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} e^{B_t - \frac{t}{2}} \geq e^{2 \mu y} \right) ~.
+        \mathbb P\left( \sup_{t \geq 0} B_t - \mu t \geq y \right) = \mathbb P\left( \sup_{t \geq 0} B_{(\frac{1}{2\mu})^2 t} - \mu \left(\frac{1}{2\mu} \right)^2 t \geq y \right) \\
+        = \mathbb P\left( \sup_{t \geq 0} 2\mu B_{(\frac{1}{2\mu})^2 t} - \frac{t}{2} \geq 2 \mu y \right) = \mathbb P\left( \sup_{t \geq 0} B_t - \frac{t}{2} \geq 2 \mu y \right) = \mathbb P\left( \sup_{t \geq 0} e^{B_t - \frac{t}{2}} \geq e^{2 \mu y} \right) ~.
     
 \end{gathered}\]</div>{% endraw %}
-<p> This means that, setting {% raw %}<span class="math inline">\(M_t = e^{B_t - \frac{t}{2}}\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(t \geq 0\)</span>{% endraw %}, we have that {% raw %}<span class="math inline">\(\{M_t\}_{t \geq 0}\)</span>{% endraw %} is a nonnegative martingale with continuous sample paths. Since {% raw %}<span class="math inline">\(\frac{B_t}{t} \xrightarrow{\rm a.s.} 0\)</span>{% endraw %} as {% raw %}<span class="math inline">\(t \to \infty\)</span>{% endraw %}, we have </p>
+<p>Set {% raw %}<span class="math inline">\(M_t=\exp(B_t-t/2)\)</span>{% endraw %}. Independent Gaussian increments make {% raw %}<span class="math inline">\(M\)</span>{% endraw %} a nonnegative continuous martingale. The LIL gives {% raw %}<span class="math inline">\(B_t/t\to0\)</span>{% endraw %}, and hence</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
         \lim\limits_{t \to \infty} B_t - \frac{t}{2} = \lim\limits_{t \to \infty} t \left( \frac{B_t}{t} - \frac12 \right) = -\infty \quad \rm a.s. ~.
@@ -177,19 +193,21 @@ redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monot
 <p>For {% raw %}<span class="math inline">\(a=e^{2\mu y}&gt;1\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(\tau_a=\inf\{t:M_t=a\}\)</span>{% endraw %}. The stopped martingale {% raw %}<span class="math inline">\(M^{\tau_a}\)</span>{% endraw %} is bounded by {% raw %}<span class="math inline">\(a\)</span>{% endraw %}, so optional sampling and dominated convergence give {% raw %}<span class="math inline">\(1=\mathbb{E} M_{t\wedge\tau_a}\to a\mathbb P(\tau_a&lt;\infty)\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(\{\tau_a=\infty\}\)</span>{% endraw %}, the limit is zero, while on {% raw %}<span class="math inline">\(\{\tau_a&lt;\infty\}\)</span>{% endraw %} it is {% raw %}<span class="math inline">\(a\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(M_t\to0\)</span>{% endraw %}, a level {% raw %}<span class="math inline">\(a&gt;1\)</span>{% endraw %} is attained whenever the supremum is at least {% raw %}<span class="math inline">\(a\)</span>{% endraw %}. Therefore</p>
 
 {% raw %}<div class="math display">\[\begin{aligned}
-        \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} B_t - \mu t \geq y \right) = \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} M_t \geq e^{2\mu y} \right) = e^{-2\mu y} ~.
+        \mathbb P\left( \sup_{t \geq 0} B_t - \mu t \geq y \right) = \mathbb P\left( \sup_{t \geq 0} M_t \geq e^{2\mu y} \right) = e^{-2\mu y} ~.
     
 \end{aligned}\]</div>{% endraw %}
-<p> This means </p>
+<p>The distribution function is therefore</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
-        \mathop{\mathrm{\mathbf{P}\!\,}}\left( \sup_{t \geq 0} B_t - \mu t \leq y \right) = \begin{cases}
+        \mathbb P\left( \sup_{t \geq 0} B_t - \mu t \leq y \right) = \begin{cases}
             1 - e^{-2\mu y} &amp; \text{ for } y \geq 0 ~, \\
             0 &amp; \text{ otherwise} \, .
         \end{cases}
     
 \end{aligned}\]</div>{% endraw %}
-<p> So, {% raw %}<span class="math inline">\(\sup_{t \geq 0} B_t - \mu t\)</span>{% endraw %} is distributed according to the exponential distribution with parameter {% raw %}<span class="math inline">\(2\mu\)</span>{% endraw %}.</p>
+<p>Thus {% raw %}<span class="math inline">\(S\)</span>{% endraw %} is exponentially distributed with rate {% raw %}<span class="math inline">\(2\mu\)</span>{% endraw %}.</p>
+
 
 </div>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">

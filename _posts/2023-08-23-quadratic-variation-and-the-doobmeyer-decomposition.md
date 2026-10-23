@@ -3,7 +3,7 @@ layout: "post"
 title: "Quadratic Variation and the Doob–Meyer Decomposition"
 date: "2023-08-23"
 tags: ["probability theory", "stochastic processes"]
-excerpt: "Quadratic Variation and the Doob–Meyer Decomposition. Notes on stochastic processes."
+excerpt: "Construction of quadratic variation and the continuous Doob–Meyer decomposition, including class-D integrability."
 note_series: "Stochastic processes"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex"
 redirect_from: ["/2023/08/23/stochastic-integration-setup-and-quadratic-variation/", "/2023/09/28/prequel-doob-meyer-decomposition/"]
@@ -11,14 +11,17 @@ redirect_from: ["/2023/08/23/stochastic-integration-setup-and-quadratic-variatio
 
 <div class="note-content" markdown="0">
 
-<p>For a smooth path, sums of squared increments disappear as the partition is refined. Brownian motion has a nonzero quadratic variation, and this changes the rules of integration. We first describe quadratic variation as the increasing process that must be subtracted from the square of a martingale. The Doob–Meyer decomposition then places this construction in a more general setting: it separates a supermartingale into a martingale part and accumulated decrease.</p>
+<p>For a continuous local martingale {% raw %}<span class="math inline">\(X\)</span>{% endraw %} starting at zero, quadratic variation is the unique continuous increasing process {% raw %}<span class="math inline">\(\langle X\rangle\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(\langle X\rangle_0=0\)</span>{% endraw %}, such that {% raw %}<span class="math inline">\(X^2-\langle X\rangle\)</span>{% endraw %} is a local martingale. We establish the stopping identities needed for this characterization and prove the continuous Doob–Meyer decomposition.</p>
 
-<p>Work on a filtered probability space satisfying the usual conditions. {% raw %}<span class="math inline">\(B\)</span>{% endraw %} denotes Brownian motion, and stochastic integrands are predictable with the stated integrability. A local martingale need not be a true martingale: the moment conditions in each claim are essential. See <a href="{% post_url 2023-01-21-brownian-motion-markov-properties-and-path-continuity %}">Brownian motion</a> and <a href="{% post_url 2023-01-07-martingales-maximal-and-upcrossing-inequalities %}">martingale inequalities</a>.</p>
+
+<p>The filtered probability space satisfies the usual conditions: the filtration is right-continuous, and {% raw %}<span class="math inline">\(\mathcal F_0\)</span>{% endraw %} contains all subsets of {% raw %}<span class="math inline">\(\mathbb P\)</span>{% endraw %}-null sets in {% raw %}<span class="math inline">\(\mathcal F\)</span>{% endraw %}. Processes are real-valued unless stated otherwise.</p>
+
 
 <div id="stochastic-integration" data-note-section="title">
 
 </div>
-<p>A filtration specifies the information available to a stochastic process at each time {% raw %}<span class="math inline">\(t\)</span>{% endraw %}. We say {% raw %}<span class="math inline">\(\{\mathcal F_t\}_{t \geq 0}\)</span>{% endraw %} on a probability space {% raw %}<span class="math inline">\((\Omega, \mathcal F, \mathop{\mathrm{\mathbf{P}\!\,}})\)</span>{% endraw %} is called a <em>filtration</em> if it is a collection of sub-{% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-algebras of {% raw %}<span class="math inline">\(\mathcal F\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\mathcal F_s \subset \mathcal F_t\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(s \leq t\)</span>{% endraw %}. The space {% raw %}<span class="math inline">\((\Omega,\mathcal F,\{\mathcal F_t\}_{t \geq 0},\mathop{\mathrm{\mathbf{P}\!\,}})\)</span>{% endraw %} is called a <em>filtered probability space</em>. Given a filtration, the left- and right-limits at any time can be defined as </p>
+<p>A filtration {% raw %}<span class="math inline">\((\mathcal F_t)_{t\geq0}\)</span>{% endraw %} is an increasing family of sub-{% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-fields of {% raw %}<span class="math inline">\(\mathcal F\)</span>{% endraw %}. Its left, right, and terminal {% raw %}<span class="math inline">\(\sigma\)</span>{% endraw %}-fields are</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     \mathcal F_{t+} \triangleq \bigcap_{s&gt;t} \mathcal F_s ~~,~~ \mathcal F_{t-} \triangleq \sigma\left(\bigcup_{s&lt;t} \mathcal F_s\right) ~~,~~ \mathcal F_{\infty} \triangleq \sigma\left(\bigcup_{t \in \mathbb R_+} \mathcal F_t\right) ~.
@@ -39,7 +42,8 @@ redirect_from: ["/2023/08/23/stochastic-integration-setup-and-quadratic-variatio
 {% raw %}<div class="math display">\[\begin{aligned}
     \mathbb{E}\sup_{0 \leq t \leq N} X_t^2 \leq 4 \mathbb{E}X_N^2 ~.
 \end{aligned}\]</div>{% endraw %}
-<p> Writing {% raw %}<span class="math inline">\(Y = \sup_{t \geq 0} X_t^2\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y_N = \sup_{0 \leq t \leq N} X_t^2\)</span>{% endraw %}, which are clearly nonnegative, we have </p>
+<p>Set {% raw %}<span class="math inline">\(Y_N=\sup_{0\leq t\leq N}|X_t|^2\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y=\sup_{t\geq0}|X_t|^2\)</span>{% endraw %}. These variables are measurable because continuity reduces each supremum to a countable dense set. Since {% raw %}<span class="math inline">\(Y_N\uparrow Y\)</span>{% endraw %},</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     \mathbb{E}Y = \mathbb{E}\liminf_{N \to \infty} Y_N \leq \liminf_{N \to \infty} \mathbb{E}Y_N \leq \liminf_{N \to \infty} 4 \mathbb{E}X_N^2 &lt; \infty ~.
@@ -50,7 +54,8 @@ redirect_from: ["/2023/08/23/stochastic-integration-setup-and-quadratic-variatio
 
 <p>For an {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}-bounded continuous martingale, the identity {% raw %}<span class="math inline">\(\mathbb E X_\tau=\mathbb E X_0\)</span>{% endraw %} holds at every finite stopping time {% raw %}<span class="math inline">\(\tau\)</span>{% endraw %}. Here are the approximation details. For a stopping time taking finitely many grid values, write the stopped variable as {% raw %}<span class="math inline">\(X_0\)</span>{% endraw %} plus the sum of increments multiplied by the events that stopping has not yet occurred; each multiplier is measurable before its increment, whose conditional expectation is zero. For a general finite {% raw %}<span class="math inline">\(\tau\)</span>{% endraw %}, round {% raw %}<span class="math inline">\(\tau\wedge n\)</span>{% endraw %} upwards to the grid of mesh {% raw %}<span class="math inline">\(2^{-n}\)</span>{% endraw %}. The resulting finite-valued stopping times converge almost surely to {% raw %}<span class="math inline">\(\tau\)</span>{% endraw %}. Continuity gives convergence of the sampled values, and domination by {% raw %}<span class="math inline">\(\sup_{t\geq0}|X_t|\in L^2\)</span>{% endraw %} gives convergence in {% raw %}<span class="math inline">\(L^1\)</span>{% endraw %}. This proves the expectation identity used next.</p>
 
-<p>Clearly, if {% raw %}<span class="math inline">\(X = \{X_t\}_{t \geq 0}\)</span>{% endraw %} is an L²-bounded martingale, and {% raw %}<span class="math inline">\(S \leq T\)</span>{% endraw %} are finite stopping times, then {% raw %}<span class="math inline">\(\mathbb{E}[X_T \mid \mathcal F_S]=X_S\)</span>{% endraw %}. To see this, we simply need to truncate the process {% raw %}<span class="math inline">\(X\)</span>{% endraw %} at the stopping times in an appropriate way. Define, for any {% raw %}<span class="math inline">\(A \in \mathcal F_S\)</span>{% endraw %}, </p>
+<p>Now let {% raw %}<span class="math inline">\(S\leq T\)</span>{% endraw %} be finite stopping times. To prove {% raw %}<span class="math inline">\(\mathbb E[X_T\mid\mathcal F_S]=X_S\)</span>{% endraw %}, fix {% raw %}<span class="math inline">\(A\in\mathcal F_S\)</span>{% endraw %} and define</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     U(\omega) = S(\omega) \mathbb 1_A (\omega) + T(\omega) \mathbb 1_{A^c} (\omega) ~.
@@ -65,10 +70,12 @@ redirect_from: ["/2023/08/23/stochastic-integration-setup-and-quadratic-variatio
 {% raw %}<div class="math display">\[\begin{aligned}
     \mathbb{E}X_0 = \mathbb{E}X_U = \mathbb{E}[X_S ; A] + \mathbb{E}[X_T ; A^c] ~~,~~ \mathbb{E}X_0 = \mathbb{E}X_T = \mathbb{E}[X_T ; A] + \mathbb{E}[X_T ; A^c] ~.
 \end{aligned}\]</div>{% endraw %}
-<p> This clearly implies {% raw %}<span class="math inline">\(\mathbb{E}[X_S ; A] = \mathbb{E}[X_T ; A]\)</span>{% endraw %}, as desired. {% raw %}<span class="math inline">\(\blacksquare\)</span>{% endraw %}</p>
+<p>Subtracting the two identities gives {% raw %}<span class="math inline">\(\mathbb E[X_S\mathbf1_A]=\mathbb E[X_T\mathbf1_A]\)</span>{% endraw %}, which characterizes the conditional expectation. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+
 
 <div id="result-1" class="remark" data-note-number="1" data-note-kind="Remark">
-<p><strong>Remark 1</strong>.  We can immediately obtain the following results from the discussion above:</p>
+<p><strong>Remark 1.</strong> Optional sampling also gives the following stopping properties:</p>
+
 
 <ol>
 <li><p>Suppose {% raw %}<span class="math inline">\(X\)</span>{% endraw %} is an L²-bounded martingale and {% raw %}<span class="math inline">\(T\)</span>{% endraw %} is a stopping time. Then, {% raw %}<span class="math inline">\(X_{t \wedge T}\)</span>{% endraw %} is a martingale with respect to the filtration {% raw %}<span class="math inline">\(\{F_{t \wedge T}\}\)</span>{% endraw %}.</p></li>
@@ -77,7 +84,8 @@ redirect_from: ["/2023/08/23/stochastic-integration-setup-and-quadratic-variatio
 <p>Optional sampling lets us use the martingale identity at random times. The next calculation records the corresponding second-moment identity, which will later control stopped increments.</p>
 
 </div>
-<p>Relatedly, note that a direct calculation </p>
+<p>Under the same {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} assumptions, expand the stopped increment and condition on {% raw %}<span class="math inline">\(\mathcal F_S\)</span>{% endraw %}:</p>
+
 
 {% raw %}<div class="math display">\[\begin{aligned}
     \mathbb{E}[(X_T - X_S)^2 \mid \mathcal F_S] &amp;= \mathbb{E}[X_T^2 \mid \mathcal F_S] + X_S^2 - 2 X_S E[X_T \mid \mathcal F_S] \\
@@ -93,7 +101,8 @@ redirect_from: ["/2023/08/23/stochastic-integration-setup-and-quadratic-variatio
 <span id="thm:quadratic-variation"></span>
 <p>A continuous local martingale {% raw %}<span class="math inline">\(X\)</span>{% endraw %} starting at zero has a unique continuous adapted increasing process {% raw %}<span class="math inline">\(\langle X\rangle\)</span>{% endraw %}, starting at zero, such that {% raw %}<span class="math inline">\(X^2-\langle X\rangle\)</span>{% endraw %} is a local martingale. If {% raw %}<span class="math inline">\(X\)</span>{% endraw %} is {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}-bounded, the compensated square is a true martingale. For Brownian motion, {% raw %}<span class="math inline">\(\langle B\rangle_t=t\)</span>{% endraw %}. Brownian motion is square-integrable at every finite time; it is not {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}-bounded over the entire half-line. Stopping at a deterministic horizon supplies the global bound used in the initial integral construction.</p>
 
-<p>Here is the construction behind this assertion. For a bounded zero-start martingale and a partition {% raw %}<span class="math inline">\(\pi\)</span>{% endraw %} of {% raw %}<span class="math inline">\([0,T]\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(Y_t^\pi=\sum_{[u,v]\in\pi}X_u(X_{t\wedge v}-X_{t\wedge u})\)</span>{% endraw %}. On a common refinement, differences of two such sums are predictable martingale transforms. Orthogonality and Cauchy–Schwarz give</p>
+<p>For a bounded zero-start martingale, define the left-endpoint sums {% raw %}<span class="math inline">\(Y_t^\pi=\sum_{[u,v]\in\pi}X_u(X_{t\wedge v}-X_{t\wedge u})\)</span>{% endraw %}. The construction of quadratic variation begins by showing that these sums are Cauchy in the expected squared uniform norm. On a common refinement {% raw %}<span class="math inline">\(\rho\)</span>{% endraw %}, orthogonality and Cauchy–Schwarz give</p>
+
 
 {% raw %}<div class="math display">\[\mathbb{E}|Y_T^\pi-Y_T^\sigma|^2\leq
 \left(\mathbb{E}\max_j|D_j|^4\right)^{1/2}\left(\mathbb{E} Q_\rho^2\right)^{1/2},\qquad
@@ -110,18 +119,26 @@ Q_\rho=\sum_j(\Delta X_j)^2,\]</div>{% endraw %}
 
 </div>
 <div id="result-4" class="remark" data-note-number="4" data-note-kind="Remark">
-<p><strong>Remark 4.</strong> For continuous semimartingales, squared-increment sums along stopping-time partitions with mesh tending to zero in probability converge uniformly on compact intervals in probability to quadratic variation. To see the martingale part, write the error as {% raw %}<span class="math inline">\(2\int_0^t(M_s-M_{\pi(s)})\,dM_s\)</span>{% endraw %}, using the product formula. Stop so that {% raw %}<span class="math inline">\(M\)</span>{% endraw %} and its bracket are bounded. Continuity and the mesh assumption make the supremum of the integrand tend to zero in probability; boundedness gives convergence of its second moment, and the isometry and Doob’s inequality give uniform convergence of the error. Finite-variation terms vanish by the maximum-increment times variation bound. Polarisation treats two processes. This statement concerns continuous semimartingales; no regularity-free claim about arbitrary submartingales, or stronger semimartingale-topology convergence, is needed here.</p>
+<p><strong>Remark 4 (partitions by stopping times).</strong> Let {% raw %}<span class="math inline">\(0=\tau_0^n\leq\tau_1^n\leq\cdots\)</span>{% endraw %} be locally finite partitions by stopping times, exhausting the time axis, whose maximal interval length on each compact interval tends to zero in probability. For a continuous semimartingale, the squared-increment sums, with the last increment cut at the observation time, converge uniformly on compact intervals in probability to quadratic variation. For the local-martingale part, the error is {% raw %}<span class="math inline">\(2\int_0^t(M_s-M_{\pi_n(s)})\,dM_s\)</span>{% endraw %}, by the product rule, where {% raw %}<span class="math inline">\(\pi_n(s)\)</span>{% endraw %} is the left endpoint of the partition interval containing {% raw %}<span class="math inline">\(s\)</span>{% endraw %}. Stop so that {% raw %}<span class="math inline">\(M\)</span>{% endraw %} and its bracket are bounded. Continuity and the mesh assumption make {% raw %}<span class="math inline">\(\sup_{s\leq T}|M_s-M_{\pi_n(s)}|\to0\)</span>{% endraw %} in probability. Boundedness then gives convergence of its second moment; the isometry and Doob’s inequality give uniform convergence of the integral error in probability. Finite-variation and mixed terms vanish by the maximum-increment times variation bound. Polarisation proves the covariation assertion.</p>
+
 
 </div>
 <div id="result-5" class="remark" data-note-number="5" data-note-kind="Remark">
-<p><strong>Remark 5</strong>.  It is not hard to see that if {% raw %}<span class="math inline">\(X\)</span>{% endraw %} is a cadlag martingale, then, for each {% raw %}<span class="math inline">\(t \geq 0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\{X_\tau : \tau \leq t \text{ is a stopping time}\}\)</span>{% endraw %} is uniformly integrable. To see this, note the following general result: if {% raw %}<span class="math inline">\(X \in L^1(\mathop{\mathrm{\mathbf{P}\!\,}})\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(G \triangleq \{Y: Y = \mathbb{E}[X\mid\mathcal{G}] ~,~ \mathcal{G} \subset \mathcal{F} \}\)</span>{% endraw %} is uniformly integrable. Furthermore, optional sampling implies for any cadlag martingale {% raw %}<span class="math inline">\(X\)</span>{% endraw %}, {% raw %}<span class="math inline">\(X_\tau = \mathbb{E}[X_t \mid \mathcal F_\tau]\)</span>{% endraw %} for stopping times {% raw %}<span class="math inline">\(\tau \leq t\)</span>{% endraw %}. Combining both gives the desired statement.</p>
+<p><strong>Remark 5 (Uniform integrability on a finite horizon).</strong> If {% raw %}<span class="math inline">\(X\)</span>{% endraw %} is a càdlàg martingale and {% raw %}<span class="math inline">\(t&lt;\infty\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(X_\tau=\mathbb E[X_t\mid\mathcal F_\tau]\)</span>{% endraw %} for every stopping time {% raw %}<span class="math inline">\(\tau\leq t\)</span>{% endraw %}. Conditional expectations of a fixed integrable variable are uniformly integrable, so {% raw %}<span class="math inline">\(\{X_\tau:\tau\leq t\}\)</span>{% endraw %} is uniformly integrable. This is a statement about martingales; a local martingale need not have this property.</p>
+
 
 </div>
-<p>A process {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} is of class D when the family {% raw %}<span class="math inline">\(\{Z_T:T&lt;\infty\text{ a stopping time}\}\)</span>{% endraw %} is uniformly integrable. The continuous Doob–Meyer theorem states that a continuous adapted supermartingale of class D has a unique decomposition</p>
+<p>A process {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} is of class D if {% raw %}<span class="math inline">\(\{Z_T:T&lt;\infty\text{ a stopping time}\}\)</span>{% endraw %} is uniformly integrable.</p>
+
+<p><strong>Theorem (Continuous Doob–Meyer decomposition).</strong> Let {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} be a continuous adapted supermartingale of class D. There is a unique decomposition</p>
 
 {% raw %}<div class="math display">\[Z=M-A,\qquad A_0=0,\]</div>{% endraw %}
 
-<p>where {% raw %}<span class="math inline">\(A\)</span>{% endraw %} is continuous, adapted and increasing, and {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is a continuous local martingale. The same assertion holds locally for continuous supermartingales. We give the continuous approximation argument. The theorem and this approach are discussed in <a href="https://www.cambridge.org/core/books/stochastic-processes/055A84B1EB586FE3032C0CA7D49598AC">Bass (2011, Theorem 9.12)</a>; the estimates below use nonoptimal constants and keep the terminal value in the averaging identity.</p>
+<p>where {% raw %}<span class="math inline">\(A\)</span>{% endraw %} is continuous, adapted, increasing, and satisfies {% raw %}<span class="math inline">\(\mathbb E A_\infty&lt;\infty\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is a continuous uniformly integrable martingale. Without the global class-D assumption, the construction gives a local decomposition.</p>
+
+
+<p><em>Proof.</em> We first construct the decomposition for a bounded process that is constant after a deterministic time. A comparison estimate makes the approximating compensators Cauchy. Localization then gives the general decomposition, and class D yields the global integrability assertions. The continuous approximation method is described in Bass (2011, Theorem 9.12).</p>
+
 
 <p>We first prove a comparison estimate. Suppose {% raw %}<span class="math inline">\(A^1,A^2\)</span>{% endraw %} are continuous adapted increasing processes, start at zero, and satisfy {% raw %}<span class="math inline">\(\mathbb{E}[A^j_\infty-A^j_t\mid\mathcal F_t]\leq K\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(t\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(C=A^1+A^2\)</span>{% endraw %}, {% raw %}<span class="math inline">\(B=A^1-A^2\)</span>{% endraw %}, and suppose {% raw %}<span class="math inline">\(V\geq0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(V\in L^2\)</span>{% endraw %}, with</p>
 
@@ -132,7 +149,7 @@ Q_\rho=\sum_j(\Delta X_j)^2,\]</div>{% endraw %}
 {% raw %}<div class="math display">\[\mathbb{E}(A^j_\infty-x)_+\leq K\mathbb P(A^j_\infty&gt;x),\qquad
 \frac12\mathbb{E}(A^j_\infty)^2\leq K\mathbb{E}A^j_\infty\leq K^2.\]</div>{% endraw %}
 
-<p>In particular {% raw %}<span class="math inline">\(\|C_\infty\|_2\leq2\sqrt2K\)</span>{% endraw %}. The pathwise integration identity {% raw %}<span class="math inline">\(B_\infty^2=2\int_0^\infty(B_\infty-B_t)\,dB_t\)</span>{% endraw %} can be approximated by sums using right endpoints. Their increments are measurable at those endpoints, so conditioning there, rather than at the start of a future increment, yields</p>
+<p>In particular {% raw %}<span class="math inline">\(\|C_\infty\|_2\leq2\sqrt2K\)</span>{% endraw %}. The pathwise integration identity {% raw %}<span class="math inline">\(B_\infty^2=2\int_0^\infty(B_\infty-B_t)\,dB_t\)</span>{% endraw %} can be approximated by sums using right endpoints. Their increments are measurable at those endpoints, so conditioning at the right endpoint yields</p>
 
 {% raw %}<div class="math display">\[\mathbb{E}B_\infty^2\leq2\mathbb{E}[V C_\infty]\leq4\sqrt2K\|V\|_2.\]</div>{% endraw %}
 
@@ -151,7 +168,8 @@ Q_\rho=\sum_j(\Delta X_j)^2,\]</div>{% endraw %}
 {% raw %}<div class="math display">\[\mathbb{E}[A_\infty^h-A_t^h\mid\mathcal F_t]
 =\mathbb{E}\left[\frac1h\int_t^{t+h}Z_s\,ds-Z_N\,\middle|\,\mathcal F_t\right].\]</div>{% endraw %}
 
-<p>The term {% raw %}<span class="math inline">\(Z_N\)</span>{% endraw %} is essential. The conditional tail is bounded by {% raw %}<span class="math inline">\(2N\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(0&lt;k&lt;h\)</span>{% endraw %}, the difference of two such tails is bounded in absolute value by {% raw %}<span class="math inline">\(\mathbb{E}[V_h\mid\mathcal F_t]\)</span>{% endraw %}. The comparison estimate proves</p>
+<p>Since {% raw %}<span class="math inline">\(|Z|\leq N\)</span>{% endraw %}, the conditional tail is bounded by {% raw %}<span class="math inline">\(2N\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(0&lt;k&lt;h\)</span>{% endraw %}, the difference of the two conditional tails is bounded in absolute value by {% raw %}<span class="math inline">\(\mathbb E[V_h\mid\mathcal F_t]\)</span>{% endraw %}. The comparison estimate therefore gives</p>
+
 
 {% raw %}<div class="math display">\[\mathbb{E}\sup_{t\geq0}|A_t^h-A_t^k|^2\longrightarrow0\qquad(h,k\downarrow0).\]</div>{% endraw %}
 
@@ -162,7 +180,8 @@ Q_\rho=\sum_j(\Delta X_j)^2,\]</div>{% endraw %}
 
 <p>Hence {% raw %}<span class="math inline">\(M=Z+A\)</span>{% endraw %} is a true martingale in the bounded case.</p>
 
-<p>Here are the promised measurability details. Put {% raw %}<span class="math inline">\(Y_t=Z_{t+h}\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(Y_t^n=Y_{k2^{-n}}\)</span>{% endraw %} on {% raw %}<span class="math inline">\([k2^{-n},(k+1)2^{-n})\)</span>{% endraw %}. On each interval take a right-continuous version of the bounded martingale {% raw %}<span class="math inline">\(\mathbb{E}[Y_{k2^{-n}}\mid\mathcal F_t]\)</span>{% endraw %}, and join these versions to obtain {% raw %}<span class="math inline">\(Q^n\)</span>{% endraw %}. It is right-continuous, adapted and jointly measurable. For {% raw %}<span class="math inline">\(n&gt;m\)</span>{% endraw %}, conditional domination, first at rational times and then by right-continuity, gives</p>
+<p>To construct the jointly measurable version, set {% raw %}<span class="math inline">\(Y_t=Z_{t+h}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y_t^n=Y_{j2^{-n}}\)</span>{% endraw %} on {% raw %}<span class="math inline">\([j2^{-n},(j+1)2^{-n})\)</span>{% endraw %}. On each such interval choose a right-continuous version of the bounded martingale {% raw %}<span class="math inline">\(\mathbb E[Y_{j2^{-n}}\mid\mathcal F_t]\)</span>{% endraw %}, and join these versions to obtain {% raw %}<span class="math inline">\(Q^n\)</span>{% endraw %}. This process is right-continuous, adapted, and jointly measurable. Conditional domination at rational times, followed by right-continuity, gives, for {% raw %}<span class="math inline">\(n&gt;m\)</span>{% endraw %},</p>
+
 
 <span id="eq:sup-comparisons"></span>
 {% raw %}<div class="math display">\[\sup_t|Q_t^n-Q_t^m|\leq\sup_t\mathbb{E}[V_{2^{-m}}\mid\mathcal F_t].\tag{1}\]</div>{% endraw %}
@@ -170,6 +189,14 @@ Q_\rho=\sum_j(\Delta X_j)^2,\]</div>{% endraw %}
 <p>Doob’s inequality makes the right side tend to zero in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}. A subsequence therefore converges uniformly almost surely to a right-continuous adapted process {% raw %}<span class="math inline">\(Q^h\)</span>{% endraw %}. For each fixed {% raw %}<span class="math inline">\(t\)</span>{% endraw %}, the {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} contraction of conditional expectation identifies its limit as {% raw %}<span class="math inline">\(\mathbb{E}[Y_t\mid\mathcal F_t]\)</span>{% endraw %}. This supplies the required version. It need not be continuous: the time integral defining {% raw %}<span class="math inline">\(A^h\)</span>{% endraw %} is continuous regardless.</p>
 
 <p>For general {% raw %}<span class="math inline">\(Z\)</span>{% endraw %}, first restrict to the {% raw %}<span class="math inline">\(\mathcal F_0\)</span>{% endraw %}-measurable events {% raw %}<span class="math inline">\(E_m=\{|Z_0|\leq m\}\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(E_m\)</span>{% endraw %}, stop at {% raw %}<span class="math inline">\(\tau_{m,n}=\inf\{t\geq0:|Z_t|\geq n\}\wedge n\)</span>{% endraw %}, for {% raw %}<span class="math inline">\(n&gt;m\)</span>{% endraw %}. The process {% raw %}<span class="math inline">\(\mathbb1_{E_m}Z^{\tau_{m,n}}\)</span>{% endraw %} is a bounded continuous supermartingale, so it has the decomposition just constructed. Optional sampling is valid for the class-D process; for a merely local assertion one works with bounded finite-horizon stops. Two decompositions agree wherever their stopped original processes agree: their difference is a zero-start continuous finite-variation local martingale and vanishes by Remark 2. Thus the decompositions on {% raw %}<span class="math inline">\(E_m\)</span>{% endraw %} agree as {% raw %}<span class="math inline">\(m,n\)</span>{% endraw %} increase. Patching defines continuous {% raw %}<span class="math inline">\(A,M\)</span>{% endraw %} globally, with {% raw %}<span class="math inline">\(A_0=0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(M\)</span>{% endraw %} a local martingale. For example, on {% raw %}<span class="math inline">\(E_n^c\)</span>{% endraw %} use localising time zero, and on {% raw %}<span class="math inline">\(E_n\)</span>{% endraw %} use the level {% raw %}<span class="math inline">\(n+1\)</span>{% endraw %} stop with time cutoff {% raw %}<span class="math inline">\(n\)</span>{% endraw %}; the unmodified initial value on the complement is integrable. These times increase to infinity and give integrable stopped martingales. The same finite-variation argument proves uniqueness. ◻</p>
+
+<p>It remains to prove the global assertions under class D. Let {% raw %}<span class="math inline">\(\tau_n\uparrow\infty\)</span>{% endraw %} be a localizing sequence for the continuous local martingale {% raw %}<span class="math inline">\(M=Z+A\)</span>{% endraw %}, chosen with deterministic cutoffs. Put {% raw %}<span class="math inline">\(K=\sup_{T&lt;\infty}\mathbb E|Z_T|&lt;\infty\)</span>{% endraw %}. For every {% raw %}<span class="math inline">\(t&lt;\infty\)</span>{% endraw %},</p>
+
+{% raw %}<div class="math display">\[\mathbb E A_{t\wedge\tau_n}
+=\mathbb E M_0-\mathbb E Z_{t\wedge\tau_n}
+\leq\mathbb E|Z_0|+K.\]</div>{% endraw %}
+
+<p>Monotone convergence, first in {% raw %}<span class="math inline">\(n\)</span>{% endraw %} and then in {% raw %}<span class="math inline">\(t\)</span>{% endraw %}, gives {% raw %}<span class="math inline">\(\mathbb E A_\infty\leq\mathbb E|Z_0|+K\)</span>{% endraw %}. The family {% raw %}<span class="math inline">\(\{A_T:T&lt;\infty\}\)</span>{% endraw %} is dominated by {% raw %}<span class="math inline">\(A_\infty\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\{Z_T:T&lt;\infty\}\)</span>{% endraw %} is uniformly integrable by hypothesis. Their sums {% raw %}<span class="math inline">\(\{M_T:T&lt;\infty\}\)</span>{% endraw %} are therefore uniformly integrable. Passing to the limit in the stopped conditional-martingale identities shows that {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is a martingale. Its deterministic-time family is uniformly integrable, which proves the theorem's remaining assertion. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-bass_probabilistic_1995" class="csl-entry" role="listitem">

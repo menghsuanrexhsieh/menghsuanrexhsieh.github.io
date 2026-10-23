@@ -3,16 +3,18 @@ layout: "post"
 title: "Further Results on Stochastic Integrals"
 date: "2024-06-04"
 tags: ["probability theory", "stochastic processes"]
-excerpt: "Further Results on Stochastic Integrals. Notes on stochastic processes."
+excerpt: "Exit probabilities, Laplace transforms, drawdowns, and Brownian local time derived from stopped martingale identities."
 note_series: "Stochastic processes"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Some Stochastic Processes/stats.tex"
 ---
 
 <div class="note-content" markdown="0">
 
-<p>Itō’s formula becomes especially useful when we choose a function to cancel a drift term. This converts a question about a diffusion into a martingale identity, often with an ordinary differential equation determining the function. The examples below use this idea for exit probabilities and exponential functionals, then study running maxima and the local-time term that appears when the function is an absolute value.</p>
+<p>This article derives exit probabilities and Laplace transforms from stopped martingale identities. It also proves the distribution of the maximum at a fixed drawdown and constructs Brownian local time through Tanaka’s formula. Each expectation identity follows after a boundedness or integrability argument that permits removal of the stopping.</p>
 
-<p>Work on a filtered probability space satisfying the usual conditions. {% raw %}<span class="math inline">\(B\)</span>{% endraw %} denotes Brownian motion, and stochastic integrands are predictable with the stated integrability. A local martingale need not be a true martingale: the moment conditions in each claim are essential. See <a href="{% post_url 2023-01-21-brownian-motion-markov-properties-and-path-continuity %}">Brownian motion</a> and <a href="{% post_url 2023-01-07-martingales-maximal-and-upcrossing-inequalities %}">martingale inequalities</a>.</p>
+
+<p>Work on a filtered probability space satisfying the usual conditions, and let {% raw %}<span class="math inline">\(B\)</span>{% endraw %} be a standard Brownian motion with {% raw %}<span class="math inline">\(B_0=0\)</span>{% endraw %}. All local martingales and semimartingales below are continuous. We use <a href="{% post_url 2023-12-08-itos-formula-applications-and-stratonovich-integration %}#change-of-variables">Itō’s formula</a>, <a href="{% post_url 2023-12-08-itos-formula-applications-and-stratonovich-integration %}#brownian-time-change">the Brownian time change</a>, and <a href="{% post_url 2023-01-07-martingales-maximal-and-upcrossing-inequalities %}#doob-lp-maximal-inequality">Doob’s maximal inequality</a>.</p>
+
 
 <div id="further-discussions" data-note-section="title"></div>
 <h3>Scale functions and exit probabilities</h3>
@@ -41,14 +43,16 @@ F(x)=\int_0^x\exp\left(-2\int_0^y b(z)\,dz\right)dy.\]</div>{% endraw %}
 <span id="eq:xt-exp-generalized"></span>
 {% raw %}<div class="math display">\[X_t=f(B_t)\exp\left(-\int_0^t g(B_s)\,ds\right).\tag{1}\]</div>{% endraw %}
 
-<p>The time integral has finite variation on compact intervals because {% raw %}<span class="math inline">\(g(B_s)\)</span>{% endraw %} is continuous. If desired, its variation decomposition uses {% raw %}<span class="math inline">\(g^+=\max(g,0)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(g^-=\max(-g,0)\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(g=g^+-g^-\)</span>{% endraw %}. Applying the product rule yields</p>
+<p>Since {% raw %}<span class="math inline">\(g(B_s)\)</span>{% endraw %} is continuous, its time integral has finite variation on each compact interval. The product rule and Itō’s formula give</p>
+
 
 {% raw %}<div class="math display">\[dX_t=e^{-\int_0^tg(B_s)ds}f'(B_t)\,dB_t+
  e^{-\int_0^tg(B_s)ds}\left(\frac12 f''(B_t)-g(B_t)f(B_t)\right)dt.\]</div>{% endraw %}
 
 <p>Consequently {% raw %}<span class="math inline">\(X\)</span>{% endraw %} is a local martingale if {% raw %}<span class="math inline">\(f''=2gf\)</span>{% endraw %}. The converse also holds for Brownian motion on the whole line. Uniqueness of the continuous local-martingale/finite-variation decomposition forces the displayed drift integral to vanish at every time. Its continuous integrand is therefore zero at every time outside one null set. At any fixed positive time, Brownian motion has a strictly positive density on the line, so continuity implies {% raw %}<span class="math inline">\(f''/2-gf=0\)</span>{% endraw %} everywhere.</p>
 
-<p>For a useful expectation formula, assume now that {% raw %}<span class="math inline">\(g\geq0\)</span>{% endraw %} and that its support is contained in {% raw %}<span class="math inline">\([a,b]\subset(0,\infty)\)</span>{% endraw %}. Specify the normalisation {% raw %}<span class="math inline">\(f(x)=1\)</span>{% endraw %} for {% raw %}<span class="math inline">\(x\leq a\)</span>{% endraw %}. The ordinary differential equation with {% raw %}<span class="math inline">\(f(a)=1,f'(a)=0\)</span>{% endraw %} has a unique solution; equivalently, on {% raw %}<span class="math inline">\([a,b]\)</span>{% endraw %},</p>
+<p>Assume in addition that {% raw %}<span class="math inline">\(g\geq0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\operatorname{supp}(g)\subset[a,b]\subset(0,\infty)\)</span>{% endraw %}. Set {% raw %}<span class="math inline">\(f(x)=1\)</span>{% endraw %} for {% raw %}<span class="math inline">\(x\leq a\)</span>{% endraw %}. The equation {% raw %}<span class="math inline">\(f''=2gf\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(f(a)=1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(f'(a)=0\)</span>{% endraw %}, is equivalent on {% raw %}<span class="math inline">\([a,b]\)</span>{% endraw %} to</p>
+
 
 {% raw %}<div class="math display">\[f(x)=1+2\int_a^x(x-y)g(y)f(y)\,dy.\]</div>{% endraw %}
 
@@ -86,14 +90,15 @@ F(x)=\int_0^x\exp\left(-2\int_0^y b(z)\,dz\right)dy.\]</div>{% endraw %}
 {% raw %}<div class="math display">\[1=(1+\lambda a)\mathbb{E} e^{-\lambda S_{T_a}},\qquad
 \mathbb{E} e^{-\lambda S_{T_a}}=(1+\lambda a)^{-1}.\]</div>{% endraw %}
 
-<p>This is the Laplace transform of an exponential random variable of rate {% raw %}<span class="math inline">\(1/a\)</span>{% endraw %}, so {% raw %}<span class="math inline">\(S_{T_a}\)</span>{% endraw %} has that law. The drawdown need not be monotone; its bound before the first hitting time and its continuity are the properties used here.</p>
+<p>Uniqueness of Laplace transforms identifies {% raw %}<span class="math inline">\(S_{T_a}\)</span>{% endraw %} as an exponential random variable with rate {% raw %}<span class="math inline">\(1/a\)</span>{% endraw %}. The boundedness used above follows from {% raw %}<span class="math inline">\(0\leq S_t-M_t\leq a\)</span>{% endraw %} for {% raw %}<span class="math inline">\(t\leq T_a\)</span>{% endraw %}.</p>
+
 
 <h3>Squared Bessel processes</h3>
 <p>Suppose {% raw %}<span class="math inline">\(X\geq0\)</span>{% endraw %} is a continuous adapted solution of {% raw %}<span class="math inline">\(dX_t=\alpha\,dt+2\sqrt{X_t}\,dB_t\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(X_0=x\geq0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\alpha\geq0\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(f\geq0\)</span>{% endraw %} be continuous on {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %}. There is a unique positive solution of</p>
 
 {% raw %}<div class="math display">\[\varphi''=2f\varphi,\qquad\varphi(0)=1,\qquad\varphi'(1)=0.\]</div>{% endraw %}
 
-<p>For existence, solve backwards with {% raw %}<span class="math inline">\(\psi(1)=1,\psi'(1)=0\)</span>{% endraw %}. Its Volterra equation is {% raw %}<span class="math inline">\(\psi(t)=1+2\int_t^1(s-t)f(s)\psi(s)\,ds\)</span>{% endraw %}. The convergent successive-substitution argument above gives {% raw %}<span class="math inline">\(\psi\geq1\)</span>{% endraw %}. Set {% raw %}<span class="math inline">\(\varphi=\psi/\psi(0)\)</span>{% endraw %}. Any solution with derivative zero at (1) is a scalar multiple of {% raw %}<span class="math inline">\(\psi\)</span>{% endraw %}, proving uniqueness. We have {% raw %}<span class="math inline">\(\varphi&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\varphi'\leq0\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(u=\varphi'/(2\varphi)\)</span>{% endraw %}; direct differentiation gives</p>
+<p>For existence, solve backwards with {% raw %}<span class="math inline">\(\psi(1)=1,\psi'(1)=0\)</span>{% endraw %}. Its Volterra equation is {% raw %}<span class="math inline">\(\psi(t)=1+2\int_t^1(s-t)f(s)\psi(s)\,ds\)</span>{% endraw %}. The convergent successive-substitution argument above gives {% raw %}<span class="math inline">\(\psi\geq1\)</span>{% endraw %}. Set {% raw %}<span class="math inline">\(\varphi=\psi/\psi(0)\)</span>{% endraw %}. Any solution with derivative zero at {% raw %}<span class="math inline">\(1\)</span>{% endraw %} is a scalar multiple of {% raw %}<span class="math inline">\(\psi\)</span>{% endraw %}, proving uniqueness. We have {% raw %}<span class="math inline">\(\varphi&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\varphi'\leq0\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(u=\varphi'/(2\varphi)\)</span>{% endraw %}; direct differentiation gives</p>
 
 {% raw %}<div class="math display">\[u'+2u^2=\frac{\varphi''}{2\varphi}=f,\qquad u\leq0,\qquad u(1)=0.\]</div>{% endraw %}
 
@@ -106,7 +111,7 @@ F(x)=\int_0^x\exp\left(-2\int_0^y b(z)\,dz\right)dy.\]</div>{% endraw %}
 {% raw %}<div class="math display">\[Z_t=\exp(Y_t)\varphi(t)^{-\alpha/2}
 =\exp\left(u(0)x+2\int_0^tu(s)\sqrt{X_s}\,dB_s-2\int_0^tu(s)^2X_s\,ds\right)\]</div>{% endraw %}
 
-<p>is a local martingale. Since {% raw %}<span class="math inline">\(u\leq0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(f,X\geq0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\alpha\geq0\)</span>{% endraw %}, it satisfies {% raw %}<span class="math inline">\(0\leq Z_t\leq\varphi(1)^{-\alpha/2}\)</span>{% endraw %} on {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %}. It is therefore a bounded martingale. Taking expectations at time (1) gives</p>
+<p>is a local martingale. Since {% raw %}<span class="math inline">\(u\leq0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(f,X\geq0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\alpha\geq0\)</span>{% endraw %}, it satisfies {% raw %}<span class="math inline">\(0\leq Z_t\leq\varphi(1)^{-\alpha/2}\)</span>{% endraw %} on {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %}. It is therefore a bounded martingale. Taking expectations at time {% raw %}<span class="math inline">\(1\)</span>{% endraw %} gives</p>
 
 <span id="eq:expectation-exponential-martingale-bessel"></span>
 {% raw %}<div class="math display">\[\mathbb{E}\exp\left(-\int_0^1 f(s)X_s\,ds\right)
@@ -119,7 +124,7 @@ F(x)=\int_0^x\exp\left(-2\int_0^y b(z)\,dz\right)dy.\]</div>{% endraw %}
 =\cosh(\sqrt{2\lambda})^{-\alpha/2}
 \exp\left[-\frac{x\sqrt{2\lambda}}2\tanh(\sqrt{2\lambda})\right].\tag{6}\]</div>{% endraw %}
 
-<p>For Brownian motion {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %} starting at {% raw %}<span class="math inline">\(y\)</span>{% endraw %}, Itō’s formula gives {% raw %}<span class="math inline">\(d(\beta_t^2)=dt+2\beta_t\,d\beta_t\)</span>{% endraw %}. Set {% raw %}<span class="math inline">\(B_t=\int_0^t\operatorname{sgn}(\beta_s)\,d\beta_s\)</span>{% endraw %}. Fubini and the Gaussian density show {% raw %}<span class="math inline">\(\int_0^t\mathbb1_{\{\beta_s=0\}}ds=0\)</span>{% endraw %} almost surely, so {% raw %}<span class="math inline">\(\langle B\rangle_t=t\)</span>{% endraw %}; Lévy’s characterization makes {% raw %}<span class="math inline">\(B\)</span>{% endraw %} Brownian. Hence {% raw %}<span class="math inline">\(\beta^2\)</span>{% endraw %} is the case {% raw %}<span class="math inline">\(x=y^2,\alpha=1\)</span>{% endraw %} of the preceding equation, which gives its integrated-square Laplace transform.</p>
+<p>For Brownian motion {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %} starting at {% raw %}<span class="math inline">\(y\)</span>{% endraw %}, Itō’s formula gives {% raw %}<span class="math inline">\(d(\beta_t^2)=dt+2\beta_t\,d\beta_t\)</span>{% endraw %}. Set {% raw %}<span class="math inline">\(B_t=\int_0^t\operatorname{sgn}(\beta_s)\,d\beta_s\)</span>{% endraw %}. Fubini and the Gaussian density show {% raw %}<span class="math inline">\(\int_0^t\mathbf1_{\{\beta_s=0\}}ds=0\)</span>{% endraw %} almost surely, so {% raw %}<span class="math inline">\(\langle B\rangle_t=t\)</span>{% endraw %}; Lévy’s characterization makes {% raw %}<span class="math inline">\(B\)</span>{% endraw %} Brownian. Hence {% raw %}<span class="math inline">\(\beta^2\)</span>{% endraw %} is the case {% raw %}<span class="math inline">\(x=y^2,\alpha=1\)</span>{% endraw %} of the preceding equation, which gives its integrated-square Laplace transform.</p>
 
 <h3>Tanaka’s formula and excursion counts</h3>
 <p>Let {% raw %}<span class="math inline">\(B_0=0\)</span>{% endraw %} and approximate the absolute value by {% raw %}<span class="math inline">\(g_\varepsilon(x)=\sqrt{x^2+\varepsilon^2}\)</span>{% endraw %}. Itō’s formula gives</p>
@@ -141,7 +146,7 @@ F(x)=\int_0^x\exp\left(-2\int_0^y b(z)\,dz\right)dy.\]</div>{% endraw %}
 
 {% raw %}<div class="math display">\[0\leq A_v^\varepsilon-A_u^\varepsilon\leq\frac{(v-u)\varepsilon^2}{2\delta^3}\longrightarrow0.\]</div>{% endraw %}
 
-<p>Using rational {% raw %}<span class="math inline">\(u,v,\delta\)</span>{% endraw %}, the same almost sure subsequence proves this simultaneously on a countable family of intervals. Continuity then makes {% raw %}<span class="math inline">\(L\)</span>{% endraw %} constant on every excursion interval away from zero. Fubini gives {% raw %}<span class="math inline">\(\langle\beta\rangle_t=\int_0^t\mathbb1_{\{B_s\ne0\}}ds=t\)</span>{% endraw %}, so Lévy’s characterization makes {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %} Brownian motion.</p>
+<p>Using rational {% raw %}<span class="math inline">\(u,v,\delta\)</span>{% endraw %}, the same almost sure subsequence proves this simultaneously on a countable family of intervals. Continuity then makes {% raw %}<span class="math inline">\(L\)</span>{% endraw %} constant on every excursion interval away from zero. Fubini gives {% raw %}<span class="math inline">\(\langle\beta\rangle_t=\int_0^t\mathbf1_{\{B_s\ne0\}}ds=t\)</span>{% endraw %}, so Lévy’s characterization makes {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %} Brownian motion.</p>
 
 <p>The identity {% raw %}<span class="math inline">\(|B|=\beta+L\geq0\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(L_t\geq\sup_{s\leq t}(-\beta_s)\)</span>{% endraw %}. For the reverse inequality, let {% raw %}<span class="math inline">\(r\)</span>{% endraw %} be the last zero of {% raw %}<span class="math inline">\(B\)</span>{% endraw %} in {% raw %}<span class="math inline">\([0,t]\)</span>{% endraw %}. Such a zero exists because {% raw %}<span class="math inline">\(B_0=0\)</span>{% endraw %}, and it is attained by continuity. If {% raw %}<span class="math inline">\(r&lt;t\)</span>{% endraw %}, {% raw %}<span class="math inline">\(L\)</span>{% endraw %} is constant on {% raw %}<span class="math inline">\((r,t]\)</span>{% endraw %}; if {% raw %}<span class="math inline">\(r=t\)</span>{% endraw %}, no constancy argument is needed. In both cases {% raw %}<span class="math inline">\(L_t=L_r=-\beta_r\leq\sup_{s\leq t}(-\beta_s)\)</span>{% endraw %}. Therefore</p>
 
@@ -152,19 +157,19 @@ F(x)=\int_0^x\exp\left(-2\int_0^y b(z)\,dz\right)dy.\]</div>{% endraw %}
 
 <p>For an excursion-count approximation, define {% raw %}<span class="math inline">\(S_1^\varepsilon=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(T_n^\varepsilon=\inf\{t\geq S_n^\varepsilon:|B_t|=\varepsilon\}\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(S_{n+1}^\varepsilon=\inf\{t\geq T_n^\varepsilon:B_t=0\}\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(N_t^\varepsilon=\#\{n:T_n^\varepsilon\leq t\}\)</span>{% endraw %}. There are finitely many completed crossings on a compact interval: otherwise uniform continuity would be contradicted by infinitely many disjoint fluctuations of size {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %}. The process</p>
 
-{% raw %}<div class="math display">\[H_s^\varepsilon=\sum_{n\geq1}\mathbb1_{(S_n^\varepsilon,T_n^\varepsilon]}(s)\]</div>{% endraw %}
+{% raw %}<div class="math display">\[H_s^\varepsilon=\sum_{n\geq1}\mathbf1_{(S_n^\varepsilon,T_n^\varepsilon]}(s)\]</div>{% endraw %}
 
 <p>is predictable and bounded by one. Endpoint choices do not affect Brownian integrals. During each completed outgoing segment, Tanaka’s formula gives an increase of {% raw %}<span class="math inline">\(|B|\)</span>{% endraw %} equal to {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %}. During a return segment, {% raw %}<span class="math inline">\(L\)</span>{% endraw %} is constant. Summing these identities gives</p>
 
 {% raw %}<div class="math display">\[L_t+\int_0^tH_s^\varepsilon\operatorname{sgn}(B_s)\,dB_s
 =\varepsilon N_t^\varepsilon+r_t^\varepsilon,\qquad0\leq r_t^\varepsilon\leq\varepsilon.\]</div>{% endraw %}
 
-<p>More precisely, {% raw %}<span class="math inline">\(r_t^\varepsilon=|B_t|\)</span>{% endraw %} if {% raw %}<span class="math inline">\(t\)</span>{% endraw %} lies in the next outgoing segment, and {% raw %}<span class="math inline">\(r_t^\varepsilon=0\)</span>{% endraw %} if it lies in a return segment. The latter segment can travel beyond {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %}; it contributes no remainder because its stochastic integral accounts for that movement. Since {% raw %}<span class="math inline">\(H_s^\varepsilon\leq\mathbb1_{\{|B_s|\leq\varepsilon\}}\)</span>{% endraw %} apart from irrelevant endpoints, the isometry yields</p>
+<p>More precisely, {% raw %}<span class="math inline">\(r_t^\varepsilon=|B_t|\)</span>{% endraw %} if {% raw %}<span class="math inline">\(t\)</span>{% endraw %} lies in the next outgoing segment, and {% raw %}<span class="math inline">\(r_t^\varepsilon=0\)</span>{% endraw %} if it lies in a return segment. The latter segment can travel beyond {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %}; it contributes no remainder because its stochastic integral accounts for that movement. Since {% raw %}<span class="math inline">\(H_s^\varepsilon\leq\mathbf1_{\{|B_s|\leq\varepsilon\}}\)</span>{% endraw %} apart from irrelevant endpoints, the isometry yields</p>
 
 {% raw %}<div class="math display">\[\|\varepsilon N_t^\varepsilon-L_t\|_2
 \leq\left(\int_0^t\mathbb P(|B_s|\leq\varepsilon)\,ds\right)^{1/2}+\varepsilon\longrightarrow0.\]</div>{% endraw %}
 
-<p>For {% raw %}<span class="math inline">\(s&gt;0\)</span>{% endraw %}, the integrand tends to zero by the Gaussian density and is bounded by one; dominated convergence proves the last step. Finally, Brownian scaling gives {% raw %}<span class="math inline">\(N_t^1\stackrel d=N_1^{1/\sqrt t}\)</span>{% endraw %}. Applying this approximation at time (1), with {% raw %}<span class="math inline">\(\varepsilon=1/\sqrt t\)</span>{% endraw %}, proves</p>
+<p>For {% raw %}<span class="math inline">\(s&gt;0\)</span>{% endraw %}, the integrand tends to zero by the Gaussian density and is bounded by one; dominated convergence proves the last step. Finally, Brownian scaling gives {% raw %}<span class="math inline">\(N_t^1\stackrel d=N_1^{1/\sqrt t}\)</span>{% endraw %}. Applying this approximation at time {% raw %}<span class="math inline">\(1\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(\varepsilon=1/\sqrt t\)</span>{% endraw %}, proves</p>
 
 {% raw %}<div class="math display">\[\frac{N_t^1}{\sqrt t}\xrightarrow[t\to\infty]{d}L_1\stackrel d=|Z|.\]</div>{% endraw %}
 
@@ -185,7 +190,8 @@ An explicit excursion-count error bound
 {% raw %}<div class="math display">\[\left\|\frac{N_t^1-L_t}{\sqrt t}\right\|_2
 \leq\left(2\sqrt{\frac2\pi}\right)^{1/2}t^{-1/4}+t^{-1/2}\longrightarrow0.\]</div>{% endraw %}
 
-<p>Because {% raw %}<span class="math inline">\(L_t/\sqrt t\)</span>{% endraw %} has the same folded-normal law for every {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}, this gives a second proof of the displayed large-time limit by Slutsky’s lemma. The square root in the isometry estimate is essential: the expected occupation time bounds the squared {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} norm of the stochastic integral.</p>
+<p>Since {% raw %}<span class="math inline">\(L_t/\sqrt t\)</span>{% endraw %} has the law of {% raw %}<span class="math inline">\(|Z|\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}, Slutsky’s lemma gives {% raw %}<span class="math inline">\(N_t^1/\sqrt t\Rightarrow |Z|\)</span>{% endraw %}.</p>
+
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-le_gall_brownian_2016" class="csl-entry" role="listitem">

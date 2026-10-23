@@ -3,7 +3,7 @@ layout: "post"
 title: "The Hot Hand: Limit Theory and Proofs"
 date: "2024-04-15"
 tags: ["probability theory", "dependence"]
-excerpt: "The streak tests become easier to understand after expanding their ratios."
+excerpt: "Ratio expansions, martingale central limit theorems, and finite-sample bias for streak statistics."
 note_series: "Dependent data"
 note_source: "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex"
 redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
@@ -14,7 +14,14 @@ redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 <p>The <a href="{% post_url 2024-04-14-the-hot-hand-statistics-for-streaks %}">streak tests</a> are ratios of dependent counts. To obtain their limiting laws, first replace each random denominator by its probability limit and identify the error from doing so. Following <span class="citation" data-cites="ritzwoller_uncertainty_2022"><a href="#ref-ritzwoller_uncertainty_2022" role="doc-biblioref">Ritzwoller and Romano (2022)</a></span>, this note uses the first-order terms for variance and the second-order terms for bias.</p>
 
 <h3 data-note-section="1" id="05-71-the-first-order-expansion">1. The first-order expansion</h3>
-<p>Use {% raw %}<span class="math inline">\(A_t=\prod_{j=1}^kX_{t-j}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B_t=\prod_{j=1}^k(1-X_{t-j})\)</span>{% endraw %}. Under i.i.d. Bernoulli sampling with {% raw %}<span class="math inline">\(0&lt;p&lt;1\)</span>{% endraw %}, the eligible-count averages converge to {% raw %}<span class="math inline">\(p^k\)</span>{% endraw %} and {% raw %}<span class="math inline">\((1-p)^k\)</span>{% endraw %}. Consequently</p>
+<p>Let {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %} be i.i.d. Bernoulli{% raw %}<span class="math inline">\((p)\)</span>{% endraw %}, with fixed {% raw %}<span class="math inline">\(0&lt;p&lt;1\)</span>{% endraw %} and fixed integer {% raw %}<span class="math inline">\(k\geq1\)</span>{% endraw %}. All sums below run over {% raw %}<span class="math inline">\(t=k+1,\ldots,n\)</span>{% endraw %}, unless otherwise stated. Put {% raw %}<span class="math inline">\(m=n-k\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\mathcal F_t=\sigma(X_1,\ldots,X_t)\)</span>{% endraw %}, and</p>
+
+{% raw %}<div class="math display">\[A_t=\prod_{j=1}^kX_{t-j},\qquad B_t=\prod_{j=1}^k(1-X_{t-j}),\qquad
+\widehat P_k=\frac{\sum_tA_tX_t}{\sum_tA_t},\quad
+\widehat Q_k=\frac{\sum_tB_tX_t}{\sum_tB_t}.\]</div>{% endraw %}
+
+<p>Set {% raw %}<span class="math inline">\(\widehat D_k=\widehat P_k-\widehat Q_k\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\overline X=n^{-1}\sum_{t=1}^nX_t\)</span>{% endraw %}. Assign any fixed bounded value to a ratio with zero denominator. Within each residue class modulo {% raw %}<span class="math inline">\(k\)</span>{% endraw %}, the histories defining {% raw %}<span class="math inline">\(A_t\)</span>{% endraw %} are disjoint, so these indicators are independent and identically distributed. Applying the strong law in each of the finitely many classes gives {% raw %}<span class="math inline">\(m^{-1}\sum_tA_t\to p^k\)</span>{% endraw %} almost surely; the same argument gives {% raw %}<span class="math inline">\(m^{-1}\sum_tB_t\to(1-p)^k\)</span>{% endraw %}. In particular the probability of either empty count tends to zero. The ratio expansions proved below are</p>
+
 
 {% raw %}<div class="math display">\[
 \sqrt n(\widehat P_k-\overline X)
@@ -27,8 +34,9 @@ redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 \]</div>{% endraw %}
 <p>Boundary observations contribute only {% raw %}<span class="math inline">\(o_P(1)\)</span>{% endraw %} for fixed {% raw %}<span class="math inline">\(k\)</span>{% endraw %}.</p>
 
-<h3 data-note-section="2" id="05-71-overlapping-streaks-do-not-require-guessing-covariances">2. Overlapping streaks do not require guessing covariances</h3>
-<p>Overlapping histories do not produce covariance between these score terms under the null. The multiplier is determined by the past, whereas {% raw %}<span class="math inline">\(\mathbb{E}[X_t-p\mid\mathcal F_{t-1}]=0\)</span>{% endraw %}; conditioning on that past makes each summand a martingale difference.</p>
+<h3 data-note-section="2" id="05-71-overlapping-streaks-do-not-require-guessing-covariances">2. Null limit laws</h3>
+<p>For any bounded {% raw %}<span class="math inline">\(\mathcal F_{t-1}\)</span>{% endraw %}-measurable multiplier {% raw %}<span class="math inline">\(H_t\)</span>{% endraw %}, the variable {% raw %}<span class="math inline">\((X_t-p)H_t\)</span>{% endraw %} has conditional mean zero. Two such score terms at different times are therefore uncorrelated: condition their product on the history immediately before the later time. The conditional variance calculation in Section 6 gives the normal limits.</p>
+
 
 <p>For the first statistic,</p>
 
@@ -41,7 +49,13 @@ redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 \mathbb{E}[(A_t/p^k-B_t/(1-p)^k)^2]
 =p^{-k}+(1-p)^{-k}.
 \]</div>{% endraw %}
-<p>Multiplying by {% raw %}<span class="math inline">\(p(1-p)\)</span>{% endraw %} gives the two null variances. A bounded, finite-memory CLT completes the argument.</p>
+<p>Multiplying these second moments by {% raw %}<span class="math inline">\(p(1-p)\)</span>{% endraw %} gives</p>
+
+{% raw %}<div class="math display">\[\sigma_P^2=p(1-p)(p^{-k}-1),\qquad
+\sigma_D^2=p(1-p)\bigl(p^{-k}+(1-p)^{-k}\bigr).\]</div>{% endraw %}
+
+<p>The proof in Section 6 yields {% raw %}<span class="math inline">\(\sqrt n(\widehat P_k-\overline X)\Rightarrow\mathcal N(0,\sigma_P^2)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sqrt n\widehat D_k\Rightarrow\mathcal N(0,\sigma_D^2)\)</span>{% endraw %}.</p>
+
 
 <h3 data-note-section="3" id="05-71-where-finite-sample-bias-enters">3. Where finite-sample bias enters</h3>
 <p>For a numerator average {% raw %}<span class="math inline">\(U\)</span>{% endraw %} and denominator average {% raw %}<span class="math inline">\(V\)</span>{% endraw %}, expand around {% raw %}<span class="math inline">\((u,v)\)</span>{% endraw %}:</p>
@@ -63,7 +77,7 @@ redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 
 <p>Serial dependence alone does not identify a causal effect of success. For example, a persistent unobserved ability state may make both the previous and the next attempt more likely to succeed. A causal interpretation requires assumptions linking observed histories to potential outcomes under those histories.</p>
 
-<h3 data-note-section="5" id="05-71-expanding-the-ratio-explicitly">5. Expanding the ratio explicitly</h3>
+<h3 data-note-section="5" id="05-71-expanding-the-ratio-explicitly">5. Proof of the ratio expansion</h3>
 <p>Put {% raw %}<span class="math inline">\(m=n-k\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\overline A=m^{-1}\sum_tA_t\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\overline{AX}=m^{-1}\sum_tA_tX_t\)</span>{% endraw %}. The identity</p>
 
 {% raw %}<div class="math display">\[
@@ -80,7 +94,7 @@ redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 
 <p>The omitted product has smaller stochastic order than the leading fluctuation, but its expectation can be nonzero. This is why a correct first-order normal approximation can coexist with finite-sample bias.</p>
 
-<h3 data-note-section="6" id="05-71-checking-the-martingale-variance-carefully">6. The martingale variance calculation</h3>
+<h3 data-note-section="6" id="05-71-checking-the-martingale-variance-carefully">6. Proof of joint normal convergence</h3>
 <p>Write {% raw %}<span class="math inline">\(H_t=A_t/p^k-1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(W_t=(X_t-p)H_t\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(s&lt;t\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(W_s\)</span>{% endraw %} and {% raw %}<span class="math inline">\(H_t\)</span>{% endraw %} are measurable with respect to {% raw %}<span class="math inline">\(\mathcal F_{t-1}\)</span>{% endraw %}. Thus</p>
 
 {% raw %}<div class="math display">\[
@@ -102,7 +116,20 @@ redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 \]</div>{% endraw %}
 <p>For {% raw %}<span class="math inline">\(J_t=A_t/p^k-B_t/(1-p)^k\)</span>{% endraw %}, the cross-product is zero: a preceding block cannot consist entirely of successes and entirely of failures. This gives the second variance. Conditioning on the history immediately before the later outcome removes all nonzero-lag covariances despite overlap between the histories.</p>
 
-<p>For fixed {% raw %}<span class="math inline">\(k\)</span>{% endraw %}, bounded summands satisfy Lindeberg’s condition, and a finite-memory law of large numbers gives convergence of the conditional variance average. These establish the martingale CLT. If {% raw %}<span class="math inline">\(k\)</span>{% endraw %} grows, boundedness is no longer uniform: {% raw %}<span class="math inline">\(p^{-k}\)</span>{% endraw %} grows and eligible runs may become rare.</p>
+<p>For fixed {% raw %}<span class="math inline">\(p,k\)</span>{% endraw %}, both {% raw %}<span class="math inline">\(H_t\)</span>{% endraw %} and {% raw %}<span class="math inline">\(J_t\)</span>{% endraw %} are deterministically bounded. The normalised increments {% raw %}<span class="math inline">\(W_t/\sqrt m\)</span>{% endraw %} therefore satisfy conditional Lindeberg: for every {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %}, all tail indicators vanish once {% raw %}<span class="math inline">\(m\)</span>{% endraw %} is sufficiently large. Since {% raw %}<span class="math inline">\(H_t^2\)</span>{% endraw %} depends on a block of {% raw %}<span class="math inline">\(k\)</span>{% endraw %} preceding observations, splitting the times into residue classes modulo {% raw %}<span class="math inline">\(k\)</span>{% endraw %} and applying the strong law gives</p>
+
+{% raw %}<div class="math display">\[\frac1m\sum_t\mathbb E[W_t^2\mid\mathcal F_{t-1}]
+=p(1-p)\frac1m\sum_tH_t^2\longrightarrow\sigma_P^2
+\quad\text{almost surely}.\]</div>{% endraw %}
+
+<p>The same argument with {% raw %}<span class="math inline">\(J_t^2\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(\sigma_D^2\)</span>{% endraw %}. The <a href="{% post_url 2022-03-25-central-limit-theorems-and-worked-examples %}#conditional-martingale-clt">conditional martingale central limit theorem</a> proves the two limits for the score sums. The ratio expansions in Section 5 and {% raw %}<span class="math inline">\(m/n\to1\)</span>{% endraw %} give the asserted limits for the statistics.</p>
+
+<p>There is also a joint limit. For fixed {% raw %}<span class="math inline">\(a,b\in\mathbb R\)</span>{% endraw %}, apply the same argument to {% raw %}<span class="math inline">\((X_t-p)(aH_t+bJ_t)/\sqrt m\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(A_tB_t=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\mathbb EH_tJ_t=p^{-k}\)</span>{% endraw %}. Thus the limiting covariance matrix is</p>
+
+{% raw %}<div class="math display">\[p(1-p)\begin{pmatrix}p^{-k}-1&amp;p^{-k}\\p^{-k}&amp;p^{-k}+(1-p)^{-k}\end{pmatrix}.\]</div>{% endraw %}
+
+<p>The degenerate case of the same theorem covers any linear combination with zero limiting variance; Cramér–Wold then proves joint normal convergence. These arguments keep {% raw %}<span class="math inline">\(k\)</span>{% endraw %} fixed. If {% raw %}<span class="math inline">\(k\)</span>{% endraw %} increases, the bounds on the multipliers and the probabilities of eligible histories must be controlled separately.</p>
+
 
 <h3 data-note-section="7" id="05-71-the-second-order-calculation-and-its-limitation">7. The second-order calculation and its limitation</h3>
 <p>For {% raw %}<span class="math inline">\(h(u,v)=u/v\)</span>{% endraw %}, the nonzero second derivatives are</p>
