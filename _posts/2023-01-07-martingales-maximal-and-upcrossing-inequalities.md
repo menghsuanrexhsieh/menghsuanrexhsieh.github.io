@@ -183,7 +183,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Martingales - Prob and S
 
 {% raw %}<div class="math display">\[\|Y_n^*\|_p\leq\frac{p}{p-1}\|Y_n\|_p.\]</div>{% endraw %}
 
-<p>For a martingale {% raw %}<span class="math inline">\(X\)</span>{% endraw %}, apply this result to {% raw %}<span class="math inline">\(Y_j=|X_j|\)</span>{% endraw %}.</p>
+<p>For a martingale {% raw %}<span class="math inline">\(X\)</span>{% endraw %}, apply the nonnegative-submartingale maximal inequality in Theorem 13 to {% raw %}<span class="math inline">\(Y_j=|X_j|\)</span>{% endraw %}.</p>
 
 <p><em>Proof.</em> The first-crossing argument in Theorem 10 retains the terminal value on the crossing event and gives</p>
 

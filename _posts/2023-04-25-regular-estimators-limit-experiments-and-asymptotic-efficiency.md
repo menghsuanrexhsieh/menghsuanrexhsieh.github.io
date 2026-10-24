@@ -168,8 +168,9 @@ V-AI_\theta^{-1}A^\top
 \sup_{F\subset\mathbb R^k,\,F\text{ finite}}
 \liminf_{n\to\infty}\max_{h\in F}
 E_{\theta+h/\sqrt n}\!\left[n\{T_n-\varphi(\theta+h/\sqrt n)\}^2\right]\ge v.
-\]</span>{% endraw %} Regularity of {% raw %}<span class="math inline">\(T_n\)</span>{% endraw %} is not assumed. An efficient regular sequence attains this bound if its squared local errors are uniformly integrable for each fixed {% raw %}<span class="math inline">\(h\)</span>{% endraw %}.</p>
+\]</span>{% endraw %} An efficient regular sequence attains this bound if its squared local errors are uniformly integrable for each fixed {% raw %}<span class="math inline">\(h\)</span>{% endraw %}.</p>
 </div>
+<p><em>Remark.</em> In the proof of the lower bound in the <a href="#efficiency-squared-loss-minimax">local minimax theorem for squared loss</a>, regularity of {% raw %}<span class="math inline">\(T_n\)</span>{% endraw %} is not assumed. The attainment statement concerns efficient regular sequences with uniformly integrable squared local errors.</p>
 <p>The lower bound is proved in <a href="#efficiency-appendix-minimax">Appendix D</a>. For attainment, the risk lemma gives convergence to {% raw %}<span class="math inline">\(v\)</span>{% endraw %} at each direction; the maximum over any fixed finite set therefore also converges to {% raw %}<span class="math inline">\(v\)</span>{% endraw %}. This establishes the squared-loss case of the criterion below. For other losses, both the Gaussian benchmark and the loss-specific lower bound must be considered.</p>
 <div class="definition" data-note-kind="Definition" data-note-number="9" id="Def:local_a_minmax">
 <p><strong>Definition 9</strong>.  An estimator sequence {% raw %}<span class="math inline">\((T_n)\)</span>{% endraw %} is <em>locally asymptotically minimax</em> for a given loss function {% raw %}<span class="math inline">\(\ell\)</span>{% endraw %} (for estimating {% raw %}<span class="math inline">\(\varphi(\theta)\)</span>{% endraw %}) if the following holds: </p>

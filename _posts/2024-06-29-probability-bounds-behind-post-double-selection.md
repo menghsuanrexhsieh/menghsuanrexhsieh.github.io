@@ -129,7 +129,7 @@ P\!\left(\max_{j\le p}|S_j|&gt;z\right)
 P\left(\left|n^{-1}\sum_iV_i\right|&gt;
 \ell n^{-(1-1/r)}\right)\le 2C\ell^{-r}.
 \]</div>{% endraw %}
-<p>A law of large numbers for one mean and a uniform bound over a growing dictionary solve different problems. The double-selection proof uses the latter when a data-dependent choice of regressors must be covered.</p>
+<p>A law of large numbers for one mean and a uniform bound over a growing dictionary solve different problems. The double-selection proof uses a uniform dictionary bound when a data-dependent choice of regressors must be covered.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-belloni_inference_2014" class="csl-entry" role="listitem">

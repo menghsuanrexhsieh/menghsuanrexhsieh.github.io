@@ -45,7 +45,7 @@ redirect_from: ["/2023/03/29/kernel-density-estimation-bias-and-variance/", "/20
 
 <p>with {% raw %}<span class="math inline">\(C_\beta=1\)</span>{% endraw %} for {% raw %}<span class="math inline">\(\ell=0\)</span>{% endraw %}. This also justifies the integrability of the remainder for signed kernels.</p>
 
-<p>Let {% raw %}<span class="math inline">\(\mathcal P(\beta,L)\)</span>{% endraw %} be the densities in this Hölder class. They have a common finite sup-norm bound. To see this without adding an assumption, use the compact, bounded order-{% raw %}<span class="math inline">\(\ell\)</span>{% endraw %} kernel {% raw %}<span class="math inline">\(K_0\)</span>{% endraw %} constructed in Remark 1 at bandwidth one. The bias argument gives</p>
+<p>Let {% raw %}<span class="math inline">\(\mathcal P(\beta,L)\)</span>{% endraw %} be the densities in this Hölder class. They have a common finite sup-norm bound. To prove the common sup-norm bound without adding an assumption, use the compact, bounded order-{% raw %}<span class="math inline">\(\ell\)</span>{% endraw %} kernel {% raw %}<span class="math inline">\(K_0\)</span>{% endraw %} constructed in Remark 1 at bandwidth one. The bias argument gives</p>
 
 {% raw %}<div class="math display">\[p(x)\le\left|\int K_0(u)p(x+u)du\right|+C_\beta LM_\beta(K_0)\le\|K_0\|_\infty+C_\beta LM_\beta(K_0).\]</div>{% endraw %}
 

@@ -234,9 +234,10 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 </div>
 
 <div id="Lem:Helley" class="lemma" data-note-number="6" data-note-kind="Lemma">
-<p><strong>Lemma 6</strong>. (Helly selection). Every sequence of probability measures {% raw %}<span class="math inline">\(\mu_n\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\mathbb R^d\)</span>{% endraw %} has a subsequence and a finite measure {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %} of total mass at most one such that {% raw %}<span class="math inline">\(\int f\,d\mu_{n_j}\to\int f\,d\mu\)</span>{% endraw %} for every continuous compactly supported {% raw %}<span class="math inline">\(f\)</span>{% endraw %}. This is vague convergence; it need not be convergence in distribution to a probability law.</p>
+<p><strong>Lemma 6</strong>. (Helly selection). Every sequence of probability measures {% raw %}<span class="math inline">\(\mu_n\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\mathbb R^d\)</span>{% endraw %} has a subsequence and a finite measure {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %} of total mass at most one such that {% raw %}<span class="math inline">\(\int f\,d\mu_{n_j}\to\int f\,d\mu\)</span>{% endraw %} for every continuous compactly supported {% raw %}<span class="math inline">\(f\)</span>{% endraw %}.</p>
 
 </div>
+<p><em>Remark.</em> The convergence in <a href="#Lem:Helley">Lemma 6</a> is vague convergence. The lemma does not assert convergence in distribution to a probability law.</p>
 <div class="proof">
 <p><em>Proof.</em></p>
 
@@ -305,7 +306,7 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 <p>More explicitly, put {% raw %}<span class="math inline">\(r_K=\mathbb E(|X_1|\mathbf1_{\{|X_1|&gt;K\}})\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(r_K&lt;\varepsilon/3\)</span>{% endraw %}, the triangle inequality followed by Chebyshev and Markov yields</p>
 {% raw %}<div class="math display">\[P\left(\left|\frac{S_n}{n}-\mu\right|&gt;\varepsilon\right)
 \leq\frac{9\operatorname{Var}(X_1^{(K)})}{n\varepsilon^2}+\frac{3r_K}{\varepsilon}.\]</div>{% endraw %}
-<p>The first term vanishes for fixed {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, and dominated convergence gives {% raw %}<span class="math inline">\(r_K\downarrow0\)</span>{% endraw %}. This proves the result under the finite first-moment assumption, without assuming the fourth moment required in the preceding strong-law proof.</p>
+<p>The first term vanishes for fixed {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, and dominated convergence gives {% raw %}<span class="math inline">\(r_K\downarrow0\)</span>{% endraw %}. The truncation argument proves the weak law in <a href="#thm:wlln">Theorem 9</a> under the finite first-moment assumption, without assuming the fourth moment required in the preceding strong-law proof.</p>
 <p>◻</p>
 
 </div>

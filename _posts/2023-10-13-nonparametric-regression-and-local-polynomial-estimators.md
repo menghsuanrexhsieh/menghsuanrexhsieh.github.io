@@ -85,7 +85,8 @@ redirect_from: ["/2023/07/19/nonparametric-regression-and-local-polynomial-estim
 
 {% raw %}<div class="math display">\[\mathbb E[e^{(|Z_i|/C_i)^p}-1]\le K_i\int_0^\infty(1+s)^{-(1+K_i)}ds=1.\]</div>{% endraw %}
 
-<p>With {% raw %}<span class="math inline">\(C=\max_iC_i\)</span>{% endraw %}, the maximum of these nonnegative exponential transforms is at most their sum. Jensen, using convexity of {% raw %}<span class="math inline">\(z\mapsto e^{z^p}-1\)</span>{% endraw %}, gives {% raw %}<span class="math inline">\(\mathbb E\max_{i\le M}|Z_i|\le C[\log(1+M)]^{1/p}\)</span>{% endraw %}. Independence is unnecessary for this bound.</p>
+<p>With {% raw %}<span class="math inline">\(C=\max_iC_i\)</span>{% endraw %}, the maximum of these nonnegative exponential transforms is at most their sum. Jensen, using convexity of {% raw %}<span class="math inline">\(z\mapsto e^{z^p}-1\)</span>{% endraw %}, gives {% raw %}<span class="math inline">\(\mathbb E\max_{i\le M}|Z_i|\le C[\log(1+M)]^{1/p}\)</span>{% endraw %}.</p>
+<p><em>Remark.</em> The exponential-moment argument for the <a href="#uniform-risk">maximum bound</a> does not assume independence of the variables {% raw %}<span class="math inline">\(Z_i\)</span>{% endraw %}.</p>
 
 <p>For centered Gaussian vectors {% raw %}<span class="math inline">\(\eta_j\in\mathbb R^d\)</span>{% endraw %}, suppose each coordinate variance is at most {% raw %}<span class="math inline">\(v^2&gt;0\)</span>{% endraw %}. Gaussian integration gives {% raw %}<span class="math inline">\(\mathbb E\exp(\eta_{jk}^2/(4v^2))\le\sqrt2\)</span>{% endraw %}. Hence Jensen and {% raw %}<span class="math inline">\(\exp(\max a_{jk})\le\sum\exp(a_{jk})\)</span>{% endraw %} give</p>
 

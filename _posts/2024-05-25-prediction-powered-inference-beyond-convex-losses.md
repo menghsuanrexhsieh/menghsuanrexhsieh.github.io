@@ -32,9 +32,10 @@ C_\alpha\triangleq\{\theta:\ \widetilde L^f(\theta)
 &amp;+T^u(\theta)-T^l(\widehat\theta^f)\}
 \end{split}
 \]</div>{% endraw %}
-<p>contains {% raw %}<span class="math inline">\(\theta^*\)</span>{% endraw %} with probability at least {% raw %}<span class="math inline">\(1-\alpha\)</span>{% endraw %}. Convexity is not required.</p>
+<p>contains {% raw %}<span class="math inline">\(\theta^*\)</span>{% endraw %} with probability at least {% raw %}<span class="math inline">\(1-\alpha\)</span>{% endraw %}.</p>
 
 </div>
+<p><em>Remark.</em> In the proof of <a href="#ppi-risk">Theorem 1</a>, convexity of the population risk {% raw %}<span class="math inline">\(L\)</span>{% endraw %} is not assumed; the coverage argument uses the defining inequality for a global minimizer.</p>
 <h3 data-note-section="2" id="31-29-deriving-the-inequality">2. Deriving the inequality</h3>
 <p>First express the risk through its estimated components; this fixes the signs in the confidence bounds. Since</p>
 
@@ -65,7 +66,7 @@ L(\theta^*)\leq L(\widehat\theta^f).
 L(\theta)=\theta^4-2\mu\theta^2+\mathbb{E}[Y^2],
 \qquad L&#x27;(\theta)=4\theta(\theta^2-\mu).
 \]</div>{% endraw %}
-<p>There are three stationary points: {% raw %}<span class="math inline">\(0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\pm\sqrt\mu\)</span>{% endraw %}. Only the latter two minimize the risk. Indeed,</p>
+<p>There are three stationary points: {% raw %}<span class="math inline">\(0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\pm\sqrt\mu\)</span>{% endraw %}. Only the two nonzero stationary points minimize the risk. Indeed,</p>
 
 {% raw %}<div class="math display">\[
 L(0)-L(\sqrt\mu)=\mu^2&gt;0,

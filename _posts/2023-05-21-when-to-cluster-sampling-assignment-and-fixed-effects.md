@@ -124,7 +124,7 @@ v={}&amp;\frac1n\sum_i b_i
 {% raw %}<div class="math display">\[
 v^{\rm robust}-v=\frac pn\sum_i(\tau_i-\tau)^2.
 \]</div>{% endraw %}
-<p>Even without clustered assignment, the robust formula can be conservative for a finite-population ATE. Conversely, if {% raw %}<span class="math inline">\(d_i=0\)</span>{% endraw %} and the {% raw %}<span class="math inline">\(a_i\)</span>{% endraw %} have the same sign within a large cluster, clustered assignment creates positive cross-products and the robust formula can be too small. These are different designs applied to fixed potential outcomes. They need not have different-looking regression residuals.</p>
+<p>Even without clustered assignment, the robust formula can be conservative for a finite-population ATE. Conversely, if {% raw %}<span class="math inline">\(d_i=0\)</span>{% endraw %} and the {% raw %}<span class="math inline">\(a_i\)</span>{% endraw %} have the same sign within a large cluster, clustered assignment creates positive cross-products and the robust formula can be too small. These are different designs applied to fixed potential outcomes. The two designs need not produce different-looking regression residuals.</p>
 
 <p>The covariance matrix must correspond to the sampling and assignment repetitions used to define the target. A superpopulation error model introduces another source of variation, potentially including changes in cluster effects. That variation is absent when the finite population of clusters is held fixed.</p>
 
@@ -142,7 +142,7 @@ v^{\rm robust}-v=\frac pn\sum_i(\tau_i-\tau)^2.
 \frac1{npq}\sum_m\left(pq\,n_m(\tau_m-\tau)\right)^2
 =\frac{pq}{n}\sum_mn_m^2(\tau_m-\tau)^2.
 \]</div>{% endraw %}
-<p>Although the total score is centered, a cluster’s score can have nonzero mean when its treatment effect differs from the population average. Squaring each cluster sum before aggregation retains the squares of these means. They give the excess variance in the proposition.</p>
+<p>Although the total score is centered, a cluster’s score can have nonzero mean when its treatment effect differs from the population average. Squaring each cluster sum before aggregation retains the squares of these means. The normalized sum of squared cluster-score means gives the excess variance in <a href="#design-cluster-variance">Proposition 1</a>.</p>
 
 <p>Equal cluster-average treatment effects remove this particular excess. Observing every cluster does not: assignment remains random, but selection of cluster effects no longer is. Sampling fractions therefore determine which components belong in the target variance.</p>
 

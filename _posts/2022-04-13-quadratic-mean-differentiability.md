@@ -21,7 +21,8 @@ redirect_from: ["/2023/04/08/quadratic-mean-differentiability/"]
 <h2 id="qmd-definition">Definition and score identities</h2>
 <p>The model is QMD at {% raw %}<span class="math inline">\(\theta_0\)</span>{% endraw %} if there is {% raw %}<span class="math inline">\(\eta\in L^2(\mu;\mathbb R^d)\)</span>{% endraw %} such that {% raw %}<span class="math display">\[
 \left\|\sqrt{p_{\theta_0+t}}-\sqrt{p_{\theta_0}}-t^\top\eta\right\|_{L^2(\mu)}=o(\|t\|).
-\]</span>{% endraw %} The limit is taken over all {% raw %}<span class="math inline">\(t\to0\)</span>{% endraw %} with {% raw %}<span class="math inline">\(\theta_0+t\in\Theta\)</span>{% endraw %}. The next lemma identifies {% raw %}<span class="math inline">\(\eta\)</span>{% endraw %} with one half of the score times the square-root density. This formulation imposes an integrated remainder bound and does not assume pointwise differentiability of the log density.</p>
+\]</span>{% endraw %} The limit is taken over all {% raw %}<span class="math inline">\(t\to0\)</span>{% endraw %} with {% raw %}<span class="math inline">\(\theta_0+t\in\Theta\)</span>{% endraw %}.</p>
+<p><em>Remark.</em> The <a href="#qmd-definition">definition of QMD</a> imposes an integrated remainder bound; it does not require pointwise differentiability of the log density. The next lemma identifies {% raw %}<span class="math inline">\(\eta\)</span>{% endraw %} with one half of the score times the square-root density.</p>
 <div class="lemma" data-note-kind="Lemma" data-note-number="1" id="result-1">
 <p>Lemma 1. If the model is QMD at the interior point {% raw %}<span class="math inline">\(\theta_0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(\eta_j\in L^2(\mu)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\eta_j=0\)</span>{% endraw %} almost everywhere on {% raw %}<span class="math inline">\(\{p_{\theta_0}=0\}\)</span>{% endraw %}, and the score</p>
 
@@ -69,7 +70,7 @@ redirect_from: ["/2023/04/08/quadratic-mean-differentiability/"]
 
 {% raw %}<div class="math display">\[\|s_{\theta_0+h}-s_{\theta_0}-h^\top\eta_0\|_2^2\le\|h\|^2\int_0^1\|\eta_{\theta_0+th}-\eta_0\|_2^2\,dt\le\|h\|^2\sup_{\|v\|\le\|h\|}\|\eta_{\theta_0+v}-\eta_0\|_2^2=o(\|h\|^2).\]</div>{% endraw %}
 
-<p>This is exactly QMD. The result is the sufficient condition of van der Vaart, Lemma 7.6; the proof above gives the multivariate line-segment argument and the integrated convergence step. ◻</p>
+<p>The integrated remainder bound is exactly the QMD condition. <a href="#result-3">Theorem 3</a> is the sufficient condition of van der Vaart, Lemma 7.6; the proof above gives the multivariate line-segment argument and the integrated convergence step. ◻</p>
 </div>
 <h2 id="qmd-examples">Examples and support changes</h2>
 <p>For testing a simple null {% raw %}<span class="math inline">\(\theta_0\)</span>{% endraw %} against {% raw %}<span class="math inline">\(\theta_1\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(\mathcal L_N(\theta)=\prod_{i=1}^Np_\theta(X_i)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Lambda_N=\log\{\mathcal L_N(\theta_1)/\mathcal L_N(\theta_0)\}\)</span>{% endraw %}. The Neyman–Pearson test rejects for large {% raw %}<span class="math inline">\(\Lambda_N\)</span>{% endraw %}, with boundary randomization when needed to attain its level.</p>

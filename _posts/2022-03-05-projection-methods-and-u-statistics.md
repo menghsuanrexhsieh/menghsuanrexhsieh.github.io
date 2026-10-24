@@ -41,7 +41,7 @@ because the last squared norm is at least {% raw %}<span class="math inline">\(d
 </p>
 {% raw %}<div class="math display">\[\|T-S\|_2^2=\|T-\widehat S\|_2^2+\|\widehat S-S\|_2^2.\]</div>{% endraw %}
 <p>
-This proves optimality and uniqueness. Taking {% raw %}<span class="math inline">\(S=1\)</span>{% endraw %} proves equality of means; the covariance assertion then follows from the same orthogonality. ◻</p>
+The Pythagorean identity proves optimality and uniqueness of the projection. Taking {% raw %}<span class="math inline">\(S=1\)</span>{% endraw %} proves equality of means; the covariance assertion then follows from the same orthogonality. ◻</p>
 </div>
 
 <div id="result-3" class="theorem" data-note-number="3" data-note-kind="Theorem">
@@ -107,7 +107,7 @@ In particular, if {% raw %}<span class="math inline">\(T\)</span>{% endraw %} is
 </p>
 {% raw %}<div class="math display">\[\sum_{B:C\subseteq B\subseteq A}(-1)^{|B|-|C|}=(1-1)^{|A|-|C|},\]</div>{% endraw %}
 <p>
-which is one when {% raw %}<span class="math inline">\(C=A\)</span>{% endraw %} and zero otherwise. This proves the identity and the direct-sum decomposition. It also proves the source's assertion that {% raw %}<span class="math inline">\(T\perp\mathcal H_B\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(B\subseteq A\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(E_AT=0\)</span>{% endraw %}. For a general {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, the sum over {% raw %}<span class="math inline">\(B\subseteq A\)</span>{% endraw %} is {% raw %}<span class="math inline">\(E_AT\)</span>{% endraw %}, not {% raw %}<span class="math inline">\(T\)</span>{% endraw %} unless {% raw %}<span class="math inline">\(T\)</span>{% endraw %} is {% raw %}<span class="math inline">\(X_A\)</span>{% endraw %}-measurable. ◻</p>
+which is one when {% raw %}<span class="math inline">\(C=A\)</span>{% endraw %} and zero otherwise. The coefficient calculation proves the conditional-expectation identity and the direct-sum decomposition in <a href="#result-6">Theorem 6</a>. It also proves the source's assertion that {% raw %}<span class="math inline">\(T\perp\mathcal H_B\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(B\subseteq A\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(E_AT=0\)</span>{% endraw %}. For a general {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, the sum over {% raw %}<span class="math inline">\(B\subseteq A\)</span>{% endraw %} is {% raw %}<span class="math inline">\(E_AT\)</span>{% endraw %}, not {% raw %}<span class="math inline">\(T\)</span>{% endraw %} unless {% raw %}<span class="math inline">\(T\)</span>{% endraw %} is {% raw %}<span class="math inline">\(X_A\)</span>{% endraw %}-measurable. ◻</p>
 </div>
 <p>The first components are {% raw %}<span class="math inline">\(P_\emptyset T=ET\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_{\{i\}}T=E[T\mid X_i]-ET\)</span>{% endraw %}, and
 </p>
@@ -158,7 +158,7 @@ This is the Hájek projection of the centered statistic; {% raw %}<span class="m
 </p>
 {% raw %}<div class="math display">\[\sqrt n(U_n-\theta-\widehat U_n)\to0\quad\text{in }L^2,\qquad \sqrt n(U_n-\theta)\Rightarrow \mathcal{N}(0,r^2\zeta_1),\]</div>{% endraw %}
 <p>
-where {% raw %}<span class="math inline">\(\zeta_1=E h_1(X_1)^2\)</span>{% endraw %}. The result includes {% raw %}<span class="math inline">\(\zeta_1=0\)</span>{% endraw %}, with a point mass at zero as the limit; a different scaling may then be needed for a nondegenerate limit.</p>
+where {% raw %}<span class="math inline">\(\zeta_1=E h_1(X_1)^2\)</span>{% endraw %}. <a href="#Thm:U-statistic-thm1">Theorem 10</a> includes {% raw %}<span class="math inline">\(\zeta_1=0\)</span>{% endraw %}, with a point mass at zero as the limit; a different scaling may then be needed for a nondegenerate limit.</p>
 </div>
 <div class="proof">
 <p><em>Proof.</em> For {% raw %}<span class="math inline">\(0\le c\le r\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(\zeta_c\)</span>{% endraw %} be the covariance of two kernel evaluations sharing exactly {% raw %}<span class="math inline">\(c\)</span>{% endraw %} observations and using independent observations otherwise. Conditional independence given the shared variables gives

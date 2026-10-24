@@ -11,7 +11,7 @@ redirect_from: ["/2022/10/29/more-on-the-uniform-law-of-large-numbers/", "/2022/
 
 <div class="note-content" markdown="0">
 
-<p>Uniform convergence requires the largest empirical error over a function class to vanish. A finite cover separates this error into approximation within the cover and fluctuation at the centers. Symmetrization lets us measure the latter by correlation with random signs. We will use these two descriptions to give sufficient conditions for a uniform law and to examine classes that can fit random signs too well.</p>
+<p>Uniform convergence requires the largest empirical error over a function class to vanish. A finite cover separates this error into approximation within the cover and fluctuation at the centers. Symmetrization lets us measure fluctuations at the cover centers by correlation with random signs. We will use these two descriptions to give sufficient conditions for a uniform law and to examine classes that can fit random signs too well.</p>
 
 <p>Let {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %} be i.i.d. with law {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. For a function {% raw %}<span class="math inline">\(f\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(Pf=\mathbb{E} f(X_1)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_nf=n^{-1}\sum_{i=1}^n f(X_i)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathbb G_nf=\sqrt n(P_n-P)f\)</span>{% endraw %}. Rademacher variables are independent random signs, independent of the observations. See the <a href="{% post_url 2022-09-03-empirical-processes-tensorization-and-the-entropy-method %}">empirical-process setup</a> for measurability conventions.</p>
 
@@ -154,7 +154,7 @@ redirect_from: ["/2022/10/29/more-on-the-uniform-law-of-large-numbers/", "/2022/
 <p> with {% raw %}<span class="math inline">\(\mathbf P\,\,\!\!\)</span>{% endraw %}-probability at least {% raw %}<span class="math inline">\(1 - e^{-\frac{n\delta^2}{2c^2}}\)</span>{% endraw %}. Consequently, if {% raw %}<span class="math inline">\(\mathcal R_n (\mathcal F) = o(1)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\lVert \widehat P_n - \mathbf P\,\,\!\!\rVert_{\mathcal F} \xrightarrow{\rm a.s.} 0\)</span>{% endraw %}.</p>
 
 </div>
-<p>To prove this result, we need a preliminary lemma.</p>
+<p>The proof of <a href="#thm:upper-bound-radamacher-on-c-unif-bded-function-class">Theorem 9</a> uses the convexity inequalities in <a href="#lem:supremum-convexity-bounds">Lemma 10</a>.</p>
 
 <div id="lem:supremum-convexity-bounds" class="lemma" data-note-number="10" data-note-kind="Lemma">
 <p><strong>Lemma 10</strong> (Convex functions and supremum of random variables).  For any function {% raw %}<span class="math inline">\(f \in \mathcal F\)</span>{% endraw %} (any function class), {% raw %}<span class="math inline">\(\sup_{f \in \mathcal F} \mathbb{E} f(X) \leq \mathbb{E} \sup_{f \in \mathcal F} |f(X)|\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(\Phi\)</span>{% endraw %} is any nondecreasing and convex function, then {% raw %}<span class="math inline">\(\sup_{f \in \mathcal F} \Phi (\mathbb{E} f(X)) \leq \mathbb{E} \Phi( \sup_{f \in \mathcal F} |f(X)| )\)</span>{% endraw %}.</p>
@@ -184,7 +184,7 @@ redirect_from: ["/2022/10/29/more-on-the-uniform-law-of-large-numbers/", "/2022/
 <div id="thm:lower-bound-radamacher-on-c-unif-bded-function-class" class="theorem" data-note-number="11" data-note-kind="Theorem">
 <p><strong>Theorem 11 (lower bound on the uniform empirical error).</strong> For a measurable class with {% raw %}<span class="math inline">\(|f|\le c\)</span>{% endraw %}, {% raw %}<span class="math inline">\(c&gt;0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\delta\ge0\)</span>{% endraw %}, with probability at least {% raw %}<span class="math inline">\(1-e^{-n\delta^2/(2c^2)}\)</span>{% endraw %},</p>
 {% raw %}<div class="math display">\[\|P_n-P\|_{\mathcal F}\ge\frac12\mathcal R_n(\mathcal F)-\frac{\sup_{f\in\mathcal F}|Pf|}{2\sqrt n}-\delta.\]</div>{% endraw %}
-<p>Together with Theorem 9, this implies that a uniformly bounded class obeys the strong uniform law if and only if {% raw %}<span class="math inline">\(\mathcal R_n(\mathcal F)\to0\)</span>{% endraw %}.</p>
+<p>Together, Theorems 9 and 11 imply that a uniformly bounded class obeys the strong uniform law if and only if {% raw %}<span class="math inline">\(\mathcal R_n(\mathcal F)\to0\)</span>{% endraw %}.</p>
 </div>
 <p>We need a preliminary step in order to establish the lower bound of Rademacher complexity.</p>
 

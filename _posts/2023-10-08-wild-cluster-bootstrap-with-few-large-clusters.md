@@ -11,7 +11,7 @@ redirect_from: ["/2025/01/11/wild-cluster-bootstrap-with-few-large-clusters/"]
 
 <div class="note-content" markdown="0">
 
-<p>Suppose an experiment has only a few clusters, each containing many observations. More observations can improve the approximation to each cluster’s score, but do not create more independent clusters. The result of <span class="citation" data-cites="canay_wild_2021"><a href="#ref-canay_wild_2021" role="doc-biblioref">Canay, Santos, and Shaikh (2021)</a></span> uses the approximate sign symmetry of those few scores to construct a wild-bootstrap test.</p>
+<p>Suppose an experiment has only a few clusters, each containing many observations. More observations can improve the approximation to each cluster’s score, but do not create more independent clusters. The wild-bootstrap validity result of <span class="citation" data-cites="canay_wild_2021"><a href="#ref-canay_wild_2021" role="doc-biblioref">Canay, Santos, and Shaikh (2021)</a></span> uses the approximate sign symmetry of those few scores to construct a wild-bootstrap test.</p>
 
 <h3 data-note-section="1" id="12-0-the-test-and-its-guarantee">1. The test and its guarantee</h3>
 <p>Consider {% raw %}<span class="math inline">\(Y_{ij}=Z_{ij}&#x27;\beta+W_{ij}&#x27;\gamma+\varepsilon_{ij}\)</span>{% endraw %} in clusters {% raw %}<span class="math inline">\(j=1,\ldots,q\)</span>{% endraw %}, and test {% raw %}<span class="math inline">\(c&#x27;\beta=\lambda\)</span>{% endraw %}. Fit the restricted regression, obtaining fitted values and residuals {% raw %}<span class="math inline">\(\widehat\varepsilon^r_{ij}\)</span>{% endraw %}. For each {% raw %}<span class="math inline">\(g\in\{-1,1\}^q\)</span>{% endraw %}, form</p>

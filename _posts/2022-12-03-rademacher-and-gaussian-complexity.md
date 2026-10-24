@@ -86,7 +86,7 @@ redirect_from: ["/2022/12/03/brief-digression-to-symmetrized-processes/", "/2022
 
 {% raw %}<div class="math display">\[\log N(a,T)\le C S(T)^2\sum_{j=0}^{k-1}(R2^{-j})^{-2}\le C'\frac{S(T)^2}{a^2}.\]</div>{% endraw %}
 
-<p>The final inequality uses {% raw %}<span class="math inline">\(R2^{-(k-1)}&gt;a\)</span>{% endraw %}. This proves the theorem, with the same absolute-supremum convention and all scale factors accounted for. ◻</p>
+<p>The final inequality uses {% raw %}<span class="math inline">\(R2^{-(k-1)}&gt;a\)</span>{% endraw %}. The refinement-count estimate proves the covering-entropy bound, with the same absolute-supremum convention and all scale factors accounted for. ◻</p>
 
 <h3 data-note-section="1" id="gaussian-complexity">1. Gaussian Complexity</h3>
 <p>For comparison with one-sided suprema, define the Gaussian width {% raw %}<span class="math inline">\(\mathcal G(T)=\mathbb E\sup_{t\in T}\langle g,t\rangle\)</span>{% endraw %}. Bounded subsets of finite-dimensional Euclidean space have a countable dense subset and the linear processes are continuous, so these suprema are measurable. Absolute suprema correspond to replacing {% raw %}<span class="math inline">\(T\)</span>{% endraw %} by {% raw %}<span class="math inline">\(T\cup(-T)\)</span>{% endraw %}.</p>
@@ -124,7 +124,7 @@ redirect_from: ["/2022/12/03/brief-digression-to-symmetrized-processes/", "/2022
 <p>Apply Sudakov–Fernique on finite subsets. A countable dense subset of {% raw %}<span class="math inline">\(T\)</span>{% endraw %} determines both suprema because the maps are continuous. Finite maxima converge, and are dominated by an integrable constant times {% raw %}<span class="math inline">\(\|g\|_2\)</span>{% endraw %}, proving the assertion. The same finite-subset interpretation extends it to unbounded sets. ◻</p>
 
 <div id="ex:subgaussian-matrix-ell-2" class="example" data-note-number="7" data-note-kind="Example">
-<p>Example 7 (Subgaussian matrix norm). Let {% raw %}<span class="math inline">\(W\in\mathbb R^{n\times d}\)</span>{% endraw %} have independent centered entries with {% raw %}<span class="math inline">\(\mathbb Ee^{\lambda W_{ij}}\le e^{\lambda^2/2}\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(\|W\|_{\mathrm{op}}\)</span>{% endraw %} for its largest singular value and {% raw %}<span class="math inline">\(\|W\|_F^2=\sum_j\sigma_j(W)^2\)</span>{% endraw %}. They need not agree. For the compact set {% raw %}<span class="math inline">\(\mathcal M=\{uv^\top:u\in S^{n-1},v\in S^{d-1}\}\)</span>{% endraw %},</p>
+<p>Example 7 (Subgaussian matrix norm). Let {% raw %}<span class="math inline">\(W\in\mathbb R^{n\times d}\)</span>{% endraw %} have independent centered entries with {% raw %}<span class="math inline">\(\mathbb Ee^{\lambda W_{ij}}\le e^{\lambda^2/2}\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(\|W\|_{\mathrm{op}}\)</span>{% endraw %} for its largest singular value and {% raw %}<span class="math inline">\(\|W\|_F^2=\sum_j\sigma_j(W)^2\)</span>{% endraw %}. The operator and Frobenius norms need not agree. For the compact set {% raw %}<span class="math inline">\(\mathcal M=\{uv^\top:u\in S^{n-1},v\in S^{d-1}\}\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[\|W\|_{\mathrm{op}}=\sup_{\Theta\in\mathcal M}\langle W,\Theta\rangle_F,\qquad \mathbb Ee^{\lambda\langle W,A\rangle_F}\le e^{\lambda^2\|A\|_F^2/2}.\]</div>{% endraw %}
 

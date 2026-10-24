@@ -23,9 +23,9 @@ redirect_from: ["/2025/05/08/spillover-effects-with-missing-network-links/", "/2
 m(d,s,n,z)=\sum_{s^*,n^*}m^*(d,s^*,n^*,z)
 P(S_i^*=s^*,N_i^*=n^*\mid S_i=s,N_i=n,Z_i=z).
 \]</div>{% endraw %}
-<p>An own-treatment comparison holds the latent-exposure mixture fixed under the stated assumptions. A comparison between observed spillover cells changes that mixture. These two contrasts therefore need not have the same interpretation.</p>
 
 </div>
+<p><em>Remark.</em> Under the assumptions of <a href="#missing-link-mixture">Theorem 1</a>, an own-treatment comparison holds the latent-exposure mixture fixed. A comparison between observed spillover cells changes that mixture. These two contrasts therefore need not have the same interpretation.</p>
 <p>Iterated expectations gives a mixture in any case. The substantive step is using the assumptions to show that its component mean is still {% raw %}<span class="math inline">\(m^*\)</span>{% endraw %} after conditioning on the incomplete network.</p>
 
 <h3 data-note-section="2" id="10-520-why-spillover-bias-has-no-automatic-sign">2. Why spillover bias has no automatic sign</h3>

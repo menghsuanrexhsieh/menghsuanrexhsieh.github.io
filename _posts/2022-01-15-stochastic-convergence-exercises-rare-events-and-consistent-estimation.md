@@ -223,7 +223,7 @@ n\ge N_m\quad\Longrightarrow\quad |X_n|\le\frac1m.
 {% raw %}<div class="math display">\[
 {X_n\xrightarrow{\mathrm{a.s.}}0.}
 \]</div>{% endraw %}
-<p>This is the first Borel–Cantelli argument; independence is unnecessary.</p>
+<p><em>Remark.</em> The proof of <a href="#scq-consistency-exercise-20">almost-sure convergence from summable deviations</a> uses the first Borel–Cantelli lemma; it does not assume independence of the deviation events.</p>
 
 <p>With {% raw %}<span class="math inline">\(E_{n,m}=\{|X_n|&gt;1/m\}\)</span>{% endraw %}, the exact event identity is</p>
 

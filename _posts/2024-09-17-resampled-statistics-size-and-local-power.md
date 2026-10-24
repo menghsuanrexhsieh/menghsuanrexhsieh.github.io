@@ -264,7 +264,7 @@ R_Mb_M\asymp n\omega_n^2,
 
 <p>The matched error bound permits {% raw %}<span class="math inline">\(\sqrt{R_U}b_U\asymp n\omega_n\)</span>{% endraw %} for U, whereas M is limited to {% raw %}<span class="math inline">\(R_Mb_M\asymp n\omega_n^2\)</span>{% endraw %}. Taking square roots gives the displayed detection scales. Both remain larger than {% raw %}<span class="math inline">\(n^{-1/2}\)</span>{% endraw %}, so neither recovers the sensitivity of a conventional mean test with an estimable sampling variance.</p>
 
-<p>There is a qualification in the term “rate-dominance.” Song's definition requires the common size-error order to be sharp, as well as requiring the ratio of detection scales to vanish. The proposition proves the latter implication conditional on the stated calibration inputs. Matching two upper bounds alone does not prove that they describe the exact size errors. It also does not establish that U has greater power in every finite sample.</p>
+<p>There is a qualification in the term “rate-dominance.” Song's definition requires the common size-error order to be sharp, as well as requiring the ratio of detection scales to vanish. Proposition 1 proves that the ratio of detection scales vanishes conditional on the stated calibration inputs. Matching two upper bounds alone does not prove that the upper bounds describe the exact size errors. It also does not establish that U has greater power in every finite sample.</p>
 
 <h3 data-note-section="6" id="10-266-how-to-read-the-result-in-practice">6. A worked tuning comparison</h3>
 

@@ -314,7 +314,7 @@ h_G^2\le W_g(2-W_g),\qquad
 =\frac{h_G^2}{1+\sqrt{1-h_G^2}}
 \ge\frac{h_G^2}{2}.
 \]</div>{% endraw %}
-<p>This proves the stated consequence. ◻</p>
+<p>The rationalized expression gives the quadratic Cheeger lower bound in (13). ◻</p>
 
 </div>
 <p>The proof also produces a cut from an eigenfunction. This conclusion is useful when a small spectral gap is known but a minimizing cut is not.</p>
@@ -379,7 +379,7 @@ g_G^{\mathrm{small}}
 \frac{\operatorname{Vol}(\delta X)}{\operatorname{Vol}(X)},
 \qquad g_G\le g_G^{\mathrm{small}}.
 \]</div>{% endraw %}
-<p>They need not agree. In {% raw %}<span class="math inline">\(K_3\)</span>{% endraw %}, a singleton has ratio {% raw %}<span class="math inline">\(4/2=2\)</span>{% endraw %}, whereas its two-vertex complement has ratio {% raw %}<span class="math inline">\(2/2=1\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(g_{K_3}=1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(g_{K_3}^{\mathrm{small}}=2\)</span>{% endraw %}.</p>
+<p>The expansion constants {% raw %}<span class="math inline">\(g_G\)</span>{% endraw %} and {% raw %}<span class="math inline">\(g_G^{\mathrm{small}}\)</span>{% endraw %} need not agree. In {% raw %}<span class="math inline">\(K_3\)</span>{% endraw %}, a singleton has ratio {% raw %}<span class="math inline">\(4/2=2\)</span>{% endraw %}, whereas its two-vertex complement has ratio {% raw %}<span class="math inline">\(2/2=1\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(g_{K_3}=1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(g_{K_3}^{\mathrm{small}}=2\)</span>{% endraw %}.</p>
 
 <p>Every crossing edge ends in {% raw %}<span class="math inline">\(\delta X\)</span>{% endraw %}, and every vertex of {% raw %}<span class="math inline">\(\delta X\)</span>{% endraw %} is incident to a crossing edge. Therefore</p>
 

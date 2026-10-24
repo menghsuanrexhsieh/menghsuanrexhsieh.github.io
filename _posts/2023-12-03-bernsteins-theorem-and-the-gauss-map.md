@@ -27,8 +27,9 @@ redirect_from: ["/2023/12/03/bernsteins-theorem/", "/2024/05/27/the-gauss-map-an
 <div id="lem:bernstein-prelim-curvature-estimate" class="lemma" data-note-number="2" data-note-kind="Lemma">
 <p><strong>Lemma 2.</strong> Let {% raw %}<span class="math inline">\(u\in C^2(\Omega)\)</span>{% endraw %} solve the minimal surface equation and let {% raw %}<span class="math inline">\(\Sigma=\operatorname{Graph}(u)\)</span>{% endraw %}. For every compactly supported Lipschitz function {% raw %}<span class="math inline">\(\eta\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %}, with support away from its boundary,</p>
 {% raw %}<div class="math display">\[\int_\Sigma |B|^2\eta^2\,dA\leq16\int_\Sigma|\nabla_\Sigma\eta|^2\,dA.\]</div>{% endraw %}
-<p> Here {% raw %}<span class="math inline">\(B\)</span>{% endraw %}, also written {% raw %}<span class="math inline">\(\operatorname{II}\)</span>{% endraw %}, is the vector-valued second fundamental form. No bound on {% raw %}<span class="math inline">\(|\nabla u|\)</span>{% endraw %} is required.</p>
+<p> Here {% raw %}<span class="math inline">\(B\)</span>{% endraw %}, also written {% raw %}<span class="math inline">\(\operatorname{II}\)</span>{% endraw %}, is the vector-valued second fundamental form.</p>
 </div>
+<p><em>Remark.</em> In the proof of <a href="#lem:bernstein-prelim-curvature-estimate">Lemma 2</a>, no bound on {% raw %}<span class="math inline">\(|\nabla u|\)</span>{% endraw %} is assumed.</p>
 
 <div class="proof">
 <p><em>Proof.</em> Orient {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} by its upward normal {% raw %}<span class="math inline">\(N\)</span>{% endraw %}. It takes values in the open upper hemisphere {% raw %}<span class="math inline">\(\{(X,Y,Z)\in\mathbb S^2:Z&gt;0\}\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(\omega\)</span>{% endraw %} be the standard outward-oriented sphere area form. A bounded primitive, rather than contractibility alone, is essential. An explicit choice is</p>
@@ -70,8 +71,9 @@ redirect_from: ["/2023/12/03/bernsteins-theorem/", "/2024/05/27/the-gauss-map-an
 <div id="prop:energy-graph-estimate" class="proposition" data-note-number="5" data-note-kind="Proposition">
 <p><strong>Proposition 5.</strong> Let {% raw %}<span class="math inline">\(u\in C^2(\Omega)\)</span>{% endraw %} solve the minimal surface equation, let {% raw %}<span class="math inline">\(R&gt;0,\ \kappa&gt;1\)</span>{% endraw %}, and assume the open planar disk {% raw %}<span class="math inline">\(D_{\kappa R}(0)\)</span>{% endraw %} is contained in {% raw %}<span class="math inline">\(\Omega\)</span>{% endraw %}. For ambient balls in {% raw %}<span class="math inline">\(\mathbb R^3\)</span>{% endraw %},</p>
 {% raw %}<div class="math display">\[\int_{B_{\sqrt\kappa R}(0)\cap\operatorname{Graph}(u)}|B|^2\,dA \leq\frac{128\pi}{\log\kappa}.\]</div>{% endraw %}
-<p> The constant is universal; the graph need not pass through the ambient origin.</p>
+<p> The constant is universal.</p>
 </div>
+<p><em>Remark.</em> In the proof of <a href="#prop:energy-graph-estimate">Proposition 5</a>, the graph is not assumed to pass through the ambient origin.</p>
 <div class="proof">
 <p><em>Proof.</em> Put {% raw %}<span class="math inline">\(a=\sqrt\kappa R\)</span>{% endraw %}, choose {% raw %}<span class="math inline">\(a&lt;b&lt;\kappa R\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(r=|x|\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\Sigma=\operatorname{Graph}(u)\)</span>{% endraw %}. Define</p>
 {% raw %}<div class="math display">\[\eta(r)= \begin{cases}1&amp;r\leq a,\\ \log(b/r)/\log(b/a)&amp;a&lt;r&lt;b,\\ 0&amp;r\geq b. \end{cases}\]</div>{% endraw %}

@@ -109,7 +109,7 @@ Rb\,\|a(\mu_0)\|^2\xrightarrow{P}0.
 =o_p(1).
 \]</div>{% endraw %}
 
-<p>Since {% raw %}<span class="math inline">\(b/n\to0\)</span>{% endraw %}, the covariance of {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} converges to {% raw %}<span class="math inline">\(I_p/p\)</span>{% endraw %}. Apply the conditional triangular-array CLT. One justification is to take a further subsequence along which the Lyapunov sum tends to zero and the covariance converges almost surely, then apply the ordinary CLT to those fixed arrays. Second, the drift in the central identity and the adjustment {% raw %}<span class="math inline">\(Rb/n\)</span>{% endraw %} vanish. Squaring the Gaussian norm proves the result. Bounded conditional characteristic functions also give unconditional convergence after taking expectations.</p>
+<p>Since {% raw %}<span class="math inline">\(b/n\to0\)</span>{% endraw %}, the covariance of {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} converges to {% raw %}<span class="math inline">\(I_p/p\)</span>{% endraw %}. Apply the conditional triangular-array CLT. One justification is to take a further subsequence along which the Lyapunov sum tends to zero and the covariance converges almost surely, then apply the ordinary CLT to those fixed arrays. Second, the drift in the central identity and the adjustment {% raw %}<span class="math inline">\(Rb/n\)</span>{% endraw %} vanish. Squaring the Gaussian norm proves the chi-square limit in <a href="#ordering-free-mean-limit">Proposition 1</a>. Bounded conditional characteristic functions also give unconditional convergence after taking expectations.</p>
 
 <p>The proposition separates the proof obligations. Independent permutations provide the conditional independence needed for a CLT. Dependence and moment assumptions on the original observations must still establish the displayed moment and drift bounds. The remainder of the post explains how local dependence supplies that control.</p>
 
@@ -201,7 +201,7 @@ c_n(A)=\min_{\{A_1,A_2\}\in\mathcal P(A)}c_n(A_1,A_2),
 =\frac{k!(k-1)!d_n^{k-1}}{(n-1)\cdots(n-k+1)}.
 \]</div>{% endraw %}
 
-<p>This proves the bound. A new vertex may attach to any earlier vertex, so the count includes stars as well as paths. For pairs, direct edge counting gives the sharper inequality {% raw %}<span class="math inline">\(\lambda_n(2)\le d_n/(n-1)\)</span>{% endraw %}.</p>
+<p>The connected-tuple count proves the dependence bound in <a href="#ordering-free-graph">Proposition 2</a>. A new vertex may attach to any earlier vertex, so the count includes stars as well as paths. For pairs, direct edge counting gives the sharper inequality {% raw %}<span class="math inline">\(\lambda_n(2)\le d_n/(n-1)\)</span>{% endraw %}.</p>
 
 <span id="10-235-two-calculations-with-random-subsets"></span>
 <p>The same counting explains the small-subsample heuristic. Let {% raw %}<span class="math inline">\(N_E\)</span>{% endraw %} be the number of graph edges among {% raw %}<span class="math inline">\(b\)</span>{% endraw %} uniformly selected distinct observations. Then</p>
@@ -283,7 +283,7 @@ T_U(\mu)=S_U(\mu)-\frac{\sqrt R(b-1)}n.
 =\frac1n.
 \]</div>{% endraw %}
 
-<p>Substitute this into the quadratic drift in each statistic to obtain the adjustments. They are not exact conditional centerings. In particular, {% raw %}<span class="math inline">\(\mathbb E_\pi U_r(\overline X)=-(b-1)/(n-1)\)</span>{% endraw %}. The drift restrictions make this finite-population term and the displayed adjustments asymptotically negligible, while the adjustments can affect finite-sample calibration.</p>
+<p>Substitute the expected squared mean-estimation error into the quadratic drift in each statistic to obtain the adjustments. The adjustments {% raw %}<span class="math inline">\(Rb/n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sqrt R(b-1)/n\)</span>{% endraw %} are not exact conditional centerings. In particular, {% raw %}<span class="math inline">\(\mathbb E_\pi U_r(\overline X)=-(b-1)/(n-1)\)</span>{% endraw %}. The drift restrictions make this finite-population term and the displayed adjustments asymptotically negligible, while the adjustments can affect finite-sample calibration.</p>
 
 <p>Under the null, the tested statistic and its empirical reference approach the same continuous law: the conditional CLT gives the reference distribution, and the drift bounds justify replacing the empirical center by the null mean. The chi-square and nondegenerate normal limits are strictly increasing near their relevant quantiles, so those quantiles converge; {% raw %}<span class="math inline">\(L\to\infty\)</span>{% endraw %} removes simulation error. This gives asymptotic calibration. Relabeling invariance of the dependence coefficient supplies neither exchangeability of the observations nor an exact finite-sample permutation test. The <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}#resampling-size-approximation">next post</a> examines the stronger approximation needed to compare rates of size error.</p>
 
@@ -293,7 +293,7 @@ T_U(\mu)=S_U(\mu)-\frac{\sqrt R(b-1)}n.
 
 <p>A common shock can be accommodated by defining the correlations conditional on a sigma-field {% raw %}<span class="math inline">\(\mathcal C_n\)</span>{% endraw %}, provided the corresponding conditional moment and dependence conditions hold. The mean-inference setup also requires {% raw %}<span class="math inline">\(\mathbb E[X_i\mid\mathcal C_n]=\mu_0\)</span>{% endraw %}. A shock that changes variances while preserving this conditional mean can fit the framework. An additive shock {% raw %}<span class="math inline">\(X_i=\mu_0+V+\varepsilon_i\)</span>{% endraw %} generally does not: conditioning on {% raw %}<span class="math inline">\(V\)</span>{% endraw %} leaves the conditional mean {% raw %}<span class="math inline">\(\mu_0+V\)</span>{% endraw %}, and random subsampling cannot remove that shared displacement.</p>
 
-<p>The dependence bounds above supply the moment and drift control needed by the conditional limit argument. They also limit how much signal it can accumulate. The <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">size and local-power post</a> takes up that tradeoff, keeping the null error and the response to a false null in the same calculation.</p>
+<p>The dependence bounds above supply the moment and drift control needed by the conditional limit argument. The dependence bounds also limit how much signal the resampled statistic can accumulate. The <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">size and local-power post</a> takes up that tradeoff, keeping the null error and the response to a false null in the same calculation.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-song_ordering-free_2018" class="csl-entry" role="listitem">

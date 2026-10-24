@@ -26,7 +26,7 @@ r_s(R)\triangleq\min_{\|v\|_0\leq s}
 <p>For fixed constants in the approximation requirement {% raw %}<span class="math inline">\(r_s(R)\lesssim s/p\)</span>{% endraw %}, a random rotation is very unlikely to preserve a sparse approximation when {% raw %}<span class="math inline">\(s\)</span>{% endraw %} is small relative to {% raw %}<span class="math inline">\(p\)</span>{% endraw %}. Under the paper’s sparsity regime {% raw %}<span class="math inline">\(s=o(\sqrt p/\log p)\)</span>{% endraw %}, the probability decays on a super-exponential scale in {% raw %}<span class="math inline">\(p\)</span>{% endraw %}; its log is bounded above at the {% raw %}<span class="math inline">\(-p\log p\)</span>{% endraw %} scale.</p>
 
 </div>
-<p>The result concerns random representations of one fixed function. A scientifically chosen basis may still admit a sparse approximation; that choice requires a justification beyond invariance of the underlying regression.</p>
+<p><a href="#sparsity-rotation">Proposition 1</a> concerns random representations of one fixed function. A scientifically chosen basis may still admit a sparse approximation; that choice requires a justification beyond invariance of the underlying regression.</p>
 
 <h3 data-note-section="2" id="22-0-the-geometric-calculation">2. The geometric calculation</h3>
 <p>Substituting the rotated variables leaves prediction error equal to</p>

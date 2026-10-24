@@ -53,7 +53,7 @@ redirect_from: ["/2024/01/06/mixing-conditions-and-a-nonmixing-ar-1-process/", "
     
 \end{aligned}\]</div>{% endraw %}
 </div>
-<p>The coefficient comparisons are recorded in <a href="https://www2.stat.duke.edu/~scs/Projects/Stable/Conditions/BradleyStrongMixingSurvey2005.pdf">Bradley (2005), §1, inequalities (1.10)–(1.13)</a>. They imply that convergence to zero of any of the other listed coefficients implies strong mixing.</p>
+<p>The coefficient comparisons are recorded in <a href="https://www2.stat.duke.edu/~scs/Projects/Stable/Conditions/BradleyStrongMixingSurvey2005.pdf">Bradley (2005), §1, inequalities (1.10)–(1.13)</a>. The coefficient comparisons in <a href="#lem:mixing-coefficients-comparison">Lemma 3</a> imply that convergence to zero of any of the other listed coefficients implies strong mixing.</p>
 
 <p>Some of the comparisons in Lemma 3 are immediate from their finite partitions. For {% raw %}<span class="math inline">\(A\in\mathcal A\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B\in\mathcal B\)</span>{% endraw %}, the two-by-two partitions {% raw %}<span class="math inline">\((A,A^c)\)</span>{% endraw %} and {% raw %}<span class="math inline">\((B,B^c)\)</span>{% endraw %} have four absolute covariance entries of the same size, giving {% raw %}<span class="math inline">\(\beta\ge2\alpha\)</span>{% endraw %}. For arbitrary partitions, each conditional row has total absolute deviation at most {% raw %}<span class="math inline">\(2\phi\)</span>{% endraw %}; averaging the rows gives {% raw %}<span class="math inline">\(\beta\le\phi\)</span>{% endraw %}. Also</p>
 
@@ -92,7 +92,7 @@ redirect_from: ["/2024/01/06/mixing-conditions-and-a-nonmixing-ar-1-process/", "
 
 {% raw %}<div class="math display">\[\operatorname{Cov}(X,Y)=\int_0^{2C_1}\int_0^{2C_2}\{P(X+C_1&gt;s,Y+C_2&gt;t)-P(X+C_1&gt;s)P(Y+C_2&gt;t)\}\,dt\,ds.\]</div>{% endraw %}<p>The integrand is bounded in absolute value by {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}, proving (1).</p>
 
-<p>For (2), only {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} remains bounded. If {% raw %}<span class="math inline">\(\alpha=0\)</span>{% endraw %}, the sigma-fields are independent and the covariance is zero. If {% raw %}<span class="math inline">\(\|X\|_p=0\)</span>{% endraw %}, the result is also immediate. Otherwise set {% raw %}<span class="math inline">\(A=\|X\|_p\alpha^{-1/p}\)</span>{% endraw %} and decompose {% raw %}<span class="math inline">\(X=X_0+X_1\)</span>{% endraw %} with {% raw %}<span class="math inline">\(X_0=X1_{\{|X|\leq A\}}\)</span>{% endraw %}. Then</p>
+<p>For (2), only {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} remains bounded. If {% raw %}<span class="math inline">\(\alpha=0\)</span>{% endraw %}, the sigma-fields are independent and the covariance is zero. If {% raw %}<span class="math inline">\(\|X\|_p=0\)</span>{% endraw %}, the covariance bound (2) is also immediate. Otherwise set {% raw %}<span class="math inline">\(A=\|X\|_p\alpha^{-1/p}\)</span>{% endraw %} and decompose {% raw %}<span class="math inline">\(X=X_0+X_1\)</span>{% endraw %} with {% raw %}<span class="math inline">\(X_0=X1_{\{|X|\leq A\}}\)</span>{% endraw %}. Then</p>
 
 {% raw %}<div class="math display">\[|\operatorname{Cov}(X,Y)|\leq4AC_2\alpha+2C_2\mathbb{E}|X_1|\leq4AC_2\alpha+2C_2A^{1-p}\|X\|_p^p=6C_2\|X\|_p\alpha^{1-1/p}.\]</div>{% endraw %}<p>For (3), neither variable need be bounded. Let {% raw %}<span class="math inline">\(r=p/(p-1)&lt;q\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B=\|Y\|_q\alpha^{-1/q}\)</span>{% endraw %}. Split {% raw %}<span class="math inline">\(Y=Y_0+Y_1\)</span>{% endraw %} at {% raw %}<span class="math inline">\(B\)</span>{% endraw %}. The preceding bound and Hölder give</p>
 
@@ -209,7 +209,8 @@ redirect_from: ["/2024/01/06/mixing-conditions-and-a-nonmixing-ar-1-process/", "
 {% raw %}<div class="math display">\[
 \frac1n\sum_{i=1}^n Z_i\longrightarrow0\quad\text{in }L^2,
 \]</div>{% endraw %}
-<p>and therefore in probability. Stationarity and summability of {% raw %}<span class="math inline">\(\psi_m\)</span>{% endraw %} are not required for this conclusion.</p>
+<p>and therefore in probability.</p>
+<p><em>Remark.</em> In the proof of the <a href="#a-law-of-large-numbers">adapted mixingale law of large numbers</a>, stationarity of the sequence and summability of the coefficients {% raw %}<span class="math inline">\(\psi_m\)</span>{% endraw %} are not assumed.</p>
 <p><em>Proof.</em> For {% raw %}<span class="math inline">\(i&lt;j\)</span>{% endraw %}, adaptedness and Cauchy–Schwarz give</p>
 {% raw %}<div class="math display">\[
 |\mathbb E[Z_iZ_j]|
@@ -224,7 +225,7 @@ redirect_from: ["/2024/01/06/mixing-conditions-and-a-nonmixing-ar-1-process/", "
 \leq\frac{C^2}{n}+\frac{2C^2}{n}\sum_{k=1}^{n-1}\psi_k\longrightarrow0.
 \]</div>{% endraw %}
 <p>For the last limit, fix {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, separate the first {% raw %}<span class="math inline">\(K\)</span>{% endraw %} terms, and bound the remaining average by {% raw %}<span class="math inline">\(\sup_{k&gt;K}\psi_k\)</span>{% endraw %}. First send {% raw %}<span class="math inline">\(n\to\infty\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(K\to\infty\)</span>{% endraw %}. Chebyshev gives convergence in probability. □</p>
-<p>This result justifies consistency of a sample mean under a conditional-prediction restriction. It supplies neither a rate nor a central limit theorem. If {% raw %}<span class="math inline">\(\sum_k\psi_k&lt;\infty\)</span>{% endraw %}, the same calculation gives an {% raw %}<span class="math inline">\(O(n^{-1})\)</span>{% endraw %} mean-square bound, but a normal approximation still requires further conditions.</p>
+<p>The adapted mixingale law of large numbers establishes consistency of the sample mean under the stated conditional-prediction restriction. The proposition supplies neither a convergence rate nor a central limit theorem. If {% raw %}<span class="math inline">\(\sum_k\psi_k&lt;\infty\)</span>{% endraw %}, the covariance-sum estimate in the proof gives an {% raw %}<span class="math inline">\(O(n^{-1})\)</span>{% endraw %} mean-square bound, but a normal approximation still requires further conditions.</p>
 <p>The next example also satisfies this law despite failing strong mixing. For its stationary Bernoulli AR(1) process, put {% raw %}<span class="math inline">\(\mu=p/(1-\rho)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(Z_t=X_t-\mu\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathcal G_t=\sigma(\varepsilon_j:j\leq t)\)</span>{% endraw %}. Iterating the recursion gives</p>
 {% raw %}<div class="math display">\[
 Z_t=\sum_{j=0}^{m-1}\rho^j(\varepsilon_{t-j}-p)+\rho^mZ_{t-m},

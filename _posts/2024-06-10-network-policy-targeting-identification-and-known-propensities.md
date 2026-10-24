@@ -71,7 +71,7 @@ e_i(\pi)=p^{a_i}(1-p)^{1-a_i}
 \]</div>{% endraw %}
 <p>This formula presumes the outcome depends on the neighbor count rather than their identities. At {% raw %}<span class="math inline">\(p=1/2\)</span>{% endraw %}, it becomes {% raw %}<span class="math inline">\(2^{-(k+1)}\binom{k}{t_i}\)</span>{% endraw %}. A policy inducing all treated neighbors has exponentially small matching probability, while counts near {% raw %}<span class="math inline">\(k/2\)</span>{% endraw %} are much more common.</p>
 
-<p>A full-neighbor-vector exposure requires one exact configuration, whereas a count exposure pools all configurations with that count. This accounts for the binomial coefficient in the latter probability. Pooling improves overlap only when these configurations have the same outcome under the assumed model.</p>
+<p>A full-neighbor-vector exposure requires one exact configuration, whereas a count exposure pools all configurations with that count. This accounts for the binomial coefficient in the count-exposure probability. Pooling improves overlap only when these configurations have the same outcome under the assumed model.</p>
 
 <h3 data-note-section="7" id="10-556-the-regret-decomposition-with-an-approximate-optimizer">7. The regret decomposition with an approximate optimizer</h3>
 <p>Let {% raw %}<span class="math inline">\(\pi^*\)</span>{% endraw %} maximize {% raw %}<span class="math inline">\(W\)</span>{% endraw %} over the specified class. Add and subtract empirical welfares:</p>

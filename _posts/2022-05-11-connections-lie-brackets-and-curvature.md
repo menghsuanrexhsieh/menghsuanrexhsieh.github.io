@@ -363,8 +363,8 @@ C(X,Y,Z,W)&amp;=C(Y,Z,W,X)+C(Z,X,W,Y)\\
 <div id="lem:covariant-derivative-symmetry" class="lemma" data-note-number="26" data-note-kind="Lemma">
 <p><strong>Lemma 26 (Commuting derivatives along a variation).</strong> Let {% raw %}<span class="math inline">\(F:(-\varepsilon,\varepsilon)\times[a,b]\to M\)</span>{% endraw %} be smooth, put {% raw %}<span class="math inline">\(S=\partial_sF\)</span>{% endraw %}, {% raw %}<span class="math inline">\(T=\partial_tF\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(V\)</span>{% endraw %} be a smooth vector field along {% raw %}<span class="math inline">\(F\)</span>{% endraw %}. Denoting the pullback covariant derivatives by {% raw %}<span class="math inline">\(D_s,D_t\)</span>{% endraw %}, our curvature convention gives</p>
 {% raw %}<div class="math display">\[D_tD_sV-D_sD_tV=R(S,T)V.\]</div>{% endraw %}
-<p> No immersion assumption on {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is needed.</p>
 </div>
+<p><em>Remark.</em> In the proof of <a href="#lem:covariant-derivative-symmetry">Lemma 26</a>, the variation map {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is not assumed to be an immersion.</p>
 <div class="proof">
 <p><em>Proof.</em> In ambient coordinates {% raw %}<span class="math inline">\(x^i\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(F^i=x^i\circ F\)</span>{% endraw %} and {% raw %}<span class="math inline">\(V=v^k\partial_k\)</span>{% endraw %}. Then</p>
 {% raw %}<div class="math display">\[(D_sv)^m=\partial_sv^m+\Gamma^m_{ik}(F)\,\partial_sF^i\,v^k,\]</div>{% endraw %}

@@ -44,7 +44,7 @@ redirect_from: ["/2022/12/17/random-matrix-theory/", "/2022/12/20/minimax-formul
 
 {% raw %}<div class="math display">\[\lambda_{i+j-1}(A+B)\le\lambda_i(A)+\lambda_j(B).\]</div>{% endraw %}
 
-<p>Indeed, intersect the spectral subspaces of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} with eigenvalues at most {% raw %}<span class="math inline">\(\lambda_i(A)\)</span>{% endraw %} and of {% raw %}<span class="math inline">\(B\)</span>{% endraw %} with eigenvalues at most {% raw %}<span class="math inline">\(\lambda_j(B)\)</span>{% endraw %}. Their intersection has dimension at least {% raw %}<span class="math inline">\(n-i-j+2\)</span>{% endraw %}, and every unit vector in it has {% raw %}<span class="math inline">\((A+B)\)</span>{% endraw %}-quotient at most the proposed bound. The minimum-over-subspaces formula proves it. Applying the result to negatives supplies the corresponding lower inequalities.</p>
+<p>Indeed, intersect the spectral subspaces of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} with eigenvalues at most {% raw %}<span class="math inline">\(\lambda_i(A)\)</span>{% endraw %} and of {% raw %}<span class="math inline">\(B\)</span>{% endraw %} with eigenvalues at most {% raw %}<span class="math inline">\(\lambda_j(B)\)</span>{% endraw %}. Their intersection has dimension at least {% raw %}<span class="math inline">\(n-i-j+2\)</span>{% endraw %}, and every unit vector in it has {% raw %}<span class="math inline">\((A+B)\)</span>{% endraw %}-quotient at most the proposed bound. The Courant–Fischer minimum-over-subspaces formula proves the upper eigenvalue bound. Applying that bound to the negatives of both matrices supplies the corresponding lower inequalities.</p>
 
 <span id="eq:ky-fan"></span>
 <p>Ky Fan's inequality is</p>
@@ -109,7 +109,7 @@ redirect_from: ["/2022/12/17/random-matrix-theory/", "/2022/12/20/minimax-formul
 
 {% raw %}<div class="math display">\[P\Bigl(\sum_i|Z_i|^2&gt;A^2d\Bigr)\le\exp\{d\log5-A^2d/8\}\le e^{-A^2d/16}\]</div>{% endraw %}
 
-<p>once {% raw %}<span class="math inline">\(A^2\ge16\log5\)</span>{% endraw %}. This proves the claim, including its uniformity over deterministic unit vectors. ◻</p>
+<p>once {% raw %}<span class="math inline">\(A^2\ge16\log5\)</span>{% endraw %}. The row-sum tail estimate proves <a href="#lem:prelim-uniformly-bounded-subgassian-rm">Lemma 4</a>, including its uniformity over deterministic unit vectors. ◻</p>
 
 <div id="lem:prelim-eps-net-bigvee-bound" class="lemma" data-note-number="5" data-note-kind="Lemma">
 <p>Lemma 5 (Net bound). If {% raw %}<span class="math inline">\(\mathcal{N}\)</span>{% endraw %} is an {% raw %}<span class="math inline">\(\epsilon\)</span>{% endraw %}-net of the unit sphere, with {% raw %}<span class="math inline">\(0&lt;\epsilon&lt;1\)</span>{% endraw %}, then every linear operator satisfies</p>

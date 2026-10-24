@@ -150,7 +150,7 @@ redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-fo
 
 {% raw %}<div class="math display">\[\langle f'(X),X\rangle_t=\left\langle\int_0^\cdot f''(X_s)\,dM_s,M\right\rangle_t=\int_0^tf''(X_s)\,d\langle M\rangle_s.\]</div>{% endraw %}
 
-<p>This proves the chain rule. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+<p>The covariation correction proves the Stratonovich chain rule. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 
 
 <p>Applying the chain rule with {% raw %}<span class="math inline">\(f(x)=x^2\)</span>{% endraw %} to {% raw %}<span class="math inline">\(X+Y\)</span>{% endraw %} and {% raw %}<span class="math inline">\(X-Y\)</span>{% endraw %} gives</p>

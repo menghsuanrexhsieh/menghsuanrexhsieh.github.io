@@ -21,8 +21,8 @@ redirect_from: ["/2022/08/27/sectional-curvature-and-ricci-curvature/", "/2022/0
 <div id="result-1" class="definition" data-note-number="1" data-note-kind="Definition">
 <p><strong>Definition 1</strong>.  An affine connection {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %} on {% raw %}<span class="math inline">\(TM\)</span>{% endraw %} is <em>flat</em> if for all {% raw %}<span class="math inline">\(p \in M\)</span>{% endraw %}, there exists a neighbourhood {% raw %}<span class="math inline">\(U = U_p\)</span>{% endraw %} with local coordinates such that <em>all</em> coordinate vector fields {% raw %}<span class="math inline">\(\pd{}{{x^i}}\)</span>{% endraw %} are parallel, i.e. {% raw %}<span class="math inline">\(\nabla \pd{}{{x^i}} = 0\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(i\)</span>{% endraw %}.</p>
 
-<p>This is the coordinate-flat convention. Many texts call a connection flat when its curvature alone vanishes; that weaker condition gives local parallel frames, which need not be coordinate frames if torsion is present. Theorem 2 includes torsion precisely because this definition asks for parallel <em>coordinate</em> fields.</p>
 </div>
+<p><em>Remark.</em> <a href="#result-1">Definition 1</a> uses the coordinate-flat convention. Many texts call a connection flat when its curvature alone vanishes; that weaker condition gives local parallel frames, which need not be coordinate frames if torsion is present. <a href="#result-2">Theorem 2</a> includes torsion precisely because Definition 1 asks for parallel <em>coordinate</em> fields.</p>
 <div id="result-2" class="theorem" data-note-number="2" data-note-kind="Theorem">
 <p><strong>Theorem 2</strong>.  An affine connection {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %} on {% raw %}<span class="math inline">\(TM\)</span>{% endraw %} is flat if and only if its curvature and torsion vanish identically.</p>
 

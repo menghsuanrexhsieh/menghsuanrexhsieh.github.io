@@ -48,7 +48,7 @@ X^{\perp\prime}Zgg&#x27;Z&#x27;Y^\perp.
 <p>With two exhaustive industries and an intercept, {% raw %}<span class="math inline">\(Z_2=1-Z_1\)</span>{% endraw %}. Consequently {% raw %}<span class="math inline">\(B=g_2+(g_1-g_2)Z_1\)</span>{% endraw %}, and residualizing the intercept leaves a multiple of one share. This makes the identifying restriction especially transparent.</p>
 
 <h3 data-note-section="3" id="34-0-how-to-read-rotemberg-weights">3. How to read Rotemberg weights</h3>
-<p>Large absolute weights identify component moments that can strongly transmit identifying failures to the aggregate. They help direct institutional scrutiny, but neither small weights nor large weights establish instrument validity or strength.</p>
+<p>Large absolute weights identify component moments that can strongly transmit identifying failures to the aggregate. Large absolute Rotemberg weights help direct institutional scrutiny, but neither small weights nor large weights establish instrument validity or strength.</p>
 
 <p>Under the paper’s additional heterogeneous-effect and monotonicity restrictions, an individual share IV can average unit effects with nonnegative weights proportional to residualized-share variance times first-stage responsiveness. Combining those estimates with negative Rotemberg weights need not preserve a convex-average interpretation.</p>
 

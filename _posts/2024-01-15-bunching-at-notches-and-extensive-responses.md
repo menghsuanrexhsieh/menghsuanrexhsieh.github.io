@@ -23,7 +23,7 @@ r&#x27;z-\Delta T\le rK,
 \quad\text{or}\quad
 z\le\frac{rK+\Delta T}{r&#x27;}.
 \]</div>{% endraw %}
-<p>If work is costly and consumption desirable, these choices are dominated by {% raw %}<span class="math inline">\(K\)</span>{% endraw %}: they involve more work and weakly less consumption. This conclusion does not require an elasticity estimate.</p>
+<p>If work is costly and consumption desirable, the earnings choices in the displayed interval are dominated by {% raw %}<span class="math inline">\(K\)</span>{% endraw %}: those choices involve more work and weakly less consumption. This conclusion does not require an elasticity estimate.</p>
 
 <h3 data-note-section="2" id="16-25-the-marginal-buncher">2. The marginal buncher</h3>
 <p>Use the isoelastic, quasi-linear utility from the <a href="{% post_url 2023-08-11-taxable-income-elasticities-and-what-kinks-identify %}">kink model</a>. An unconstrained interior choice on the upper segment is {% raw %}<span class="math inline">\(z_H=\eta(r&#x27;)^\varepsilon\)</span>{% endraw %}, with utility</p>
@@ -47,7 +47,7 @@ V_K(\eta)=rK-\frac{\eta^{-1/\varepsilon}K^{1+1/\varepsilon}}{1+1/\varepsilon}.
 <h3 data-note-section="3" id="16-25-what-the-hole-adds">3. What the hole adds</h3>
 <p>Frictionless optimization leaves the dominated interval empty. Observations in that interval indicate incomplete adjustment, imperfect information, measurement error, or another failure of the model. The paper combines the missing mass there with bunching, under its friction specification, to distinguish observed from structural responses.</p>
 
-<p>Both moments require a counterfactual density, and their interpretation depends on how frictions affect choices. They describe different parts of the response; two moments cannot identify an unrestricted friction model.</p>
+<p>The missing-mass and bunching moments both require a counterfactual density, and their interpretation depends on how frictions affect choices. Missing mass and bunching describe different parts of the response; two moments cannot identify an unrestricted friction model.</p>
 
 <p>For an upward jump in the budget set, the geometry changes. Moving across the threshold increases consumption but also requires more earnings; the dominated interval derived above no longer follows. Its indifference condition must be written afresh, with the correct sign of the transfer.</p>
 
@@ -64,7 +64,7 @@ z_D=K+\frac{J}{r&#x27;}.
 \]</div>{% endraw %}
 <p>For every {% raw %}<span class="math inline">\(z\in(K,z_D]\)</span>{% endraw %}, consumption is weakly lower than at {% raw %}<span class="math inline">\(K\)</span>{% endraw %} and work is strictly higher. Under increasing utility in consumption and decreasing utility in work, the threshold strictly dominates that entire region. At {% raw %}<span class="math inline">\(z_D\)</span>{% endraw %} consumption is equal but work is still higher, so domination includes the upper endpoint.</p>
 
-<p>The dominated region follows from the budget geometry and monotonicity of utility, without isoelastic preferences. Keep it distinct from the counterfactual interval: the former contains actual choices ruled out by optimization; the latter contains choices that bunchers would have made without the notch.</p>
+<p>The dominated region follows from the budget geometry and monotonicity of utility, without isoelastic preferences. Keep it distinct from the counterfactual interval: the dominated region contains actual choices ruled out by optimization; the counterfactual interval contains choices that bunchers would have made without the notch.</p>
 
 <h3 data-note-section="5" id="16-25-a-dimensionless-indifference-equation">5. A dimensionless indifference equation</h3>
 <p>Let {% raw %}<span class="math inline">\(v=z_H/K&gt;1\)</span>{% endraw %} be the upper-segment choice of the marginal buncher, and put {% raw %}<span class="math inline">\(\rho=r&#x27;/r\)</span>{% endraw %} and {% raw %}<span class="math inline">\(d=\Delta T/(rK)\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(z_H=\eta(r&#x27;)^\varepsilon\)</span>{% endraw %}, the type is {% raw %}<span class="math inline">\(\eta=vK/(r&#x27;)^\varepsilon\)</span>{% endraw %}. Substituting into the utility equality and dividing by {% raw %}<span class="math inline">\(rK\)</span>{% endraw %} gives</p>

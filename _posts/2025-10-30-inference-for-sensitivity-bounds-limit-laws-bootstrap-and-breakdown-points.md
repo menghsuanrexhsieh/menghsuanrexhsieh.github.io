@@ -17,9 +17,10 @@ redirect_from: ["/2025/06/30/estimating-sensitivity-bounds-and-their-limit-laws/
 <p>Estimate the propensity score by a correctly specified parametric model and the conditional quantile function by the paper’s quantile-regression specification. Evaluate the bound formulas at those estimates and integrate to obtain mean-effect bounds.</p>
 
 <div id="sensitivity-limit" class="theorem" data-note-number="1" data-note-kind="Theorem">
-<p><strong>Theorem 1</strong>. Under the paper’s sampling, specification, smoothness, overlap/moment, and nonsingularity conditions, the estimated CATE, ATE, and ATT bound endpoints have root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} limiting distributions. The limits are directional derivatives of the bound maps applied to the joint first-stage Gaussian limit, together with the empirical averaging term for marginal effects. They need not be Gaussian.</p>
+<p><strong>Theorem 1</strong>. Under the paper’s sampling, specification, smoothness, overlap/moment, and nonsingularity conditions, the estimated CATE, ATE, and ATT bound endpoints have root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} limiting distributions. The limits are directional derivatives of the bound maps applied to the joint first-stage Gaussian limit, together with the empirical averaging term for marginal effects.</p>
 
 </div>
+<p><em>Remark.</em> The limiting distributions in <a href="#sensitivity-limit">Theorem 1</a> need not be Gaussian, even though the first-stage limit is Gaussian.</p>
 <p>The implementation trims probability indices to {% raw %}<span class="math inline">\([\varepsilon,1-\varepsilon]\)</span>{% endraw %}. With fixed trimming, the limit is centered at the corresponding trimmed population bound. Claiming a CLT centered at the untrimmed bound would require an additional argument controlling trimming bias.</p>
 
 <h3 data-note-section="2" id="30-66-differentiate-the-active-branch">2. Differentiate the active branch</h3>
@@ -50,7 +51,7 @@ v,&amp;b&lt;a,\\
 
 <p>ATT adds the uncertainty from treated-outcome means and treatment probabilities. Those quantities must be included in the same joint expansion because they are estimated from the same observations.</p>
 
-<p>The population interval describes the allowed departure from independence. Sampling uncertainty concerns its estimated endpoints. The derivative of the endpoint map determines how first-stage uncertainty enters the latter calculation.</p>
+<p>The population interval describes the allowed departure from independence. Sampling uncertainty concerns its estimated endpoints. The derivative of the endpoint map determines how first-stage uncertainty enters the calculation of sampling uncertainty for the endpoints.</p>
 
 <h3 data-note-section="4" id="30-66-a-derivative-calculation-inside-a-quantile-bound">4. A derivative calculation inside a quantile bound</h3>
 <p>In the unclipped region, write the shifted probability index as</p>

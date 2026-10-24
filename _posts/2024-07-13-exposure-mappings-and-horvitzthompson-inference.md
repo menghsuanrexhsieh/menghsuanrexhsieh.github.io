@@ -94,7 +94,7 @@ D_2=\mathbf1\{Z_1+Z_3\geq1\}.
 y_i(d)y_j(d).
 \end{aligned}
 \]</div>{% endraw %}
-<p>Summing and dividing by {% raw %}<span class="math inline">\(N^2\)</span>{% endraw %} gives the result. For two distinct exposures {% raw %}<span class="math inline">\(d,e\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(\pi_{ij}(d,e)=P(D_i=d,D_j=e)\)</span>{% endraw %}. The same calculation gives</p>
+<p>Summing and dividing by {% raw %}<span class="math inline">\(N^2\)</span>{% endraw %} gives the Horvitz–Thompson variance formula. For two distinct exposures {% raw %}<span class="math inline">\(d,e\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(\pi_{ij}(d,e)=P(D_i=d,D_j=e)\)</span>{% endraw %}. The indicator-covariance calculation gives</p>
 
 {% raw %}<div class="math display">\[
 \operatorname{Cov}(\widehat\mu(d),\widehat\mu(e))

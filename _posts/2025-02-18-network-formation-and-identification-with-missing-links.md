@@ -112,7 +112,7 @@ E-\delta cE^{\lambda+1}=\epsilon.
 \approx-A^{-1}(\widehat M(\theta_0,p_0)
 +\partial_pM(\theta_0,p_0)[\widehat p-p_0]).
 \]</div>{% endraw %}
-<p>The derivative in brackets is a directional linear map if {% raw %}<span class="math inline">\(p\)</span>{% endraw %} is a function rather than a finite vector. The first term is sampling noise with beliefs fixed; the second carries estimated-belief error into preference estimates. They can be correlated because the same network informs both stages.</p>
+<p>The derivative in brackets is a directional linear map if {% raw %}<span class="math inline">\(p\)</span>{% endraw %} is a function rather than a finite vector. The first term is sampling noise with beliefs fixed; the second carries estimated-belief error into preference estimates. The sampling-noise and estimated-belief terms can be correlated because the same network informs both stages.</p>
 
 <p>The first-stage term disappears only if the moment has the required orthogonality property. Substituting estimates into a likelihood does not create that property. Identification and regularity assumptions must determine both which beliefs are estimable and how their estimation errors enter the second step.</p>
 

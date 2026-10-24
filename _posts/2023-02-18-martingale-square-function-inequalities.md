@@ -179,7 +179,7 @@ T_m=X_m\mathbf1_{\{\nu\leq m\}},\qquad T_0=0,\quad Z_i=T_i-T_{i-1}.\]</div>{% en
 {% raw %}<div class="math display">\[\mathbb P(X_n^*&gt;\beta\lambda,Q\leq\delta\lambda)
 \leq\frac{\delta^2}{(\beta-1-\delta)^2}\mathbb P(X_n^*&gt;\lambda).\]</div>{% endraw %}
 
-<p>Choose {% raw %}<span class="math inline">\(\beta=2\)</span>{% endraw %} and then {% raw %}<span class="math inline">\(\delta\)</span>{% endraw %} small enough for Lemma 3. Since {% raw %}<span class="math inline">\(Q^p\leq V_n^{p/2}+J_n^p\)</span>{% endraw %}, the result follows. ◻</p>
+<p>Choose {% raw %}<span class="math inline">\(\beta=2\)</span>{% endraw %} and then {% raw %}<span class="math inline">\(\delta\)</span>{% endraw %} small enough for Lemma 3. Since {% raw %}<span class="math inline">\(Q^p\leq V_n^{p/2}+J_n^p\)</span>{% endraw %}, the bound in <a href="#thm:martingale-maximal-inequality">Theorem 5</a> follows. ◻</p>
 
 </div>
 

@@ -256,9 +256,10 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 </div>
 
 <div id="Lem:Helley" class="lemma" data-note-number="7" data-note-kind="Lemma">
-<p><strong>Lemma 7</strong>. (Helly selection). Every sequence of probability measures {% raw %}<span class="math inline">\(\mu_n\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\mathbb R^d\)</span>{% endraw %} has a subsequence and a finite measure {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %} of total mass at most one such that {% raw %}<span class="math inline">\(\int f\,d\mu_{n_j}\to\int f\,d\mu\)</span>{% endraw %} for every continuous compactly supported {% raw %}<span class="math inline">\(f\)</span>{% endraw %}. This is vague convergence; it need not be convergence in distribution to a probability law.</p>
+<p><strong>Lemma 7</strong>. (Helly selection). Every sequence of probability measures {% raw %}<span class="math inline">\(\mu_n\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\mathbb R^d\)</span>{% endraw %} has a subsequence and a finite measure {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %} of total mass at most one such that {% raw %}<span class="math inline">\(\int f\,d\mu_{n_j}\to\int f\,d\mu\)</span>{% endraw %} for every continuous compactly supported {% raw %}<span class="math inline">\(f\)</span>{% endraw %}.</p>
 
 </div>
+<p><em>Remark.</em> The convergence in <a href="#Lem:Helley">Lemma 7</a> is vague convergence. The lemma does not assert convergence in distribution to a probability law.</p>
 <div class="proof">
 <p><em>Proof.</em></p>
 
@@ -286,7 +287,7 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 <p>Monotonicity yields {% raw %}<span class="math inline">\(F_n(a)\leq F_n(x)\leq F_n(b)\)</span>{% endraw %} and the corresponding inequalities for {% raw %}<span class="math inline">\(F\)</span>{% endraw %}, so</p>
 {% raw %}<div class="math display">\[F_n(x)-F(x)\leq\Delta_n+\varepsilon,
 \qquad F(x)-F_n(x)\leq\Delta_n+\varepsilon.\]</div>{% endraw %}
-<p>This bound holds uniformly in {% raw %}<span class="math inline">\(x\)</span>{% endraw %}. Taking the supremum, then the limit superior in {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, and finally letting {% raw %}<span class="math inline">\(\varepsilon\downarrow0\)</span>{% endraw %} proves the result. ◻</p>
+<p>The two cdf-difference bounds hold uniformly in {% raw %}<span class="math inline">\(x\)</span>{% endraw %}. Taking the supremum, then the limit superior in {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, and finally letting {% raw %}<span class="math inline">\(\varepsilon\downarrow0\)</span>{% endraw %} proves the uniform cdf convergence in <a href="#result-8">Lemma 8</a>. ◻</p>
 </div>
 
 <p>Stochastic order notation records the size of a remainder relative to a chosen scale. An additive remainder that vanishes in probability does not change a weak limit; a term bounded in probability can still contribute to the limit.</p>

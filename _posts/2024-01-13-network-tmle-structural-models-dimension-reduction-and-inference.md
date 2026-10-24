@@ -25,7 +25,7 @@ redirect_from: ["/2024/01/13/interference-exposure-and-causal-parameters/", "/20
 
 <h3 data-note-section="2" id="10-0-the-influence-function-result">2. The influence-function result</h3>
 <div id="network-tmle-gradient" class="proposition" data-note-number="1" data-note-kind="Proposition">
-<p><strong>Proposition 1</strong>. Under the paper’s independent-baseline model and shared conditional mechanisms, the efficient influence function contains a baseline component and a weighted outcome-residual component. For the latter,</p>
+<p><strong>Proposition 1</strong>. Under the paper’s independent-baseline model and shared conditional mechanisms, the efficient influence function contains a baseline component and a weighted outcome-residual component. For the weighted outcome-residual component,</p>
 
 {% raw %}<div class="math display">\[
 D_Y^*=\frac1N\sum_i\frac{\overline h^*(C_i^Y)}{\overline h(C_i^Y)}

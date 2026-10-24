@@ -30,9 +30,10 @@ Y=\alpha_0D+g(Z)+\zeta,\qquad D=m(Z)+v,
 \qquad
 \sigma^2=\frac{\mathbb{E}[v^2\zeta^2]}{\mathbb{E}[v^2]^2}.
 \]</div>{% endraw %}
-<p>The residual-based variance estimator is consistent under the accompanying conditions. The result is uniform over the specified approximately sparse class; exact recovery of a particular model is not required.</p>
+<p>The residual-based variance estimator is consistent under the accompanying conditions. The result is uniform over the specified approximately sparse class.</p>
 
 </div>
+<p><em>Remark.</em> The assumptions of <a href="#double-selection-limit">Theorem 1</a> do not require exact recovery of a particular model by the selection procedure.</p>
 <p>The sparsity rate states how fast approximation errors must shrink. It must be accompanied by moment and design assumptions: treatment needs residual variation, and the relevant sparse submodels need well-conditioned quadratic forms.</p>
 
 <h3 data-note-section="2" id="19-0-why-two-selections-help">2. Why two selections help</h3>

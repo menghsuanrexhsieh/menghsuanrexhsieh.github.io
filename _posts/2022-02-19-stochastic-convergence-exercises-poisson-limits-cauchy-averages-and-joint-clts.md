@@ -535,7 +535,8 @@ iq^\top\frac1{\sqrt n}\sum_{i=1}^n(V_i-\mu_V)
 \]</div>{% endraw %}
 <p>The limiting function is continuous at zero and is the characteristic function of {% raw %}<span class="math inline">\(\mathcal{N}_2(0,\Sigma)\)</span>{% endraw %}. Lévy’s continuity theorem proves the desired joint limit directly.</p>
 
-<p>If {% raw %}<span class="math inline">\(q^\top\Sigma q=0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(\mathbb{E} W_i^2=0\)</span>{% endraw %}, so {% raw %}<span class="math inline">\(W_i=0\)</span>{% endraw %} almost surely. Thus the corresponding linear combination is exactly zero for every {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, consistent with the degenerate normal limit. Positive definiteness is not required.</p>
+<p>If {% raw %}<span class="math inline">\(q^\top\Sigma q=0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(\mathbb{E} W_i^2=0\)</span>{% endraw %}, so {% raw %}<span class="math inline">\(W_i=0\)</span>{% endraw %} almost surely. Thus the corresponding linear combination is exactly zero for every {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, consistent with the degenerate normal limit.</p>
+<p><em>Remark.</em> In the proof of the <a href="#scq-averages-exercise-23">joint central limit theorem for the mean and second moment</a>, the covariance matrix {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %} is not assumed positive definite.</p>
 
 <p>For example, if {% raw %}<span class="math inline">\(\mathbb P(X_i=1)=\mathbb P(X_i=-1)=1/2\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(M_{2,n}=1\)</span>{% endraw %} almost surely and {% raw %}<span class="math inline">\(\Sigma=\operatorname{diag}(1,0)\)</span>{% endraw %}. Only the first coordinate fluctuates.</p>
 

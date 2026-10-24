@@ -34,7 +34,7 @@ h(z)=\frac{B}{K}g(z/K)
 
 <p>For example, {% raw %}<span class="math inline">\(\log E\sim \mathcal{N}(-\sigma_E^2/2,\sigma_E^2)\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(\mathbb{E}[E]=1\)</span>{% endraw %}. The variance is positive; the negative sign belongs only in the mean adjustment. Likelihood estimation then uses the density above to estimate behavioral and error parameters jointly, subject to identification of the chosen specification.</p>
 
-<p>The assumptions make the likelihood model estimable only when its parameter-to-distribution map is identified. They provide restrictions on heterogeneity and error; they do not overturn <a href="{% post_url 2024-02-03-bunching-identification-density-bounds-and-control-groups %}">nonidentification under unrestricted heterogeneity</a>.</p>
+<p>The distributional assumptions on heterogeneity and measurement error make the likelihood model estimable only when its parameter-to-distribution map is identified. Those distributional restrictions do not overturn <a href="{% post_url 2024-02-03-bunching-identification-density-bounds-and-control-groups %}">nonidentification under unrestricted heterogeneity</a>.</p>
 
 <h3 data-note-section="3" id="16-188-extending-beyond-one-kink">3. Extending beyond one kink</h3>
 <p>For a piecewise-linear budget, each segment has a net wage and a virtual income. A monotone scalar heterogeneity index partitions individuals into segment interiors and kink points. Expected labor supply is obtained by integrating the segment-specific choices over those regions and adding kink masses.</p>
@@ -117,7 +117,7 @@ f_\eta(a)k(z,K)a&#x27;,\qquad
 k(z,K)(f_\eta(b)b&#x27;-f_\eta(a)a&#x27;),\qquad
 -f_\eta(b)k(z,K)b&#x27;.
 \]</div>{% endraw %}
-<p>They cancel. At either boundary, the smooth segment’s chosen earnings equal {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, so its measurement-error kernel agrees with the atom’s kernel. Mass moving between adjacent regions cannot create or destroy observed probability by itself. The remaining derivative comes from how choices, heterogeneity, or error densities change inside the regions.</p>
+<p>The three moving-boundary terms cancel. At either boundary, the smooth segment’s chosen earnings equal {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, so its measurement-error kernel agrees with the atom’s kernel. Mass moving between adjacent regions cannot create or destroy observed probability by itself. The remaining derivative comes from how choices, heterogeneity, or error densities change inside the regions.</p>
 
 <p>For the score, all three moving-boundary terms must be considered together. Keeping only the derivative of the bunching mass gives the wrong result. Their cancellation here follows from matching kernels at the boundaries; moving-boundary terms cannot be omitted in general.</p>
 

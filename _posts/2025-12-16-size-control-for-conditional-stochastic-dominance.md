@@ -241,7 +241,7 @@ T(S)=T(U)
 \quad\text{almost surely under the coupling}.
 \]</div>{% endraw %}
 
-<p>Continuity is sufficient; strict monotonicity of {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is unnecessary.</p>
+<p><em>Remark.</em> In the <a href="#26-101-the-useful-calculation-couple-the-two-samples">coupling argument</a>, continuity of the common outcome cdf suffices for equality of the outcome and uniform statistics. Strict monotonicity of {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is not assumed.</p>
 
 <p>With a common distribution containing atoms, the cdf skips intervals of probability values. The process {% raw %}<span class="math inline">\(A(u)-B(u)\)</span>{% endraw %} may attain its maximum inside one of those intervals, where it cannot be evaluated as {% raw %}<span class="math inline">\(A(F(t))-B(F(t))\)</span>{% endraw %}. The supremum over all {% raw %}<span class="math inline">\(u\)</span>{% endraw %} can then exceed the statistic computed from the outcomes, making the test conservative.</p>
 
@@ -554,7 +554,7 @@ P\{T(U)=1\}
 
 <p>the critical value is one and the nonrandomized test cannot reject any sample. This remains true as the original sample sizes grow if {% raw %}<span class="math inline">\(q_y\)</span>{% endraw %} and {% raw %}<span class="math inline">\(q_x\)</span>{% endraw %} stay fixed.</p>
 
-<p>Consider again the example with four observations. Suppose the alternative target distributions place every {% raw %}<span class="math inline">\(Y\)</span>{% endraw %}-outcome below every {% raw %}<span class="math inline">\(X\)</span>{% endraw %}-outcome. Then {% raw %}<span class="math inline">\(T(S)=1\)</span>{% endraw %} with probability one. With {% raw %}<span class="math inline">\(q_y=q_x=2\)</span>{% endraw %}, the test in the limit experiment has power one at level {% raw %}<span class="math inline">\(0.2\)</span>{% endraw %}, but power zero at level {% raw %}<span class="math inline">\(0.1\)</span>{% endraw %}, because the latter critical value is also one. Under the regularity conditions of Theorem 1, the power based on selected observations converges to these values. At level {% raw %}<span class="math inline">\(0.1\)</span>{% endraw %}, rejection is impossible for every original sample size.</p>
+<p>Consider again the example with four observations. Suppose the alternative target distributions place every {% raw %}<span class="math inline">\(Y\)</span>{% endraw %}-outcome below every {% raw %}<span class="math inline">\(X\)</span>{% endraw %}-outcome. Then {% raw %}<span class="math inline">\(T(S)=1\)</span>{% endraw %} with probability one. With {% raw %}<span class="math inline">\(q_y=q_x=2\)</span>{% endraw %}, the test in the limit experiment has power one at level {% raw %}<span class="math inline">\(0.2\)</span>{% endraw %}, but power zero at level {% raw %}<span class="math inline">\(0.1\)</span>{% endraw %}, because the critical value at level {% raw %}<span class="math inline">\(0.1\)</span>{% endraw %} is also one. Under the regularity conditions of Theorem 1, the power based on selected observations converges to these values. At level {% raw %}<span class="math inline">\(0.1\)</span>{% endraw %}, rejection is impossible for every original sample size.</p>
 
 <p>Suppose the regularity assumptions of Theorem 1 hold and {% raw %}<span class="math inline">\(H_0\)</span>{% endraw %} is false. The argument in Section 3 does not use the dominance inequality, so it gives</p>
 

@@ -133,7 +133,7 @@ p_e\ge1-\frac{I(J;Z)+\log2}{\log(M+1)}
 =\delta^2p_e.
 \end{aligned}
 \]</div>{% endraw %}
-<p>Taking the infimum proves the result. ◻</p>
+<p>Taking the infimum over estimators proves the minimax lower bound in <a href="#lem:fano">Lemma 2</a>. ◻</p>
 </div>
 <p>For the packing in Lemma 1, {% raw %}<span class="math inline">\(\log(M+1)\ge m\log2/8\)</span>{% endraw %}. Thus the bound is at least {% raw %}<span class="math inline">\(\delta^2/2\)</span>{% endraw %} whenever {% raw %}<span class="math inline">\(m\ge32\)</span>{% endraw %} and the average divergence is at most {% raw %}<span class="math inline">\(\log(M+1)/8\)</span>{% endraw %}. The divergence may grow with {% raw %}<span class="math inline">\(m\)</span>{% endraw %}: what matters is its size relative to the logarithm of the number of alternatives.</p>
 <h2 data-note-section="3" id="sobolev-minimax-risk">3. Minimax risk over a Sobolev ellipsoid</h2>

@@ -68,7 +68,7 @@ T_U(\mu)=\sqrt p\,S_U^{\mathrm{Song}}(\mu;b=2).
 <p>If {% raw %}<span class="math inline">\(R\to\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(R/n\to0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(\widetilde T_M(\mu_0)\Rightarrow\mathcal N(0,I_p)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(T_M(\mu_0)\Rightarrow\chi_p^2\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(R\to\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sqrt{R}/n\to0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(T_U(\mu_0)\Rightarrow\mathcal N(0,1)\)</span>{% endraw %}. The corresponding limits also hold with {% raw %}<span class="math inline">\(\mu_0\)</span>{% endraw %} replaced by {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}. For each scalar statistic, its conditional CDF converges in probability, uniformly over the evaluation point, to the stated continuous limit CDF.</p>
 </div>
 
-<p>The theorem takes {% raw %}<span class="math inline">\(\sqrt n(\overline X-\mu_0)=O_p(1)\)</span>{% endraw %} as an assumption; the <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}#ordering-free-proof-techniques">graph bounds</a> give one way to verify it. As before, {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} estimates marginal variation, and no Gaussian limit for the original sample mean is required.</p>
+<p><em>Remark.</em> <a href="#dependence-resampling">Theorem 1</a> takes {% raw %}<span class="math inline">\(\sqrt n(\overline X-\mu_0)=O_p(1)\)</span>{% endraw %} as an assumption; the <a href="{% post_url 2024-08-15-ordering-free-dependence-and-resampling %}#ordering-free-proof-techniques">graph bounds</a> give one way to verify it. {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} estimates marginal variation. Theorem 1 does not require a Gaussian limit for the original sample mean.</p>
 
 <span id="10-356-whiten-the-empirical-distribution-first"></span>
 <p>Define the empirically centered and standardized observations:</p>
@@ -253,7 +253,7 @@ R^M\approx\sqrt n,
 R^U\approx(n/2)^{4/3}.
 \]</div>{% endraw %}
 
-<p>The resulting detection rates are {% raw %}<span class="math inline">\(n^{-1/4}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n^{-1/3}\)</span>{% endraw %}. These are heuristic choices, not solutions to a fixed-size-accuracy optimization. They do not match the error orders used in <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}#resampling-matched-size-comparison">September’s comparison</a>. Nor is {% raw %}<span class="math inline">\(R^{-1/4}\)</span>{% endraw %} a normal-approximation error: it measures the size of a detectable mean shift.</p>
+<p>The resulting detection rates are {% raw %}<span class="math inline">\(n^{-1/4}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n^{-1/3}\)</span>{% endraw %}. The tuning choices that yield these rates are heuristic, not solutions to a fixed-size-accuracy optimization. The heuristic tuning choices do not match the error orders used in <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}#resampling-matched-size-comparison">September’s comparison</a>. Nor is {% raw %}<span class="math inline">\(R^{-1/4}\)</span>{% endraw %} a normal-approximation error: it measures the size of a detectable mean shift.</p>
 
 <h3 data-note-section="3" id="moment-inequalities">3. Moment inequalities and uniform asymptotic size</h3>
 

@@ -188,7 +188,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
 <div class="proof">
 <p><em>Proof.</em> It suffices to consider finite right-hand side. At {% raw %}<span class="math inline">\(p=1\)</span>{% endraw %} this is the integrated triangle inequality. For {% raw %}<span class="math inline">\(p&gt;1\)</span>{% endraw %}, the elementary bound {% raw %}<span class="math inline">\(|X+Y|^p\leq2^{p-1}(|X|^p+|Y|^p)\)</span>{% endraw %} first establishes integrability. Hölder then gives</p>
 {% raw %}<div class="math display">\[\mathbb{E}|X+Y|^p\leq\mathbb{E}[(|X|+|Y|)|X+Y|^{p-1}]\leq(\|X\|_p+\|Y\|_p)\|X+Y\|_p^{p-1}.\]</div>{% endraw %}
-<p>If {% raw %}<span class="math inline">\(\|X+Y\|_p=0\)</span>{% endraw %} the result is immediate; otherwise divide by its {% raw %}<span class="math inline">\((p-1)\)</span>{% endraw %}st power. ◻</p>
+<p>If {% raw %}<span class="math inline">\(\|X+Y\|_p=0\)</span>{% endraw %} Minkowski’s inequality is immediate; otherwise divide by {% raw %}<span class="math inline">\(\|X+Y\|_p\)</span>{% endraw %} to the {% raw %}<span class="math inline">\((p-1)\)</span>{% endraw %}st power. ◻</p>
 </div>
 <h3 data-note-section="2.3" id="maximal-inequalities">2.3. Maximal Inequalities</h3>
 <div id="thm:kolmogorov-maximal" class="theorem" data-note-number="15" data-note-kind="Theorem">
@@ -199,7 +199,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
     
 \end{aligned}\]</div>{% endraw %}
 </div>
-<p>Note that this strengthens the result that one can obtain from applying Chebyshev’s inequality to estimating {% raw %}<span class="math inline">\(\mathop{\mathrm{\mathbf{P}}}(|S_n| \geq \varepsilon)\)</span>{% endraw %}. The proof separates paths by their first threshold crossing. Independence makes the later increment orthogonal to the value at that crossing; it does not require that {% raw %}<span class="math inline">\(|S_n|\)</span>{% endraw %} remain large on each such path.</p>
+<p>Kolmogorov’s maximal inequality (<a href="#thm:kolmogorov-maximal">Theorem 15</a>) strengthens the terminal-sum bound obtained by applying Chebyshev’s inequality to {% raw %}<span class="math inline">\(\mathop{\mathrm{\mathbf{P}}}(|S_n| \geq \varepsilon)\)</span>{% endraw %}. The proof separates paths by their first threshold crossing. Independence makes the later increment orthogonal to the value at that crossing; it does not require that {% raw %}<span class="math inline">\(|S_n|\)</span>{% endraw %} remain large on each such path.</p>
 
 <div class="proof">
 <p><em>Proof.</em> Let {% raw %}<span class="math inline">\(A_k\)</span>{% endraw %} be the set where {% raw %}<span class="math inline">\(|S_k| \geq \varepsilon\)</span>{% endraw %}, but where {% raw %}<span class="math inline">\(|S_j| &lt; \varepsilon\)</span>{% endraw %} for {% raw %}<span class="math inline">\(j &lt; k\)</span>{% endraw %}. Clearly, {% raw %}<span class="math inline">\(\{A_k\}\)</span>{% endraw %} is a disjoint collection of sets, hence </p>

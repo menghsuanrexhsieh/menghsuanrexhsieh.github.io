@@ -63,7 +63,7 @@ Q_{n,h}(A_n)
 =\mathbb{E}_{P_n}[L_n\mathbf1_{A_n}]
 \le e^{h^2/2}\sqrt{P_n(A_n)}.
 \]</div>{% endraw %}
-<p>The reverse likelihood ratio has the same second moment under {% raw %}<span class="math inline">\(Q_{n,h}\)</span>{% endraw %}, so the implication works in both directions. Any event becoming negligible under one experiment becomes negligible under the other. This remains true for bounded sequences {% raw %}<span class="math inline">\(a_n\)</span>{% endraw %}, even if they do not converge.</p>
+<p>The reverse likelihood ratio has the same second moment under {% raw %}<span class="math inline">\(Q_{n,h}\)</span>{% endraw %}, so the implication works in both directions. Any event becoming negligible under one experiment becomes negligible under the other. Mutual contiguity also holds for bounded sequences {% raw %}<span class="math inline">\(a_n\)</span>{% endraw %}, even when those sequences do not converge.</p>
 <p>With total variation defined as {% raw %}<span class="math inline">\(\|Q_n-P_n\|_{\mathrm{TV}}=\sup_A|Q_n(A)-P_n(A)|\)</span>{% endraw %}, the likelihood-ratio rejection region gives</p>
 
 
@@ -203,7 +203,7 @@ W_n&amp;\Rightarrow\mathcal{N}(-\sigma^2/4,\sigma^2),\\
 
 {% raw %}<div class="math display">\[Q_n(A_n^c)=1-\prod_i(1-s_{ni})\le\sum_i s_{ni}\longrightarrow0.\]</div>{% endraw %}
 
-<p>This proves that coordinate support changes cannot leave a nonvanishing singular part in the product experiment. It also justifies the product formula for {% raw %}<span class="math inline">\(L_n\)</span>{% endraw %} used in the logarithm calculation.</p>
+<p>The vanishing bound on the product experiment’s singular mass proves that coordinate support changes cannot leave a nonvanishing singular part in the product experiment. It also justifies the product formula for {% raw %}<span class="math inline">\(L_n\)</span>{% endraw %} used in the logarithm calculation.</p>
 <p>The proof is given in <a href="#contiguity-appendix-second">Appendix B</a>.</p>
 <h2 id="08-0-qmd-to-lan">5. Quadratic-mean differentiability and LAN</h2>
 <p>Let {% raw %}<span class="math inline">\(\theta_0\)</span>{% endraw %} be an interior point of a parameter set in {% raw %}<span class="math inline">\(\mathbb R^d\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(p_\theta\)</span>{% endraw %} be densities relative to a fixed measure {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %}. The model is differentiable in quadratic mean at {% raw %}<span class="math inline">\(\theta_0\)</span>{% endraw %} if there is a score {% raw %}<span class="math inline">\(\ell\in L^2(P_{\theta_0})^d\)</span>{% endraw %} such that</p>
@@ -226,8 +226,9 @@ W_n&amp;\Rightarrow\mathcal{N}(-\sigma^2/4,\sigma^2),\\
 \Rightarrow\mathcal{N}_d(0,I).
 \end{aligned}
 \]</div>{% endraw %}
-<p>The two product laws are mutually contiguous. Positive definiteness of {% raw %}<span class="math inline">\(I\)</span>{% endraw %} is not needed for this conclusion; it is needed later when we invert {% raw %}<span class="math inline">\(I\)</span>{% endraw %}.</p>
+<p>The two product laws are mutually contiguous.</p>
 </div>
+<p><em>Remark.</em> In the proof of <a href="#qmd-lan-theorem">Theorem 4</a>, positive definiteness of {% raw %}<span class="math inline">\(I\)</span>{% endraw %} is not assumed. Positive definiteness is needed later when we invert {% raw %}<span class="math inline">\(I\)</span>{% endraw %}.</p>
 <h3 id="08-0-proof-support-changes-means-and-the-l2-remainder">Derivation of the likelihood expansion</h3>
 <p>Write {% raw %}<span class="math inline">\(p_0=p_{\theta_0}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(p_t=p_{\theta_0+t}\)</span>{% endraw %}, and</p>
 
@@ -286,8 +287,9 @@ n\mathbb{E}_0D_{n1}
 \|Q_{n,h_n}-Q_{n,h}\|_{\mathrm{TV}}\to0,
 \qquad
 \log L_{n,h_n}=h_n^\top\Delta_n-\frac12h_n^\top Ih_n+o_{P_n}(1).
-\]</span>{% endraw %} Every bounded deterministic sequence {% raw %}<span class="math inline">\(h_n\)</span>{% endraw %} gives mutual contiguity of {% raw %}<span class="math inline">\(Q_{n,h_n}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(P_n=P_{\theta_0}^{\otimes n}\)</span>{% endraw %}. This assertion does not require convergence of {% raw %}<span class="math inline">\(h_n\)</span>{% endraw %}.</p>
+\]</span>{% endraw %} Every bounded deterministic sequence {% raw %}<span class="math inline">\(h_n\)</span>{% endraw %} gives mutual contiguity of {% raw %}<span class="math inline">\(Q_{n,h_n}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(P_n=P_{\theta_0}^{\otimes n}\)</span>{% endraw %}.</p>
 </div>
+<p><em>Remark.</em> In the <a href="#contiguity-sequential-lan">lemma on convergent and bounded local directions</a>, the contiguity conclusion for bounded deterministic sequences does not require convergence of {% raw %}<span class="math inline">\(h_n\)</span>{% endraw %}. The total-variation convergence and likelihood expansion in the first conclusion are stated for convergent local directions.</p>
 <p><em>Proof.</em> Define {% raw %}<span class="math inline">\(H^2(P,Q)=\int(\sqrt p-\sqrt q)^2d\mu\)</span>{% endraw %}. Subtracting the two QMD expansions gives {% raw %}<span class="math display">\[
 \sqrt{p_{\theta_0+h_n/\sqrt n}}-\sqrt{p_{\theta_0+h/\sqrt n}}
 =\frac{(h_n-h)^\top\ell\sqrt{p_{\theta_0}}}{2\sqrt n}
@@ -685,7 +687,8 @@ D_n\triangleq D(M_n|_K)\Rightarrow D(M|_K)\triangleq D.
 &amp;\le P(D\ge-a).
 \end{aligned}
 \]</div>{% endraw %}
-<p>The last line uses the portmanteau inequality for the closed interval {% raw %}<span class="math inline">\([-a,\infty)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(r_n\xrightarrow{P}0\)</span>{% endraw %} in probability. Now let {% raw %}<span class="math inline">\(a\downarrow0\)</span>{% endraw %}. Continuity of probabilities along decreasing events gives the upper bound {% raw %}<span class="math inline">\(P(D\ge0)\)</span>{% endraw %}. No assumption about an atom at zero is needed.</p>
+<p>The last line uses the portmanteau inequality for the closed interval {% raw %}<span class="math inline">\([-a,\infty)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(r_n\xrightarrow{P}0\)</span>{% endraw %} in probability. Now let {% raw %}<span class="math inline">\(a\downarrow0\)</span>{% endraw %}. Continuity of probabilities along decreasing events gives the upper bound {% raw %}<span class="math inline">\(P(D\ge0)\)</span>{% endraw %}.</p>
+<p><em>Remark.</em> In this step of the proof of <a href="#metric-argmax-theorem">Theorem 6</a>, no assumption is made about whether {% raw %}<span class="math inline">\(D\)</span>{% endraw %} has an atom at zero. The upper bound uses a closed event.</p>
 <h3 id="08-0-proof-step-4-uniqueness-makes-the-limiting-gap-strict">Uniqueness and the closed-set bound</h3>
 <p>On the event {% raw %}<span class="math inline">\(\{h^*\in K\setminus F\}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\sup_K M=M(h^*)\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(F\cap K\)</span>{% endraw %} is compact and the limiting path is upper semicontinuous, it attains its maximum on {% raw %}<span class="math inline">\(F\cap K\)</span>{% endraw %}. That maximum is strictly below {% raw %}<span class="math inline">\(M(h^*)\)</span>{% endraw %} by uniqueness. Hence {% raw %}<span class="math inline">\(D&lt;0\)</span>{% endraw %} on this event, and</p>
 
@@ -701,7 +704,7 @@ D_n\triangleq D(M_n|_K)\Rightarrow D(M|_K)\triangleq D.
  +\limsup_nP(\widehat h_n\notin K)
 \le P(h^*\in F)+2\eta.
 \]</div>{% endraw %}
-<p>Let {% raw %}<span class="math inline">\(\eta\downarrow0\)</span>{% endraw %}. The inequality holds for every closed {% raw %}<span class="math inline">\(F\)</span>{% endraw %}, so the portmanteau theorem proves {% raw %}<span class="math inline">\(\widehat h_n\Rightarrow h^*\)</span>{% endraw %}. This proves the theorem, including the localization step.</p>
+<p>Let {% raw %}<span class="math inline">\(\eta\downarrow0\)</span>{% endraw %}. The inequality holds for every closed {% raw %}<span class="math inline">\(F\)</span>{% endraw %}, so the portmanteau theorem proves {% raw %}<span class="math inline">\(\widehat h_n\Rightarrow h^*\)</span>{% endraw %}. The closed-set argument proves the metric-space argmax theorem (<a href="#metric-argmax-theorem">Theorem 6</a>), including the localization step.</p>
 <h2 id="08-0-sources-and-further-reading">Sources</h2>
 <p>The first and third lemmas and their likelihood-ratio interpretation are treated in <span class="citation" data-cites="van_der_vaart1998asymptotic">(<a href="#ref-van_der_vaart1998asymptotic" role="doc-biblioref">A. W. van der Vaart 1998, vol. 3, chap. 6</a>)</span>; the QMD-to-LAN result is in Chapter 7. The metric-space argmax theorem is Theorem 3.2.2 of <span class="citation" data-cites="van_der_vaart_weak_2000">(<a href="#ref-van_der_vaart_weak_2000" role="doc-biblioref">Aad W. van der Vaart and Wellner 2000</a>)</span>. The proofs here spell out the truncation, singular-mass, and compact-localization steps in the conventions used throughout these notes.</p>
 <p>Online author sources are <a href="https://sites.stat.washington.edu/jaw/COURSES/580s/581/LECTNOTES/ch3-rev4b.pdf#page=27">Wellner’s lower-bounds notes, Section 3</a> and his <a href="https://sites.stat.washington.edu/jaw/RESEARCH/TALKS/Delft/emp-proc-delft-big.pdf#page=96">Delft empirical-process notes, corrected June 1, 2005, Chapter 2, Section 2</a>. The latter gives the compact-set argument behind the argmax theorem. The <a href="{% post_url 2021-12-18-weak-convergence-tightness-and-metric-spaces %}">weak-convergence note</a> supplies the portmanteau and continuous-mapping results used above.</p>

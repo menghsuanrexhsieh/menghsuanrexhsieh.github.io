@@ -54,11 +54,12 @@ redirect_from: ["/2022/10/07/lie-groups-definitions-and-operations/", "/2022/11/
 <div class="proof">
 <p><em>Proof.</em> The tangent space of a product splits as a direct sum, so linearity gives</p>
 {% raw %}<div class="math display">\[dm_{(a,b)}(X,Y)=dm_{(a,b)}(X,0)+dm_{(a,b)}(0,Y).\]</div>{% endraw %}
-<p> On the first slice multiplication is {% raw %}<span class="math inline">\(R_b\)</span>{% endraw %}, and on the second it is {% raw %}<span class="math inline">\(L_a\)</span>{% endraw %}. This proves the formula, with both terms in {% raw %}<span class="math inline">\(T_{ab}G\)</span>{% endraw %}. Equivalently, testing on a smooth function {% raw %}<span class="math inline">\(f\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(X(f\circ R_b)+Y(f\circ L_a)\)</span>{% endraw %}; derivatives act on these functions before they are evaluated at the base points. ◻</p>
+<p> On the first slice multiplication is {% raw %}<span class="math inline">\(R_b\)</span>{% endraw %}, and on the second it is {% raw %}<span class="math inline">\(L_a\)</span>{% endraw %}. The two slice derivatives give the differential of multiplication in <a href="#lem:dif-multiplication-lie">Lemma 2</a>, with both terms in {% raw %}<span class="math inline">\(T_{ab}G\)</span>{% endraw %}. Equivalently, testing on a smooth function {% raw %}<span class="math inline">\(f\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(X(f\circ R_b)+Y(f\circ L_a)\)</span>{% endraw %}; apply the directional derivatives to the composed functions before evaluating at the base points. ◻</p>
 </div>
 <div id="result-3" class="lemma" data-note-number="3" data-note-kind="Lemma">
-<p><strong>Lemma 3.</strong> If a smooth manifold is an abstract group and its multiplication is smooth, then its inverse map is smooth. Thus inversion need not be separately assumed in this equivalent definition of a Lie group.</p>
+<p><strong>Lemma 3.</strong> If a smooth manifold is an abstract group and its multiplication is smooth, then its inverse map is smooth.</p>
 </div>
+<p><em>Remark.</em> <a href="#result-3">Lemma 3</a> shows that smoothness of inversion need not be imposed separately in the definition of a Lie group when multiplication is already assumed smooth.</p>
 <div class="proof">
 <p><em>Proof.</em> For each fixed {% raw %}<span class="math inline">\(a\)</span>{% endraw %}, translation {% raw %}<span class="math inline">\(L_a\)</span>{% endraw %} and its set-theoretic inverse {% raw %}<span class="math inline">\(L_{a^{-1}}\)</span>{% endraw %} are smooth by smoothness of multiplication. This does not yet assume smooth dependence of {% raw %}<span class="math inline">\(a^{-1}\)</span>{% endraw %} on {% raw %}<span class="math inline">\(a\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(F(a,b)=(a,ab)\)</span>{% endraw %}. It is bijective, and</p>
 {% raw %}<div class="math display">\[dF_{(a,b)}(X,Y)=(X,dR_bX+dL_aY).\]</div>{% endraw %}
@@ -119,7 +120,7 @@ redirect_from: ["/2022/10/07/lie-groups-definitions-and-operations/", "/2022/11/
 
 </div>
 <div class="proof">
-<p><em>Proof.</em> Clearly, {% raw %}<span class="math inline">\(\mathcal E\)</span>{% endraw %} is linear over {% raw %}<span class="math inline">\(\mathbb R\)</span>{% endraw %}, and this is an injective map. The latter follows because if {% raw %}<span class="math inline">\(\mathcal E(X) = 0\)</span>{% endraw %} for some {% raw %}<span class="math inline">\(X \in \mathfrak g\)</span>{% endraw %}, then the left-invariance of {% raw %}<span class="math inline">\(X\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(X_g = (\dif L_g)_e (X_e) = 0\)</span>{% endraw %}, i.e. {% raw %}<span class="math inline">\(X = 0\)</span>{% endraw %}. Now, it remains to show {% raw %}<span class="math inline">\(\mathcal E\)</span>{% endraw %} is surjective.</p>
+<p><em>Proof.</em> Clearly, {% raw %}<span class="math inline">\(\mathcal E\)</span>{% endraw %} is linear over {% raw %}<span class="math inline">\(\mathbb R\)</span>{% endraw %}, and this is an injective map. Injectivity follows because if {% raw %}<span class="math inline">\(\mathcal E(X) = 0\)</span>{% endraw %} for some {% raw %}<span class="math inline">\(X \in \mathfrak g\)</span>{% endraw %}, then the left-invariance of {% raw %}<span class="math inline">\(X\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(X_g = (\dif L_g)_e (X_e) = 0\)</span>{% endraw %}, i.e. {% raw %}<span class="math inline">\(X = 0\)</span>{% endraw %}. Now, it remains to show {% raw %}<span class="math inline">\(\mathcal E\)</span>{% endraw %} is surjective.</p>
 
 <p>To do so, for every {% raw %}<span class="math inline">\(V \in T_e G\)</span>{% endraw %}, define </p>
 

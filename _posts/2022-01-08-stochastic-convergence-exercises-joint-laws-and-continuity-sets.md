@@ -163,7 +163,8 @@ X_n\Rightarrow X,\qquad Y_n\Rightarrow Y.
 &amp;=\varphi_X(s)\varphi_Y(t).
 \end{aligned}
 \]</div>{% endraw %}
-<p>Weak convergence of the marginals implies convergence of these characteristic functions by applying the bounded-continuous criterion to their real and imaginary parts. The limiting product is continuous at zero, since dominated convergence gives continuity at zero of each factor. This verifies the hypotheses of Lévy’s continuity theorem for the joint vectors. No independence assumptions between different sample sizes are used.</p>
+<p>Weak convergence of the marginals implies convergence of these characteristic functions by applying the bounded-continuous criterion to their real and imaginary parts. The limiting product is continuous at zero, since dominated convergence gives continuity at zero of each factor. This verifies the hypotheses of Lévy’s continuity theorem for the joint vectors.</p>
+<p><em>Remark.</em> In the proof of <a href="#scq-laws-exercise-6">joint convergence from independent marginals</a>, independence is required within each sample-size pair, but no independence assumption is imposed between pairs at different sample sizes.</p>
 
 <h3 data-note-section="3" id="scq-laws-exercise-7">3. Integer-valued laws and total variation</h3>
 <p><strong>Question (Exercise 7).</strong> If {% raw %}<span class="math inline">\(X_n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(X\)</span>{% endraw %} are integer-valued, show that {% raw %}<span class="math inline">\(X_n\Rightarrow X\)</span>{% endraw %} if and only if {% raw %}<span class="math inline">\(\mathbb P(X_n=k)\to\mathbb P(X=k)\)</span>{% endraw %} for every integer {% raw %}<span class="math inline">\(k\)</span>{% endraw %}.</p>

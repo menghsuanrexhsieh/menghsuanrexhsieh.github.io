@@ -30,7 +30,7 @@ D\mathrel{\perp\!\!\!\perp}
 <p>{% raw %}<span class="math display">\[
 H_0:\quad Y(1,m)=Y(0,m)\quad\text{almost surely for every }m\in\mathcal M.
 \]</span>{% endraw %}</p>
-<p>Because {% raw %}<span class="math inline">\(\mathcal M\)</span>{% endraw %} is finite, the equalities can be imposed on one event of probability one. They do not require {% raw %}<span class="math inline">\(Y_1=Y_0\)</span>{% endraw %}: changing the mediator can change the outcome under {% raw %}<span class="math inline">\(H_0\)</span>{% endraw %}. For a vector-valued mediator, the null concerns mediation through the entire vector.</p>
+<p>Because {% raw %}<span class="math inline">\(\mathcal M\)</span>{% endraw %} is finite, the equalities can be imposed on one event of probability one. The full-mediation equalities do not require {% raw %}<span class="math inline">\(Y_1=Y_0\)</span>{% endraw %}: changing the mediator can change the outcome under {% raw %}<span class="math inline">\(H_0\)</span>{% endraw %}. For a vector-valued mediator, the null concerns mediation through the entire vector.</p>
 <p>Define the principal strata and their probabilities by</p>
 <p>{% raw %}<span class="math display">\[
 S_{lk}=\{M(0)=m_l,M(1)=m_k\},\qquad
@@ -43,7 +43,7 @@ S_{lk}=\{M(0)=m_l,M(1)=m_k\},\qquad
 =\left\{\vartheta\in\mathbb R^{K\times K}:
 \vartheta_{lk}\geq0,\ \sum_{l,k}\vartheta_{lk}=1\right\}.
 \]</span>{% endraw %}</p>
-<p>The restriction concerns mediator movements, not assignment of the mediator. No independence between {% raw %}<span class="math inline">\(M(d)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y(d&#39;,m)\)</span>{% endraw %} is imposed. Closedness ensures that the feasible sets below are compact; linear programming additionally requires that {% raw %}<span class="math inline">\(R\)</span>{% endraw %} be given by linear constraints.</p>
+<p><em>Remark.</em> Assumption A3 restricts mediator movements. Assumptions A1–A3 impose no independence condition between {% raw %}<span class="math inline">\(M(d)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y(d&#39;,m)\)</span>{% endraw %}. Closedness ensures that the feasible sets below are compact; linear programming additionally requires that {% raw %}<span class="math inline">\(R\)</span>{% endraw %} be given by linear constraints.</p>
 <h3 data-note-section="2" id="23-0-why-a-single-feasible-stratum-matrix-matters">2. Identified margins and feasible principal strata</h3>
 <p>Let</p>
 <p>{% raw %}<span class="math display">\[
@@ -155,7 +155,7 @@ b_k=\sum_{j=1}^J(q_{1kj}-q_{0kj})_+,
 \sup_A\{\mu_{01}(A)-\mu_{11}(A)\}
 =b_1-(p_{11}-p_{01}),
 \]</span>{% endraw %}</p>
-<p>the latter restriction is equivalent to {% raw %}<span class="math inline">\(\mu_{01}\leq\mu_{11}\)</span>{% endraw %}. These two measure inequalities are the binary monotonicity restrictions associated with instrument-validity testing when treatment is viewed as an instrument for the mediator. No nonexperimental identification argument is needed here.</p>
+<p>the restriction for mediator state one is equivalent to {% raw %}<span class="math inline">\(\mu_{01}\leq\mu_{11}\)</span>{% endraw %}. These two measure inequalities are the binary monotonicity restrictions associated with instrument-validity testing when treatment is viewed as an instrument for the mediator. No nonexperimental identification argument is needed here.</p>
 <p>For example, take {% raw %}<span class="math inline">\(a_0=0.3\)</span>{% endraw %} and {% raw %}<span class="math inline">\(a_1=0.6\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\((\theta_{00},\theta_{01},\theta_{11})=(0.4,0.3,0.3)\)</span>{% endraw %}. Suppose the state-zero outcome masses at {% raw %}<span class="math inline">\(Y=0,1\)</span>{% endraw %} are {% raw %}<span class="math inline">\((0.30,0.10)\)</span>{% endraw %} under treatment and {% raw %}<span class="math inline">\((0.25,0.45)\)</span>{% endraw %} under control. Their totals agree with the mediator margins, but</p>
 <p>{% raw %}<span class="math display">\[
 b_0=(0.30-0.25)_++(0.10-0.45)_+=0.05.

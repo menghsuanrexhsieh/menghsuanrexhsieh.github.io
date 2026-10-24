@@ -196,7 +196,7 @@ redirect_from: ["/2021/12/28/weak-convergence-in-metric-spaces/", "/2021/12/28/w
 \mathbb{E}\left[|T_n|^p\mathbf1_{\{|T_n|^p&gt;M\}}\right]
 &amp;=0.
 \end{aligned}\]</div>{% endraw %}
-<p> For fixed integer {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, this justifies {% raw %}<span class="math inline">\(\mathbb{E}T_n^p\to\mathbb{E}S^p\)</span>{% endraw %}. The tail expectation is not equal to the tail probability; the higher-moment bound is what makes this argument work.</p>
+<p> For fixed integer {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, asymptotic uniform integrability justifies {% raw %}<span class="math inline">\(\mathbb{E}T_n^p\to\mathbb{E}S^p\)</span>{% endraw %}. The tail expectation is not equal to the tail probability; the higher-moment bound is what makes this argument work.</p>
 
 </div>
 <div id="result-4" class="proposition" data-note-number="4" data-note-kind="Proposition">

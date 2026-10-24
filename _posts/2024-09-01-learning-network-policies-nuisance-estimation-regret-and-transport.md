@@ -29,9 +29,9 @@ redirect_from: ["/2025/07/30/learning-network-policies-with-estimated-nuisance-f
 {% raw %}<div class="math display">\[
 O\left(n_e^{-\xi}+\sqrt{\mathcal R_n\mathcal B_n}\right).
 \]</div>{% endraw %}
-<p>The first term is the oracle policy-learning rate. The second combines the paper’s outcome- and exposure-model error measures. Its sufficient rate conditions make this term no larger than the oracle term.</p>
 
 </div>
+<p><em>Remark.</em> In the bound of <a href="#network-policy-nuisance">Theorem 1</a>, {% raw %}<span class="math inline">\(n_e^{-\xi}\)</span>{% endraw %} is the oracle policy-learning rate, and {% raw %}<span class="math inline">\(\sqrt{\mathcal R_n\mathcal B_n}\)</span>{% endraw %} combines the paper’s outcome- and exposure-model error measures. The paper’s sufficient rate conditions make the nuisance-error term no larger than the oracle term.</p>
 <h3 data-note-section="2" id="10-628-derive-double-robustness">2. Derive double robustness</h3>
 <p>Condition on baseline information and on nuisance estimates trained using suitably separated observations. For one exposure cell, {% raw %}<span class="math inline">\(\mathbb{E}[IY]=em\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\mathbb{E}[I]=e\)</span>{% endraw %}. Therefore</p>
 
@@ -77,7 +77,7 @@ W(\pi^*)-W(\widehat\pi)
 
 <p>The calculation {% raw %}<span class="math inline">\(\mathbb{E}[IY\mid\text{training information}]=em\)</span>{% endraw %} requires the training information to be conditionally separated from the evaluation contribution in the stipulated model. Removing a network buffer or constructing independent color classes can supply this separation under local-dependence assumptions. It reduces the available training data, and the larger dependence neighborhood must be reflected in the rate calculation.</p>
 
-<p>Causal exposure and disturbance dependence need not have the same radius. Outcomes may depend causally on immediate neighbors’ treatments while unobservables remain related over several graph steps. The training separation must follow the latter when it is larger. The paper’s extension to {% raw %}<span class="math inline">\(M\)</span>{% endraw %}-step dependence adds an oracle factor of order {% raw %}<span class="math inline">\(M\mathcal{N}_n^{M/2-1}\)</span>{% endraw %}, together with its strengthened boundedness and nuisance conditions.</p>
+<p>Causal exposure and disturbance dependence need not have the same radius. Outcomes may depend causally on immediate neighbors’ treatments while unobservables remain related over several graph steps. The training separation must follow the disturbance-dependence radius when it is larger. The paper’s extension to {% raw %}<span class="math inline">\(M\)</span>{% endraw %}-step dependence adds an oracle factor of order {% raw %}<span class="math inline">\(M\mathcal{N}_n^{M/2-1}\)</span>{% endraw %}, together with its strengthened boundedness and nuisance conditions.</p>
 
 <h3 data-note-section="7" id="10-628-trimming-trades-weight-size-against-missing-welfare">7. Trimming trades weight size against missing welfare</h3>
 <p>Let {% raw %}<span class="math inline">\(W_\kappa(\pi)\)</span>{% endraw %} retain only contributions whose exposure probabilities exceed {% raw %}<span class="math inline">\(\kappa\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(|Y|\leq\Gamma\)</span>{% endraw %},</p>

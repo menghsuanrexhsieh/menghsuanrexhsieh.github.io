@@ -169,7 +169,7 @@ A_n+B_n=O_P(1).
 {% raw %}<div class="math display">\[
 {A_n+B_n=O_P(1).}
 \]</div>{% endraw %}
-<p>The argument uses only the triangle inequality and the union bound, so it applies to any joint distribution of the two sequences. No independence assumption is needed.</p>
+<p><em>Remark.</em> In the proof of the <a href="#scq-orders-exercise-10">sum rule for a tight sequence and a negligible term</a>, no independence assumption is imposed on {% raw %}<span class="math inline">\(A_n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B_n\)</span>{% endraw %}. The triangle inequality and the union bound apply to any joint distribution of the two sequences.</p>
 
 <p>Suppose that, for each {% raw %}<span class="math inline">\(\eta&gt;0\)</span>{% endraw %}, there exist {% raw %}<span class="math inline">\(M_0&lt;\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(N\)</span>{% endraw %} such that</p>
 
@@ -313,7 +313,7 @@ R(X_n)
 \qquad
 \frac{R(X_n)}{X_n}=n+1.
 \]</div>{% endraw %}
-<p>The latter sequence is not bounded in probability: for every {% raw %}<span class="math inline">\(M&lt;\infty\)</span>{% endraw %},</p>
+<p>The ratio sequence {% raw %}<span class="math inline">\(R(X_n)/X_n\)</span>{% endraw %} is not bounded in probability: for every {% raw %}<span class="math inline">\(M&lt;\infty\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
 \mathbb P\!\left(\left|\frac{R(X_n)}{X_n}\right|&gt;M\right)=1

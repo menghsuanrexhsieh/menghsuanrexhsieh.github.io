@@ -108,7 +108,7 @@ redirect_from: ["/2022/04/13/geodesics/", "/2022/06/20/the-hamiltonian-formulati
 {% raw %}<div class="math display">\[\dot\theta=\pm R^{-1}\sqrt{1-R^2C^2/\sin^2\theta},\qquad \frac{d\varphi}{d\theta}=\pm\frac{RC}{\sin\theta\sqrt{\sin^2\theta-R^2C^2}}.\]</div>{% endraw %}
 <p>For {% raw %}<span class="math inline">\(0&lt;|RC|&lt;1\)</span>{% endraw %}, put {% raw %}<span class="math inline">\(a=RC\)</span>{% endraw %} and substitute</p>
 {% raw %}<div class="math display">\[u=\frac{a\cot\theta}{\sqrt{1-a^2}},\qquad du=-\frac{a\csc^2\theta}{\sqrt{1-a^2}}\,d\theta,\qquad 1-a^2\csc^2\theta=(1-a^2)(1-u^2).\]</div>{% endraw %}
-<p>On an interval where {% raw %}<span class="math inline">\(\dot\theta\ne0\)</span>{% endraw %}, this gives</p>
+<p>On an interval where {% raw %}<span class="math inline">\(\dot\theta\ne0\)</span>{% endraw %}, the substitution gives</p>
 {% raw %}<div class="math display">\[\varphi-\varphi_0=\pm\int\frac{a\csc^2\theta}{\sqrt{1-a^2\csc^2\theta}}\,d\theta
 =\mp\int\frac{du}{\sqrt{1-u^2}}=\pm\arccos u,\]</div>{% endraw %}
 <p>where the sign is chosen on that interval and the integration constant is absorbed into {% raw %}<span class="math inline">\(\varphi_0\)</span>{% endraw %}. Taking cosines gives</p>
@@ -197,8 +197,8 @@ redirect_from: ["/2022/04/13/geodesics/", "/2022/06/20/the-hamiltonian-formulati
 <div id="def:exp" class="definition" data-note-number="7" data-note-kind="Definition">
 <p><strong>Definition 7.</strong> For {% raw %}<span class="math inline">\(p\in M\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(V_p\subset T_pM\)</span>{% endraw %} be the set of initial velocities whose maximal geodesics exist through time one. The exponential map is</p>
 {% raw %}<div class="math display">\[\exp_p:V_p\longrightarrow M,\qquad\exp_p(v)=c_v(1).\]</div>{% endraw %}
-<p> The maximal-flow domain is open, so {% raw %}<span class="math inline">\(V_p\)</span>{% endraw %} is open; it contains zero and a neighbourhood of zero. It need not be all of {% raw %}<span class="math inline">\(T_pM\)</span>{% endraw %} without a completeness assumption.</p>
 </div>
+<p><em>Remark.</em> The domain in <a href="#def:exp">Definition 7</a> is open because the maximal-flow domain is open. Thus {% raw %}<span class="math inline">\(V_p\)</span>{% endraw %} is an open neighbourhood of zero. Without a completeness assumption, {% raw %}<span class="math inline">\(V_p\)</span>{% endraw %} need not be all of {% raw %}<span class="math inline">\(T_pM\)</span>{% endraw %}.</p>
 <div id="result-8" class="remark" data-note-number="8" data-note-kind="Remark">
 <p><strong>Remark 8.</strong> The zero initial velocity produces the constant curve {% raw %}<span class="math inline">\(c_0(t)=p\)</span>{% endraw %}, defined for all times, so {% raw %}<span class="math inline">\(0\in V_p\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\exp_p(0)=p\)</span>{% endraw %}. Smooth dependence for the geodesic ODE makes {% raw %}<span class="math inline">\(\exp_p\)</span>{% endraw %} smooth on {% raw %}<span class="math inline">\(V_p\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(v\in V_p\)</span>{% endraw %}, the scaling identity gives {% raw %}<span class="math inline">\(c_v(t)=\exp_p(tv)\)</span>{% endraw %} at every time for which the radial expression is defined.</p>
 </div>

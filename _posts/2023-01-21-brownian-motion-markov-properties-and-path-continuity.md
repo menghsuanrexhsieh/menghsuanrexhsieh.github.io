@@ -125,7 +125,7 @@ Reflection at a level
 \limsup_{t\downarrow0}\frac{|B_t|}{\sqrt{2t\log\log(1/t)}}=1
 \quad\text{almost surely}.\tag{1}\]</div>{% endraw %}
 
-<p>The <a href="{% post_url 2023-05-08-brownian-path-oscillations-and-continuity-bounds %}#sec:LIL">proof of the law of the iterated logarithm</a> gives the result at infinity. For the result at zero, set {% raw %}<span class="math inline">\(\widehat B_t=tB_{1/t}\)</span>{% endraw %} for {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat B_0=0\)</span>{% endraw %}. The upper bound at infinity implies {% raw %}<span class="math inline">\(\widehat B_t\to0\)</span>{% endraw %} as {% raw %}<span class="math inline">\(t\downarrow0\)</span>{% endraw %}. This process is centered Gaussian and, for {% raw %}<span class="math inline">\(0&lt;s\leq t\)</span>{% endraw %},</p>
+<p>The <a href="{% post_url 2023-05-08-brownian-path-oscillations-and-continuity-bounds %}#sec:LIL">proof of the law of the iterated logarithm</a> gives the first limit superior in (1). For the limit superior at zero, set {% raw %}<span class="math inline">\(\widehat B_t=tB_{1/t}\)</span>{% endraw %} for {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat B_0=0\)</span>{% endraw %}. The upper bound at infinity implies {% raw %}<span class="math inline">\(\widehat B_t\to0\)</span>{% endraw %} as {% raw %}<span class="math inline">\(t\downarrow0\)</span>{% endraw %}. The time-inverted process is centered Gaussian and, for {% raw %}<span class="math inline">\(0&lt;s\leq t\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[\mathbb E[\widehat B_s\widehat B_t]=st\min(1/s,1/t)=s.\]</div>{% endraw %}
 
