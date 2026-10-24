@@ -20,7 +20,7 @@ redirect_from: ["/2024/06/10/finite-sample-inference-under-interference/"]
 <p><strong>Proposition 1</strong>. Suppose {% raw %}<span class="math inline">\(V_g\)</span>{% endraw %} are independent unbiased group contributions to a target {% raw %}<span class="math inline">\(G^{-1}\sum_g\mathbb{E}[V_g]\)</span>{% endraw %}, with known bounds {% raw %}<span class="math inline">\(a_g\le V_g\le b_g\)</span>{% endraw %}. Then</p>
 
 {% raw %}<div class="math display">\[
-\Pr\left(\left|\frac1G\sum_g(V_g-\mathbb{E} V_g)\right|&gt;t\right)
+P\left(\left|\frac1G\sum_g(V_g-\mathbb{E} V_g)\right|&gt;t\right)
 \le2\exp\left(-\frac{2G^2t^2}{\sum_g(b_g-a_g)^2}\right).
 \]</div>{% endraw %}
 </div>
@@ -41,7 +41,7 @@ redirect_from: ["/2024/06/10/finite-sample-inference-under-interference/"]
 <p>Expand the expectation as a sum over {% raw %}<span class="math inline">\(\mathbf A_g\)</span>{% endraw %}. For every allocation in the target support, its observed probability cancels the same factor in the denominator. The remaining sum averages potential outcomes with the target probabilities. Taking expectation over covariates then gives the stated mean.</p>
 
 <h3 data-note-section="3" id="10-141-why-an-individual-propensity-is-generally-insufficient">3. Why an individual propensity is generally insufficient</h3>
-<p>Weighting only by {% raw %}<span class="math inline">\(\Pr(A_{gj}=a\mid L_{gj})\)</span>{% endraw %} leaves the conditional distribution of peers’ assignments in the expectation. Under interference, that remaining distribution affects outcomes and need not equal the policy distribution of interest.</p>
+<p>Weighting only by {% raw %}<span class="math inline">\(P(A_{gj}=a\mid L_{gj})\)</span>{% endraw %} leaves the conditional distribution of peers’ assignments in the expectation. Under interference, that remaining distribution affects outcomes and need not equal the policy distribution of interest.</p>
 
 <p>This identity requires probabilities for joint allocations, which can be difficult to estimate in large groups. An assignment model or a sufficient <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">exposure mapping</a> can reduce the dimension. Either reduction must be justified, and neither identifies outcomes at target allocations that the observed design never produces.</p>
 
@@ -55,7 +55,7 @@ redirect_from: ["/2024/06/10/finite-sample-inference-under-interference/"]
 <p>The exponential of a sum is a product. Independence allows its expectation to factor, so the one-group bounds multiply. Applying Markov’s inequality gives</p>
 
 {% raw %}<div class="math display">\[
-\Pr\left\{\sum_g(V_g-\mathbb{E}V_g)&gt;Gt\right\}
+P\left\{\sum_g(V_g-\mathbb{E}V_g)&gt;Gt\right\}
 \leq\exp\left(-\lambda Gt+
 \frac{\lambda^2}8\sum_g(b_g-a_g)^2\right).
 \]</div>{% endraw %}

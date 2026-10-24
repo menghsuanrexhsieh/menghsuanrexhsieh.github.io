@@ -50,7 +50,7 @@ redirect_from: ["/2024/05/08/partial-interference-and-two-stage-randomization/",
 {% raw %}<div class="math display">\[
 \widehat Y_g(1;s)=\frac1{K_g}\sum_jZ_{gj}Y_{gj}(\mathbf Z_g).
 \]</div>{% endraw %}
-<p>Because {% raw %}<span class="math inline">\(\Pr(Z_{gj}=1\mid s)=K_g/n_g\)</span>{% endraw %},</p>
+<p>Because {% raw %}<span class="math inline">\(\mathbb{P}(Z_{gj}=1\mid s)=K_g/n_g\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
 \mathbb{E}_s\widehat Y_g(1;s)

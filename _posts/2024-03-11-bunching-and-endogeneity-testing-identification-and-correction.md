@@ -128,7 +128,7 @@ Y=\beta T+X&#x27;\gamma+U,
 
 {% raw %}<div class="math display">\[
 \psi(x)=-\frac{\int_{-\infty}^0F_{T^*\mid X}(t\mid x)\,dt}
- {\Pr(T=0\mid X=x)}.
+ {P(T=0\mid X=x)}.
 \]</div>{% endraw %}
 <p>The atom probability gives the denominator. The numerator also depends on how far the latent choices extend below zero, information removed by censoring.</p>
 

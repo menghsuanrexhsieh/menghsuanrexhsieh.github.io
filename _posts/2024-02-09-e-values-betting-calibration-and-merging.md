@@ -18,7 +18,7 @@ redirect_from: ["/2024/05/18/e-values-betting-calibration-and-merging/", "/2024/
 <p><strong>Proposition 1</strong>. For any {% raw %}<span class="math inline">\(e\)</span>{% endraw %}-variable and {% raw %}<span class="math inline">\(0&lt;\alpha&lt;1\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\sup_{P\in H_0}\Pr_P(E\ge1/\alpha)\le\alpha.
+\sup_{P\in H_0}P(E\ge1/\alpha)\le\alpha.
 \]</div>{% endraw %}
 <p>Consequently {% raw %}<span class="math inline">\(\min(1,1/E)\)</span>{% endraw %} is a valid {% raw %}<span class="math inline">\(p\)</span>{% endraw %}-variable, with value one when {% raw %}<span class="math inline">\(E=0\)</span>{% endraw %}.</p>
 
@@ -123,7 +123,7 @@ f(F_Q^{-1}(U))\le f(U),
 
 
 <h3 data-note-section="5" id="25-0-a-sequential-betting-example">5. A sequential betting example</h3>
-<p>Suppose {% raw %}<span class="math inline">\(X_t\)</span>{% endraw %} is binary and the null requires {% raw %}<span class="math inline">\(\Pr(X_t=1\mid\mathcal F_{t-1})\le p_0\)</span>{% endraw %}. Choose a predictable {% raw %}<span class="math inline">\(q_t\in[p_0,1)\)</span>{% endraw %} and define the next payoff factor by</p>
+<p>Suppose {% raw %}<span class="math inline">\(X_t\)</span>{% endraw %} is binary and the null requires {% raw %}<span class="math inline">\(\mathbb{P}(X_t=1\mid\mathcal F_{t-1})\le p_0\)</span>{% endraw %}. Choose a predictable {% raw %}<span class="math inline">\(q_t\in[p_0,1)\)</span>{% endraw %} and define the next payoff factor by</p>
 
 {% raw %}<div class="math display">\[
 L_t\triangleq
@@ -142,7 +142,7 @@ L_t\triangleq
 
 {% raw %}<div class="math display">\[
 1\ge\mathbb{E}[K_{\tau\wedge N}]
-\ge\alpha^{-1}\Pr(\tau\le N).
+\ge\alpha^{-1}\mathbb{P}(\tau\le N).
 \]</div>{% endraw %}
 <p>Letting {% raw %}<span class="math inline">\(N\to\infty\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(\mathbb P(\tau&lt;\infty)\leq\alpha\)</span>{% endraw %}. Thus the probability of rejection at any observation time is at most {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}, including when the number of observations is chosen from the observed history.</p>
 

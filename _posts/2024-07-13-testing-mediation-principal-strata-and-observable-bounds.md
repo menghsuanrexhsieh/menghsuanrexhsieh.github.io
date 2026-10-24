@@ -23,7 +23,7 @@ Y_d=Y(d,M(d)),\qquad d\in\{0,1\}.
 <p>{% raw %}<span class="math display">\[
 D\mathrel{\perp\!\!\!\perp}
 \bigl(M(0),M(1),\{Y(d,m):d\in\{0,1\},m\in\mathcal M\}\bigr),
-\qquad 0&lt;\Pr(D=1)&lt;1.
+\qquad 0&lt;P(D=1)&lt;1.
 \]</span>{% endraw %}</p>
 <p>The identification arguments concern the population law of one individual. Independence across sampled individuals is a separate assumption used for inference in the companion post.</p>
 <p>The <strong>sharp null of full mediation</strong> is</p>
@@ -34,7 +34,7 @@ H_0:\quad Y(1,m)=Y(0,m)\quad\text{almost surely for every }m\in\mathcal M.
 <p>Define the principal strata and their probabilities by</p>
 <p>{% raw %}<span class="math display">\[
 S_{lk}=\{M(0)=m_l,M(1)=m_k\},\qquad
-\theta_{lk}=\Pr(S_{lk}),\qquad 0\leq l,k&lt;K.
+\theta_{lk}=P(S_{lk}),\qquad 0\leq l,k&lt;K.
 \]</span>{% endraw %}</p>
 <p>Individuals in {% raw %}<span class="math inline">\(S_{kk}\)</span>{% endraw %} are <em>stayers</em>. Individuals in {% raw %}<span class="math inline">\(S_{lk}\)</span>{% endraw %} with {% raw %}<span class="math inline">\(l\ne k\)</span>{% endraw %} move from state {% raw %}<span class="math inline">\(l\)</span>{% endraw %} to state {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. The paper calls these groups {% raw %}<span class="math inline">\(k\)</span>{% endraw %}-always-takers and {% raw %}<span class="math inline">\(lk\)</span>{% endraw %}-compliers, respectively; the latter terminology includes downward movements when they are allowed.</p>
 <p><strong>Assumption A3 (Restrictions on mediator movements).</strong> The matrix {% raw %}<span class="math inline">\(\theta\)</span>{% endraw %} belongs to a specified nonempty closed subset {% raw %}<span class="math inline">\(R\)</span>{% endraw %} of</p>
@@ -47,11 +47,11 @@ S_{lk}=\{M(0)=m_l,M(1)=m_k\},\qquad
 <h3 data-note-section="2" id="23-0-why-a-single-feasible-stratum-matrix-matters">2. Identified margins and feasible principal strata</h3>
 <p>Let</p>
 <p>{% raw %}<span class="math display">\[
-p_{dk}=\Pr(M=m_k\mid D=d),\qquad
-\mu_{dk}(A)=\Pr(Y\in A,M=m_k\mid D=d),
+p_{dk}=P(M=m_k\mid D=d),\qquad
+\mu_{dk}(A)=P(Y\in A,M=m_k\mid D=d),
 \quad A\in\mathscr B(\mathbb R).
 \]</span>{% endraw %}</p>
-<p>Under A1–A2, {% raw %}<span class="math inline">\(\mu_{dk}(A)=\Pr(Y_d\in A,M(d)=m_k)\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(\mu_{dk}\)</span>{% endraw %} is an identified subprobability measure with total mass {% raw %}<span class="math inline">\(p_{dk}\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(p_{dk}&gt;0\)</span>{% endraw %}, the conditional outcome distribution in the cell is {% raw %}<span class="math inline">\(\mu_{dk}/p_{dk}\)</span>{% endraw %}. Keeping the original mass is necessary for the bounds below.</p>
+<p>Under A1–A2, {% raw %}<span class="math inline">\(\mu_{dk}(A)=P(Y_d\in A,M(d)=m_k)\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(\mu_{dk}\)</span>{% endraw %} is an identified subprobability measure with total mass {% raw %}<span class="math inline">\(p_{dk}\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(p_{dk}&gt;0\)</span>{% endraw %}, the conditional outcome distribution in the cell is {% raw %}<span class="math inline">\(\mu_{dk}/p_{dk}\)</span>{% endraw %}. Keeping the original mass is necessary for the bounds below.</p>
 <p>The feasible set of principal-stratum shares is</p>
 <p>{% raw %}<span class="math display">\[
 \Theta_I=\left\{\vartheta\in R:
@@ -77,7 +77,7 @@ b_k=\sup_{A\in\mathscr B(\mathbb R)}\Delta_k(A).
 \]</span>{% endraw %}</p>
 <p>The unconditional mass of affected stayers is</p>
 <p>{% raw %}<span class="math display">\[
-r_k=\Pr(S_{kk},Y_1\ne Y_0).
+r_k=P(S_{kk},Y_1\ne Y_0).
 \]</span>{% endraw %}</p>
 <p>When {% raw %}<span class="math inline">\(\theta_{kk}&gt;0\)</span>{% endraw %}, the corresponding conditional fraction is {% raw %}<span class="math inline">\(\nu_k=r_k/\theta_{kk}\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(\theta_{kk}=0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(r_k=0\)</span>{% endraw %} and the conditional fraction is undefined. Formulating the basic result in terms of {% raw %}<span class="math inline">\(r_k\)</span>{% endraw %} covers both cases without a convention for conditioning on a null event.</p>
 <span id="23-0-the-mass-accounting-proof-in-indicators"></span>
@@ -145,7 +145,7 @@ b_k=\sum_{j=1}^J(q_{1kj}-q_{0kj})_+,
 \]</span>{% endraw %}</p>
 <p>The maximizing set contains every positive-difference cell. Restricting attention to lower intervals {% raw %}<span class="math inline">\((-\infty,y]\)</span>{% endraw %} need not recover this set.</p>
 <h3 data-note-section="5" id="23-0-a-binary-mediator-example">5. Binary mediators and observable violations</h3>
-<p>Suppose {% raw %}<span class="math inline">\(\mathcal M=\{0,1\}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(M(1)\geq M(0)\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(a_d=\Pr(M=1\mid D=d)\)</span>{% endraw %}. Feasibility requires {% raw %}<span class="math inline">\(a_1\geq a_0\)</span>{% endraw %}, and the shares are identified:</p>
+<p>Suppose {% raw %}<span class="math inline">\(\mathcal M=\{0,1\}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(M(1)\geq M(0)\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(a_d=P(M=1\mid D=d)\)</span>{% endraw %}. Feasibility requires {% raw %}<span class="math inline">\(a_1\geq a_0\)</span>{% endraw %}, and the shares are identified:</p>
 <p>{% raw %}<span class="math display">\[
 \theta_{00}=1-a_1,\qquad \theta_{01}=a_1-a_0,
 \qquad \theta_{11}=a_0,\qquad\theta_{10}=0.
@@ -174,7 +174,7 @@ c_k=F_0(k-1)-F_1(k-1).
 <p>The set {% raw %}<span class="math inline">\(\Theta_I\)</span>{% endraw %} is nonempty if and only if {% raw %}<span class="math inline">\(F_0(k)\geq F_1(k)\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. When it is nonempty,</p>
 <p>{% raw %}<span class="math display">\[
 t_k^{\min}=(p_{1k}-c_k)_+
-=\left[p_{1k}-\{\Pr(M\geq m_k\mid D=1)-\Pr(M\geq m_k\mid D=0)\}\right]_+,
+=\left[p_{1k}-\{P(M\geq m_k\mid D=1)-P(M\geq m_k\mid D=0)\}\right]_+,
 \]</span>{% endraw %}</p>
 <p>and one feasible matrix attains these minima for every {% raw %}<span class="math inline">\(k\)</span>{% endraw %} simultaneously.</p>
 </div>
@@ -188,7 +188,7 @@ c_k=\sum_{l&lt;k,\,j\geq k}\vartheta_{lj}.
 <p>{% raw %}<span class="math display">\[
 p_{0k}+c_k-p_{1k}=F_0(k)-F_1(k)\geq0.
 \]</span>{% endraw %}</p>
-<p>Add the unused supply of row {% raw %}<span class="math inline">\(k\)</span>{% endraw %} to the pool. The new total is {% raw %}<span class="math inline">\(c_k+p_{0k}-p_{1k}=c_{k+1}\)</span>{% endraw %}. This proves the induction, starting with {% raw %}<span class="math inline">\(c_0=0\)</span>{% endraw %}. After the last column, {% raw %}<span class="math inline">\(c_K=F_0(K-1)-F_1(K-1)=0\)</span>{% endraw %}, so all row supplies have been used. Every allocation has origin at most its destination, preserves both margins, and assigns exactly {% raw %}<span class="math inline">\((p_{1k}-c_k)_+\)</span>{% endraw %} to diagonal cell {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. The survival-function expression follows from {% raw %}<span class="math inline">\(\Pr(M\geq m_k\mid D=d)=1-F_d(k-1)\)</span>{% endraw %}. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+<p>Add the unused supply of row {% raw %}<span class="math inline">\(k\)</span>{% endraw %} to the pool. The new total is {% raw %}<span class="math inline">\(c_k+p_{0k}-p_{1k}=c_{k+1}\)</span>{% endraw %}. This proves the induction, starting with {% raw %}<span class="math inline">\(c_0=0\)</span>{% endraw %}. After the last column, {% raw %}<span class="math inline">\(c_K=F_0(K-1)-F_1(K-1)=0\)</span>{% endraw %}, so all row supplies have been used. Every allocation has origin at most its destination, preserves both margins, and assigns exactly {% raw %}<span class="math inline">\((p_{1k}-c_k)_+\)</span>{% endraw %} to diagonal cell {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. The survival-function expression follows from {% raw %}<span class="math inline">\(P(M\geq m_k\mid D=d)=1-F_d(k-1)\)</span>{% endraw %}. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 </div>
 <p>Combining this proposition with the sharpness theorem in the companion post, full mediation is compatible with the observed distributions under ordered monotonicity if and only if the cumulative inequalities hold and {% raw %}<span class="math inline">\(t_k^{\min}\leq O_k\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. Additional restrictions on {% raw %}<span class="math inline">\(R\)</span>{% endraw %} can invalidate the simultaneous-minimizer construction; in that case the original joint feasibility problem must be used.</p>
 <p>The distinction matters even when each coordinate minimum is zero. For example, let {% raw %}<span class="math inline">\(K=3\)</span>{% endraw %}, let both mediator margins be uniform, and impose {% raw %}<span class="math inline">\(\sum_k\vartheta_{kk}\geq1/3\)</span>{% endraw %}. A matrix placing mass {% raw %}<span class="math inline">\(1/3\)</span>{% endraw %} on one fixed state and on each direction of a swap between the other two states is feasible. Choosing different fixed states shows that every coordinate minimum is zero. If all {% raw %}<span class="math inline">\(O_k=0\)</span>{% endraw %}, however, the null requires every diagonal entry to vanish, contradicting the restriction on their sum. The candidate matrices cannot be combined coordinate by coordinate.</p>
@@ -205,7 +205,7 @@ Y_1-Y_0=Y(0,M(1))-Y(0,M(0)),
 <p>which need not vanish on {% raw %}<span class="math inline">\(\widetilde S_{kk}\)</span>{% endraw %}. Equality of {% raw %}<span class="math inline">\(Y(d,m)\)</span>{% endraw %} across all mediator values in a bin is sufficient to remove this problem.</p>
 <p>A weaker sensitivity analysis can instead impose, for each bin with positive stayer probability,</p>
 <p>{% raw %}<span class="math display">\[
-\Pr\{Y(0,M(1))\ne Y(0,M(0))\mid\widetilde S_{kk}\}\leq\varepsilon_k.
+P\{Y(0,M(1))\ne Y(0,M(0))\mid\widetilde S_{kk}\}\leq\varepsilon_k.
 \]</span>{% endraw %}</p>
 <p>This assumption concerns the realized pair of potential mediator values. Under {% raw %}<span class="math inline">\(H_0\)</span>{% endraw %}, it implies that the affected mass among bin-stayers is at most {% raw %}<span class="math inline">\(\varepsilon_k\widetilde\theta_{kk}\)</span>{% endraw %}. Applying Proposition 1 to the binned mediator gives the necessary restrictions</p>
 <p>{% raw %}<span class="math display">\[

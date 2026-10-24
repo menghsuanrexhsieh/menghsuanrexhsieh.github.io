@@ -86,7 +86,7 @@ M_0=
 \sigma_a,\sigma_\pi&gt;0,
 \quad |\rho|&lt;1.
 \]</div>{% endraw %}
-<p>Assume also that {% raw %}<span class="math inline">\(nM_0\widehat\Sigma M_0&#x27;\xrightarrow{p}\Omega_0\)</span>{% endraw %} and that {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} is positive definite with probability tending to one.</p>
+<p>Assume also that {% raw %}<span class="math inline">\(nM_0\widehat\Sigma M_0&#x27;\xrightarrow{P}\Omega_0\)</span>{% endraw %} and that {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} is positive definite with probability tending to one.</p>
 
 </div>
 <p>These are high-level conditions on the coefficient estimators and their covariance estimates. They state the joint central limit theorem and consistency requirements used in the paper’s online Appendix A.1. The normalization is written for a {% raw %}<span class="math inline">\(\sqrt n\)</span>{% endraw %} rate; other sampling schemes require the corresponding rate and local sequence. Finite-sample normality of the observations is not assumed.</p>
@@ -228,7 +228,7 @@ A\mid f=u\sim
 <p>Fix a significance level {% raw %}<span class="math inline">\(\alpha\in(0,1)\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(z_{1-\alpha/2}=\Phi^{-1}(1-\alpha/2)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(q_\alpha=z_{1-\alpha/2}^2\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\Phi\)</span>{% endraw %} is the standard normal distribution function. A rule that rejects only when {% raw %}<span class="math inline">\(F&gt;K\)</span>{% endraw %} and {% raw %}<span class="math inline">\(T&gt;q_\alpha\)</span>{% endraw %} has rejection probability</p>
 
 {% raw %}<span id="eq:tf-step-rule"></span><div class="math display">\[
-\Pr_{f_0,\rho}\{T&gt;q_\alpha,\ F&gt;K\}.
+P_{f_0,\rho}\{T&gt;q_\alpha,\ F&gt;K\}.
 
 \tag{11}\]</div>{% endraw %}
 <p>This is an unconditional probability of a joint event. It differs from the rejection probability conditional on passing the screen. Inverting the joint rule gives the entire real line when the screen fails; dropping those specifications from the analysis changes the inferential procedure.</p>
@@ -263,7 +263,7 @@ T(A,f;\rho)
 
 {% raw %}<span id="eq:tf-size-function"></span><div class="math display">\[
 r_k(f_0,\rho)
-\triangleq\Pr_{f_0,\rho}\{T(A,f;\rho)&gt;k(f^2)\}.
+\triangleq P_{f_0,\rho}\{T(A,f;\rho)&gt;k(f^2)\}.
 
 \tag{13}\]</div>{% endraw %}
 <p>The calibration problem is to choose {% raw %}<span class="math inline">\(c_\alpha\)</span>{% endraw %} such that</p>
@@ -373,14 +373,14 @@ T(A,f;1)=\frac{f^2(f-f_0)^2}{f_0^2}.
 
 {% raw %}<div class="math display">\[
 \lim_{n\to\infty}
-\Pr_{\beta_0}\{\widehat t^{\,2}&gt;c_\alpha(\widehat F)\}
+P_{\beta_0}\{\widehat t^{\,2}&gt;c_\alpha(\widehat F)\}
 =r_{c_\alpha}(f_0,\rho)\leq\alpha,
 \qquad
 \liminf_{n\to\infty}
-\Pr_{\beta_0}\{\beta_0\in\mathcal C_{tF}\}\geq1-\alpha.
+P_{\beta_0}\{\beta_0\in\mathcal C_{tF}\}\geq1-\alpha.
 \]</div>{% endraw %}
 </div>
-<p><em>Proof.</em> The probability that {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} is not positive definite tends to zero by assumption. On the remaining samples, {% raw %}<span class="math inline">\(\widehat\pi=0\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(\widehat f=0\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(\widehat f\Rightarrow f\)</span>{% endraw %} and {% raw %}<span class="math inline">\(f\)</span>{% endraw %} has a density, the Portmanteau theorem gives {% raw %}<span class="math inline">\(\Pr(\widehat f=0)\to0\)</span>{% endraw %} after any fixed extension of {% raw %}<span class="math inline">\(\widehat f\)</span>{% endraw %} to the exceptional samples. Thus the nonrejection convention affects an event of vanishing probability.</p>
+<p><em>Proof.</em> The probability that {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %} is not positive definite tends to zero by assumption. On the remaining samples, {% raw %}<span class="math inline">\(\widehat\pi=0\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(\widehat f=0\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(\widehat f\Rightarrow f\)</span>{% endraw %} and {% raw %}<span class="math inline">\(f\)</span>{% endraw %} has a density, the Portmanteau theorem gives {% raw %}<span class="math inline">\(P(\widehat f=0)\to0\)</span>{% endraw %} after any fixed extension of {% raw %}<span class="math inline">\(\widehat f\)</span>{% endraw %} to the exceptional samples. Thus the nonrejection convention affects an event of vanishing probability.</p>
 
 <p>The variance identity and the Gaussian limit give joint convergence of {% raw %}<span class="math inline">\((\widehat t^{\,2},\widehat F)\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(F&lt;q_\alpha\)</span>{% endraw %}, the test never rejects. On {% raw %}<span class="math inline">\(F&gt;q_\alpha\)</span>{% endraw %}, continuity of {% raw %}<span class="math inline">\(c_\alpha\)</span>{% endraw %} implies that a boundary point of the rejection region must satisfy {% raw %}<span class="math inline">\(T=c_\alpha(F)\)</span>{% endraw %}. For fixed {% raw %}<span class="math inline">\(f\ne0\)</span>{% endraw %} with {% raw %}<span class="math inline">\(f^2&gt;q_\alpha\)</span>{% endraw %}, this equality is</p>
 
@@ -388,7 +388,7 @@ T(A,f;1)=\frac{f^2(f-f_0)^2}{f_0^2}.
 \big(f^2-c_\alpha(f^2)\big)A^2
 +2c_\alpha(f^2)\rho fA-c_\alpha(f^2)f^2=0.
 \]</div>{% endraw %}
-<p>Its constant term is strictly negative, so the polynomial is not identically zero and has at most two roots. The conditional law of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} given {% raw %}<span class="math inline">\(f\)</span>{% endraw %} has a density when {% raw %}<span class="math inline">\(|\rho|&lt;1\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\Pr(F=q_\alpha)=0\)</span>{% endraw %}. The entire rejection boundary therefore has probability zero. The Portmanteau theorem gives convergence of rejection probabilities, and test inversion gives coverage. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+<p>Its constant term is strictly negative, so the polynomial is not identically zero and has at most two roots. The conditional law of {% raw %}<span class="math inline">\(A\)</span>{% endraw %} given {% raw %}<span class="math inline">\(f\)</span>{% endraw %} has a density when {% raw %}<span class="math inline">\(|\rho|&lt;1\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(P(F=q_\alpha)=0\)</span>{% endraw %}. The entire rejection boundary therefore has probability zero. The Portmanteau theorem gives convergence of rejection probabilities, and test inversion gives coverage. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 
 <p>The Gaussian size bound is uniform in {% raw %}<span class="math inline">\((f_0,\rho)\)</span>{% endraw %}; the sample assumptions give convergence along each specified sequence. Uniform asymptotic coverage over a class of data-generating processes requires uniform approximation and covariance-consistency conditions for that class. The proposition does not assert finite-sample coverage.</p>
 
@@ -524,7 +524,7 @@ c_\alpha(F)=O\big((F-q_\alpha)^{-1}\big)
 </div>
 <p>The published {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} curve satisfies these conditions by its local expansion and plateau. The length argument needs only the stated upper bound, not the higher-order terms in that expansion or the size calibration. The proof in the <a href="#24-0-length-proof">appendix</a> uses the independence of {% raw %}<span class="math inline">\(B\)</span>{% endraw %} and {% raw %}<span class="math inline">\(F\)</span>{% endraw %}. Near {% raw %}<span class="math inline">\(F=q\)</span>{% endraw %}, the conditional mean AR length is bounded below by a positive multiple of {% raw %}<span class="math inline">\((F-q)^{-1}\)</span>{% endraw %}, whereas the conditional mean {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} length is bounded above by a multiple of {% raw %}<span class="math inline">\((F-q)^{-1/2}\)</span>{% endraw %}. The density of {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is positive and continuous at {% raw %}<span class="math inline">\(q\)</span>{% endraw %}, so the first singularity is nonintegrable and the second is integrable.</p>
 
-<p>Both procedures have infinite unconditional expected length because {% raw %}<span class="math inline">\(\Pr(F\leq q)&gt;0\)</span>{% endraw %} and their sets are unbounded on that event. The conditional comparison does not say that every realized {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} interval is shorter, nor that coverage remains {% raw %}<span class="math inline">\(1-\alpha\)</span>{% endraw %} after conditioning on {% raw %}<span class="math inline">\(F&gt;q\)</span>{% endraw %}. It is a result about lengths in the limiting Gaussian experiment; convergence in distribution of sample lengths alone does not imply convergence of their expectations.</p>
+<p>Both procedures have infinite unconditional expected length because {% raw %}<span class="math inline">\(P(F\leq q)&gt;0\)</span>{% endraw %} and their sets are unbounded on that event. The conditional comparison does not say that every realized {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} interval is shorter, nor that coverage remains {% raw %}<span class="math inline">\(1-\alpha\)</span>{% endraw %} after conditioning on {% raw %}<span class="math inline">\(F&gt;q\)</span>{% endraw %}. It is a result about lengths in the limiting Gaussian experiment; convergence in distribution of sample lengths alone does not imply convergence of their expectations.</p>
 
 <h3 data-note-section="7" id="24-0-technical-appendix">7. Technical appendix</h3>
 <h4 data-note-section="7.1" id="24-0-covariance-proof">7.1. The covariance identity from regression residuals</h4>
@@ -713,7 +713,7 @@ K=q\left(
 
 {% raw %}<div class="math display">\[
 \widehat\tau=\frac{\widehat s_a}{\widehat s_\pi}
-\xrightarrow{p}\tau.
+\xrightarrow{P}\tau.
 \]</div>{% endraw %}
 <p>On a sample with positive definite {% raw %}<span class="math inline">\(\widehat\Sigma\)</span>{% endraw %}, parameterize the entire coefficient line by {% raw %}<span class="math inline">\(b=\beta+\widehat\tau x\)</span>{% endraw %}. Dividing the sample AR inequality by {% raw %}<span class="math inline">\(\widehat s_a^2\)</span>{% endraw %} gives the exact relation</p>
 
@@ -751,7 +751,7 @@ K=q\left(
 \frac{\sqrt{\widehat A^2-2\widehat\rho_0\widehat A\widehat f
 +\widehat f^2}}{\widehat f^2}.
 \]</div>{% endraw %}
-<p>Since {% raw %}<span class="math inline">\(\Pr(f=0)=0\)</span>{% endraw %}, the continuous mapping theorem implies</p>
+<p>Since {% raw %}<span class="math inline">\(P(f=0)=0\)</span>{% endraw %}, the continuous mapping theorem implies</p>
 
 {% raw %}<div class="math display">\[
 \widehat s_\beta\Rightarrow
@@ -781,9 +781,9 @@ w(x)=\frac{\phi(\sqrt x-f_0)+\phi(-\sqrt x-f_0)}{2\sqrt x},
 {% raw %}<div class="math display">\[
 \begin{aligned}
 \mathbb{E}[L_{AR}\mid F&gt;q]
-&amp;=\frac{1}{\Pr(F&gt;q)}
+&amp;=\frac{1}{P(F&gt;q)}
 \int_q^\infty\mathbb{E}[L_{AR}\mid F=x]w(x)\,dx\\
-&amp;\geq\frac{2\tau\sqrt q\,m w_*}{\Pr(F&gt;q)}
+&amp;\geq\frac{2\tau\sqrt q\,m w_*}{P(F&gt;q)}
 \int_q^{q+\delta}\frac{dx}{x-q}
 =\infty.
 \end{aligned}
@@ -803,7 +803,7 @@ w(x)=\frac{\phi(\sqrt x-f_0)+\phi(-\sqrt x-f_0)}{2\sqrt x},
 {% raw %}<div class="math display">\[
 \int_q^{q+\delta}\sqrt{c_\alpha(x)}w(x)\,dx&lt;\infty.
 \]</div>{% endraw %}
-<p>On {% raw %}<span class="math inline">\([q+\delta,\infty)\)</span>{% endraw %} the critical-value function is bounded, and {% raw %}<span class="math inline">\(w\)</span>{% endraw %} integrates to at most one. The remaining integral is therefore finite. Dividing by {% raw %}<span class="math inline">\(\Pr(F&gt;q)&gt;0\)</span>{% endraw %} proves the result. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+<p>On {% raw %}<span class="math inline">\([q+\delta,\infty)\)</span>{% endraw %} the critical-value function is bounded, and {% raw %}<span class="math inline">\(w\)</span>{% endraw %} integrates to at most one. The remaining integral is therefore finite. Dividing by {% raw %}<span class="math inline">\(P(F&gt;q)&gt;0\)</span>{% endraw %} proves the result. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 
 <p>The notation in this note corresponds to {% raw %}<span class="math inline">\(A=t_{AR}(\beta_0)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\widehat A=\widehat t_{AR}(\beta_0)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(T=t^2\)</span>{% endraw %} in the published paper. The covariance identities are in its online Appendix A.2–A.4; the construction is in Section IIIB and online Appendix B; and the expected-length results are in Section IIIC and online Appendix C. The <a href="https://doi.org/10.1257/aer.20211063">published article</a> and the <a href="https://drive.google.com/file/d/1bkIrLAh8b2hK_nwVrJWFM_mima0B64tV/view">authors’ supplement</a> provide the source statements and the invariant-curve proof used above.</p>
 

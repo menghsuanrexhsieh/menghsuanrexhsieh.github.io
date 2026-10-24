@@ -17,9 +17,9 @@ redirect_from: ["/2026/01/03/conditional-stochastic-dominance-with-nearest-obser
 <p>Observe two independent samples from {% raw %}<span class="math inline">\((Y,Z^Y)\)</span>{% endraw %} and {% raw %}<span class="math inline">\((X,Z^X)\)</span>{% endraw %}, with i.i.d. observations within each sample. The outcomes and covariates are real-valued. Write {% raw %}<span class="math inline">\(n_y,n_x\)</span>{% endraw %} for the sample sizes and {% raw %}<span class="math inline">\(n=\min\{n_y,n_x\}\)</span>{% endraw %}. The covariate distributions may differ between samples. Define the conditional cdfs</p>
 
 {% raw %}<div class="math display">\[
-F_Y(t\mid z)=\Pr(Y\leq t\mid Z^Y=z),
+F_Y(t\mid z)=P(Y\leq t\mid Z^Y=z),
 \qquad
-F_X(t\mid z)=\Pr(X\leq t\mid Z^X=z).
+F_X(t\mid z)=P(X\leq t\mid Z^X=z).
 \]</div>{% endraw %}
 <p>At finitely many distinct, fixed points {% raw %}<span class="math inline">\(z_1,\ldots,z_L\)</span>{% endraw %}, the null hypothesis is</p>
 
@@ -51,11 +51,11 @@ S_n^\ell=(Y^\ell_{n,[1]},\ldots,Y^\ell_{n,[q_y^\ell]},
 <p>Consider one sample and one target. In this calculation, let {% raw %}<span class="math inline">\(m\)</span>{% endraw %} denote that sample's size, let {% raw %}<span class="math inline">\(k\)</span>{% endraw %} be the fixed number selected, and let {% raw %}<span class="math inline">\(Z_{m,[k]}\)</span>{% endraw %} be the covariate at the {% raw %}<span class="math inline">\(k\)</span>{% endraw %}th closest observation. For a radius {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(B_m\)</span>{% endraw %} count observations within that radius of the target. If the neighborhood probability is {% raw %}<span class="math inline">\(p_\varepsilon&gt;0\)</span>{% endraw %}, then</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{|Z_{m,[k]}-z_\ell|&gt;\varepsilon\}
-\leq\Pr\{B_m&lt;k\}\longrightarrow0,
+P\{|Z_{m,[k]}-z_\ell|&gt;\varepsilon\}
+\leq P\{B_m&lt;k\}\longrightarrow0,
 \qquad B_m\sim\operatorname{Binomial}(m,p_\varepsilon).
 \]</div>{% endraw %}
-<p>Once the neighborhood contains at least {% raw %}<span class="math inline">\(k\)</span>{% endraw %} observations, all selected covariates lie inside it. The law of large numbers gives {% raw %}<span class="math inline">\(B_m/m\to p_\varepsilon\)</span>{% endraw %}, whereas {% raw %}<span class="math inline">\(k/m\to0\)</span>{% endraw %}. Thus every selected covariate converges in probability to the target.</p>
+<p>Once the neighborhood contains at least {% raw %}<span class="math inline">\(k\)</span>{% endraw %} observations, all selected covariates lie inside it. The law of large numbers gives {% raw %}<span class="math inline">\(B_m/m\xrightarrow{P} p_\varepsilon\)</span>{% endraw %}, whereas {% raw %}<span class="math inline">\(k/m\to0\)</span>{% endraw %}. Thus every selected covariate converges in probability to the target.</p>
 
 <p>Conditional on all covariates, the selected observation indices are fixed and their outcomes are independent. For one target, the joint conditional cdf is therefore a product of conditional outcome cdfs evaluated at the selected covariates. Each factor converges in probability to its target cdf, uniformly over the outcome threshold. The difference between the two products is bounded by the sum of these errors, as shown in Section 5.</p>
 
@@ -70,7 +70,7 @@ T(S_n)=\sup_t(\widehat F_{n,Y}(t)-\widehat F_{n,X}(t)).
 <p>Large positive values indicate a violation of the null. Fix {% raw %}<span class="math inline">\(\alpha\in(0,1)\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(U_1,\ldots,U_q\)</span>{% endraw %} be independent {% raw %}<span class="math inline">\(U(0,1)\)</span>{% endraw %} variables, where {% raw %}<span class="math inline">\(q=q_y+q_x\)</span>{% endraw %}. Compute the same statistic from these uniforms, using the first {% raw %}<span class="math inline">\(q_y\)</span>{% endraw %} as the first sample and the remaining {% raw %}<span class="math inline">\(q_x\)</span>{% endraw %} as the second. Define</p>
 
 {% raw %}<div class="math display">\[
-c_\alpha(q_y,q)=\inf\{c:\Pr(T(U)\leq c)\geq1-\alpha\}.
+c_\alpha(q_y,q)=\inf\{c:P(T(U)\leq c)\geq1-\alpha\}.
 \]</div>{% endraw %}
 <p>Reject when {% raw %}<span class="math inline">\(T(S_n)&gt;c_\alpha(q_y,q)\)</span>{% endraw %}. The strict inequality matters because the reference statistic is discrete even though the uniforms are continuous.</p>
 
@@ -84,17 +84,17 @@ c_\alpha(q_y,q)=\inf\{c:\Pr(T(U)\leq c)\geq1-\alpha\}.
 <p>Reject if any target rejects at level {% raw %}<span class="math inline">\(\alpha_L\)</span>{% endraw %}, using critical value {% raw %}<span class="math inline">\(c_{\alpha_L}(q_y^\ell,q^\ell)\)</span>{% endraw %} at target {% raw %}<span class="math inline">\(z_\ell\)</span>{% endraw %}. Under the joint null, the limiting probability of any rejection is at most {% raw %}<span class="math inline">\(1-(1-\alpha_L)^L=\alpha\)</span>{% endraw %}. Section 6 explains how joint convergence and the treatment of ties justify this calculation.</p>
 
 <h3 data-note-section="4" id="26-77-a-quantitative-look-at-the-nearest-neighbor-step">4. Distance from the target</h3>
-<p>We can also bound the probability that a selected covariate lies far from the target. The following calculation allows a vector covariate {% raw %}<span class="math inline">\(Z\in\mathbb R^d\)</span>{% endraw %}, with Euclidean distance. For one sample of size {% raw %}<span class="math inline">\(m\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(p(r)=\Pr(\|Z-z_0\|\leq r)\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(R_{m,k}\)</span>{% endraw %} be the distance of the {% raw %}<span class="math inline">\(k\)</span>{% endraw %}th closest covariate. Let {% raw %}<span class="math inline">\(B_m\)</span>{% endraw %} count observations in this closed ball, so it is binomial with parameters {% raw %}<span class="math inline">\(m,p(r)\)</span>{% endraw %}. Whenever {% raw %}<span class="math inline">\(k\leq mp(r)/2\)</span>{% endraw %},</p>
+<p>We can also bound the probability that a selected covariate lies far from the target. The following calculation allows a vector covariate {% raw %}<span class="math inline">\(Z\in\mathbb R^d\)</span>{% endraw %}, with Euclidean distance. For one sample of size {% raw %}<span class="math inline">\(m\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(p(r)=P(\|Z-z_0\|\leq r)\)</span>{% endraw %}, and let {% raw %}<span class="math inline">\(R_{m,k}\)</span>{% endraw %} be the distance of the {% raw %}<span class="math inline">\(k\)</span>{% endraw %}th closest covariate. Let {% raw %}<span class="math inline">\(B_m\)</span>{% endraw %} count observations in this closed ball, so it is binomial with parameters {% raw %}<span class="math inline">\(m,p(r)\)</span>{% endraw %}. Whenever {% raw %}<span class="math inline">\(k\leq mp(r)/2\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\Pr(R_{m,k}&gt;r)
-\leq\Pr\{B_m\leq mp(r)/2\}
+P(R_{m,k}&gt;r)
+\leq P\{B_m\leq mp(r)/2\}
 \leq e^{-mp(r)/8}.
 \]</div>{% endraw %}
 <p>To obtain the last inequality, write {% raw %}<span class="math inline">\(p=p(r)\)</span>{% endraw %} and apply Markov's inequality to {% raw %}<span class="math inline">\(e^{-tB_m}\)</span>{% endraw %} for {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}:</p>
 
 {% raw %}<div class="math display">\[
-\Pr(B_m\leq mp/2)
+P(B_m\leq mp/2)
 \leq e^{tmp/2}(1-p+pe^{-t})^m
 \leq\exp(mp(t/2+e^{-t}-1)).
 \]</div>{% endraw %}
@@ -102,7 +102,7 @@ c_\alpha(q_y,q)=\inf\{c:\Pr(T(U)\leq c)\geq1-\alpha\}.
 
 <p>Suppose {% raw %}<span class="math inline">\(p(r)\geq cr^d\)</span>{% endraw %} for some {% raw %}<span class="math inline">\(c&gt;0\)</span>{% endraw %} and all sufficiently small positive {% raw %}<span class="math inline">\(r\)</span>{% endraw %}. Take {% raw %}<span class="math inline">\(r=M m^{-1/d}\)</span>{% endraw %}. Choose {% raw %}<span class="math inline">\(M\)</span>{% endraw %} large enough that {% raw %}<span class="math inline">\(cM^d\geq2k\)</span>{% endraw %}. For all sufficiently large {% raw %}<span class="math inline">\(m\)</span>{% endraw %}, the displayed probability is at most {% raw %}<span class="math inline">\(\exp(-cM^d/8)\)</span>{% endraw %}. Letting {% raw %}<span class="math inline">\(M\)</span>{% endraw %} increase proves {% raw %}<span class="math inline">\(R_{m,k}=O_p(m^{-1/d})\)</span>{% endraw %} for fixed {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. The bound need not tend to zero with {% raw %}<span class="math inline">\(m\)</span>{% endraw %} when {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is fixed.</p>
 
-<p>If {% raw %}<span class="math inline">\(p_0=\Pr(Z=z_0)&gt;0\)</span>{% endraw %}, the number of exact matches is binomial with mean {% raw %}<span class="math inline">\(mp_0\)</span>{% endraw %}. With probability tending to one, there are at least {% raw %}<span class="math inline">\(k\)</span>{% endraw %} exact matches. On this event, all selected covariates equal {% raw %}<span class="math inline">\(z_0\)</span>{% endraw %}; conditional on all covariates, the selected outcomes are independent draws from the target conditional distribution. Resolving equal distances by observation order preserves this conclusion. Choosing the largest outcomes among the exact matches would change their distribution.</p>
+<p>If {% raw %}<span class="math inline">\(p_0=P(Z=z_0)&gt;0\)</span>{% endraw %}, the number of exact matches is binomial with mean {% raw %}<span class="math inline">\(mp_0\)</span>{% endraw %}. With probability tending to one, there are at least {% raw %}<span class="math inline">\(k\)</span>{% endraw %} exact matches. On this event, all selected covariates equal {% raw %}<span class="math inline">\(z_0\)</span>{% endraw %}; conditional on all covariates, the selected outcomes are independent draws from the target conditional distribution. Resolving equal distances by observation order preserves this conclusion. Choosing the largest outcomes among the exact matches would change their distribution.</p>
 
 <h3 data-note-section="5" id="26-77-the-product-calculation-behind-asymptotic-independence">5. Conditional cdfs and independence</h3>
 <p>The product bound used in Section 2 follows from a telescoping identity. For {% raw %}<span class="math inline">\(a_j,b_j\in[0,1]\)</span>{% endraw %},</p>
@@ -156,7 +156,7 @@ T=\max\left(0,\max_{1\leq k\leq K}
 <p>Let {% raw %}<span class="math inline">\(p_\ell\)</span>{% endraw %} be the rejection probability in the limit experiment at target {% raw %}<span class="math inline">\(z_\ell\)</span>{% endraw %}, using level {% raw %}<span class="math inline">\(\alpha_L\)</span>{% endraw %}. Under the joint null, each {% raw %}<span class="math inline">\(p_\ell\leq\alpha_L\)</span>{% endraw %}, so</p>
 
 {% raw %}<div class="math display">\[
-\Pr(\text{at least one rejection})\longrightarrow
+P(\text{at least one rejection})\longrightarrow
 1-\prod_{\ell=1}^L(1-p_\ell)
 \leq1-(1-\alpha_L)^L.
 \]</div>{% endraw %}

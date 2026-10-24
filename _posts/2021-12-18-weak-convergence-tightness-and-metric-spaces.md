@@ -151,7 +151,7 @@ redirect_from: ["/2021/12/28/weak-convergence-in-metric-spaces/", "/2021/12/28/w
 
 {% raw %}<div class="math display">\[\mathbb{E}(Y_n/n)=1,\qquad
 \operatorname{Var}(Y_n/n)=2/n.\]</div>{% endraw %}
-<p> Chebyshev’s inequality gives {% raw %}<span class="math inline">\(Y_n/n\to_P1\)</span>{% endraw %}. The square root is continuous at {% raw %}<span class="math inline">\(1\)</span>{% endraw %}, and Slutsky’s lemma gives {% raw %}<span class="math inline">\(T_n\Rightarrow \mathcal{N}(0,1)\)</span>{% endraw %}.</p>
+<p> Chebyshev’s inequality gives {% raw %}<span class="math inline">\(Y_n/n\xrightarrow{P}1\)</span>{% endraw %}. The square root is continuous at {% raw %}<span class="math inline">\(1\)</span>{% endraw %}, and Slutsky’s lemma gives {% raw %}<span class="math inline">\(T_n\Rightarrow \mathcal{N}(0,1)\)</span>{% endraw %}.</p>
 
 <p>Method 2. We can also compare densities directly. Pointwise convergence alone is insufficient, so after obtaining it we use the fact that both densities integrate to one. The density is </p>
 
@@ -216,7 +216,7 @@ redirect_from: ["/2021/12/28/weak-convergence-in-metric-spaces/", "/2021/12/28/w
 <div id="result-5" class="remark" data-note-number="5" data-note-kind="Remark">
 <p><strong>Remark 5</strong> (Demonstrating Statements in Fact <a href="{% post_url 2021-10-13-modes-of-stochastic-convergence %}#Fact:o_O_rules" data-reference-type="ref" data-reference="Fact:o_O_rules">10</a>).  Consider <a href="{% post_url 2021-10-13-modes-of-stochastic-convergence %}#o_O_rules:-ii" data-reference-type="ref" data-reference="o_O_rules:(ii)">10</a>: if {% raw %}<span class="math inline">\(X_n=o_P(1)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Z_n=O_P(1)\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(X_n+Z_n=O_P(1)\)</span>{% endraw %}. The two vectors need not be independent.</p>
 
-<p>Fix {% raw %}<span class="math inline">\(\eta&gt;0\)</span>{% endraw %}. Choose {% raw %}<span class="math inline">\(M\)</span>{% endraw %} so that {% raw %}<span class="math inline">\(\mathbb P(\|Z_n\|&gt;M)&lt;\eta/2\)</span>{% endraw %} for all sufficiently large {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(X_n\to_P0\)</span>{% endraw %}, we also have {% raw %}<span class="math inline">\(\mathbb P(\|X_n\|&gt;1)&lt;\eta/2\)</span>{% endraw %} eventually. The triangle inequality gives </p>
+<p>Fix {% raw %}<span class="math inline">\(\eta&gt;0\)</span>{% endraw %}. Choose {% raw %}<span class="math inline">\(M\)</span>{% endraw %} so that {% raw %}<span class="math inline">\(\mathbb P(\|Z_n\|&gt;M)&lt;\eta/2\)</span>{% endraw %} for all sufficiently large {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(X_n\xrightarrow{P}0\)</span>{% endraw %}, we also have {% raw %}<span class="math inline">\(\mathbb P(\|X_n\|&gt;1)&lt;\eta/2\)</span>{% endraw %} eventually. The triangle inequality gives </p>
 
 {% raw %}<div class="math display">\[\begin{aligned}
 \mathbb P(\|X_n+Z_n\|&gt;M+1)
@@ -240,7 +240,7 @@ redirect_from: ["/2021/12/28/weak-convergence-in-metric-spaces/", "/2021/12/28/w
 
 </div>
 <div id="result-7" class="proposition" data-note-number="7" data-note-kind="Proposition">
-<p><strong>Proposition 7</strong>.  If {% raw %}<span class="math inline">\({\mathbb{E}X_n}\xrightarrow{n \to \infty}\mu\)</span>{% endraw %} and {% raw %}<span class="math inline">\({\mathop{\mathrm{\mathds{V}}}X_n}\xrightarrow{n \to \infty}0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\({X_n}\xrightarrow{\mathds{P}}\mu\)</span>{% endraw %}.</p>
+<p><strong>Proposition 7</strong>.  If {% raw %}<span class="math inline">\({\mathbb{E}X_n}\xrightarrow{n \to \infty}\mu\)</span>{% endraw %} and {% raw %}<span class="math inline">\({\mathop{\mathrm{\mathds{V}}}X_n}\xrightarrow{n \to \infty}0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\({X_n}\xrightarrow{P}\mu\)</span>{% endraw %}.</p>
 
 </div>
 <div class="proof">
@@ -252,7 +252,7 @@ redirect_from: ["/2021/12/28/weak-convergence-in-metric-spaces/", "/2021/12/28/w
 
 </div>
 <div id="result-8" class="proposition" data-note-number="8" data-note-kind="Proposition">
-<p><strong>Proposition 8</strong>.  If {% raw %}<span class="math inline">\({\sqrt{n} (T_n - \theta)}\xrightarrow{\mathrm{d}}D\)</span>{% endraw %}, then {% raw %}<span class="math inline">\({T_n}\xrightarrow{\mathds{P}}\theta\)</span>{% endraw %}.</p>
+<p><strong>Proposition 8</strong>.  If {% raw %}<span class="math inline">\({\sqrt{n} (T_n - \theta)}\xrightarrow{\mathrm{d}}D\)</span>{% endraw %}, then {% raw %}<span class="math inline">\({T_n}\xrightarrow{P}\theta\)</span>{% endraw %}.</p>
 
 </div>
 <div class="proof">

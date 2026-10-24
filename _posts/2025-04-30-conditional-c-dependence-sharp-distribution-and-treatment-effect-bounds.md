@@ -17,8 +17,8 @@ redirect_from: ["/2025/02/08/conditional-c-dependence-and-sharp-distribution-bou
 <p>For treatment {% raw %}<span class="math inline">\(X\in\{0,1\}\)</span>{% endraw %}, potential outcome {% raw %}<span class="math inline">\(Y_x\)</span>{% endraw %}, and covariates {% raw %}<span class="math inline">\(W=w\)</span>{% endraw %}, impose</p>
 
 {% raw %}<div class="math display">\[
-\sup_y|\Pr(X=1\mid Y_x=y,W=w)-p(w)|\le c,
-\qquad p(w)=\Pr(X=1\mid W=w).
+\sup_y|P(X=1\mid Y_x=y,W=w)-p(w)|\le c,
+\qquad p(w)=P(X=1\mid W=w).
 \]</div>{% endraw %}
 <p>At {% raw %}<span class="math inline">\(c=0\)</span>{% endraw %} this is conditional independence of each potential outcome and treatment. It does not impose independence jointly on the pair {% raw %}<span class="math inline">\((Y_0,Y_1)\)</span>{% endraw %}.</p>
 
@@ -26,7 +26,7 @@ redirect_from: ["/2025/02/08/conditional-c-dependence-and-sharp-distribution-bou
 <p>Fix {% raw %}<span class="math inline">\(w\)</span>{% endraw %} and temporarily suppose the marginal CDF {% raw %}<span class="math inline">\(F\)</span>{% endraw %} of a continuous variable {% raw %}<span class="math inline">\(U\)</span>{% endraw %} is known. For an event {% raw %}<span class="math inline">\(X=x\)</span>{% endraw %} with probability {% raw %}<span class="math inline">\(p_x\)</span>{% endraw %}, put {% raw %}<span class="math inline">\(a=\max(0,p_x-c)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(b=\min(1,p_x+c)\)</span>{% endraw %}.</p>
 
 <div id="cdep-cdf" class="proposition" data-note-number="1" data-note-kind="Proposition">
-<p><strong>Proposition 1</strong>. Under {% raw %}<span class="math inline">\(c\)</span>{% endraw %}-dependence, the conditional CDF {% raw %}<span class="math inline">\(H(u)=\Pr(U\le u\mid X=x)\)</span>{% endraw %} satisfies</p>
+<p><strong>Proposition 1</strong>. Under {% raw %}<span class="math inline">\(c\)</span>{% endraw %}-dependence, the conditional CDF {% raw %}<span class="math inline">\(H(u)=P(U\le u\mid X=x)\)</span>{% endraw %} satisfies</p>
 
 {% raw %}<div class="math display">\[
 \max\left(\frac{aF(u)}{p_x},\,1-\frac{b(1-F(u))}{p_x}\right)
@@ -42,7 +42,7 @@ H(u)\le
 
 </div>
 <h3 data-note-section="3" id="30-0-derive-both-sides-of-the-cutoff">3. Derive both sides of the cutoff</h3>
-<p>Let {% raw %}<span class="math inline">\(q(v)=\Pr(X=x\mid U=v)\)</span>{% endraw %}. Bayes’ rule gives</p>
+<p>Let {% raw %}<span class="math inline">\(q(v)=P(X=x\mid U=v)\)</span>{% endraw %}. Bayes’ rule gives</p>
 
 {% raw %}<div class="math display">\[
 p_xH(u)=\int_{v\le u}q(v)\,dF(v).
@@ -81,7 +81,7 @@ H^{\rm upper}(v)=\min\left(\frac{bv}{p_x},\,1-\frac{a(1-v)}{p_x}\right).
 <p>These bounds retain only the known marginals. In the treatment-effect application the observed conditional cdf is known and the potential-outcome cdf is unknown, so we now solve the same inequalities in the opposite direction.</p>
 
 <h3 data-note-section="5" id="30-0-inverting-the-restrictions-to-recover-potential-outcomes">5. Inverting the restrictions to recover potential outcomes</h3>
-<p>Now let {% raw %}<span class="math inline">\(H(y)=\Pr(Y\leq y\mid X=x,W=w)\)</span>{% endraw %} be the observed cdf and let {% raw %}<span class="math inline">\(F(y)=\Pr(Y_x\leq y\mid W=w)\)</span>{% endraw %} be unknown. The four inequalities are</p>
+<p>Now let {% raw %}<span class="math inline">\(H(y)=P(Y\leq y\mid X=x,W=w)\)</span>{% endraw %} be the observed cdf and let {% raw %}<span class="math inline">\(F(y)=P(Y_x\leq y\mid W=w)\)</span>{% endraw %} be unknown. The four inequalities are</p>
 
 {% raw %}<div class="math display">\[
 aF\leq p_xH\leq bF,
@@ -162,7 +162,7 @@ G(y)=\frac{F(y)-p_xH(y)}{1-p_x}.
 \]</div>{% endraw %}
 <p>On each branch, its slope with respect to {% raw %}<span class="math inline">\(H\)</span>{% endraw %} is {% raw %}<span class="math inline">\((p_x/a-p_x)/(1-p_x)\)</span>{% endraw %} or {% raw %}<span class="math inline">\((p_x/b-p_x)/(1-p_x)\)</span>{% endraw %}, both strictly positive. Its endpoint values are zero and one. Hence {% raw %}<span class="math inline">\(G\)</span>{% endraw %} is also a continuous, strictly increasing cdf, and {% raw %}<span class="math inline">\(F=p_xH+(1-p_x)G\)</span>{% endraw %} is a feasible mixture. The selection probability recovered from these measures is</p>
 {% raw %}<div class="math display">\[
-\Pr(X=x\mid Y_x=y)=p_x\frac{dH}{dF}(y)\in\{a,b\}
+P(X=x\mid Y_x=y)=p_x\frac{dH}{dF}(y)\in\{a,b\}
 \]</div>{% endraw %}
 <p>almost everywhere; at {% raw %}<span class="math inline">\(c=0\)</span>{% endraw %} it equals {% raw %}<span class="math inline">\(p_x\)</span>{% endraw %}. This verifies the selection restriction for the entire distribution, not merely at a chosen cutoff.</p>
 <p>Carry out this construction separately for {% raw %}<span class="math inline">\(x=0,1\)</span>{% endraw %}. Draw {% raw %}<span class="math inline">\(X\)</span>{% endraw %} with its observed propensity, then draw the two potential outcomes conditionally independently given {% raw %}<span class="math inline">\(X\)</span>{% endraw %}, using the observed law {% raw %}<span class="math inline">\(H_x\)</span>{% endraw %} when {% raw %}<span class="math inline">\(X=x\)</span>{% endraw %} and the constructed law {% raw %}<span class="math inline">\(G_x\)</span>{% endraw %} otherwise. This single joint distribution reproduces both observed outcome laws and both potential-outcome bounds. In particular, opposing endpoint choices for a treatment-effect bound are compatible in this strict-overlap regime. No restriction here fixes dependence between the potential outcomes beyond their separate selection restrictions.</p>

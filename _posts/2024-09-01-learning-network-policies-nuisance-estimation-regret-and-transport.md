@@ -84,7 +84,7 @@ W(\pi^*)-W(\widehat\pi)
 
 {% raw %}<div class="math display">\[
 \sup_\pi|W(\pi)-W_\kappa(\pi)|
-\leq\Gamma\sup_\pi\Pr\{e_i(\pi)&lt;\kappa\},
+\leq\Gamma\sup_\pi P\{e_i(\pi)&lt;\kappa\},
 \]</div>{% endraw %}
 <p>with the probability interpreted under the target’s averaging scheme. The retained inverse weights are bounded by {% raw %}<span class="math inline">\(1/\kappa\)</span>{% endraw %}, improving the stochastic bound. Applying the regret decomposition to the trimmed target adds twice this uniform omitted-welfare bound when returning to the original target.</p>
 
@@ -99,7 +99,7 @@ O\left(
 \]</div>{% endraw %}
 <p>The cutoff reflects configuration probabilities that can decrease like {% raw %}<span class="math inline">\(\gamma^{|N_i|}\)</span>{% endraw %}. Raising {% raw %}<span class="math inline">\(\kappa_n\)</span>{% endraw %} reduces the largest retained weight, but also decreases {% raw %}<span class="math inline">\(\log_\gamma\kappa_n\)</span>{% endraw %} because the logarithm has a base below one. The resulting larger discarded tail contributes approximation error. Both terms must be retained when choosing how much to trim.</p>
 
-<p>A simple tail model makes the trimming choice explicit. Suppose, for this calculation, that uniformly over policies {% raw %}<span class="math inline">\(\Pr(e_i(\pi)&lt;\kappa)\leq C\kappa^a\)</span>{% endraw %} for some {% raw %}<span class="math inline">\(a&gt;0\)</span>{% endraw %}. Let the unweighted concentration scale be {% raw %}<span class="math inline">\(A_n\to0\)</span>{% endraw %}, so the retained-score error is bounded in order by {% raw %}<span class="math inline">\(A_n/\kappa\)</span>{% endraw %}. Ignoring nuisance and optimization terms, the regret bound has the form</p>
+<p>A simple tail model makes the trimming choice explicit. Suppose, for this calculation, that uniformly over policies {% raw %}<span class="math inline">\(P(e_i(\pi)&lt;\kappa)\leq C\kappa^a\)</span>{% endraw %} for some {% raw %}<span class="math inline">\(a&gt;0\)</span>{% endraw %}. Let the unweighted concentration scale be {% raw %}<span class="math inline">\(A_n\to0\)</span>{% endraw %}, so the retained-score error is bounded in order by {% raw %}<span class="math inline">\(A_n/\kappa\)</span>{% endraw %}. Ignoring nuisance and optimization terms, the regret bound has the form</p>
 
 {% raw %}<div class="math display">\[
 \frac{A_n}{\kappa}+2\Gamma C\kappa^a.
@@ -150,7 +150,7 @@ W_T(\pi)=\mathbb{E}_S[\omega(H)m_\pi(H)].
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-viviano_policy_2025" class="csl-entry" role="listitem">
-Viviano, Davide. 2025. <span>“Policy Targeting Under Network Interference.”</span> <em>Review of Economic Studies</em> 92 (2): 1257–92. <a href="https://doi.org/10.1093/restud/rdae041">https://doi.org/10.1093/restud/rdae041</a>.
+Viviano, Davide. 2025. <span>“Policy Targeting Under Network Interference.”</span> <em>Review of Economic Studies</em> 92 (2): 1257–92. <a href="https://doi.org/10.1093/restud/rdae041">https://doi.org/10.1093/restud/rdae041</a>. First published online 10 April 2024.
 </div>
 </div>
 

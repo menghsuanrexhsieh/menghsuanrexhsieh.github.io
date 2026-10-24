@@ -40,7 +40,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.
     
 \end{aligned}\]</div>{% endraw %}
 </div>
-<p>Probabilities of potentially nonmeasurable suprema are understood as outer probabilities; under a countable separability condition they are ordinary probabilities. If {% raw %}<span class="math inline">\(t_n\to_Pt_0\)</span>{% endraw %}, stochastic equicontinuity immediately implies {% raw %}<span class="math inline">\(Z_n(t_n)-Z_n(t_0)=o_P(1)\)</span>{% endraw %}: for a fixed neighborhood {% raw %}<span class="math inline">\(U\)</span>{% endraw %}, the probability of a deviation exceeds at most {% raw %}<span class="math inline">\(P(t_n\notin U)+P^*(\sup_U|Z_n(t)-Z_n(t_0)|&gt;\eta)\)</span>{% endraw %}. First take the limsup in {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, then shrink {% raw %}<span class="math inline">\(U\)</span>{% endraw %}.</p>
+<p>Probabilities of potentially nonmeasurable suprema are understood as outer probabilities; under a countable separability condition they are ordinary probabilities. If {% raw %}<span class="math inline">\(t_n\xrightarrow{P}t_0\)</span>{% endraw %}, stochastic equicontinuity immediately implies {% raw %}<span class="math inline">\(Z_n(t_n)-Z_n(t_0)=o_P(1)\)</span>{% endraw %}: for a fixed neighborhood {% raw %}<span class="math inline">\(U\)</span>{% endraw %}, the probability of a deviation exceeds at most {% raw %}<span class="math inline">\(P(t_n\notin U)+P^*(\sup_U|Z_n(t)-Z_n(t_0)|&gt;\eta)\)</span>{% endraw %}. First take the limsup in {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, then shrink {% raw %}<span class="math inline">\(U\)</span>{% endraw %}.</p>
 <p>The same issue appears for general minimum-criterion estimators, even when the sample criterion is not classically differentiable. Suppose we study {% raw %}<span class="math inline">\(\mathcal F = \{f(\cdot,t): t \in T\}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(T \subset \mathbb R^k\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(f\)</span>{% endraw %} is {% raw %}<span class="math inline">\(\mathbf P\,\,\!\!\)</span>{% endraw %}-integrable functions on the set {% raw %}<span class="math inline">\(S\)</span>{% endraw %} where {% raw %}<span class="math inline">\(\mathbf P\,\,\!\!\)</span>{% endraw %} lives. Let {% raw %}<span class="math inline">\(P_n\)</span>{% endraw %} be the empirical measure formed from {% raw %}<span class="math inline">\(n\)</span>{% endraw %} independent observations drawn from {% raw %}<span class="math inline">\(\mathbf P\,\,\!\!\)</span>{% endraw %}. Let the empirical process be written as {% raw %}<span class="math inline">\(\mathbb G_n (f) = \sqrt n(\widehat P_n - \mathbf P\,\,\!\!) (f)\)</span>{% endraw %} as applied to {% raw %}<span class="math inline">\(f \in \mathcal F\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(F(t) = \mathbf P\,\,\!\!f(\cdot, t)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(F_n(t) = \widehat P_n f(\cdot,t)\)</span>{% endraw %}. It will be shown that if we want to minimize {% raw %}<span class="math inline">\(\{F_n(\cdot)\}\)</span>{% endraw %}, then we can study a suitable sequence {% raw %}<span class="math inline">\(\{\tau_n\} \subset T\)</span>{% endraw %} that approximately minimizes the criterion. Write </p>
 
 {% raw %}<span id="eq:linear-approximation-f-t"></span><div class="math display">\[\begin{aligned}
@@ -142,18 +142,18 @@ n\left[(F_n-F)(t_{n,h})-(F_n-F)(t_0)\right]
 <p> Fix {% raw %}<span class="math inline">\(M&lt;\infty\)</span>{% endraw %} and choose {% raw %}<span class="math inline">\(U\)</span>{% endraw %} so small that {% raw %}<span class="math inline">\(t_{n,h}\in U\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(\|h\|\le M\)</span>{% endraw %} and all large {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Then </p>
 
 {% raw %}<span id="eq:Gr-unif-op1"></span><div class="math display">\[\begin{aligned}
-\sup_{\|h\|\le M} |\mathbb G_n r_{t_{n,h}}| \ \xrightarrow{p}\ 0, 
+\sup_{\|h\|\le M} |\mathbb G_n r_{t_{n,h}}| \ \xrightarrow{P}\ 0,
 \end{aligned}\tag{9}\]</div>{% endraw %}
 <p> and consequently, </p>
 
 {% raw %}<span id="eq:hGr-unif-op1"></span><div class="math display">\[\begin{aligned}
-\sup_{\|h\|\le M} \|h\|\,|\mathbb G_n r_{t_{n,h}}| \ \xrightarrow{p}\ 0. 
+\sup_{\|h\|\le M} \|h\|\,|\mathbb G_n r_{t_{n,h}}| \ \xrightarrow{P}\ 0.
 \end{aligned}\tag{10}\]</div>{% endraw %}
 <p>Combining <a href="#eq:Qn-decomp" data-reference-type="eqref" data-reference="eq:Qn-decomp">(6)</a>–<a href="#eq:stoch-part" data-reference-type="eqref" data-reference="eq:stoch-part">(8)</a> with <a href="#eq:det-part" data-reference-type="eqref" data-reference="eq:det-part">(7)</a> and <a href="#eq:hGr-unif-op1" data-reference-type="eqref" data-reference="eq:hGr-unif-op1">(10)</a>, we have: for every fixed {% raw %}<span class="math inline">\(M&lt;\infty\)</span>{% endraw %}, </p>
 
 {% raw %}<span id="eq:Qn-unif-expansion"></span><div class="math display">\[\begin{aligned}
 \sup_{\|h\|\le M}\Big|Q_n(h) - \Big(\frac12 h&#x27;Vh + h&#x27;\mathbb G_n\Delta\Big)\Big|
-\ \xrightarrow{p}\ 0. 
+\ \xrightarrow{P}\ 0.
 \end{aligned}\tag{11}\]</div>{% endraw %}
 <p><strong>Step 5 (prove the rate before using a compact local expansion).</strong> Let {% raw %}<span class="math inline">\(u_n=\tau_n-t_0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(h_n=\sqrt n\,u_n\)</span>{% endraw %}. The empirical near-minimization assumption is</p>
 <span id="eq:near-min"></span>

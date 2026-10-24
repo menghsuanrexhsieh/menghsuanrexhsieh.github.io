@@ -21,7 +21,7 @@ redirect_from: ["/2025/05/08/spillover-effects-with-missing-network-links/", "/2
 
 {% raw %}<div class="math display">\[
 m(d,s,n,z)=\sum_{s^*,n^*}m^*(d,s^*,n^*,z)
-\Pr(S_i^*=s^*,N_i^*=n^*\mid S_i=s,N_i=n,Z_i=z).
+P(S_i^*=s^*,N_i^*=n^*\mid S_i=s,N_i=n,Z_i=z).
 \]</div>{% endraw %}
 <p>An own-treatment comparison holds the latent-exposure mixture fixed under the stated assumptions. A comparison between observed spillover cells changes that mixture. These two contrasts therefore need not have the same interpretation.</p>
 
@@ -61,7 +61,7 @@ S_i^*-S_i\mid N_i^*-N_i=n^*-n
 S\sim\operatorname{Binomial}(n,p),\qquad
 B\triangleq S^*-S\sim\operatorname{Binomial}(n^*-n,p).
 \]</div>{% endraw %}
-<p>In this stronger simple design, {% raw %}<span class="math inline">\(S\)</span>{% endraw %} gives no additional information about {% raw %}<span class="math inline">\(N^*\)</span>{% endraw %} once {% raw %}<span class="math inline">\(N=n\)</span>{% endraw %} and the relevant baseline covariates are fixed. Write {% raw %}<span class="math inline">\(q_n(n^*)=\Pr(N^*=n^*\mid N=n,Z=z)\)</span>{% endraw %}. Then</p>
+<p>In this stronger simple design, {% raw %}<span class="math inline">\(S\)</span>{% endraw %} gives no additional information about {% raw %}<span class="math inline">\(N^*\)</span>{% endraw %} once {% raw %}<span class="math inline">\(N=n\)</span>{% endraw %} and the relevant baseline covariates are fixed. Write {% raw %}<span class="math inline">\(q_n(n^*)=P(N^*=n^*\mid N=n,Z=z)\)</span>{% endraw %}. Then</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
@@ -113,7 +113,7 @@ G_N(t)=\mathbb{E}[(1-q+qt)^{N^*}]
 \]</div>{% endraw %}
 <p>For a known finite maximum degree, this is a triangular linear system in the true-degree probabilities, with diagonal entries {% raw %}<span class="math inline">\(q^k&gt;0\)</span>{% endraw %}. It is therefore algebraically invertible. If {% raw %}<span class="math inline">\(q\)</span>{% endraw %} is unknown, one observed degree distribution generally cannot separate degree heterogeneity from observation probability without additional information.</p>
 
-<p>For a maximum true degree of two, write {% raw %}<span class="math inline">\(a_j=\Pr(N=j)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(u_j=\Pr(N^*=j)\)</span>{% endraw %}. Binomial thinning gives</p>
+<p>For a maximum true degree of two, write {% raw %}<span class="math inline">\(a_j=P(N=j)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(u_j=P(N^*=j)\)</span>{% endraw %}. Binomial thinning gives</p>
 
 {% raw %}<div class="math display">\[
 a_2=q^2u_2,\qquad
@@ -132,7 +132,7 @@ u_0=1-u_1-u_2.
 <p>The implied posterior used in the spillover mixture is then</p>
 
 {% raw %}<div class="math display">\[
-\Pr(N^*=k\mid N=n)
+P(N^*=k\mid N=n)
 =\frac{\binom{k}{n}q^n(1-q)^{k-n}u_k}{a_n},
 \qquad a_n&gt;0.
 \]</div>{% endraw %}

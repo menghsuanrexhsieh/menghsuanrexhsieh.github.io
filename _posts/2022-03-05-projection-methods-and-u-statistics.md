@@ -15,7 +15,7 @@ redirect_from: ["/2022/03/05/l2-projections-and-conditional-expectations/", "/20
 
 <div id="Sec:Projections" data-note-section="title"></div>
 
-<p>If {% raw %}<span class="math inline">\(T_n-S_n\to_P0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(S_n\Rightarrow Z\)</span>{% endraw %}, Slutsky's lemma gives {% raw %}<span class="math inline">\(T_n\Rightarrow Z\)</span>{% endraw %}. Orthogonal projection supplies useful approximations because it minimizes a mean square error and makes the error orthogonal to the approximation. We work in the real Hilbert space {% raw %}<span class="math inline">\(L^2(P)\)</span>{% endraw %}, identifying random variables equal almost surely, with inner product {% raw %}<span class="math inline">\(\langle U,V\rangle=E(UV)\)</span>{% endraw %}.</p>
+<p>If {% raw %}<span class="math inline">\(T_n-S_n\xrightarrow{P}0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(S_n\Rightarrow Z\)</span>{% endraw %}, Slutsky's lemma gives {% raw %}<span class="math inline">\(T_n\Rightarrow Z\)</span>{% endraw %}. Orthogonal projection supplies useful approximations because it minimizes a mean square error and makes the error orthogonal to the approximation. We work in the real Hilbert space {% raw %}<span class="math inline">\(L^2(P)\)</span>{% endraw %}, identifying random variables equal almost surely, with inner product {% raw %}<span class="math inline">\(\langle U,V\rangle=E(UV)\)</span>{% endraw %}.</p>
 
 <span id="Def:sS"></span>
 

@@ -37,7 +37,7 @@ B(t)=\int_0^t\beta(s)\,ds,\quad u(t)=m(t)-B(t).
 u&#x27;(0)=\operatorname{sgn}(u&#x27;(0))
 \frac{f_{T^*\mid T=0}(0)}{f_{V\mid T=0}(u(0))},
 \qquad
-f_{T^*\mid T=0}(0)=\frac{f_T(0+)}{\Pr(T=0)}.
+f_{T^*\mid T=0}(0)=\frac{f_T(0+)}{P(T=0)}.
 \]</div>{% endraw %}
 </div>
 <p>The last equality uses continuity of the latent density at zero. The numerator is identified from the observed atom and the density approaching it from above.</p>
@@ -79,8 +79,8 @@ m&#x27;(t)
 <p>On the latent interval mapped to the atom, suppose {% raw %}<span class="math inline">\(u\)</span>{% endraw %} is strictly increasing with nonzero derivative at zero. For {% raw %}<span class="math inline">\(v=u(t)\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\Pr(V\leq u(t)\mid T=0)
-=\Pr(T^*\leq t\mid T^*\leq0).
+P(V\leq u(t)\mid T=0)
+=P(T^*\leq t\mid T^*\leq0).
 \]</div>{% endraw %}
 <p>Differentiate with respect to {% raw %}<span class="math inline">\(t\)</span>{% endraw %} to obtain</p>
 
@@ -94,7 +94,7 @@ f_{V\mid T=0}(u(t))u&#x27;(t)
 
 {% raw %}<div class="math display">\[
 f_{T^*\mid T=0}(t)
-=\frac{f_{T^*}(t)}{\Pr(T=0)},\qquad t&lt;0.
+=\frac{f_{T^*}(t)}{P(T=0)},\qquad t&lt;0.
 \]</div>{% endraw %}
 <p>Continuity of {% raw %}<span class="math inline">\(f_{T^*}\)</span>{% endraw %} through zero and the fact that positive {% raw %}<span class="math inline">\(T\)</span>{% endraw %} equals {% raw %}<span class="math inline">\(T^*\)</span>{% endraw %} imply {% raw %}<span class="math inline">\(f_{T^*}(0)=f_T(0+)\)</span>{% endraw %}. The atom probability is therefore essential in translating the observed positive-side density into the conditional density used in the ratio.</p>
 
@@ -102,7 +102,7 @@ f_{T^*\mid T=0}(t)
 <p>Take {% raw %}<span class="math inline">\(T^*\)</span>{% endraw %} uniform on {% raw %}<span class="math inline">\([-a,b]\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(a,b&gt;0\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(u(t)=u_0+\lambda t\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\lambda\ne0\)</span>{% endraw %}. Then</p>
 
 {% raw %}<div class="math display">\[
-\Pr(T=0)=\frac{a}{a+b},\qquad
+P(T=0)=\frac{a}{a+b},\qquad
 f_T(0+)=\frac1{a+b},\qquad
 f_{T^*\mid T=0}(0)=\frac1a.
 \]</div>{% endraw %}
@@ -149,7 +149,7 @@ f_V(v)=\frac1{2\pi}\int_{\mathbb R}e^{-isv}
 \]</div>{% endraw %}
 <p>The differential {% raw %}<span class="math inline">\(df_V(u_0)\)</span>{% endraw %} measures density-estimation error with the evaluation point held fixed. The final term accounts for estimating the point itself. Both contribute to the recovered slope’s uncertainty.</p>
 
-<p>The recovered magnitude divides {% raw %}<span class="math inline">\(f_T(0+)\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\Pr(T=0)f_V(u(0))\)</span>{% endraw %}, evaluated at the estimated point {% raw %}<span class="math inline">\(u(0)\)</span>{% endraw %}. Small denominator density magnifies errors in every component. Implementing the boundary identification result therefore requires derivative, density, and deconvolution estimation, in addition to the structural assumptions.</p>
+<p>The recovered magnitude divides {% raw %}<span class="math inline">\(f_T(0+)\)</span>{% endraw %} by {% raw %}<span class="math inline">\(P(T=0)f_V(u(0))\)</span>{% endraw %}, evaluated at the estimated point {% raw %}<span class="math inline">\(u(0)\)</span>{% endraw %}. Small denominator density magnifies errors in every component. Implementing the boundary identification result therefore requires derivative, density, and deconvolution estimation, in addition to the structural assumptions.</p>
 
 <h3 id="16-150-connecting-the-latent-and-observed-derivatives-at-zero">Connecting the latent and observed derivatives at zero</h3>
 <p>Let {% raw %}<span class="math inline">\(H(t,s)=\mathbb E[Y(t)\mid T^*=s]\)</span>{% endraw %} be continuously differentiable near {% raw %}<span class="math inline">\((0,0)\)</span>{% endraw %}, with differentiation under the conditional expectation justified. For {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(m(t)=H(t,t)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\beta(t)=\partial_1H(t,t)\)</span>{% endraw %}. The chain rule gives</p>

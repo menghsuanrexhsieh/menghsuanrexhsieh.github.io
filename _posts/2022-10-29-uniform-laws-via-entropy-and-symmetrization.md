@@ -25,7 +25,7 @@ redirect_from: ["/2022/10/29/more-on-the-uniform-law-of-large-numbers/", "/2022/
 
 {% raw %}<span id="eq:random-entropy-condition-ulln"></span><div class="math display">\[\begin{aligned}
  
-        \frac{\log N(\varepsilon, \mathcal F, \lVert \cdot \rVert_{\widehat P_n, 2})}{n} \xrightarrow{\mathbf P\,\,\!\!} 0 \quad \text{for all } \varepsilon &gt; 0 ~.
+        \frac{\log N(\varepsilon, \mathcal F, \lVert \cdot \rVert_{\widehat P_n, 2})}{n} \xrightarrow{P} 0 \quad \text{for all } \varepsilon &gt; 0 ~.
     
 \end{aligned}\tag{1}\]</div>{% endraw %}
 <p> Then, {% raw %}<span class="math inline">\(\mathcal F\)</span>{% endraw %} satisfies the uniform law of large numbers.</p>
@@ -49,7 +49,7 @@ redirect_from: ["/2022/10/29/more-on-the-uniform-law-of-large-numbers/", "/2022/
 
 {% raw %}<span id="eq:L1-random-entropy"></span><div class="math display">\[\begin{aligned}
  
-        \frac{\log N(\varepsilon, \mathcal F, \lVert \cdot \rVert_{\widehat P_n, 1})}{n} \xrightarrow{\mathbf P\,\,\!\!} 0 \quad \text{for all } \varepsilon &gt; 0 ~,
+        \frac{\log N(\varepsilon, \mathcal F, \lVert \cdot \rVert_{\widehat P_n, 1})}{n} \xrightarrow{P} 0 \quad \text{for all } \varepsilon &gt; 0 ~,
     
 \end{aligned}\tag{2}\]</div>{% endraw %}
 <p> and that {% raw %}<span class="math inline">\(\int F \dif P &lt; \infty\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is the envelope function of {% raw %}<span class="math inline">\(\mathcal F\)</span>{% endraw %}. Then, {% raw %}<span class="math inline">\(\mathcal F\)</span>{% endraw %} satisfies the uniform law of large numbers.</p>

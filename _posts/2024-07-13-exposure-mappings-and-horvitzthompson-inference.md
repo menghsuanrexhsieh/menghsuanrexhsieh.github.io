@@ -14,7 +14,7 @@ redirect_from: ["/2024/07/13/exposure-mappings-and-general-interference/", "/202
 <p>A treatment vector has one coordinate for every unit, but an outcome may depend on only a few features of that vector. An exposure mapping records those features. If the mapping is sufficient for the outcome and each unit has a known, positive probability of the exposure of interest, inverse exposure probabilities yield an unbiased mean estimator. The analysis of <span class="citation" data-cites="aronow_estimating_2017"><a href="#ref-aronow_estimating_2017" role="doc-biblioref">Aronow and Samii (2017)</a></span> also shows why estimating its variance is a harder problem.</p>
 
 <h3 data-note-section="1" id="10-182-the-main-identity">1. The main identity</h3>
-<p>Consider a fixed population of {% raw %}<span class="math inline">\(N\)</span>{% endraw %} units. Let {% raw %}<span class="math inline">\(D_i=f(\mathbf Z,\theta_i)\)</span>{% endraw %} be unit {% raw %}<span class="math inline">\(i\)</span>{% endraw %}’s exposure, where {% raw %}<span class="math inline">\(\theta_i\)</span>{% endraw %} contains fixed information such as its network position. Assume assignments producing the same exposure also produce the same fixed potential outcome {% raw %}<span class="math inline">\(y_i(d)\)</span>{% endraw %}, and that the observed outcome satisfies {% raw %}<span class="math inline">\(Y_i=y_i(D_i)\)</span>{% endraw %}. All probabilities, expectations, and variances below refer to the random assignment. For each exposure being compared, require known probabilities {% raw %}<span class="math inline">\(\pi_i(d)=\Pr(D_i=d)&gt;0\)</span>{% endraw %} for every unit in the target population.</p>
+<p>Consider a fixed population of {% raw %}<span class="math inline">\(N\)</span>{% endraw %} units. Let {% raw %}<span class="math inline">\(D_i=f(\mathbf Z,\theta_i)\)</span>{% endraw %} be unit {% raw %}<span class="math inline">\(i\)</span>{% endraw %}’s exposure, where {% raw %}<span class="math inline">\(\theta_i\)</span>{% endraw %} contains fixed information such as its network position. Assume assignments producing the same exposure also produce the same fixed potential outcome {% raw %}<span class="math inline">\(y_i(d)\)</span>{% endraw %}, and that the observed outcome satisfies {% raw %}<span class="math inline">\(Y_i=y_i(D_i)\)</span>{% endraw %}. All probabilities, expectations, and variances below refer to the random assignment. For each exposure being compared, require known probabilities {% raw %}<span class="math inline">\(\pi_i(d)=P(D_i=d)&gt;0\)</span>{% endraw %} for every unit in the target population.</p>
 
 <div id="exposure-ht" class="proposition" data-note-number="1" data-note-kind="Proposition">
 <p><strong>Proposition 1</strong>. The estimator</p>
@@ -30,7 +30,7 @@ redirect_from: ["/2024/07/13/exposure-mappings-and-general-interference/", "/202
 <p>If some units have zero probability of a target exposure, this estimator cannot recover the full-population mean without further assumptions. One option is to restrict the target to units with positive probability of every exposure being compared, adjusting the denominator to that population’s size.</p>
 
 <h3 data-note-section="2" id="10-182-pair-probabilities-determine-the-variance">2. Pair probabilities determine the variance</h3>
-<p>Put {% raw %}<span class="math inline">\(\pi_{ij}(d)=\Pr(D_i=d,D_j=d)\)</span>{% endraw %}, including {% raw %}<span class="math inline">\(\pi_{ii}(d)=\pi_i(d)\)</span>{% endraw %}. Then</p>
+<p>Put {% raw %}<span class="math inline">\(\pi_{ij}(d)=P(D_i=d,D_j=d)\)</span>{% endraw %}, including {% raw %}<span class="math inline">\(\pi_{ii}(d)=\pi_i(d)\)</span>{% endraw %}. Then</p>
 
 {% raw %}<div class="math display">\[
 \operatorname{Var}(\widehat\mu(d))
@@ -94,7 +94,7 @@ D_2=\mathbf1\{Z_1+Z_3\geq1\}.
 y_i(d)y_j(d).
 \end{aligned}
 \]</div>{% endraw %}
-<p>Summing and dividing by {% raw %}<span class="math inline">\(N^2\)</span>{% endraw %} gives the result. For two distinct exposures {% raw %}<span class="math inline">\(d,e\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(\pi_{ij}(d,e)=\Pr(D_i=d,D_j=e)\)</span>{% endraw %}. The same calculation gives</p>
+<p>Summing and dividing by {% raw %}<span class="math inline">\(N^2\)</span>{% endraw %} gives the result. For two distinct exposures {% raw %}<span class="math inline">\(d,e\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(\pi_{ij}(d,e)=P(D_i=d,D_j=e)\)</span>{% endraw %}. The same calculation gives</p>
 
 {% raw %}<div class="math display">\[
 \operatorname{Cov}(\widehat\mu(d),\widehat\mu(e))
@@ -141,7 +141,7 @@ y_i(d)y_j(d).
 
 {% raw %}<div class="math display">\[
 \frac1N\sum_i\sum_{\mathbf z:f(\mathbf z,\theta_i)=d}
-Y_i(\mathbf z)\frac{\Pr(\mathbf Z=\mathbf z)}{\pi_i(d)}
+Y_i(\mathbf z)\frac{P(\mathbf Z=\mathbf z)}{\pi_i(d)}
 =\frac1N\sum_i\mathbb{E}[Y_i(\mathbf Z)\mid D_i=d].
 \]</div>{% endraw %}
 <p>The last expression is a design-specific conditional average. It may change when the assignment law changes, even if the label {% raw %}<span class="math inline">\(d\)</span>{% endraw %} does not. If exposure sufficiency holds over the combined support of the designs being compared, and the relevant exposure probabilities remain positive, these averages reduce to the same fixed exposure potential outcomes.</p>

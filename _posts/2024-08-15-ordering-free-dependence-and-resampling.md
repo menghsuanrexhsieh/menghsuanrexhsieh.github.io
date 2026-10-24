@@ -94,7 +94,7 @@ S_M(\mu)
 {% raw %}<div class="math display">\[
 \mathbb E_\pi\|M_r(\overline X)\|^{2+\delta}=O_p(1),
 \qquad
-Rb\,\|a(\mu_0)\|^2\xrightarrow{p}0.
+Rb\,\|a(\mu_0)\|^2\xrightarrow{P}0.
 \]</div>{% endraw %}
 
 <p>Then the conditional distribution of {% raw %}<span class="math inline">\(T_M(\mu_0)\)</span>{% endraw %} converges in probability to {% raw %}<span class="math inline">\(\chi_p^2/p\)</span>{% endraw %}, and the same limit holds unconditionally.</p>
@@ -210,7 +210,7 @@ c_n(A)=\min_{\{A_1,A_2\}\in\mathcal P(A)}c_n(A_1,A_2),
 \mathbb E_\pi N_E
 =\binom b2\frac{2|E_n|}{n(n-1)},
 \qquad
-\Pr_\pi(N_E\ge1)\le\frac{b(b-1)d_n}{2(n-1)}.
+ P_\pi(N_E\ge1)\le\frac{b(b-1)d_n}{2(n-1)}.
 \]</div>{% endraw %}
 
 <p>Thus {% raw %}<span class="math inline">\(b^2d_n/n\to0\)</span>{% endraw %} suffices for a subsample to contain no dependence edges with probability tending to one. This is a useful intuition, but the formal moment argument can allow some dependent observations in a subsample. Nor does it require all {% raw %}<span class="math inline">\(R\)</span>{% endraw %} subsamples to be simultaneously edgeless: conditional independence across repetitions comes from the resampling design.</p>

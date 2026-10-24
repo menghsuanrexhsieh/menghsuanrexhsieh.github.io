@@ -62,7 +62,7 @@ redirect_from: ["/2024/07/10/continuous-semimartingales-and-the-monotone-class-a
 <div id="thm:cts-semimartingale-limit-characterization" class="theorem" data-note-number="2" data-note-kind="Theorem">
 <p><strong>Theorem 2.</strong> Let {% raw %}<span class="math inline">\(M\)</span>{% endraw %} be a continuous local martingale with {% raw %}<span class="math inline">\(M_0=0\)</span>{% endraw %}. There is a unique continuous adapted increasing process {% raw %}<span class="math inline">\(A\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(A_0=0\)</span>{% endraw %}, such that {% raw %}<span class="math inline">\(M^2-A\)</span>{% endraw %} is a continuous local martingale. We write {% raw %}<span class="math inline">\(A=\langle M\rangle\)</span>{% endraw %}. For every deterministic sequence of partitions {% raw %}<span class="math inline">\(\pi_n\)</span>{% endraw %} of {% raw %}<span class="math inline">\([0,T]\)</span>{% endraw %} whose mesh tends to zero,</p>
 
-{% raw %}<div class="math display">\[\sum_{[u,v]\in\pi_n}(M_v-M_u)^2\xrightarrow{\mathbb P}\langle M\rangle_T.\]</div>{% endraw %}
+{% raw %}<div class="math display">\[\sum_{[u,v]\in\pi_n}(M_v-M_u)^2\xrightarrow{P}\langle M\rangle_T.\]</div>{% endraw %}
 
 <p>For a nonzero integrable initial value, define {% raw %}<span class="math inline">\(\langle M\rangle=\langle M-M_0\rangle\)</span>{% endraw %}. The corresponding centered-square characterization always holds. The uncentered assertion {% raw %}<span class="math inline">\(M^2-\langle M\rangle\)</span>{% endraw %} is a local martingale under our integrable-initial-value convention if {% raw %}<span class="math inline">\(M_0\in L^2\)</span>{% endraw %}.</p>
 

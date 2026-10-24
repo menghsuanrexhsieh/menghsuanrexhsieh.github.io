@@ -14,11 +14,11 @@ redirect_from: ["/2025/10/28/sharp-mechanism-bounds-average-effects-and-inferenc
 <p>The observable inequalities in the <a href="{% post_url 2024-07-13-testing-mediation-principal-strata-and-observable-bounds %}">preceding post</a> bound the probability mass of stayers whose outcomes change under treatment. Sharpness requires a joint distribution of potential outcomes and mediators that attains the bounds while reproducing the entire observed law. This post gives that construction, derives sharp bounds on average direct effects, and distinguishes population compatibility from a statistically calibrated test.</p>
 <p>The identification results follow <a href="#ref-kwon_testing_2024">Kwon and Roth, <em>Testing Mechanisms</em></a>, using the experimental framework in Section 3 and the average-effect results in Appendix B.1. The exposition was revised on October 23, 2026, using arXiv version 3. The finite-sample confidence-set procedure below is a supplementary construction; it is not one of the paper's implemented moment-inequality tests.</p>
 <h3 data-note-section="1" id="23-59-unequal-cell-masses-and-the-overlap-formula">1. Setup and overlap measures</h3>
-<p>Maintain consistency, independent treatment assignment with {% raw %}<span class="math inline">\(0&lt;\Pr(D=1)&lt;1\)</span>{% endraw %}, and the restriction {% raw %}<span class="math inline">\(\theta\in R\)</span>{% endraw %} from Assumptions A1–A3 of the preceding post. The mediator has finite support {% raw %}<span class="math inline">\(\{m_0,\ldots,m_{K-1}\}\)</span>{% endraw %} and outcomes are real-valued. Write</p>
+<p>Maintain consistency, independent treatment assignment with {% raw %}<span class="math inline">\(0&lt;P(D=1)&lt;1\)</span>{% endraw %}, and the restriction {% raw %}<span class="math inline">\(\theta\in R\)</span>{% endraw %} from Assumptions A1–A3 of the preceding post. The mediator has finite support {% raw %}<span class="math inline">\(\{m_0,\ldots,m_{K-1}\}\)</span>{% endraw %} and outcomes are real-valued. Write</p>
 <p>{% raw %}<span class="math display">\[
 \begin{aligned}
-\mu_{dk}(A)&amp;=\Pr(Y\in A,M=m_k\mid D=d),&amp;p_{dk}&amp;=\mu_{dk}(\mathbb R),\\
-S_{lk}&amp;=\{M(0)=m_l,M(1)=m_k\},&amp;\theta_{lk}&amp;=\Pr(S_{lk}).
+\mu_{dk}(A)&amp;=P(Y\in A,M=m_k\mid D=d),&amp;p_{dk}&amp;=\mu_{dk}(\mathbb R),\\
+S_{lk}&amp;=\{M(0)=m_l,M(1)=m_k\},&amp;\theta_{lk}&amp;=P(S_{lk}).
 \end{aligned}
 \]</span>{% endraw %}</p>
 <p>Let {% raw %}<span class="math inline">\(\Theta_I\)</span>{% endraw %} be the nonempty set of matrices in {% raw %}<span class="math inline">\(R\)</span>{% endraw %} with row margins {% raw %}<span class="math inline">\(p_{0l}\)</span>{% endraw %} and column margins {% raw %}<span class="math inline">\(p_{1k}\)</span>{% endraw %}. The true matrix is {% raw %}<span class="math inline">\(\theta\)</span>{% endraw %}; a generic candidate is {% raw %}<span class="math inline">\(\vartheta\)</span>{% endraw %}. Define</p>
@@ -32,7 +32,7 @@ O_k=H_k(\mathbb R).
 <p>{% raw %}<span class="math display">\[
 b_k:=\sup_A\{\mu_{1k}(A)-\mu_{0k}(A)\}=p_{1k}-O_k.
 \]</span>{% endraw %}</p>
-<p>For {% raw %}<span class="math inline">\(Y_d=Y(d,M(d))\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(r_k=\Pr(S_{kk},Y_1\ne Y_0)\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\(r_k\geq(\theta_{kk}-O_k)_+\)</span>{% endraw %}. The conditional fraction {% raw %}<span class="math inline">\(\nu_k=r_k/\theta_{kk}\)</span>{% endraw %} is used only when {% raw %}<span class="math inline">\(\theta_{kk}&gt;0\)</span>{% endraw %}.</p>
+<p>For {% raw %}<span class="math inline">\(Y_d=Y(d,M(d))\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(r_k=P(S_{kk},Y_1\ne Y_0)\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\(r_k\geq(\theta_{kk}-O_k)_+\)</span>{% endraw %}. The conditional fraction {% raw %}<span class="math inline">\(\nu_k=r_k/\theta_{kk}\)</span>{% endraw %} is used only when {% raw %}<span class="math inline">\(\theta_{kk}&gt;0\)</span>{% endraw %}.</p>
 <h3 data-note-section="2" id="23-59-the-sharpness-result">2. Joint sharpness</h3>
 <span id="23-59-couple-the-common-part-first"></span>
 <div id="mechanism-sharpness" class="theorem" data-note-number="1" data-note-kind="Theorem">
@@ -173,7 +173,7 @@ s_*(q)=\frac{a-F(q-)}{F(q)-F(q-)}
 \int y(s-s_*)\,dF
 =\int(y-q)(s-s_*)\,dF\geq0.
 \]</span>{% endraw %}</p>
-<p>If {% raw %}<span class="math inline">\(U\)</span>{% endraw %} is uniform on {% raw %}<span class="math inline">\((0,1)\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(Q_F(U)\)</span>{% endraw %} has distribution {% raw %}<span class="math inline">\(F\)</span>{% endraw %}, since {% raw %}<span class="math inline">\(\Pr(Q_F(U)\leq y)=F(y)\)</span>{% endraw %}. Selecting {% raw %}<span class="math inline">\(U\leq a\)</span>{% endraw %} induces exactly the rule {% raw %}<span class="math inline">\(s_*\)</span>{% endraw %}, including its fractional selection at {% raw %}<span class="math inline">\(q\)</span>{% endraw %}. Hence {% raw %}<span class="math inline">\(\int y s_*\,dF=\int_0^a Q_F(u)\,du\)</span>{% endraw %}. This proves the lower endpoint and its attainment. Selecting the upper tail, with fractional selection at its boundary atom, proves the upper endpoint by the reversed inequality. For {% raw %}<span class="math inline">\(a=1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(s=1\)</span>{% endraw %} almost surely is the only admissible rule and both endpoints equal the mean; no value of {% raw %}<span class="math inline">\(Q_F\)</span>{% endraw %} at zero or one is needed.</p>
+<p>If {% raw %}<span class="math inline">\(U\)</span>{% endraw %} is uniform on {% raw %}<span class="math inline">\((0,1)\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(Q_F(U)\)</span>{% endraw %} has distribution {% raw %}<span class="math inline">\(F\)</span>{% endraw %}, since {% raw %}<span class="math inline">\(P(Q_F(U)\leq y)=F(y)\)</span>{% endraw %}. Selecting {% raw %}<span class="math inline">\(U\leq a\)</span>{% endraw %} induces exactly the rule {% raw %}<span class="math inline">\(s_*\)</span>{% endraw %}, including its fractional selection at {% raw %}<span class="math inline">\(q\)</span>{% endraw %}. Hence {% raw %}<span class="math inline">\(\int y s_*\,dF=\int_0^a Q_F(u)\,du\)</span>{% endraw %}. This proves the lower endpoint and its attainment. Selecting the upper tail, with fractional selection at its boundary atom, proves the upper endpoint by the reversed inequality. For {% raw %}<span class="math inline">\(a=1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(s=1\)</span>{% endraw %} almost surely is the only admissible rule and both endpoints equal the mean; no value of {% raw %}<span class="math inline">\(Q_F\)</span>{% endraw %} at zero or one is needed.</p>
 <p>If {% raw %}<span class="math inline">\(0&lt;a&lt;b\leq1\)</span>{% endraw %}, monotonicity of the quantile implies {% raw %}<span class="math inline">\(Q_F(u)\geq L_F(a)\)</span>{% endraw %} for almost every {% raw %}<span class="math inline">\(u\in(a,b)\)</span>{% endraw %}. Therefore {% raw %}<span class="math inline">\(bL_F(b)=aL_F(a)+\int_a^b Q_F(u)\,du\geq bL_F(a)\)</span>{% endraw %}. Applying the same argument to the lower tail of {% raw %}<span class="math inline">\(-Y\)</span>{% endraw %} proves that {% raw %}<span class="math inline">\(U_F\)</span>{% endraw %} is nonincreasing. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 </div>
 <div id="mechanism-average-effect" class="proposition" data-note-number="3" data-note-kind="Proposition">
@@ -209,7 +209,7 @@ U_{F_{1k}}(a_1)-L_{F_{0k}}(a_0).
 <h3 data-note-section="6" id="23-59-implementing-the-test">6. Population restrictions as a linear system</h3>
 <p>For inference, first suppose that {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} has a known finite support {% raw %}<span class="math inline">\(\{y_1,\ldots,y_J\}\)</span>{% endraw %}. Let</p>
 <p>{% raw %}<span class="math display">\[
-q_{dkj}=\Pr(Y=y_j,M=m_k\mid D=d),\qquad p_{dk}=\sum_jq_{dkj},
+q_{dkj}=P(Y=y_j,M=m_k\mid D=d),\qquad p_{dk}=\sum_jq_{dkj},
 \]</span>{% endraw %}</p>
 <p>and suppose {% raw %}<span class="math inline">\(R\)</span>{% endraw %} is given by {% raw %}<span class="math inline">\(B\operatorname{vec}(\vartheta)\leq b\)</span>{% endraw %} within the simplex. These restrictions are specified before testing. Define {% raw %}<span class="math inline">\(\mathcal Q_0\)</span>{% endraw %} as the set of probability vectors {% raw %}<span class="math inline">\(q\)</span>{% endraw %} for which there exist {% raw %}<span class="math inline">\(\vartheta\)</span>{% endraw %} and slack variables {% raw %}<span class="math inline">\(s_{kj}\)</span>{% endraw %} satisfying</p>
 <p>{% raw %}<span class="math display">\[
@@ -240,7 +240,7 @@ q_{dkj}=\Pr(Y=y_j,M=m_k\mid D=d),\qquad p_{dk}=\sum_jq_{dkj},
 =\frac1{\sqrt n}\sum_{i=1}^n
 \frac{\mathbf1_{\{D_i=d\}}}{\pi_d}(Z_i-q_d)+o_p(1).
 \]</span>{% endraw %}</p>
-<p>Indeed, the exact identity replaces {% raw %}<span class="math inline">\(1/\pi_d\)</span>{% endraw %} on the right by {% raw %}<span class="math inline">\(n/n_d\)</span>{% endraw %}; the law of large numbers gives {% raw %}<span class="math inline">\(n_d/n\to\pi_d\)</span>{% endraw %}, and the centered sum is {% raw %}<span class="math inline">\(O_p(1)\)</span>{% endraw %} by its finite variance. The event of an empty arm has probability tending to zero. The <a href="{% post_url 2022-03-25-central-limit-theorems-and-worked-examples %}">iid multivariate central limit theorem</a> and Slutsky's theorem yield</p>
+<p>Indeed, the exact identity replaces {% raw %}<span class="math inline">\(1/\pi_d\)</span>{% endraw %} on the right by {% raw %}<span class="math inline">\(n/n_d\)</span>{% endraw %}; the law of large numbers gives {% raw %}<span class="math inline">\(n_d/n\xrightarrow{P}\pi_d\)</span>{% endraw %}, and the centered sum is {% raw %}<span class="math inline">\(O_p(1)\)</span>{% endraw %} by its finite variance. The event of an empty arm has probability tending to zero. The <a href="{% post_url 2022-03-25-central-limit-theorems-and-worked-examples %}">iid multivariate central limit theorem</a> and Slutsky's theorem yield</p>
 <p>{% raw %}<span class="math display">\[
 \sqrt n(\widehat q-q)\ \Rightarrow\ N(0,\Sigma),\qquad
 \Sigma=\operatorname{diag}(\Sigma_0,\Sigma_1),\qquad
@@ -281,14 +281,14 @@ h(\lambda)=\log\mathbb E\exp\{\lambda(H-q)\},\qquad H\sim\operatorname{Bernoulli
 <p>Then {% raw %}<span class="math inline">\(h(0)=h&#39;(0)=0\)</span>{% endraw %}. Its second derivative is the Bernoulli variance under exponential tilting and is at most {% raw %}<span class="math inline">\(1/4\)</span>{% endraw %}, including the degenerate cases {% raw %}<span class="math inline">\(q=0,1\)</span>{% endraw %}. Taylor's formula with integral remainder gives {% raw %}<span class="math inline">\(h(\lambda)\leq\lambda^2/8\)</span>{% endraw %} for every real {% raw %}<span class="math inline">\(\lambda\)</span>{% endraw %}. Independence and Markov's inequality therefore give, for {% raw %}<span class="math inline">\(r&gt;0\)</span>{% endraw %},</p>
 <p>{% raw %}<span class="math display">\[
 \begin{aligned}
-\Pr(\widehat q-q\geq r\mid D_1,\ldots,D_n)
+P(\widehat q-q\geq r\mid D_1,\ldots,D_n)
 &amp;\leq\inf_{\lambda&gt;0}\exp\{-\lambda n_dr+n_d\lambda^2/8\}\\
 &amp;=\exp(-2n_dr^2).
 \end{aligned}
 \]</span>{% endraw %}</p>
-<p>Applying the same bound to the lower tail yields {% raw %}<span class="math inline">\(\Pr(|\widehat q-q|&gt;\epsilon_d\mid D_1,\ldots,D_n)\leq\alpha/L\)</span>{% endraw %}. A union bound over all {% raw %}<span class="math inline">\(L\)</span>{% endraw %} cells proves</p>
+<p>Applying the same bound to the lower tail yields {% raw %}<span class="math inline">\(P(|\widehat q-q|&gt;\epsilon_d\mid D_1,\ldots,D_n)\leq\alpha/L\)</span>{% endraw %}. A union bound over all {% raw %}<span class="math inline">\(L\)</span>{% endraw %} cells proves</p>
 <p>{% raw %}<span class="math display">\[
-\Pr(q\notin\mathcal C_n\mid D_1,\ldots,D_n)\leq\alpha
+P(q\notin\mathcal C_n\mid D_1,\ldots,D_n)\leq\alpha
 \]</span>{% endraw %}</p>
 <p>when both arms are nonempty. The simplex constraints hold for the true vector and do not reduce this coverage. Under the null, {% raw %}<span class="math inline">\(q\in\mathcal Q_0\)</span>{% endraw %} by Theorem 1. Whenever {% raw %}<span class="math inline">\(q\in\mathcal C_n\)</span>{% endraw %}, the intersection is nonempty, so rejection implies confidence-set failure. Conditional rejection probability is at most {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} for nonempty arms and zero otherwise. Averaging over assignments proves the result. The bound is independent of the cell probabilities, giving uniform control. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 </div>
@@ -316,12 +316,12 @@ q_{1,0,1}-q_{0,0,1}\geq0.05-2\epsilon_d&gt;0.016.
 \]</span>{% endraw %}</p>
 <p>For fixed {% raw %}<span class="math inline">\(a\)</span>{% endraw %} these are linear constraints except for the strict positivity requirement. Positivity can be checked by maximizing {% raw %}<span class="math inline">\(\vartheta_{kk}\)</span>{% endraw %} subject to the remaining weak constraints and verifying that the maximum is positive. The feasible set for these variables is compact, so a positive supremum is attained.</p>
 <div id="mechanism-effect-coverage" class="proposition" data-note-number="5" data-note-kind="Proposition">
-<p><strong>Proposition 5 (Projection coverage).</strong> Under the sampling model of Section 7 and A1–A3, if the true share {% raw %}<span class="math inline">\(\theta_{kk}&gt;0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(\Pr(ADE_k\in\mathcal A_n)\geq1-\alpha\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(\mathcal A_n=\mathbb R\)</span>{% endraw %} when an arm is empty.</p>
+<p><strong>Proposition 5 (Projection coverage).</strong> Under the sampling model of Section 7 and A1–A3, if the true share {% raw %}<span class="math inline">\(\theta_{kk}&gt;0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(P(ADE_k\in\mathcal A_n)\geq1-\alpha\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(\mathcal A_n=\mathbb R\)</span>{% endraw %} when an arm is empty.</p>
 </div>
 <div class="proof">
 <p><strong>Proof.</strong> On {% raw %}<span class="math inline">\(\{q\in\mathcal C_n\}\)</span>{% endraw %}, use the true shares and</p>
 <p>{% raw %}<span class="math display">\[
-w_{dj}=\Pr(S_{kk},Y(d,m_k)=y_j).
+w_{dj}=P(S_{kk},Y(d,m_k)=y_j).
 \]</span>{% endraw %}</p>
 <p>Random assignment implies {% raw %}<span class="math inline">\(w_{dj}\leq q_{dkj}\)</span>{% endraw %}. Their sums are {% raw %}<span class="math inline">\(\theta_{kk}\)</span>{% endraw %}, and their outcome-weighted difference is {% raw %}<span class="math inline">\(ADE_k\theta_{kk}\)</span>{% endraw %}. Thus these variables witness inclusion of the true effect. The coverage bound for {% raw %}<span class="math inline">\(\mathcal C_n\)</span>{% endraw %} from Proposition 4's proof applies whether or not full mediation holds, proving the result. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 </div>

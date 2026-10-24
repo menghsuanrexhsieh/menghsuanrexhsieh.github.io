@@ -28,7 +28,7 @@ redirect_from: ["/2025/01/31/heavy-tailed-clusters-and-bootstrap-failure/", "/20
 {% raw %}<div class="math display">\[
 T_G=\frac{\sum_{g=1}^GU_g}{\sqrt{\sum_{g=1}^G(U_g-\overline U)^2}}.
 \]</div>{% endraw %}
-<p>For {% raw %}<span class="math inline">\(a&lt;2\)</span>{% endraw %}, choose the tail normalization {% raw %}<span class="math inline">\(A_G\)</span>{% endraw %} so that {% raw %}<span class="math inline">\(G\Pr(|U_g|&gt;A_G)\)</span>{% endraw %} is of constant order. Both {% raw %}<span class="math inline">\(A_G^{-1}\sum_gU_g\)</span>{% endraw %} and {% raw %}<span class="math inline">\(A_G^{-2}\sum_gU_g^2\)</span>{% endraw %} have nontrivial limits driven by the large observations. The denominator remains random at the same scale as the numerator. Their ratio is a self-normalized stable limit, rather than a standard normal variable.</p>
+<p>For {% raw %}<span class="math inline">\(a&lt;2\)</span>{% endraw %}, choose the tail normalization {% raw %}<span class="math inline">\(A_G\)</span>{% endraw %} so that {% raw %}<span class="math inline">\(GP(|U_g|&gt;A_G)\)</span>{% endraw %} is of constant order. Both {% raw %}<span class="math inline">\(A_G^{-1}\sum_gU_g\)</span>{% endraw %} and {% raw %}<span class="math inline">\(A_G^{-2}\sum_gU_g^2\)</span>{% endraw %} have nontrivial limits driven by the large observations. The denominator remains random at the same scale as the numerator. Their ratio is a self-normalized stable limit, rather than a standard normal variable.</p>
 
 <p>Centering the denominator is negligible because</p>
 
@@ -104,7 +104,7 @@ T_I=\frac{\sum_{g\in I}(S_g-\overline S_G)}
 {% raw %}<div class="math display">\[
 R_G=\frac{\max_gU_g^2}{\sum_gU_g^2}.
 \]</div>{% endraw %}
-<p>In an ordinary finite-variance regime, no single observation dominates and {% raw %}<span class="math inline">\(R_G\to0\)</span>{% endraw %} in probability. In the stable regime with {% raw %}<span class="math inline">\(a&lt;2\)</span>{% endraw %}, large order statistics remain important. Conditional Rademacher draws replace {% raw %}<span class="math inline">\(U_g\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\xi_gU_g\)</span>{% endraw %} but leave every {% raw %}<span class="math inline">\(U_g^2\)</span>{% endraw %} unchanged. Their distribution consequently retains the realized configuration of extreme magnitudes.</p>
+<p>In an ordinary finite-variance regime, no single observation dominates and {% raw %}<span class="math inline">\(R_G\xrightarrow{P}0\)</span>{% endraw %} in probability. In the stable regime with {% raw %}<span class="math inline">\(a&lt;2\)</span>{% endraw %}, large order statistics remain important. Conditional Rademacher draws replace {% raw %}<span class="math inline">\(U_g\)</span>{% endraw %} by {% raw %}<span class="math inline">\(\xi_gU_g\)</span>{% endraw %} but leave every {% raw %}<span class="math inline">\(U_g^2\)</span>{% endraw %} unchanged. Their distribution consequently retains the realized configuration of extreme magnitudes.</p>
 
 <p>One can see the obstruction in a conditional fourth moment. Set {% raw %}<span class="math inline">\(w_g=U_g/(\sum_hU_h^2)^{1/2}\)</span>{% endraw %} and consider the idealized signed statistic {% raw %}<span class="math inline">\(T^*=\sum_g\xi_gw_g\)</span>{% endraw %}, holding the scores fixed. Independent fair signs give</p>
 

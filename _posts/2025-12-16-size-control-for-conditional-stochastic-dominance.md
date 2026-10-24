@@ -28,9 +28,9 @@ redirect_from: ["/2026/03/07/size-control-in-the-dominance-limit-experiment/", "
 <p>with i.i.d. observations within each sample. The outcomes and covariates are real-valued, and the covariate distributions may differ between samples. Write</p>
 
 {% raw %}<div class="math display">\[
-F_Y(t\mid z)=\Pr(Y\leq t\mid Z^Y=z),
+F_Y(t\mid z)=P(Y\leq t\mid Z^Y=z),
 \qquad
-F_X(t\mid z)=\Pr(X\leq t\mid Z^X=z).
+F_X(t\mid z)=P(X\leq t\mid Z^X=z).
 \]</div>{% endraw %}
 
 <p>Fix a target covariate value {% raw %}<span class="math inline">\(z_0\)</span>{% endraw %}. We abbreviate {% raw %}<span class="math inline">\(F_Y(t\mid z_0),F_X(t\mid z_0)\)</span>{% endraw %} as {% raw %}<span class="math inline">\(F_Y(t),F_X(t)\)</span>{% endraw %}. The null hypothesis is</p>
@@ -86,7 +86,7 @@ S_n\Rightarrow S=(S_1,\ldots,S_q),
 
 {% raw %}<div class="math display">\[
 c_\alpha=c_\alpha(q_y,q)
-=\inf\{c:\Pr(T(U)\leq c)\geq1-\alpha\}.
+=\inf\{c:P(T(U)\leq c)\geq1-\alpha\}.
 \]</div>{% endraw %}
 
 <p>The test rejects when</p>
@@ -111,9 +111,9 @@ T(S_n)&gt;c_\alpha.
 <p>within the corresponding covariate support, and that each target conditional cdf has only finitely many discontinuities. Then, for every fixed data-generating distribution satisfying {% raw %}<span class="math inline">\(H_0\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{T(S_n)&gt;c_\alpha\}
+P\{T(S_n)&gt;c_\alpha\}
 \longrightarrow
-\Pr\{T(S)&gt;c_\alpha\}
+ P\{T(S)&gt;c_\alpha\}
 \leq
 \bar\alpha
 \leq\alpha,
@@ -122,7 +122,7 @@ T(S_n)&gt;c_\alpha.
 <p>where</p>
 
 {% raw %}<div class="math display">\[
-\bar\alpha=\Pr\{T(U)&gt;c_\alpha\}.
+\bar\alpha=P\{T(U)&gt;c_\alpha\}.
 \]</div>{% endraw %}
 
 <p>The bound {% raw %}<span class="math inline">\(\bar\alpha\)</span>{% endraw %} is attained in the limit experiment whenever {% raw %}<span class="math inline">\(F_Y=F_X\)</span>{% endraw %} is continuous.</p>
@@ -138,7 +138,7 @@ T(S_n)&gt;c_\alpha.
 {% raw %}<div class="math display">\[
 \limsup_{n\to\infty}
 \sup_{P\in\mathcal P_0}
-\Pr_P\{T(S_n)&gt;c_\alpha\}
+P\{T(S_n)&gt;c_\alpha\}
 \leq\alpha.
 \]</div>{% endraw %}
 
@@ -225,9 +225,9 @@ T(S)\leq T(U)
 <p>It follows that</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{T(S)&gt;c_\alpha\}
+P\{T(S)&gt;c_\alpha\}
 \leq
-\Pr\{T(U)&gt;c_\alpha\}
+ P\{T(U)&gt;c_\alpha\}
 =\bar\alpha
 \leq\alpha.
 \]</div>{% endraw %}
@@ -310,7 +310,7 @@ F_{Y_{n,[j]}}(t)
 <p>These two convergence conditions imply that, when a limit coordinate equals an atom, its approximating coordinate equals the same atom with probability tending to one. To prove this, suppose</p>
 
 {% raw %}<div class="math display">\[
-V_n\to V\quad\text{in probability},
+V_n\xrightarrow{P} V\quad\text{in probability},
 \qquad
 \eta_n:=\|F_{V_n}-F_V\|_\infty\to0.
 \]</div>{% endraw %}
@@ -318,11 +318,11 @@ V_n\to V\quad\text{in probability},
 <p>For any fixed {% raw %}<span class="math inline">\(d\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\Pr(V=d,V_n\neq d)
+P(V=d,V_n\neq d)
 \leq
-\Pr(|V_n-V|\geq\varepsilon)
+ P(|V_n-V|\geq\varepsilon)
 +
-\Pr(0&lt;|V_n-d|&lt;\varepsilon).
+P(0&lt;|V_n-d|&lt;\varepsilon).
 \]</div>{% endraw %}
 
 <p>On the event {% raw %}<span class="math inline">\(V=d\)</span>{% endraw %}, failure to equal {% raw %}<span class="math inline">\(d\)</span>{% endraw %} means either that {% raw %}<span class="math inline">\(V_n\)</span>{% endraw %} is at least {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %} away or that it lies in the punctured neighborhood of {% raw %}<span class="math inline">\(d\)</span>{% endraw %}.</p>
@@ -331,26 +331,26 @@ V_n\to V\quad\text{in probability},
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
-\Pr(0&lt;|V_n-d|&lt;\varepsilon)
+P(0&lt;|V_n-d|&lt;\varepsilon)
 ={}&amp;F_{V_n}(d-)-F_{V_n}(d-\varepsilon)\\
 &amp;+F_{V_n}((d+\varepsilon)-)-F_{V_n}(d)\\
 \leq{}&amp;
-\Pr(0&lt;|V-d|&lt;\varepsilon)+4\eta_n.
+P(0&lt;|V-d|&lt;\varepsilon)+4\eta_n.
 \end{aligned}
 \]</div>{% endraw %}
 
 <p>For fixed {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %}, the convergence assumptions therefore imply</p>
 
 {% raw %}<div class="math display">\[
-\limsup_{n\to\infty}\Pr(V=d,V_n\neq d)
+\limsup_{n\to\infty}P(V=d,V_n\neq d)
 \leq
-\Pr(0&lt;|V-d|&lt;\varepsilon).
+ P(0&lt;|V-d|&lt;\varepsilon).
 \]</div>{% endraw %}
 
-<p>As {% raw %}<span class="math inline">\(\varepsilon\downarrow0\)</span>{% endraw %}, the punctured neighborhoods decrease to the empty set. Their probability tends to zero even if {% raw %}<span class="math inline">\(\Pr(V=d)&gt;0\)</span>{% endraw %}. Thus</p>
+<p>As {% raw %}<span class="math inline">\(\varepsilon\downarrow0\)</span>{% endraw %}, the punctured neighborhoods decrease to the empty set. Their probability tends to zero even if {% raw %}<span class="math inline">\(P(V=d)&gt;0\)</span>{% endraw %}. Thus</p>
 
 {% raw %}<div class="math display">\[
-\Pr(V=d,V_n\neq d)\longrightarrow0.
+P(V=d,V_n\neq d)\longrightarrow0.
 \]</div>{% endraw %}
 
 <p>This argument at a fixed atom appears in Lemma 6 of the paper and is applied to the selected coordinates in Lemma 3. Apply it to each coordinate of the coupled vectors. There are finitely many atoms and selected observations, so a union bound shows that, with probability tending to one, every coordinate whose limit is an atom equals that atom.</p>
@@ -358,9 +358,9 @@ V_n\to V\quad\text{in probability},
 <p>Two independent limit coordinates can be equal with positive probability only at a common atom. Indeed, for independent limit coordinates {% raw %}<span class="math inline">\(V,W\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\Pr(V=W)
-=\int\Pr(V=w)\,dF_W(w)
-=\sum_d\Pr(V=d)\Pr(W=d),
+P(V=W)
+=\int P(V=w)\,dF_W(w)
+=\sum_dP(V=d)P(W=d),
 \]</div>{% endraw %}
 
 <p>where the sum is over common atoms. The coordinates may have different distributions. Independence is essential here: dependent continuous variables can coincide with positive probability.</p>
@@ -368,7 +368,7 @@ V_n\to V\quad\text{in probability},
 <p>On the event that two limit coordinates are unequal, the indicator of an order mismatch tends to zero almost surely. By bounded convergence, the probability of an order mismatch on this event tends to zero. Together with the preceding result for ties, a union bound over the finitely many pairs gives</p>
 
 {% raw %}<div class="math display">\[
-\Pr\!\left\{
+P\!\left\{
 \operatorname{sgn}(\widetilde S_{n,i}-\widetilde S_{n,j})
 =
 \operatorname{sgn}(\widetilde S_i-\widetilde S_j)
@@ -387,10 +387,10 @@ T(\widetilde S_n)=T(\widetilde S).
 {% raw %}<div class="math display">\[
 \begin{aligned}
 \left|
-\Pr\{T(S_n)&gt;c\}-\Pr\{T(S)&gt;c\}
+P\{T(S_n)&gt;c\}-P\{T(S)&gt;c\}
 \right|
 &amp;\leq
-\Pr\{T(\widetilde S_n)\neq T(\widetilde S)\}\\
+ P\{T(\widetilde S_n)\neq T(\widetilde S)\}\\
 &amp;\longrightarrow0.
 \end{aligned}
 \]</div>{% endraw %}
@@ -416,7 +416,7 @@ T(\widetilde S_n)=T(\widetilde S).
 <p>Ties change this calculation. If {% raw %}<span class="math inline">\(q_y=q_x=1\)</span>{% endraw %} and both outcomes equal {% raw %}<span class="math inline">\(d\)</span>{% endraw %}, every permutation has statistic zero. With two independent continuous uniforms, however,</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{T(U)=0\}=\Pr\{T(U)=1\}=\frac12.
+P\{T(U)=0\}=P\{T(U)=1\}=\frac12.
 \]</div>{% endraw %}
 
 <p>At level {% raw %}<span class="math inline">\(0.1\)</span>{% endraw %}, the uniform critical value is one, whereas the tied-sample permutation critical value is zero. Neither test rejects the tied sample, so the different critical values do not show that either test overrejects. The bound above applies to the uniform critical value. The cited version of the paper leaves the validity of permutation tests under general discrete dominance nulls unresolved.</p>
@@ -470,9 +470,9 @@ T(\widetilde S_n)=T(\widetilde S).
 <p>Each row has probability {% raw %}<span class="math inline">\(1/6\)</span>{% endraw %}, so</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{T(U)=0\}=\frac13,\qquad
-\Pr\{T(U)=1/2\}=\frac12,\qquad
-\Pr\{T(U)=1\}=\frac16.
+P\{T(U)=0\}=\frac13,\qquad
+ P\{T(U)=1/2\}=\frac12,\qquad
+ P\{T(U)=1\}=\frac16.
 \]</div>{% endraw %}
 
 <p>At nominal level {% raw %}<span class="math inline">\(\alpha=0.2\)</span>{% endraw %}, the critical value is {% raw %}<span class="math inline">\(1/2\)</span>{% endraw %}, and the test rejects with probability {% raw %}<span class="math inline">\(1/6\)</span>{% endraw %}. At level {% raw %}<span class="math inline">\(\alpha=0.1\)</span>{% endraw %}, the critical value is one, and the test cannot reject.</p>
@@ -501,7 +501,7 @@ N_c(i,j)
 <p>A path reaches {% raw %}<span class="math inline">\((i,j)\)</span>{% endraw %} by appending either a {% raw %}<span class="math inline">\(Y\)</span>{% endraw %}-label or an {% raw %}<span class="math inline">\(X\)</span>{% endraw %}-label. The indicator excludes paths that cross the boundary at the new point. Consequently,</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{T(U)\leq c\}
+P\{T(U)\leq c\}
 =
 \frac{N_c(q_y,q_x)}
 {\binom{q_y+q_x}{q_y}}.
@@ -514,14 +514,14 @@ N_c(i,j)
 {% raw %}<div class="math display">\[
 \gamma
 =
-\frac{\alpha-\Pr\{T(U)&gt;c\}}
-{\Pr\{T(U)=c\}}.
+\frac{\alpha-P\{T(U)&gt;c\}}
+{P\{T(U)=c\}}.
 \]</div>{% endraw %}
 
 <p>Because {% raw %}<span class="math inline">\(T(U)\)</span>{% endraw %} has finite support and {% raw %}<span class="math inline">\(\alpha\in(0,1)\)</span>{% endraw %}, the critical value has positive probability. Its quantile definition gives</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{T(U)&gt;c\}\leq\alpha\leq\Pr\{T(U)\geq c\},
+P\{T(U)&gt;c\}\leq\alpha\leq P\{T(U)\geq c\},
 \]</div>{% endraw %}
 
 <p>so {% raw %}<span class="math inline">\(0\leq\gamma\leq1\)</span>{% endraw %}. For the example with {% raw %}<span class="math inline">\(\alpha=0.2\)</span>{% endraw %},</p>
@@ -540,7 +540,7 @@ N_c(i,j)
 <p>For some small sample sizes, the test cannot reject at the chosen level. The event {% raw %}<span class="math inline">\(T(U)=1\)</span>{% endraw %} occurs precisely when every {% raw %}<span class="math inline">\(Y\)</span>{% endraw %}-observation precedes every {% raw %}<span class="math inline">\(X\)</span>{% endraw %}-observation in increasing outcome order. There is one such label sequence, so</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{T(U)=1\}
+P\{T(U)=1\}
 =
 \binom{q_y+q_x}{q_y}^{-1}.
 \]</div>{% endraw %}
@@ -559,9 +559,9 @@ N_c(i,j)
 <p>Suppose the regularity assumptions of Theorem 1 hold and {% raw %}<span class="math inline">\(H_0\)</span>{% endraw %} is false. The argument in Section 3 does not use the dominance inequality, so it gives</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{T(S_n)&gt;c_\alpha\}
+P\{T(S_n)&gt;c_\alpha\}
 \longrightarrow
-\Pr\{T(S)&gt;c_\alpha\},
+ P\{T(S)&gt;c_\alpha\},
 \]</div>{% endraw %}
 
 <p>with {% raw %}<span class="math inline">\(S\)</span>{% endraw %} now drawn from the alternative target distributions. This limiting power can lie strictly between zero and one. As the original sample grows, the selected covariates get closer to {% raw %}<span class="math inline">\(z_0\)</span>{% endraw %}, but the number of observations used in the test stays fixed.</p>

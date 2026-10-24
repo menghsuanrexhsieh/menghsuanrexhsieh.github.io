@@ -906,8 +906,8 @@
     ],
     "date": "2024-08-03",
     "title": "Graph Laplacians, Isoperimetry, and Diameter Bounds",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/02-1057.md"
   },
   {
     "key": "03-0",
@@ -925,8 +925,8 @@
     "citations": [],
     "date": "2023-03-04",
     "title": "Local Asymptotic Normality",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/03-0.md"
   },
   {
     "key": "03-8",
@@ -949,8 +949,8 @@
     "citations": [],
     "date": "2023-04-25",
     "title": "Regular Estimators, Limit Experiments, and Asymptotic Efficiency",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/03-8.md"
   },
   {
     "key": "04-0",
@@ -978,8 +978,8 @@
     "citations": [],
     "date": "2022-08-03",
     "title": "Bootstrap Distributions and Consistency",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/04-0.md"
   },
   {
     "key": "04-23",
@@ -1579,8 +1579,8 @@
     "citations": [],
     "date": "2022-04-13",
     "title": "Quadratic Mean Differentiability",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/07-0.md"
   },
   {
     "key": "07-17",
@@ -1610,8 +1610,8 @@
     ],
     "date": "2022-04-16",
     "title": "Asymptotic Power, Relative Efficiency, and Optimal Tests",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/07-17.md"
   },
   {
     "key": "08-0",
@@ -1637,8 +1637,8 @@
     ],
     "date": "2022-01-09",
     "title": "Contiguity, Change of Measure, and M-Estimation",
-    "adaptation": "expanded-notes",
-    "manuscript": "scripts/notes/topic-notes/08-0.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/08-0.md"
   },
   {
     "key": "09-0",
@@ -3169,8 +3169,8 @@
     "citations": [],
     "date": "2023-03-25",
     "title": "Randomization Tests: Invariance, Ties, and Validity",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/26-39.md"
   },
   {
     "key": "26-77",
@@ -3250,8 +3250,8 @@
     "citations": [],
     "date": "2023-02-11",
     "title": "The Neyman–Pearson Lemma and Unbiased Testing",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/26-135.md"
   },
   {
     "key": "27-0",
@@ -3375,8 +3375,8 @@
     "citations": [],
     "date": "2021-11-29",
     "title": "The Radon-Nikodym Theorem",
-    "adaptation": "notes",
-    "manuscript": null
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/28-45.md"
   },
   {
     "key": "28-57",

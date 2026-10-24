@@ -93,7 +93,7 @@ V=\sum_k\sigma_k^2R_k^2
 
 <h3 data-note-section="6" id="34-48-from-dispersed-shocks-to-a-central-limit-theorem">6. From dispersed shocks to a central limit theorem</h3>
 <div id="shock-level-inference" class="theorem" data-note-number="2" data-note-kind="Theorem">
-<p><strong>Theorem 2</strong>. Under the papers’ conditional many-shock CLT, moment, approximation-error, and variance-estimation conditions, with a stable nonzero first-stage denominator {% raw %}<span class="math inline">\(D=\sum_\ell e_\ell B_\ell^\perp X_\ell\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat V/V\to_p1\)</span>{% endraw %},</p>
+<p><strong>Theorem 2</strong>. Under the papers’ conditional many-shock CLT, moment, approximation-error, and variance-estimation conditions, with a stable nonzero first-stage denominator {% raw %}<span class="math inline">\(D=\sum_\ell e_\ell B_\ell^\perp X_\ell\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat V/V\xrightarrow{P}1\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
 \frac{\widehat\beta-\beta_0}{\sqrt{\widehat V}/|D|}
@@ -125,7 +125,7 @@ V=\sum_k\sigma_k^2R_k^2
 \leq C\frac{\max_k R_k^2\sigma_k^2}
                  {\sum_kR_k^2\sigma_k^2}.
 \]</div>{% endraw %}
-<p>When the largest shock’s variance share vanishes, Chebyshev’s inequality gives {% raw %}<span class="math inline">\(\widetilde V/V\to_p1\)</span>{% endraw %}. The displayed ratio also bounds the fourth-moment Lyapunov expression. Thus the same concentration calculation supports both the score CLT and the oracle variance estimate.</p>
+<p>When the largest shock’s variance share vanishes, Chebyshev’s inequality gives {% raw %}<span class="math inline">\(\widetilde V/V\xrightarrow{P}1\)</span>{% endraw %}. The displayed ratio also bounds the fourth-moment Lyapunov expression. Thus the same concentration calculation supports both the score CLT and the oracle variance estimate.</p>
 
 <p>For the feasible residual aggregate {% raw %}<span class="math inline">\(\widehat R_k=R_k+\Delta_k\)</span>{% endraw %}, the variance difference is</p>
 

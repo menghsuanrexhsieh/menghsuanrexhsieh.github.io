@@ -68,7 +68,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.
 </div>
 <div class="proof">
 <p><em>Proof.</em> Put {% raw %}<span class="math inline">\(L=\log(2n)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(t(u)=2au+\sqrt{2bu}\)</span>{% endraw %}. Direct expansion gives {% raw %}<span class="math inline">\(t(u)^2\ge2u(at(u)+b)\)</span>{% endraw %}. The union bound therefore yields</p>
-{% raw %}<div class="math display">\[\Pr\{\max_i|X_i|&gt;t(L+v)\}\le e^{-v},\qquad v\ge0.\]</div>{% endraw %}
+{% raw %}<div class="math display">\[\mathbb{P}\{\max_i|X_i|&gt;t(L+v)\}\le e^{-v},\qquad v\ge0.\]</div>{% endraw %}
 <p>Integrating this bound with the change of variables {% raw %}<span class="math inline">\(t=t(L+v)\)</span>{% endraw %},</p>
 {% raw %}<div class="math display">\[\mathbb{E}\max_i|X_i|\le t(L)+\int_0^\infty e^{-v}\left(2a+\sqrt{\frac b{2(L+v)}}\right)dv
 \le 2aL+\sqrt{2bL}+2a+\sqrt{\frac b{2L}}.\]</div>{% endraw %}
@@ -102,11 +102,11 @@ b(u)=\inf_{\lambda&gt;0}\frac{u+\psi(\lambda)}{\lambda},\quad u\ge0.\]</div>{% e
 </div>
 <div id="result-4" class="corollary" data-note-number="4" data-note-kind="Corollary">
 <p><strong>Corollary 4.</strong> Under the assumptions of Proposition 3, for every {% raw %}<span class="math inline">\(\eta\ge0\)</span>{% endraw %},</p>
-{% raw %}<div class="math display">\[\Pr\{\max_{t\in T}X_t&gt;b(\log|T|+\eta)\}\le e^{-\eta}.\]</div>{% endraw %}
+{% raw %}<div class="math display">\[\mathbb{P}\{\max_{t\in T}X_t&gt;b(\log|T|+\eta)\}\le e^{-\eta}.\]</div>{% endraw %}
 <p>If {% raw %}<span class="math inline">\(\psi^*(b(u))\ge u\)</span>{% endraw %} at {% raw %}<span class="math inline">\(u=\log|T|+\eta\)</span>{% endraw %}, the strict inequality in the event may be replaced by a non-strict one.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> Chernoff's inequality and the union bound give {% raw %}<span class="math inline">\(\Pr\{\max_tX_t\ge x\}\le\exp(\log|T|-\psi^*(x))\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(x&gt;b(u)\)</span>{% endraw %}, the inverse characterization gives {% raw %}<span class="math inline">\(\psi^*(x)&gt;u\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(x\downarrow b(u)\)</span>{% endraw %} to obtain the strict-tail statement. The additional condition permits direct substitution at the endpoint. Without it, the non-strict statement can fail: if every {% raw %}<span class="math inline">\(X_t=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\psi=0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(b(u)=0\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(u\)</span>{% endraw %}. □</p>
+<p><em>Proof.</em> Chernoff's inequality and the union bound give {% raw %}<span class="math inline">\(\mathbb{P}\{\max_tX_t\ge x\}\le\exp(\log|T|-\psi^*(x))\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(x&gt;b(u)\)</span>{% endraw %}, the inverse characterization gives {% raw %}<span class="math inline">\(\psi^*(x)&gt;u\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(x\downarrow b(u)\)</span>{% endraw %} to obtain the strict-tail statement. The additional condition permits direct substitution at the endpoint. Without it, the non-strict statement can fail: if every {% raw %}<span class="math inline">\(X_t=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\psi=0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(b(u)=0\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(u\)</span>{% endraw %}. □</p>
 </div>
 
 <div id="result-5" class="remark" data-note-number="5" data-note-kind="Remark">

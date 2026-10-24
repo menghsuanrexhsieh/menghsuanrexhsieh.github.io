@@ -31,7 +31,7 @@ S_j\triangleq\frac{\sum_iU_{ij}}{\sqrt{\sum_iU_{ij}^2}}.
 <p>Self-normalized moderate deviations approximate each tail by a Gaussian tail over a range determined by the third moments. With {% raw %}<span class="math inline">\(z=\Phi^{-1}(1-\gamma/(2p))\)</span>{% endraw %} in that range, a union bound yields</p>
 
 {% raw %}<div class="math display">\[
-\Pr\!\left(\max_{j\le p}|S_j|&gt;z\right)
+P\!\left(\max_{j\le p}|S_j|&gt;z\right)
 \le \gamma(1+o(1)).
 \]</div>{% endraw %}
 <p>The denominator adapts to heteroskedasticity. The union bound explains the {% raw %}<span class="math inline">\(\log p\)</span>{% endraw %} cost: {% raw %}<span class="math inline">\(z\)</span>{% endraw %} is of order {% raw %}<span class="math inline">\(\sqrt{\log(p/\gamma)}\)</span>{% endraw %}. This approximation is not valid for unrestricted growth of {% raw %}<span class="math inline">\(p\)</span>{% endraw %}; its moment-dependent range must cover that quantile.</p>
@@ -126,7 +126,7 @@ S_j\triangleq\frac{\sum_iU_{ij}}{\sqrt{\sum_iU_{ij}^2}}.
 <p>For a single mean, much less is needed. If independent centered {% raw %}<span class="math inline">\(V_i\)</span>{% endraw %} satisfy {% raw %}<span class="math inline">\(n^{-1}\sum_i\mathbb{E}|V_i|^r\le C\)</span>{% endraw %}, {% raw %}<span class="math inline">\(1\le r\le2\)</span>{% endraw %}, the von Bahr–Esseen inequality and Markov’s inequality give</p>
 
 {% raw %}<div class="math display">\[
-\Pr\left(\left|n^{-1}\sum_iV_i\right|&gt;
+P\left(\left|n^{-1}\sum_iV_i\right|&gt;
 \ell n^{-(1-1/r)}\right)\le 2C\ell^{-r}.
 \]</div>{% endraw %}
 <p>A law of large numbers for one mean and a uniform bound over a growing dictionary solve different problems. The double-selection proof uses the latter when a data-dependent choice of regressors must be covered.</p>

@@ -26,7 +26,7 @@ redirect_from: ["/2023/10/07/pointwise-and-uniform-coverage-in-moment-inequality
 (X_i-\overline X)(X_i-\overline X)'.
 \]</div>{% endraw %}
 
-<p>Write {% raw %}<span class="math inline">\(R=R_n\)</span>{% endraw %} for the number of resampling repetitions, as in the preceding posts. For each {% raw %}<span class="math inline">\(r=1,\ldots,R\)</span>{% endraw %}, draw a uniform random permutation {% raw %}<span class="math inline">\(\pi_r\)</span>{% endraw %} of {% raw %}<span class="math inline">\(\{1,\ldots,n\}\)</span>{% endraw %}, independently across repetitions and independently of the data. Set {% raw %}<span class="math inline">\(I_r=\pi_r(1)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(J_r=\pi_r(1)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(K_r=\pi_r(2)\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(I_r\)</span>{% endraw %} is a uniform observation index and {% raw %}<span class="math inline">\((J_r,K_r)\)</span>{% endraw %} is a uniform ordered pair of distinct indices. Observations and pairs can be drawn again at another repetition. There is no requirement that {% raw %}<span class="math inline">\(R\leq n\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(\mathbb E_\pi\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\operatorname{Var}_\pi\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\Pr_\pi\)</span>{% endraw %} for expectation, variance, and probability over these draws conditional on {% raw %}<span class="math inline">\(\mathbf X\)</span>{% endraw %}.</p>
+<p>Write {% raw %}<span class="math inline">\(R=R_n\)</span>{% endraw %} for the number of resampling repetitions, as in the preceding posts. For each {% raw %}<span class="math inline">\(r=1,\ldots,R\)</span>{% endraw %}, draw a uniform random permutation {% raw %}<span class="math inline">\(\pi_r\)</span>{% endraw %} of {% raw %}<span class="math inline">\(\{1,\ldots,n\}\)</span>{% endraw %}, independently across repetitions and independently of the data. Set {% raw %}<span class="math inline">\(I_r=\pi_r(1)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(J_r=\pi_r(1)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(K_r=\pi_r(2)\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(I_r\)</span>{% endraw %} is a uniform observation index and {% raw %}<span class="math inline">\((J_r,K_r)\)</span>{% endraw %} is a uniform ordered pair of distinct indices. Observations and pairs can be drawn again at another repetition. There is no requirement that {% raw %}<span class="math inline">\(R\leq n\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(\mathbb E_\pi\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\operatorname{Var}_\pi\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(P_\pi\)</span>{% endraw %} for expectation, variance, and probability over these draws conditional on {% raw %}<span class="math inline">\(\mathbf X\)</span>{% endraw %}.</p>
 
 <p>For a candidate mean {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %}, the mean-type and U-type statistics are</p>
 
@@ -61,7 +61,7 @@ T_U(\mu)=\sqrt p\,S_U^{\mathrm{Song}}(\mu;b=2).
 
 {% raw %}<div class="math display">\[
 \sqrt n(\overline X-\mu_0)=O_p(1),
-\qquad \widehat\Sigma\xrightarrow{p}\Sigma,
+\qquad \widehat\Sigma\xrightarrow{P}\Sigma,
 \qquad \frac1n\sum_{i=1}^n\|X_i\|^{2+\delta}=O_p(1).
 \]</div>{% endraw %}
 
@@ -167,7 +167,7 @@ M_{2+\delta,n}^{2/(2+\delta)}=o_p(1),
 =p\frac{\max_j\|Z_j\|^2}{n}=o_p(1).
 \]</div>{% endraw %}
 
-<p>It follows that {% raw %}<span class="math inline">\(\operatorname{Var}_\pi(H)\xrightarrow{p}p\)</span>{% endraw %}. This explains the normalization {% raw %}<span class="math inline">\(\sqrt{pR}\)</span>{% endraw %}.</p>
+<p>It follows that {% raw %}<span class="math inline">\(\operatorname{Var}_\pi(H)\xrightarrow{P}p\)</span>{% endraw %}. This explains the normalization {% raw %}<span class="math inline">\(\sqrt{pR}\)</span>{% endraw %}.</p>
 
 <span id="10-356-the-moment-bound-needed-for-the-pair-clt"></span>
 <p>The same moment condition also gives the CLT. Cauchy–Schwarz bounds each inner product by a product of norms. Including the diagonal terms then gives an upper bound that factors into a product of empirical moments:</p>
@@ -314,7 +314,7 @@ R^{1/4}\overline X
 =d+o_p(1).
 \]</div>{% endraw %}
 
-<p>If {% raw %}<span class="math inline">\(d&lt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\Pr(\overline X&lt;0)\to1\)</span>{% endraw %}, so the procedure uses {% raw %}<span class="math inline">\(T_U(\overline X)\)</span>{% endraw %} with probability tending to one. If {% raw %}<span class="math inline">\(d=0\)</span>{% endraw %}, the sign may remain uncertain, but {% raw %}<span class="math inline">\(\widehat\lambda=o_p(1)\)</span>{% endraw %}: the two statistics differ by {% raw %}<span class="math inline">\(o_p(1)\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(d&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\Pr(\overline X&gt;0)\to1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\lambda\xrightarrow{p}d^2/\sigma^2\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\widehat\sigma^2\xrightarrow{p}\sigma^2\)</span>{% endraw %}. The test then has limiting rejection probability</p>
+<p>If {% raw %}<span class="math inline">\(d&lt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P(\overline X&lt;0)\to1\)</span>{% endraw %}, so the procedure uses {% raw %}<span class="math inline">\(T_U(\overline X)\)</span>{% endraw %} with probability tending to one. If {% raw %}<span class="math inline">\(d=0\)</span>{% endraw %}, the sign may remain uncertain, but {% raw %}<span class="math inline">\(\widehat\lambda=o_p(1)\)</span>{% endraw %}: the two statistics differ by {% raw %}<span class="math inline">\(o_p(1)\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(d&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P(\overline X&gt;0)\to1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\lambda\xrightarrow{P}d^2/\sigma^2\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\widehat\sigma^2\xrightarrow{P}\sigma^2\)</span>{% endraw %}. The test then has limiting rejection probability</p>
 
 {% raw %}<div class="math display">\[
 1-\Phi\left(z_{1-\alpha}-\frac{d^2}{\sigma^2}\right)&gt;\alpha.
@@ -404,7 +404,7 @@ Q_n&amp;=\max_{1\leq k\leq p}
 <p>For uniform size over a nonempty null class {% raw %}<span class="math inline">\(\mathcal P_0\)</span>{% endraw %}, the assumptions must hold along every sequence {% raw %}<span class="math inline">\(P_n\in\mathcal P_0\)</span>{% endraw %}. Require {% raw %}<span class="math inline">\(\sqrt n(\overline X-\mu_0(P_n))=O_{P_n}(1)\)</span>{% endraw %}, the empirical {% raw %}<span class="math inline">\(2+\delta\)</span>{% endraw %} moment bound for a common {% raw %}<span class="math inline">\(\delta>0\)</span>{% endraw %}, and covariance convergence to a positive definite limit along that sequence, with common lower and upper eigenvalue bounds. These are the sequencewise premises of <a href="https://arxiv.org/html/2002.02097v4#S5.SS2">Leung’s Theorem 2</a>. If uniform size control failed, some sequence would have rejection probabilities exceeding {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} by a fixed amount. The preceding proof applies along that sequence and gives a contradiction. A fixed member of the class has limiting rejection probability {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}, so</p>
 
 {% raw %}<div class="math display">\[
-\sup_{P\in\mathcal P_0}\Pr_P\{Q_n&gt;c_{n,1-\alpha}\}
+\sup_{P\in\mathcal P_0}P\{Q_n&gt;c_{n,1-\alpha}\}
 \longrightarrow\alpha.
 \]</div>{% endraw %}
 

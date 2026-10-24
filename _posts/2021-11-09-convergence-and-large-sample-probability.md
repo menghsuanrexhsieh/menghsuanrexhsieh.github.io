@@ -20,7 +20,7 @@ redirect_from: ["/2021/11/09/stochastic-convergence/", "/2022/02/14/large-sample
 <p><strong>Definition 1</strong>.  A sequence of random vectors, denoted {% raw %}<span class="math inline">\(\{X_n\}\)</span>{% endraw %} is said to <strong>converge in probability</strong> to {% raw %}<span class="math inline">\(X\)</span>{% endraw %} if </p>
 
 {% raw %}<div class="math display">\[\mathop{\mathrm{\mathbf{P}}}\left( \abs{X_n - X} \geq \varepsilon \right) \xrightarrow{n \to \infty} 0\]</div>{% endraw %}
-<p> This is denoted {% raw %}<span class="math inline">\({X_n} \xrightarrow{\mathop{\mathrm{\mathbf{P}}}} {X}\)</span>{% endraw %}.</p>
+<p> This is denoted {% raw %}<span class="math inline">\({X_n} \xrightarrow{P} {X}\)</span>{% endraw %}.</p>
 
 </div>
 <div id="Def:CvgDist" class="definition" data-note-number="2" data-note-kind="Definition">
@@ -174,7 +174,7 @@ M-\limsup_{n\to\infty}\mathbb E f(X_n)
 <ol>
 <li><p><span id="CMT:i" data-label="CMT:i"></span> {% raw %}<span class="math inline">\({X_n} \xrightarrow{\rm a.s.} {X} \implies {g(X_n)} \xrightarrow{\rm a.s.} {g(X)}\)</span>{% endraw %}.</p></li>
 <li><p><span id="CMT:ii" data-label="CMT:ii"></span> {% raw %}<span class="math inline">\({X_n} \xrightarrow{d} {X} \implies {g(X_n)} \xrightarrow{d} {g(X)}\)</span>{% endraw %}.</p></li>
-<li><p><span id="CMT:iii" data-label="CMT:iii"></span> {% raw %}<span class="math inline">\({X_n} \xrightarrow{\mathop{\mathrm{\mathbf{P}}}} {X} \implies {g(X_n)} \xrightarrow{\mathop{\mathrm{\mathbf{P}}}} {g(X)}\)</span>{% endraw %}.</p></li>
+<li><p><span id="CMT:iii" data-label="CMT:iii"></span> {% raw %}<span class="math inline">\({X_n} \xrightarrow{P} {X} \implies {g(X_n)} \xrightarrow{P} {g(X)}\)</span>{% endraw %}.</p></li>
 </ol>
 </div>
 <div class="proof" id="continuous-mapping-proof">
@@ -210,7 +210,7 @@ M-\limsup_{n\to\infty}\mathbb E f(X_n)
 
 <p>This holds for every closed {% raw %}<span class="math inline">\(H\)</span>{% endraw %}. The converse direction of Portmanteau, now in {% raw %}<span class="math inline">\(\mathbb R^\ell\)</span>{% endraw %}, therefore gives {% raw %}<span class="math inline">\(g(X_n)\Rightarrow g(X)\)</span>{% endraw %}.</p>
 
-<p><strong>(iii) Convergence in probability.</strong> We first extract an almost surely convergent further subsequence from any subsequence. Let {% raw %}<span class="math inline">\((X_{n_j})\)</span>{% endraw %} be arbitrary. Since {% raw %}<span class="math inline">\(X_{n_j}\to X\)</span>{% endraw %} in probability, we can choose increasing indices {% raw %}<span class="math inline">\(j_m\)</span>{% endraw %} such that</p>
+<p><strong>(iii) Convergence in probability.</strong> We first extract an almost surely convergent further subsequence from any subsequence. Let {% raw %}<span class="math inline">\((X_{n_j})\)</span>{% endraw %} be arbitrary. Since {% raw %}<span class="math inline">\(X_{n_j}\xrightarrow{P} X\)</span>{% endraw %} in probability, we can choose increasing indices {% raw %}<span class="math inline">\(j_m\)</span>{% endraw %} such that</p>
 
 {% raw %}<div class="math display">\[\mathbb P\left(\|X_{n_{j_m}}-X\|&gt;2^{-m}\right)&lt;2^{-m}
 \qquad(m\geq1).\]</div>{% endraw %}
@@ -230,7 +230,7 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 {% raw %}<div class="math display">\[\mathbb P\left(\|g(X_{n_j})-g(X)\|&gt;\varepsilon\right)\geq\eta
 \qquad\text{for every }j.\]</div>{% endraw %}
 
-<p>The construction above supplies a further subsequence along which these same probabilities tend to zero, a contradiction. Therefore {% raw %}<span class="math inline">\(g(X_n)\to g(X)\)</span>{% endraw %} in probability. ◻</p>
+<p>The construction above supplies a further subsequence along which these same probabilities tend to zero, a contradiction. Therefore {% raw %}<span class="math inline">\(g(X_n)\xrightarrow{P} g(X)\)</span>{% endraw %} in probability. ◻</p>
 </div>
 
 <div id="Lem:Helley" class="lemma" data-note-number="6" data-note-kind="Lemma">
@@ -293,12 +293,12 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 <div id="thm:wlln" class="theorem" data-note-number="9" data-note-kind="Theorem">
 <p><strong>Theorem 9</strong> (Weak LLN).  Let {% raw %}<span class="math inline">\(X_1,X_2,\dots\)</span>{% endraw %} be i.i.d. random variables on some probability space {% raw %}<span class="math inline">\((\Omega,\mathscr F,\mathop{\mathrm{\mathbf{P}}})\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(S_n \triangleq X_1 + \dots + X_n\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(\mathbb{E} X_1 = \mu\)</span>{% endraw %}, then </p>
 
-{% raw %}<div class="math display">\[\frac{S_n}{n} \xrightarrow{\mathop{\mathrm{\mathbf{P}}}} \mu ~.\]</div>{% endraw %}
+{% raw %}<div class="math display">\[\frac{S_n}{n} \xrightarrow{P} \mu ~.\]</div>{% endraw %}
 </div>
 <div class="proof">
 <p><em>Proof.</em></p>
 
-<p>Only {% raw %}<span class="math inline">\(\mathbb{E}|X_1|&lt;\infty\)</span>{% endraw %} is needed. Put {% raw %}<span class="math inline">\(X_i^{(K)}=X_i1_{\{|X_i|\leq K\}}\)</span>{% endraw %}. For fixed {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, the truncated variables are i.i.d. and bounded, so Chebyshev gives {% raw %}<span class="math inline">\(n^{-1}\sum_iX_i^{(K)}-\mathbb{E}X_1^{(K)}\to0\)</span>{% endraw %} in probability. Moreover,</p>
+<p>Only {% raw %}<span class="math inline">\(\mathbb{E}|X_1|&lt;\infty\)</span>{% endraw %} is needed. Put {% raw %}<span class="math inline">\(X_i^{(K)}=X_i1_{\{|X_i|\leq K\}}\)</span>{% endraw %}. For fixed {% raw %}<span class="math inline">\(K\)</span>{% endraw %}, the truncated variables are i.i.d. and bounded, so Chebyshev gives {% raw %}<span class="math inline">\(n^{-1}\sum_iX_i^{(K)}-\mathbb{E}X_1^{(K)}\xrightarrow{P}0\)</span>{% endraw %} in probability. Moreover,</p>
 
 {% raw %}<div class="math display">\[\mathbb{E}\left|\frac1n\sum_{i=1}^n(X_i-X_i^{(K)})\right|\leq \mathbb{E}|X_1|1_{\{|X_1|&gt;K\}},\qquad |\mathbb{E}X_1-\mathbb{E}X_1^{(K)}|\leq \mathbb{E}|X_1|1_{\{|X_1|&gt;K\}}.\]</div>{% endraw %}<p>The common tail bound tends to zero as {% raw %}<span class="math inline">\(K\to\infty\)</span>{% endraw %}. Markov’s inequality and the triangle inequality complete the proof by taking {% raw %}<span class="math inline">\(n\to\infty\)</span>{% endraw %} first and then {% raw %}<span class="math inline">\(K\to\infty\)</span>{% endraw %}.</p>
 

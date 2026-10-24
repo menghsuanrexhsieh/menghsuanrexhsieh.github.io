@@ -26,8 +26,8 @@ Y^*_{ij}(g)=Z_{ij}&#x27;\widehat\beta^r+W_{ij}&#x27;\widehat\gamma^r
 <p><strong>Theorem 1</strong>. Under the paper’s fixed-{% raw %}<span class="math inline">\(q\)</span>{% endraw %}, large-cluster conditions, the null rejection probability has limiting bounds</p>
 
 {% raw %}<div class="math display">\[
-\alpha-2^{-(q-1)}\le\liminf\Pr(\text{reject})
-\le\limsup\Pr(\text{reject})\le\alpha.
+\alpha-2^{-(q-1)}\le\liminf P(\text{reject})
+\le\limsup P(\text{reject})\le\alpha.
 \]</div>{% endraw %}
 <p>These conditions include independent Gaussian limits for cluster scores, positive limiting cluster proportions, proportional residualized-regressor covariance matrices across clusters, and compatibility of pooled and cluster-specific nuisance projections. The paper also establishes power tending to one as the local-alternative parameter becomes large, subject to the sign-grid resolution condition.</p>
 

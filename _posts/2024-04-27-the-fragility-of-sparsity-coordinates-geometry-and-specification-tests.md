@@ -55,14 +55,14 @@ B_J\triangleq\frac{\sum_{j\notin J}G_j^2}{\sum_{j=1}^pG_j^2}
 <p>Here is a coarse bound that makes the rate explicit. Put {% raw %}<span class="math inline">\(a=(p-s)/2\)</span>{% endraw %}, {% raw %}<span class="math inline">\(b=s/2\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\epsilon=C&#x27;s/p\le1/2\)</span>{% endraw %}. The beta density gives</p>
 
 {% raw %}<div class="math display">\[
-\Pr(B_J\le\epsilon)
+\mathbb{P}(B_J\le\epsilon)
 =\frac1{\mathrm B(a,b)}\int_0^\epsilon t^{a-1}(1-t)^{b-1}\,dt
 \le\frac{\sqrt2\,\epsilon^a}{a\,\mathrm B(a,b)}.
 \]</div>{% endraw %}
 <p>For {% raw %}<span class="math inline">\(b\ge1\)</span>{% endraw %}, the factor {% raw %}<span class="math inline">\((1-t)^{b-1}\)</span>{% endraw %} is at most one; for {% raw %}<span class="math inline">\(b=1/2\)</span>{% endraw %}, it is at most {% raw %}<span class="math inline">\(\sqrt2\)</span>{% endraw %} on this interval. Bounding the beta integral below on {% raw %}<span class="math inline">\([1/4,1/2]\)</span>{% endraw %} shows {% raw %}<span class="math inline">\(\mathrm B(a,b)^{-1}\le e^{Cp}\)</span>{% endraw %} for {% raw %}<span class="math inline">\(1\le s\le p/2\)</span>{% endraw %}, with a numerical constant. Hence</p>
 
 {% raw %}<div class="math display">\[
-\log\Pr\{r_s(R)\le Cs/p\}
+\log\mathbb{P}\{r_s(R)\le Cs/p\}
 \le\frac{p-s}{2}\log(C&#x27;s/p)
 +s\log(ep/s)+O(p).
 \]</div>{% endraw %}
@@ -76,7 +76,7 @@ r_s(R)=1-\frac{\sum_{j=1}^sG_{(j)}^2}{\sum_{j=1}^pG_j^2}.
 <p>The retained energy is at most {% raw %}<span class="math inline">\(s\max_jG_j^2/\sum_jG_j^2\)</span>{% endraw %}. A Gaussian tail bound and a union bound give</p>
 
 {% raw %}<div class="math display">\[
-\Pr\left(\max_jG_j^2&gt;2\log(2p/\eta)\right)\leq\eta.
+\mathbb{P}\left(\max_jG_j^2&gt;2\log(2p/\eta)\right)\leq\eta.
 \]</div>{% endraw %}
 <p>Also {% raw %}<span class="math inline">\(\sum_jG_j^2/p\to1\)</span>{% endraw %}. Thus the retained fraction is {% raw %}<span class="math inline">\(O_p(s\log p/p)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(r_s(R)\to1\)</span>{% endraw %} whenever {% raw %}<span class="math inline">\(s\log p/p\to0\)</span>{% endraw %}. Bounded eigenvalues extend this to prediction error up to fixed constants.</p>
 
@@ -190,7 +190,7 @@ Z_i\triangleq\frac{\ddot D_i}{\ddot D&#x27;\ddot D}
 
 {% raw %}<div class="math display">\[
 \frac{\sum_i\widehat Z_i^2\widehat U_i^2}
-     {\sum_iZ_i^2U_i^2}\to_P1.
+     {\sum_iZ_i^2U_i^2}\xrightarrow{P}1.
 \]</div>{% endraw %}
 <p>Feasibility requires nuisance errors small relative to the variance of the estimator difference. Consistency in an unspecified norm gives no such comparison. The paper’s rate and variance conditions justify the studentized normal approximation.</p>
 

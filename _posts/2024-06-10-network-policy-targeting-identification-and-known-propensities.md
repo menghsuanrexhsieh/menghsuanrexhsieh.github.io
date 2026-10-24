@@ -107,7 +107,7 @@ W(\pi^*)-W(\widehat\pi)
 <p>Optimizing the exponential tail bound and taking a union bound over rules yields</p>
 
 {% raw %}<div class="math display">\[
-\Pr\left\{\sup_{\pi\in\Pi}|\widehat W(\pi)-W(\pi)|&gt;t\right\}
+P\left\{\sup_{\pi\in\Pi}|\widehat W(\pi)-W(\pi)|&gt;t\right\}
 \leq2K\exp(-2nt^2/(\chi B^2)).
 \]</div>{% endraw %}
 <p>The resulting uniform error has order {% raw %}<span class="math inline">\(B\sqrt{\chi\log K/n}\)</span>{% endraw %}. Large inverse weights increase the range {% raw %}<span class="math inline">\(B\)</span>{% endraw %}; overlapping neighborhoods increase the number of colors {% raw %}<span class="math inline">\(\chi\)</span>{% endraw %}. The paper replaces this finite-class argument with its VC-class and sampling analysis, producing the stated dependence on degree and overlap.</p>
@@ -142,7 +142,7 @@ n\geq\frac{2\chi\Gamma^2}{e_0^2\varepsilon^2}
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-viviano_policy_2025" class="csl-entry" role="listitem">
-Viviano, Davide. 2025. <span>“Policy Targeting Under Network Interference.”</span> <em>Review of Economic Studies</em> 92 (2): 1257–92. <a href="https://doi.org/10.1093/restud/rdae041">https://doi.org/10.1093/restud/rdae041</a>.
+Viviano, Davide. 2025. <span>“Policy Targeting Under Network Interference.”</span> <em>Review of Economic Studies</em> 92 (2): 1257–92. <a href="https://doi.org/10.1093/restud/rdae041">https://doi.org/10.1093/restud/rdae041</a>. First published online 10 April 2024.
 </div>
 </div>
 

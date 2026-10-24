@@ -52,7 +52,7 @@ redirect_from: ["/2024/07/13/when-measurement-error-can-be-ignored-in-regression
 
 {% raw %}<div class="math display">\[
 \tau_F=\int \tau_F^*(e)\,
-\frac{\Pr(C\mid X^*=e)}{\int\Pr(C\mid X^*=u)\,dF_{e\mid X}(u\mid0)}
+\frac{\mathbb{P}(C\mid X^*=e)}{\int\mathbb{P}(C\mid X^*=u)\,dF_{e\mid X}(u\mid0)}
 \,dF_{e\mid X}(e\mid0).
 \]</div>{% endraw %}
 </div>

@@ -69,13 +69,13 @@ note_source: "assets/notes/Uniform Law of Large Numbers/main.tex"
 <p>For fixed {% raw %}<span class="math inline">\(\delta\)</span>{% endraw %}, the two sample averages converge by the integrable LLN. Since {% raw %}<span class="math inline">\(PH_\delta\to0\)</span>{% endraw %} by dominated convergence, consistency of {% raw %}<span class="math inline">\(\widehat\theta_n\)</span>{% endraw %} finishes the argument. Thus evaluation at a data-dependent parameter is justified by a local supremum, not by a pointwise LLN applied after observing that parameter.</p>
 <p>A score equation need not be solved exactly. Stochastic equicontinuity gives a version for approximate roots.</p>
 <div id="Lem:Example_1_Upgraded" class="lemma" data-note-number="3" data-note-kind="Lemma">
-<p><strong>Lemma 3.</strong> Under the same model and moment assumptions, suppose {% raw %}<span class="math inline">\(\widehat\theta_n\to_P\theta_0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_n\ell_{\widehat\theta_n}=o_P(n^{-1/2})\)</span>{% endraw %}, and</p>
+<p><strong>Lemma 3.</strong> Under the same model and moment assumptions, suppose {% raw %}<span class="math inline">\(\widehat\theta_n\xrightarrow{P}\theta_0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_n\ell_{\widehat\theta_n}=o_P(n^{-1/2})\)</span>{% endraw %}, and</p>
 <span id="Eq:Pre_LLN_Relation_2"></span>
 {% raw %}<div class="math display">\[\mathbb G_n(\ell_{\widehat\theta_n}-\ell_{\theta_0})=o_P(1).\tag{2}\]</div>{% endraw %}
 <p>Then {% raw %}<span class="math inline">\(\sqrt n(\widehat\theta_n-\theta_0)\Rightarrow\mathcal{N}(0,I_{\theta_0}^{-1})\)</span>{% endraw %}.</p>
 </div>
 <div class="proof">
-<p><em>Proof.</em> The approximate score equation and (2) imply {% raw %}<span class="math inline">\(-\sqrt nP\ell_{\widehat\theta_n}=\mathbb G_n\ell_{\theta_0}+o_P(1)\)</span>{% endraw %}. Taking population expectations in the secant identity gives {% raw %}<span class="math inline">\(P\ell_\theta=-(\theta-\theta_0)Pg_\theta\)</span>{% endraw %}. Dominated convergence and consistency give {% raw %}<span class="math inline">\(Pg_{\widehat\theta_n}\to_P I_{\theta_0}&gt;0\)</span>{% endraw %}. Therefore</p>
+<p><em>Proof.</em> The approximate score equation and (2) imply {% raw %}<span class="math inline">\(-\sqrt nP\ell_{\widehat\theta_n}=\mathbb G_n\ell_{\theta_0}+o_P(1)\)</span>{% endraw %}. Taking population expectations in the secant identity gives {% raw %}<span class="math inline">\(P\ell_\theta=-(\theta-\theta_0)Pg_\theta\)</span>{% endraw %}. Dominated convergence and consistency give {% raw %}<span class="math inline">\(Pg_{\widehat\theta_n}\xrightarrow{P} I_{\theta_0}&gt;0\)</span>{% endraw %}. Therefore</p>
 {% raw %}<div class="math display">\[\sqrt n(\widehat\theta_n-\theta_0)=\frac{\mathbb G_n\ell_{\theta_0}+o_P(1)}{Pg_{\widehat\theta_n}}.\]</div>{% endraw %}
 <p>The same central limit theorem applies. This argument establishes the rate as part of the conclusion; it does not assume it in order to control a Taylor remainder. □</p>
 </div>

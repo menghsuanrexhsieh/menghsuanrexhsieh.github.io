@@ -149,7 +149,7 @@ T_M(\mu)\Rightarrow
 \qquad G\sim\mathcal N(0,I_p).
 \]</div>{% endraw %}
 
-<p>For U, retain its variance normalization. Let {% raw %}<span class="math inline">\(v_n^2\)</span>{% endraw %} be the conditional variance of a single empirically centered U contribution, and suppose {% raw %}<span class="math inline">\(v_n\to_p v&gt;0\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(b\to\infty\)</span>{% endraw %}, the corresponding limit is</p>
+<p>For U, retain its variance normalization. Let {% raw %}<span class="math inline">\(v_n^2\)</span>{% endraw %} be the conditional variance of a single empirically centered U contribution, and suppose {% raw %}<span class="math inline">\(v_n\xrightarrow{P} v&gt;0\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(b\to\infty\)</span>{% endraw %}, the corresponding limit is</p>
 
 {% raw %}<div class="math display">\[
 \frac{T_U(\mu)}{v_n}
@@ -173,9 +173,9 @@ T_M(\mu)\Rightarrow
 <p>For a statistic {% raw %}<span class="math inline">\(T\)</span>{% endraw %}, its coupled reference {% raw %}<span class="math inline">\(S\)</span>{% endraw %}, a possibly data-dependent critical value {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, and any {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\left|\Pr(T&gt;c)-\Pr(S&gt;c)\right|
-\le\Pr(|T-S|&gt;\varepsilon)
-+\Pr(|S-c|\le\varepsilon).
+\left|P(T&gt;c)-P(S&gt;c)\right|
+\le P(|T-S|&gt;\varepsilon)
++P(|S-c|\le\varepsilon).
 \]</div>{% endraw %}
 
 <p>The first term requires tail control on the discrepancy. The second requires control of the reference distribution near its rejection boundary. An {% raw %}<span class="math inline">\(O_p(r_n)\)</span>{% endraw %} discrepancy alone does not imply an {% raw %}<span class="math inline">\(O(r_n)\)</span>{% endraw %} size error. Nor does a CLT, which gives convergence without necessarily supplying the required rate.</p>
@@ -183,7 +183,7 @@ T_M(\mu)\Rightarrow
 <p>Symmetry can also make a remainder bound conservative. For an exactly Gaussian reference {% raw %}<span class="math inline">\(G\sim\mathcal N(0,I_p)\)</span>{% endraw %} and a deterministic shift {% raw %}<span class="math inline">\(u\to0\)</span>{% endraw %}, the rejection probability of {% raw %}<span class="math inline">\(\|G+u\|^2\)</span>{% endraw %} depends on {% raw %}<span class="math inline">\(u\)</span>{% endraw %} through {% raw %}<span class="math inline">\(\|u\|^2\)</span>{% endraw %}. At the central chi-square critical value {% raw %}<span class="math inline">\(q_{p,1-\alpha}\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-\Pr\{\|G+u\|^2>q_{p,1-\alpha}\}
+P\{\|G+u\|^2>q_{p,1-\alpha}\}
 =\alpha+O(\|u\|^2).
 \]</div>{% endraw %}
 

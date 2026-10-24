@@ -168,7 +168,7 @@ redirect_from: ["/2023/12/08/itos-formula/", "/2024/01/13/application-of-itos-fo
 <p> This is the <em>product formula for Stratonovich integrals</em>. The same correction also appears in symmetric approximating sums. If {% raw %}<span class="math inline">\(X\)</span>{% endraw %} and {% raw %}<span class="math inline">\(H\)</span>{% endraw %} are continuous semimartingales, and {% raw %}<span class="math inline">\(t_0 &gt; 0\)</span>{% endraw %}, then </p>
 
 {% raw %}<div class="math display">\[\begin{aligned}
-    \sum_{0 \leq k \leq 2^n-1} \frac{H_{k t_0 2^{-n}} + H_{(k+1) t_0 2^{-n}}}{2} (X_{(k+1)t_0 2^{-n}} - X_{k t_0 2^{-n}}) \xrightarrow{\mathop{\mathrm{\mathbf{P}\!\,}}} \int_0^{t_0} H_s \circ \dif X_s ~.
+    \sum_{0 \leq k \leq 2^n-1} \frac{H_{k t_0 2^{-n}} + H_{(k+1) t_0 2^{-n}}}{2} (X_{(k+1)t_0 2^{-n}} - X_{k t_0 2^{-n}}) \xrightarrow{P} \int_0^{t_0} H_s \circ \dif X_s ~.
 \end{aligned}\]</div>{% endraw %}
 <p> To see this, observe that </p>
 

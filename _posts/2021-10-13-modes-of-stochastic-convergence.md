@@ -20,7 +20,7 @@ redirect_from: ["/2021/11/06/modes-of-stochastic-convergence/"]
 <p><strong>Definition 1</strong>.  A sequence of random vectors, denoted {% raw %}<span class="math inline">\((X_n)\)</span>{% endraw %} is said to <strong>converge in probability</strong> to {% raw %}<span class="math inline">\(X\)</span>{% endraw %} if, for every {% raw %}<span class="math inline">\(\varepsilon>0\)</span>{% endraw %}, </p>
 
 {% raw %}<div class="math display">\[\mathop{\mathrm{\mathds{P}}}\left( \abs{X_n - X} \geqslant\varepsilon\right) \xrightarrow{n \to \infty} 0\]</div>{% endraw %}
-<p> This is denoted {% raw %}<span class="math inline">\({X_n}\xrightarrow{\mathds{P}}X\)</span>{% endraw %}.</p>
+<p> This is denoted {% raw %}<span class="math inline">\({X_n}\xrightarrow{P}X\)</span>{% endraw %}.</p>
 
 </div>
 <div id="Def:CvgDist" class="definition" data-note-number="2" data-note-kind="Definition">
@@ -176,7 +176,7 @@ M-\limsup_{n\to\infty}\mathbb E f(X_n)
 <ol>
 <li><p><span id="CMT:i" data-label="CMT:i"></span> {% raw %}<span class="math inline">\({X_n}\xrightarrow{\mathrm{a.s.}}X \implies {g(X_n)}\xrightarrow{\mathrm{a.s.}}g(X)\)</span>{% endraw %}.</p></li>
 <li><p><span id="CMT:ii" data-label="CMT:ii"></span> {% raw %}<span class="math inline">\({X_n}\xrightarrow{\mathrm{d}}X \implies {g(X_n)}\xrightarrow{\mathrm{d}}g(X)\)</span>{% endraw %}.</p></li>
-<li><p><span id="CMT:iii" data-label="CMT:iii"></span> {% raw %}<span class="math inline">\({X_n}\xrightarrow{\mathds{P}}X \implies {g(X_n)}\xrightarrow{\mathds{P}}g(X)\)</span>{% endraw %}.</p></li>
+<li><p><span id="CMT:iii" data-label="CMT:iii"></span> {% raw %}<span class="math inline">\({X_n}\xrightarrow{P}X \implies {g(X_n)}\xrightarrow{P}g(X)\)</span>{% endraw %}.</p></li>
 </ol>
 </div>
 <div class="proof" id="continuous-mapping-proof">
@@ -212,7 +212,7 @@ M-\limsup_{n\to\infty}\mathbb E f(X_n)
 
 <p>This holds for every closed {% raw %}<span class="math inline">\(H\)</span>{% endraw %}. The converse direction of Portmanteau, now in {% raw %}<span class="math inline">\(\mathbb R^\ell\)</span>{% endraw %}, therefore gives {% raw %}<span class="math inline">\(g(X_n)\Rightarrow g(X)\)</span>{% endraw %}.</p>
 
-<p><strong>(iii) Convergence in probability.</strong> We first extract an almost surely convergent further subsequence from any subsequence. Let {% raw %}<span class="math inline">\((X_{n_j})\)</span>{% endraw %} be arbitrary. Since {% raw %}<span class="math inline">\(X_{n_j}\to X\)</span>{% endraw %} in probability, we can choose increasing indices {% raw %}<span class="math inline">\(j_m\)</span>{% endraw %} such that</p>
+<p><strong>(iii) Convergence in probability.</strong> We first extract an almost surely convergent further subsequence from any subsequence. Let {% raw %}<span class="math inline">\((X_{n_j})\)</span>{% endraw %} be arbitrary. Since {% raw %}<span class="math inline">\(X_{n_j}\xrightarrow{P} X\)</span>{% endraw %} in probability, we can choose increasing indices {% raw %}<span class="math inline">\(j_m\)</span>{% endraw %} such that</p>
 
 {% raw %}<div class="math display">\[\mathbb P\left(\|X_{n_{j_m}}-X\|&gt;2^{-m}\right)&lt;2^{-m}
 \qquad(m\geq1).\]</div>{% endraw %}
@@ -232,7 +232,7 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 {% raw %}<div class="math display">\[\mathbb P\left(\|g(X_{n_j})-g(X)\|&gt;\varepsilon\right)\geq\eta
 \qquad\text{for every }j.\]</div>{% endraw %}
 
-<p>The construction above supplies a further subsequence along which these same probabilities tend to zero, a contradiction. Therefore {% raw %}<span class="math inline">\(g(X_n)\to g(X)\)</span>{% endraw %} in probability. ◻</p>
+<p>The construction above supplies a further subsequence along which these same probabilities tend to zero, a contradiction. Therefore {% raw %}<span class="math inline">\(g(X_n)\xrightarrow{P} g(X)\)</span>{% endraw %} in probability. ◻</p>
 </div>
 <div id="Thm:Prokhorov" class="theorem" data-note-number="6" data-note-kind="Theorem">
 <p><strong>Theorem 6</strong> (Prokhorov).  </p>
@@ -295,7 +295,7 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 <p><strong>Definition 9.</strong> A real sequence {% raw %}<span class="math inline">\(Y_n\)</span>{% endraw %} is {% raw %}<span class="math inline">\(O_{\mathbb P}(1)\)</span>{% endraw %}, or bounded in probability, when for every {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %} some {% raw %}<span class="math inline">\(M&lt;\infty\)</span>{% endraw %} satisfies {% raw %}<span class="math inline">\(\limsup_n\mathbb P(|Y_n|&gt;M)&lt;\varepsilon\)</span>{% endraw %}. For finite-valued variables this is equivalent to tightness of all their laws, because the finitely many initial indices can be handled by increasing {% raw %}<span class="math inline">\(M\)</span>{% endraw %}. The following definitions use real-valued random scales {% raw %}<span class="math inline">\(R_n\)</span>{% endraw %}, which may vanish; the factorization must hold also on {% raw %}<span class="math inline">\(\{R_n=0\}\)</span>{% endraw %}.</p>
 
 <ol>
-<li><p>{% raw %}<span class="math inline">\(X_n = o_{\mathop{\mathrm{\mathds{P}}}} (R_n)\)</span>{% endraw %} means there exists {% raw %}<span class="math inline">\({Y_n}\xrightarrow{\mathds{P}}0\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(X_n = Y_n R_n\)</span>{% endraw %}.</p></li>
+<li><p>{% raw %}<span class="math inline">\(X_n = o_{\mathop{\mathrm{\mathds{P}}}} (R_n)\)</span>{% endraw %} means there exists {% raw %}<span class="math inline">\({Y_n}\xrightarrow{P}0\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(X_n = Y_n R_n\)</span>{% endraw %}.</p></li>
 <li><p>{% raw %}<span class="math inline">\(X_n = O_{\mathop{\mathrm{\mathds{P}}}} (R_n)\)</span>{% endraw %} means there exists {% raw %}<span class="math inline">\(Y_n = O_{\mathop{\mathrm{\mathds{P}}}} (1)\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(X_n = Y_n R_n\)</span>{% endraw %}.</p></li>
 </ol>
 </div>
@@ -313,7 +313,7 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 </ol>
 </div>
 <div class="proof" id="stochastic-order-rules-proof">
-<p><em>Proof of the order rules.</em> Write {% raw %}<span class="math inline">\(A_n\to0\)</span>{% endraw %} in probability and {% raw %}<span class="math inline">\(B_n=O_{\mathbb P}(1)\)</span>{% endraw %}. The union bounds</p>
+<p><em>Proof of the order rules.</em> Write {% raw %}<span class="math inline">\(A_n\xrightarrow{P}0\)</span>{% endraw %} in probability and {% raw %}<span class="math inline">\(B_n=O_{\mathbb P}(1)\)</span>{% endraw %}. The union bounds</p>
 {% raw %}<div class="math display">\[\mathbb P(|A_n+A'_n|&gt;\varepsilon)
 \leq\mathbb P(|A_n|&gt;\varepsilon/2)+\mathbb P(|A'_n|&gt;\varepsilon/2),\]</div>{% endraw %}
 {% raw %}<div class="math display">\[\mathbb P(|A_n+B_n|&gt;M+1)
@@ -329,7 +329,7 @@ g(X_{n_{j_m}})\longrightarrow g(X)\quad\text{almost surely}.\]</div>{% endraw %}
 <p>The next lemma transfers an ordinary small-argument estimate to a random argument converging to zero. This is the step used when applying Taylor expansions to estimators.</p>
 
 <div id="result-11" class="lemma" data-note-number="11" data-note-kind="Lemma">
-<p><strong>Lemma 11</strong>.  {% raw %}<span class="math inline">\(R:\mathop{\mathrm{\mathbb{R}}}^k \to \mathop{\mathrm{\mathbb{R}}}\)</span>{% endraw %} is Borel measurable and satisfies {% raw %}<span class="math inline">\(R(0) = 0\)</span>{% endraw %}. {% raw %}<span class="math inline">\(X_n\)</span>{% endraw %} are random vectors on domain of {% raw %}<span class="math inline">\(R\)</span>{% endraw %}, and {% raw %}<span class="math inline">\({X_n}\xrightarrow{\mathds{P}}0\)</span>{% endraw %}. Then, for all {% raw %}<span class="math inline">\(p &gt; 0\)</span>{% endraw %},</p>
+<p><strong>Lemma 11</strong>.  {% raw %}<span class="math inline">\(R:\mathop{\mathrm{\mathbb{R}}}^k \to \mathop{\mathrm{\mathbb{R}}}\)</span>{% endraw %} is Borel measurable and satisfies {% raw %}<span class="math inline">\(R(0) = 0\)</span>{% endraw %}. {% raw %}<span class="math inline">\(X_n\)</span>{% endraw %} are random vectors on domain of {% raw %}<span class="math inline">\(R\)</span>{% endraw %}, and {% raw %}<span class="math inline">\({X_n}\xrightarrow{P}0\)</span>{% endraw %}. Then, for all {% raw %}<span class="math inline">\(p &gt; 0\)</span>{% endraw %},</p>
 
 <ol>
 <li><p><span id="Lem_oO:1" data-label="Lem_oO:1"></span> {% raw %}<span class="math inline">\(R(h) = o(\norm{h}^p)\)</span>{% endraw %} as {% raw %}<span class="math inline">\(h \to 0\)</span>{% endraw %} implies {% raw %}<span class="math inline">\(R(X_n) = o_{\mathop{\mathrm{\mathds{P}}}} (\norm{X_n}^p)\)</span>{% endraw %}.</p></li>

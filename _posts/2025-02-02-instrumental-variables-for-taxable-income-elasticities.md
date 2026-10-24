@@ -113,7 +113,7 @@ Y_i(X_i(1))-Y_i(X_i(0))
 
 <p>Simulation removes post-reform earnings from the calculation of the instrument. It leaves a separate requirement: that the simulated variation remaining after controls be unrelated to {% raw %}<span class="math inline">\(U\)</span>{% endraw %}. Baseline controls, lag choices, and pre-reform trends belong to that identifying argument.</p>
 
-<p>For a binary instrument, residualization also changes the effect weights. Let {% raw %}<span class="math inline">\(p(W)=\Pr(Z=1\mid W)\)</span>{% endraw %}, and suppose instrument independence and exclusion hold conditional on {% raw %}<span class="math inline">\(W\)</span>{% endraw %}. Define conditional first-stage and reduced-form changes {% raw %}<span class="math inline">\(\Delta_X(W)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Delta_Y(W)\)</span>{% endraw %}. Iterating over {% raw %}<span class="math inline">\(W\)</span>{% endraw %} gives</p>
+<p>For a binary instrument, residualization also changes the effect weights. Let {% raw %}<span class="math inline">\(p(W)=\mathbb{P}(Z=1\mid W)\)</span>{% endraw %}, and suppose instrument independence and exclusion hold conditional on {% raw %}<span class="math inline">\(W\)</span>{% endraw %}. Define conditional first-stage and reduced-form changes {% raw %}<span class="math inline">\(\Delta_X(W)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Delta_Y(W)\)</span>{% endraw %}. Iterating over {% raw %}<span class="math inline">\(W\)</span>{% endraw %} gives</p>
 
 {% raw %}<div class="math display">\[
 \mathbb{E}[(Z-p(W))Y]
