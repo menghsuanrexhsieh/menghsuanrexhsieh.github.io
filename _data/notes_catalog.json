@@ -1901,8 +1901,8 @@
     ],
     "date": "2024-12-09",
     "title": "Dependence-Robust Resampling and Moment Tests",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/10-356.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/10-356.md"
   },
   {
     "key": "10-406",
@@ -2377,8 +2377,8 @@
     ],
     "date": "2024-08-28",
     "title": "Novelty Detection: Mixture Identification and Statistical Guarantees",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/15-0.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/15-0.md"
   },
   {
     "key": "16-0",
@@ -2468,8 +2468,8 @@
     ],
     "date": "2024-02-03",
     "title": "Bunching Identification: Density Bounds and Control Groups",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/16-51.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/16-51.md"
   },
   {
     "key": "16-83",
@@ -3627,8 +3627,8 @@
     ],
     "date": "2025-04-30",
     "title": "Conditional c-Dependence: Sharp Distribution and Treatment-Effect Bounds",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/30-0.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/30-0.md"
   },
   {
     "key": "30-66",
@@ -3714,8 +3714,8 @@
     ],
     "date": "2025-10-30",
     "title": "Inference for Sensitivity Bounds: Limit Laws, Bootstrap, and Breakdown Points",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/30-66.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/30-66.md"
   },
   {
     "key": "31-0",

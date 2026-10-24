@@ -257,7 +257,9 @@ A_U&amp;\triangleq\mathbb{E}[\operatorname{Cov}(Z,U\mid S)].
 \]</div>{% endraw %}
 <p>Equation <a href="#eti-schedule-decomp">(7)</a> remains defined when {% raw %}<span class="math inline">\(B=0\)</span>{% endraw %}. The two coefficients {% raw %}<span class="math inline">\(D_S/(D_S+B)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B/(D_S+B)\)</span>{% endraw %} need not be nonnegative. The decomposition is a convex average only under additional sign restrictions. The term {% raw %}<span class="math inline">\((A_\varepsilon-\beta_SB)/D\)</span>{% endraw %} measures the departure due to elasticity heterogeneity relative to {% raw %}<span class="math inline">\(\beta_S\)</span>{% endraw %}; it vanishes when {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %} is constant. The term {% raw %}<span class="math inline">\(A_U/D\)</span>{% endraw %} measures the departure due to untreated income growth.</p>
 
-<p>If {% raw %}<span class="math inline">\(Z=T\)</span>{% endraw %} almost surely, all three quantities {% raw %}<span class="math inline">\(B,A_\varepsilon,A_U\)</span>{% endraw %} vanish and {% raw %}<span class="math inline">\(\beta_{\mathrm{IV}}=\beta_S\)</span>{% endraw %}. Merely assuming {% raw %}<span class="math inline">\(B=0\)</span>{% endraw %} is insufficient: a residual instrument can be uncorrelated with {% raw %}<span class="math inline">\(X\)</span>{% endraw %} and correlated with {% raw %}<span class="math inline">\(\varepsilon X\)</span>{% endraw %}. <a href="#17-15-zero-residual-first-stage">Appendix B</a> gives an explicit example.</p>
+<p>If {% raw %}<span class="math inline">\(Z=T\)</span>{% endraw %} almost surely, all three quantities {% raw %}<span class="math inline">\(B,A_\varepsilon,A_U\)</span>{% endraw %} vanish and {% raw %}<span class="math inline">\(\beta_{\mathrm{IV}}=\beta_S\)</span>{% endraw %}. Merely assuming {% raw %}<span class="math inline">\(B=0\)</span>{% endraw %} is insufficient: a residual instrument can be uncorrelated with {% raw %}<span class="math inline">\(X\)</span>{% endraw %} and correlated with {% raw %}<span class="math inline">\(\varepsilon X\)</span>{% endraw %}.</p>
+
+<p><em>Remark on the scope of the counterexample.</em> <a href="#17-15-zero-residual-first-stage">Appendix B</a> gives a covariance example and implements it using the paper’s isoelastic quasi-linear preferences and progressive tax schedules. The implementation verifies optimal income choices, independence of the entire schedule change from all preference parameters, a positive first stage, and individual monotonicity. A continuous version also supplies an elasticity density. The example refutes the statement following the paper’s Proposition 1 that {% raw %}<span class="math inline">\(w_{\mathrm{bias}}=0\)</span>{% endraw %} alone implies {% raw %}<span class="math inline">\(\beta^{\mathrm{IV}}=\beta^{\mathrm{LATE}}\)</span>{% endraw %}. It does not refute the total-covariance identity in Appendix A or the sufficient condition {% raw %}<span class="math inline">\(Z=\mathbb{E}[Z\mid S]\)</span>{% endraw %} for instruments depending only on schedule changes. The problematic zero denominator is {% raw %}<span class="math inline">\(B=w_{\mathrm{bias}}\)</span>{% endraw %} in the normalized bias terms; the example’s actual IV denominator is positive.</p>
 
 <h4 data-note-section="3.1" id="17-15-sufficient-conditions-for-nonnegative-weights">3.1. Sufficient conditions for nonnegative weights</h4>
 <p>The sign of {% raw %}<span class="math inline">\(D_S=\mathbb{E}[c(\varepsilon)]\)</span>{% endraw %} does not determine the sign of {% raw %}<span class="math inline">\(c(e)\)</span>{% endraw %} for each elasticity value. A monotonicity restriction on the conditional first-stage mean suffices to ensure nonnegative weights.</p>
@@ -476,18 +478,18 @@ a(u)&amp;\triangleq\mathbb P(X_i(0)\le u&lt;X_i(1)),\\
 \]</div>{% endraw %}
 <p>Hence {% raw %}<span class="math inline">\(\beta_{\mathrm{IV}}=\int\mu(u)\kappa(u)\,du\)</span>{% endraw %} is a well-defined weighted average. The conditional mean {% raw %}<span class="math inline">\(\mu(u)\)</span>{% endraw %} averages derivatives among taxpayers moved across {% raw %}<span class="math inline">\(u\)</span>{% endraw %}, while {% raw %}<span class="math inline">\(\kappa\)</span>{% endraw %} records how often each treatment level is crossed. For {% raw %}<span class="math inline">\(Y_i&#x27;(u)=\varepsilon_i\)</span>{% endraw %}, integrating the indicator yields {% raw %}<span class="math inline">\(\delta_i\)</span>{% endraw %} and recovers Proposition <a href="#eti-weighted-response">1</a>.</p>
 
-<h4 data-note-section="7.2" id="17-15-zero-residual-first-stage">7.2. B. Zero residual first stage and nonzero bias</h4>
-<p>Let {% raw %}<span class="math inline">\(S\)</span>{% endraw %} and {% raw %}<span class="math inline">\(H\)</span>{% endraw %} be independent random signs, each equal to {% raw %}<span class="math inline">\(-1\)</span>{% endraw %} or {% raw %}<span class="math inline">\(1\)</span>{% endraw %} with probability {% raw %}<span class="math inline">\(1/2\)</span>{% endraw %}. Independently, let {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %} equal {% raw %}<span class="math inline">\(1\)</span>{% endraw %} or {% raw %}<span class="math inline">\(2\)</span>{% endraw %} with probability {% raw %}<span class="math inline">\(1/2\)</span>{% endraw %}. Set</p>
+<h4 data-note-section="7.2" id="17-15-zero-residual-first-stage">7.2. B. Zero residual first stage and a behavioral implementation</h4>
+<p>Let {% raw %}<span class="math inline">\(V\)</span>{% endraw %} and {% raw %}<span class="math inline">\(H\)</span>{% endraw %} be independent random signs, each equal to {% raw %}<span class="math inline">\(-1\)</span>{% endraw %} or {% raw %}<span class="math inline">\(1\)</span>{% endraw %} with probability {% raw %}<span class="math inline">\(1/2\)</span>{% endraw %}. Independently, let {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %} equal {% raw %}<span class="math inline">\(1\)</span>{% endraw %} or {% raw %}<span class="math inline">\(2\)</span>{% endraw %} with probability {% raw %}<span class="math inline">\(1/2\)</span>{% endraw %}. The scalar {% raw %}<span class="math inline">\(V\)</span>{% endraw %} indexes a policy state. The tax schedules constructed below make the full schedule change {% raw %}<span class="math inline">\(S\)</span>{% endraw %} generate the same sigma-field as {% raw %}<span class="math inline">\(V\)</span>{% endraw %}. Set</p>
 
 {% raw %}<div class="math display">\[
-U=0,\qquad X=S+H,\qquad
-Z=S+(\varepsilon-3/2)H,\qquad Y=\varepsilon X.
+U=0,\qquad X=V+H,\qquad
+Z=V+(\varepsilon-3/2)H,\qquad Y=\varepsilon X.
 \]</div>{% endraw %}
-<p>All variables are bounded, {% raw %}<span class="math inline">\(S\perp(\varepsilon,U)\)</span>{% endraw %}, and</p>
+<p>All variables are bounded. Since {% raw %}<span class="math inline">\(\sigma(S)=\sigma(V)\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
-T=\mathbb{E}[Z\mid S]=S,\qquad
-D_S=\operatorname{Cov}(S,S+H)=1.
+T=\mathbb{E}[Z\mid S]=\mathbb{E}[Z\mid V]=V,\qquad
+D_S=\operatorname{Cov}(V,V+H)=1.
 \]</div>{% endraw %}
 <p>Conditional on {% raw %}<span class="math inline">\(\varepsilon=e\)</span>{% endraw %}, the first-stage mean is {% raw %}<span class="math inline">\(m_e(t)=t\)</span>{% endraw %}, so the weights in Proposition <a href="#eti-schedule-decomposition">3</a> are nonnegative and {% raw %}<span class="math inline">\(\beta_S=\mathbb{E}\varepsilon=3/2\)</span>{% endraw %}. Nevertheless,</p>
 
@@ -496,12 +498,100 @@ D_S=\operatorname{Cov}(S,S+H)=1.
 B&amp;=\mathbb{E}[\operatorname{Cov}(Z,X\mid S)]
   =\mathbb{E}[(\varepsilon-3/2)H^2]=0,\\
 A_\varepsilon
-&amp;=\mathbb{E}[(\varepsilon-3/2)H\,\varepsilon(S+H)]\\
+&amp;=\mathbb{E}[(\varepsilon-3/2)H\,\varepsilon(V+H)]\\
 &amp;=\mathbb{E}[(\varepsilon-3/2)\varepsilon]
   =\operatorname{Var}(\varepsilon)=\frac14.
 \end{aligned}
 \]</div>{% endraw %}
-<p>The term containing {% raw %}<span class="math inline">\(SH\)</span>{% endraw %} vanishes by independence and centering. Since {% raw %}<span class="math inline">\(A_U=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(D=D_S+B=1\)</span>{% endraw %}, equation <a href="#eti-schedule-decomp">(7)</a> gives {% raw %}<span class="math inline">\(\beta_{\mathrm{IV}}=7/4\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(B=0\)</span>{% endraw %} does not imply {% raw %}<span class="math inline">\(\beta_{\mathrm{IV}}=\beta_S\)</span>{% endraw %}. The stronger condition {% raw %}<span class="math inline">\(Z=T\)</span>{% endraw %} eliminates the residual instrument itself and suffices to remove both residual numerator terms.</p>
+<p>The term containing {% raw %}<span class="math inline">\(VH\)</span>{% endraw %} vanishes by independence and centering. Since {% raw %}<span class="math inline">\(A_U=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(D=D_S+B=1\)</span>{% endraw %}, equation <a href="#eti-schedule-decomp">(7)</a> gives {% raw %}<span class="math inline">\(\beta_{\mathrm{IV}}=7/4\)</span>{% endraw %}, whereas {% raw %}<span class="math inline">\(\beta_S=3/2\)</span>{% endraw %}. This calculation alone concerns random variables. Its application to the paper requires the following behavioral construction.</p>
+
+<p><strong>Preferences and tax schedules.</strong> Use {% raw %}<span class="math inline">\(q\)</span>{% endraw %} for taxable income in levels and {% raw %}<span class="math inline">\(c\)</span>{% endraw %} for consumption. Give each taxpayer the utility function in equation (1) of <span class="citation" data-cites="kumar_estimating_2020">Kumar and Liang (<a href="#ref-kumar_estimating_2020" role="doc-biblioref">2020</a>)</span>, written in this note’s notation:</p>
+
+{% raw %}<div class="math display">\[
+u(q,c)=c-\frac{\exp(-\alpha/\varepsilon)}{1+1/\varepsilon}
+q^{1+1/\varepsilon},
+\qquad
+\alpha=12(1-H),\qquad \varepsilon&gt;0.
+\]</div>{% endraw %}
+<p>Both preference parameters are constant across dates, so {% raw %}<span class="math inline">\(U=\alpha_1-\alpha_0=0\)</span>{% endraw %}. With an income threshold normalized to one, define the log marginal net-of-tax schedules by</p>
+
+{% raw %}<div class="math display">\[
+\begin{aligned}
+r_0(q)&amp;=
+\begin{cases}
+-3,&amp;0&lt;q&lt;1,\\
+-6,&amp;q\ge1,
+\end{cases}
+&amp;
+r_{1,v}(q)&amp;=
+\begin{cases}
+v-2,&amp;0&lt;q&lt;1,\\
+v-7,&amp;q\ge1,
+\end{cases}
+\qquad -2&lt;v&lt;2.
+\end{aligned}
+\]</div>{% endraw %}
+<p>For each date and policy state, set {% raw %}<span class="math inline">\(c_t(q)=\int_0^q\exp(r_t(a))\,da\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\phi_t(q)=q-c_t(q)\)</span>{% endraw %}. This gives the paper’s budget constraint with its exogenous other-income term set to zero. Marginal tax rates {% raw %}<span class="math inline">\(1-\exp(r_t(q))\)</span>{% endraw %} lie strictly between zero and one and increase at the threshold. Consumption is continuous, increasing, and concave in {% raw %}<span class="math inline">\(q\)</span>{% endraw %}. The convention for the marginal rate exactly at the kink does not affect consumption or any optimum below. These schedules depend on {% raw %}<span class="math inline">\(v\)</span>{% endraw %}, not on a taxpayer’s preference type.</p>
+
+<p>The full schedule change is</p>
+
+{% raw %}<div class="math display">\[
+S(q)=r_{1,V}(q)-r_0(q)=
+\begin{cases}
+V+1,&amp;0&lt;q&lt;1,\\
+V-1,&amp;q\ge1.
+\end{cases}
+\]</div>{% endraw %}
+<p>Thus {% raw %}<span class="math inline">\(\sigma(S)=\sigma(V)\)</span>{% endraw %}: any fixed income below the threshold recovers {% raw %}<span class="math inline">\(V\)</span>{% endraw %} from {% raw %}<span class="math inline">\(S(q)-1\)</span>{% endraw %}. In particular, {% raw %}<span class="math inline">\(V\)</span>{% endraw %} is not a uniform shift of the baseline schedule. Since {% raw %}<span class="math inline">\(V\perp(\varepsilon,H)\)</span>{% endraw %}, the entire schedule change is independent of both preference parameters. In the paper’s equation (8), take the permanent component of {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} to be {% raw %}<span class="math inline">\(12(1-H)\)</span>{% endraw %} and all transitory components, trends, and innovations to be zero. Schedule changes are then independent of the full preference vector used in Proposition 1.</p>
+
+<p><strong>Optimal choices and monotonicity.</strong> Utility increases with consumption, so the budget binds. After substituting the budget constraint, the objective is strictly concave: consumption is concave and {% raw %}<span class="math inline">\(q^{1+1/\varepsilon}\)</span>{% endraw %} is strictly convex. Away from the kink, its first-order condition is</p>
+
+{% raw %}<div class="math display">\[
+\exp(r_t(q_t))
+=\exp(-\alpha/\varepsilon)q_t^{1/\varepsilon},
+\qquad
+y_t=\log q_t=\alpha+\varepsilon r_t(q_t).
+\]</div>{% endraw %}
+<p>The candidate choices are</p>
+
+{% raw %}<div class="math display">\[
+\begin{array}{c|cc}
+&amp;y_0&amp;y_1(v)\\ \hline
+H=1&amp;-3\varepsilon&amp;(v-2)\varepsilon\\
+H=-1&amp;24-6\varepsilon&amp;24+(v-7)\varepsilon.
+\end{array}
+\]</div>{% endraw %}
+<p>For {% raw %}<span class="math inline">\(\varepsilon\in\{1,2\}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-2&lt;v&lt;2\)</span>{% endraw %}, the first row is strictly below zero and the second strictly above zero. Hence each candidate lies inside its asserted tax segment and satisfies the first-order condition there. Strict concavity makes it the unique global maximizer, ruling out a better choice at the kink or in the other segment. Evaluating the schedules at these optimal choices gives</p>
+
+{% raw %}<div class="math display">\[
+X(v)=r_{1,v}(q_1(v))-r_0(q_0)=v+H,
+\qquad
+Y(v)=y_1(v)-y_0=\varepsilon(v+H).
+\]</div>{% endraw %}
+<p>The behavioral model produces exactly the random variables used in the covariance calculation. Since {% raw %}<span class="math inline">\(T(v)=v\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\partial X(v)/\partial T=1\)</span>{% endraw %} for every taxpayer. This verifies the paper’s individual monotonicity condition on a differentiable family of policy states, including neighborhoods of the two realized states. The first-stage covariances are {% raw %}<span class="math inline">\(D_S=D=1&gt;0\)</span>{% endraw %}, and every conditional elasticity weight is {% raw %}<span class="math inline">\(c(e)=1\)</span>{% endraw %}.</p>
+
+<p>Proposition 1 allows a general, possibly invalid instrument. The instrument {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} here is deliberately dependent on preferences and is not a fixed-dollar instrument. It need not rely on observing latent parameters: baseline log income identifies {% raw %}<span class="math inline">\(H\)</span>{% endraw %} by its sign and identifies {% raw %}<span class="math inline">\(\varepsilon\)</span>{% endraw %} as {% raw %}<span class="math inline">\(-y_0/3\)</span>{% endraw %} in the lower segment or {% raw %}<span class="math inline">\((24-y_0)/6\)</span>{% endraw %} in the upper segment. Thus {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} can be constructed from baseline income and the observed policy state in this model.</p>
+
+<p><strong>A continuous version.</strong> To accommodate both a continuously distributed policy state and the elasticity density used in the paper’s notation, replace the two-point laws by independent</p>
+
+{% raw %}<div class="math display">\[
+V\sim\operatorname{Unif}[-\sqrt3,\sqrt3],
+\qquad
+\varepsilon\sim\operatorname{Unif}
+\left[\frac32-\frac{\sqrt3}{2},\frac32+\frac{\sqrt3}{2}\right],
+\]</div>{% endraw %}
+<p>and retain the independent random sign {% raw %}<span class="math inline">\(H\)</span>{% endraw %}, the same preferences, schedules, and instrument. Now {% raw %}<span class="math inline">\(\varepsilon&gt;0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\mathbb{E}V=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\operatorname{Var}(V)=1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\mathbb{E}\varepsilon=3/2\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\operatorname{Var}(\varepsilon)=1/4\)</span>{% endraw %}. Lower-segment choices remain below the threshold because {% raw %}<span class="math inline">\(v\le\sqrt3&lt;2\)</span>{% endraw %}. For upper-segment taxpayers,</p>
+
+{% raw %}<div class="math display">\[
+y_0\ge15-3\sqrt3&gt;0,
+\qquad
+y_1(v)\ge
+24-(7+\sqrt3)\frac{3+\sqrt3}{2}
+=12-5\sqrt3&gt;0.
+\]</div>{% endraw %}
+<p>The same global-optimality and monotonicity arguments apply. The covariance calculations use only independence and the displayed moments, so {% raw %}<span class="math inline">\(D_S=D=1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(B=0\)</span>{% endraw %}, {% raw %}<span class="math inline">\(A_\varepsilon=1/4\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\beta_S=3/2\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\beta_{\mathrm{IV}}=7/4\)</span>{% endraw %} remain unchanged. Independent draws of taxpayers give an i.i.d. sample with bounded regression variables, so the sample IV ratio converges to this population coefficient.</p>
+
+<p><em>Qualification.</em> The finite covariance calculation by itself did not establish compatibility with the paper’s behavioral model; the utility and schedule construction supplies that missing step. The counterexample concerns the claim that a zero residual first-stage covariance suffices to eliminate bias for a possibly invalid instrument. It preserves the paper’s independence, relevance, and individual monotonicity assumptions, and the continuous version supplies the elasticity density. It leaves intact the total-covariance identity and the result for {% raw %}<span class="math inline">\(Z=T\)</span>{% endraw %}, which removes the residual instrument itself. No claim about the paper’s empirical estimates follows from this example.</p>
 
 <h4 data-note-section="7.3" id="17-15-gaussian-and-lag-calculations">7.3. C. Gaussian and lag calculations</h4>
 <p>For the independent-shock model, {% raw %}<span class="math inline">\(\operatorname{Cov}(U,y_0)=-\sigma_e^2\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\operatorname{Var}(y_0)=\sigma_y^2&gt;0\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(V=U+\kappa y_0\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\kappa=\sigma_e^2/\sigma_y^2\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\(\operatorname{Cov}(V,y_0)=0\)</span>{% endraw %}. Under joint Gaussianity, {% raw %}<span class="math inline">\(V\)</span>{% endraw %} and {% raw %}<span class="math inline">\(y_0\)</span>{% endraw %} are independent, including degenerate Gaussian cases. Since {% raw %}<span class="math inline">\(V\)</span>{% endraw %} is centered, {% raw %}<span class="math inline">\(\mathbb{E}[U\mid y_0]=-\kappa y_0\)</span>{% endraw %}, proving <a href="#eti-gaussian-trend">(10)</a>.</p>
