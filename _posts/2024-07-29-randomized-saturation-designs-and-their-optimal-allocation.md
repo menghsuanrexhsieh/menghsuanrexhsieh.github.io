@@ -11,7 +11,7 @@ redirect_from: ["/2025/02/14/randomized-saturation-designs/", "/2025/03/02/optim
 
 <div class="note-content" markdown="0">
 
-<p>An experiment can vary both who receives treatment and how common treatment is in each community. This makes it possible to distinguish effects on treated people from spillovers to untreated people. It also divides the sample among more comparisons. <span class="citation" data-cites="baird_optimal_2018">Baird et al. (<a href="#ref-baird_optimal_2018" role="doc-biblioref">2018</a>)</span> derive the resulting standard errors and studies which saturation designs minimize them for different estimands.</p>
+<p>An experiment can vary both who receives treatment and how common treatment is in each community. This makes it possible to distinguish effects on treated people from spillovers to untreated people. It also divides the sample among more comparisons. <span class="citation" data-cites="baird_optimal_2018">Baird et al. (<a href="#ref-baird_optimal_2018" role="doc-biblioref">2018</a>)</span> derive the resulting standard errors and study which saturation designs minimize them for different estimands.</p>
 
 <div id="10-406-separate-the-effects">
 
@@ -185,26 +185,114 @@ f=\frac12,\qquad p=\frac{1-\Delta}{2},\qquad q=\frac{1+\Delta}{2}.
 
 <p>Reflection {% raw %}<span class="math inline">\((f,p)\mapsto(1-f,1-\Delta-p)\)</span>{% endraw %} swaps the treated and untreated expressions. The sum is unchanged. By convexity, its value at the midpoint of any point and its reflection is no larger. This midpoint is {% raw %}<span class="math inline">\((1/2,(1-\Delta)/2)\)</span>{% endraw %}, proving the symmetry and allocation claims for the sum of standard errors itself.</p>
 
-<p>At this symmetric design, the two slope variances coincide and equal</p>
+<p>To compute the optimal gap, write the treated slope variance in the notation of Theorem 1, equation (4), on page 849 of the published paper:</p>
 
 {% raw %}<div class="math display">\[
-V(\Delta)=\frac1{C\Delta^2}
+V_T(p,q,f)=\frac{\tau^2+\sigma^2}{nC\Delta^2}
+\left[
+n\rho\left(\frac1f+\frac1{1-f}\right)
++(1-\rho)\left(\frac1{fp}+\frac1{(1-f)q}\right)
+\right].
+\]</div>{% endraw %}
+<p>At the symmetric design, the two terms inside the brackets simplify separately:</p>
+
+{% raw %}<div class="math display">\[
+\frac1f+\frac1{1-f}=4,
+\qquad
+\frac1{fp}+\frac1{(1-f)q}
+=2\left(\frac2{1-\Delta}+\frac2{1+\Delta}\right)
+=\frac8{1-\Delta^2}.
+\]</div>{% endraw %}
+<p>Replacing {% raw %}<span class="math inline">\(p,q\)</span>{% endraw %} by {% raw %}<span class="math inline">\(1-p,1-q\)</span>{% endraw %} gives the same expression. Hence the two slope variances coincide and equal</p>
+
+{% raw %}<div class="math display">\[
+V(\Delta)=\frac{\tau^2+\sigma^2}{nC\Delta^2}
+\left(4n\rho+\frac{8(1-\rho)}{1-\Delta^2}\right)
+=\frac1{C\Delta^2}
 \left(4\tau^2+\frac{8\sigma^2}{n(1-\Delta^2)}\right).
 \]</div>{% endraw %}
-<p>Indeed, {% raw %}<span class="math inline">\(1/p+1/q=4/(1-\Delta^2)\)</span>{% endraw %} and each arm receives half the clusters. The objective is {% raw %}<span class="math inline">\(2\sqrt{V(\Delta)}\)</span>{% endraw %}, so minimizing it is equivalent to minimizing {% raw %}<span class="math inline">\(V\)</span>{% endraw %}. Put {% raw %}<span class="math inline">\(x=\Delta^2\)</span>{% endraw %}. Differentiation of</p>
+<p>The objective is now {% raw %}<span class="math inline">\(2\sqrt{V(\Delta)}\)</span>{% endraw %}, so minimizing it is equivalent to minimizing {% raw %}<span class="math inline">\(V\)</span>{% endraw %}. This equivalence uses the equality of the two standard errors just proved. Put {% raw %}<span class="math inline">\(x=\Delta^2\)</span>{% endraw %} and remove the positive constant {% raw %}<span class="math inline">\(4(\tau^2+\sigma^2)/(nC)\)</span>{% endraw %}. The remaining objective and its derivative are</p>
 
 {% raw %}<div class="math display">\[
-\frac{4\tau^2}{x}+\frac{8\sigma^2}{n x(1-x)}
+F(x)=\frac{n\rho}{x}+\frac{2(1-\rho)}{x(1-x)},
+\qquad 0&lt;x&lt;1,
 \]</div>{% endraw %}
-<p>gives</p>
+{% raw %}<div class="math display">\[
+F&#x27;(x)=-\frac{n\rho}{x^2}
+-\frac{2(1-\rho)(1-2x)}{x^2(1-x)^2}.
+\]</div>{% endraw %}
+<p>Multiplying {% raw %}<span class="math inline">\(F&#x27;(x)=0\)</span>{% endraw %} by {% raw %}<span class="math inline">\(x^2\)</span>{% endraw %} and rearranging gives</p>
 
 {% raw %}<div class="math display">\[
-\frac{n\tau^2}{2\sigma^2}=\frac{2x-1}{(1-x)^2}.
+n\rho=\frac{2(1-\rho)(2x-1)}{(1-x)^2},
+\qquad
+\frac{n\rho}{2(1-\rho)}=\frac{2x-1}{(1-x)^2}.
 \]</div>{% endraw %}
 <p>The right side is zero at {% raw %}<span class="math inline">\(x=1/2\)</span>{% endraw %}, strictly increasing on {% raw %}<span class="math inline">\([1/2,1)\)</span>{% endraw %} because its derivative is {% raw %}<span class="math inline">\(2x/(1-x)^3\)</span>{% endraw %}, and diverges as {% raw %}<span class="math inline">\(x\uparrow1\)</span>{% endraw %}. The objective diverges at both endpoints of {% raw %}<span class="math inline">\((0,1)\)</span>{% endraw %}, so this stationary point is the global minimum.</p>
 
+<p>There is also a closed form. Define {% raw %}<span class="math inline">\(a=n\rho/[2(1-\rho)]\)</span>{% endraw %} and {% raw %}<span class="math inline">\(t=\sqrt{1+a}\)</span>{% endraw %}. The equation {% raw %}<span class="math inline">\(a(1-x)^2=2x-1\)</span>{% endraw %} has the admissible solution {% raw %}<span class="math inline">\(x=t/(1+t)\)</span>{% endraw %}, including {% raw %}<span class="math inline">\(x=1/2\)</span>{% endraw %} when {% raw %}<span class="math inline">\(a=0\)</span>{% endraw %}. Therefore</p>
+
+{% raw %}<div class="math display">\[
+\Delta^*=\sqrt{\frac{\sqrt{1+n\rho/[2(1-\rho)]}}
+{1+\sqrt{1+n\rho/[2(1-\rho)]}}}.
+\]</div>{% endraw %}
 </div>
-<p><strong>A discrepancy in the published formula.</strong> Proposition 2 of the published paper prints {% raw %}<span class="math inline">\(n\rho/[8(1-\rho)]\)</span>{% endraw %} on the left, and its appendix reduces the objective to a formula with the same coefficient. Substituting the symmetric design directly into its Theorem 1, equation (4), gives {% raw %}<span class="math inline">\(V(\Delta)\)</span>{% endraw %} above and the coefficient {% raw %}<span class="math inline">\(n\rho/[2(1-\rho)]\)</span>{% endraw %}. The derivation here retains that variance formula and identifies the discrepancy rather than treating the two expressions as equivalent. The qualitative conclusions agree: the gap is {% raw %}<span class="math inline">\(1/\sqrt2\)</span>{% endraw %} at {% raw %}<span class="math inline">\(\rho=0\)</span>{% endraw %}, grows with {% raw %}<span class="math inline">\(n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\rho\)</span>{% endraw %}, and approaches one as {% raw %}<span class="math inline">\(\rho\uparrow1\)</span>{% endraw %}.</p>
+<p><strong>A discrepancy in the published formula.</strong> Proposition 2 on page 850 of the <a href="https://drive.google.com/file/d/1_hJqhjK9Jb1XWG2yXrr0k0Xu0ozmEvbH/view">published article</a> prints {% raw %}<span class="math inline">\(n\rho/[8(1-\rho)]\)</span>{% endraw %} on the left. Its proof on page 860 gives the reduced objective</p>
+
+{% raw %}<div class="math display">\[
+G(x)=\frac{n\rho}{x}+\frac{8(1-\rho)}{x(1-x)}.
+\]</div>{% endraw %}
+<p>Differentiating {% raw %}<span class="math inline">\(G\)</span>{% endraw %} does give the printed denominator 8. The discrepancy is in the reduction to {% raw %}<span class="math inline">\(G\)</span>{% endraw %}: equation (4) gives {% raw %}<span class="math inline">\(4n\rho+8(1-\rho)/(1-x)\)</span>{% endraw %} inside the variance brackets, and dividing both terms by four gives {% raw %}<span class="math inline">\(F\)</span>{% endraw %}, with coefficient 2 on the individual-variance term. The appendix’s reduced objective has four times that relative weight. A common multiplicative constant cannot reconcile the objectives when {% raw %}<span class="math inline">\(\rho&gt;0\)</span>{% endraw %}. The paper explicitly defines {% raw %}<span class="math inline">\(\Delta=p_2-p_1\)</span>{% endraw %}, so a half-gap convention does not explain the difference either.</p>
+
+<p>A direct check rules out the printed gap. If {% raw %}<span class="math inline">\(x_{\mathrm{printed}}\)</span>{% endraw %} solves the paper’s equation, then</p>
+
+{% raw %}<div class="math display">\[
+\frac{2x_{\mathrm{printed}}-1}{(1-x_{\mathrm{printed}})^2}
+=\frac{n\rho}{8(1-\rho)},
+\qquad
+F&#x27;(x_{\mathrm{printed}})
+=-\frac{3n\rho}{4x_{\mathrm{printed}}^2}&lt;0
+\quad\text{when }0&lt;\rho&lt;1.
+\]</div>{% endraw %}
+<p>Increasing the gap therefore still reduces the sum of standard errors at the printed solution. For example, take {% raw %}<span class="math inline">\(n=100\)</span>{% endraw %}, {% raw %}<span class="math inline">\(C=100\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\tau^2+\sigma^2=1\)</span>{% endraw %} with {% raw %}<span class="math inline">\(\rho=0.1\)</span>{% endraw %}. Evaluating equation (4) in the continuous relaxation gives:</p>
+
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Gap equation</th>
+<th style="text-align: right;">Lower saturation</th>
+<th style="text-align: right;">Upper saturation</th>
+<th style="text-align: right;">Gap</th>
+<th style="text-align: right;">Sum of slope standard errors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Derived from equation (4), denominator 2</td>
+<td style="text-align: right;">0.075992</td>
+<td style="text-align: right;">0.924008</td>
+<td style="text-align: right;">0.848016</td>
+<td style="text-align: right;">0.191070</td>
+</tr>
+<tr>
+<td style="text-align: left;">Printed Proposition 2, denominator 8</td>
+<td style="text-align: right;">0.110396</td>
+<td style="text-align: right;">0.889604</td>
+<td style="text-align: right;">0.779208</td>
+<td style="text-align: right;">0.196027</td>
+</tr>
+</tbody>
+</table>
+<p>The printed formula gives a smaller gap and about 2.59% larger standard-error sum in this example. Both formulas agree at {% raw %}<span class="math inline">\(\rho=0\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\Delta=1/\sqrt2\)</span>{% endraw %}, and both approach one as {% raw %}<span class="math inline">\(\rho\uparrow1\)</span>{% endraw %}; those limiting checks alone do not detect the error.</p>
+
+<p>The coefficient 2 in this note is an algebraic correction derived from the paper’s stated variance formula. A search for an erratum or corrigendum on October 24, 2026, using the paper’s title and DOI, its <a href="https://api.crossref.org/works/10.1162/rest_a_00716">Crossref record</a>, and the publication pages of <a href="https://www.aislinnbohren.com/">Bohren</a> and <a href="https://sites.google.com/site/decrgberkozler/publications">Özler</a>, located no correction. The publisher’s article page was unavailable for direct inspection. This check does not establish that no erratum exists, and the correction here should not be attributed to the authors.</p>
 
 <p>When {% raw %}<span class="math inline">\(\sigma^2=0\)</span>{% endraw %}, variance falls as the gap increases. A finite experiment that must estimate both slopes still needs treated and untreated individuals at both saturations, giving extreme feasible values {% raw %}<span class="math inline">\(1/n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(1-1/n\)</span>{% endraw %}. With {% raw %}<span class="math inline">\(\sigma^2&gt;0\)</span>{% endraw %}, cells that become too small make the idiosyncratic variance grow. Integer counts and cluster shares should be chosen by evaluating the objective over feasible designs near the continuous optimum.</p>
 

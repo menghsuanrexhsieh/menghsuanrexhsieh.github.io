@@ -3925,5 +3925,22 @@
     "title": "Stochastic Convergence Exercises: Poisson Limits, Cauchy Averages, and Joint CLTs",
     "adaptation": "exercise-solutions",
     "manuscript": "scripts/notes/exercise-notes/scq-averages.md"
+  },
+  {
+    "key": "pretesting-0",
+    "file": "_posts/2024-07-28-when-pre-testing-yields-valid-inference.md",
+    "source": "scripts/notes/paper-notes/pretesting-0.md",
+    "blocks": [],
+    "former_posts": [],
+    "citations": [
+      "dechaisemartin_pretests_2024",
+      "prekopa_logconcave_1973",
+      "royen_gaussian_2014",
+      "van_der_vaart_weak_2000"
+    ],
+    "date": "2024-07-28",
+    "title": "When Pre-Testing Yields Valid Inference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/pretesting-0.md"
   }
 ]
