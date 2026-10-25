@@ -11,7 +11,7 @@ redirect_from: ["/2025/06/30/estimating-sensitivity-bounds-and-their-limit-laws/
 
 <div class="note-content" markdown="0">
 
-
+<span id="30-66-appendix-a-regular-crossing"></span>
 <p>The <a href="{% post_url 2025-04-30-conditional-c-dependence-sharp-distribution-and-treatment-effect-bounds %}">sensitivity bounds</a> depend on minima and maxima of functions of the propensity score. Estimating that score can change which function determines an endpoint. The resulting limit distribution can be nonnormal even when the first-stage estimates are asymptotically normal. This note derives the endpoint expansion, explains the derivative bootstrap of <span class="citation" data-cites="masten_assessing_2024">Masten, Poirier, and Zhang (<a href="#ref-masten_assessing_2024" role="doc-biblioref">2024</a>)</span>, and constructs confidence bands and robustness thresholds on a finite sensitivity grid.</p>
 <h3 data-note-section="1" id="30-66-the-estimators-and-their-limits">1. The estimators and their limits</h3>
 <p>Let {% raw %}<span class="math inline">\(O_i=(Y_i,X_i,W_i)\)</span>{% endraw %} be independent observations from {% raw %}<span class="math inline">\(P\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(X_i\in\{0,1\}\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(P_nf=n^{-1}\sum_i f(O_i)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\mathbb G_nf=\sqrt n(P_n-P)f\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(x\in\{0,1\}\)</span>{% endraw %}, suppose</p>
@@ -37,7 +37,7 @@ L_\varepsilon=\mu_1^- -\mu_0^+,
 \qquad U_\varepsilon=\mu_1^+ -\mu_0^-,
 \qquad \widehat\mu_x^\pm=P_ng_x^\pm(W;\widehat\theta,c).
 \]</div>{% endraw %}
-<p>Every limit below is centered at these fixed-trimming functionals. The relation to untrimmed bounds is given after the confidence-band construction.</p>
+<p>Every limit below is centered at these fixed-trimming functionals. The confidence bands and their inversion below concern the same trimmed targets.</p>
 <p>The following conditions state the inputs to the endpoint argument. They are stronger in overlap than the moment conditions used in the paper, but make the derivative and empirical-process steps explicit.</p>
 <ol type="1">
 <li>There is {% raw %}<span class="math inline">\(\delta&gt;0\)</span>{% endraw %} such that {% raw %}<span class="math inline">\(\delta\le p_1(W;\beta)\le1-\delta\)</span>{% endraw %} almost surely for {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %} in a neighborhood of {% raw %}<span class="math inline">\(\beta_0\)</span>{% endraw %}. The propensity is continuously differentiable there with uniformly bounded derivative. Also {% raw %}<span class="math inline">\(E\|q(x,W)\|^2&lt;\infty\)</span>{% endraw %}.</li>
@@ -60,7 +60,7 @@ L_\varepsilon=\mu_1^- -\mu_0^+,
 \psi_\gamma(O;u)=J(u)^{-1}q\{u-1[Y\le q&#x27;\gamma_0(u)]\},
 \quad J(u)=E[f_{Y\mid X,W}(q&#x27;\gamma_0(u)\mid X,W)qq&#x27;].
 \]</div>{% endraw %}
-<p>Nonsingularity of {% raw %}<span class="math inline">\(I_\beta\)</span>{% endraw %} and uniform nonsingularity of {% raw %}<span class="math inline">\(J(u)\)</span>{% endraw %}, positive continuous conditional densities, and suitable regressor moments enter the first-stage expansion. Uniformity in {% raw %}<span class="math inline">\(u\)</span>{% endraw %} and the empirical-process condition require additional regularity; Appendix A of the <a href="https://arxiv.org/pdf/2012.15716">author’s preprint</a> supplies the first-stage and averaging results under its stated assumptions. The endpoint theorem below takes conditions 1–3 as its high-level hypotheses.</p>
+<p>Nonsingularity of {% raw %}<span class="math inline">\(I_\beta\)</span>{% endraw %} and uniform nonsingularity of {% raw %}<span class="math inline">\(J(u)\)</span>{% endraw %}, positive continuous conditional densities, and suitable regressor moments enter the first-stage expansion. Uniformity in {% raw %}<span class="math inline">\(u\)</span>{% endraw %} and the empirical-process condition require additional regularity; Appendix A of the <a href="https://arxiv.org/pdf/2012.15716v1">December 2020 author preprint</a> supplies the first-stage and averaging results under its stated assumptions. The endpoint theorem below takes conditions 1–3 as its high-level hypotheses.</p>
 <div id="sensitivity-limit" class="theorem" data-note-number="1" data-note-kind="Theorem">
 <p><strong>Theorem 1</strong>. Under conditions 1–3, the vector of estimated trimmed conditional-mean endpoints at any fixed finite collection of covariate values, and of marginal-mean and ATE endpoints on {% raw %}<span class="math inline">\(\mathcal C\)</span>{% endraw %}, has a root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} limit. At fixed {% raw %}<span class="math inline">\(w\)</span>{% endraw %}, the limit of {% raw %}<span class="math inline">\(\widehat g_x^\pm(w)-g_x^\pm(w)\)</span>{% endraw %}, multiplied by {% raw %}<span class="math inline">\(\sqrt n\)</span>{% endraw %}, is {% raw %}<span class="math inline">\(Dg_x^\pm(w)[Z]\)</span>{% endraw %}. For a marginal mean the limit is</p>
 {% raw %}<div class="math display">\[
@@ -139,11 +139,17 @@ DT[h_M,h_p,h_0,h_1]
 1-P(Z_1^*&gt;0,Z_2^*&gt;-d)=1-\frac12\Phi(d).
 \]</div>{% endraw %}
 <p>The same expression holds with {% raw %}<span class="math inline">\(d=|Z_2-Z_1|\)</span>{% endraw %} in the other ordering. Since {% raw %}<span class="math inline">\(d&gt;0\)</span>{% endraw %} almost surely, this conditional probability does not converge to {% raw %}<span class="math inline">\(3/4\)</span>{% endraw %}. The estimated gap is of the same order as the perturbation used by the bootstrap.</p>
-<p>The identity</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: minimum-mean-and-clipping-atom
+Additional distributional consequences of the illustrative Gaussian minimum. The calculation showing failure of the ordinary bootstrap remains as a derivation of the obstruction used in the paper.
+
+The identity
+
+$$
 \min(Z_1,Z_2)=\frac{Z_1+Z_2-|Z_1-Z_2|}{2}
-\]</div>{% endraw %}
-<p>also gives {% raw %}<span class="math inline">\(E\min(Z_1,Z_2)=-1/\sqrt\pi\)</span>{% endraw %}, since {% raw %}<span class="math inline">\(Z_1-Z_2\sim \mathcal{N}(0,2)\)</span>{% endraw %}. Choosing an extreme noisy branch changes the mean at root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} order. A clipping derivative {% raw %}<span class="math inline">\(v\mapsto\max(v,0)\)</span>{% endraw %} instead produces an atom at zero when {% raw %}<span class="math inline">\(v\)</span>{% endraw %} has a continuous symmetric law.</p>
+$$
+
+also gives $E\min(Z_1,Z_2)=-1/\sqrt\pi$, since $Z_1-Z_2\sim N(0,2)$. Choosing an extreme noisy branch changes the mean at root-$n$ order. A clipping derivative $v\mapsto\max(v,0)$ instead produces an atom at zero when $v$ has a continuous symmetric law.
+-->
 <h3 data-note-section="5" id="30-66-estimate-the-directional-derivative-before-applying-it">5. Estimate the directional derivative before applying it</h3>
 <p>Resample observations jointly, obtaining the centered first-stage fluctuation {% raw %}<span class="math inline">\(Z_n^*=\sqrt n(\widehat\theta^*-\widehat\theta)\)</span>{% endraw %} and empirical-process fluctuation {% raw %}<span class="math inline">\(\mathbb G_n^*=\sqrt n(P_n^*-P_n)\)</span>{% endraw %}. A derivative bootstrap for a marginal endpoint is</p>
 {% raw %}<div class="math display">\[
@@ -155,12 +161,18 @@ R_{x,n}^{\pm *}(c)=\mathbb G_n^*g_x^\pm(\cdot;\widehat\theta,c)
 <p><strong>Theorem 2</strong>. Suppose conditions 1–3 hold, the resampled empirical and first-stage vector converges conditionally in bounded-Lipschitz distance to its joint Gaussian limit, and the derivative estimator converges in probability to {% raw %}<span class="math inline">\(D\mu_x^\pm\)</span>{% endraw %} uniformly on every compact set of the tangent space. Assume also that the derivative estimates are asymptotically equicontinuous in neighborhoods of compact tangent sets, the bootstrap directions are asymptotically tight about that space, and the empirical replacement {% raw %}<span class="math inline">\(\mathbb G_n^*\{g(\widehat\theta)-g(\theta_0)\}\)</span>{% endraw %} is conditionally {% raw %}<span class="math inline">\(o_P(1)\)</span>{% endraw %}. Then the vector {% raw %}<span class="math inline">\(R_{x,n}^{\pm *}(c)\)</span>{% endraw %} consistently estimates the joint endpoint limit law on {% raw %}<span class="math inline">\(\mathcal C\)</span>{% endraw %}.</p>
 </div>
 <p>The analytical derivative estimator in <span class="citation" data-cites="masten_assessing_2024">(<a href="#ref-masten_assessing_2024" role="doc-biblioref">Masten, Poirier, and Zhang 2024</a>)</span> retains arguments whose estimated distance from the extreme is at most {% raw %}<span class="math inline">\(\kappa_n\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\kappa_n\to0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sqrt n\kappa_n\to\infty\)</span>{% endraw %}. Its estimate of {% raw %}<span class="math inline">\(\gamma_0&#x27;\)</span>{% endraw %} uses a separate finite-difference step {% raw %}<span class="math inline">\(\eta_n\to0\)</span>{% endraw %} with {% raw %}<span class="math inline">\(\sqrt n\eta_n\to\infty\)</span>{% endraw %}. The first condition resolves ties; the second makes root-{% raw %}<span class="math inline">\(n\)</span>{% endraw %} estimation noise negligible relative to the difference quotient. Uniform smoothness and the paper’s derivative-consistency argument are also required.</p>
-<p>An alternative, when the integrated functional {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %} can be evaluated, is a numerical directional derivative,</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: numerical-derivative-alternative
+A separately developed numerical-delta implementation. The paper mentions this alternative but proves and implements its analytical derivative estimator; that estimator and its supporting calculations remain visible.
+
+An alternative, when the integrated functional $\mu$ can be evaluated, is a numerical directional derivative,
+
+$$
 \widehat D\mu[h]=\frac{\mu(\widehat\theta+t_nh)-\mu(\widehat\theta)}{t_n},
 \qquad t_n\to0,\quad\sqrt n t_n\to\infty.
-\]</div>{% endraw %}
-<p>The appendix states the local Lipschitz and compact-uniform differentiability conditions that justify this alternative. Replacing {% raw %}<span class="math inline">\(P\)</span>{% endraw %} inside {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %} by {% raw %}<span class="math inline">\(P_n\)</span>{% endraw %} requires the corresponding derivative empirical-process error to vanish; the step-size restriction alone does not establish that fact. The analytical construction in the paper and the numerical delta method are distinct ways of estimating the derivative <span class="citation" data-cites="fang_inference_2018">(<a href="#ref-fang_inference_2018" role="doc-biblioref">Fang and Santos 2018</a>)</span>.</p>
+$$
+
+The appendix states the local Lipschitz and compact-uniform differentiability conditions that justify this alternative. Replacing $P$ inside $\mu$ by $P_n$ requires the corresponding derivative empirical-process error to vanish; the step-size restriction alone does not establish that fact. The analytical construction in the paper and the numerical delta method are distinct ways of estimating the derivative [@fang_inference_2018].
+-->
 <p>A nonlinear pointwise formula can become linear after integration if ties occur only on a set of integration measure zero. For fixed {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, the paper gives the sufficient condition</p>
 {% raw %}<div class="math display">\[
 P\{p_1(W)\in\{c,1-c\}\}=0
@@ -194,19 +206,31 @@ c_\varepsilon^*=\sup\bigl(\{0\}\cup\{c\in[0,c_J]:L_\varepsilon(c)&gt;0\}\bigr),
 \qquad \underline c_\varepsilon=\sup\bigl(\{0\}\cup\{c:\ell(c)&gt;0\}\bigr).
 \]</div>{% endraw %}
 <p>On the coverage event, {% raw %}<span class="math inline">\(\{c:\ell(c)&gt;0\}\subseteq\{c:L_\varepsilon(c)&gt;0\}\)</span>{% endraw %} and hence {% raw %}<span class="math inline">\(\underline c_\varepsilon\le c_\varepsilon^*\)</span>{% endraw %}. If the first set is empty, report that no positive range was certified; the numerical convention {% raw %}<span class="math inline">\(\underline c_\varepsilon=0\)</span>{% endraw %} does not certify positivity at zero.</p>
-<p>To infer the untrimmed endpoints {% raw %}<span class="math inline">\(L,U\)</span>{% endraw %}, account for trimming. If the observed conditional support for outcome {% raw %}<span class="math inline">\(x\)</span>{% endraw %} has known finite width {% raw %}<span class="math inline">\(D_x(w)\)</span>{% endraw %}, then</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: untrimmed-support-width-correction
+An added support-width correction and inference procedure for untrimmed targets; the source paper centers its asymptotic results at fixed-trimming functionals.
+
+To infer the untrimmed endpoints $L,U$, account for trimming. If the observed conditional support for outcome $x$ has known finite width $D_x(w)$, then
+
+$$
 |\mu_x^\pm(c)-\mu_{x,\mathrm{untrimmed}}^\pm(c)|
 \le B_x^\pm(c)
 :=E\left[D_x(W)\int_0^1 1\{t_x^\pm(\tau,W;c)\notin[\varepsilon,1-\varepsilon]\}\,d\tau\right].
-\]</div>{% endraw %}
-<p>Consequently {% raw %}<span class="math inline">\(|L_\varepsilon-L|\le B_1^-+B_0^+\)</span>{% endraw %} and {% raw %}<span class="math inline">\(|U_\varepsilon-U|\le B_1^++B_0^-\)</span>{% endraw %}. For ATT, the mixture identity similarly bounds the lower- and upper-endpoint trimming errors by {% raw %}<span class="math inline">\(B_0^+/p\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B_0^-/p\)</span>{% endraw %}, respectively. Known upper bounds for these quantities can be subtracted from {% raw %}<span class="math inline">\(\ell_j\)</span>{% endraw %} and added to {% raw %}<span class="math inline">\(u_j\)</span>{% endraw %} before monotone extension and inversion. Estimated corrections need their own simultaneous upper confidence bounds. At large {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, clipping can affect a positive interval of quantile indices even as {% raw %}<span class="math inline">\(\varepsilon\downarrow0\)</span>{% endraw %}, and an unbounded support requires tail assumptions in place of this support-width calculation.</p>
-<p>For comparison, a unique interior crossing {% raw %}<span class="math inline">\(L(c^*)=0\)</span>{% endraw %} with {% raw %}<span class="math inline">\(L&#x27;(c^*)&lt;0\)</span>{% endraw %} permits</p>
-{% raw %}<div class="math display">\[
+$$
+
+Consequently $|L_\varepsilon-L|\le B_1^-+B_0^+$ and $|U_\varepsilon-U|\le B_1^++B_0^-$. For ATT, the mixture identity similarly bounds the lower- and upper-endpoint trimming errors by $B_0^+/p$ and $B_0^-/p$, respectively. Known upper bounds for these quantities can be subtracted from $\ell_j$ and added to $u_j$ before monotone extension and inversion. Estimated corrections need their own simultaneous upper confidence bounds. At large $c$, clipping can affect a positive interval of quantile indices even as $\varepsilon\downarrow0$, and an unbounded support requires tail assumptions in place of this support-width calculation.
+-->
+<!-- original-paper-scope: regular-crossing-asymptotics
+Additional point-estimator asymptotics and a cubic-crossing example. The paper's confidence-band inversion for breakdown points remains visible.
+
+For comparison, a unique interior crossing $L(c^*)=0$ with $L'(c^*)<0$ permits
+
+$$
 \sqrt n(\widehat c^*-c^*)
-=-\frac{\sqrt n\{\widehat L(c^*)-L(c^*)\}}{L&#x27;(c^*)}+o_P(1)
-\]</div>{% endraw %}
-<p>under the local uniform conditions in the appendix. With {% raw %}<span class="math inline">\(L(c)=-(c-c^*)^3\)</span>{% endraw %} and an additive error {% raw %}<span class="math inline">\(n^{-1/2}Z\)</span>{% endraw %}, the crossing is instead {% raw %}<span class="math inline">\(c^*+n^{-1/6}\sqrt[3]{Z}\)</span>{% endraw %}. Band inversion remains valid without a nonzero derivative at the crossing.</p>
+=-\frac{\sqrt n\{\widehat L(c^*)-L(c^*)\}}{L'(c^*)}+o_P(1)
+$$
+
+under the local uniform conditions in the appendix. With $L(c)=-(c-c^*)^3$ and an additive error $n^{-1/2}Z$, the crossing is instead $c^*+n^{-1/6}\sqrt[3]{Z}$. Band inversion remains valid without a nonzero derivative at the crossing.
+-->
 <h3 data-note-section="7" id="30-66-appendix-differentiation-and-stochastic-remainders">7. Appendix: differentiation and stochastic remainders</h3>
 <p>For a finite minimum, nonactive arguments have a fixed positive gap. Along any sequence of positive steps tending to zero and converging perturbations, they are eventually excluded. Among the active arguments, subtracting their common value and dividing by the step leaves the minimum of the perturbations. This proves the Hadamard directional derivative and its continuity in the direction.</p>
 <p>Now take {% raw %}<span class="math inline">\(a_n\downarrow0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(h_n\to h\)</span>{% endraw %} in {% raw %}<span class="math inline">\(\mathbb R^{d_\beta}\times\ell^\infty(I)^{d_\gamma}\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(h_\gamma\)</span>{% endraw %} continuous. At fixed {% raw %}<span class="math inline">\((\tau,w)\)</span>{% endraw %}, the finite minimum, maximum, and clipping rules give the derivative of {% raw %}<span class="math inline">\(s_x^\pm\)</span>{% endraw %}. Uniform overlap bounds their difference quotients by a constant times {% raw %}<span class="math inline">\(\|h_{\beta,n}\|\)</span>{% endraw %}. Taylor expansion of {% raw %}<span class="math inline">\(\gamma_0\)</span>{% endraw %} and uniform continuity of {% raw %}<span class="math inline">\(h_\gamma\)</span>{% endraw %} give</p>
@@ -222,21 +246,36 @@ c_\varepsilon^*=\sup\bigl(\{0\}\cup\{c\in[0,c_J]:L_\varepsilon(c)&gt;0\}\bigr),
 <p>by asymptotic equicontinuity of a Donsker empirical process. Apply the directional delta method to {% raw %}<span class="math inline">\(Pg(\widehat\theta)\)</span>{% endraw %} jointly with the finite vector {% raw %}<span class="math inline">\(\mathbb G_ng(\theta_0)\)</span>{% endraw %} to obtain the theorem. In the ATT expansion, the ratio identities are differentiable because {% raw %}<span class="math inline">\(p\in(0,1)\)</span>{% endraw %}; the displayed derivative follows by differentiating {% raw %}<span class="math inline">\(m_1-m_0-(M-m_0)/p\)</span>{% endraw %}.</p>
 <h3 data-note-section="8" id="30-66-appendix-derivative-bootstrap-consistency">8. Appendix: derivative-bootstrap consistency</h3>
 <p>Tightness places the resampled tangent directions in an arbitrarily small neighborhood of a compact set with arbitrarily high conditional probability. Uniform consistency of {% raw %}<span class="math inline">\(\widehat D\mu\)</span>{% endraw %} on compact sets, together with the corresponding asymptotic equicontinuity in their neighborhoods, then makes replacing {% raw %}<span class="math inline">\(\widehat D\mu\)</span>{% endraw %} by {% raw %}<span class="math inline">\(D\mu\)</span>{% endraw %} negligible. The derivative is continuous and the resampled input has the correct conditional joint law. The conditional continuous mapping theorem and the negligible empirical replacement term give the asserted bootstrap limit. These are the estimated-derivative hypotheses of <span class="citation" data-cites="fang_inference_2018">(<a href="#ref-fang_inference_2018" role="doc-biblioref">Fang and Santos 2018</a>)</span>.</p>
-<p>For completeness, a locally Lipschitz map {% raw %}<span class="math inline">\(\mu\)</span>{% endraw %} with Hadamard directional derivative, uniformly approximated on compact sets of directions, admits the numerical estimate above. If {% raw %}<span class="math inline">\(\|\widehat\theta-\theta_0\|=O_P(n^{-1/2})\)</span>{% endraw %}, the difference between the numerical quotient at {% raw %}<span class="math inline">\(\widehat\theta\)</span>{% endraw %} and the quotient at {% raw %}<span class="math inline">\(\theta_0\)</span>{% endraw %} is at most</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: numerical-derivative-proof
+Proof of the additional numerical-delta implementation commented out above.
+
+For completeness, a locally Lipschitz map $\mu$ with Hadamard directional derivative, uniformly approximated on compact sets of directions, admits the numerical estimate above. If $\|\widehat\theta-\theta_0\|=O_P(n^{-1/2})$, the difference between the numerical quotient at $\widehat\theta$ and the quotient at $\theta_0$ is at most
+
+$$
 2K\|\widehat\theta-\theta_0\|/t_n=o_P(1).
-\]</div>{% endraw %}
-<p>The quotient at {% raw %}<span class="math inline">\(\theta_0\)</span>{% endraw %} converges compact-uniformly to {% raw %}<span class="math inline">\(D\mu\)</span>{% endraw %}. Local Lipschitz continuity also supplies the required equicontinuity in the direction. The domain must contain the perturbed functions at which the quotients are evaluated. For the integrated formula here, it suffices to extend its definition to bounded coefficient functions on {% raw %}<span class="math inline">\(I\)</span>{% endraw %}; monotonicity of every perturbed quantile curve is not needed to evaluate that formula.</p>
-<h3 data-note-section="9" id="30-66-appendix-a-regular-crossing">9. Appendix: a regular crossing</h3>
-<p>Suppose {% raw %}<span class="math inline">\(c^*\)</span>{% endraw %} is the unique zero of a continuous nonincreasing {% raw %}<span class="math inline">\(L\)</span>{% endraw %} on a compact interval, lies in its interior, and {% raw %}<span class="math inline">\(L&#x27;(c^*)&lt;0\)</span>{% endraw %}. Suppose {% raw %}<span class="math inline">\(\widehat L\)</span>{% endraw %} is uniformly consistent and</p>
-{% raw %}<div class="math display">\[
+$$
+
+The quotient at $\theta_0$ converges compact-uniformly to $D\mu$. Local Lipschitz continuity also supplies the required equicontinuity in the direction. The domain must contain the perturbed functions at which the quotients are evaluated. For the integrated formula here, it suffices to extend its definition to bounded coefficient functions on $I$; monotonicity of every perturbed quantile curve is not needed to evaluate that formula.
+-->
+<!-- original-paper-scope: regular-crossing-proof
+Proof of the additional crossing-estimator result commented out above.
+
+## Appendix: a regular crossing
+
+Suppose $c^*$ is the unique zero of a continuous nonincreasing $L$ on a compact interval, lies in its interior, and $L'(c^*)<0$. Suppose $\widehat L$ is uniformly consistent and
+
+$$
 \widehat L(c)=L(c)+n^{-1/2}Z_n(c)+o_P(n^{-1/2})
-\]</div>{% endraw %}
-<p>uniformly on a fixed neighborhood of {% raw %}<span class="math inline">\(c^*\)</span>{% endraw %}. Assume {% raw %}<span class="math inline">\(Z_n\)</span>{% endraw %} is locally bounded in probability and stochastically equicontinuous at {% raw %}<span class="math inline">\(c^*\)</span>{% endraw %}. Let {% raw %}<span class="math inline">\(\widehat c^*\xrightarrow{P}c^*\)</span>{% endraw %} satisfy {% raw %}<span class="math inline">\(\widehat L(\widehat c^*)=o_P(n^{-1/2})\)</span>{% endraw %}; a sufficiently accurate root or crossing interpolation has this property. The nonzero derivative bounds {% raw %}<span class="math inline">\(|L(c)|\)</span>{% endraw %} below by a positive multiple of {% raw %}<span class="math inline">\(|c-c^*|\)</span>{% endraw %} near {% raw %}<span class="math inline">\(c^*\)</span>{% endraw %}. The approximate-root equation first gives {% raw %}<span class="math inline">\(\widehat c^*-c^*=O_P(n^{-1/2})\)</span>{% endraw %}. Taylor expansion and equicontinuity then give</p>
-{% raw %}<div class="math display">\[
-0=L&#x27;(c^*)(\widehat c^*-c^*)+n^{-1/2}Z_n(c^*)+o_P(n^{-1/2}),
-\]</div>{% endraw %}
-<p>which yields the stated expansion.</p>
+$$
+
+uniformly on a fixed neighborhood of $c^*$. Assume $Z_n$ is locally bounded in probability and stochastically equicontinuous at $c^*$. Let $\widehat c^*\xrightarrow{P}c^*$ satisfy $\widehat L(\widehat c^*)=o_P(n^{-1/2})$; a sufficiently accurate root or crossing interpolation has this property. The nonzero derivative bounds $|L(c)|$ below by a positive multiple of $|c-c^*|$ near $c^*$. The approximate-root equation first gives $\widehat c^*-c^*=O_P(n^{-1/2})$. Taylor expansion and equicontinuity then give
+
+$$
+0=L'(c^*)(\widehat c^*-c^*)+n^{-1/2}Z_n(c^*)+o_P(n^{-1/2}),
+$$
+
+which yields the stated expansion.
+-->
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-fang_inference_2018" class="csl-entry" role="listitem">
 Fang, Zheng, and Andres Santos. 2018. <span>“Inference on Directionally Differentiable Functions.”</span> <em>The Review of Economic Studies</em>, September. <a href="https://doi.org/10.1093/restud/rdy049">https://doi.org/10.1093/restud/rdy049</a>.

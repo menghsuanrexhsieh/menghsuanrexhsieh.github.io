@@ -11,9 +11,29 @@ redirect_from: ["/2025/10/28/sharp-mechanism-bounds-average-effects-and-inferenc
 
 <div class="note-content" markdown="0">
 
+<span id="23-59-a-finite-sample-confidence-set-test"></span>
+<span id="23-59-appendix-finite-sample"></span>
+<span id="23-59-confidence-sets-for-average-direct-effects"></span>
+<span id="23-59-constructing-the-coupling"></span>
+<span id="mechanism-confidence-set-test"></span>
+<span id="mechanism-effect-coverage"></span>
+<span id="mechanism-effect-projection"></span>
+<span id="mechanism-finite-sample-size"></span>
+<span id="mechanism-finite-sample-test"></span>
+<span id="mechanism-test-example"></span>
+<p>The observable inequalities in the <a href="{% post_url 2024-07-13-testing-mediation-principal-strata-and-observable-bounds %}">preceding post</a> bound the probability mass of stayers whose outcomes change under treatment. Sharpness requires a joint distribution of potential outcomes and mediators that attains the bounds while reproducing the entire observed law. The construction also permits sharp bounds on average direct effects.</p>
+<!-- original-paper-scope: supplementary-inference-introduction
+Introduction to the separate confidence-region projection procedure commented out below.
 
-<p>The observable inequalities in the <a href="{% post_url 2024-07-13-testing-mediation-principal-strata-and-observable-bounds %}">preceding post</a> bound the probability mass of stayers whose outcomes change under treatment. Sharpness requires a joint distribution of potential outcomes and mediators that attains the bounds while reproducing the entire observed law. The construction also permits sharp bounds on average direct effects. Inference follows by projecting a confidence region for the observed cell probabilities onto the feasible potential-outcome laws.</p>
-<p>The identification results follow <span class="citation" data-cites="kwon_testing_2024">Kwon and Roth (<a href="#ref-kwon_testing_2024" role="doc-biblioref">2024</a>)</span> (Section 3 and Appendix B.1), using <a href="https://arxiv.org/html/2404.11739v3">arXiv version 3</a>. The finite-sample confidence-region procedure developed below supplements the paper’s moment-inequality methods.</p>
+Inference follows by projecting a confidence region for the observed cell probabilities onto the feasible potential-outcome laws.
+-->
+<p>The identification results follow <span class="citation" data-cites="kwon_testing_2024">Kwon and Roth (<a href="#ref-kwon_testing_2024" role="doc-biblioref">2024</a>)</span> (Section 3 and Appendix B.1), using <a href="https://arxiv.org/html/2404.11739v3">arXiv version 3</a>.</p>
+<!-- original-paper-scope: supplementary-inference-scope
+Description of the supplementary procedure commented out below.
+
+The finite-sample confidence-region procedure developed below supplements the paper's moment-inequality methods.
+-->
+<p>The inference sections give the paper’s linear moment restrictions and the sampling expansion for the observed cell probabilities.</p>
 <h3 data-note-section="1" id="23-59-unequal-cell-masses-and-the-overlap-formula">1. Setup and overlap measures</h3>
 <p>Maintain consistency, independent treatment assignment with {% raw %}<span class="math inline">\(0&lt;P(D=1)&lt;1\)</span>{% endraw %}, and the restriction {% raw %}<span class="math inline">\(\theta\in R\)</span>{% endraw %} from Assumptions A1–A3 of the preceding post. The mediator has finite support {% raw %}<span class="math inline">\(\{m_0,\ldots,m_{K-1}\}\)</span>{% endraw %} and outcomes are real-valued. Write</p>
 {% raw %}<div class="math display">\[
@@ -151,21 +171,32 @@ U_{F_{1k}}(a_1)-L_{F_{0k}}(a_0).
 </div>
 <p>When zero stayer shares are feasible, optimize these endpoints over matrices with {% raw %}<span class="math inline">\(\vartheta_{kk}&gt;0\)</span>{% endraw %}. An infimum or supremum may be approached without attainment, and unbounded outcome support can give infinite bounds.</p>
 <p>These are bounds on mean effects under A1–A3, without imposing full mediation or requiring the affected-mass lower bound to be attained. A construction minimizing the number affected need not also minimize or maximize their mean effect. In particular, {% raw %}<span class="math inline">\(ADE_k=0\)</span>{% endraw %} allows offsetting positive and negative effects and is weaker than absence of individual effects.</p>
-<h3 data-note-section="5" id="23-59-constructing-the-coupling">5. A discrete construction and a trimming example</h3>
-<p>At outcomes {% raw %}<span class="math inline">\(0,1,2\)</span>{% endraw %}, take</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: numerical-coupling-and-trimming-examples
+Added numerical examples. The general joint-law construction and the fractional-selection proof, including outcome atoms, remain visible because they establish the source sharpness and ADE results.
+
+## A discrete construction and a trimming example {#constructing-the-coupling}
+
+At outcomes $0,1,2$, take
+
+$$
 \mu_{1k}=(0.18,0.04,0.18),\qquad
 \mu_{0k}=(0.10,0.20,0.10),\qquad t=0.30.
-\]</div>{% endraw %}
-<p>Their overlap is {% raw %}<span class="math inline">\((0.10,0.04,0.10)\)</span>{% endraw %}, with mass {% raw %}<span class="math inline">\(O_k=0.24\)</span>{% endraw %}. Assign this mass to unchanged stayers. The residual treated and control measures are {% raw %}<span class="math inline">\((0.08,0,0.08)\)</span>{% endraw %} and {% raw %}<span class="math inline">\((0,0.16,0)\)</span>{% endraw %}. Assign {% raw %}<span class="math inline">\(0.06\)</span>{% endraw %} to the pair {% raw %}<span class="math inline">\((Y_0,Y_1)=(1,0)\)</span>{% endraw %}. There are then {% raw %}<span class="math inline">\(0.30\)</span>{% endraw %} stayers, of whom {% raw %}<span class="math inline">\(0.06\)</span>{% endraw %} change outcome, attaining the bound {% raw %}<span class="math inline">\(\nu_k\geq0.20\)</span>{% endraw %}. The remaining treated mass {% raw %}<span class="math inline">\((0.02,0,0.08)\)</span>{% endraw %} and control mass {% raw %}<span class="math inline">\((0,0.10,0)\)</span>{% endraw %} each total {% raw %}<span class="math inline">\(0.10\)</span>{% endraw %} and can be allocated to entrants and leavers. Assigning the changed mass to {% raw %}<span class="math inline">\((1,2)\)</span>{% endraw %} instead reverses its effect’s sign while attaining the same affected fraction.</p>
-<p>For the separate mean-effect bounds, stayers occupy {% raw %}<span class="math inline">\(0.30/0.40=3/4\)</span>{% endraw %} of each cell. The minimum treated stayer outcome total is {% raw %}<span class="math inline">\(0.18\cdot0+0.04\cdot1+0.08\cdot2=0.20\)</span>{% endraw %}; the maximum is {% raw %}<span class="math inline">\(0.08\cdot0+0.04\cdot1+0.18\cdot2=0.40\)</span>{% endraw %}. Dividing by {% raw %}<span class="math inline">\(0.30\)</span>{% endraw %} gives means {% raw %}<span class="math inline">\(2/3\)</span>{% endraw %} and {% raw %}<span class="math inline">\(4/3\)</span>{% endraw %}. The control endpoints are the same, so Proposition 3 yields {% raw %}<span class="math inline">\(ADE_k\in[-2/3,2/3]\)</span>{% endraw %}.</p>
-<p>Fractional selection at atoms is essential. If a cell has probability {% raw %}<span class="math inline">\(0.7\)</span>{% endraw %} at zero and {% raw %}<span class="math inline">\(0.3\)</span>{% endraw %} at ten, and stayers make up half the cell, their maximum mean is</p>
-{% raw %}<div class="math display">\[
+$$
+
+Their overlap is $(0.10,0.04,0.10)$, with mass $O_k=0.24$. Assign this mass to unchanged stayers. The residual treated and control measures are $(0.08,0,0.08)$ and $(0,0.16,0)$. Assign $0.06$ to the pair $(Y_0,Y_1)=(1,0)$. There are then $0.30$ stayers, of whom $0.06$ change outcome, attaining the bound $\nu_k\geq0.20$. The remaining treated mass $(0.02,0,0.08)$ and control mass $(0,0.10,0)$ each total $0.10$ and can be allocated to entrants and leavers. Assigning the changed mass to $(1,2)$ instead reverses its effect's sign while attaining the same affected fraction.
+
+For the separate mean-effect bounds, stayers occupy $0.30/0.40=3/4$ of each cell. The minimum treated stayer outcome total is $0.18\cdot0+0.04\cdot1+0.08\cdot2=0.20$; the maximum is $0.08\cdot0+0.04\cdot1+0.18\cdot2=0.40$. Dividing by $0.30$ gives means $2/3$ and $4/3$. The control endpoints are the same, so Proposition 3 yields $ADE_k\in[-2/3,2/3]$.
+
+Fractional selection at atoms is essential. If a cell has probability $0.7$ at zero and $0.3$ at ten, and stayers make up half the cell, their maximum mean is
+
+$$
 \frac{0.3\cdot10+0.2\cdot0}{0.5}=6.
-\]</div>{% endraw %}
-<p>This allocation selects all the mass at ten and only part of the mass at zero. The minimum mean is zero. Selecting entire outcome atoms would exclude both valid fractional allocations.</p>
+$$
+
+This allocation selects all the mass at ten and only part of the mass at zero. The minimum mean is zero. Selecting entire outcome atoms would exclude both valid fractional allocations.
+-->
 <p><span id="mechanism-linear-null"></span></p>
-<h3 data-note-section="6" id="23-59-implementing-the-test">6. Population restrictions as a linear system</h3>
+<h3 data-note-section="5" id="23-59-implementing-the-test">5. Population restrictions as a linear system</h3>
 <p>For inference, first suppose that {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} has a known finite support {% raw %}<span class="math inline">\(\{y_1,\ldots,y_J\}\)</span>{% endraw %}. Let</p>
 {% raw %}<div class="math display">\[
 q_{dkj}=P(Y=y_j,M=m_k\mid D=d),\qquad p_{dk}=\sum_jq_{dkj},
@@ -188,7 +219,7 @@ q_{dkj}=P(Y=y_j,M=m_k\mid D=d),\qquad p_{dk}=\sum_jq_{dkj},
 \]</div>{% endraw %}
 <p>For positive stayer shares this is equivalent to {% raw %}<span class="math inline">\((\vartheta_{kk}-O_k)_+\leq\bar\nu_k\vartheta_{kk}\)</span>{% endraw %}; at zero shares the affected-mass restriction is vacuous. The simultaneous construction in Theorem 1 proves sufficiency for these upper-bound hypotheses as well.</p>
 <p><span id="mechanism-moment-inference"></span></p>
-<h3 data-note-section="7" id="23-59-sampling-uncertainty-and-moment-inequality-inference">7. Sampling uncertainty and moment-inequality inference</h3>
+<h3 data-note-section="6" id="23-59-sampling-uncertainty-and-moment-inequality-inference">6. Sampling uncertainty and moment-inequality inference</h3>
 <p>Assume now that {% raw %}<span class="math inline">\((Y_i,M_i,D_i)_{i=1}^n\)</span>{% endraw %} are iid draws from the experimental population, with independent Bernoulli assignment of probability {% raw %}<span class="math inline">\(e\in(0,1)\)</span>{% endraw %}. Put {% raw %}<span class="math inline">\(\pi_1=e\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\pi_0=1-e\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(n_d=\sum_i\mathbf1_{\{D_i=d\}}\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(n_d&gt;0\)</span>{% endraw %}, estimate</p>
 {% raw %}<div class="math display">\[
 \widehat q_{dkj}
@@ -214,12 +245,19 @@ C_1\omega-C_2q\geq c,
 \]</div>{% endraw %}
 <p>for known matrices and a known vector {% raw %}<span class="math inline">\(c\)</span>{% endraw %}. This is the linear-nuisance moment-inequality problem to which the paper applies the methods of <a href="https://pakes.scholars.harvard.edu/publications/inference-linear-conditional-moment-inequalities">Andrews, Roth, and Pakes</a>; <a href="https://arxiv.org/abs/1907.06317">Cox and Shi</a>; and <a href="https://arxiv.org/abs/2009.08568">Fang, Santos, Shaikh, and Torgovitsky</a>. Their critical values account for the inequality constraints and require the respective regularity conditions. Removing one probability coordinate from each treatment arm resolves the simplex singularities when all cell probabilities are positive.</p>
 <p>Directly rejecting whenever {% raw %}<span class="math inline">\(\widehat q\notin\mathcal Q_0\)</span>{% endraw %} has no calibration to a significance level. A binding population restriction can be violated by sampling error with nonvanishing probability. Also, the positive-part map is nondifferentiable when a cell difference is zero, and an optimized bound can be nondifferentiable when the active constraints change. Therefore ordinary standard errors or an ordinary bootstrap of the optimized bound require a justification beyond the preceding central limit theorem.</p>
-<p>The sampling unit must match the experiment. For clustered data, asymptotic normality and covariance estimation must be based on independent clusters under suitable cluster-level conditions. The individual-level covariance formula above and the finite-sample argument below do not apply to dependent individuals within a cluster.</p>
-<p><span id="mechanism-confidence-set-test"></span> <span id="mechanism-test-example"></span></p>
-<p><span id="mechanism-finite-sample-test"></span></p>
-<h3 data-note-section="8" id="23-59-a-finite-sample-confidence-set-test">8. A finite-sample confidence-set test</h3>
-<p>Under the iid Bernoulli-assignment model of Section 7, a conservative test follows from simultaneous confidence intervals for the cell probabilities. Fix {% raw %}<span class="math inline">\(\alpha\in(0,1)\)</span>{% endraw %} and let {% raw %}<span class="math inline">\(L=2KJ\)</span>{% endraw %}. If both arms are nonempty, define</p>
-{% raw %}<div class="math display">\[
+<p>The sampling unit must match the experiment. For clustered data, asymptotic normality and covariance estimation must be based on independent clusters under suitable cluster-level conditions. The individual-level covariance formula above does not apply to dependent individuals within a cluster.</p>
+<!-- original-paper-scope: finite-sample-test-and-effect-projection
+A supplementary Hoeffding confidence-region test and projection-based confidence set for average direct effects, including their size and whole-set coverage propositions. These procedures are not the moment-inequality methods developed in the paper.
+
+[]{#mechanism-confidence-set-test} []{#mechanism-test-example}
+
+[]{#mechanism-finite-sample-test}
+
+## A finite-sample confidence-set test {#a-finite-sample-confidence-set-test}
+
+Under the iid Bernoulli-assignment model of Section 7, a conservative test follows from simultaneous confidence intervals for the cell probabilities. Fix $\alpha\in(0,1)$ and let $L=2KJ$. If both arms are nonempty, define
+
+$$
 \epsilon_d=\sqrt{\frac{\log(2L/\alpha)}{2n_d}},
 \qquad
 \mathcal C_n=\left\{q:
@@ -228,62 +266,91 @@ q_{dkj}\geq0,\quad \sum_{k,j}q_{dkj}=1,\\
 |q_{dkj}-\widehat q_{dkj}|\leq\epsilon_d\quad\text{for all }d,k,j
 \end{array}
 \right\}.
-\]</div>{% endraw %}
-<p>Reject when {% raw %}<span class="math inline">\(\mathcal C_n\cap\mathcal Q_0=\varnothing\)</span>{% endraw %}. This is one linear feasibility problem in {% raw %}<span class="math inline">\((q,\vartheta,s)\)</span>{% endraw %}. In particular, the mediator margins vary with {% raw %}<span class="math inline">\(q\)</span>{% endraw %} inside the confidence set. Fixing them at empirical values while varying the outcome cells would omit part of the sampling uncertainty. If either arm is empty, define the test not to reject.</p>
-<div id="mechanism-finite-sample-size" class="proposition" data-note-number="4" data-note-kind="Proposition">
-<p><strong>Proposition 4</strong>. <strong>Uniform finite-sample size bound.</strong> Under the sampling model of Section 7, the preceding test has rejection probability at most {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} for every sample size and every distribution satisfying full mediation and A1–A3. The statement includes zero-probability cells and binding inequalities.</p>
-</div>
-<p>Conditional on the treatment labels, Hoeffding’s inequality gives</p>
-{% raw %}<div class="math display">\[
-P\{|\widehat q_{dkj}-q_{dkj}|&gt;\epsilon_d\mid D_1,\ldots,D_n\}
+$$
+
+Reject when $\mathcal C_n\cap\mathcal Q_0=\varnothing$. This is one linear feasibility problem in $(q,\vartheta,s)$. In particular, the mediator margins vary with $q$ inside the confidence set. Fixing them at empirical values while varying the outcome cells would omit part of the sampling uncertainty. If either arm is empty, define the test not to reject.
+
+::: {#mechanism-finite-sample-size .proposition}
+**Uniform finite-sample size bound.** Under the sampling model of Section 7, the preceding test has rejection probability at most $\alpha$ for every sample size and every distribution satisfying full mediation and A1--A3. The statement includes zero-probability cells and binding inequalities.
+:::
+
+Conditional on the treatment labels, Hoeffding's inequality gives
+
+$$
+P\{|\widehat q_{dkj}-q_{dkj}|>\epsilon_d\mid D_1,\ldots,D_n\}
 \leq2e^{-2n_d\epsilon_d^2}=\alpha/L.
-\]</div>{% endraw %}
-<p>A union bound implies {% raw %}<span class="math inline">\(P(q\in\mathcal C_n\mid D_1,\ldots,D_n)\geq1-\alpha\)</span>{% endraw %} for nonempty arms. Under the null, {% raw %}<span class="math inline">\(q\in\mathcal Q_0\)</span>{% endraw %}, so rejecting requires {% raw %}<span class="math inline">\(q\notin\mathcal C_n\)</span>{% endraw %}. Averaging over assignments gives size at most {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %}. The <a href="#23-59-appendix-finite-sample">appendix</a> derives the exponential inequality and handles empty arms.</p>
-<p>The exponential inequality in the proof is the Bernoulli form of Hoeffding’s bound. Dependence among the multinomial cell counts does not affect the union bound. The procedure needs no covariance inverse or differentiability of an optimized bound. Its coordinate intervals can be conservative because they do not use the covariance information available to the paper’s moment-inequality methods.</p>
-<p>For a numerical example, order the cells as {% raw %}<span class="math inline">\((m_0,y_1),(m_0,y_2),(m_1,y_1),(m_1,y_2)\)</span>{% endraw %}, assume binary mediator monotonicity, and take</p>
-{% raw %}<div class="math display">\[
+$$
+
+A union bound implies $P(q\in\mathcal C_n\mid D_1,\ldots,D_n)\geq1-\alpha$ for nonempty arms. Under the null, $q\in\mathcal Q_0$, so rejecting requires $q\notin\mathcal C_n$. Averaging over assignments gives size at most $\alpha$. The [appendix](#23-59-appendix-finite-sample) derives the exponential inequality and handles empty arms.
+
+The exponential inequality in the proof is the Bernoulli form of Hoeffding's bound. Dependence among the multinomial cell counts does not affect the union bound. The procedure needs no covariance inverse or differentiability of an optimized bound. Its coordinate intervals can be conservative because they do not use the covariance information available to the paper's moment-inequality methods.
+
+For a numerical example, order the cells as $(m_0,y_1),(m_0,y_2),(m_1,y_1),(m_1,y_2)$, assume binary mediator monotonicity, and take
+
+$$
 \widehat q_0=(0.25,0.45,0.15,0.15),\qquad
 \widehat q_1=(0.30,0.10,0.30,0.30),\qquad
 n_0=n_1=10{,}000.
-\]</div>{% endraw %}
-<p>At {% raw %}<span class="math inline">\(\alpha=0.05\)</span>{% endraw %}, {% raw %}<span class="math inline">\(L=8\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\epsilon_d=\sqrt{\log(320)/20000}\simeq0.01698\)</span>{% endraw %}. Every {% raw %}<span class="math inline">\(q\in\mathcal C_n\)</span>{% endraw %} satisfies</p>
-{% raw %}<div class="math display">\[
-q_{1,0,1}-q_{0,0,1}\geq0.05-2\epsilon_d&gt;0.016.
-\]</div>{% endraw %}
-<p>Monotonicity permits no entrants into state zero, so the null requires this difference to be nonpositive. Thus the intersection is empty and the test rejects. The positive lower bound on this difference certifies infeasibility. In computation, solver failure or an unresolved feasibility tolerance is not a statistical rejection.</p>
-<p><span id="mechanism-effect-projection"></span></p>
-<h3 data-note-section="9" id="23-59-confidence-sets-for-average-direct-effects">9. Confidence sets for average direct effects</h3>
-<p>The same confidence region can be projected onto {% raw %}<span class="math inline">\(ADE_k\)</span>{% endraw %} without imposing full mediation. For {% raw %}<span class="math inline">\(q\in\mathcal C_n\)</span>{% endraw %} and feasible shares {% raw %}<span class="math inline">\(\vartheta\)</span>{% endraw %}, introduce stayer outcome masses {% raw %}<span class="math inline">\(w_{dj}\)</span>{% endraw %} satisfying</p>
-{% raw %}<div class="math display">\[
+$$
+
+At $\alpha=0.05$, $L=8$ and $\epsilon_d=\sqrt{\log(320)/20000}\simeq0.01698$. Every $q\in\mathcal C_n$ satisfies
+
+$$
+q_{1,0,1}-q_{0,0,1}\geq0.05-2\epsilon_d>0.016.
+$$
+
+Monotonicity permits no entrants into state zero, so the null requires this difference to be nonpositive. Thus the intersection is empty and the test rejects. The positive lower bound on this difference certifies infeasibility. In computation, solver failure or an unresolved feasibility tolerance is not a statistical rejection.
+
+[]{#mechanism-effect-projection}
+
+## Confidence sets for average direct effects {#confidence-sets-for-average-direct-effects}
+
+The same confidence region can be projected onto $ADE_k$ without imposing full mediation. For $q\in\mathcal C_n$ and feasible shares $\vartheta$, introduce stayer outcome masses $w_{dj}$ satisfying
+
+$$
 0\leq w_{dj}\leq q_{dkj},\qquad
 \sum_j w_{dj}=\vartheta_{kk}\quad(d=0,1).
-\]</div>{% endraw %}
-<p>Retain the probability, margin, and {% raw %}<span class="math inline">\(R\)</span>{% endraw %} restrictions, but omit the full-mediation slack inequalities. Include {% raw %}<span class="math inline">\(a\in\mathbb R\)</span>{% endraw %} in {% raw %}<span class="math inline">\(\mathcal A_n\)</span>{% endraw %} if some such variables with {% raw %}<span class="math inline">\(\vartheta_{kk}&gt;0\)</span>{% endraw %} satisfy</p>
-{% raw %}<div class="math display">\[
+$$
+
+Retain the probability, margin, and $R$ restrictions, but omit the full-mediation slack inequalities. Include $a\in\mathbb R$ in $\mathcal A_n$ if some such variables with $\vartheta_{kk}>0$ satisfy
+
+$$
 \sum_j y_j(w_{1j}-w_{0j})=a\vartheta_{kk}.
-\]</div>{% endraw %}
-<p>For fixed {% raw %}<span class="math inline">\(a\)</span>{% endraw %} these are linear constraints except for the strict positivity requirement. Positivity can be checked by maximizing {% raw %}<span class="math inline">\(\vartheta_{kk}\)</span>{% endraw %} subject to the remaining weak constraints and verifying that the maximum is positive. The feasible set for these variables is compact, so a positive supremum is attained.</p>
-<div id="mechanism-effect-coverage" class="proposition" data-note-number="5" data-note-kind="Proposition">
-<p><strong>Proposition 5</strong>. <strong>Projection coverage.</strong> Let {% raw %}<span class="math inline">\(\mathcal I_k(q)\)</span>{% endraw %} be the set of average direct effects attainable under A1–A3 with observed cell law {% raw %}<span class="math inline">\(q\)</span>{% endraw %} and positive {% raw %}<span class="math inline">\(k\)</span>{% endraw %}-stayer share. Under the iid Bernoulli-assignment model,</p>
-{% raw %}<div class="math display">\[
+$$
+
+For fixed $a$ these are linear constraints except for the strict positivity requirement. Positivity can be checked by maximizing $\vartheta_{kk}$ subject to the remaining weak constraints and verifying that the maximum is positive. The feasible set for these variables is compact, so a positive supremum is attained.
+
+::: {#mechanism-effect-coverage .proposition}
+**Projection coverage.** Let $\mathcal I_k(q)$ be the set of average direct effects attainable under A1–A3 with observed cell law $q$ and positive $k$-stayer share. Under the iid Bernoulli-assignment model,
+
+$$
 P\{\mathcal I_k(q)\subseteq\mathcal A_n\}\geq1-\alpha.
-\]</div>{% endraw %}
-<p>In particular, if the true share {% raw %}<span class="math inline">\(\theta_{kk}&gt;0\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(P(ADE_k\in\mathcal A_n)\geq1-\alpha\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(\mathcal A_n=\mathbb R\)</span>{% endraw %} when an arm is empty.</p>
-</div>
-<div class="proof">
-<p><strong>Proof.</strong> On {% raw %}<span class="math inline">\(\{q\in\mathcal C_n\}\)</span>{% endraw %}, take any full-data law realizing an effect {% raw %}<span class="math inline">\(a\in\mathcal I_k(q)\)</span>{% endraw %}. Use its stratum shares {% raw %}<span class="math inline">\(\vartheta\)</span>{% endraw %} and stayer outcome masses</p>
-{% raw %}<div class="math display">\[
+$$
+
+In particular, if the true share $\theta_{kk}>0$, then $P(ADE_k\in\mathcal A_n)\geq1-\alpha$. Define $\mathcal A_n=\mathbb R$ when an arm is empty.
+:::
+
+::: {.proof}
+**Proof.** On $\{q\in\mathcal C_n\}$, take any full-data law realizing an effect $a\in\mathcal I_k(q)$. Use its stratum shares $\vartheta$ and stayer outcome masses
+
+$$
 w_{dj}=P(S_{kk},Y(d,m_k)=y_j).
-\]</div>{% endraw %}
-<p>Random assignment and consistency imply {% raw %}<span class="math inline">\(0\leq w_{dj}\leq q_{dkj}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sum_jw_{dj}=\vartheta_{kk}&gt;0\)</span>{% endraw %}. Moreover, {% raw %}<span class="math inline">\(\sum_jy_j(w_{1j}-w_{0j})=a\vartheta_{kk}\)</span>{% endraw %}. These variables establish {% raw %}<span class="math inline">\(a\in\mathcal A_n\)</span>{% endraw %}. The same event therefore gives inclusion for every {% raw %}<span class="math inline">\(a\in\mathcal I_k(q)\)</span>{% endraw %} simultaneously. The confidence-region coverage proved above does not require full mediation and is at least {% raw %}<span class="math inline">\(1-\alpha\)</span>{% endraw %}.</p>
-</div>
-<p>The endpoints of the interval hull of {% raw %}<span class="math inline">\(\mathcal A_n\)</span>{% endraw %} are the infimum and supremum of</p>
-{% raw %}<div class="math display">\[
+$$
+
+Random assignment and consistency imply $0\leq w_{dj}\leq q_{dkj}$ and $\sum_jw_{dj}=\vartheta_{kk}>0$. Moreover, $\sum_jy_j(w_{1j}-w_{0j})=a\vartheta_{kk}$. These variables establish $a\in\mathcal A_n$. The same event therefore gives inclusion for every $a\in\mathcal I_k(q)$ simultaneously. The confidence-region coverage proved above does not require full mediation and is at least $1-\alpha$.
+:::
+
+The endpoints of the interval hull of $\mathcal A_n$ are the infimum and supremum of
+
+$$
 \frac{\sum_j y_j(w_{1j}-w_{0j})}{\vartheta_{kk}}
-\]</div>{% endraw %}
-<p>over the stated feasible set with positive denominator. This is the sample counterpart of the trimming selections. Endpoints need not be attained if feasible shares approach zero; the definition by feasibility retains that distinction.</p>
-<p>For a continuous outcome, a prespecified finite partition gives a valid test of full mediation using the cell labels, with the loss of population information described in the preceding post. The finite-sample proof remains applicable to those bounded cell indicators. Bins selected using the same outcomes require a separate calibration argument; bins chosen using an independent training sample can be treated as fixed conditional on that sample. Bounds on the mean of the original outcome require its actual values or additional within-bin information. Replacing outcomes by arbitrary bin labels changes the mean-effect estimand.</p>
-<h3 data-note-section="10" id="23-59-appendix-joint-law">10. Appendix: a joint potential-outcome law</h3>
+$$
+
+over the stated feasible set with positive denominator. This is the sample counterpart of the trimming selections. Endpoints need not be attained if feasible shares approach zero; the definition by feasibility retains that distinction.
+
+For a continuous outcome, a prespecified finite partition gives a valid test of full mediation using the cell labels, with the loss of population information described in the preceding post. The finite-sample proof remains applicable to those bounded cell indicators. Bins selected using the same outcomes require a separate calibration argument; bins chosen using an independent training sample can be treated as fixed conditional on that sample. Bounds on the mean of the original outcome require its actual values or additional within-bin information. Replacing outcomes by arbitrary bin labels changes the mean-effect estimand.
+-->
+<h3 data-note-section="7" id="23-59-appendix-joint-law">7. Appendix: a joint potential-outcome law</h3>
 <div class="proof">
 <p><strong>Proof.</strong> Fix {% raw %}<span class="math inline">\(\vartheta\)</span>{% endraw %}. We first allocate outcomes to stayers within each mediator state, then allocate all remaining outcomes to movers using this same matrix.</p>
 <p><em>Stayer allocations.</em> Fix {% raw %}<span class="math inline">\(k\)</span>{% endraw %}, put {% raw %}<span class="math inline">\(t=\vartheta_{kk}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(O=O_k\)</span>{% endraw %}, and suppress {% raw %}<span class="math inline">\(k\)</span>{% endraw %} temporarily. Feasibility gives {% raw %}<span class="math inline">\(0\leq t\leq\min(p_0,p_1)\)</span>{% endraw %}. Construct a measure {% raw %}<span class="math inline">\(\Gamma_{kk}\)</span>{% endraw %} on pairs {% raw %}<span class="math inline">\((y_0,y_1)\)</span>{% endraw %} of total mass {% raw %}<span class="math inline">\(t\)</span>{% endraw %}.</p>
@@ -329,7 +396,7 @@ Y(0,m_k)=Y(1,m_k)=Y_1.
 <p>Finally, draw {% raw %}<span class="math inline">\(D\)</span>{% endraw %} independently of all constructed variables with the observed treatment probability, and impose consistency. The marginal identities above reproduce the joint law of {% raw %}<span class="math inline">\((Y,M,D)\)</span>{% endraw %}. The unequal-pair mass in each diagonal stratum gives the asserted {% raw %}<span class="math inline">\(r_k\)</span>{% endraw %}, simultaneously for all {% raw %}<span class="math inline">\(k\)</span>{% endraw %}.</p>
 <p>Necessity of the full-mediation restrictions follows from Proposition 1 of the preceding post. If {% raw %}<span class="math inline">\(\vartheta_{kk}\leq O_k\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(k\)</span>{% endraw %}, the construction gives equal outcomes on every positive-mass diagonal stratum, and the completion imposes equality at every mediator value on every other stratum. It therefore satisfies the sharp null. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 </div>
-<h3 data-note-section="11" id="23-59-appendix-trimming">11. Appendix: trimming with atoms</h3>
+<h3 data-note-section="8" id="23-59-appendix-trimming">8. Appendix: trimming with atoms</h3>
 <div class="proof">
 <p><strong>Proof.</strong> Suppose first {% raw %}<span class="math inline">\(0&lt;a&lt;1\)</span>{% endraw %} and let {% raw %}<span class="math inline">\(q=Q_F(a)\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\(F(q-)\leq a\leq F(q)\)</span>{% endraw %}. Define {% raw %}<span class="math inline">\(s_*(y)=1\)</span>{% endraw %} for {% raw %}<span class="math inline">\(y&lt;q\)</span>{% endraw %}, {% raw %}<span class="math inline">\(s_*(y)=0\)</span>{% endraw %} for {% raw %}<span class="math inline">\(y&gt;q\)</span>{% endraw %}, and choose</p>
 {% raw %}<div class="math display">\[
@@ -344,26 +411,37 @@ s_*(q)=\frac{a-F(q-)}{F(q)-F(q-)}
 <p>If {% raw %}<span class="math inline">\(U\)</span>{% endraw %} is uniform on {% raw %}<span class="math inline">\((0,1)\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(Q_F(U)\)</span>{% endraw %} has distribution {% raw %}<span class="math inline">\(F\)</span>{% endraw %}, since {% raw %}<span class="math inline">\(P(Q_F(U)\leq y)=F(y)\)</span>{% endraw %}. Selecting {% raw %}<span class="math inline">\(U\leq a\)</span>{% endraw %} induces exactly the rule {% raw %}<span class="math inline">\(s_*\)</span>{% endraw %}, including its fractional selection at {% raw %}<span class="math inline">\(q\)</span>{% endraw %}. Hence {% raw %}<span class="math inline">\(\int y s_*\,dF=\int_0^a Q_F(u)\,du\)</span>{% endraw %}. This proves the lower endpoint and its attainment. Selecting the upper tail, with fractional selection at its boundary atom, proves the upper endpoint by the reversed inequality. For {% raw %}<span class="math inline">\(a=1\)</span>{% endraw %}, {% raw %}<span class="math inline">\(s=1\)</span>{% endraw %} almost surely is the only admissible rule and both endpoints equal the mean; no value of {% raw %}<span class="math inline">\(Q_F\)</span>{% endraw %} at zero or one is needed.</p>
 <p>If {% raw %}<span class="math inline">\(0&lt;a&lt;b\leq1\)</span>{% endraw %}, monotonicity of the quantile implies {% raw %}<span class="math inline">\(Q_F(u)\geq L_F(a)\)</span>{% endraw %} for almost every {% raw %}<span class="math inline">\(u\in(a,b)\)</span>{% endraw %}. Therefore {% raw %}<span class="math inline">\(bL_F(b)=aL_F(a)+\int_a^b Q_F(u)\,du\geq bL_F(a)\)</span>{% endraw %}. Applying the same argument to the lower tail of {% raw %}<span class="math inline">\(-Y\)</span>{% endraw %} proves that {% raw %}<span class="math inline">\(U_F\)</span>{% endraw %} is nonincreasing. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 </div>
-<h3 data-note-section="12" id="23-59-appendix-finite-sample">12. Appendix: the finite-sample probability bound</h3>
-<div class="proof">
-<p><strong>Proof.</strong> Conditional on the assignment labels, observations within arm {% raw %}<span class="math inline">\(d\)</span>{% endraw %} are iid from the corresponding outcome-mediator law. For one cell its indicators are Bernoulli with mean {% raw %}<span class="math inline">\(q\)</span>{% endraw %}. Let</p>
-{% raw %}<div class="math display">\[
-h(\lambda)=\log\mathbb{E}\exp\{\lambda(H-q)\},\qquad H\sim\operatorname{Bernoulli}(q).
-\]</div>{% endraw %}
-<p>Then {% raw %}<span class="math inline">\(h(0)=h&#x27;(0)=0\)</span>{% endraw %}. Its second derivative is the Bernoulli variance under exponential tilting and is at most {% raw %}<span class="math inline">\(1/4\)</span>{% endraw %}, including the degenerate cases {% raw %}<span class="math inline">\(q=0,1\)</span>{% endraw %}. Taylor’s formula with integral remainder gives {% raw %}<span class="math inline">\(h(\lambda)\leq\lambda^2/8\)</span>{% endraw %} for every real {% raw %}<span class="math inline">\(\lambda\)</span>{% endraw %}. Independence and Markov’s inequality therefore give, for {% raw %}<span class="math inline">\(r&gt;0\)</span>{% endraw %},</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: finite-sample-probability-proof
+Proof supporting only the supplementary confidence-region procedures commented out above.
+
+## Appendix: the finite-sample probability bound {#appendix-finite-sample}
+
+::: {.proof}
+**Proof.** Conditional on the assignment labels, observations within arm $d$ are iid from the corresponding outcome-mediator law. For one cell its indicators are Bernoulli with mean $q$. Let
+
+$$
+h(\lambda)=\log\mathbb E\exp\{\lambda(H-q)\},\qquad H\sim\operatorname{Bernoulli}(q).
+$$
+
+Then $h(0)=h'(0)=0$. Its second derivative is the Bernoulli variance under exponential tilting and is at most $1/4$, including the degenerate cases $q=0,1$. Taylor's formula with integral remainder gives $h(\lambda)\leq\lambda^2/8$ for every real $\lambda$. Independence and Markov's inequality therefore give, for $r>0$,
+
+$$
 \begin{aligned}
 P(\widehat q-q\geq r\mid D_1,\ldots,D_n)
-&amp;\leq\inf_{\lambda&gt;0}\exp\{-\lambda n_dr+n_d\lambda^2/8\}\\
-&amp;=\exp(-2n_dr^2).
+&\leq\inf_{\lambda>0}\exp\{-\lambda n_dr+n_d\lambda^2/8\}\\
+&=\exp(-2n_dr^2).
 \end{aligned}
-\]</div>{% endraw %}
-<p>Applying the same bound to the lower tail yields {% raw %}<span class="math inline">\(P(|\widehat q-q|&gt;\epsilon_d\mid D_1,\ldots,D_n)\leq\alpha/L\)</span>{% endraw %}. A union bound over all {% raw %}<span class="math inline">\(L\)</span>{% endraw %} cells proves</p>
-{% raw %}<div class="math display">\[
+$$
+
+Applying the same bound to the lower tail yields $P(|\widehat q-q|>\epsilon_d\mid D_1,\ldots,D_n)\leq\alpha/L$. A union bound over all $L$ cells proves
+
+$$
 P(q\notin\mathcal C_n\mid D_1,\ldots,D_n)\leq\alpha
-\]</div>{% endraw %}
-<p>when both arms are nonempty. The simplex constraints hold for the true vector and do not reduce this coverage. Under the null, {% raw %}<span class="math inline">\(q\in\mathcal Q_0\)</span>{% endraw %} by Theorem 1. Whenever {% raw %}<span class="math inline">\(q\in\mathcal C_n\)</span>{% endraw %}, the intersection is nonempty, so rejection implies confidence-set failure. Conditional rejection probability is at most {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} for nonempty arms and zero otherwise. Averaging over assignments gives rejection probability at most {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} for every cell law satisfying the null. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
-</div>
+$$
+
+when both arms are nonempty. The simplex constraints hold for the true vector and do not reduce this coverage. Under the null, $q\in\mathcal Q_0$ by Theorem 1. Whenever $q\in\mathcal C_n$, the intersection is nonempty, so rejection implies confidence-set failure. Conditional rejection probability is at most $\alpha$ for nonempty arms and zero otherwise. Averaging over assignments gives rejection probability at most $\alpha$ for every cell law satisfying the null. $\square$
+:::
+-->
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-kwon_testing_2024" class="csl-entry" role="listitem">
 Kwon, Soonwoo, and Jonathan Roth. 2024. <span>“Testing Mechanisms.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2404.11739">https://doi.org/10.48550/arXiv.2404.11739</a>.

@@ -1744,8 +1744,8 @@
     ],
     "date": "2024-03-19",
     "title": "Causal Inference from a Single Social Network",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/10-59.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/10-59.md"
   },
   {
     "key": "10-104",
@@ -1927,8 +1927,8 @@
     ],
     "date": "2024-07-29",
     "title": "Randomized Saturation Designs and Their Optimal Allocation",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/10-406.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/10-406.md"
   },
   {
     "key": "10-447",
@@ -2235,8 +2235,8 @@
     ],
     "date": "2024-03-04",
     "title": "Network Cluster-Robust Inference",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/12-108.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/12-108.md"
   },
   {
     "key": "13-0",
@@ -2409,8 +2409,8 @@
     ],
     "date": "2023-08-11",
     "title": "Taxable-Income Elasticities and What Kinks Identify",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/16-0.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/16-0.md"
   },
   {
     "key": "16-25",
@@ -3750,8 +3750,8 @@
     ],
     "date": "2024-01-27",
     "title": "Prediction-Powered Inference: Rectifiers, Estimators, and Validity",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/31-0.md"
+    "adaptation": "reviewed-notes",
+    "manuscript": "scripts/notes/reviewed-notes/31-0.md"
   },
   {
     "key": "31-29",

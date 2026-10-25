@@ -74,13 +74,19 @@ a(1-F(y))\le p(1-H(y))\le b(1-F(y)).
 \frac{pH(y)}b\le F(y)\le 1-\frac{p(1-H(y))}b.
 \]</div>{% endraw %}
 <p>Cdfs equal zero below the support and one at a finite upper support endpoint. The interior formulas with {% raw %}<span class="math inline">\(a=0\)</span>{% endraw %} can have endpoint jumps when completed as cdfs on a bounded support. Under A1, those envelopes are limits of admissible cdfs.</p>
-<p>For example, let {% raw %}<span class="math inline">\(p=1/2\)</span>{% endraw %}, {% raw %}<span class="math inline">\(c=1/10\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(H(y)=1/2\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\(a=2/5\)</span>{% endraw %}, {% raw %}<span class="math inline">\(b=3/5\)</span>{% endraw %}, and</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: numerical-cdf-example
+An added numerical illustration; the source CDF bounds and their compatibility proof remain visible.
+
+For example, let $p=1/2$, $c=1/10$, and $H(y)=1/2$. Then $a=2/5$, $b=3/5$, and
+
+$$
 \underline F_x^c(y\mid w)=\max(5/12,3/8)=5/12,
 \qquad
 \overline F_x^c(y\mid w)=\min(5/8,7/12)=7/12.
-\]</div>{% endraw %}
-<p>Thus the observed median can have any population percentile between these values.</p>
+$$
+
+Thus the observed median can have any population percentile between these values.
+-->
 <div id="cdep-compatibility" class="theorem" data-note-number="2" data-note-kind="Theorem">
 <p><strong>Theorem 2</strong>. (Compatibility and sharpness.) Under A1–A2, the displayed functions bound {% raw %}<span class="math inline">\(F_{Y_x\mid W}\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(0\le c&lt;\min(p_0(w),p_1(w))\)</span>{% endraw %}, each envelope is an admissible potential-outcome cdf, and either envelope can be chosen for each {% raw %}<span class="math inline">\(x\)</span>{% endraw %} in one joint law reproducing both observed treatment-group distributions. For every {% raw %}<span class="math inline">\(c\in[0,1]\)</span>{% endraw %}, the interior-support bounds can be approached by such joint laws satisfying A1.</p>
 </div>
@@ -146,12 +152,18 @@ U(c)=M_1^{c,+}-M_0^{c,-}.
 <p>These bounds are sharp. Every value strictly between the two endpoints is attainable. Both endpoints are attained when the strict-overlap condition in the compatibility theorem holds almost everywhere.</p>
 </div>
 <p><strong>Proof.</strong> Cdf order reverses under generalized inversion, so {% raw %}<span class="math inline">\(\underline F\le F\le\overline F\)</span>{% endraw %} implies {% raw %}<span class="math inline">\((\overline F)^{-1}\le Q_F\le(\underline F)^{-1}\)</span>{% endraw %}. The quantile representation {% raw %}<span class="math inline">\(Q_F(V)\sim F\)</span>{% endraw %} for a uniform {% raw %}<span class="math inline">\(V\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(\mathbb{E}_F Y=\int_0^1Q_F(\tau)d\tau\)</span>{% endraw %}. Integrating the quantile bounds first over {% raw %}<span class="math inline">\(\tau\)</span>{% endraw %} and then over {% raw %}<span class="math inline">\(W\)</span>{% endraw %} gives the mean bounds. The compatibility theorem permits opposing endpoint choices for {% raw %}<span class="math inline">\(Y_1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y_0\)</span>{% endraw %}. Its approximating distributions converge to those choices, and the integrability condition permits dominated convergence for their means. The appendix proves attainment of intermediate values. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
-<p>For example, suppose both observed conditional distributions are uniform on {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %} and {% raw %}<span class="math inline">\(p_0=p_1=1/2\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(0\le c&lt;1/2\)</span>{% endraw %},</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: uniform-outcome-example
+An added uniform-outcome illustration, separate from the paper's quantile and mean bounds.
+
+For example, suppose both observed conditional distributions are uniform on $[0,1]$ and $p_0=p_1=1/2$. For $0\le c<1/2$,
+
+$$
 Q_x^{c,\pm}(\tau)=\tau\pm2c\min(\tau,1-\tau),\qquad
 \int_0^1\min(\tau,1-\tau)\,d\tau=\frac14.
-\]</div>{% endraw %}
-<p>The mean endpoints are {% raw %}<span class="math inline">\(1/2\pm c/2\)</span>{% endraw %}, giving the ATE interval {% raw %}<span class="math inline">\([-c,c]\)</span>{% endraw %}.</p>
+$$
+
+The mean endpoints are $1/2\pm c/2$, giving the ATE interval $[-c,c]$.
+-->
 <h3 data-note-section="5" id="30-0-att">5. Average effect on the treated</h3>
 <p>Let {% raw %}<span class="math inline">\(p=P(X=1)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(m_d=\mathbb{E}[Y\mid X=d]\)</span>{% endraw %}. Consistency gives {% raw %}<span class="math inline">\(\mathbb{E}[Y_1\mid X=1]=m_1\)</span>{% endraw %} and</p>
 {% raw %}<div class="math display">\[
@@ -175,8 +187,18 @@ U_{\mathrm{ATT}}(c)=m_1-\frac{M_0^{c,-}-(1-p)m_0}{p}.
 {% raw %}<div class="math display">\[
 F_{Y_x}(y)=\mathbb{E}[F_{Y_x\mid W}(y\mid W)].
 \]</div>{% endraw %}
-<p>Average the conditional cdf endpoints over {% raw %}<span class="math inline">\(W\)</span>{% endraw %}, then invert to obtain marginal quantile endpoints. For example, if {% raw %}<span class="math inline">\(Y=0\)</span>{% endraw %} in a covariate group of probability {% raw %}<span class="math inline">\(3/4\)</span>{% endraw %} and {% raw %}<span class="math inline">\(Y=10\)</span>{% endraw %} otherwise, the average conditional median is {% raw %}<span class="math inline">\(5/2\)</span>{% endraw %} and the marginal median is zero. Continuous approximations preserve the discrepancy.</p>
-<p>The quantile treatment effect {% raw %}<span class="math inline">\(Q_{Y_1}(\tau)-Q_{Y_0}(\tau)\)</span>{% endraw %} compares two marginal quantiles. The distribution of {% raw %}<span class="math inline">\(Y_1-Y_0\)</span>{% endraw %} also depends on their joint law. If both marginals are uniform on {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %}, the quantile treatment effect is zero. The coupling {% raw %}<span class="math inline">\(Y_1=Y_0\)</span>{% endraw %} gives zero effects for everyone, whereas {% raw %}<span class="math inline">\(Y_1=1-Y_0\)</span>{% endraw %} gives a uniform effect on {% raw %}<span class="math inline">\([-1,1]\)</span>{% endraw %}.</p>
+<p>Average the conditional cdf endpoints over {% raw %}<span class="math inline">\(W\)</span>{% endraw %}, then invert to obtain marginal quantile endpoints.</p>
+<!-- original-paper-scope: conditional-median-example
+An added example comparing marginal and averaged conditional medians.
+
+For example, if $Y=0$ in a covariate group of probability $3/4$ and $Y=10$ otherwise, the average conditional median is $5/2$ and the marginal median is zero. Continuous approximations preserve the discrepancy.
+-->
+<p>The quantile treatment effect {% raw %}<span class="math inline">\(Q_{Y_1}(\tau)-Q_{Y_0}(\tau)\)</span>{% endraw %} compares two marginal quantiles. The distribution of {% raw %}<span class="math inline">\(Y_1-Y_0\)</span>{% endraw %} also depends on their joint law.</p>
+<!-- original-paper-scope: individual-effect-couplings
+An added pair of couplings illustrating individual-effect distributions; the distinction between marginal quantiles and individual effects remains visible.
+
+If both marginals are uniform on $[0,1]$, the quantile treatment effect is zero. The coupling $Y_1=Y_0$ gives zero effects for everyone, whereas $Y_1=1-Y_0$ gives a uniform effect on $[-1,1]$.
+-->
 <p>At sufficiently large {% raw %}<span class="math inline">\(c\)</span>{% endraw %}, A2 imposes no selection restriction. If {% raw %}<span class="math inline">\(Y_x\)</span>{% endraw %} has known finite support endpoints {% raw %}<span class="math inline">\(\ell_x(w),u_x(w)\)</span>{% endraw %}, its conditional mean bounds reduce to</p>
 {% raw %}<div class="math display">\[
 p_x(w)\mathbb{E}[Y\mid X=x,W=w]+(1-p_x(w))\ell_x(w)

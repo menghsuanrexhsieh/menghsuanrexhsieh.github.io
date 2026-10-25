@@ -157,12 +157,19 @@ b_k=\sum_{j=1}^J(q_{1kj}-q_{0kj})_+,
 =b_1-(p_{11}-p_{01}),
 \]</div>{% endraw %}
 <p>the restriction for mediator state one is equivalent to {% raw %}<span class="math inline">\(\mu_{01}\leq\mu_{11}\)</span>{% endraw %}. These two measure inequalities are the binary monotonicity restrictions associated with instrument-validity testing when treatment is viewed as an instrument for the mediator.</p>
-<p>For example, take {% raw %}<span class="math inline">\(a_0=0.3\)</span>{% endraw %} and {% raw %}<span class="math inline">\(a_1=0.6\)</span>{% endraw %}. Then {% raw %}<span class="math inline">\((\theta_{00},\theta_{01},\theta_{11})=(0.4,0.3,0.3)\)</span>{% endraw %}. Suppose the state-zero outcome masses at {% raw %}<span class="math inline">\(Y=0,1\)</span>{% endraw %} are {% raw %}<span class="math inline">\((0.30,0.10)\)</span>{% endraw %} under treatment and {% raw %}<span class="math inline">\((0.25,0.45)\)</span>{% endraw %} under control. Their totals agree with the mediator margins, but</p>
-{% raw %}<div class="math display">\[
+<!-- original-paper-scope: numerical-mediator-examples
+Two added numerical illustrations of observable violations. The source binary-mediator restrictions and the general outcome-set derivation remain visible.
+
+For example, take $a_0=0.3$ and $a_1=0.6$. Then $(\theta_{00},\theta_{01},\theta_{11})=(0.4,0.3,0.3)$. Suppose the state-zero outcome masses at $Y=0,1$ are $(0.30,0.10)$ under treatment and $(0.25,0.45)$ under control. Their totals agree with the mediator margins, but
+
+$$
 b_0=(0.30-0.25)_++(0.10-0.45)_+=0.05.
-\]</div>{% endraw %}
-<p>Proposition 1 gives {% raw %}<span class="math inline">\(r_0\geq0.05\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\nu_0\geq0.05/0.4=0.125\)</span>{% endraw %}. The treatment-induced increase in mass at outcome zero cannot be supplied by entrants into this mediator state.</p>
-<p>For an example requiring a disconnected outcome set, take state-{% raw %}<span class="math inline">\(k\)</span>{% endraw %} masses {% raw %}<span class="math inline">\((0.18,0.04,0.18)\)</span>{% endraw %} under treatment and {% raw %}<span class="math inline">\((0.10,0.20,0.10)\)</span>{% endraw %} under control at three ordered outcomes. The differences are {% raw %}<span class="math inline">\((0.08,-0.16,0.08)\)</span>{% endraw %}. Every lower-interval difference has absolute value at most {% raw %}<span class="math inline">\(0.08\)</span>{% endraw %}, but the first and third cells together give {% raw %}<span class="math inline">\(b_k=0.16\)</span>{% endraw %}. If a feasible matrix has stayer mass {% raw %}<span class="math inline">\(0.30\)</span>{% endraw %} and entrant mass {% raw %}<span class="math inline">\(0.10\)</span>{% endraw %}, then {% raw %}<span class="math inline">\(r_k\geq0.06\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\nu_k\geq0.20\)</span>{% endraw %}. Lower-interval comparisons would miss this violation.</p>
+$$
+
+Proposition 1 gives $r_0\geq0.05$ and $\nu_0\geq0.05/0.4=0.125$. The treatment-induced increase in mass at outcome zero cannot be supplied by entrants into this mediator state.
+
+For an example requiring a disconnected outcome set, take state-$k$ masses $(0.18,0.04,0.18)$ under treatment and $(0.10,0.20,0.10)$ under control at three ordered outcomes. The differences are $(0.08,-0.16,0.08)$. Every lower-interval difference has absolute value at most $0.08$, but the first and third cells together give $b_k=0.16$. If a feasible matrix has stayer mass $0.30$ and entrant mass $0.10$, then $r_k\geq0.06$ and $\nu_k\geq0.20$. Lower-interval comparisons would miss this violation.
+-->
 <h3 data-note-section="6" id="23-0-how-much-can-be-learned">6. Minimum stayer shares under ordered monotonicity</h3>
 <p>For a general nonempty {% raw %}<span class="math inline">\(\Theta_I\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(t_k^{\min}=\min_{\vartheta\in\Theta_I}\vartheta_{kk}\)</span>{% endraw %}. Compactness ensures attainment for each coordinate. Separate minimizers need not form one feasible matrix. Ordered monotonicity alone has the stronger property below.</p>
 <p><span id="23-0-constructing-all-minimum-stayer-shares-at-once"></span></p>
@@ -185,13 +192,22 @@ c_k=\sum_{l&lt;k,\,j\geq k}\vartheta_{lj}.
 \]</div>{% endraw %}
 <p>It bounds the entrants into {% raw %}<span class="math inline">\(k\)</span>{% endraw %}, giving {% raw %}<span class="math inline">\(\vartheta_{kk}\geq(p_{1k}-c_k)_+\)</span>{% endraw %}. Joint attainment follows by filling destination columns in order, using earlier origin rows before the diagonal row. At step {% raw %}<span class="math inline">\(k\)</span>{% endraw %}, those earlier rows have exactly {% raw %}<span class="math inline">\(c_k\)</span>{% endraw %} unused mass. The complete construction is in the <a href="#23-0-appendix-minimum-stayers">appendix</a>.</p>
 <p>Combining this proposition with the sharpness theorem in the companion post, full mediation is compatible with the observed distributions under ordered monotonicity if and only if the cumulative inequalities hold and {% raw %}<span class="math inline">\(t_k^{\min}\leq O_k\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(k\)</span>{% endraw %}. Additional restrictions on {% raw %}<span class="math inline">\(R\)</span>{% endraw %} can invalidate the simultaneous-minimizer construction; in that case the original joint feasibility problem must be used.</p>
-<p>The distinction matters even when each coordinate minimum is zero. For example, let {% raw %}<span class="math inline">\(K=3\)</span>{% endraw %}, let both mediator margins be uniform, and impose {% raw %}<span class="math inline">\(\sum_k\vartheta_{kk}\geq1/3\)</span>{% endraw %}. A matrix placing mass {% raw %}<span class="math inline">\(1/3\)</span>{% endraw %} on one fixed state and on each direction of a swap between the other two states is feasible. Choosing different fixed states shows that every coordinate minimum is zero. If all {% raw %}<span class="math inline">\(O_k=0\)</span>{% endraw %}, however, the null requires every diagonal entry to vanish, contradicting the restriction on their sum. No feasible matrix attains all three zero diagonal shares.</p>
+<!-- original-paper-scope: extra-joint-feasibility-example
+An added three-state counterexample for an extra diagonal-sum restriction. The joint-feasibility requirement and the source simultaneous-minimum construction remain visible.
+
+The distinction matters even when each coordinate minimum is zero. For example, let $K=3$, let both mediator margins be uniform, and impose $\sum_k\vartheta_{kk}\geq1/3$. A matrix placing mass $1/3$ on one fixed state and on each direction of a swap between the other two states is feasible. Choosing different fixed states shows that every coordinate minimum is zero. If all $O_k=0$, however, the null requires every diagonal entry to vanish, contradicting the restriction on their sum. No feasible matrix attains all three zero diagonal shares.
+-->
 <h3 data-note-section="7" id="23-0-what-coarsening-changes">7. Discretization and within-bin movements</h3>
 <p>Let {% raw %}<span class="math inline">\(\{B_j\}_{j=1}^J\)</span>{% endraw %} be a fixed measurable partition of the outcome space. After replacing {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} by its cell label, the discrepancy becomes</p>
 {% raw %}<div class="math display">\[
 b_k^{\mathrm{disc}}=\sum_{j=1}^J\{\mu_{1k}(B_j)-\mu_{0k}(B_j)\}_+\leq b_k.
 \]</div>{% endraw %}
-<p>Indeed, the maximizing discretized set corresponds to a union of the original cells and is among the Borel sets allowed in {% raw %}<span class="math inline">\(b_k\)</span>{% endraw %}. Equivalently, merging two cells replaces {% raw %}<span class="math inline">\(u_++v_+\)</span>{% endraw %} by {% raw %}<span class="math inline">\((u+v)_+\leq u_++v_+\)</span>{% endraw %}. Outcome coarsening therefore preserves necessary null restrictions but can remove identifying information. The three-outcome example above illustrates cancellation when positive and negative cells are merged.</p>
+<p>Indeed, the maximizing discretized set corresponds to a union of the original cells and is among the Borel sets allowed in {% raw %}<span class="math inline">\(b_k\)</span>{% endraw %}. Equivalently, merging two cells replaces {% raw %}<span class="math inline">\(u_++v_+\)</span>{% endraw %} by {% raw %}<span class="math inline">\((u+v)_+\leq u_++v_+\)</span>{% endraw %}. Outcome coarsening therefore preserves necessary null restrictions but can remove identifying information.</p>
+<!-- original-paper-scope: hidden-example-reference
+Reference to the supplementary numerical example commented out above.
+
+The three-outcome example above illustrates cancellation when positive and negative cells are merged.
+-->
 <p>Coarsening the mediator changes the principal strata. Let {% raw %}<span class="math inline">\(b(M)\)</span>{% endraw %} be a bin label and {% raw %}<span class="math inline">\(\widetilde S_{kk}=\{b(M(0))=b(M(1))=k\}\)</span>{% endraw %}. A member of this group can have {% raw %}<span class="math inline">\(M(0)\ne M(1)\)</span>{% endraw %}. Under full mediation,</p>
 {% raw %}<div class="math display">\[
 Y_1-Y_0=Y(0,M(1))-Y(0,M(0)),
@@ -208,7 +224,7 @@ P\{Y(0,M(1))\ne Y(0,M(0))\mid\widetilde S_{kk}\}\leq\varepsilon_k.
 \quad\text{for every }k
 \]</div>{% endraw %}
 <p>for one feasible matrix of bin-stratum shares. A bound stated only for each fixed pair {% raw %}<span class="math inline">\((m,m&#x27;)\)</span>{% endraw %} does not automatically supply this bound for the endogenous pair {% raw %}<span class="math inline">\((M(0),M(1))\)</span>{% endraw %}. The within-bin assumption and any movement restrictions must be justified for the binned mediator being analyzed.</p>
-<p>The <a href="{% post_url 2024-07-18-sharp-mechanism-bounds-average-effects-and-inference %}">next post</a> constructs a joint potential-outcome law attaining the affected-mass bounds and derives the corresponding inference procedures.</p>
+<p>The <a href="{% post_url 2024-07-18-sharp-mechanism-bounds-average-effects-and-inference %}">next post</a> constructs a joint potential-outcome law attaining the affected-mass bounds and states the paper’s moment-inequality formulation for inference.</p>
 <h3 data-note-section="8" id="23-0-appendix-minimum-stayers">8. Appendix: simultaneous minimum stayer shares</h3>
 <div class="proof">
 <p><strong>Proof.</strong> Under monotonicity, every unit with {% raw %}<span class="math inline">\(M(1)\leq m_k\)</span>{% endraw %} also has {% raw %}<span class="math inline">\(M(0)\leq m_k\)</span>{% endraw %}, proving the necessary cumulative inequalities. Moreover,</p>
