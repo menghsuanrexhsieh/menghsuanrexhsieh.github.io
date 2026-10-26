@@ -47,7 +47,7 @@ S_n\triangleq\bigcap_{j=1}^J\{T_{j,n}\le q_{j,n}\}.
 \mu(A\cap B)\ge\mu(A)\mu(B).
 
 \tag{3}\]</div>{% endraw %}
-<p>Here {% raw %}<span class="math inline">\(-A\triangleq\{-a:a\in A\}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-B\triangleq\{-b:b\in B\}\)</span>{% endraw %} are the reflections of the two sets through the origin: every coordinate of every point changes sign. Symmetry means {% raw %}<span class="math inline">\(A=-A\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B=-B\)</span>{% endraw %}, so a point belongs to either set exactly when its negative does. For example, reflecting {% raw %}<span class="math inline">\([1,2]\)</span>{% endraw %} gives {% raw %}<span class="math inline">\([-2,-1]\)</span>{% endraw %}, while reflecting {% raw %}<span class="math inline">\([-c,c]\)</span>{% endraw %} gives the same interval.</p>
+<p>Here {% raw %}<span class="math inline">\(\mu(A)\)</span>{% endraw %} is the probability that the Gaussian vector belongs to {% raw %}<span class="math inline">\(A\)</span>{% endraw %}, and centered means that every coordinate has mean zero. The sets {% raw %}<span class="math inline">\(-A\triangleq\{-a:a\in A\}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-B\triangleq\{-b:b\in B\}\)</span>{% endraw %} are the reflections of the two sets through the origin: every coordinate of every point changes sign. Symmetry means {% raw %}<span class="math inline">\(A=-A\)</span>{% endraw %} and {% raw %}<span class="math inline">\(B=-B\)</span>{% endraw %}, so a point belongs to either set exactly when its negative does. For example, reflecting {% raw %}<span class="math inline">\([1,2]\)</span>{% endraw %} gives {% raw %}<span class="math inline">\([-2,-1]\)</span>{% endraw %}, while reflecting {% raw %}<span class="math inline">\([-c,c]\)</span>{% endraw %} gives the same interval.</p>
 
 <p>When {% raw %}<span class="math inline">\(A\)</span>{% endraw %} represents an event for a random vector {% raw %}<span class="math inline">\(X\)</span>{% endraw %}, its probability is {% raw %}<span class="math inline">\(\mathbb P(X\in A)\)</span>{% endraw %}. Reflection gives the event {% raw %}<span class="math inline">\(\{X\in -A\}=\{-X\in A\}\)</span>{% endraw %}, with the same interpretation for {% raw %}<span class="math inline">\(B\)</span>{% endraw %}. The complement of the event is {% raw %}<span class="math inline">\(\{X\notin A\}\)</span>{% endraw %}, written {% raw %}<span class="math inline">\(\{X\in A^c\}\)</span>{% endraw %}.</p>
 
@@ -107,10 +107,10 @@ W\in K,
 K\triangleq\bigcap_{j=1}^J\{w:T_j(w)\le q_j\}.
 
 \tag{5}\]</div>{% endraw %}
-<p>Each sublevel set is convex and symmetric, so their intersection has both properties. This intersection is the object to which Proposition <a href="#pt-gaussian-coverage">1</a> applies. The critical values determine its size and the probability of reporting inference.</p>
+<p>Each individual acceptance region {% raw %}<span class="math inline">\(\{w:T_j(w)\le q_j\}\)</span>{% endraw %} is convex and symmetric, so the region {% raw %}<span class="math inline">\(K\)</span>{% endraw %} in which all tests pass has both properties. Proposition <a href="#pt-gaussian-coverage">1</a> therefore applies to inference conditional on {% raw %}<span class="math inline">\(W\in K\)</span>{% endraw %}. The critical values determine the size of {% raw %}<span class="math inline">\(K\)</span>{% endraw %} and the probability of reporting inference, {% raw %}<span class="math inline">\(\mathbb P(W\in K)\)</span>{% endraw %}.</p>
 
 <h3 data-note-section="3" id="pretesting-0-scalar">3. One pre-test and one estimation error</h3>
-<p>Let {% raw %}<span class="math inline">\(Z,W\)</span>{% endraw %} have standard normal marginals and correlation {% raw %}<span class="math inline">\(\rho\)</span>{% endraw %}, and retain the experiment when {% raw %}<span class="math inline">\(|W|\le a\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(a&gt;0\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(|\rho|&lt;1\)</span>{% endraw %}, write</p>
+<p>Let {% raw %}<span class="math inline">\((Z,W)\)</span>{% endraw %} be jointly Gaussian, with each variable having mean zero and variance one, and let {% raw %}<span class="math inline">\(\rho\)</span>{% endraw %} be their correlation. Here {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} represents the standardized estimation error and {% raw %}<span class="math inline">\(W\)</span>{% endraw %} the standardized estimate used in the pre-test. Inference is reported when the pre-test passes, {% raw %}<span class="math inline">\(|W|\le a\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(a&gt;0\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(|\rho|&lt;1\)</span>{% endraw %}, the joint Gaussian distribution gives the representation</p>
 
 {% raw %}<span id="eq:pt-scalar-decomposition"></span><div class="math display">\[
 Z=\rho W+s\varepsilon,
@@ -118,7 +118,7 @@ Z=\rho W+s\varepsilon,
 \qquad W,\varepsilon\ \text{independent }\mathcal{N}(0,1).
 
 \tag{6}\]</div>{% endraw %}
-<p>Let {% raw %}<span class="math inline">\(\phi\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Phi\)</span>{% endraw %} be the standard normal density and distribution function, and put {% raw %}<span class="math inline">\(D_a=2\Phi(a)-1\)</span>{% endraw %}.</p>
+<p>Let {% raw %}<span class="math inline">\(\phi\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Phi\)</span>{% endraw %} be the standard normal density and distribution function, and put {% raw %}<span class="math inline">\(D_a=2\Phi(a)-1\)</span>{% endraw %}, the probability that the pre-test passes.</p>
 
 <div id="pt-scalar-moments" class="proposition" data-note-number="2" data-note-kind="Proposition">
 <p><strong>Proposition 2</strong>. (Conditional mean and variance.) For {% raw %}<span class="math inline">\(-1\le\rho\le1\)</span>{% endraw %},</p>
@@ -132,7 +132,7 @@ Z=\rho W+s\varepsilon,
 \tag{7}\]</div>{% endraw %}
 </div>
 <div class="proof">
-<p><em>Proof.</em> The truncated density of {% raw %}<span class="math inline">\(W\)</span>{% endraw %} is symmetric, so its conditional mean is zero. Since {% raw %}<span class="math inline">\(\phi&#x27;(w)=-w\phi(w)\)</span>{% endraw %}, integration by parts gives</p>
+<p><em>Proof.</em> Conditional on {% raw %}<span class="math inline">\(|W|\le a\)</span>{% endraw %}, {% raw %}<span class="math inline">\(W\)</span>{% endraw %} has density {% raw %}<span class="math inline">\(\phi(w)/D_a\)</span>{% endraw %} on {% raw %}<span class="math inline">\([-a,a]\)</span>{% endraw %}. This density is symmetric about zero, so the conditional mean is zero. Since {% raw %}<span class="math inline">\(\phi&#x27;(w)=-w\phi(w)\)</span>{% endraw %}, integration by parts gives</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
@@ -203,7 +203,7 @@ g&#x27;(w)=\frac r{s}\left[
 
 </div>
 <h3 data-note-section="4" id="pretesting-0-sample-inference">4. Conditional limits and Wald inference</h3>
-<p>They obtain their asymptotic coverage result by applying the Gaussian argument to the joint limiting distribution. To transfer it to the sample, the joint and marginal probabilities in <a href="#eq:pt-coverage-ratio">(2)</a> must converge, and the limiting denominator must be positive. Positive critical values supply both properties in the finite-dimensional setting.</p>
+<p>They obtain their asymptotic coverage result by applying the Gaussian argument to the joint limiting distribution. In <a href="#eq:pt-coverage-ratio">(2)</a>, the numerator is the probability that the confidence region covers {% raw %}<span class="math inline">\(\beta_0\)</span>{% endraw %} and all pre-tests pass; the denominator is the probability that all pre-tests pass. Taking the limit of this ratio requires both probabilities to converge and the denominator to approach a positive number. The next lemma shows that, in the Gaussian limit, passing the tests has positive probability and landing exactly on the boundary between passing and rejecting has probability zero.</p>
 
 <div id="pt-boundary" class="lemma" data-note-number="4" data-note-kind="Lemma">
 <p><strong>Lemma 4</strong>. (Acceptance probability and boundary.) Let {% raw %}<span class="math inline">\(W\)</span>{% endraw %} be a centered Gaussian vector, and let {% raw %}<span class="math inline">\(T_1,\ldots,T_J\)</span>{% endraw %} be finite-valued, convex, even functions on {% raw %}<span class="math inline">\(\mathbb R^q\)</span>{% endraw %} with {% raw %}<span class="math inline">\(T_j(0)=0\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(q_j&gt;0\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(K\)</span>{% endraw %} as in <a href="#eq:pt-intersection">(5)</a>. Then</p>
@@ -215,7 +215,7 @@ g&#x27;(w)=\frac r{s}\left[
 \]</div>{% endraw %}
 </div>
 <div class="proof">
-<p><em>Proof.</em> Let {% raw %}<span class="math inline">\(L\)</span>{% endraw %} be the linear support of {% raw %}<span class="math inline">\(W\)</span>{% endraw %}. On {% raw %}<span class="math inline">\(L\)</span>{% endraw %}, a nonconstant Gaussian vector has a strictly positive density with respect to Lebesgue measure of dimension {% raw %}<span class="math inline">\(\dim L\)</span>{% endraw %}. Finite convex functions on a Euclidean space are continuous. Since {% raw %}<span class="math inline">\(T_j(0)=0&lt;q_j\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(j\)</span>{% endraw %}, a neighborhood of zero in {% raw %}<span class="math inline">\(L\)</span>{% endraw %} lies in the strict acceptance region. Its Gaussian probability is positive.</p>
+<p><em>Proof.</em> Let {% raw %}<span class="math inline">\(L\)</span>{% endraw %} be the smallest linear subspace containing {% raw %}<span class="math inline">\(W\)</span>{% endraw %} with probability one. If {% raw %}<span class="math inline">\(L\)</span>{% endraw %} has positive dimension, {% raw %}<span class="math inline">\(W\)</span>{% endraw %} has a strictly positive Gaussian density with respect to volume measured within {% raw %}<span class="math inline">\(L\)</span>{% endraw %}. Finite convex functions on a Euclidean space are continuous. Since {% raw %}<span class="math inline">\(T_j(0)=0&lt;q_j\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(j\)</span>{% endraw %}, every test statistic is below its critical value throughout a sufficiently small neighborhood of zero in {% raw %}<span class="math inline">\(L\)</span>{% endraw %}. This neighborhood has positive Gaussian probability.</p>
 
 <p>For any {% raw %}<span class="math inline">\(j\)</span>{% endraw %}, a point {% raw %}<span class="math inline">\(w\in L\)</span>{% endraw %} with {% raw %}<span class="math inline">\(T_j(w)=q_j\)</span>{% endraw %} belongs to the boundary in {% raw %}<span class="math inline">\(L\)</span>{% endraw %} of {% raw %}<span class="math inline">\(K_j=\{w\in L:T_j(w)\le q_j\}\)</span>{% endraw %}. Indeed, for {% raw %}<span class="math inline">\(t&gt;1\)</span>{% endraw %}, convexity and {% raw %}<span class="math inline">\(T_j(0)=0\)</span>{% endraw %} imply</p>
 
@@ -224,11 +224,11 @@ q_j=T_j(w)
 \le t^{-1}T_j(tw),
 \qquad T_j(tw)\ge tq_j&gt;q_j.
 \]</div>{% endraw %}
-<p>Points outside {% raw %}<span class="math inline">\(K_j\)</span>{% endraw %} therefore approach {% raw %}<span class="math inline">\(w\)</span>{% endraw %} along its ray from zero. The boundary of a convex set with nonempty interior in {% raw %}<span class="math inline">\(L\)</span>{% endraw %} has Lebesgue measure zero in {% raw %}<span class="math inline">\(L\)</span>{% endraw %}, and hence Gaussian probability zero. The event in the second conclusion is contained in the union of these {% raw %}<span class="math inline">\(J\)</span>{% endraw %} boundaries. If {% raw %}<span class="math inline">\(L=\{0\}\)</span>{% endraw %}, all the statistics equal zero almost surely and the conclusions follow from {% raw %}<span class="math inline">\(q_j&gt;0\)</span>{% endraw %}. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+<p>Points outside {% raw %}<span class="math inline">\(K_j\)</span>{% endraw %} therefore approach {% raw %}<span class="math inline">\(w\)</span>{% endraw %} along its ray from zero. The boundary of a convex set with nonempty interior in {% raw %}<span class="math inline">\(L\)</span>{% endraw %} has zero volume within {% raw %}<span class="math inline">\(L\)</span>{% endraw %} (zero Lebesgue measure), and hence Gaussian probability zero. If {% raw %}<span class="math inline">\(\max_j(T_j(W)-q_j)=0\)</span>{% endraw %}, at least one statistic equals its critical value, so {% raw %}<span class="math inline">\(W\)</span>{% endraw %} belongs to one of these {% raw %}<span class="math inline">\(J\)</span>{% endraw %} boundaries. If {% raw %}<span class="math inline">\(L=\{0\}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(W=0\)</span>{% endraw %} with probability one, and all the statistics equal zero. Positive critical values then give acceptance probability one and boundary probability zero. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 
 </div>
 <div id="pt-joint-limit" class="assumption" data-note-number="5" data-note-kind="Assumption">
-<p><strong>Assumption 5</strong>. (Joint approximation.) At the maintained distribution, suppose</p>
+<p><strong>Assumption 5</strong>. (Joint approximation.) Fix a data-generating distribution {% raw %}<span class="math inline">\(P\in\mathcal P_0\)</span>{% endraw %}, so that the model assumptions and the restrictions tested by the pre-tests hold. Suppose that, as the sample size {% raw %}<span class="math inline">\(n\)</span>{% endraw %} grows, the standardized estimation error {% raw %}<span class="math inline">\(Z_n\)</span>{% endraw %} and the vector {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} entering the specification tests have the following joint limiting distribution:</p>
 
 {% raw %}<span id="eq:pt-joint-limit"></span><div class="math display">\[
 (Z_n,W_n)\Rightarrow(Z,W),
@@ -238,13 +238,13 @@ q_j=T_j(w)
 \begin{pmatrix}I_p&amp;R\\R&#x27;&amp;\Omega\end{pmatrix}\right).
 
 \tag{10}\]</div>{% endraw %}
-<p>The displayed covariance matrix is positive semidefinite. For {% raw %}<span class="math inline">\(j=1,\ldots,J\)</span>{% endraw %}, assume</p>
+<p>Here {% raw %}<span class="math inline">\(\Rightarrow\)</span>{% endraw %} denotes convergence in distribution, {% raw %}<span class="math inline">\(I_p\)</span>{% endraw %} is the {% raw %}<span class="math inline">\(p\times p\)</span>{% endraw %} identity matrix, {% raw %}<span class="math inline">\(\Omega=\operatorname{Var}(W)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(R=\operatorname{Cov}(Z,W)\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(Z\)</span>{% endraw %} has a standard multivariate normal distribution, and {% raw %}<span class="math inline">\(R\)</span>{% endraw %} records its covariances with the coordinates of {% raw %}<span class="math inline">\(W\)</span>{% endraw %}. The displayed covariance matrix is positive semidefinite. For {% raw %}<span class="math inline">\(j=1,\ldots,J\)</span>{% endraw %}, assume</p>
 
 {% raw %}<div class="math display">\[
 T_{j,n}=T_j(W_n)+o_P(1),
 \qquad q_{j,n}\xrightarrow{P}q_j&gt;0,
 \]</div>{% endraw %}
-<p>where the functions {% raw %}<span class="math inline">\(T_j\)</span>{% endraw %} satisfy the conditions of Lemma <a href="#pt-boundary">4</a>. All random quantities are measurable.</p>
+<p>where the functions {% raw %}<span class="math inline">\(T_j\)</span>{% endraw %} satisfy the conditions of Lemma <a href="#pt-boundary">4</a>. The notation {% raw %}<span class="math inline">\(o_P(1)\)</span>{% endraw %} denotes a remainder whose absolute value exceeds any fixed positive number with probability tending to zero. Likewise, {% raw %}<span class="math inline">\(q_{j,n}\xrightarrow{P}q_j\)</span>{% endraw %} means that {% raw %}<span class="math inline">\(\mathbb P(|q_{j,n}-q_j|&gt;\epsilon)\to0\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(\epsilon&gt;0\)</span>{% endraw %}. Thus the sample statistic is approximated by {% raw %}<span class="math inline">\(T_j(W_n)\)</span>{% endraw %}, and its critical value approaches the positive constant {% raw %}<span class="math inline">\(q_j\)</span>{% endraw %}. All random quantities are assumed measurable, so the probabilities in the statements below are well defined.</p>
 
 </div>
 <div id="pt-sample-coverage" class="theorem" data-note-number="6" data-note-kind="Theorem">
@@ -264,12 +264,12 @@ T_{j,n}=T_j(W_n)+o_P(1),
 M_n\triangleq\max_j(T_{j,n}-q_{j,n}),
 \qquad M\triangleq\max_j(T_j(W)-q_j).
 \]</div>{% endraw %}
-<p>Continuity of the {% raw %}<span class="math inline">\(T_j\)</span>{% endraw %}, joint convergence, and Slutsky’s theorem give {% raw %}<span class="math inline">\((Z_n,M_n)\Rightarrow(Z,M)\)</span>{% endraw %}. The boundary of {% raw %}<span class="math inline">\(C\times(-\infty,0]\)</span>{% endraw %} is contained in</p>
+<p>All the pre-tests pass exactly when {% raw %}<span class="math inline">\(M_n\le0\)</span>{% endraw %}, so {% raw %}<span class="math inline">\(S_n=\{M_n\le0\}\)</span>{% endraw %}. Continuity of the {% raw %}<span class="math inline">\(T_j\)</span>{% endraw %}, joint convergence, and Slutsky’s theorem give {% raw %}<span class="math inline">\((Z_n,M_n)\Rightarrow(Z,M)\)</span>{% endraw %}. The boundary of {% raw %}<span class="math inline">\(C\times(-\infty,0]\)</span>{% endraw %} is contained in</p>
 
 {% raw %}<div class="math display">\[
 (\partial C\times\mathbb R)\ \cup\ (\mathbb R^p\times\{0\}).
 \]</div>{% endraw %}
-<p>A convex set’s boundary has Lebesgue measure zero in {% raw %}<span class="math inline">\(\mathbb R^p\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(Z\sim\mathcal{N}(0,I_p)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\mathbb P(Z\in\partial C)=0\)</span>{% endraw %}. Lemma <a href="#pt-boundary">4</a> gives {% raw %}<span class="math inline">\(\mathbb P(M=0)=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\mathbb P(M\le0)&gt;0\)</span>{% endraw %}. Convergence on continuity sets therefore yields</p>
+<p>A convex set’s boundary has zero volume in {% raw %}<span class="math inline">\(\mathbb R^p\)</span>{% endraw %}. Since {% raw %}<span class="math inline">\(Z\sim\mathcal{N}(0,I_p)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\mathbb P(Z\in\partial C)=0\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\partial C\)</span>{% endraw %} denotes the boundary of {% raw %}<span class="math inline">\(C\)</span>{% endraw %}. Lemma <a href="#pt-boundary">4</a> gives {% raw %}<span class="math inline">\(\mathbb P(M=0)=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\mathbb P(M\le0)&gt;0\)</span>{% endraw %}. The limiting distribution therefore assigns zero probability to the boundaries of both events below. Joint convergence then gives</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
@@ -281,7 +281,7 @@ M_n\triangleq\max_j(T_{j,n}-q_{j,n}),
 
 </div>
 <h4 data-note-section="4.1" id="pretesting-0-estimated-covariance-matrices">4.1. Estimated covariance matrices</h4>
-<p>They also allow the covariance matrix to be consistently estimated. Let {% raw %}<span class="math inline">\(a_n\to\infty\)</span>{% endraw %} be a deterministic rate and suppose the joint approximation includes</p>
+<p>They also allow the covariance matrix of the limiting estimation error to be estimated from the data. Let {% raw %}<span class="math inline">\(a_n\to\infty\)</span>{% endraw %} be the nonrandom sequence used to scale the estimation error. Suppose the scaled error, the vector {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} entering the specification tests, and the covariance estimator {% raw %}<span class="math inline">\(\widehat V_n\)</span>{% endraw %} satisfy</p>
 
 {% raw %}<span id="eq:pt-covariance"></span><div class="math display">\[
 (a_n(\widehat\beta_n-\beta_0),W_n)\Rightarrow(U,W),
@@ -289,7 +289,7 @@ M_n\triangleq\max_j(T_{j,n}-q_{j,n}),
 \qquad \widehat V_n\xrightarrow{P}V.
 
 \tag{12}\]</div>{% endraw %}
-<p>Assume {% raw %}<span class="math inline">\(\widehat V_n\)</span>{% endraw %} is symmetric and positive definite with probability tending to one. Set</p>
+<p>Here {% raw %}<span class="math inline">\(U\)</span>{% endraw %} is the limiting scaled estimation error, and {% raw %}<span class="math inline">\(V&gt;0\)</span>{% endraw %} means its covariance matrix is positive definite. Assume {% raw %}<span class="math inline">\(\widehat V_n\)</span>{% endraw %} is symmetric and positive definite with probability tending to one. Standardizing the estimation error by this estimated covariance matrix gives</p>
 
 {% raw %}<div class="math display">\[
 Z_n=\widehat V_n^{-1/2}a_n(\widehat\beta_n-\beta_0).
@@ -310,13 +310,13 @@ a_n^2(\widehat\beta_n-b)&#x27;\widehat V_n^{-1}(\widehat\beta_n-b)
 
 </div>
 <div class="proof">
-<p><em>Proof.</em> The symmetric inverse square root is continuous at {% raw %}<span class="math inline">\(V&gt;0\)</span>{% endraw %}, so Slutsky’s theorem gives a standard normal marginal limit for {% raw %}<span class="math inline">\(Z_n\)</span>{% endraw %} and preserves its joint convergence with {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %}. On the samples where {% raw %}<span class="math inline">\(\widehat V_n\)</span>{% endraw %} is positive definite, the coverage event is</p>
+<p><em>Proof.</em> The symmetric inverse square root is continuous at {% raw %}<span class="math inline">\(V&gt;0\)</span>{% endraw %}, so Slutsky’s theorem gives {% raw %}<span class="math inline">\((Z_n,W_n)\Rightarrow(V^{-1/2}U,W)\)</span>{% endraw %}, with {% raw %}<span class="math inline">\(V^{-1/2}U\sim\mathcal{N}(0,I_p)\)</span>{% endraw %}. On the samples where {% raw %}<span class="math inline">\(\widehat V_n\)</span>{% endraw %} is positive definite, the coverage event is</p>
 
 {% raw %}<div class="math display">\[
 \{\beta_0\in\mathrm{CR}_n\}
 =\{Z_n&#x27;Z_n\le\chi^2_{p,1-\alpha}\}.
 \]</div>{% endraw %}
-<p>Apply Theorem <a href="#pt-sample-coverage">6</a> to the centered ball {% raw %}<span class="math inline">\(C=\{z:z&#x27;z\le\chi^2_{p,1-\alpha}\}\)</span>{% endraw %}. The exceptional samples have conditional probability bounded by their unconditional probability divided by {% raw %}<span class="math inline">\(\mathbb P(S_n)\)</span>{% endraw %}, which tends to a positive number. Their contribution vanishes. Under the null, rejection is the complement of the coverage event. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
+<p>Apply Theorem <a href="#pt-sample-coverage">6</a> to the centered ball {% raw %}<span class="math inline">\(C=\{z:z&#x27;z\le\chi^2_{p,1-\alpha}\}\)</span>{% endraw %}. Conditional on {% raw %}<span class="math inline">\(S_n\)</span>{% endraw %}, the probability that {% raw %}<span class="math inline">\(\widehat V_n\)</span>{% endraw %} is not positive definite is at most {% raw %}<span class="math inline">\(\mathbb P(\widehat V_n\not\succ0)/\mathbb P(S_n)\)</span>{% endraw %}. This ratio tends to zero because its numerator tends to zero and its denominator approaches a positive number. On samples where {% raw %}<span class="math inline">\(\widehat V_n\)</span>{% endraw %} is positive definite, rejection under {% raw %}<span class="math inline">\(H_0:\beta_0=b_0\)</span>{% endraw %} is the complement of the coverage event, giving the stated bound on rejection probability. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 
 </div>
 <p>For {% raw %}<span class="math inline">\(a_n=\sqrt n\)</span>{% endraw %}, the normalization is {% raw %}<span class="math inline">\(a_n^2=n\)</span>{% endraw %}. In the scalar case, the interval is</p>
@@ -324,7 +324,7 @@ a_n^2(\widehat\beta_n-b)&#x27;\widehat V_n^{-1}(\widehat\beta_n-b)
 {% raw %}<div class="math display">\[
 \widehat\beta_n\ \pm\ z_{1-\alpha/2}\frac{\sqrt{\widehat V_n}}{a_n}.
 \]</div>{% endraw %}
-<p>A normalization by estimated standard errors can also be imposed directly through a joint limit for the studentized estimates. For local-polynomial RD estimators, this requires a joint Gaussian approximation with smoothing biases negligible after normalization or removed by a justified bias correction. Covariate-continuity and density-continuity estimates can enter {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} at their respective rates.</p>
+<p>The same argument applies when estimates are divided by their estimated standard errors before taking the joint limit. In a regression discontinuity (RD) design, the Gaussian approximation must cover the standardized treatment-effect estimate together with the standardized estimates used to test continuity of covariates or of the density at the cutoff. For local-polynomial estimators, smoothing bias must be small relative to the standard error, or a bias correction with valid standard errors must deliver the centered Gaussian approximation.</p>
 
 <!--
 <h3 data-note-section="5" id="pretesting-0-did">5. A three-period DID example</h3>
