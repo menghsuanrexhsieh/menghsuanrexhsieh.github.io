@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Prediction-Powered Inference: Rectifiers, Estimators, and Validity"
+title: "Prediction-Powered Inference"
 date: "2024-01-27"
 tags: ["statistics", "machine learning"]
-excerpt: "A large collection of predictions can describe a population precisely and still be systematically wrong about its outcomes."
+excerpt: "Combining predictions with labeled data for statistical inference."
 note_series: "Prediction-powered inference"
 note_source: "assets/notes/Overleaf Projects (32 items)/prediction powered inference notes/ideas.tex"
-redirect_from: ["/2024/01/27/prediction-powered-inference-and-the-mean-rectifier/", "/2024/02/25/prediction-powered-confidence-sets-for-convex-losses/", "/2024/03/26/prediction-powered-quantiles-and-regressions/", "/2024/04/25/proofs-for-prediction-powered-estimators/"]
+redirect_from: ["/2024/01/27/prediction-powered-inference-and-the-mean-rectifier/", "/2024/01/27/prediction-powered-inference-rectifiers-estimators-and-validity/", "/2024/02/25/prediction-powered-confidence-sets-for-convex-losses/", "/2024/03/26/prediction-powered-quantiles-and-regressions/", "/2024/04/25/proofs-for-prediction-powered-estimators/"]
 ---
 
 <div class="note-content" markdown="0">

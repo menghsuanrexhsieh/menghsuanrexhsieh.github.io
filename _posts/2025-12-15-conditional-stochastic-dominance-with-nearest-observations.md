@@ -3,7 +3,7 @@ layout: "post"
 title: "Conditional Stochastic Dominance with Nearest Observations"
 date: "2025-12-15"
 tags: ["statistics", "randomization inference"]
-excerpt: "Conditional stochastic dominance can be tested using only a fixed number of observations nearest each target covariate value."
+excerpt: "Testing conditional distribution comparisons using nearby observations."
 note_series: "Permutation and randomization inference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Permutation and Randomization Inference/stats.tex"
 redirect_from: ["/2026/01/03/conditional-stochastic-dominance-with-nearest-observations/", "/2026/01/03/testing-conditional-stochastic-dominance/", "/2026/01/24/induced-order-statistics-at-target-points/", "/2026/02/14/the-limit-distribution-of-a-local-dominance-statistic/"]

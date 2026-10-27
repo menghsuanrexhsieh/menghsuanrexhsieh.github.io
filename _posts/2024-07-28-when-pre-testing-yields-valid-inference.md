@@ -3,7 +3,7 @@ layout: "post"
 title: "When Pre-Testing Yields Valid Inference"
 date: "2024-07-28"
 tags: ["econometrics", "asymptotic theory"]
-excerpt: "The Gaussian correlation inequality explains why symmetric convex specification tests preserve asymptotic coverage under the maintained model."
+excerpt: "When passing a specification test preserves valid inference."
 note_series: "Specification tests and conditional inference"
 note_source: "scripts/notes/paper-notes/pretesting-0.md"
 ---

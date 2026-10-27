@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "The Fragility of Sparsity: Coordinates, Geometry, and Specification Tests"
+title: "The Fragility of Sparsity"
 date: "2024-04-27"
 tags: ["econometrics", "machine learning"]
-excerpt: "A regression's control space is unchanged by an invertible change of basis."
+excerpt: "Why sparsity depends on how regressors are represented."
 note_series: "The fragility of sparsity"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Sparsity (Kolesar Ulrich S)/stats.tex"
-redirect_from: ["/2025/03/08/the-fragility-of-sparsity-setup/", "/2025/03/08/why-sparsity-depends-on-coordinates/", "/2025/03/27/random-rotations-and-sparse-coefficients/", "/2025/04/16/reference-categories-and-sparsity/", "/2025/05/05/ols-and-semiparametric-efficiency/", "/2025/05/05/testing-sparsity-through-efficient-estimator-comparisons/", "/2025/05/05/the-fragility-of-sparsity-coordinates-geometry-and-specification-tests/", "/2025/05/25/testing-sparsity-by-comparing-estimators/", "/2025/06/14/auxiliary-geometry-behind-sparsity-tests/"]
+redirect_from: ["/2024/04/27/the-fragility-of-sparsity-coordinates-geometry-and-specification-tests/", "/2025/03/08/the-fragility-of-sparsity-setup/", "/2025/03/08/why-sparsity-depends-on-coordinates/", "/2025/03/27/random-rotations-and-sparse-coefficients/", "/2025/04/16/reference-categories-and-sparsity/", "/2025/05/05/ols-and-semiparametric-efficiency/", "/2025/05/05/testing-sparsity-through-efficient-estimator-comparisons/", "/2025/05/05/the-fragility-of-sparsity-coordinates-geometry-and-specification-tests/", "/2025/05/25/testing-sparsity-by-comparing-estimators/", "/2025/06/14/auxiliary-geometry-behind-sparsity-tests/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -100,7 +100,7 @@ x^k=(\widetilde x+a)^k
 \]</div>{% endraw %}
 <p>The polynomial function is unchanged, yet its coefficient vector can change from one nonzero term to many. Changing an indicator reference category similarly changes which level differences are represented by zero coefficients.</p>
 
-<p>The geometric objection concerns the assumptions behind <a href="{% post_url 2024-03-02-post-double-selection-orthogonality-assumptions-and-inference %}">post-double selection</a>. When unrestricted OLS is available, it also suggests a way to examine those assumptions.</p>
+<p>The geometric objection concerns the assumptions behind <a href="{% post_url 2024-03-02-post-double-selection %}">post-double selection</a>. When unrestricted OLS is available, it also suggests a way to examine those assumptions.</p>
 
 <h3 data-note-section="4" id="22-0-ols-as-a-specification-check">4. OLS as a specification check</h3>
 <p>Use the model</p>

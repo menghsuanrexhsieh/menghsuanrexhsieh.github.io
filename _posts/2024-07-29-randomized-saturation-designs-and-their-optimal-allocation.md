@@ -3,7 +3,7 @@ layout: "post"
 title: "Randomized Saturation Designs and Their Optimal Allocation"
 date: "2024-07-29"
 tags: ["econometrics", "networks"]
-excerpt: "An experiment can vary both who receives treatment and how common treatment is in each community."
+excerpt: "Choosing treatment rates to study direct effects and spillovers."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2025/02/14/randomized-saturation-designs/", "/2025/03/02/optimal-saturation-and-combining-clusters/", "/2025/02/14/randomized-saturation-designs-and-their-optimal-allocation/"]
@@ -19,7 +19,7 @@ redirect_from: ["/2025/02/14/randomized-saturation-designs/", "/2025/03/02/optim
 <h3 data-note-section="1" id="10-406-assignment-outcomes-and-estimands">1. Assignment, outcomes, and estimands</h3>
 <p>There are {% raw %}<span class="math inline">\(C\)</span>{% endraw %} sampled clusters, each containing {% raw %}<span class="math inline">\(n\)</span>{% endraw %} individuals. The first stage assigns fraction {% raw %}<span class="math inline">\(f(p)\)</span>{% endraw %} of clusters to saturation {% raw %}<span class="math inline">\(p\)</span>{% endraw %} in a finite set {% raw %}<span class="math inline">\(\Pi\subset[0,1]\)</span>{% endraw %}. Within a cluster assigned {% raw %}<span class="math inline">\(p\)</span>{% endraw %}, the second stage chooses exactly {% raw %}<span class="math inline">\(np\)</span>{% endraw %} individuals uniformly for treatment. Counts are integers in an implemented experiment; the paper first optimizes a continuous relaxation.</p>
 
-<p>As in a <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference-effects-variance-and-limits %}">two-stage experiment under partial interference</a>, potential outcomes may depend on the treatment vector within an individual’s cluster, but not on assignments in other clusters. The paper assumes their population means depend on own assignment {% raw %}<span class="math inline">\(d\in\{0,1\}\)</span>{% endraw %} and saturation {% raw %}<span class="math inline">\(p\)</span>{% endraw %} through {% raw %}<span class="math inline">\(\overline Y(d,p)\)</span>{% endraw %}. This restriction on means is weaker than requiring each realized potential outcome to depend only on {% raw %}<span class="math inline">\((d,p)\)</span>{% endraw %}.</p>
+<p>As in a <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference %}">two-stage experiment under partial interference</a>, potential outcomes may depend on the treatment vector within an individual’s cluster, but not on assignments in other clusters. The paper assumes their population means depend on own assignment {% raw %}<span class="math inline">\(d\in\{0,1\}\)</span>{% endraw %} and saturation {% raw %}<span class="math inline">\(p\)</span>{% endraw %} through {% raw %}<span class="math inline">\(\overline Y(d,p)\)</span>{% endraw %}. This restriction on means is weaker than requiring each realized potential outcome to depend only on {% raw %}<span class="math inline">\((d,p)\)</span>{% endraw %}.</p>
 
 <p>Write {% raw %}<span class="math inline">\(\psi=f(0)\)</span>{% endraw %} for the pure-control share. The treated effect and the spillover on untreated individuals are</p>
 

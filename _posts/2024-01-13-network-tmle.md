@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Network TMLE: Structural Models, Dimension Reduction, and Inference"
+title: "Network TMLE"
 date: "2024-01-13"
 tags: ["econometrics", "networks"]
-excerpt: "Network TMLE combines a causal intervention formula with a targeted update of an outcome regression."
+excerpt: "Estimating treatment effects when people can affect one another."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
-redirect_from: ["/2024/01/13/interference-exposure-and-causal-parameters/", "/2024/01/29/longitudinal-structural-models-under-interference/", "/2024/02/15/exchangeability-and-dimension-reduction-on-networks/", "/2024/03/02/efficient-influence-functions-and-network-tmle/"]
+redirect_from: ["/2024/01/13/interference-exposure-and-causal-parameters/", "/2024/01/13/network-tmle-structural-models-dimension-reduction-and-inference/", "/2024/01/29/longitudinal-structural-models-under-interference/", "/2024/02/15/exchangeability-and-dimension-reduction-on-networks/", "/2024/03/02/efficient-influence-functions-and-network-tmle/"]
 ---
 
 <div class="note-content" markdown="0">

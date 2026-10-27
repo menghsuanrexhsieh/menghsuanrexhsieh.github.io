@@ -3,7 +3,7 @@ layout: "post"
 title: "Regression Discontinuity with Measurement Error"
 date: "2024-07-13"
 tags: ["econometrics", "causal inference"]
-excerpt: "Correct treatment classification identifies observed cutoff effects. The paper\u2019s sharp and fuzzy results, smoothness conditions, and bias-aware inference are developed with their supporting calculations."
+excerpt: "When measurement error permits valid regression discontinuity inference."
 note_series: "Regression discontinuity with measurement error"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on RDD Measurement Error (Dong Kolesar)/stats.tex"
 redirect_from: ["/2024/07/13/when-measurement-error-can-be-ignored-in-regression-discontinuity/", "/2024/07/24/sharp-regression-discontinuity-with-measurement-error/", "/2024/08/05/fuzzy-regression-discontinuity-with-measurement-error/", "/2024/08/17/interpreting-the-measurement-error-conditions/"]

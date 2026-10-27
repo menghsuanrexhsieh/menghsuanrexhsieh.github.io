@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Shift-Share IV: Exogenous Shares and Rotemberg Weights"
+title: "Shift-Share IV"
 date: "2022-12-28"
 tags: ["econometrics", "instrumental variables"]
-excerpt: "A shift-share instrument combines exposure shares with aggregate shocks."
+excerpt: "How exposure shares identify effects in shift-share IV designs."
 note_series: "Shift-share designs"
 note_source: "assets/notes/Shift-Share - Old and New/ss-on.tex"
-redirect_from: ["/2023/08/05/shift-share-instruments-setup-and-panel-structure/", "/2023/08/05/shift-share-iv-exogenous-shares-and-rotemberg-weights/", "/2023/08/29/exogenous-shares-and-the-bartik-estimator/", "/2023/11/09/rotemberg-weights-as-a-diagnostic/"]
+redirect_from: ["/2022/12/28/shift-share-iv-exogenous-shares-and-rotemberg-weights/", "/2023/08/05/shift-share-instruments-setup-and-panel-structure/", "/2023/08/05/shift-share-iv-exogenous-shares-and-rotemberg-weights/", "/2023/08/29/exogenous-shares-and-the-bartik-estimator/", "/2023/11/09/rotemberg-weights-as-a-diagnostic/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -52,7 +52,7 @@ X^{\perp\prime}Zgg&#x27;Z&#x27;Y^\perp.
 
 <p>Under the paper’s additional heterogeneous-effect and monotonicity restrictions, an individual share IV can average unit effects with nonnegative weights proportional to residualized-share variance times first-stage responsiveness. Combining those estimates with negative Rotemberg weights need not preserve a convex-average interpretation.</p>
 
-<p>The alternative <a href="{% post_url 2023-01-09-shift-share-iv-with-exogenous-shocks-identification-and-inference %}">exogenous-shock argument</a> conditions on the shares and places the identifying restriction on shocks. The algebraic estimator may be identical, but the assumptions and the appropriate inference differ.</p>
+<p>The alternative <a href="{% post_url 2023-01-09-shift-share-iv-with-exogenous-shocks %}">exogenous-shock argument</a> conditions on the shares and places the identifying restriction on shocks. The algebraic estimator may be identical, but the assumptions and the appropriate inference differ.</p>
 
 <h3 data-note-section="4" id="34-0-why-the-gmm-weighting-matrix-has-rank-one">4. Why the GMM weighting matrix has rank one</h3>
 <p>Let {% raw %}<span class="math inline">\(m(\beta)=Z&#x27;(Y^\perp-X^\perp\beta)\)</span>{% endraw %} be the vector of share moments. The quadratic criterion with weighting matrix {% raw %}<span class="math inline">\(gg&#x27;\)</span>{% endraw %} is</p>
@@ -134,7 +134,7 @@ L-A_-(U-L)\quad\text{to}\quad U+A_-(U-L).
 \]</div>{% endraw %}
 <p>Early measurement does not make these covariances vanish. The identifying argument must explain why baseline composition is unrelated to counterfactual outcome changes after controls. The <a href="{% post_url 2025-02-02-instrumental-variables-for-taxable-income-elasticities %}">tax-reform IV discussion</a> raises the same issue when removing contemporaneous feedback leaves correlation with earlier characteristics.</p>
 
-<p>With heterogeneous treatment effects, each valid single-share IV may itself be a weighted response under the paper’s additional first-stage and monotonicity assumptions. The aggregate then combines those weighted responses using the Rotemberg weights. One should establish the component interpretation before assigning an interpretation to their possibly signed sum. The <a href="{% post_url 2023-01-09-shift-share-iv-with-exogenous-shocks-identification-and-inference %}">shock-based argument</a> instead conditions on shares and locates randomness at the shock level; it changes the identifying assumption even when the numerical coefficient is unchanged.</p>
+<p>With heterogeneous treatment effects, each valid single-share IV may itself be a weighted response under the paper’s additional first-stage and monotonicity assumptions. The aggregate then combines those weighted responses using the Rotemberg weights. One should establish the component interpretation before assigning an interpretation to their possibly signed sum. The <a href="{% post_url 2023-01-09-shift-share-iv-with-exogenous-shocks %}">shock-based argument</a> instead conditions on shares and locates randomness at the shock level; it changes the identifying assumption even when the numerical coefficient is unchanged.</p>
 
 <h3 id="34-0-relating-a-weight-to-a-component-first-stage-statistic">Relating a weight to a component first-stage statistic</h3>
 <p>A Rotemberg weight is not itself a first-stage {% raw %}<span class="math inline">\(F\)</span>{% endraw %} statistic. To make the distinction exact, use the same residualization and sample for every variable and write {% raw %}<span class="math inline">\(S_B=B^{\perp\prime}B^\perp\)</span>{% endraw %} and {% raw %}<span class="math inline">\(S_k=Z_k^{\perp\prime}Z_k^\perp\)</span>{% endraw %}. The individual and aggregate first-stage coefficients are {% raw %}<span class="math inline">\(\widehat\pi_k=Z_k^{\perp\prime}X^\perp/S_k\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\widehat\pi=B^{\perp\prime}X^\perp/S_B\)</span>{% endraw %}. Thus</p>
@@ -157,6 +157,6 @@ Goldsmith-Pinkham, Paul, Isaac Sorkin, and Henry Swift. 2020. <span>“Bartik In
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Next: <a href="{% post_url 2023-01-09-shift-share-iv-with-exogenous-shocks-identification-and-inference %}">Shift-Share IV with Exogenous Shocks: Identification and Inference</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Next: <a href="{% post_url 2023-01-09-shift-share-iv-with-exogenous-shocks %}">Shift-Share IV with Exogenous Shocks</a></p></nav>
 
 </div>

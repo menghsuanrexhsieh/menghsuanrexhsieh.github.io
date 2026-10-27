@@ -3,7 +3,7 @@ layout: "post"
 title: "Network Formation and Identification with Missing Links"
 date: "2025-02-18"
 tags: ["econometrics", "networks"]
-excerpt: "Network formation models ask why links are present before using those links to explain outcomes."
+excerpt: "What observed links reveal about network formation."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2025/03/19/strategic-network-formation/", "/2025/04/04/network-competitive-equilibrium-and-unobserved-links/", "/2025/04/21/network-formation-and-missing-network-data/", "/2025/03/19/network-formation-and-identification-with-missing-links/"]

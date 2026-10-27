@@ -3,7 +3,7 @@ layout: "post"
 title: "Instrumental Variables for Taxable-Income Elasticities"
 date: "2025-02-02"
 tags: ["econometrics", "bunching"]
-excerpt: "Tax reforms create variation in net-of-tax rates, but an individual's realized rate also depends on earnings."
+excerpt: "Using tax reforms to estimate taxable-income elasticities."
 note_series: "Taxable-income elasticities"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/stats.tex"
 ---

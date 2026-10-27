@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Heavy-Tailed Cluster Inference: Bootstrap Failure and Score Subsampling"
+title: "Heavy-Tailed Cluster Inference"
 date: "2024-04-17"
 tags: ["econometrics", "dependence"]
-excerpt: "A cluster-robust standard error adds squared cluster scores."
+excerpt: "Inference when a few large cluster scores dominate."
 note_series: "Cluster and network inference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex"
-redirect_from: ["/2025/01/31/heavy-tailed-clusters-and-bootstrap-failure/", "/2025/01/31/heavy-tailed-clusters-and-inconsistent-inference/", "/2025/02/21/heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling/", "/2025/02/21/uniform-cluster-inference-and-score-subsampling/", "/2025/02/21/uniformity-in-cluster-robust-inference/", "/2025/06/24/technical-bounds-for-cluster-inference/", "/2025/07/14/why-the-wild-cluster-bootstrap-fails-with-heavy-tails/"]
+redirect_from: ["/2024/04/17/heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling/", "/2025/01/31/heavy-tailed-clusters-and-bootstrap-failure/", "/2025/01/31/heavy-tailed-clusters-and-inconsistent-inference/", "/2025/02/21/heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling/", "/2025/02/21/uniform-cluster-inference-and-score-subsampling/", "/2025/02/21/uniformity-in-cluster-robust-inference/", "/2025/06/24/technical-bounds-for-cluster-inference/", "/2025/07/14/why-the-wild-cluster-bootstrap-fails-with-heavy-tails/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -128,6 +128,6 @@ Chiang, Harold D., Yuya Sasaki, and Yulong Wang. 2024. <span>“On the Inconsist
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-10-08-wild-cluster-bootstrap-with-few-large-clusters %}">Wild Cluster Bootstrap with Few Large Clusters</a> · Additional reading: <a href="{% post_url 2023-05-21-when-to-cluster-sampling-assignment-and-fixed-effects %}">When to Cluster: Sampling, Assignment, and Fixed Effects</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-10-08-wild-cluster-bootstrap-with-few-large-clusters %}">Wild Cluster Bootstrap with Few Large Clusters</a> · Additional reading: <a href="{% post_url 2023-05-21-when-to-cluster %}">When to Cluster</a></p></nav>
 
 </div>

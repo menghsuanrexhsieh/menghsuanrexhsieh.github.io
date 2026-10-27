@@ -1,17 +1,17 @@
 ---
 layout: "post"
-title: "The Hot Hand: Limit Theory and Proofs"
+title: "The Hot Hand"
 date: "2024-04-15"
 tags: ["probability theory", "dependence"]
-excerpt: "Ratio expansions, martingale central limit theorems, and finite-sample bias for streak statistics."
+excerpt: "Limit distributions and bias in statistics for streaks."
 note_series: "Dependent data"
 note_source: "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex"
-redirect_from: ["/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
+redirect_from: ["/2024/04/15/the-hot-hand-limit-theory-and-proofs/", "/2024/05/11/the-hot-hand-limit-theory-and-proofs/"]
 ---
 
 <div class="note-content" markdown="0">
 
-<p>The <a href="{% post_url 2024-04-14-the-hot-hand-statistics-for-streaks %}">streak tests</a> are ratios of dependent counts. To obtain their limiting laws, first replace each random denominator by its probability limit and identify the error from doing so. Following <span class="citation" data-cites="ritzwoller_uncertainty_2022"><a href="#ref-ritzwoller_uncertainty_2022" role="doc-biblioref">Ritzwoller and Romano (2022)</a></span>, this note uses the first-order terms for variance and the second-order terms for bias.</p>
+<p>The <a href="{% post_url 2024-04-14-the-hot-hand %}">streak tests</a> are ratios of dependent counts. To obtain their limiting laws, first replace each random denominator by its probability limit and identify the error from doing so. Following <span class="citation" data-cites="ritzwoller_uncertainty_2022"><a href="#ref-ritzwoller_uncertainty_2022" role="doc-biblioref">Ritzwoller and Romano (2022)</a></span>, this note uses the first-order terms for variance and the second-order terms for bias.</p>
 
 <h3 data-note-section="1" id="05-71-the-first-order-expansion">1. The first-order expansion</h3>
 <p>Let {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %} be i.i.d. Bernoulli{% raw %}<span class="math inline">\((p)\)</span>{% endraw %}, with fixed {% raw %}<span class="math inline">\(0&lt;p&lt;1\)</span>{% endraw %} and fixed integer {% raw %}<span class="math inline">\(k\geq1\)</span>{% endraw %}. All sums below run over {% raw %}<span class="math inline">\(t=k+1,\ldots,n\)</span>{% endraw %}, unless otherwise stated. Put {% raw %}<span class="math inline">\(m=n-k\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\mathcal F_t=\sigma(X_1,\ldots,X_t)\)</span>{% endraw %}, and</p>
@@ -217,6 +217,6 @@ Ritzwoller, David M, and Joseph P Romano. 2022. <span>“Uncertainty in the Hot 
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-04-14-the-hot-hand-statistics-for-streaks %}">The Hot Hand: Statistics for Streaks</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-04-14-the-hot-hand %}">The Hot Hand</a></p></nav>
 
 </div>

@@ -211,6 +211,6 @@ redirect_from: ["/2024/02/17/steins-method/"]
 <p>◻</p>
 
 </div>
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-04-02-mixing-conditions-and-a-nonmixing-ar-1-process %}">Mixing Conditions and a Nonmixing AR(1) Process</a> · Next: <a href="{% post_url 2024-04-14-the-hot-hand-statistics-for-streaks %}">The Hot Hand: Statistics for Streaks</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-04-02-mixing-conditions-and-a-nonmixing-ar-1-process %}">Mixing Conditions and a Nonmixing AR(1) Process</a> · Next: <a href="{% post_url 2024-04-14-the-hot-hand %}">The Hot Hand</a></p></nav>
 
 </div>

@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Resampled Statistics: Size and Local Power"
+title: "Resampled Statistics"
 date: "2024-09-17"
 tags: ["econometrics", "networks"]
-excerpt: "The M-type test detects smaller shifts at a fixed repetition count; the U-type test can gain power when repetitions are chosen to match size accuracy."
+excerpt: "How resampling choices affect test size and power."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
-redirect_from: ["/2024/10/04/weak-dependence-lemmas-for-resampled-statistics/", "/2024/10/21/rates-for-resampled-statistics/", "/2024/11/06/limit-theorems-for-ordering-free-inference/", "/2024/11/23/comparing-u-type-and-m-type-resampled-statistics/"]
+redirect_from: ["/2024/09/17/resampled-statistics-size-and-local-power/", "/2024/10/04/weak-dependence-lemmas-for-resampled-statistics/", "/2024/10/21/rates-for-resampled-statistics/", "/2024/11/06/limit-theorems-for-ordering-free-inference/", "/2024/11/23/comparing-u-type-and-m-type-resampled-statistics/"]
 ---
 
 <div class="note-content" markdown="0">

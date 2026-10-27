@@ -3,7 +3,7 @@ layout: "post"
 title: "Wild Cluster Bootstrap with Few Large Clusters"
 date: "2023-10-08"
 tags: ["econometrics", "dependence"]
-excerpt: "With a fixed number of clusters, increasing the number of observations inside each cluster does not justify a many-cluster normal approximation."
+excerpt: "Bootstrap inference when the number of clusters is small."
 note_series: "Cluster and network inference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex"
 redirect_from: ["/2025/01/11/wild-cluster-bootstrap-with-few-large-clusters/"]
@@ -40,7 +40,7 @@ Y^*_{ij}(g)=Z_{ij}&#x27;\widehat\beta^r+W_{ij}&#x27;\widehat\gamma^r
 <p>The procedure then ranks the observed statistic among its sign transformations. There are only {% raw %}<span class="math inline">\(2^q\)</span>{% endraw %} transformations. Because the statistic is absolute, {% raw %}<span class="math inline">\(g\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-g\)</span>{% endraw %} give the same value, leaving at most {% raw %}<span class="math inline">\(2^{q-1}\)</span>{% endraw %} distinct ranks. That is the source of the discreteness term in the size bound.</p>
 
 <h3 data-note-section="3" id="12-0-what-this-does-and-does-not-establish">3. What this does and does not establish</h3>
-<p>The source of validity is symmetry of a finite limiting score vector. Large cluster sizes help establish that limit only under the within-cluster CLT and design assumptions. A different failure occurs when the number of clusters grows but extreme scores remain influential, as in the <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling %}">heavy-tailed cluster note</a>.</p>
+<p>The source of validity is symmetry of a finite limiting score vector. Large cluster sizes help establish that limit only under the within-cluster CLT and design assumptions. A different failure occurs when the number of clusters grows but extreme scores remain influential, as in the <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference %}">heavy-tailed cluster note</a>.</p>
 
 <p>For network-based groups, independence of cluster scores is an additional mathematical question. The <a href="{% post_url 2024-03-04-network-cluster-robust-inference %}">conductance and network separation</a> conditions address whether the proposed boundaries separate enough dependence for the sign argument.</p>
 
@@ -122,7 +122,7 @@ c&#x27;Q^{-1}\sum_jg_jQ_j\Delta^r
 <h3 data-note-section="7" id="12-0-what-cluster-size-must-accomplish">7. What cluster size must accomplish</h3>
 <p>The assumption that a large cluster score is approximately Gaussian is a statement about dependence within that cluster. If all its observations share the same unscaled shock, {% raw %}<span class="math inline">\(\sum_i\varepsilon_{ij}\)</span>{% endraw %} is of order {% raw %}<span class="math inline">\(n_j\)</span>{% endraw %}, not {% raw %}<span class="math inline">\(\sqrt{n_j}\)</span>{% endraw %}. Merely increasing {% raw %}<span class="math inline">\(n_j\)</span>{% endraw %} does not verify the displayed CLT. One must justify the normalization, the score limit, and independence across clusters from the sampling model.</p>
 
-<p>These are distinct asymptotic regimes. Here a finite score vector has well-behaved limits. In the <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling %}">heavy-tail analysis</a>, increasingly many clusters are observed but some extreme scores retain a substantial fraction of total variability. A count of observations by itself does not distinguish them.</p>
+<p>These are distinct asymptotic regimes. Here a finite score vector has well-behaved limits. In the <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference %}">heavy-tail analysis</a>, increasingly many clusters are observed but some extreme scores retain a substantial fraction of total variability. A count of observations by itself does not distinguish them.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-canay_wild_2021" class="csl-entry" role="listitem">
@@ -130,6 +130,6 @@ Canay, Ivan A., Andres Santos, and Azeem M. Shaikh. 2021. <span>“The Wild Boot
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Next: <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling %}">Heavy-Tailed Cluster Inference: Bootstrap Failure and Score Subsampling</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Next: <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference %}">Heavy-Tailed Cluster Inference</a></p></nav>
 
 </div>

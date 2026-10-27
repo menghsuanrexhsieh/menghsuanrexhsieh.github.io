@@ -3,7 +3,7 @@ layout: "post"
 title: "Prediction-Powered Inference Beyond Convex Losses"
 date: "2024-05-25"
 tags: ["statistics", "machine learning"]
-excerpt: "A nonconvex risk can have stationary points that are not minimizers."
+excerpt: "Using predictions for inference when the loss is nonconvex."
 note_series: "Prediction-powered inference"
 note_source: "assets/notes/Overleaf Projects (32 items)/prediction powered inference notes/ideas.tex"
 ---
@@ -57,7 +57,7 @@ L(\theta^*)\leq L(\widehat\theta^f).
 
 <p>Coverage uses only the minimizing inequality, so the benchmark need not converge to {% raw %}<span class="math inline">\(\theta^*\)</span>{% endraw %}. A lower-risk benchmark can exclude more false candidates, and accurate predictions can narrow the correction bounds. These affect precision without changing the coverage argument.</p>
 
-<p>For losses whose first-order condition already characterizes the minimizer, the <a href="{% post_url 2024-01-27-prediction-powered-inference-rectifiers-estimators-and-validity %}">estimating-equation construction</a> is usually simpler. Here the additional work buys a statement about the global risk minimizer.</p>
+<p>For losses whose first-order condition already characterizes the minimizer, the <a href="{% post_url 2024-01-27-prediction-powered-inference %}">estimating-equation construction</a> is usually simpler. Here the additional work buys a statement about the global risk minimizer.</p>
 
 <h3 data-note-section="4" id="31-29-an-example-where-the-first-order-condition-is-insufficient">4. An example where the first-order condition is insufficient</h3>
 <p>For a concrete example, take {% raw %}<span class="math inline">\(\ell_\theta(Y)=(\theta^2-Y)^2\)</span>{% endraw %}, assume a finite second outcome moment, and suppose {% raw %}<span class="math inline">\(\mu=\mathbb{E}Y&gt;0\)</span>{% endraw %}. Expanding gives</p>
@@ -169,6 +169,6 @@ Angelopoulos, Anastasios N., Stephen Bates, Clara Fannjiang, Michael I. Jordan, 
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-01-27-prediction-powered-inference-rectifiers-estimators-and-validity %}">Prediction-Powered Inference: Rectifiers, Estimators, and Validity</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-01-27-prediction-powered-inference %}">Prediction-Powered Inference</a></p></nav>
 
 </div>

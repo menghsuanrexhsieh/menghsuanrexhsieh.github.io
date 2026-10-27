@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Post-Double Selection: Orthogonality, Assumptions, and Inference"
+title: "Post-Double Selection"
 date: "2024-03-02"
 tags: ["econometrics", "machine learning"]
-excerpt: "The difficulty with selecting controls is that a variable can be easy to miss in the outcome regression and still matter for the treatment coefficient."
+excerpt: "Selecting controls while preserving valid treatment-effect inference."
 note_series: "Post-double-selection lasso"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Post-Double-Selection Lasso/stats.tex"
-redirect_from: ["/2024/03/02/post-double-selection-setup-and-orthogonal-moments/", "/2024/04/10/approximate-sparsity-and-design-conditions/", "/2024/05/20/post-double-selection-asymptotic-normality/"]
+redirect_from: ["/2024/03/02/post-double-selection-orthogonality-assumptions-and-inference/", "/2024/03/02/post-double-selection-setup-and-orthogonal-moments/", "/2024/04/10/approximate-sparsity-and-design-conditions/", "/2024/05/20/post-double-selection-asymptotic-normality/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -77,7 +77,7 @@ Y=\alpha_0D+g(Z)+\zeta,\qquad D=m(Z)+v,
 \sqrt n(\widehat\alpha-\alpha_0)
 =(\mathbb{E}[v^2])^{-1}\frac1{\sqrt n}\sum_{i=1}^n v_i\zeta_i+o_P(1).
 \]</div>{% endraw %}
-<p>The CLT applies once selection errors are absent from the leading term. Establishing that reduction is most of the argument. The <a href="{% post_url 2024-04-27-the-fragility-of-sparsity-coordinates-geometry-and-specification-tests %}">fragility of sparsity</a> concerns whether a proposed dictionary admits the required approximation; the inference theorem assumes that property within its specified class.</p>
+<p>The CLT applies once selection errors are absent from the leading term. Establishing that reduction is most of the argument. The <a href="{% post_url 2024-04-27-the-fragility-of-sparsity %}">fragility of sparsity</a> concerns whether a proposed dictionary admits the required approximation; the inference theorem assumes that property within its specified class.</p>
 
 <h3 data-note-section="4" id="19-0-expand-the-regression-remainder">4. Expand the regression remainder</h3>
 <p>Let {% raw %}<span class="math inline">\(P\)</span>{% endraw %} project onto the selected union, {% raw %}<span class="math inline">\(M=I-P\)</span>{% endraw %}, and put {% raw %}<span class="math inline">\(r_m=Mm\)</span>{% endraw %} and {% raw %}<span class="math inline">\(r_g=Mg\)</span>{% endraw %}, treating the evaluated functions as sample vectors. Since {% raw %}<span class="math inline">\(D=m+v\)</span>{% endraw %}, the residualized treatment is {% raw %}<span class="math inline">\(MD=r_m+Mv\)</span>{% endraw %}. The final regression obeys the exact identity</p>

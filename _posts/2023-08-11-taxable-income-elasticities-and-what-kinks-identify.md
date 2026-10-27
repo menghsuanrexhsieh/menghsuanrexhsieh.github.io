@@ -3,7 +3,7 @@ layout: "post"
 title: "Taxable-Income Elasticities and What Kinks Identify"
 date: "2023-08-11"
 tags: ["econometrics", "bunching"]
-excerpt: "A higher marginal tax rate above an earnings threshold can make the threshold itself optimal for many taxpayers."
+excerpt: "What bunching at tax thresholds reveals about income responses."
 note_series: "Bunching"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex"
 redirect_from: ["/2025/01/18/taxable-income-elasticities-and-what-kinks-identify/", "/2025/01/18/the-taxable-income-model/", "/2025/02/02/taxable-income-elasticities/", "/2025/02/06/bunching-at-kinks/", "/2025/03/17/what-bunching-identifies/"]
@@ -216,7 +216,7 @@ B(x)=\int_0^{\bar e}\int_K^{K(1-x)^{-e}}h_0(z,e)\,dz\,de.
 
 <p>The equations above state what that counterfactual must represent. The mass {% raw %}<span class="math inline">\(B\)</span>{% endraw %} and density {% raw %}<span class="math inline">\(h_0\)</span>{% endraw %} must use the same population and units; the tax change must be a continuous kink; and the behavioral calculation assumes a frictionless response. The finite-change model used here additionally rules out income effects. <span class="citation" data-cites="kleven_bunching_2016">Kleven (<a href="#ref-kleven_bunching_2016" role="doc-biblioref">2016</a>)</span> discusses how these modeling and measurement choices enter applied bunching analysis. They determine whether the observed excess mass can be interpreted through Saez’s elasticity formula.</p>
 
-<p>The companion notes discuss <a href="{% post_url 2024-02-03-bunching-identification-density-bounds-and-control-groups %}">identification when the counterfactual density is less restricted</a> and <a href="{% post_url 2024-06-10-estimating-elasticities-under-nonlinear-budget-sets %}">estimation under general nonlinear budget sets</a>.</p>
+<p>The companion notes discuss <a href="{% post_url 2024-02-03-bunching-identification %}">identification when the counterfactual density is less restricted</a> and <a href="{% post_url 2024-06-10-estimating-elasticities-under-nonlinear-budget-sets %}">estimation under general nonlinear budget sets</a>.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-kleven_bunching_2016" class="csl-entry" role="listitem">

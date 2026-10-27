@@ -1073,7 +1073,7 @@
   },
   {
     "key": "05-36",
-    "file": "_posts/2024-04-14-the-hot-hand-statistics-for-streaks.md",
+    "file": "_posts/2024-04-14-the-hot-hand.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex",
     "blocks": [
       [
@@ -1089,13 +1089,13 @@
       "ritzwoller_uncertainty_2022"
     ],
     "date": "2024-04-14",
-    "title": "The Hot Hand: Statistics for Streaks",
+    "title": "The Hot Hand",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/05-36.md"
   },
   {
     "key": "05-71",
-    "file": "_posts/2024-04-15-the-hot-hand-limit-theory-and-proofs.md",
+    "file": "_posts/2024-04-15-the-hot-hand.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex",
     "blocks": [
       [
@@ -1110,7 +1110,7 @@
       "ritzwoller_uncertainty_2022"
     ],
     "date": "2024-04-15",
-    "title": "The Hot Hand: Limit Theory and Proofs",
+    "title": "The Hot Hand",
     "adaptation": "reviewed-notes",
     "manuscript": "scripts/notes/reviewed-notes/05-71.md"
   },
@@ -1682,7 +1682,7 @@
   },
   {
     "key": "10-0",
-    "file": "_posts/2024-01-13-network-tmle-structural-models-dimension-reduction-and-inference.md",
+    "file": "_posts/2024-01-13-network-tmle.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -1712,7 +1712,7 @@
       "van_der_laan_causal_2014"
     ],
     "date": "2024-01-13",
-    "title": "Network TMLE: Structural Models, Dimension Reduction, and Inference",
+    "title": "Network TMLE",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-0.md"
   },
@@ -1749,7 +1749,7 @@
   },
   {
     "key": "10-104",
-    "file": "_posts/2024-06-26-two-stage-experiments-under-partial-interference-effects-variance-and-limits.md",
+    "file": "_posts/2024-06-26-two-stage-experiments-under-partial-interference.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -1775,7 +1775,7 @@
       "liu_large_2014"
     ],
     "date": "2024-06-26",
-    "title": "Two-Stage Experiments under Partial Interference: Effects, Variance, and Limits",
+    "title": "Two-Stage Experiments under Partial Interference",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-104.md"
   },
@@ -1854,7 +1854,7 @@
   },
   {
     "key": "10-266",
-    "file": "_posts/2024-09-17-resampled-statistics-size-and-local-power.md",
+    "file": "_posts/2024-09-17-resampled-statistics.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -1869,7 +1869,7 @@
       "song_ordering-free_2018"
     ],
     "date": "2024-09-17",
-    "title": "Resampled Statistics: Size and Local Power",
+    "title": "Resampled Statistics",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-266.md"
   },
@@ -1991,7 +1991,7 @@
   },
   {
     "key": "10-556",
-    "file": "_posts/2024-06-10-network-policy-targeting-identification-and-known-propensities.md",
+    "file": "_posts/2024-06-10-network-policy-targeting.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -2016,13 +2016,13 @@
       "viviano_policy_2025"
     ],
     "date": "2024-06-10",
-    "title": "Network Policy Targeting: Identification and Known Propensities",
+    "title": "Network Policy Targeting",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-556.md"
   },
   {
     "key": "10-628",
-    "file": "_posts/2024-09-01-learning-network-policies-nuisance-estimation-regret-and-transport.md",
+    "file": "_posts/2024-09-01-learning-network-policies.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex",
     "blocks": [
       [
@@ -2067,7 +2067,7 @@
       "viviano_policy_2025"
     ],
     "date": "2024-09-01",
-    "title": "Learning Network Policies: Nuisance Estimation, Regret, and Transport",
+    "title": "Learning Network Policies",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/10-628.md"
   },
@@ -2147,7 +2147,7 @@
   },
   {
     "key": "12-15",
-    "file": "_posts/2024-04-17-heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling.md",
+    "file": "_posts/2024-04-17-heavy-tailed-cluster-inference.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex",
     "blocks": [
       [
@@ -2177,13 +2177,13 @@
       "chiang_inconsistency_2024"
     ],
     "date": "2024-04-17",
-    "title": "Heavy-Tailed Cluster Inference: Bootstrap Failure and Score Subsampling",
+    "title": "Heavy-Tailed Cluster Inference",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/12-15.md"
   },
   {
     "key": "12-41",
-    "file": "_posts/2023-05-21-when-to-cluster-sampling-assignment-and-fixed-effects.md",
+    "file": "_posts/2023-05-21-when-to-cluster.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex",
     "blocks": [
       [
@@ -2213,7 +2213,7 @@
       "abadie_when_2022"
     ],
     "date": "2023-05-21",
-    "title": "When to Cluster: Sampling, Assignment, and Fixed Effects",
+    "title": "When to Cluster",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/12-41.md"
   },
@@ -2346,7 +2346,7 @@
   },
   {
     "key": "15-0",
-    "file": "_posts/2024-08-28-novelty-detection-mixture-identification-and-statistical-guarantees.md",
+    "file": "_posts/2024-08-28-novelty-detection.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on ML Novelty Detection/stats.tex",
     "blocks": [
       [
@@ -2376,7 +2376,7 @@
       "blanchard_semi-supervised_2010"
     ],
     "date": "2024-08-28",
-    "title": "Novelty Detection: Mixture Identification and Statistical Guarantees",
+    "title": "Novelty Detection",
     "adaptation": "reviewed-notes",
     "manuscript": "scripts/notes/reviewed-notes/15-0.md"
   },
@@ -2440,7 +2440,7 @@
   },
   {
     "key": "16-51",
-    "file": "_posts/2024-02-03-bunching-identification-density-bounds-and-control-groups.md",
+    "file": "_posts/2024-02-03-bunching-identification.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex",
     "blocks": [
       [
@@ -2467,13 +2467,13 @@
       "coles_how_2022"
     ],
     "date": "2024-02-03",
-    "title": "Bunching Identification: Density Bounds and Control Groups",
+    "title": "Bunching Identification",
     "adaptation": "reviewed-notes",
     "manuscript": "scripts/notes/reviewed-notes/16-51.md"
   },
   {
     "key": "16-83",
-    "file": "_posts/2024-03-11-bunching-and-endogeneity-testing-identification-and-correction.md",
+    "file": "_posts/2024-03-11-bunching-and-endogeneity.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex",
     "blocks": [
       [
@@ -2499,7 +2499,7 @@
       "caetano_test_2015"
     ],
     "date": "2024-03-11",
-    "title": "Bunching and Endogeneity: Testing, Identification, and Correction",
+    "title": "Bunching and Endogeneity",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/16-83.md"
   },
@@ -2577,7 +2577,7 @@
   },
   {
     "key": "19-0",
-    "file": "_posts/2024-03-02-post-double-selection-orthogonality-assumptions-and-inference.md",
+    "file": "_posts/2024-03-02-post-double-selection.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on Post-Double-Selection Lasso/stats.tex",
     "blocks": [
       [
@@ -2602,7 +2602,7 @@
       "belloni_inference_2014"
     ],
     "date": "2024-03-02",
-    "title": "Post-Double Selection: Orthogonality, Assumptions, and Inference",
+    "title": "Post-Double Selection",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/19-0.md"
   },
@@ -2935,7 +2935,7 @@
   },
   {
     "key": "22-0",
-    "file": "_posts/2024-04-27-the-fragility-of-sparsity-coordinates-geometry-and-specification-tests.md",
+    "file": "_posts/2024-04-27-the-fragility-of-sparsity.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on Sparsity (Kolesar Ulrich S)/stats.tex",
     "blocks": [
       [
@@ -2975,13 +2975,13 @@
       "kolesar_fragility_2024"
     ],
     "date": "2024-04-27",
-    "title": "The Fragility of Sparsity: Coordinates, Geometry, and Specification Tests",
+    "title": "The Fragility of Sparsity",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/22-0.md"
   },
   {
     "key": "23-0",
-    "file": "_posts/2024-07-13-testing-mediation-principal-strata-and-observable-bounds.md",
+    "file": "_posts/2024-07-13-testing-mediation.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on Testing Mechanisms/stats.tex",
     "blocks": [
       [
@@ -3011,7 +3011,7 @@
       "kwon_testing_2024"
     ],
     "date": "2024-07-13",
-    "title": "Testing Mediation: Principal Strata and Observable Bounds",
+    "title": "Testing Mediation",
     "adaptation": "reviewed-notes",
     "manuscript": "scripts/notes/reviewed-notes/23-0.md"
   },
@@ -3079,7 +3079,7 @@
   },
   {
     "key": "25-0",
-    "file": "_posts/2024-02-09-e-values-betting-calibration-and-merging.md",
+    "file": "_posts/2024-02-09-e-values.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Notes on e-Values/stats.tex",
     "blocks": [
       [
@@ -3110,7 +3110,7 @@
       "vovk_wang_evalues_2021"
     ],
     "date": "2024-02-09",
-    "title": "E-Values: Betting, Calibration, and Merging",
+    "title": "E-Values",
     "adaptation": "reviewed-notes",
     "manuscript": "scripts/notes/reviewed-notes/25-0.md"
   },
@@ -3581,7 +3581,7 @@
   },
   {
     "key": "30-0",
-    "file": "_posts/2025-04-30-conditional-c-dependence-sharp-distribution-and-treatment-effect-bounds.md",
+    "file": "_posts/2025-04-30-conditional-c-dependence.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Unconfoundedness (Notes)/stats.tex",
     "blocks": [
       [
@@ -3626,13 +3626,13 @@
       "masten_identification_2018"
     ],
     "date": "2025-04-30",
-    "title": "Conditional c-Dependence: Sharp Distribution and Treatment-Effect Bounds",
+    "title": "Conditional c-Dependence",
     "adaptation": "reviewed-notes",
     "manuscript": "scripts/notes/reviewed-notes/30-0.md"
   },
   {
     "key": "30-66",
-    "file": "_posts/2025-10-30-inference-for-sensitivity-bounds-limit-laws-bootstrap-and-breakdown-points.md",
+    "file": "_posts/2025-10-30-inference-for-sensitivity-bounds.md",
     "source": "assets/notes/Overleaf Projects (32 items)/Unconfoundedness (Notes)/stats.tex",
     "blocks": [
       [
@@ -3709,17 +3709,16 @@
       "30-145"
     ],
     "citations": [
-      "fang_inference_2018",
       "masten_assessing_2024"
     ],
     "date": "2025-10-30",
-    "title": "Inference for Sensitivity Bounds: Limit Laws, Bootstrap, and Breakdown Points",
+    "title": "Inference for Sensitivity Bounds",
     "adaptation": "reviewed-notes",
     "manuscript": "scripts/notes/reviewed-notes/30-66.md"
   },
   {
     "key": "31-0",
-    "file": "_posts/2024-01-27-prediction-powered-inference-rectifiers-estimators-and-validity.md",
+    "file": "_posts/2024-01-27-prediction-powered-inference.md",
     "source": "assets/notes/Overleaf Projects (32 items)/prediction powered inference notes/ideas.tex",
     "blocks": [
       [
@@ -3749,7 +3748,7 @@
       "angelopoulos_prediction-powered_2023"
     ],
     "date": "2024-01-27",
-    "title": "Prediction-Powered Inference: Rectifiers, Estimators, and Validity",
+    "title": "Prediction-Powered Inference",
     "adaptation": "reviewed-notes",
     "manuscript": "scripts/notes/reviewed-notes/31-0.md"
   },
@@ -3776,7 +3775,7 @@
   },
   {
     "key": "34-0",
-    "file": "_posts/2022-12-28-shift-share-iv-exogenous-shares-and-rotemberg-weights.md",
+    "file": "_posts/2022-12-28-shift-share-iv.md",
     "source": "assets/notes/Shift-Share - Old and New/ss-on.tex",
     "blocks": [
       [
@@ -3801,13 +3800,13 @@
       "goldsmith-pinkham_bartik_2020"
     ],
     "date": "2022-12-28",
-    "title": "Shift-Share IV: Exogenous Shares and Rotemberg Weights",
+    "title": "Shift-Share IV",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/34-0.md"
   },
   {
     "key": "34-48",
-    "file": "_posts/2023-01-09-shift-share-iv-with-exogenous-shocks-identification-and-inference.md",
+    "file": "_posts/2023-01-09-shift-share-iv-with-exogenous-shocks.md",
     "source": "assets/notes/Shift-Share - Old and New/ss-on.tex",
     "blocks": [
       [
@@ -3843,7 +3842,7 @@
       "borusyak_quasi-experimental_2022"
     ],
     "date": "2023-01-09",
-    "title": "Shift-Share IV with Exogenous Shocks: Identification and Inference",
+    "title": "Shift-Share IV with Exogenous Shocks",
     "adaptation": "paper-summary",
     "manuscript": "scripts/notes/paper-notes/34-48.md"
   },
@@ -3865,6 +3864,23 @@
     "title": "Uniform Laws of Large Numbers and Stochastic Equicontinuity",
     "adaptation": "notes",
     "manuscript": null
+  },
+  {
+    "key": "pretesting-0",
+    "file": "_posts/2024-07-28-when-pre-testing-yields-valid-inference.md",
+    "source": "scripts/notes/paper-notes/pretesting-0.md",
+    "blocks": [],
+    "former_posts": [],
+    "citations": [
+      "dechaisemartin_pretests_2024",
+      "prekopa_logconcave_1973",
+      "royen_gaussian_2014",
+      "van_der_vaart_weak_2000"
+    ],
+    "date": "2024-07-28",
+    "title": "When Pre-Testing Yields Valid Inference",
+    "adaptation": "paper-summary",
+    "manuscript": "scripts/notes/paper-notes/pretesting-0.md"
   },
   {
     "key": "scq-orders",
@@ -3925,22 +3941,5 @@
     "title": "Stochastic Convergence Exercises: Poisson Limits, Cauchy Averages, and Joint CLTs",
     "adaptation": "exercise-solutions",
     "manuscript": "scripts/notes/exercise-notes/scq-averages.md"
-  },
-  {
-    "key": "pretesting-0",
-    "file": "_posts/2024-07-28-when-pre-testing-yields-valid-inference.md",
-    "source": "scripts/notes/paper-notes/pretesting-0.md",
-    "blocks": [],
-    "former_posts": [],
-    "citations": [
-      "dechaisemartin_pretests_2024",
-      "prekopa_logconcave_1973",
-      "royen_gaussian_2014",
-      "van_der_vaart_weak_2000"
-    ],
-    "date": "2024-07-28",
-    "title": "When Pre-Testing Yields Valid Inference",
-    "adaptation": "paper-summary",
-    "manuscript": "scripts/notes/paper-notes/pretesting-0.md"
   }
 ]

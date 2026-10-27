@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Bunching and Endogeneity: Testing, Identification, and Correction"
+title: "Bunching and Endogeneity"
 date: "2024-03-11"
 tags: ["econometrics", "bunching"]
-excerpt: "A mass point in a continuous treatment can reveal selection at the boundary."
+excerpt: "Using bunching to study and correct for selection."
 note_series: "Bunching"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex"
-redirect_from: ["/2025/05/14/bunching-and-tests-for-endogeneity/", "/2025/05/14/bunching-endogeneity-and-continuous-treatment-identification/", "/2025/06/02/identification-with-bunching-in-a-continuous-treatment/", "/2025/06/22/bunching-and-endogeneity-testing-identification-and-correction/", "/2025/06/22/correcting-for-endogeneity-with-bunching/"]
+redirect_from: ["/2024/03/11/bunching-and-endogeneity-testing-identification-and-correction/", "/2025/05/14/bunching-and-tests-for-endogeneity/", "/2025/05/14/bunching-endogeneity-and-continuous-treatment-identification/", "/2025/06/02/identification-with-bunching-in-a-continuous-treatment/", "/2025/06/22/bunching-and-endogeneity-testing-identification-and-correction/", "/2025/06/22/correcting-for-endogeneity-with-bunching/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -171,6 +171,6 @@ Caetano, Carolina, Gregorio Caetano, and Eric Nielsen. 2023. <span>“Correcting
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-02-03-bunching-identification-density-bounds-and-control-groups %}">Bunching Identification: Density Bounds and Control Groups</a> · Next: <a href="{% post_url 2024-03-16-treatment-effects-at-an-overtime-notch %}">Treatment Effects at a Bunching Boundary</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-02-03-bunching-identification %}">Bunching Identification</a> · Next: <a href="{% post_url 2024-03-16-treatment-effects-at-an-overtime-notch %}">Treatment Effects at a Bunching Boundary</a></p></nav>
 
 </div>

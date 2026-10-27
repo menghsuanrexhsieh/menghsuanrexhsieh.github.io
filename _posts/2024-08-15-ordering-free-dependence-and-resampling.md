@@ -3,7 +3,7 @@ layout: "post"
 title: "Ordering-Free Dependence and Resampling"
 date: "2024-08-15"
 tags: ["econometrics", "networks"]
-excerpt: "Randomized subsampling creates a tractable reference distribution; local dependence limits how strongly aggregation can amplify the original sample-mean error."
+excerpt: "Using random subsamples for inference with dependent observations."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2024/08/15/ordering-free-inference-for-weakly-dependent-data/", "/2024/09/01/ordering-free-local-dependence/"]
@@ -15,7 +15,7 @@ redirect_from: ["/2024/08/15/ordering-free-inference-for-weakly-dependent-data/"
 
 <p><span class="citation" data-cites="song_ordering-free_2018"><a href="#ref-song_ordering-free_2018" role="doc-biblioref">Song (2018)</a></span> constructs a statistic by repeatedly drawing small random subsets. Conditional on the observed sample, the draws are independent across repetitions and their distribution is under our control. The original data still matter through the error in the sample mean. The method works when this error, after aggregation, is small relative to the variation introduced by resampling.</p>
 
-<p>The mean construction amplifies the sample-mean error inside a squared norm. The U-type construction has a conditional mean that depends on the squared error, which permits more repetitions. Here we derive these decompositions and the dependence bounds needed for validity. The <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">next post</a> uses them to compare size and local power; the <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">third post</a> proves a simpler pair-based limit theorem and extends it to moment inequalities.</p>
+<p>The mean construction amplifies the sample-mean error inside a squared norm. The U-type construction has a conditional mean that depends on the squared error, which permits more repetitions. Here we derive these decompositions and the dependence bounds needed for validity. The <a href="{% post_url 2024-09-17-resampled-statistics %}">next post</a> uses them to compare size and local power; the <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">third post</a> proves a simpler pair-based limit theorem and extends it to moment inequalities.</p>
 
 <h3 data-note-section="1" id="ordering-free-construction">1. Constructing the randomized statistic</h3>
 
@@ -285,7 +285,7 @@ T_U(\mu)=S_U(\mu)-\frac{\sqrt R(b-1)}n.
 
 <p>Substitute the expected squared mean-estimation error into the quadratic drift in each statistic to obtain the adjustments. The adjustments {% raw %}<span class="math inline">\(Rb/n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\sqrt R(b-1)/n\)</span>{% endraw %} are not exact conditional centerings. In particular, {% raw %}<span class="math inline">\(\mathbb E_\pi U_r(\overline X)=-(b-1)/(n-1)\)</span>{% endraw %}. The drift restrictions make this finite-population term and the displayed adjustments asymptotically negligible, while the adjustments can affect finite-sample calibration.</p>
 
-<p>Under the null, the tested statistic and its empirical reference approach the same continuous law: the conditional CLT gives the reference distribution, and the drift bounds justify replacing the empirical center by the null mean. The chi-square and nondegenerate normal limits are strictly increasing near their relevant quantiles, so those quantiles converge; {% raw %}<span class="math inline">\(L\to\infty\)</span>{% endraw %} removes simulation error. This gives asymptotic calibration. Relabeling invariance of the dependence coefficient supplies neither exchangeability of the observations nor an exact finite-sample permutation test. The <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}#resampling-size-approximation">next post</a> examines the stronger approximation needed to compare rates of size error.</p>
+<p>Under the null, the tested statistic and its empirical reference approach the same continuous law: the conditional CLT gives the reference distribution, and the drift bounds justify replacing the empirical center by the null mean. The chi-square and nondegenerate normal limits are strictly increasing near their relevant quantiles, so those quantiles converge; {% raw %}<span class="math inline">\(L\to\infty\)</span>{% endraw %} removes simulation error. This gives asymptotic calibration. Relabeling invariance of the dependence coefficient supplies neither exchangeability of the observations nor an exact finite-sample permutation test. The <a href="{% post_url 2024-09-17-resampled-statistics %}#resampling-size-approximation">next post</a> examines the stronger approximation needed to compare rates of size error.</p>
 
 <h3 data-note-section="7" id="10-235-what-ordering-free-does-not-mean">7. What information the method still needs</h3>
 
@@ -293,7 +293,7 @@ T_U(\mu)=S_U(\mu)-\frac{\sqrt R(b-1)}n.
 
 <p>A common shock can be accommodated by defining the correlations conditional on a sigma-field {% raw %}<span class="math inline">\(\mathcal C_n\)</span>{% endraw %}, provided the corresponding conditional moment and dependence conditions hold. The mean-inference setup also requires {% raw %}<span class="math inline">\(\mathbb E[X_i\mid\mathcal C_n]=\mu_0\)</span>{% endraw %}. A shock that changes variances while preserving this conditional mean can fit the framework. An additive shock {% raw %}<span class="math inline">\(X_i=\mu_0+V+\varepsilon_i\)</span>{% endraw %} generally does not: conditioning on {% raw %}<span class="math inline">\(V\)</span>{% endraw %} leaves the conditional mean {% raw %}<span class="math inline">\(\mu_0+V\)</span>{% endraw %}, and random subsampling cannot remove that shared displacement.</p>
 
-<p>The dependence bounds above supply the moment and drift control needed by the conditional limit argument. The dependence bounds also limit how much signal the resampled statistic can accumulate. The <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">size and local-power post</a> takes up that tradeoff, keeping the null error and the response to a false null in the same calculation.</p>
+<p>The dependence bounds above supply the moment and drift control needed by the conditional limit argument. The dependence bounds also limit how much signal the resampled statistic can accumulate. The <a href="{% post_url 2024-09-17-resampled-statistics %}">size and local-power post</a> takes up that tradeoff, keeping the null error and the response to a false null in the same calculation.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-song_ordering-free_2018" class="csl-entry" role="listitem">
@@ -301,6 +301,6 @@ Song, Kyungchul. 2018. <span>“Ordering-Free Inference from Locally Dependent D
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">Exposure Mappings and Horvitz–Thompson</a> · Next: <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">Resampled Statistics: Size and Local Power</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">Exposure Mappings and Horvitz–Thompson</a> · Next: <a href="{% post_url 2024-09-17-resampled-statistics %}">Resampled Statistics</a></p></nav>
 
 </div>

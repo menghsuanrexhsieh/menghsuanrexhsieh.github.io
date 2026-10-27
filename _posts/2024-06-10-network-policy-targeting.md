@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Network Policy Targeting: Identification and Known Propensities"
+title: "Network Policy Targeting"
 date: "2024-06-10"
 tags: ["econometrics", "networks"]
-excerpt: "A treatment rule changes both a person's own treatment and the treatments received by their neighbors."
+excerpt: "Evaluating treatment policies when outcomes depend on neighbors."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
-redirect_from: ["/2025/06/10/policy-targeting-under-network-interference/", "/2025/06/26/network-welfare-and-policy-rules/", "/2025/07/13/welfare-estimation-with-known-propensities/", "/2025/11/23/a-numerical-illustration-of-network-welfare/", "/2025/12/09/network-welfare-regret-and-identification-results/", "/2025/12/26/proofs-of-network-welfare-bounds/", "/2026/01/12/decomposing-network-welfare-estimation-error/", "/2026/01/28/bounding-network-empirical-processes/", "/2026/02/14/further-proofs-for-network-welfare/", "/2026/03/02/auxiliary-lemmas-for-network-welfare/", "/2026/03/19/identifying-network-welfare/", "/2026/04/05/proofs-for-network-welfare-extensions/", "/2025/06/10/network-policy-targeting-identification-and-known-propensities/"]
+redirect_from: ["/2024/06/10/network-policy-targeting-identification-and-known-propensities/", "/2025/06/10/network-policy-targeting-identification-and-known-propensities/", "/2025/06/10/policy-targeting-under-network-interference/", "/2025/06/26/network-welfare-and-policy-rules/", "/2025/07/13/welfare-estimation-with-known-propensities/", "/2025/11/23/a-numerical-illustration-of-network-welfare/", "/2025/12/09/network-welfare-regret-and-identification-results/", "/2025/12/26/proofs-of-network-welfare-bounds/", "/2026/01/12/decomposing-network-welfare-estimation-error/", "/2026/01/28/bounding-network-empirical-processes/", "/2026/02/14/further-proofs-for-network-welfare/", "/2026/03/02/auxiliary-lemmas-for-network-welfare/", "/2026/03/19/identifying-network-welfare/", "/2026/04/05/proofs-for-network-welfare-extensions/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -49,7 +49,7 @@ W(\pi^*)-W(\widehat\pi)
 <h3 data-note-section="4" id="10-556-why-exposure-overlap-can-be-harder-than-treatment-overlap">4. Why exposure overlap can be harder than treatment overlap</h3>
 <p>Overlap must be checked for the exposure that a rule induces. Moderate individual treatment probabilities can still make a particular treated-neighbor count rare. Those cells receive large inverse weights. Coarsening the summary helps only when outcomes depend on assignments through the coarser summary.</p>
 
-<p>Individualized rules can be deployed using observed characteristics, while the objective still accounts for spillovers. More flexible rules using the whole target adjacency matrix require more network information and a different complexity analysis. The next note handles <a href="{% post_url 2024-09-01-learning-network-policies-nuisance-estimation-regret-and-transport %}">estimated nuisance functions</a>; the same note also develops trimming and transport.</p>
+<p>Individualized rules can be deployed using observed characteristics, while the objective still accounts for spillovers. More flexible rules using the whole target adjacency matrix require more network information and a different complexity analysis. The next note handles <a href="{% post_url 2024-09-01-learning-network-policies %}">estimated nuisance functions</a>; the same note also develops trimming and transport.</p>
 
 <h3 data-note-section="5" id="10-556-a-rule-determines-a-whole-exposure-pattern">5. A rule determines a whole exposure pattern</h3>
 <p>Suppose the exposure summary is the number of treated neighbors. Conditional on the baseline network and covariates,</p>
@@ -138,7 +138,7 @@ n\geq\frac{2\chi\Gamma^2}{e_0^2\varepsilon^2}
 \]</div>{% endraw %}
 <p>The last expression is minimized at {% raw %}<span class="math inline">\(a=m\)</span>{% endraw %}: an accurate outcome adjustment removes variability due to exposure matching, even with known assignment probabilities. The calculation treats that adjustment as fixed under the relevant conditioning. Estimating it from dependent evaluation outcomes requires a separation argument.</p>
 
-<p>The augmented procedure in the <a href="{% post_url 2024-09-01-learning-network-policies-nuisance-estimation-regret-and-transport %}">learning and transport note</a> permits both nuisance functions to be estimated. Its additional error term records what the oracle analysis leaves out.</p>
+<p>The augmented procedure in the <a href="{% post_url 2024-09-01-learning-network-policies %}">learning and transport note</a> permits both nuisance functions to be estimated. Its additional error term records what the oracle analysis leaves out.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-viviano_policy_2025" class="csl-entry" role="listitem">
@@ -146,6 +146,6 @@ Viviano, Davide. 2025. <span>“Policy Targeting Under Network Interference.”<
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2025-05-08-missing-network-links-and-spillover-bias %}">Missing Network Links and Spillover Bias</a> · Next: <a href="{% post_url 2024-09-01-learning-network-policies-nuisance-estimation-regret-and-transport %}">Learning Network Policies: Nuisance Estimation, Regret, and Transport</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2025-05-08-missing-network-links-and-spillover-bias %}">Missing Network Links and Spillover Bias</a> · Next: <a href="{% post_url 2024-09-01-learning-network-policies %}">Learning Network Policies</a></p></nav>
 
 </div>

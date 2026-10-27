@@ -3,7 +3,7 @@ layout: "post"
 title: "Size Control for Conditional Stochastic Dominance"
 date: "2025-12-16"
 tags: ["statistics", "randomization inference"]
-excerpt: "Coupling with uniforms bounds the null statistic. A second coupling proves convergence of rejection probabilities when outcomes can tie."
+excerpt: "Controlling false rejections in tests of conditional stochastic dominance."
 note_series: "Permutation and randomization inference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Permutation and Randomization Inference/stats.tex"
 redirect_from: ["/2026/03/07/size-control-in-the-dominance-limit-experiment/", "/2026/04/12/size-control-for-conditional-stochastic-dominance/", "/2026/04/12/technical-lemmas-for-local-stochastic-dominance/"]

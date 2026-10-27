@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Conditional c-Dependence: Sharp Distribution and Treatment-Effect Bounds"
+title: "Conditional c-Dependence"
 date: "2025-04-30"
 tags: ["econometrics", "partial identification"]
-excerpt: "Conditional c-dependence yields sharp distribution and treatment-effect bounds through restrictions on selection probabilities, with separate formulas for ATT and binary outcomes."
+excerpt: "How treatment-effect bounds change when unconfoundedness is relaxed."
 note_series: "Sensitivity to unconfoundedness"
 note_source: "assets/notes/Overleaf Projects (32 items)/Unconfoundedness (Notes)/stats.tex"
-redirect_from: ["/2025/02/08/conditional-c-dependence-and-sharp-distribution-bounds/", "/2025/02/08/conditional-partial-independence-setup/", "/2025/02/28/assumptions-for-conditional-c-dependence/", "/2025/03/20/interpreting-the-sensitivity-parameter/", "/2025/04/10/bounds-on-potential-outcome-distributions/", "/2025/04/30/conditional-distribution-bounds-under-c-dependence/", "/2025/04/30/treatment-effect-bounds-under-conditional-c-dependence/", "/2025/05/20/quantile-and-mean-treatment-effect-bounds/", "/2025/06/10/unconditional-distribution-and-quantile-bounds/"]
+redirect_from: ["/2025/02/08/conditional-c-dependence-and-sharp-distribution-bounds/", "/2025/02/08/conditional-partial-independence-setup/", "/2025/02/28/assumptions-for-conditional-c-dependence/", "/2025/03/20/interpreting-the-sensitivity-parameter/", "/2025/04/10/bounds-on-potential-outcome-distributions/", "/2025/04/30/conditional-c-dependence-sharp-distribution-and-treatment-effect-bounds/", "/2025/04/30/conditional-distribution-bounds-under-c-dependence/", "/2025/04/30/treatment-effect-bounds-under-conditional-c-dependence/", "/2025/05/20/quantile-and-mean-treatment-effect-bounds/", "/2025/06/10/unconditional-distribution-and-quantile-bounds/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -255,5 +255,5 @@ Masten, Matthew A., and Alexandre Poirier. 2018. <span>“Identification of Trea
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Next: <a href="{% post_url 2025-10-30-inference-for-sensitivity-bounds-limit-laws-bootstrap-and-breakdown-points %}">Inference for Sensitivity Bounds: Limit Laws, Bootstrap, and Breakdown Points</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Next: <a href="{% post_url 2025-10-30-inference-for-sensitivity-bounds %}">Inference for Sensitivity Bounds</a></p></nav>
 </div>

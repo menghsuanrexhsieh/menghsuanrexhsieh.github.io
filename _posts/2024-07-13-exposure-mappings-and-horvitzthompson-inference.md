@@ -3,7 +3,7 @@ layout: "post"
 title: "Exposure Mappings and Horvitz–Thompson"
 date: "2024-07-13"
 tags: ["econometrics", "networks"]
-excerpt: "An exposure mapping summarizes which features of the treatment vector matter for a unit's outcome."
+excerpt: "Using exposure mappings to estimate effects under interference."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2024/07/13/exposure-mappings-and-general-interference/", "/2024/07/30/estimands-and-horvitzthompson-estimation-under-interference/"]
@@ -56,7 +56,7 @@ redirect_from: ["/2024/07/13/exposure-mappings-and-general-interference/", "/202
 <h3 data-note-section="4" id="10-182-if-the-mapping-is-misspecified">4. If the mapping is misspecified</h3>
 <p>Without the sufficiency condition, the weighted estimator still averages outcomes over assignments conditional on the reported exposure. That average can depend on the assignment design, so it is no longer the fixed {% raw %}<span class="math inline">\(y_i(d)\)</span>{% endraw %} estimand originally claimed.</p>
 
-<p>A finer mapping can capture additional features of interference, but it need not be sufficient and can create rare exposure cells and unstable weights. The <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference-effects-variance-and-limits %}">two-stage allocation approach</a> defines effects averaged over a specified distribution of peer assignments.</p>
+<p>A finer mapping can capture additional features of interference, but it need not be sufficient and can create rare exposure cells and unstable weights. The <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference %}">two-stage allocation approach</a> defines effects averaged over a specified distribution of peer assignments.</p>
 
 <h3 data-note-section="5" id="10-182-computing-exposure-probabilities-on-a-small-graph">5. Computing exposure probabilities on a small graph</h3>
 <p>Take a three-vertex path {% raw %}<span class="math inline">\(1-2-3\)</span>{% endraw %} with independent Bernoulli{% raw %}<span class="math inline">\((p)\)</span>{% endraw %} treatment assignment, where {% raw %}<span class="math inline">\(0&lt;p&lt;1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(N=3\)</span>{% endraw %}. For illustration, suppose each outcome depends on treatment assignments only through whether the unit has at least one treated neighbor. Then</p>

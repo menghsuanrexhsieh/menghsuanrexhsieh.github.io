@@ -3,7 +3,7 @@ layout: "post"
 title: "Network Cluster-Robust Inference"
 date: "2024-03-04"
 tags: ["econometrics", "dependence"]
-excerpt: "Cluster-based inference treats a few large groups as approximately independent."
+excerpt: "Using network clusters to account for dependence in inference."
 note_series: "Cluster and network inference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex"
 redirect_from: ["/2025/06/03/network-cluster-robust-inference/"]
@@ -256,6 +256,6 @@ Leung, Michael P. 2023. <span>“Network Cluster‐Robust Inference.”</span> <
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-05-21-when-to-cluster-sampling-assignment-and-fixed-effects %}">When to Cluster: Sampling, Assignment, and Fixed Effects</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-05-21-when-to-cluster %}">When to Cluster</a></p></nav>
 
 </div>

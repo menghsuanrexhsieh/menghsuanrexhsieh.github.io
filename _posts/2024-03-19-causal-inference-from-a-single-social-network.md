@@ -3,7 +3,7 @@ layout: "post"
 title: "Causal Inference from a Single Social Network"
 date: "2024-03-19"
 tags: ["econometrics", "networks"]
-excerpt: "A policy applied to one person can change the outcomes of their contacts."
+excerpt: "Estimating causal effects from one connected population."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2024/03/19/causal-inference-for-social-network-data/", "/2024/04/04/network-structural-equations-and-identification/", "/2024/04/21/estimating-causal-parameters-on-a-network/"]
@@ -162,7 +162,7 @@ Q_n(a,b)-\psi_n
 \]</div>{% endraw %}
 <p>The score equation gives the exact equality {% raw %}<span class="math inline">\(\widehat\psi_n=L_n(\widetilde m,\widehat q)\)</span>{% endraw %}. If the score is solved only approximately, its remaining value must be included in the estimator’s remainder and be negligible at the inferential scale.</p>
 
-<p>The <a href="{% post_url 2024-01-13-network-tmle-structural-models-dimension-reduction-and-inference %}">network TMLE notes</a> develop the related structural-model construction. The two mixture distributions can be estimated through models for baseline covariates and exposure assignment. The paper also describes fitting mixture laws directly by pooling observed {% raw %}<span class="math inline">\((V_i,W_i)\)</span>{% endraw %} and intervention pairs {% raw %}<span class="math inline">\((v_i^*,W_i)\)</span>{% endraw %}. This is computationally convenient, but the paper explicitly leaves aspects of that direct approach under strong network dependence for further theoretical work. Pooling supplies a loss function; it does not make the observations independent or establish a nuisance convergence rate.</p>
+<p>The <a href="{% post_url 2024-01-13-network-tmle %}">network TMLE notes</a> develop the related structural-model construction. The two mixture distributions can be estimated through models for baseline covariates and exposure assignment. The paper also describes fitting mixture laws directly by pooling observed {% raw %}<span class="math inline">\((V_i,W_i)\)</span>{% endraw %} and intervention pairs {% raw %}<span class="math inline">\((v_i^*,W_i)\)</span>{% endraw %}. This is computationally convenient, but the paper explicitly leaves aspects of that direct approach under strong network dependence for further theoretical work. Pooling supplies a loss function; it does not make the observations independent or establish a nuisance convergence rate.</p>
 
 <div id="10-59-matching-nuisance-rates-and-the-target">
 
@@ -382,6 +382,6 @@ Ogburn, Elizabeth L., Oleg Sofrygin, Iván Díaz, and Mark J. Van Der Laan. 2024
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-01-13-network-tmle-structural-models-dimension-reduction-and-inference %}">Network TMLE: Structural Models, Dimension Reduction, and Inference</a> · Next: <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference-effects-variance-and-limits %}">Two-Stage Experiments under Partial Interference: Effects, Variance, and Limits</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-01-13-network-tmle %}">Network TMLE</a> · Next: <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference %}">Two-Stage Experiments under Partial Interference</a></p></nav>
 
 </div>

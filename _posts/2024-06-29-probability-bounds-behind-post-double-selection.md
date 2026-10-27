@@ -3,14 +3,14 @@ layout: "post"
 title: "Probability Bounds Behind Post-Double Selection"
 date: "2024-06-29"
 tags: ["econometrics", "machine learning"]
-excerpt: "The proof of post-double selection needs more than a prediction-error bound."
+excerpt: "The probability bounds used to justify post-double selection."
 note_series: "Post-double-selection lasso"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Post-Double-Selection Lasso/stats.tex"
 ---
 
 <div class="note-content" markdown="0">
 
-<p>The selected controls depend on the data, so a probability bound for one fixed regression does not suffice for <a href="{% post_url 2024-03-02-post-double-selection-orthogonality-assumptions-and-inference %}">post-double selection</a>. The proof in <span class="citation" data-cites="belloni_inference_2014"><a href="#ref-belloni_inference_2014" role="doc-biblioref">Belloni, Chernozhukov, and Hansen (2014)</a></span> constructs events that control all relevant scores and sparse submodels at once. On those events, the selected model has both a small prediction error and a controlled size.</p>
+<p>The selected controls depend on the data, so a probability bound for one fixed regression does not suffice for <a href="{% post_url 2024-03-02-post-double-selection %}">post-double selection</a>. The proof in <span class="citation" data-cites="belloni_inference_2014"><a href="#ref-belloni_inference_2014" role="doc-biblioref">Belloni, Chernozhukov, and Hansen (2014)</a></span> constructs events that control all relevant scores and sparse submodels at once. On those events, the selected model has both a small prediction error and a controlled size.</p>
 
 <h3 data-note-section="1" id="19-22-the-bounds-we-need">1. The bounds we need</h3>
 <p>Write {% raw %}<span class="math inline">\(Y_i=f(Z_i)+\epsilon_i\)</span>{% endraw %} and approximate {% raw %}<span class="math inline">\(f\)</span>{% endraw %} by {% raw %}<span class="math inline">\(X_i&#x27;\beta_0\)</span>{% endraw %}, with at most {% raw %}<span class="math inline">\(s\)</span>{% endraw %} nonzero coefficients. Under the paper’s regularity conditions, feasible Lasso and post-Lasso give</p>
@@ -137,6 +137,6 @@ Belloni, A., V. Chernozhukov, and C. Hansen. 2014. <span>“Inference on Treatme
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-02-post-double-selection-orthogonality-assumptions-and-inference %}">Post-Double Selection: Orthogonality, Assumptions, and Inference</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-02-post-double-selection %}">Post-Double Selection</a></p></nav>
 
 </div>

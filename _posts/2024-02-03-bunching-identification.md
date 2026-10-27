@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Bunching Identification: Density Bounds and Control Groups"
+title: "Bunching Identification"
 date: "2024-02-03"
 tags: ["econometrics", "bunching"]
-excerpt: "A known Lipschitz constant gives a sharp set of bunching elasticities by bounding the latent density inside the missing interval."
+excerpt: "What bunching data can reveal about behavioral responses."
 note_series: "Bunching"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex"
-redirect_from: ["/2025/04/05/identification-limits-and-bounds-for-bunching-elasticities/", "/2025/04/05/partial-identification-of-bunching-elasticities/", "/2025/04/24/bunching-identification-density-bounds-and-control-groups/", "/2025/04/24/control-groups-in-bunching-designs/", "/2025/07/30/nonidentification-in-the-standard-kink-model/"]
+redirect_from: ["/2024/02/03/bunching-identification-density-bounds-and-control-groups/", "/2025/04/05/identification-limits-and-bounds-for-bunching-elasticities/", "/2025/04/05/partial-identification-of-bunching-elasticities/", "/2025/04/24/bunching-identification-density-bounds-and-control-groups/", "/2025/04/24/control-groups-in-bunching-designs/", "/2025/07/30/nonidentification-in-the-standard-kink-model/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -154,5 +154,5 @@ Coles, Jeffrey L., Elena Patel, Nathan Seegert, and Matthew Smith. 2022. <span>�
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-01-15-bunching-at-notches-and-extensive-responses %}">Bunching at Notches and Extensive Responses</a> · Next: <a href="{% post_url 2024-03-11-bunching-and-endogeneity-testing-identification-and-correction %}">Bunching and Endogeneity: Testing, Identification, and Correction</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-01-15-bunching-at-notches-and-extensive-responses %}">Bunching at Notches and Extensive Responses</a> · Next: <a href="{% post_url 2024-03-11-bunching-and-endogeneity %}">Bunching and Endogeneity</a></p></nav>
 </div>

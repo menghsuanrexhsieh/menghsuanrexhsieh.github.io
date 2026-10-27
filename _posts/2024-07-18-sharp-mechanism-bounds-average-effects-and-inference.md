@@ -3,7 +3,7 @@ layout: "post"
 title: "Sharp Mechanism Bounds, Average Effects, and Inference"
 date: "2024-07-18"
 tags: ["econometrics", "causal inference"]
-excerpt: "Joint potential-outcome constructions attain the affected-mass and average-effect bounds; projecting a confidence region gives coverage of the identified effect set."
+excerpt: "Bounding how much of a treatment's effect passes through a mediator."
 note_series: "Testing mechanisms"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Testing Mechanisms/stats.tex"
 redirect_from: ["/2025/10/28/sharp-mechanism-bounds-average-effects-and-inference/", "/2025/10/28/sharpness-of-principal-stratum-bounds/", "/2025/11/26/bounds-on-average-effects-within-principal-strata/", "/2025/12/25/inference-for-mechanism-bounds/"]
@@ -21,7 +21,7 @@ redirect_from: ["/2025/10/28/sharp-mechanism-bounds-average-effects-and-inferenc
 <span id="mechanism-finite-sample-size"></span>
 <span id="mechanism-finite-sample-test"></span>
 <span id="mechanism-test-example"></span>
-<p>The observable inequalities in the <a href="{% post_url 2024-07-13-testing-mediation-principal-strata-and-observable-bounds %}">preceding post</a> bound the probability mass of stayers whose outcomes change under treatment. Sharpness requires a joint distribution of potential outcomes and mediators that attains the bounds while reproducing the entire observed law. The construction also permits sharp bounds on average direct effects.</p>
+<p>The observable inequalities in the <a href="{% post_url 2024-07-13-testing-mediation %}">preceding post</a> bound the probability mass of stayers whose outcomes change under treatment. Sharpness requires a joint distribution of potential outcomes and mediators that attains the bounds while reproducing the entire observed law. The construction also permits sharp bounds on average direct effects.</p>
 <!-- original-paper-scope: supplementary-inference-introduction
 Introduction to the separate confidence-region projection procedure commented out below.
 
@@ -450,7 +450,7 @@ Kwon, Soonwoo, and Jonathan Roth. 2024. <span>“Testing Mechanisms.”</span> a
 
 <nav class="note-series" aria-label="Notes in this series">
 <p>
-Previous: <a href="{% post_url 2024-07-13-testing-mediation-principal-strata-and-observable-bounds %}">Testing Mediation: Principal Strata and Observable Bounds</a>
+Previous: <a href="{% post_url 2024-07-13-testing-mediation %}">Testing Mediation</a>
 </p>
 </nav>
 </div>

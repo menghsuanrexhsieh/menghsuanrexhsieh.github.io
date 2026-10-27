@@ -3,7 +3,7 @@ layout: "post"
 title: "Finite-Sample Inference under Interference"
 date: "2024-03-13"
 tags: ["econometrics", "networks"]
-excerpt: "Inference under interference can proceed without estimating every cross-potential-outcome covariance."
+excerpt: "Confidence intervals for experiments with spillovers."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2024/06/10/finite-sample-inference-under-interference/"]
@@ -147,6 +147,6 @@ Tchetgen-Tchetgen, Eric J Tchetgen, and Tyler J VanderWeele. 2012. <span>“On C
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference-effects-variance-and-limits %}">Two-Stage Experiments under Partial Interference: Effects, Variance, and Limits</a> · Next: <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">Exposure Mappings and Horvitz–Thompson</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-06-26-two-stage-experiments-under-partial-interference %}">Two-Stage Experiments under Partial Interference</a> · Next: <a href="{% post_url 2024-07-13-exposure-mappings-and-horvitzthompson-inference %}">Exposure Mappings and Horvitz–Thompson</a></p></nav>
 
 </div>

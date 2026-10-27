@@ -3,7 +3,7 @@ layout: "post"
 title: "Weak Instruments and the tF Critical Value"
 date: "2024-09-07"
 tags: ["econometrics", "instrumental variables"]
-excerpt: "In a just-identified IV regression, the usual t statistic depends on the strength of the first stage even under the null."
+excerpt: "Adjusting confidence intervals when instruments may be weak."
 note_series: "Weak instruments"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Weak Instruments/stats.tex"
 redirect_from: ["/2024/09/07/the-tf-test-and-weak-instrument-inference/", "/2024/10/15/the-gaussian-problem-behind-the-tf-critical-value/", "/2024/11/23/constructing-the-tf-critical-value-function/"]
@@ -26,7 +26,7 @@ X_i=\pi_n Z_i+v_i,
 \mathbb{E}[Z_i u_i]=\mathbb{E}[Z_i v_i]=0.
 
 \tag{1}\]</div>{% endraw %}
-<p>The subscript on {% raw %}<span class="math inline">\(\pi_n\)</span>{% endraw %} permits instrument strength to change with the sample size. Correlation between {% raw %}<span class="math inline">\(u_i\)</span>{% endraw %} and {% raw %}<span class="math inline">\(v_i\)</span>{% endraw %} is allowed. Instrument validity is imposed through the moment restriction on {% raw %}<span class="math inline">\(u_i\)</span>{% endraw %}; the {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} adjustment does not establish that restriction. For a <a href="{% post_url 2022-12-28-shift-share-iv-exogenous-shares-and-rotemberg-weights %}">shift-share instrument</a>, for example, the source of exogenous variation must be justified separately.</p>
+<p>The subscript on {% raw %}<span class="math inline">\(\pi_n\)</span>{% endraw %} permits instrument strength to change with the sample size. Correlation between {% raw %}<span class="math inline">\(u_i\)</span>{% endraw %} and {% raw %}<span class="math inline">\(v_i\)</span>{% endraw %} is allowed. Instrument validity is imposed through the moment restriction on {% raw %}<span class="math inline">\(u_i\)</span>{% endraw %}; the {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} adjustment does not establish that restriction. For a <a href="{% post_url 2022-12-28-shift-share-iv %}">shift-share instrument</a>, for example, the source of exogenous variation must be justified separately.</p>
 
 <p>With {% raw %}<span class="math inline">\(Z&#x27;Z&gt;0\)</span>{% endraw %}, define</p>
 

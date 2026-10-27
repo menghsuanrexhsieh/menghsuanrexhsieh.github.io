@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Novelty Detection: Mixture Identification and Statistical Guarantees"
+title: "Novelty Detection"
 date: "2024-08-28"
 tags: ["statistics", "machine learning"]
-excerpt: "A nominal sample and an unlabeled mixture identify optimal rejection rankings and a lower endpoint for the novelty fraction; the full fraction remains set identified without irreducibility."
+excerpt: "Detecting unfamiliar observations using labeled and unlabeled data."
 note_series: "Novelty detection"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on ML Novelty Detection/stats.tex"
-redirect_from: ["/2024/07/06/novelty-detection-and-statistical-guarantees/", "/2024/07/06/novelty-detection-as-positiveunlabeled-learning/", "/2024/07/29/statistical-guarantees/", "/2024/08/21/estimating-the-class-proportion-in-novelty-detection/", "/2024/08/21/mixture-proportions-identification-and-limits-to-estimation/", "/2024/08/21/novelty-detection-mixture-identification-and-statistical-guarantees/", "/2024/09/14/why-the-class-proportion-has-no-distribution-free-upper-bound/"]
+redirect_from: ["/2024/07/06/novelty-detection-and-statistical-guarantees/", "/2024/07/06/novelty-detection-as-positiveunlabeled-learning/", "/2024/07/29/statistical-guarantees/", "/2024/08/21/estimating-the-class-proportion-in-novelty-detection/", "/2024/08/21/mixture-proportions-identification-and-limits-to-estimation/", "/2024/08/21/novelty-detection-mixture-identification-and-statistical-guarantees/", "/2024/08/28/novelty-detection-mixture-identification-and-statistical-guarantees/", "/2024/09/14/why-the-class-proportion-has-no-distribution-free-upper-bound/"]
 ---
 
 <div class="note-content" markdown="0">

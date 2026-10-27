@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "The Hot Hand: Statistics for Streaks"
+title: "The Hot Hand"
 date: "2024-04-14"
 tags: ["probability theory", "dependence"]
-excerpt: "A streak statistic compares success after several successes with an appropriate baseline."
+excerpt: "Measuring whether success becomes more likely after a streak."
 note_series: "Dependent data"
 note_source: "assets/notes/Overleaf Projects (32 items)/Dependent Data Time Series/stats.tex"
-redirect_from: ["/2024/03/30/the-hot-hand-statistics-for-streaks/"]
+redirect_from: ["/2024/03/30/the-hot-hand-statistics-for-streaks/", "/2024/04/14/the-hot-hand-statistics-for-streaks/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -35,7 +35,7 @@ A_t=\prod_{j=1}^kX_{t-j},\qquad B_t=\prod_{j=1}^k(1-X_{t-j}).
 <p>The corresponding permutation distributions converge to these null limits. Permuting the sequence also gives a finite-sample valid test of the i.i.d. Bernoulli null, with randomization at ties if exact size is desired.</p>
 
 </div>
-<p>The normal limits describe first-order fluctuations, not finite-sample expectations. A random eligibility count can bias the ratio. The <a href="{% post_url 2024-04-15-the-hot-hand-limit-theory-and-proofs %}">companion derivation</a> calculates the leading fluctuation and then the smaller-order term responsible for that bias.</p>
+<p>The normal limits describe first-order fluctuations, not finite-sample expectations. A random eligibility count can bias the ratio. The <a href="{% post_url 2024-04-15-the-hot-hand %}">companion derivation</a> calculates the leading fluctuation and then the smaller-order term responsible for that bias.</p>
 
 <h3 data-note-section="2" id="05-36-why-permutation-removes-the-unknown-success-rate">2. Why permutation removes the unknown success rate</h3>
 <p>Conditional on {% raw %}<span class="math inline">\(\sum_tX_t=a\)</span>{% endraw %}, every binary sequence with {% raw %}<span class="math inline">\(a\)</span>{% endraw %} successes has the same probability under the null. Its conditional distribution is therefore uniform over permutations, independently of {% raw %}<span class="math inline">\(p\)</span>{% endraw %}. Ranking the observed statistic within that distribution controls conditional size, hence unconditional size.</p>
@@ -179,6 +179,6 @@ Ritzwoller, David M, and Joseph P Romano. 2022. <span>“Uncertainty in the Hot 
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-05-19-steins-method %}">Stein’s Method</a> · Next: <a href="{% post_url 2024-04-15-the-hot-hand-limit-theory-and-proofs %}">The Hot Hand: Limit Theory and Proofs</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-05-19-steins-method %}">Stein’s Method</a> · Next: <a href="{% post_url 2024-04-15-the-hot-hand %}">The Hot Hand</a></p></nav>
 
 </div>

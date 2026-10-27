@@ -3,7 +3,7 @@ layout: "post"
 title: "Dependence-Robust Resampling and Moment Tests"
 date: "2024-12-09"
 tags: ["econometrics", "networks"]
-excerpt: "Conditional resampling limits yield moment-inequality tests whose inversion covers each admissible parameter uniformly under sequencewise conditions."
+excerpt: "Testing means and moment restrictions with dependent data."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
 redirect_from: ["/2023/10/07/pointwise-and-uniform-coverage-in-moment-inequality-models/", "/2024/12/09/dependence-robust-moment-tests/", "/2024/12/26/resampled-moment-inequality-tests/", "/2025/01/12/limit-theory-for-dependence-robust-tests/", "/2025/01/28/technical-bounds-for-dependence-robust-inference/"]
@@ -430,5 +430,5 @@ Leung, Michael P. 2022. <span>“Dependence‐robust Inference Using Resampled S
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-09-17-resampled-statistics-size-and-local-power %}">Resampled Statistics: Size and Local Power</a> · Additional reading: <a href="{% post_url 2024-07-29-randomized-saturation-designs-and-their-optimal-allocation %}">Randomized Saturation Designs and Their Optimal Allocation</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-09-17-resampled-statistics %}">Resampled Statistics</a> · Additional reading: <a href="{% post_url 2024-07-29-randomized-saturation-designs-and-their-optimal-allocation %}">Randomized Saturation Designs and Their Optimal Allocation</a></p></nav>
 </div>

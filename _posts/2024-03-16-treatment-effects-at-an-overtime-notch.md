@@ -3,7 +3,7 @@ layout: "post"
 title: "Treatment Effects at a Bunching Boundary"
 date: "2024-03-16"
 tags: ["econometrics", "bunching"]
-excerpt: "The marginal slope of an observed outcome regression combines a causal response with selection."
+excerpt: "Estimating treatment effects at a bunching boundary."
 note_series: "Bunching"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex"
 redirect_from: ["/2025/07/11/treatment-effects-at-an-overtime-notch/"]
@@ -58,7 +58,7 @@ f_V(u(t))=\frac{f_{T^*}(t)}{|u&#x27;(t)|}.
 \]</div>{% endraw %}
 <p>The quotient recovers the selection characteristic function only when the deconvolution problem is identified. Fourier inversion needs its own regularity conditions, and zeros of {% raw %}<span class="math inline">\(\varphi_E\)</span>{% endraw %} cannot be divided out without justification.</p>
 
-<p>The paper supplies conditions for the required density value and thus identifies the local response {% raw %}<span class="math inline">\(\beta(0)\)</span>{% endraw %}. It does not thereby identify the response at every treatment value. The <a href="{% post_url 2024-03-11-bunching-and-endogeneity-testing-identification-and-correction %}">endogeneity test</a> needs only the boundary mean contrast and avoids this density-recovery problem.</p>
+<p>The paper supplies conditions for the required density value and thus identifies the local response {% raw %}<span class="math inline">\(\beta(0)\)</span>{% endraw %}. It does not thereby identify the response at every treatment value. The <a href="{% post_url 2024-03-11-bunching-and-endogeneity %}">endogeneity test</a> needs only the boundary mean contrast and avoids this density-recovery problem.</p>
 
 <h3 data-note-section="5" id="16-150-deriving-the-selection-component-in-a-smooth-model">5. Deriving the selection component in a smooth model</h3>
 <p>Suppose potential outcomes can be represented by a smooth function {% raw %}<span class="math inline">\(y(t,v)\)</span>{% endraw %}, with conditional latent-type density {% raw %}<span class="math inline">\(f(v\mid T=t)\)</span>{% endraw %}. Differentiating the observed mean gives</p>
@@ -210,6 +210,6 @@ Caetano, Carolina, Gregorio Caetano, and Eric Nielsen. 2022. <span>“Identifica
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-11-bunching-and-endogeneity-testing-identification-and-correction %}">Bunching and Endogeneity: Testing, Identification, and Correction</a> · Next: <a href="{% post_url 2024-06-10-estimating-elasticities-under-nonlinear-budget-sets %}">Estimating Elasticities under Nonlinear Budget Sets</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-03-11-bunching-and-endogeneity %}">Bunching and Endogeneity</a> · Next: <a href="{% post_url 2024-06-10-estimating-elasticities-under-nonlinear-budget-sets %}">Estimating Elasticities under Nonlinear Budget Sets</a></p></nav>
 
 </div>

@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Two-Stage Experiments under Partial Interference: Effects, Variance, and Limits"
+title: "Two-Stage Experiments under Partial Interference"
 date: "2024-06-26"
 tags: ["econometrics", "networks"]
-excerpt: "Two-stage experiments distinguish changing an individual's treatment from changing the treatment environment around that individual."
+excerpt: "Separating treatment effects from spillovers in two-stage experiments."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
-redirect_from: ["/2024/05/08/partial-interference-and-two-stage-randomization/", "/2024/05/08/two-stage-randomization-and-variance-under-partial-interference/", "/2024/05/24/variance-estimation-under-partial-interference/", "/2024/06/26/large-cluster-inference-under-interference/"]
+redirect_from: ["/2024/05/08/partial-interference-and-two-stage-randomization/", "/2024/05/08/two-stage-randomization-and-variance-under-partial-interference/", "/2024/05/24/variance-estimation-under-partial-interference/", "/2024/06/26/large-cluster-inference-under-interference/", "/2024/06/26/two-stage-experiments-under-partial-interference-effects-variance-and-limits/"]
 ---
 
 <div class="note-content" markdown="0">

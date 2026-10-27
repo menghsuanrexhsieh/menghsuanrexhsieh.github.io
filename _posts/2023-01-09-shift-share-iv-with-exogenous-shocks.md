@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Shift-Share IV with Exogenous Shocks: Identification and Inference"
+title: "Shift-Share IV with Exogenous Shocks"
 date: "2023-01-09"
 tags: ["econometrics", "instrumental variables"]
-excerpt: "The shock-based argument for shift-share IV allows exposure shares to be correlated with outcome errors."
+excerpt: "How shocks identify effects in shift-share IV designs."
 note_series: "Shift-share designs"
 note_source: "assets/notes/Shift-Share - Old and New/ss-on.tex"
-redirect_from: ["/2023/09/22/exogenous-shocks-and-shock-level-iv-equivalence/", "/2023/09/22/exogenous-shocks-in-shift-share-designs/", "/2023/10/16/shock-level-equivalence-for-shift-share-iv/", "/2023/12/03/shift-share-iv-with-exogenous-shocks-identification-and-inference/", "/2023/12/03/shift-share-standard-errors-and-shock-level-inference/", "/2023/12/03/why-conventional-shift-share-standard-errors-fail/", "/2023/12/27/shock-level-standard-errors/", "/2024/01/20/proofs-of-shift-share-equivalence/"]
+redirect_from: ["/2023/01/09/shift-share-iv-with-exogenous-shocks-identification-and-inference/", "/2023/09/22/exogenous-shocks-and-shock-level-iv-equivalence/", "/2023/09/22/exogenous-shocks-in-shift-share-designs/", "/2023/10/16/shock-level-equivalence-for-shift-share-iv/", "/2023/12/03/shift-share-iv-with-exogenous-shocks-identification-and-inference/", "/2023/12/03/shift-share-standard-errors-and-shock-level-inference/", "/2023/12/03/why-conventional-shift-share-standard-errors-fail/", "/2023/12/27/shock-level-standard-errors/", "/2024/01/20/proofs-of-shift-share-equivalence/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -58,7 +58,7 @@ s_k\triangleq\sum_\ell e_\ell s_{\ell k},\qquad
 <h3 data-note-section="3" id="34-48-heterogeneity-and-interpretation">3. Heterogeneity and interpretation</h3>
 <p>In a simple reduced-form model {% raw %}<span class="math inline">\(Y_\ell=Y_\ell(0)+\sum_ks_{\ell k}g_k\theta_{\ell k}\)</span>{% endraw %}, centered independent shocks yield weights proportional to {% raw %}<span class="math inline">\(e_\ell s_{\ell k}^2\operatorname{Var}(g_k)\)</span>{% endraw %} for the regression on exposure. For an IV treatment effect, first-stage responses enter the weights as well. A convex-average interpretation therefore needs sign restrictions on those responses; it does not follow from nonnegative shares alone.</p>
 
-<p>Conditioning on composition permits endogenous shares while placing the identifying restriction on shocks. This differs from <a href="{% post_url 2022-12-28-shift-share-iv-exogenous-shares-and-rotemberg-weights %}">share exogeneity</a>, and it changes which observations supply independent variation for the standard error.</p>
+<p>Conditioning on composition permits endogenous shares while placing the identifying restriction on shocks. This differs from <a href="{% post_url 2022-12-28-shift-share-iv %}">share exogeneity</a>, and it changes which observations supply independent variation for the standard error.</p>
 
 <h3 data-note-section="4" id="34-48-the-aggregation-calculation-with-controls">4. The aggregation calculation with controls</h3>
 <p>For any residualized variable {% raw %}<span class="math inline">\(V_\ell^\perp\)</span>{% endraw %},</p>
@@ -160,6 +160,6 @@ Borusyak, Kirill, Peter Hull, and Xavier Jaravel. 2022. <span>“Quasi-Experimen
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2022-12-28-shift-share-iv-exogenous-shares-and-rotemberg-weights %}">Shift-Share IV: Exogenous Shares and Rotemberg Weights</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2022-12-28-shift-share-iv %}">Shift-Share IV</a></p></nav>
 
 </div>

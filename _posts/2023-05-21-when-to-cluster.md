@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "When to Cluster: Sampling, Assignment, and Fixed Effects"
+title: "When to Cluster"
 date: "2023-05-21"
 tags: ["econometrics", "dependence"]
-excerpt: "Whether standard errors should be clustered depends on the sampling and treatment-assignment design."
+excerpt: "How sampling and treatment assignment determine when to cluster standard errors."
 note_series: "Cluster and network inference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Cluster Robust Inference and Network Dependence/stats.tex"
-redirect_from: ["/2025/03/13/when-should-standard-errors-be-clustered/", "/2025/03/13/when-to-cluster-sampling-assignment-and-fixed-effects/", "/2025/04/03/limits-of-robust-and-cluster-variance-estimators/", "/2025/04/23/causal-cluster-variance-and-the-two-stage-bootstrap/", "/2025/05/14/fixed-effects-under-clustered-sampling-and-assignment/", "/2025/08/04/a-central-limit-theorem-for-clustered-ols/", "/2025/08/24/convergence-of-the-cluster-variance-estimator/", "/2025/09/14/a-central-limit-theorem-for-clustered-fixed-effects/", "/2025/10/04/convergence-of-the-robust-variance-estimator/", "/2025/10/25/consistency-of-causal-cluster-variance/", "/2025/11/15/supporting-limits-for-clustered-inference/"]
+redirect_from: ["/2023/05/21/when-to-cluster-sampling-assignment-and-fixed-effects/", "/2025/03/13/when-should-standard-errors-be-clustered/", "/2025/03/13/when-to-cluster-sampling-assignment-and-fixed-effects/", "/2025/04/03/limits-of-robust-and-cluster-variance-estimators/", "/2025/04/23/causal-cluster-variance-and-the-two-stage-bootstrap/", "/2025/05/14/fixed-effects-under-clustered-sampling-and-assignment/", "/2025/08/04/a-central-limit-theorem-for-clustered-ols/", "/2025/08/24/convergence-of-the-cluster-variance-estimator/", "/2025/09/14/a-central-limit-theorem-for-clustered-fixed-effects/", "/2025/10/04/convergence-of-the-robust-variance-estimator/", "/2025/10/25/consistency-of-causal-cluster-variance/", "/2025/11/15/supporting-limits-for-clustered-inference/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -188,6 +188,6 @@ Abadie, Alberto, Susan Athey, Guido Imbens, and Jeffrey Wooldridge. 2022. <span>
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference-bootstrap-failure-and-score-subsampling %}">Heavy-Tailed Cluster Inference: Bootstrap Failure and Score Subsampling</a> · Next: <a href="{% post_url 2024-03-04-network-cluster-robust-inference %}">Network Cluster-Robust Inference</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Additional reading: <a href="{% post_url 2024-04-17-heavy-tailed-cluster-inference %}">Heavy-Tailed Cluster Inference</a> · Next: <a href="{% post_url 2024-03-04-network-cluster-robust-inference %}">Network Cluster-Robust Inference</a></p></nav>
 
 </div>

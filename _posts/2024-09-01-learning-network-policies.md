@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Learning Network Policies: Nuisance Estimation, Regret, and Transport"
+title: "Learning Network Policies"
 date: "2024-09-01"
 tags: ["econometrics", "networks"]
-excerpt: "Estimated outcome regressions can improve network-policy evaluation, and estimated exposure probabilities are needed outside a fully known experiment."
+excerpt: "Learning treatment policies from data with network spillovers."
 note_series: "Network interference"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes for network interference: inference and design/ideas.tex"
-redirect_from: ["/2025/07/30/learning-network-policies-with-estimated-nuisance-functions/", "/2025/07/30/welfare-estimation-with-estimated-nuisance-functions/", "/2025/08/15/computing-network-treatment-policies/", "/2025/09/01/network-policy-regret-overlap-dependence-and-transport/", "/2025/09/01/trimming-for-network-overlap/", "/2025/09/17/regret-under-higher-order-dependence/", "/2025/10/04/welfare-in-a-different-target-population/", "/2025/10/21/structural-equations-for-network-welfare/", "/2025/11/06/extensions-of-network-policy-targeting/", "/2025/09/01/learning-network-policies-nuisance-estimation-regret-and-transport/"]
+redirect_from: ["/2024/09/01/learning-network-policies-nuisance-estimation-regret-and-transport/", "/2025/07/30/learning-network-policies-with-estimated-nuisance-functions/", "/2025/07/30/welfare-estimation-with-estimated-nuisance-functions/", "/2025/08/15/computing-network-treatment-policies/", "/2025/09/01/learning-network-policies-nuisance-estimation-regret-and-transport/", "/2025/09/01/network-policy-regret-overlap-dependence-and-transport/", "/2025/09/01/trimming-for-network-overlap/", "/2025/09/17/regret-under-higher-order-dependence/", "/2025/10/04/welfare-in-a-different-target-population/", "/2025/10/21/structural-equations-for-network-welfare/", "/2025/11/06/extensions-of-network-policy-targeting/"]
 ---
 
 <div class="note-content" markdown="0">
@@ -51,7 +51,7 @@ O\left(n_e^{-\xi}+\sqrt{\mathcal R_n\mathcal B_n}\right).
 <h3 data-note-section="4" id="10-628-optimization-is-part-of-the-result">4. Optimization is part of the result</h3>
 <p>For treated-neighbor counts and suitable policy classes, the empirical objective can be represented with binary decision variables and linear constraints that track own treatment and neighbor exposure. The paper gives an equivalent mixed-integer formulation.</p>
 
-<p>If the optimizer returns a policy within {% raw %}<span class="math inline">\(\epsilon_{\rm opt}\)</span>{% endraw %} of the empirical maximum, the basic <a href="{% post_url 2024-06-10-network-policy-targeting-identification-and-known-propensities %}">regret inequality</a> becomes</p>
+<p>If the optimizer returns a policy within {% raw %}<span class="math inline">\(\epsilon_{\rm opt}\)</span>{% endraw %} of the empirical maximum, the basic <a href="{% post_url 2024-06-10-network-policy-targeting %}">regret inequality</a> becomes</p>
 
 {% raw %}<div class="math display">\[
 W(\pi^*)-W(\widehat\pi)
@@ -68,7 +68,7 @@ W(\pi^*)-W(\widehat\pi)
 \]</div>{% endraw %}
 <p>Averaging and applying Cauchy–Schwarz gives a bound by {% raw %}<span class="math inline">\(\kappa^{-1}r_er_m\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(r_e,r_m\)</span>{% endraw %} are the relevant average {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} errors. For policy learning this control must hold uniformly over exposures induced by candidate rules, or through error measures strong enough to bound their supremum. Good prediction at commonly observed cells alone need not control the rare cells chosen by an optimizing rule.</p>
 
-<p>Split estimated-welfare error into a centered empirical fluctuation and this conditional bias. The <a href="{% post_url 2024-06-10-network-policy-targeting-identification-and-known-propensities %}">oracle concentration argument</a> controls the first part under network separation and boundedness; the product bound controls the second. Inserting their sum into the basic regret inequality yields the oracle term, the nuisance-product term, and any optimization gap. The paper’s {% raw %}<span class="math inline">\(\mathcal R_n,\mathcal B_n\)</span>{% endraw %} encode the corresponding uniform error measures and network factors.</p>
+<p>Split estimated-welfare error into a centered empirical fluctuation and this conditional bias. The <a href="{% post_url 2024-06-10-network-policy-targeting %}">oracle concentration argument</a> controls the first part under network separation and boundedness; the product bound controls the second. Inserting their sum into the basic regret inequality yields the oracle term, the nuisance-product term, and any optimization gap. The paper’s {% raw %}<span class="math inline">\(\mathcal R_n,\mathcal B_n\)</span>{% endraw %} encode the corresponding uniform error measures and network factors.</p>
 
 <p>Zero population bias does not remove sampling fluctuation. Even with one correct nuisance, a noisy fitted score may have a larger range, variance, or complexity. Double robustness alone therefore does not imply the oracle learning rate.</p>
 
@@ -154,6 +154,6 @@ Viviano, Davide. 2025. <span>“Policy Targeting Under Network Interference.”<
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-06-10-network-policy-targeting-identification-and-known-propensities %}">Network Policy Targeting: Identification and Known Propensities</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2024-06-10-network-policy-targeting %}">Network Policy Targeting</a></p></nav>
 
 </div>

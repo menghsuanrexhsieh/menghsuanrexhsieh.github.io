@@ -1,12 +1,12 @@
 ---
 layout: "post"
-title: "Testing Mediation: Principal Strata and Observable Bounds"
+title: "Testing Mediation"
 date: "2024-07-13"
 tags: ["econometrics", "causal inference"]
-excerpt: "Random assignment and restrictions on mediator movements bound the share of stayers whose outcomes change, yielding observable implications of full mediation."
+excerpt: "Testing whether a mediator explains a treatment's effect."
 note_series: "Testing mechanisms"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Testing Mechanisms/stats.tex"
-redirect_from: ["/2025/07/05/testing-a-causal-mechanism-with-potential-mediators/", "/2025/07/05/testing-mediation-principal-strata-and-observable-bounds/", "/2025/08/02/a-binary-mediator-and-principal-strata/", "/2025/08/31/multi-valued-mediators/", "/2025/09/29/bounds-on-the-fraction-affected-within-a-principal-stratum/"]
+redirect_from: ["/2024/07/13/testing-mediation-principal-strata-and-observable-bounds/", "/2025/07/05/testing-a-causal-mechanism-with-potential-mediators/", "/2025/07/05/testing-mediation-principal-strata-and-observable-bounds/", "/2025/08/02/a-binary-mediator-and-principal-strata/", "/2025/08/31/multi-valued-mediators/", "/2025/09/29/bounds-on-the-fraction-affected-within-a-principal-stratum/"]
 ---
 
 <div class="note-content" markdown="0">

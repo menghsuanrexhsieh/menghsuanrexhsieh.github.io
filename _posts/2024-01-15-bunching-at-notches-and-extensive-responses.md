@@ -3,7 +3,7 @@ layout: "post"
 title: "Bunching at Notches and Extensive Responses"
 date: "2024-01-15"
 tags: ["econometrics", "bunching"]
-excerpt: "A notch creates a discrete loss in consumption at an earnings threshold."
+excerpt: "How notches in tax schedules shape earnings choices."
 note_series: "Bunching"
 note_source: "assets/notes/Overleaf Projects (32 items)/Notes on Micro Elasticities Estimation/bunching_elasticities.tex"
 redirect_from: ["/2025/02/25/bunching-at-notches-and-extensive-responses/", "/2025/02/25/bunching-at-notches/", "/2025/08/19/extensive-responses/"]
@@ -147,6 +147,6 @@ Kleven, Henrik J., and Mazhar Waseem. 2013. <span>“Using Notches to Uncover Op
 </div>
 </div>
 
-<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-08-11-taxable-income-elasticities-and-what-kinks-identify %}">Taxable-Income Elasticities and What Kinks Identify</a> · Next: <a href="{% post_url 2024-02-03-bunching-identification-density-bounds-and-control-groups %}">Bunching Identification: Density Bounds and Control Groups</a></p></nav>
+<nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2023-08-11-taxable-income-elasticities-and-what-kinks-identify %}">Taxable-Income Elasticities and What Kinks Identify</a> · Next: <a href="{% post_url 2024-02-03-bunching-identification %}">Bunching Identification</a></p></nav>
 
 </div>
