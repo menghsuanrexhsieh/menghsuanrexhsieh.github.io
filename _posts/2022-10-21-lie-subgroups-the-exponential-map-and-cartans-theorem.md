@@ -16,7 +16,7 @@ redirect_from: ["/2022/10/21/lie-group-homomorphisms-and-lie-subgroups/", "/2022
 </div>
 <p>A subgroup of a Lie group need not be an embedded submanifold: its topology may interact poorly with the ambient topology. Cartan’s closed subgroup theorem gives a useful criterion. A subgroup that is closed as a subset automatically has an embedded Lie group structure.</p>
 
-<p>We reach this theorem through the exponential map. One-parameter subgroups connect tangent vectors at the identity to curves in the group, allowing us to detect the tangent directions of a closed subgroup before we know that it is a manifold.</p>
+<p>One-parameter subgroups connect tangent vectors at the identity to curves in the group, allowing us to detect the tangent directions of a closed subgroup before we know that it is a manifold.</p>
 
 <div id="result-1" class="definition" data-note-number="1" data-note-kind="Definition">
 <p><strong>Definition 1</strong>.  Let {% raw %}<span class="math inline">\(G\)</span>{% endraw %} and {% raw %}<span class="math inline">\(H\)</span>{% endraw %} be Lie groups. A <em>Lie group homomorphism</em> from {% raw %}<span class="math inline">\(G\)</span>{% endraw %} to {% raw %}<span class="math inline">\(H\)</span>{% endraw %} is a smooth map {% raw %}<span class="math inline">\(F : G \to H\)</span>{% endraw %} that is also a group homomorphism. Such a map {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is called a <em>Lie group isomorphism</em> if it is also a diffeomorphism; in this case, we say {% raw %}<span class="math inline">\(G\)</span>{% endraw %} and {% raw %}<span class="math inline">\(H\)</span>{% endraw %} are isomorphic Lie groups.</p>

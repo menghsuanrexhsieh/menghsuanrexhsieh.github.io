@@ -11,7 +11,7 @@ redirect_from: ["/2022/06/29/useful-deterministic-inequalities/", "/2022/07/19/m
 
 <div class="note-content" markdown="0">
 
-<p>Moment estimates let us control both individual sums and entire sequences of partial sums. The first tools below concern deterministic inequalities and approximation. We then use first-crossing events for maximal inequalities and conditional symmetry for sharper moment bounds. In each case, the assumption on dependence determines which cancellations are available.</p>
+<p>Moment estimates let us control both individual sums and entire sequences of partial sums. The dependence assumption determines which cancellations are available.</p>
 
 <div id="useful-non-probabilistic-inequalities" data-note-section="title">
 

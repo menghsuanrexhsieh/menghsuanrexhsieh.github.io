@@ -18,7 +18,7 @@ redirect_from: ["/2026/06/16/donsker-class/"]
 <div id="sec:donsker" data-note-section="title">
 
 </div>
-<p>We now pass from uniform laws of large numbers to a uniform central limit theorem. Suppose {% raw %}<span class="math inline">\(X_1, \dots, X_n\)</span>{% endraw %} is an i.i.d. sample drawn from an unknown distribution {% raw %}<span class="math inline">\(\mathbf P\,\,\!\!\)</span>{% endraw %}. As before, define the empirical process </p>
+<p>Suppose {% raw %}<span class="math inline">\(X_1, \dots, X_n\)</span>{% endraw %} is an i.i.d. sample drawn from an unknown distribution {% raw %}<span class="math inline">\(\mathbf P\,\,\!\!\)</span>{% endraw %}. As before, define the empirical process </p>
 
 {% raw %}<span id="eq:empirical-process"></span><div class="math display">\[\begin{aligned}
  

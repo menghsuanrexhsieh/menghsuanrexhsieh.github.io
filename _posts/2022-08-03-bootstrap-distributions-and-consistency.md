@@ -12,7 +12,7 @@ redirect_from: ["/2023/03/04/bootstrap-distributions-and-conditional-convergence
 <div class="note-content" markdown="0">
 <div data-note-section="title" id="setup-and-terminology">
 </div>
-<p>The bootstrap estimates a statistic’s sampling distribution by sampling from an estimated population. Its validity requires the estimated and true sampling laws to approach the same limit. This note states that requirement, derives quantile and coverage consequences, and applies contiguity to the local power of a parametric-bootstrap test.</p>
+<p>The bootstrap estimates a statistic’s sampling distribution by sampling from an estimated population. Its validity requires the estimated and true sampling laws to approach the same limit.</p>
 
 <p>Let {% raw %}<span class="math inline">\(X_1,X_2,\ldots\)</span>{% endraw %} be i.i.d. with law {% raw %}<span class="math inline">\(P\in\mathcal P\)</span>{% endraw %}, and write {% raw %}<span class="math inline">\(X^n=(X_1,\ldots,X_n)\)</span>{% endraw %}. The target is a functional {% raw %}<span class="math inline">\(\theta(P)\)</span>{% endraw %} with range</p>
 

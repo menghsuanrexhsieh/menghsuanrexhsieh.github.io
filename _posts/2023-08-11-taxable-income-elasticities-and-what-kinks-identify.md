@@ -11,7 +11,7 @@ redirect_from: ["/2025/01/18/taxable-income-elasticities-and-what-kinks-identify
 
 <div class="note-content" markdown="0">
 
-<p>A higher marginal tax rate above an earnings threshold can make the threshold itself optimal for many taxpayers. The size of this pile-up depends on how far their earnings move and how many people would otherwise have earned just above the threshold. <span class="citation" data-cites="saez_taxpayers_2010">Saez (<a href="#ref-saez_taxpayers_2010" role="doc-biblioref">2010</a>)</span> uses this relationship to recover a taxable-income elasticity from bunching at a tax kink. This note derives the earnings response, the finite-change formula, and the local interpretation when elasticities differ across people.</p>
+<p>A higher marginal tax rate above an earnings threshold can make the threshold itself optimal for many taxpayers. The size of this pile-up depends on how far their earnings move and how many people would otherwise have earned just above the threshold. <span class="citation" data-cites="saez_taxpayers_2010">Saez (<a href="#ref-saez_taxpayers_2010" role="doc-biblioref">2010</a>)</span> uses this relationship to recover a taxable-income elasticity from bunching at a tax kink.</p>
 
 <div id="16-0-the-structural-calculation">
 
@@ -133,7 +133,7 @@ s=\frac{a+2b_K-b+\sqrt{(b-a-2b_K)^2+4ab}}{2a},
 {% raw %}<div class="math display">\[
 s=(1-x)^{-\varepsilon}=1+\varepsilon x+O(x^2),
 \]</div>{% endraw %}
-<p>the interval of bunching types has width {% raw %}<span class="math inline">\(K\varepsilon x+O(x^2)\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(h_0\)</span>{% endraw %} is continuous at {% raw %}<span class="math inline">\(K\)</span>{% endraw %},</p>
+<p>the interval of bunching types has width {% raw %}<span class="math inline">\(K\varepsilon x+O(x^2)\)</span>{% endraw %}. If {% raw %}<span class="math inline">\(h_0\)</span>{% endraw %} is continuous at {% raw %}<span class="math inline">\(K\)</span>{% endraw %} with {% raw %}<span class="math inline">\(h_0(K)&gt;0\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
 B=h_0(K)K\varepsilon x+o(x),\qquad

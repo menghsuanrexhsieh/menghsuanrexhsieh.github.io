@@ -10,7 +10,7 @@ redirect_from: ["/2023/02/11/the-neymanpearson-lemma/", "/2023/04/22/unbiased-te
 ---
 
 <div class="note-content" markdown="0">
-<p>For simple hypotheses, the Neyman–Pearson lemma maximizes power subject to a bound on null rejection probability. For composite hypotheses, unbiasedness and maximin power impose different comparisons. The final section derives local power and specifies the additional conditions needed to interpret it as a sample-size comparison.</p>
+<p>For simple hypotheses, the Neyman–Pearson lemma maximizes power subject to a bound on null rejection probability. For composite hypotheses, unbiasedness and maximin power impose different comparisons.</p>
 
 <div data-note-section="title" id="neymann-pearson-lemma"></div>
 <span id="eq:critical-function-1"></span>

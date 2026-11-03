@@ -511,7 +511,7 @@ B_{jk}\triangleq E_j\cap\{f\geq g+1/k\}.
 <p>so {% raw %}<span class="math inline">\(P(f&gt;g)=0\)</span>{% endraw %}. Interchanging {% raw %}<span class="math inline">\(f,g\)</span>{% endraw %} gives {% raw %}<span class="math inline">\(P(g&gt;f)=0\)</span>{% endraw %}, and therefore {% raw %}<span class="math inline">\(P(f\ne g)=0\)</span>{% endraw %}. The null-set modifications made at the outset do not change this conclusion for the original versions. {% raw %}<span class="math inline">\(\square\)</span>{% endraw %}</p>
 
 </div>
-<p>For further reading, <a href="https://people.math.harvard.edu/~ctm/home/text/class/harvard/114/07/html/home/course/course.pdf#page=80">McMullen’s <em>Real Analysis</em> notes, Section 8</a>, discuss Hahn and Jordan decomposition and give a different construction of the Radon–Nikodym derivative. The <a href="{% post_url 2021-12-18-conditioning-and-conditional-expectation %}">next note</a> applies the theorem to conditional expectation.</p>
+<p>For further reading, <a href="https://people.math.harvard.edu/~ctm/home/text/class/harvard/114/07/html/home/course/course.pdf#page=80">McMullen’s <em>Real Analysis</em> notes, Section 8</a>, discuss Hahn and Jordan decomposition and give a different construction of the Radon–Nikodym derivative.</p>
 
 
 <nav class="note-series" aria-label="Notes in this series"><p>Previous: <a href="{% post_url 2021-11-09-convergence-and-large-sample-probability %}">Convergence and Large-Sample Probability</a> · Next: <a href="{% post_url 2021-12-18-conditioning-and-conditional-expectation %}">Conditioning and Conditional Expectation</a></p></nav>

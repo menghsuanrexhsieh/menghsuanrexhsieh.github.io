@@ -17,7 +17,7 @@ redirect_from: ["/2024/06/10/finite-sample-inference-under-interference/"]
 <p>Start with independent groups and bounded group contributions. This case makes the concentration argument transparent. The paper also treats the two-stage design without assuming stratified interference.</p>
 
 <div id="interference-hoeffding" class="proposition" data-note-number="1" data-note-kind="Proposition">
-<p><strong>Proposition 1</strong>. Suppose {% raw %}<span class="math inline">\(V_g\)</span>{% endraw %} are independent unbiased group contributions to a target {% raw %}<span class="math inline">\(G^{-1}\sum_g\mathbb{E}[V_g]\)</span>{% endraw %}, with known bounds {% raw %}<span class="math inline">\(a_g\le V_g\le b_g\)</span>{% endraw %}. Then</p>
+<p><strong>Proposition 1</strong>. Suppose {% raw %}<span class="math inline">\(V_g\)</span>{% endraw %} are independent unbiased group contributions to a target {% raw %}<span class="math inline">\(G^{-1}\sum_g\mathbb{E}[V_g]\)</span>{% endraw %}, with known bounds {% raw %}<span class="math inline">\(a_g\le V_g\le b_g\)</span>{% endraw %}. For every {% raw %}<span class="math inline">\(t&gt;0\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
 P\left(\left|\frac1G\sum_g(V_g-\mathbb{E} V_g)\right|&gt;t\right)

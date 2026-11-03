@@ -13,7 +13,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theo
 <div id="nonparametric-inference-for-the-mean" data-note-section="title">
 
 </div>
-<p>For each fixed distribution with finite nonzero variance, the central limit theorem supports asymptotic inference for the mean. Uniform validity over a family of distributions is a stronger demand: the distribution may change with sample size. We begin with a triangular-array law of large numbers, then examine the tail conditions needed for uniform inference.</p>
+<p>For each fixed distribution with finite nonzero variance, the central limit theorem supports asymptotic inference for the mean. Uniform validity over a family of distributions is a stronger demand: the distribution may change with sample size.</p>
 
 <div id="thm:wlln-triangular-array" class="theorem" data-note-number="1" data-note-kind="Theorem">
 <p><strong>Theorem 1</strong> (Weak Law of Large Numbers for Triangular Arrays).  Let {% raw %}<span class="math inline">\(Y_{n,1}, \dots, Y_{n,n}\)</span>{% endraw %} be a triangular array whose entries are i.i.d. within each row. Suppose the {% raw %}<span class="math inline">\(n\)</span>{% endraw %}th row has the cumulative distribution function {% raw %}<span class="math inline">\(G_n\)</span>{% endraw %}. Assume {% raw %}<span class="math inline">\(G_n \xrightarrow{d} G\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathbb{E} |Y_{n,1}| \to \mathbb{E} |Y| &lt; \infty\)</span>{% endraw %} as {% raw %}<span class="math inline">\(n\to\infty\)</span>{% endraw %}; suppose {% raw %}<span class="math inline">\(Y\)</span>{% endraw %} has cumulative distribution function {% raw %}<span class="math inline">\(G\)</span>{% endraw %}. Then, </p>

@@ -12,7 +12,7 @@ redirect_from: ["/2023/04/08/quadratic-mean-differentiability/"]
 <div class="note-content" markdown="0">
 <p>Quadratic-mean differentiability (QMD) is differentiability of the square-root density in {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %}. It determines the score and Fisher information and controls changes in support. With additional conditions on the log likelihood, it also yields an asymptotically linear likelihood estimator.</p>
 
-<p>The <a href="{% post_url 2022-01-09-contiguity-change-of-measure-and-m-estimation %}#08-0-qmd-to-lan">contiguity note</a> derives the product-likelihood expansion, including its sequential form. Here the main results concern verification of QMD and likelihood estimation. Appendix A proves the empirical-process bounds needed to substitute the fitted parameter into a local expansion.</p>
+<p>The <a href="{% post_url 2022-01-09-contiguity-change-of-measure-and-m-estimation %}#08-0-qmd-to-lan">contiguity note</a> derives the product-likelihood expansion, including its sequential form.</p>
 
 <div data-note-section="title" id="quadratic-mean-differentiability">
 </div>

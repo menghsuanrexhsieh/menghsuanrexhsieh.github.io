@@ -102,7 +102,7 @@ q(v,w)=\frac{d\overline H^*}{d\overline H}(v,w).
 \]</div>{% endraw %}
 <p>for integrable functions {% raw %}<span class="math inline">\(a\)</span>{% endraw %}. In particular, {% raw %}<span class="math inline">\(\psi_n=\int m\,d\overline H^*\)</span>{% endraw %}.</p>
 
-<p>For candidate functions {% raw %}<span class="math inline">\(a\)</span>{% endraw %} and {% raw %}<span class="math inline">\(b\)</span>{% endraw %}, define the augmented sample average</p>
+<p>For functions {% raw %}<span class="math inline">\(a\)</span>{% endraw %} and {% raw %}<span class="math inline">\(b\)</span>{% endraw %}, define the augmented sample average</p>
 
 {% raw %}<div class="math display">\[
 L_n(a,b)=\frac1n\sum_i
@@ -114,12 +114,12 @@ L_n(a,b)=\frac1n\sum_i
 Q_n(a,b)=\int a\,d\overline H^*+\int b(m-a)\,d\overline H.
 \]</div>{% endraw %}
 <div id="network-double-robustness" class="proposition" data-note-number="2" data-note-kind="Proposition">
-<p><strong>Proposition 2</strong>. For integrable candidate functions,</p>
+<p><strong>Proposition 2</strong>. Suppose {% raw %}<span class="math inline">\(\int|a|\,d\overline H^*&lt;\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n^{-1}\sum_i\mathbb E|b(V_i,W_i)\{Y_i-a(V_i,W_i)\}|&lt;\infty\)</span>{% endraw %}. Then,</p>
 
 {% raw %}<div class="math display">\[
 Q_n(a,b)-\psi_n=\int(b-q)(m-a)\,d\overline H.
 \]</div>{% endraw %}
-<p>Thus the population estimating equation is unbiased if either {% raw %}<span class="math inline">\(a=m\)</span>{% endraw %} or {% raw %}<span class="math inline">\(b=q\)</span>{% endraw %}. Also,</p>
+<p>Thus the population estimating equation is unbiased if either {% raw %}<span class="math inline">\(a=m\)</span>{% endraw %} or {% raw %}<span class="math inline">\(b=q\)</span>{% endraw %}. If both error norms below are finite,</p>
 
 {% raw %}<div class="math display">\[
 |Q_n(a,b)-\psi_n|
@@ -135,7 +135,7 @@ Q_n(a,b)-\psi_n
 =\int q(a-m)\,d\overline H+\int b(m-a)\,d\overline H
 =\int(b-q)(m-a)\,d\overline H.
 \]</div>{% endraw %}
-<p>Cauchy–Schwarz gives the bound.</p>
+<p>Cauchy–Schwarz gives the norm bound when both displayed error norms are finite. Integrability of the two functions separately would not ensure integrability of their product.</p>
 
 </div>
 <p>This proves the algebra behind double robustness. Consistency of an estimated average also requires its stochastic error to vanish. Asymptotic normality requires that error and the product remainder to vanish at the faster scale set by the network variance.</p>

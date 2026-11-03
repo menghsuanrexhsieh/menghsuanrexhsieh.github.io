@@ -65,7 +65,7 @@ D_Y^*=\frac1N\sum_i\frac{\overline h^*(C_i^Y)}{\overline h(C_i^Y)}
 <p>An individual propensity weight changes only the distribution of own treatment. If {% raw %}<span class="math inline">\(C_i^Y\)</span>{% endraw %} includes the number of treated neighbors, the intervention also changes that count’s distribution. The pooled ratio accounts for the whole summary entering the outcome regression.</p>
 
 <h3 data-note-section="6" id="10-0-the-exact-bias-cancellation-in-a-simplified-subproblem">6. The exact bias cancellation in a simplified subproblem</h3>
-<p>Hold the baseline distribution and intervention summary density fixed for this calculation. Let {% raw %}<span class="math inline">\(Q\)</span>{% endraw %} be the true shared regression, {% raw %}<span class="math inline">\(\widetilde Q\)</span>{% endraw %} a candidate, and {% raw %}<span class="math inline">\(\widetilde h\)</span>{% endraw %} a candidate observed summary density. The population augmented functional is</p>
+<p>Hold the baseline distribution and intervention summary density fixed for this calculation. Let {% raw %}<span class="math inline">\(Q\)</span>{% endraw %} be the true shared regression, {% raw %}<span class="math inline">\(\widetilde Q\)</span>{% endraw %} a proposed regression, and {% raw %}<span class="math inline">\(\widetilde h\)</span>{% endraw %} a proposed observed summary density. Assume the proposed density is positive wherever the intervention density is positive, assign weight zero off that support, and assume that both terms below are integrable. The population augmented functional is</p>
 
 {% raw %}<div class="math display">\[
 \Psi(\widetilde Q,\widetilde h)

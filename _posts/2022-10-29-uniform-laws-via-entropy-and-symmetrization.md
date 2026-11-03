@@ -11,7 +11,7 @@ redirect_from: ["/2022/10/29/more-on-the-uniform-law-of-large-numbers/", "/2022/
 
 <div class="note-content" markdown="0">
 
-<p>Uniform convergence requires the largest empirical error over a function class to vanish. A finite cover separates this error into approximation within the cover and fluctuation at the centers. Symmetrization lets us measure fluctuations at the cover centers by correlation with random signs. We will use these two descriptions to give sufficient conditions for a uniform law and to examine classes that can fit random signs too well.</p>
+<p>Uniform convergence requires the largest empirical error over a function class to vanish. A finite cover separates this error into approximation within the cover and fluctuation at the centers. Symmetrization lets us measure fluctuations at the cover centers by correlation with random signs.</p>
 
 <p>Let {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %} be i.i.d. with law {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. For a function {% raw %}<span class="math inline">\(f\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(Pf=\mathbb{E} f(X_1)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_nf=n^{-1}\sum_{i=1}^n f(X_i)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathbb G_nf=\sqrt n(P_n-P)f\)</span>{% endraw %}. Rademacher variables are independent random signs, independent of the observations. See the <a href="{% post_url 2022-09-03-empirical-processes-tensorization-and-the-entropy-method %}">empirical-process setup</a> for measurability conventions.</p>
 

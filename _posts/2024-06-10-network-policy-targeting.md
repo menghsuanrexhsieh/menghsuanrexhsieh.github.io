@@ -11,7 +11,7 @@ redirect_from: ["/2024/06/10/network-policy-targeting-identification-and-known-p
 
 <div class="note-content" markdown="0">
 
-<p>Choosing whom to treat in a network requires counting gains to the recipient and to other people. A rule that looks best using direct effects alone can therefore be suboptimal once spillovers are included. The policy-learning problem in <span class="citation" data-cites="viviano_policy_2025"><a href="#ref-viviano_policy_2025" role="doc-biblioref">Viviano (2025)</a></span> first identifies welfare for each candidate rule, then bounds the loss from choosing a rule using estimated welfare.</p>
+<p>Choosing whom to treat in a network requires counting gains to the recipient and to other people. A rule that looks best using direct effects alone can therefore be suboptimal once spillovers are included. The policy-learning problem in <span class="citation" data-cites="viviano_policy_2025"><a href="#ref-viviano_policy_2025" role="doc-biblioref">Viviano (2025)</a></span> first identifies welfare for each policy rule, then bounds the loss from choosing a rule using estimated welfare.</p>
 
 <h3 data-note-section="1" id="10-556-identify-welfare-under-a-rule">1. Identify welfare under a rule</h3>
 <p>Let {% raw %}<span class="math inline">\(\pi(X_i)\in\{0,1\}\)</span>{% endraw %} be an individualized rule. Outcomes depend on own treatment {% raw %}<span class="math inline">\(D_i\)</span>{% endraw %}, a specified summary {% raw %}<span class="math inline">\(T_i\)</span>{% endraw %} of neighboring treatments, covariates {% raw %}<span class="math inline">\(Z_i\)</span>{% endraw %}, and degree. Write {% raw %}<span class="math inline">\(T_i(\pi)\)</span>{% endraw %} for the exposure induced by applying {% raw %}<span class="math inline">\(\pi\)</span>{% endraw %} to the population.</p>
@@ -22,7 +22,7 @@ redirect_from: ["/2024/06/10/network-policy-targeting-identification-and-known-p
 W_{A,Z}(\pi)=\frac1{n_e}\sum_i
 \mathbb{E}\left[\frac{R_iI_i(\pi)Y_i}{e_i(\pi)}\mid A,Z\right].
 \]</div>{% endraw %}
-<p>Identification requires that candidate rules induce exposures supported by the experiment. It also uses the specified participation and assignment mechanisms, consistency, and the restriction describing which assignments affect each outcome.</p>
+<p>Identification requires that rules in the policy class induce exposures supported by the experiment. It also uses the specified participation and assignment mechanisms, consistency, and the restriction describing which assignments affect each outcome.</p>
 
 <h3 data-note-section="2" id="10-556-the-oracle-regret-result">2. The oracle regret result</h3>
 <div id="network-policy-oracle" class="theorem" data-note-number="1" data-note-kind="Theorem">
@@ -49,7 +49,7 @@ W(\pi^*)-W(\widehat\pi)
 <h3 data-note-section="4" id="10-556-why-exposure-overlap-can-be-harder-than-treatment-overlap">4. Why exposure overlap can be harder than treatment overlap</h3>
 <p>Overlap must be checked for the exposure that a rule induces. Moderate individual treatment probabilities can still make a particular treated-neighbor count rare. Those cells receive large inverse weights. Coarsening the summary helps only when outcomes depend on assignments through the coarser summary.</p>
 
-<p>Individualized rules can be deployed using observed characteristics, while the objective still accounts for spillovers. More flexible rules using the whole target adjacency matrix require more network information and a different complexity analysis. The next note handles <a href="{% post_url 2024-09-01-learning-network-policies %}">estimated nuisance functions</a>; the same note also develops trimming and transport.</p>
+<p>Individualized rules can be deployed using observed characteristics, while the objective still accounts for spillovers. More flexible rules using the whole target adjacency matrix require more network information and a different complexity analysis.</p>
 
 <h3 data-note-section="5" id="10-556-a-rule-determines-a-whole-exposure-pattern">5. A rule determines a whole exposure pattern</h3>
 <p>Suppose the exposure summary is the number of treated neighbors. Conditional on the baseline network and covariates,</p>
@@ -110,7 +110,7 @@ W(\pi^*)-W(\widehat\pi)
 P\left\{\sup_{\pi\in\Pi}|\widehat W(\pi)-W(\pi)|&gt;t\right\}
 \leq2K\exp(-2nt^2/(\chi B^2)).
 \]</div>{% endraw %}
-<p>The resulting uniform error has order {% raw %}<span class="math inline">\(B\sqrt{\chi\log K/n}\)</span>{% endraw %}. Large inverse weights increase the range {% raw %}<span class="math inline">\(B\)</span>{% endraw %}; overlapping neighborhoods increase the number of colors {% raw %}<span class="math inline">\(\chi\)</span>{% endraw %}. The paper replaces this finite-class argument with its VC-class and sampling analysis, producing the stated dependence on degree and overlap.</p>
+<p>The resulting uniform error has order {% raw %}<span class="math inline">\(B\sqrt{\chi\log(2K)/n}\)</span>{% endraw %}. Large inverse weights increase the range {% raw %}<span class="math inline">\(B\)</span>{% endraw %}; overlapping neighborhoods increase the number of colors {% raw %}<span class="math inline">\(\chi\)</span>{% endraw %}. The paper replaces this finite-class argument with its VC-class and sampling analysis, producing the stated dependence on degree and overlap.</p>
 
 <p>The concentration bound translates directly into an implementable accuracy statement. With probability at least {% raw %}<span class="math inline">\(1-\eta\)</span>{% endraw %}, in the finite-class special case,</p>
 

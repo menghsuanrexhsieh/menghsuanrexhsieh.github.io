@@ -10,7 +10,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Martingales - Prob and S
 
 <div class="note-content" markdown="0">
 
-<p>We prove maximal and upcrossing inequalities for discrete-time submartingales. The maximal inequalities control the running maximum in probability and in {% raw %}<span class="math inline">\(L^p\)</span>{% endraw %}; the upcrossing inequality yields almost-sure convergence under an {% raw %}<span class="math inline">\(L^1\)</span>{% endraw %} bound. Throughout, {% raw %}<span class="math inline">\((\mathcal F_n)_{n\geq1}\)</span>{% endraw %} is a filtration on {% raw %}<span class="math inline">\((\Omega,\mathcal F,\mathbb P)\)</span>{% endraw %}, and all martingales and submartingales are adapted and integrable.</p>
+<p>The maximal inequalities control the running maximum in probability and in {% raw %}<span class="math inline">\(L^p\)</span>{% endraw %}; the upcrossing inequality yields almost-sure convergence under an {% raw %}<span class="math inline">\(L^1\)</span>{% endraw %} bound. Throughout, {% raw %}<span class="math inline">\((\mathcal F_n)_{n\geq1}\)</span>{% endraw %} is a filtration on {% raw %}<span class="math inline">\((\Omega,\mathcal F,\mathbb P)\)</span>{% endraw %}, and all martingales and submartingales are adapted and integrable.</p>
 
 
 <div id="fundamental-results" data-note-section="title">

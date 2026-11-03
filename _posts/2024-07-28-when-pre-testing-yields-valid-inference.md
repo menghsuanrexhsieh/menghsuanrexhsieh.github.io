@@ -12,9 +12,9 @@ note_source: "scripts/notes/paper-notes/pretesting-0.md"
 
 <p>A difference-in-differences estimate is often reported only after a pre-trends test fails to reject. The reported confidence interval is therefore evaluated in a sample selected by the pre-test. Its coverage depends on the joint distribution of the treatment-effect estimate and the estimated pre-trends.</p>
 
-<p>The clever trick in <span class="citation" data-cites="dechaisemartin_pretests_2024">de Chaisemartin and D’Haultfœuille (<a href="#ref-dechaisemartin_pretests_2024" role="doc-biblioref">2024</a>)</span> is how they express coverage and passing the pre-tests as two symmetric convex events in the same centered Gaussian distribution. They apply the Gaussian correlation inequality to bound the joint probability from below, then divide by the probability of passing the pre-tests to establish conditional coverage. Their argument allows arbitrary correlation between the estimation error and the specification-test estimates.</p>
+<p>The exposition below is based on <span class="citation" data-cites="dechaisemartin_pretests_2024">de Chaisemartin and D’Haultfœuille (<a href="#ref-dechaisemartin_pretests_2024" role="doc-biblioref">2024</a>)</span>. Their argument expresses coverage and passing the pre-tests as two symmetric convex events in the same centered Gaussian distribution. They apply the Gaussian correlation inequality to bound the joint probability from below, then divide by the probability of passing the pre-tests to establish conditional coverage. Their argument allows arbitrary correlation between the estimation error and the specification-test estimates.</p>
 
-<p>Their result applies under the maintained assumptions that justify the original estimator. In the DID application, these include the parallel-trends restriction identifying the post-treatment effect. The analysis below follows the July 4, 2024 version of the paper.</p>
+<p>Their result applies under the maintained assumptions that justify the original estimator. In the DID application, these include the parallel-trends restriction identifying the post-treatment effect.</p>
 
 <h3 data-note-section="1" id="pretesting-0-reporting">1. Reporting after a specification test</h3>
 <p>They consider inference on a parameter {% raw %}<span class="math inline">\(\beta_0\in\mathbb R^p\)</span>{% endraw %} based on an estimator {% raw %}<span class="math inline">\(\widehat\beta_n\)</span>{% endraw %}. Write {% raw %}<span class="math inline">\(\mathcal P_0\)</span>{% endraw %} for the set of data distributions under which the maintained model and the stated asymptotic approximation hold. Let {% raw %}<span class="math inline">\(\mathcal P_1\)</span>{% endraw %} be the set of distributions satisfying the tested restrictions. They assume</p>
@@ -294,7 +294,7 @@ M_n\triangleq\max_j(T_{j,n}-q_{j,n}),
 {% raw %}<div class="math display">\[
 Z_n=\widehat V_n^{-1/2}a_n(\widehat\beta_n-\beta_0).
 \]</div>{% endraw %}
-<p>In what follows, quantities involving {% raw %}<span class="math inline">\(\widehat V_n^{-1}\)</span>{% endraw %} or {% raw %}<span class="math inline">\(\widehat V_n^{-1/2}\)</span>{% endraw %} are defined on the event {% raw %}<span class="math inline">\(\{\widehat V_n\not\succ0\}\)</span>{% endraw %}, whose probability tends to zero. This allows Corollary <a href="#pt-wald">7</a> to be stated conditional only on {% raw %}<span class="math inline">\(S_n\)</span>{% endraw %}.</p>
+<p>On the exceptional event {% raw %}<span class="math inline">\(\{\widehat V_n\not\succ0\}\)</span>{% endraw %}, define {% raw %}<span class="math inline">\(Z_n=0\)</span>{% endraw %}, take {% raw %}<span class="math inline">\(\mathrm{CR}_n=\mathbb R^p\)</span>{% endraw %}, and do not reject. These measurable extensions avoid evaluating an inverse that may not exist. The event has probability tending to zero, so the proof below shows that these choices do not affect inference conditional on {% raw %}<span class="math inline">\(S_n\)</span>{% endraw %}.</p>
 
 <div id="pt-wald" class="corollary" data-note-number="7" data-note-kind="Corollary">
 <p><strong>Corollary 7</strong>. (Wald confidence regions and tests.) Suppose <a href="#eq:pt-covariance">(12)</a> and the specification-test conditions of Assumption <a href="#pt-joint-limit">5</a> hold, with {% raw %}<span class="math inline">\((U,W)\)</span>{% endraw %} jointly centered Gaussian. Then the region</p>
@@ -333,11 +333,11 @@ a_n^2(\widehat\beta_n-b)&#x27;\widehat V_n^{-1}(\widehat\beta_n-b)
 <p>For an explicit covariance calculation, suppose the estimated group differences satisfy</p>
 
 {% raw %}<div class="math display">\[
-\sqrt n(\widehat m_t-m_t)\Rightarrow\eta_t,
+\sqrt n(\widehat m-m)\Rightarrow\eta\sim\mathcal N(0,vI_3),
 \qquad (\eta_0,\eta_1,\eta_2)\sim\mathcal{N}(0,vI_3),
 \qquad v&gt;0.
 \]</div>{% endraw %}
-<p>This assumption describes independent limiting errors of equal variance across dates. Define</p>
+<p>Here {% raw %}<span class="math inline">\(m=(m_0,m_1,m_2)^\prime\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\widehat m=(\widehat m_0,\widehat m_1,\widehat m_2)^\prime\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\eta=(\eta_0,\eta_1,\eta_2)^\prime\)</span>{% endraw %}. This joint convergence assumption gives independent limiting errors of equal variance across dates. Define</p>
 
 {% raw %}<div class="math display">\[
 \widehat\theta=\widehat m_1-\widehat m_0,

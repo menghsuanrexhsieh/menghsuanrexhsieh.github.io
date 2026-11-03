@@ -18,7 +18,7 @@ redirect_from: ["/2023/10/23/minimal-surfaces/", "/2023/11/05/minimal-submanifol
 </div>
 <p>A surface is stationary for area when every compactly supported deformation fixing its boundary has zero first variation. For a graph, this condition becomes a nonlinear differential equation; for a general submanifold, it becomes vanishing of the mean curvature vector.</p>
 
-<p>Classical examples are the plane, the catenoid (Euler, 1741), and the helicoid (Meusnier, 1776). We derive both descriptions, beginning with graphs. A closed differential form then proves a stronger minimizing property for minimal graphs under the comparison hypotheses below. The final applications use harmonic coordinate functions and radial variations to obtain convex-hull and monotonicity results.</p>
+<p>Classical examples are the plane, the catenoid (Euler, 1741), and the helicoid (Meusnier, 1776). A closed differential form proves a stronger minimizing property for minimal graphs under the comparison hypotheses below.</p>
 
 <h3 data-note-section="1" id="minimal-surfaces">1. Minimal Surfaces</h3>
 <p>To start, let {% raw %}<span class="math inline">\(u : \Omega \subset \mathbb R^2 \to \mathbb R\)</span>{% endraw %} be a {% raw %}<span class="math inline">\(\mathscr C^2\)</span>{% endraw %} function. Define a surface in {% raw %}<span class="math inline">\(\mathbb R^3\)</span>{% endraw %}, called the <em>graph</em> of {% raw %}<span class="math inline">\(u\)</span>{% endraw %}, as </p>

@@ -11,7 +11,7 @@ redirect_from: ["/2022/03/05/l2-projections-and-conditional-expectations/", "/20
 
 <div class="note-content" markdown="0">
 
-<p>Many statistics average terms that share observations, so their summands are dependent. Projection separates the part explained by individual observations from higher-order interactions. For a nondegenerate U-statistic, the first-order projection is a sum of independent terms and the remainder is smaller at the central-limit scale. We develop the orthogonal decomposition and then apply it to variance, rank, and association statistics.</p>
+<p>Many statistics average terms that share observations, so their summands are dependent. Projection separates the part explained by individual observations from higher-order interactions. For a nondegenerate U-statistic, the first-order projection is a sum of independent terms and the remainder is smaller at the central-limit scale.</p>
 
 <div id="Sec:Projections" data-note-section="title"></div>
 

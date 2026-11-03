@@ -16,7 +16,7 @@ redirect_from: ["/2024/06/24/sobolev-space/", "/2024/07/07/sobolev-inequalities/
 </div>
 <p>Integration by parts characterizes derivatives through their action on smooth test functions. This characterization continues to make sense for functions that are not classically differentiable. Sobolev spaces require the resulting weak derivatives to be integrable, while bounded variation allows them to be measures.</p>
 
-<p>We first study approximation by smooth functions and the role of the boundary. Trace and extension operators then let us pass between a domain and its surroundings. The embedding and compactness estimates explain what control of weak derivatives tells us about the functions themselves.</p>
+<p>Trace and extension operators let us pass between a domain and its surroundings. The embedding and compactness estimates explain what control of weak derivatives tells us about the functions themselves.</p>
 
 <div id="result-1" class="definition" data-note-number="1" data-note-kind="Definition">
 <p><strong>Definition 1</strong>.  Let {% raw %}<span class="math inline">\(U \subset \mathbb R^n\)</span>{% endraw %} be an open subset. Let {% raw %}<span class="math inline">\(f \in L^1_{\rm loc} (U)\)</span>{% endraw %}. {% raw %}<span class="math inline">\(g_i \in L^1_{\rm loc} (U)\)</span>{% endraw %} is the <strong>weak partial derivative of {% raw %}<span class="math inline">\(f\)</span>{% endraw %} with respect to {% raw %}<span class="math inline">\(x_i\)</span>{% endraw %} in {% raw %}<span class="math inline">\(U\)</span>{% endraw %}</strong> if </p>

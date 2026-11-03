@@ -12,7 +12,7 @@ note_question_source: "assets/notes/VdW/07.0_pp_5_24_Stochastic_Convergence.pdf"
 
 <div class="note-content" markdown="0">
 
-<p>A rare error can have a small probability and still make a large contribution to an expectation. Its occurrence can also move through the probability space so that every sample path sees infinitely many errors. The first examples separate these two phenomena. Moment bounds and summable tail probabilities then give sufficient conditions for convergence, before a likelihood calculation applies them to estimation of the endpoint and rate of a shifted exponential distribution.</p>
+<p>A rare error can have a small probability and still make a large contribution to an expectation. Its occurrence can also move through the probability space so that every sample path sees infinitely many errors.</p>
 
 <p>These are Exercises 13, 14, 19, 20, 15 from A. W. van der Vaart, <em>Asymptotic Statistics</em> (1998), Chapter 2, p. 24. The question numbers identify the original exercises. Write {% raw %}<span class="math inline">\(X_n\Rightarrow X\)</span>{% endraw %} for convergence in distribution and {% raw %}<span class="math inline">\(X_n\xrightarrow{P}X\)</span>{% endraw %} for convergence in probability.</p>
 
@@ -258,7 +258,7 @@ X_{(1)}=\min_{1\le i\le n}X_i,
 \qquad
 \overline X_n=\frac1n\sum_{i=1}^{n}X_i.
 \]</div>{% endraw %}
-<p>The endpoint parameter enters through the support as well as through the exponential factor. Keep the support restriction when writing the likelihood. For candidate parameters {% raw %}<span class="math inline">\(r&gt;0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(b\in\mathbb R\)</span>{% endraw %}, the likelihood is</p>
+<p>The endpoint parameter enters through the support as well as through the exponential factor. Keep the support restriction when writing the likelihood. For parameter values {% raw %}<span class="math inline">\(r&gt;0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(b\in\mathbb R\)</span>{% endraw %}, the likelihood is</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
@@ -304,7 +304,7 @@ D_n=\sum_{i=1}^{n}(X_i-X_{(1)})
 =\frac1{\overline X_n-X_{(1)}}.
 }
 \]</div>{% endraw %}
-<p>The derivative calculation identifies a candidate; the following comparison checks that it maximizes the likelihood over the whole positive half-line. For any {% raw %}<span class="math inline">\(r&gt;0\)</span>{% endraw %}, set {% raw %}<span class="math inline">\(u=r/\widehat\lambda_n\)</span>{% endraw %}. Then</p>
+<p>The derivative calculation identifies a stationary point; the following comparison checks that it maximizes the likelihood over the whole positive half-line. For any {% raw %}<span class="math inline">\(r&gt;0\)</span>{% endraw %}, set {% raw %}<span class="math inline">\(u=r/\widehat\lambda_n\)</span>{% endraw %}. Then</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}

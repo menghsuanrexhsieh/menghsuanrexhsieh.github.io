@@ -11,7 +11,7 @@ redirect_from: ["/2021/11/06/modes-of-stochastic-convergence/"]
 
 <div class="note-content" markdown="0">
 
-<p>A statement that random variables converge is incomplete until the mode of convergence is specified. The definitions below distinguish convergence of paths, probabilities, and laws. We then develop three tools used in asymptotic calculations: continuous mappings, boundedness in probability, and control of moments through uniform integrability.</p>
+<p>A statement that random variables converge is incomplete until the mode of convergence is specified. The definitions below distinguish convergence of paths, probabilities, and laws.</p>
 
 <div id="basics" data-note-section="title">
 

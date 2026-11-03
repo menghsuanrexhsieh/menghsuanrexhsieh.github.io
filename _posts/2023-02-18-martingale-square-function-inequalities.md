@@ -22,7 +22,7 @@ V_m=\sum_{i=1}^m\mathbb E[Y_i^2\mid\mathcal F_{i-1}].\]</div>{% endraw %}
 <div id="square-functions-inequalities" data-note-section="title">
 
 </div>
-<p>We first estimate the square function of a nonnegative submartingale, then obtain the two-sided Burkholder inequality by decomposition and duality. A separate maximal estimate involving {% raw %}<span class="math inline">\(V_n\)</span>{% endraw %} yields Rosenthal's inequality. For a nonnegative submartingale originally indexed from one, setting {% raw %}<span class="math inline">\(X_0=0\)</span>{% endraw %} preserves the submartingale property.</p>
+<p>Decomposition and duality extend square-function estimates for nonnegative submartingales to the two-sided Burkholder inequality. A separate maximal estimate involving {% raw %}<span class="math inline">\(V_n\)</span>{% endraw %} yields Rosenthal's inequality. For a nonnegative submartingale originally indexed from one, setting {% raw %}<span class="math inline">\(X_0=0\)</span>{% endraw %} preserves the submartingale property.</p>
 
 
 <div id="lem:stopping-time-sq-diff" class="lemma" data-note-number="1" data-note-kind="Lemma">

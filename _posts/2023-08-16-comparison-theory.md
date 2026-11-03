@@ -20,7 +20,7 @@ note_source: "assets/notes/Differential Geometry - Notes/diff-geo.tex"
 <p> Indeed, the tangential Jacobi equation is {% raw %}<span class="math inline">\(j''=0\)</span>{% endraw %}, while the normal equation is {% raw %}<span class="math inline">\(j''+kj=0\)</span>{% endraw %}. Thus the familiar formulas {% raw %}<span class="math inline">\(\sin(t)P_tv,\ tP_tv,\ \sinh(t)P_tv\)</span>{% endraw %} for the unit sphere, Euclidean space, and hyperbolic space apply to <em>normal</em> initial vectors. The normal Jacobi-field formulas express the initial separation and subsequent convergence on the sphere, linear separation in Euclidean space, and exponential separation in hyperbolic space. The comparison theorems below compare variable curvature with these scalar model equations; see also <a href="#ref-cheeger_comparison_1975">Cheeger and Ebin (1975)</a>.</p>
 
 <h3 data-note-section="1" id="rauch-comparison-theorem">1. Rauch Comparison Theorem</h3>
-<p>We begin with comparison against scalar model solutions, then prove Rauch’s theorem by comparing index forms. This separates the explicit model calculations from the argument that applies to general manifolds. In what follows, for {% raw %}<span class="math inline">\(\delta \in \mathbb R\)</span>{% endraw %}, let </p>
+<p>In what follows, for {% raw %}<span class="math inline">\(\delta \in \mathbb R\)</span>{% endraw %}, let </p>
 
 {% raw %}<span id="eq:jacobi-cos"></span><span id="eq:jacobi-sine"></span><div class="math display">\[\begin{aligned}
      c_\delta (t) &amp;\triangleq \begin{cases}

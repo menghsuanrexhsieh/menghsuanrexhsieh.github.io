@@ -10,7 +10,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.
 
 <div class="note-content" markdown="0">
 
-<p>Entropy tensorization reduces a concentration problem to an inequality in one coordinate. For Gaussian measure, the needed estimate bounds entropy by the squared gradient. This post develops the geometric inequalities used in that argument, then derives the Gaussian log-Sobolev inequality and explains where the gradient enters.</p>
+<p>Entropy tensorization reduces a concentration problem to an inequality in one coordinate. For Gaussian measure, the needed estimate bounds entropy by the squared gradient.</p>
 
 <p>Let {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %} be i.i.d. with law {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. For a function {% raw %}<span class="math inline">\(f\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(Pf=\mathbb{E} f(X_1)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_nf=n^{-1}\sum_{i=1}^n f(X_i)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathbb G_nf=\sqrt n(P_n-P)f\)</span>{% endraw %}. Rademacher variables are independent random signs, independent of the observations. See the <a href="{% post_url 2022-09-03-empirical-processes-tensorization-and-the-entropy-method %}">empirical-process setup</a> for measurability conventions.</p>
 

@@ -11,7 +11,7 @@ redirect_from: ["/2022/10/18/a-finite-class-maximal-inequality-bounded-bernstein
 
 <div class="note-content" markdown="0">
 
-<p>Bernstein’s inequality distinguishes the variance of a summand from its uniform bound. This distinction is useful for a small neighborhood of functions: their variances can be small even when their common envelope is not. We first turn the one-function tail estimate into a finite-class bound, then examine how brackets at decreasing scales can control the whole neighborhood.</p>
+<p>Bernstein’s inequality distinguishes the variance of a summand from its uniform bound. This distinction is useful for a small neighborhood of functions: their variances can be small even when their common envelope is not.</p>
 
 <p>Let {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %} be i.i.d. with law {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. For a function {% raw %}<span class="math inline">\(f\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(Pf=\mathbb{E} f(X_1)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_nf=n^{-1}\sum_{i=1}^n f(X_i)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathbb G_nf=\sqrt n(P_n-P)f\)</span>{% endraw %}. Rademacher variables are independent random signs, independent of the observations. See the <a href="{% post_url 2022-09-03-empirical-processes-tensorization-and-the-entropy-method %}">empirical-process setup</a> for measurability conventions.</p>
 

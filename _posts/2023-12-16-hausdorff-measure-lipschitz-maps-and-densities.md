@@ -16,7 +16,7 @@ redirect_from: ["/2023/12/16/hausdorff-measure-and-lipschitz-functions/", "/2023
 </div>
 <p>Length and area can be defined for sets that have no smooth parametrization. Hausdorff measure does this by covering a set with small pieces and adding powers of their diameters. The exponent specifies the dimension being measured.</p>
 
-<p>We develop this construction, examine its behaviour under Lipschitz maps, and prove almost-everywhere differentiability of those maps. Density estimates then describe how the measure of a set is distributed near a typical point. These are the tools needed for area, coarea, and rectifiability.</p>
+<p>Density estimates then describe how the measure of a set is distributed near a typical point. These are the tools needed for area, coarea, and rectifiability.</p>
 
 <h3 data-note-section="1" id="hausdorff-measure-and-lipschitz-functions">1. Hausdorff Measure and Lipschitz Functions</h3>
 <p>Lipschitz functions constitute a larger class of functions than the class of smooth functions (defined on {% raw %}<span class="math inline">\(\mathscr C^\infty\)</span>{% endraw %} manifolds) considered so far. Their uniform control on distances is enough for several of the measure-theoretic conclusions used below. We begin with defining the Hausdorff dimension of sets, and extend that to Hausdorff measures on {% raw %}<span class="math inline">\(\mathbb R^d\)</span>{% endraw %}. For starters, we define the Hausdorff measure.</p>

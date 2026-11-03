@@ -18,7 +18,7 @@ redirect_from: ["/2023/08/29/hessian-comparison-theorem/", "/2023/09/12/laplacia
 </div>
 <p>Away from the base point and the cut locus, the distance function is smooth and its gradient follows radial geodesics. Its Hessian measures how this radial field changes in transverse directions. Jacobi fields relate that derivative to the index form, so curvature comparison gives Hessian comparison.</p>
 
-<p>Taking a trace leads to the Laplacian. We first establish the Hessian identity, then explain why comparison with a constant-curvature model can use a Ricci bound.</p>
+<p>Taking a trace leads to the Laplacian.</p>
 
 <div id="result-1" class="remark" data-note-number="1" data-note-kind="Remark">
 <p><strong>Remark 1</strong> (Hessian Operator on Manifolds).  The Hessian operator associated with the smooth function {% raw %}<span class="math inline">\(u : M \to \mathbb R\)</span>{% endraw %} is a symmetric, bilinear {% raw %}<span class="math inline">\(2\)</span>{% endraw %}-tensor that associates a pair of vector fields with a smooth function. By definition, {% raw %}<span class="math inline">\(\operatorname{grad} u\)</span>{% endraw %} is a vector field on {% raw %}<span class="math inline">\(M\)</span>{% endraw %} defined through </p>

@@ -21,19 +21,19 @@ redirect_from: ["/2025/10/28/sharp-mechanism-bounds-average-effects-and-inferenc
 <span id="mechanism-finite-sample-size"></span>
 <span id="mechanism-finite-sample-test"></span>
 <span id="mechanism-test-example"></span>
-<p>The observable inequalities in the <a href="{% post_url 2024-07-13-testing-mediation %}">preceding post</a> bound the probability mass of stayers whose outcomes change under treatment. Sharpness requires a joint distribution of potential outcomes and mediators that attains the bounds while reproducing the entire observed law. The construction also permits sharp bounds on average direct effects.</p>
+<p>The observable inequalities in the <a href="{% post_url 2024-07-13-testing-mediation %}">preceding post</a> bound the probability mass of stayers whose outcomes change under treatment. Sharpness requires a joint distribution of potential outcomes and mediators that attains the bounds while reproducing the entire observed law. The construction also permits sharp bounds on average direct effects. The exposition below is based on <a href="https://arxiv.org/html/2404.11739v3">Section 3 and Appendix B.1</a> of <span class="citation" data-cites="kwon_testing_2024">Kwon and Roth (<a href="#ref-kwon_testing_2024" role="doc-biblioref">2024</a>)</span>.</p>
 <!-- original-paper-scope: supplementary-inference-introduction
 Introduction to the separate confidence-region projection procedure commented out below.
 
 Inference follows by projecting a confidence region for the observed cell probabilities onto the feasible potential-outcome laws.
 -->
-<p>The identification results follow <span class="citation" data-cites="kwon_testing_2024">Kwon and Roth (<a href="#ref-kwon_testing_2024" role="doc-biblioref">2024</a>)</span> (Section 3 and Appendix B.1), using <a href="https://arxiv.org/html/2404.11739v3">arXiv version 3</a>.</p>
+
 <!-- original-paper-scope: supplementary-inference-scope
 Description of the supplementary procedure commented out below.
 
 The finite-sample confidence-region procedure developed below supplements the paper's moment-inequality methods.
 -->
-<p>The inference sections give the paper’s linear moment restrictions and the sampling expansion for the observed cell probabilities.</p>
+
 <h3 data-note-section="1" id="23-59-unequal-cell-masses-and-the-overlap-formula">1. Setup and overlap measures</h3>
 <p>Maintain consistency, independent treatment assignment with {% raw %}<span class="math inline">\(0&lt;P(D=1)&lt;1\)</span>{% endraw %}, and the restriction {% raw %}<span class="math inline">\(\theta\in R\)</span>{% endraw %} from Assumptions A1–A3 of the preceding post. The mediator has finite support {% raw %}<span class="math inline">\(\{m_0,\ldots,m_{K-1}\}\)</span>{% endraw %} and outcomes are real-valued. Write</p>
 {% raw %}<div class="math display">\[

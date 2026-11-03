@@ -11,7 +11,7 @@ redirect_from: ["/2022/12/17/random-matrix-theory/", "/2022/12/20/minimax-formul
 
 <div class="note-content" markdown="0">
 
-<p>To estimate a random matrix norm, we first express it as a supremum of scalar quantities. Linear algebra supplies the variational formulas; concentration and covering numbers then control the supremum. We develop these ingredients for eigenvalues and singular values, followed by a second approach that bounds the norm through traces of high powers.</p>
+<p>To estimate a random matrix norm, we first express it as a supremum of scalar quantities. Linear algebra supplies the variational formulas; concentration and covering numbers then control the supremum.</p>
 
 <span id="sec:rmt"></span>
 <p>Throughout, eigenvalues of an {% raw %}<span class="math inline">\(n\times n\)</span>{% endraw %} Hermitian matrix are ordered {% raw %}<span class="math inline">\(\lambda_1\ge\cdots\ge\lambda_n\)</span>{% endraw %}. Thus {% raw %}<span class="math inline">\(\lambda_1\)</span>{% endraw %} is the largest eigenvalue and satisfies {% raw %}<span class="math inline">\(\lambda_1(A+B)\le\lambda_1(A)+\lambda_1(B)\)</span>{% endraw %}; the smallest eigenvalue satisfies the reverse superadditivity inequality. The distinction matters in every variational formula below.</p>

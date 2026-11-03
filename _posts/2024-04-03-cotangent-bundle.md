@@ -15,7 +15,7 @@ note_source: "assets/notes/Differential Geometry - Notes/diff-geo.tex"
 </div>
 <p>A tangent vector acts on a smooth function by directional differentiation. The differential of the function, in turn, is a linear functional on tangent vectors: a covector. Cotangent spaces collect these functionals, and the cotangent bundle lets them vary smoothly over the manifold.</p>
 
-<p>We begin with duality in linear algebra, then construct the bundle and describe covector fields in local coordinates. Pullback will be the natural operation for transporting them along a smooth map.</p>
+<p>Pullback is the natural operation for transporting them along a smooth map.</p>
 
 <p>As in linear algebra, let {% raw %}<span class="math inline">\(V\)</span>{% endraw %} be a finite-dimensional real vector space. A <em>covector on {% raw %}<span class="math inline">\(V\)</span>{% endraw %}</em> is a real-valued linear function on {% raw %}<span class="math inline">\(V\)</span>{% endraw %}. The space of all covectors on {% raw %}<span class="math inline">\(V\)</span>{% endraw %} is a real vector space, under pointwise scalar multiplication and addition. We call this space the <em>dual space of {% raw %}<span class="math inline">\(V\)</span>{% endraw %}</em>, denoted {% raw %}<span class="math inline">\(V^*\)</span>{% endraw %}.</p>
 

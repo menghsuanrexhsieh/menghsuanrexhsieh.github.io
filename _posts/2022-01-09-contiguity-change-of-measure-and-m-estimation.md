@@ -12,7 +12,7 @@ redirect_from: ["/2022/05/07/absolute-continuity-and-contiguity/", "/2022/05/07/
 <div class="note-content" markdown="0">
 <p>Let {% raw %}<span class="math inline">\(P_n\)</span>{% endraw %} be a reference law and {% raw %}<span class="math inline">\(Q_n\)</span>{% endraw %} an alternative law for the same observations. Contiguity gives conditions under which an error that vanishes in {% raw %}<span class="math inline">\(P_n\)</span>{% endraw %}-probability also vanishes in {% raw %}<span class="math inline">\(Q_n\)</span>{% endraw %}-probability. A joint limit with the likelihood ratio then determines the distribution under {% raw %}<span class="math inline">\(Q_n\)</span>{% endraw %}. These results allow a null expansion of an estimator or test statistic to be used under local alternatives.</p>
 
-<p>The first three sections introduce local alternatives, define contiguity, and characterize it through likelihood ratios. The subsequent results derive local asymptotic normality and the Gaussian mean shift, then apply them to M-estimators. The main text includes the calculations used in applications. Appendices A–C contain the longer likelihood and argmax proofs.</p>
+
 
 <h2 id="08-0-calibration-example">1. Normal location alternatives</h2>
 <p>Suppose a scale is used {% raw %}<span class="math inline">\(n\)</span>{% endraw %} times to weigh an object whose true weight has already been subtracted. The readings are independent with variance one. Under correct calibration their mean is zero; under a small calibration error their mean is {% raw %}<span class="math inline">\(h/\sqrt n\)</span>{% endraw %}. Write the laws of the <strong>whole sample</strong> as</p>

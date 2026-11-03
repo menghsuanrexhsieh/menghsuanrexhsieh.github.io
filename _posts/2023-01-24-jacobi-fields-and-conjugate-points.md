@@ -18,7 +18,7 @@ redirect_from: ["/2023/01/24/jacobi-fields/", "/2023/02/07/conjugate-points/"]
 </div>
 <p>How does curvature affect neighbouring geodesics? The relation between geometry and topology for surfaces in {% raw %}<span class="math inline">\(\mathbb R^3\)</span>{% endraw %} suggests asking for analogous consequences in higher dimensions. Jacobi fields measure the first-order separation of a family of geodesics, turning this question into a linear differential equation along one geodesic. Roughly speaking, positive curvature causes nearby geodesics to converge, while negative curvature causes them to spread out. To understand the topological consequences from this fact, we need a quantitative way to measure the effect of curvature on a family of geodesics.</p>
 
-<p>We begin by differentiating the geodesic equation with respect to the variation parameter. Interchanging covariant derivatives introduces curvature, giving the Jacobi equation.</p>
+<p>Differentiating the geodesic equation with respect to the variation parameter and interchanging covariant derivatives gives the Jacobi equation.</p>
 
 <span id="eq:jacobi-equation"></span>
 <div id="prop:jacobi-field-def" class="proposition" data-note-number="1" data-note-kind="Proposition">

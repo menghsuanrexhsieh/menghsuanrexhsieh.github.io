@@ -24,7 +24,7 @@ An introductory comparison with separate posts, corresponding to the normalizati
 
 The [individual-observation construction]({post:10-235}) and [local-power comparison]({post:10-266}) use related normalizations.
 -->
-<p>The calculations below retain the finite-population correction and the sign correction needed for inequality tests.</p>
+
 <h3 data-note-section="1" id="10-356-the-main-limit-theorem">1. From subsamples to individual observations and pairs</h3>
 <p>Let {% raw %}<span class="math inline">\(\mathbf X=(X_1,\ldots,X_n)\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(X_i\in\mathbb R^p\)</span>{% endraw %} and {% raw %}<span class="math inline">\(p\)</span>{% endraw %} is fixed. The observations may be dependent, and their distribution may vary with {% raw %}<span class="math inline">\(n\)</span>{% endraw %}. Write</p>
 {% raw %}<div class="math display">\[

@@ -10,7 +10,7 @@ redirect_from: ["/2023/05/03/asymptotic-power-and-relative-efficiency/", "/2023/
 ---
 
 <div class="note-content" markdown="0">
-<p>For consistent tests, power at a fixed alternative tends to one. Local alternatives permit a comparison at nondegenerate power. This note derives local power, states the assumptions needed for sample-size efficiency, and compares tests with the likelihood-ratio power bound.</p>
+<p>For consistent tests, power at a fixed alternative tends to one. Local alternatives permit a comparison at nondegenerate power.</p>
 
 <p>Throughout, tests take values in {% raw %}<span class="math inline">\([0,1]\)</span>{% endraw %}, allowing randomization, and {% raw %}<span class="math inline">\(z_u=\Phi^{-1}(u)\)</span>{% endraw %} is the lower-tail standard-normal quantile. Thus a level-{% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} upper-tail normal test uses {% raw %}<span class="math inline">\(z_{1-\alpha}\)</span>{% endraw %}. In the iid parametric sections, the score and information come from <a href="{% post_url 2022-04-13-quadratic-mean-differentiability %}">quadratic mean differentiability</a> (QMD), and the likelihood expansion is <a href="{% post_url 2023-03-04-local-asymptotic-normality %}">local asymptotic normality</a> (LAN).</p>
 <div id="the-importance-of-testing-sequences-and-asymptotic-relative-efficiency"></div>

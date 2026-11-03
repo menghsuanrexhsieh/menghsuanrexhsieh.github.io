@@ -39,7 +39,7 @@ m(d,s,n,z)-m(d,s&#x27;,n,z)
 <p>Each set of mixture weights sums to one. Their difference is signed and shifts weight across latent exposures and degrees, so the contrast need not equal the structural spillover at {% raw %}<span class="math inline">\((s,s&#x27;)\)</span>{% endraw %}. In particular, missing links need not attenuate every spillover estimate.</p>
 
 <h3 data-note-section="3" id="10-520-what-randomization-identifies">3. What randomization identifies</h3>
-<p>Suppose links are missing but not spuriously added, and treatment is independently assigned with common probability {% raw %}<span class="math inline">\(p\)</span>{% endraw %}. Conditional on {% raw %}<span class="math inline">\(N_i^*=n^*\)</span>{% endraw %} and observed degree {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, there are {% raw %}<span class="math inline">\(n^*-n\)</span>{% endraw %} missing neighbors. Nondifferential missingness leaves their treatment assignments independent Bernoulli draws, so</p>
+<p>Suppose links are missing but not spuriously added, and treatment is independently assigned with common probability {% raw %}<span class="math inline">\(p\)</span>{% endraw %} strictly between zero and one. Conditional on {% raw %}<span class="math inline">\(N_i^*=n^*\)</span>{% endraw %} and observed degree {% raw %}<span class="math inline">\(n\)</span>{% endraw %}, there are {% raw %}<span class="math inline">\(n^*-n\)</span>{% endraw %} missing neighbors. Nondifferential missingness leaves their treatment assignments independent Bernoulli draws, so</p>
 
 {% raw %}<div class="math display">\[
 S_i^*-S_i\mid N_i^*-N_i=n^*-n
@@ -81,7 +81,7 @@ m(d,s,n)=a+\tau d+\beta s
 +\beta p(\mathbb{E}[N^*\mid N=n]-n)
 +\gamma\mathbb{E}[N^*\mid N=n].
 \]</div>{% endraw %}
-<p>At fixed observed degree, the contrast between {% raw %}<span class="math inline">\(s+1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(s\)</span>{% endraw %} is exactly {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %}. Missing neighbors change the intercept of this conditional regression but not its slope in the observed count. This is one reason that a blanket attenuation claim is wrong.</p>
+<p>For an observed degree with positive probability, and two adjacent exposure counts both in its support, the contrast between {% raw %}<span class="math inline">\(s+1\)</span>{% endraw %} and {% raw %}<span class="math inline">\(s\)</span>{% endraw %} is exactly {% raw %}<span class="math inline">\(\beta\)</span>{% endraw %}. Missing neighbors change the intercept of this conditional regression but not its slope in the observed count. This is one reason that a blanket attenuation claim is wrong.</p>
 
 <p>If the latent response is instead {% raw %}<span class="math inline">\((s^*)^2\)</span>{% endraw %}, then</p>
 

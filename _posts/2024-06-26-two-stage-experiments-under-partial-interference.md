@@ -93,7 +93,7 @@ v_j=\frac{y_j(1;s)}K+\frac{y_j(0;s)}{n-K}.
 \operatorname{Var}(\widehat\tau_g\mid s)
 =\frac{S_1^2}{K}+\frac{S_0^2}{n-K}-\frac{S_\tau^2}{n},
 \]</div>{% endraw %}
-<p>because {% raw %}<span class="math inline">\(S_\tau^2=S_1^2+S_0^2-2S_{10}\)</span>{% endraw %}. The unobserved covariance {% raw %}<span class="math inline">\(S_{10}\)</span>{% endraw %} has been collected into the treatment-effect variance. Dropping its negative contribution yields a conservative target, estimable from within-arm sample variances under the stated design.</p>
+<p>because {% raw %}<span class="math inline">\(S_\tau^2=S_1^2+S_0^2-2S_{10}\)</span>{% endraw %}. The unobserved covariance {% raw %}<span class="math inline">\(S_{10}\)</span>{% endraw %} has been collected into the treatment-effect variance. Dropping {% raw %}<span class="math inline">\(-S_\tau^2/n\)</span>{% endraw %} yields the conservative target {% raw %}<span class="math inline">\(S_1^2/K+S_0^2/(n-K)\)</span>{% endraw %}. When {% raw %}<span class="math inline">\(K\ge2\)</span>{% endraw %} and {% raw %}<span class="math inline">\(n-K\ge2\)</span>{% endraw %}, replacing {% raw %}<span class="math inline">\(S_1^2\)</span>{% endraw %} and {% raw %}<span class="math inline">\(S_0^2\)</span>{% endraw %} by their within-arm sample variances gives an estimator whose expectation equals that target. The exact variance identity remains valid for every nonempty pair of arms.</p>
 
 <h3 data-note-section="7" id="10-104-what-a-large-group-makes-approximately-normal">7. What a large group makes approximately normal</h3>
 <div id="two-stage-large-group" class="theorem" data-note-number="2" data-note-kind="Theorem">

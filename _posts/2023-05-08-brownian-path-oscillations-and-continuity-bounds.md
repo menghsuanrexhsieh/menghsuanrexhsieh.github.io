@@ -11,7 +11,7 @@ redirect_from: ["/2023/05/08/modulus-of-continuity/", "/2023/06/12/lack-of-monot
 
 <div class="note-content" markdown="0">
 
-<p>Let {% raw %}<span class="math inline">\(B\)</span>{% endraw %} be a one-dimensional Brownian motion starting at zero. We establish its uniform modulus of continuity, nonmonotonicity, and the law of the iterated logarithm. The final section develops the stopping and finite-variation arguments used in stochastic integration.</p>
+<p>Let {% raw %}<span class="math inline">\(B\)</span>{% endraw %} be a one-dimensional Brownian motion starting at zero.</p>
 
 
 <div id="modulus-of-continuity" data-note-section="title">

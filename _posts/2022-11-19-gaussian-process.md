@@ -11,7 +11,7 @@ redirect_from: ["/2026/06/16/gaussian-process/"]
 
 <div class="note-content" markdown="0">
 
-<p>A Gaussian process is determined by its mean and covariance, and the variance of an increment defines a natural distance between indices. This distance connects probability with geometry: separated indices can force a large supremum, while covers can bound it from above. We begin with independent Gaussian variables, then control the supremum of a separable process by finite approximations.</p>
+<p>A Gaussian process is determined by its mean and covariance, and the variance of an increment defines a natural distance between indices. This distance connects probability with geometry: separated indices can force a large supremum, while covers can bound it from above.</p>
 
 <div id="gaussian-process" data-note-section="title">
 

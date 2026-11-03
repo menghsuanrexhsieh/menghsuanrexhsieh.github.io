@@ -14,7 +14,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Statistics and Prob Theo
 
 </div>
 <h4 data-note-section="1" id="finite-sample">1. Finite-Sample</h4>
-<p>Sampling without replacement creates dependence: once an item is selected, it is no longer available for a later draw. This dependence reduces the variance of the sample mean. We first calculate that reduction, then compare fixed-size sampling with independent Bernoulli selection. The final examples use symmetrisation to construct U-statistics.</p>
+<p>Sampling without replacement creates dependence: once an item is selected, it is no longer available for a later draw. This dependence reduces the variance of the sample mean.</p>
 
 <span id="eq:finite-sample-variance-sample-mean"></span>
 <p>Let a finite population have labelled values {% raw %}<span class="math inline">\(x_{N,1},\ldots,x_{N,N}\)</span>{% endraw %}; labels remain distinct even if values coincide. Draw {% raw %}<span class="math inline">\(1\leq n\leq N\)</span>{% endraw %} labels uniformly without replacement, with {% raw %}<span class="math inline">\(N&gt;1\)</span>{% endraw %}, and denote their values by {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %}. Define</p>

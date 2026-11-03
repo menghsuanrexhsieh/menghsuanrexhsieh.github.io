@@ -11,7 +11,7 @@ redirect_from: ["/2021/11/09/stochastic-convergence/", "/2022/02/14/large-sample
 
 <div class="note-content" markdown="0">
 
-<p>Different limit theorems answer different questions. Almost-sure convergence follows individual sample paths; convergence in probability controls the chance of a large error; convergence in distribution compares laws. We first develop the tools for moving between these descriptions, then apply moment bounds and Borel–Cantelli to averages of independent observations.</p>
+<p>Different limit theorems answer different questions. Almost-sure convergence follows individual sample paths; convergence in probability controls the chance of a large error; convergence in distribution compares laws.</p>
 
 <div id="stochastic-convergence" data-note-section="title">
 

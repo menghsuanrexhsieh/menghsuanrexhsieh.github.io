@@ -11,7 +11,7 @@ redirect_from: ["/2022/12/03/brief-digression-to-symmetrized-processes/", "/2022
 
 <div class="note-content" markdown="0">
 
-<p>Gaussian and Rademacher processes have comparable upper-bound techniques, but their lower bounds can differ. On the coordinate vectors, a random-sign maximum stays bounded while a Gaussian maximum grows. This example explains why a Rademacher version of Sudakov’s inequality needs an additional restriction. We then compare Gaussian complexity with Rademacher complexity directly and use Gaussian comparison to estimate matrix norms.</p>
+<p>Gaussian and Rademacher processes have comparable upper-bound techniques, but their lower bounds can differ. On the coordinate vectors, a random-sign maximum stays bounded while a Gaussian maximum grows. This example explains why a Rademacher version of Sudakov’s inequality needs an additional restriction.</p>
 
 <p>Here {% raw %}<span class="math inline">\(\varepsilon_i\)</span>{% endraw %} are independent Rademacher signs and {% raw %}<span class="math inline">\(g_i\)</span>{% endraw %} are independent standard normal variables. We compare sums with these two kinds of multipliers; the <a href="{% post_url 2022-11-19-gaussian-process %}">Gaussian supremum bounds</a> will be useful.</p>
 

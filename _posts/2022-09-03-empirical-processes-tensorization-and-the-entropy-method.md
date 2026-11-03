@@ -11,7 +11,7 @@ redirect_from: ["/2022/09/03/empirical-processes/", "/2022/09/06/fundamental-tec
 
 <div class="note-content" markdown="0">
 
-<p>A sample average is close to its expectation under familiar assumptions. Statistical estimation asks for more: the function being averaged may be chosen after seeing the data, so we need simultaneous control over a whole class of averages. Empirical process theory develops this control. We will study fluctuations, uniformity, expected suprema, and Gaussian approximations.</p>
+<p>A sample average is close to its expectation under familiar assumptions. Statistical estimation asks for more: the function being averaged may be chosen after seeing the data, so we need simultaneous control over a whole class of averages. Empirical process theory develops this control.</p>
 
 <ol>
 <li><p><em>Concentration</em>. Suppose we are given i.i.d. random variables {% raw %}<span class="math inline">\(X_1, X_2, \dots\)</span>{% endraw %} with {% raw %}<span class="math inline">\(\mathbb{E}|X_1|&lt;\infty\)</span>{% endraw %}; by the law of large numbers, we have </p>
@@ -33,7 +33,7 @@ redirect_from: ["/2022/09/03/empirical-processes/", "/2022/09/06/fundamental-tec
 \end{aligned}\]</div>{% endraw %}
 <p> where {% raw %}<span class="math inline">\(G_i\)</span>{% endraw %} are independent Gaussian random variables with the same mean and variance. The phenomenon that the detailed features of the distribution of the individual components (i.e. {% raw %}<span class="math inline">\(X_i\)</span>{% endraw %}s) become irrelevant is often referred to as <em>universality</em>. As in the case of concentration, it turns out that this phenomenon occurs much more generally. It can be found in “sufficiently smooth” classes of functions, as we will see.</p></li>
 </ol>
-<p>These questions require different estimates. Concentration bounds deviations from a mean; estimates for a supremum determine the scale around which concentration occurs. We begin with tensorization, which reduces variance and entropy estimates for independent coordinates to estimates involving one coordinate at a time.</p>
+<p>These questions require different estimates. Concentration bounds deviations from a mean; estimates for a supremum determine the scale around which concentration occurs. Tensorization reduces variance and entropy estimates for independent coordinates to estimates involving one coordinate at a time.</p>
 
 <h2 data-note-section="1" id="fundamental-techniques">1. Fundamental Techniques</h2>
 <h3 data-note-section="1.1" id="the-principle-of-tensorization">1.1. The Principle of Tensorization</h3>

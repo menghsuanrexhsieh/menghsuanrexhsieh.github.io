@@ -11,7 +11,7 @@ redirect_from: ["/2023/02/25/confidence-bounds-and-uniform-accuracy/", "/2023/03
 
 <div class="note-content" markdown="0">
 
-<p>A confidence set can be constructed by retaining every parameter value whose hypothesis test accepts the observed data. This correspondence transfers optimality questions from confidence bounds to tests. We begin with one-sided bounds, then examine how nuisance parameters change the problem and how conditioning leads to unbiased and permutation tests.</p>
+<p>A confidence set can be constructed by retaining every parameter value whose hypothesis test accepts the observed data. This correspondence transfers optimality questions from confidence bounds to tests.</p>
 
 <span id="eq:lower-confidence-bound"></span>
 

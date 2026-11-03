@@ -11,7 +11,7 @@ redirect_from: ["/2024/02/17/steins-method/"]
 
 <div class="note-content" markdown="0">
 
-<p>A normal approximation can be tested through an integration-by-parts identity. Stein’s method estimates the error in that identity and then converts the estimate into a distance between distributions. We begin with independent sums, where removing one summand gives the necessary cancellation, and then extend the argument to local dependence. For the preceding discussion of dependence, see <a href="{% post_url 2023-04-02-mixing-conditions-and-a-nonmixing-ar-1-process %}">mixing conditions and sample means</a>.</p>
+<p>A normal approximation can be tested through an integration-by-parts identity. Stein’s method estimates the error in that identity and then converts the estimate into a distance between distributions. For the preceding discussion of dependence, see <a href="{% post_url 2023-04-02-mixing-conditions-and-a-nonmixing-ar-1-process %}">mixing conditions and sample means</a>.</p>
 
 <div id="steins-method" data-note-section="title">
 

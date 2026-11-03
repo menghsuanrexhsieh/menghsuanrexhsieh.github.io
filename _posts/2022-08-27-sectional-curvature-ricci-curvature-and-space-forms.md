@@ -16,7 +16,7 @@ redirect_from: ["/2022/08/27/sectional-curvature-and-ricci-curvature/", "/2022/0
 <div id="sectional-curvature-and-ricci-curvature" data-note-section="title">
 
 </div>
-<p>The curvature tensor contains more information than is easy to read from its components. Sectional curvature extracts a number from each tangent two-plane, while Ricci curvature averages sectional contributions through a fixed direction. We first examine the zero-curvature case, where a parallel coordinate frame is available under the torsion-free hypothesis.</p>
+<p>The curvature tensor contains more information than is easy to read from its components. Sectional curvature extracts a number from each tangent two-plane, while Ricci curvature averages sectional contributions through a fixed direction. In the zero-curvature case, a parallel coordinate frame is available under the torsion-free hypothesis.</p>
 
 <div id="result-1" class="definition" data-note-number="1" data-note-kind="Definition">
 <p><strong>Definition 1</strong>.  An affine connection {% raw %}<span class="math inline">\(\nabla\)</span>{% endraw %} on {% raw %}<span class="math inline">\(TM\)</span>{% endraw %} is <em>flat</em> if for all {% raw %}<span class="math inline">\(p \in M\)</span>{% endraw %}, there exists a neighbourhood {% raw %}<span class="math inline">\(U = U_p\)</span>{% endraw %} with local coordinates such that <em>all</em> coordinate vector fields {% raw %}<span class="math inline">\(\pd{}{{x^i}}\)</span>{% endraw %} are parallel, i.e. {% raw %}<span class="math inline">\(\nabla \pd{}{{x^i}} = 0\)</span>{% endraw %} for all {% raw %}<span class="math inline">\(i\)</span>{% endraw %}.</p>

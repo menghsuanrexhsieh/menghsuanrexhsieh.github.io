@@ -17,7 +17,7 @@ note_source: "assets/notes/Differential Geometry - Notes/diff-geo.tex"
 </div>
 <p>A variation replaces one curve by a nearby family of curves. Differentiating the energy of that family tells us how the energy responds to an infinitesimal displacement. The first variation formula separates this response into an interior term, involving acceleration, and endpoint terms.</p>
 
-<p>This separation explains why fixed-endpoint critical curves satisfy the geodesic equation. We first describe variations and their vector fields, then derive the formula by differentiating under the integral and integrating by parts.</p>
+<p>This separation explains why fixed-endpoint critical curves satisfy the geodesic equation.</p>
 
 <div id="def:variation-of-curves" class="definition" data-note-number="1" data-note-kind="Definition">
 <p><strong>Definition 1</strong>. A <em>variation</em> of a curve {% raw %}<span class="math inline">\(c:[a,b]\to M\)</span>{% endraw %} is a continuous map {% raw %}<span class="math inline">\(\Gamma:(-\varepsilon,\varepsilon)\times[a,b]\to M\)</span>{% endraw %}, smooth on the pieces described below, with {% raw %}<span class="math inline">\(\Gamma(0,t)=c(t)\)</span>{% endraw %}. It is <em>proper</em> when {% raw %}<span class="math inline">\(\Gamma(s,a)=c(a)\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\Gamma(s,b)=c(b)\)</span>{% endraw %} for every {% raw %}<span class="math inline">\(s\)</span>{% endraw %}. It is a <em>variation through geodesics</em> when {% raw %}<span class="math inline">\(t\mapsto\Gamma(s,t)\)</span>{% endraw %} is a geodesic for each fixed {% raw %}<span class="math inline">\(s\)</span>{% endraw %}.</p>

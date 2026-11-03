@@ -16,7 +16,7 @@ redirect_from: ["/2022/03/17/tangent-spaces-and-derivations/", "/2022/03/31/riem
 </div>
 <p>A tangent vector describes a direction in which a function can be differentiated at a point. In Euclidean space this is an ordinary directional derivative. On a manifold, a chart gives the same description locally, and the chain rule tells us how the components change when we choose another chart.</p>
 
-<p>We use this transformation rule to construct the tangent bundle and the differential of a smooth map. A Riemannian metric then adds lengths and angles by choosing an inner product in each tangent space, smoothly in the base point.</p>
+<p>This transformation rule defines the tangent bundle and the differential of a smooth map. A Riemannian metric then adds lengths and angles by choosing an inner product in each tangent space, smoothly in the base point.</p>
 
 <h4 data-note-section="1" id="mathbb-rd">1. {% raw %}<span class="math inline">\(\mathbb R^d\)</span>{% endraw %}</h4>
 <p>Begin in an open Euclidean set, where tangent vectors and directional derivatives can be identified explicitly. Let {% raw %}<span class="math inline">\(x \in \mathbb R^d\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\Omega \subset \mathbb R^d\)</span>{% endraw %} be an open set, and fix {% raw %}<span class="math inline">\(x_0 \in \Omega\)</span>{% endraw %}. Recall the usual definition of the tangent space of {% raw %}<span class="math inline">\(\Omega\)</span>{% endraw %} at {% raw %}<span class="math inline">\(x_0\)</span>{% endraw %}: we identify </p>

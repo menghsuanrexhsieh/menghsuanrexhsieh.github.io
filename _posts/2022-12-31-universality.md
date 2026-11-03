@@ -11,7 +11,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.
 <div class="note-content" markdown="0">
 
 <div id="universality"></div>
-<p>The semicircle law describes the limiting empirical distribution of eigenvalues of a normalized Wigner matrix. The limit depends on the entry variance, rather than the full entry distribution. We give two proofs for bounded entries, then remove boundedness by truncation. The first proof counts trace moments; the second derives an equation for the Stieltjes transform.</p>
+<p>The semicircle law describes the limiting empirical distribution of eigenvalues of a normalized Wigner matrix. The limit depends on the entry variance, rather than the full entry distribution.</p>
 <p>Let {% raw %}<span class="math inline">\(\{\xi_{ij}:i&lt;j\}\)</span>{% endraw %} be iid complex random variables with {% raw %}<span class="math inline">\(\mathbb{E}\xi_{12}=0\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\mathbb{E}|\xi_{12}|^2=1\)</span>{% endraw %}. Set {% raw %}<span class="math inline">\(\xi_{ji}=\overline{\xi_{ij}}\)</span>{% endraw %}. Independently, let the diagonal entries be iid real variables with finite second moment. Write {% raw %}<span class="math inline">\(M_n=(\xi_{ij})_{i,j\le n}\)</span>{% endraw %}, {% raw %}<span class="math inline">\(H_n=M_n/\sqrt n\)</span>{% endraw %}, and</p>
 {% raw %}<div class="math display">\[\mu_n=\frac1n\sum_{i=1}^n\delta_{\lambda_i(H_n)}.\]</div>{% endraw %}
 <p>This is a random probability measure. Its expectation is the deterministic probability measure defined by {% raw %}<span class="math inline">\((\mathbb{E}\mu_n)(B)=\mathbb{E}[\mu_n(B)]\)</span>{% endraw %}, or equivalently by integration of bounded measurable test functions.</p>

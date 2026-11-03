@@ -22,7 +22,7 @@ redirect_from: ["/2023/12/03/bernsteins-theorem/", "/2024/05/27/the-gauss-map-an
 <p><strong>Theorem 1</strong> (Bernstein).  Let {% raw %}<span class="math inline">\(u : \mathbb R^2 \to \mathbb R\)</span>{% endraw %} be an entire solution to the minimal surface equation. Then, {% raw %}<span class="math inline">\(u(x,y) = ax + by + c\)</span>{% endraw %} for some constants {% raw %}<span class="math inline">\(a,b,c\in \mathbb R\)</span>{% endraw %}.</p>
 
 </div>
-<p>We use two geometric facts: the upward Gauss map takes values in a hemisphere, and minimal graphs have a uniform quadratic bound for their area inside ambient balls. The first gives a curvature estimate; the second makes logarithmic cutoff energies small. Both facts and the needed estimates are proved below. The Gauss-map coordinate calculations are in the final section of this note.</p>
+<p>We use two geometric facts: the upward Gauss map takes values in a hemisphere, and minimal graphs have a uniform quadratic bound for their area inside ambient balls. The first gives a curvature estimate; the second makes logarithmic cutoff energies small. Both facts and the needed estimates are proved below.</p>
 
 <div id="lem:bernstein-prelim-curvature-estimate" class="lemma" data-note-number="2" data-note-kind="Lemma">
 <p><strong>Lemma 2.</strong> Let {% raw %}<span class="math inline">\(u\in C^2(\Omega)\)</span>{% endraw %} solve the minimal surface equation and let {% raw %}<span class="math inline">\(\Sigma=\operatorname{Graph}(u)\)</span>{% endraw %}. For every compactly supported Lipschitz function {% raw %}<span class="math inline">\(\eta\)</span>{% endraw %} on {% raw %}<span class="math inline">\(\Sigma\)</span>{% endraw %}, with support away from its boundary,</p>

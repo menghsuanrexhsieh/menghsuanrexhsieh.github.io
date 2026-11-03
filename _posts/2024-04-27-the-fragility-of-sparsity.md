@@ -111,7 +111,12 @@ Y=D\beta+W\gamma+U,\qquad D=W\delta+\widetilde D,
 <p>with zero conditional means for the errors. Let {% raw %}<span class="math inline">\(P_W\)</span>{% endraw %} project onto the columns of {% raw %}<span class="math inline">\(W\)</span>{% endraw %}, {% raw %}<span class="math inline">\(M_W=I-P_W\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\ddot D=M_WD\)</span>{% endraw %}.</p>
 
 <div id="sparsity-ols" class="theorem" data-note-number="2" data-note-kind="Theorem">
-<p><strong>Theorem 2</strong>. Under conditional independence across observations, uniformly bounded {% raw %}<span class="math inline">\(2+\eta\)</span>{% endraw %} moments of {% raw %}<span class="math inline">\(U_i\)</span>{% endraw %} and fourth moments of {% raw %}<span class="math inline">\(\widetilde D_i\)</span>{% endraw %}, conditional variances bounded away from zero, and {% raw %}<span class="math inline">\(\limsup p/n&lt;1\)</span>{% endraw %}, the paper establishes</p>
+<p><strong>Theorem 2</strong>. Maintain the model’s zero conditional means. Suppose the pairs {% raw %}<span class="math inline">\((U_i,\widetilde D_i)\)</span>{% endraw %} are independent across observations conditional on {% raw %}<span class="math inline">\(W\)</span>{% endraw %}. For some {% raw %}<span class="math inline">\(K&lt;\infty\)</span>{% endraw %} and {% raw %}<span class="math inline">\(\eta&gt;0\)</span>{% endraw %}, assume uniformly in {% raw %}<span class="math inline">\(i,n\)</span>{% endraw %} that</p>
+{% raw %}<div class="math display">\[
+\mathbb E[|U_i|^{2+\eta}\mid D,W]+\mathbb E[|\widetilde D_i|^4\mid W]\le K,\qquad
+\frac1{\mathbb E[U_i^2\mid D,W]}+\frac1{\mathbb E[\widetilde D_i^2\mid W]}\le K.
+\]</div>{% endraw %}
+<p>These bounds hold almost surely. If {% raw %}<span class="math inline">\(\limsup p/n&lt;1\)</span>{% endraw %}, the paper establishes</p>
 
 {% raw %}<div class="math display">\[
 \frac{\widehat\beta_{\rm OLS}-\beta}{s_{\rm OLS}}\Rightarrow \mathcal{N}(0,1),

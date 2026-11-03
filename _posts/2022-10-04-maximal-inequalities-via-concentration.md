@@ -10,7 +10,7 @@ note_source: "assets/notes/Overleaf Projects (32 items)/Empirical Process/stats.
 
 <div class="note-content" markdown="0">
 
-<p>Suppose each variable has a small tail probability. How large can the maximum of many of them be? A union bound already gives a useful answer for a finite collection, and exponential moments turn the number of variables into a logarithmic cost. We then approximate an infinite index set by a finite cover and estimate the error between nearby indices.</p>
+<p>Suppose each variable has a small tail probability. How large can the maximum of many of them be? A union bound already gives a useful answer for a finite collection, and exponential moments turn the number of variables into a logarithmic cost.</p>
 
 <p>Let {% raw %}<span class="math inline">\(X_1,\ldots,X_n\)</span>{% endraw %} be i.i.d. with law {% raw %}<span class="math inline">\(P\)</span>{% endraw %}. For a function {% raw %}<span class="math inline">\(f\)</span>{% endraw %}, write {% raw %}<span class="math inline">\(Pf=\mathbb{E} f(X_1)\)</span>{% endraw %}, {% raw %}<span class="math inline">\(P_nf=n^{-1}\sum_{i=1}^n f(X_i)\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\mathbb G_nf=\sqrt n(P_n-P)f\)</span>{% endraw %}. Rademacher variables are independent random signs, independent of the observations. See the <a href="{% post_url 2022-09-03-empirical-processes-tensorization-and-the-entropy-method %}">empirical-process setup</a> for measurability conventions.</p>
 

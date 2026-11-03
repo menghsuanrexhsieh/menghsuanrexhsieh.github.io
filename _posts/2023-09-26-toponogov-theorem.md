@@ -15,7 +15,7 @@ note_source: "assets/notes/Differential Geometry - Notes/diff-geo.tex"
 <div id="toponogov-theorem" data-note-section="title">
 
 </div>
-<p>Rauch comparison controls infinitesimal separation along geodesics. Toponogov’s theorem gives a finite comparison: it relates the side lengths and angles of a geodesic triangle to those of a triangle in a constant-curvature surface. It extends the local estimates supplied by the Rauch comparison theorem (Theorem <a href="{% post_url 2023-08-16-comparison-theory %}#thm:rauch-comparison" data-reference-type="ref" data-reference="thm:rauch-comparison">3</a>). We begin with a definition.</p>
+<p>Rauch comparison controls infinitesimal separation along geodesics. Toponogov’s theorem gives a finite comparison: it relates the side lengths and angles of a geodesic triangle to those of a triangle in a constant-curvature surface. It extends the local estimates supplied by the Rauch comparison theorem (Theorem <a href="{% post_url 2023-08-16-comparison-theory %}#thm:rauch-comparison" data-reference-type="ref" data-reference="thm:rauch-comparison">3</a>).</p>
 
 <div id="def:geodesic-triangle" class="definition" data-note-number="1" data-note-kind="Definition">
 <p><strong>Definition 1</strong>.  A <em>geodesic triangle</em> on a differentiable manifold {% raw %}<span class="math inline">\(M\)</span>{% endraw %} is a set of three geodesic segments, each parametrized by arclength, denoted </p>

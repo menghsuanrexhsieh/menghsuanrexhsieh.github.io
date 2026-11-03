@@ -16,7 +16,7 @@ redirect_from: ["/2022/02/05/differentiable-manifolds-and-coordinate-charts/", "
 <h2 data-note-section="1" id="sec:intro">1. Definition of Differentiable Manifolds</h2>
 <p>Calculus on a curved space begins with a local observation: a small piece of a sphere can be described by ordinary Euclidean coordinates. Different descriptions overlap, so we must also know how to change coordinates. A smooth manifold packages these descriptions together with the compatibility needed for differentiation.</p>
 
-<p>We first make this compatibility precise, then examine maps, orientations, and quotient constructions. The examples test the definitions in several ways: spheres admit explicit charts, projective spaces identify points, and Grassmannians use linear maps as coordinates.</p>
+<p>The examples test the definitions in several ways: spheres admit explicit charts, projective spaces identify points, and Grassmannians use linear maps as coordinates.</p>
 
 <div id="def:top-manifold" class="definition" data-note-number="1" data-note-kind="Definition">
 <p><strong>Definition 1</strong>. A topological manifold of dimension {% raw %}<span class="math inline">\(d\)</span>{% endraw %} is a Hausdorff, second-countable space {% raw %}<span class="math inline">\(M\)</span>{% endraw %} such that every {% raw %}<span class="math inline">\(p\in M\)</span>{% endraw %} has an open neighbourhood {% raw %}<span class="math inline">\(U\)</span>{% endraw %} homeomorphic to an open subset {% raw %}<span class="math inline">\(U^{\prime}\subset\mathbb R^d\)</span>{% endraw %}. We write the homeomorphism as {% raw %}<span class="math inline">\(\varphi:U\to U^{\prime}\)</span>{% endraw %}.</p>

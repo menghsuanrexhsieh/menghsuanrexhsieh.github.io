@@ -18,7 +18,7 @@ redirect_from: ["/2022/12/14/second-fundamental-form/", "/2022/12/28/second-fund
 </div>
 <p>An immersed submanifold has two notions of differentiation: differentiation using its own metric and differentiation in the ambient manifold. Orthogonal projection relates them. The tangential part of the ambient derivative gives the induced connection, while the normal part measures how the submanifold bends.</p>
 
-<p>After recalling covering metrics, we define this normal contribution and derive the Gauss equation. It expresses the intrinsic curvature in terms of ambient curvature and the second fundamental form.</p>
+<p>The Gauss equation expresses the intrinsic curvature in terms of ambient curvature and the second fundamental form.</p>
 
 <div id="def:covering-map" class="definition" data-note-number="1" data-note-kind="Definition">
 <p><strong>Definition 1</strong>.  Let {% raw %}<span class="math inline">\(M, \widetilde M\)</span>{% endraw %} be differentiable manifolds. Then, {% raw %}<span class="math inline">\(p : \widetilde M \to M\)</span>{% endraw %} is a <em>covering map</em> if {% raw %}<span class="math inline">\(p\)</span>{% endraw %} is smooth and surjective, and for all {% raw %}<span class="math inline">\(m \in M\)</span>{% endraw %}, there exists a neighbourhood {% raw %}<span class="math inline">\(U = U_m \subset M\)</span>{% endraw %} with {% raw %}<span class="math inline">\(p^{-1} (U) = \bigsqcup_{i \in I} U_i\)</span>{% endraw %}, such that {% raw %}<span class="math inline">\(p|_{U_i}: U_i \to U\)</span>{% endraw %} is a diffeomorphism.</p>

@@ -552,7 +552,7 @@ V-1,&amp;q\ge1.
 \qquad
 y_t=\log q_t=\alpha+\varepsilon r_t(q_t).
 \]</div>{% endraw %}
-<p>The candidate choices are</p>
+<p>The solutions to the first-order condition are</p>
 
 {% raw %}<div class="math display">\[
 \begin{array}{c|cc}
@@ -561,7 +561,7 @@ H=1&amp;-3\varepsilon&amp;(v-2)\varepsilon\\
 H=-1&amp;24-6\varepsilon&amp;24+(v-7)\varepsilon.
 \end{array}
 \]</div>{% endraw %}
-<p>For {% raw %}<span class="math inline">\(\varepsilon\in\{1,2\}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-2&lt;v&lt;2\)</span>{% endraw %}, the first row is strictly below zero and the second strictly above zero. Hence each candidate lies inside its asserted tax segment and satisfies the first-order condition there. Strict concavity makes it the unique global maximizer, ruling out a better choice at the kink or in the other segment. Evaluating the schedules at these optimal choices gives</p>
+<p>For {% raw %}<span class="math inline">\(\varepsilon\in\{1,2\}\)</span>{% endraw %} and {% raw %}<span class="math inline">\(-2&lt;v&lt;2\)</span>{% endraw %}, the first row is strictly below zero and the second strictly above zero. Hence each solution lies inside its asserted tax segment and satisfies the first-order condition there. Strict concavity makes it the unique global maximizer, ruling out a better choice at the kink or in the other segment. Evaluating the schedules at these optimal choices gives</p>
 
 {% raw %}<div class="math display">\[
 X(v)=r_{1,v}(q_1(v))-r_0(q_0)=v+H,

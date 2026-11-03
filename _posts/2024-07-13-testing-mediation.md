@@ -12,8 +12,8 @@ redirect_from: ["/2024/07/13/testing-mediation-principal-strata-and-observable-b
 <div class="note-content" markdown="0">
 
 
-<p>Under full mediation, treatment can change an outcome only by changing the mediator. Individuals whose mediator is unchanged must therefore have unchanged outcomes. Random assignment identifies the outcome-mediator distribution in each treatment arm, and restrictions on mediator movements determine how much of the difference between those distributions can come from movers.</p>
-<p>The analysis follows the experimental model of <span class="citation" data-cites="kwon_testing_2024">Kwon and Roth (<a href="#ref-kwon_testing_2024" role="doc-biblioref">2024</a>)</span> (Section 3), using <a href="https://arxiv.org/html/2404.11739v3">arXiv version 3</a>. The <a href="{% post_url 2024-07-18-sharp-mechanism-bounds-average-effects-and-inference %}">companion post</a> constructs joint distributions attaining the bounds and derives confidence sets.</p>
+<p>Under full mediation, treatment can change an outcome only by changing the mediator. Individuals whose mediator is unchanged must therefore have unchanged outcomes. Random assignment identifies the outcome-mediator distribution in each treatment arm, and restrictions on mediator movements determine how much of the difference between those distributions can come from movers. The exposition below is based on <a href="https://arxiv.org/html/2404.11739v3">Section 3</a> of <span class="citation" data-cites="kwon_testing_2024">Kwon and Roth (<a href="#ref-kwon_testing_2024" role="doc-biblioref">2024</a>)</span>.</p>
+
 <h3 data-note-section="1" id="23-0-principal-strata-and-the-null">1. Potential variables and maintained assumptions</h3>
 <p>Let {% raw %}<span class="math inline">\(D\in\{0,1\}\)</span>{% endraw %} denote treatment. The potential mediator {% raw %}<span class="math inline">\(M(d)\)</span>{% endraw %} takes values in the finite set {% raw %}<span class="math inline">\(\mathcal M=\{m_0,\ldots,m_{K-1}\}\)</span>{% endraw %}, and the potential outcome {% raw %}<span class="math inline">\(Y(d,m)\)</span>{% endraw %} is real-valued. The mediator values may be scalars or vectors. All potential variables are defined on one probability space. Write</p>
 {% raw %}<div class="math display">\[
@@ -224,7 +224,7 @@ P\{Y(0,M(1))\ne Y(0,M(0))\mid\widetilde S_{kk}\}\leq\varepsilon_k.
 \quad\text{for every }k
 \]</div>{% endraw %}
 <p>for one feasible matrix of bin-stratum shares. A bound stated only for each fixed pair {% raw %}<span class="math inline">\((m,m&#x27;)\)</span>{% endraw %} does not automatically supply this bound for the endogenous pair {% raw %}<span class="math inline">\((M(0),M(1))\)</span>{% endraw %}. The within-bin assumption and any movement restrictions must be justified for the binned mediator being analyzed.</p>
-<p>The <a href="{% post_url 2024-07-18-sharp-mechanism-bounds-average-effects-and-inference %}">next post</a> constructs a joint potential-outcome law attaining the affected-mass bounds and states the paper’s moment-inequality formulation for inference.</p>
+
 <h3 data-note-section="8" id="23-0-appendix-minimum-stayers">8. Appendix: simultaneous minimum stayer shares</h3>
 <div class="proof">
 <p><strong>Proof.</strong> Under monotonicity, every unit with {% raw %}<span class="math inline">\(M(1)\leq m_k\)</span>{% endraw %} also has {% raw %}<span class="math inline">\(M(0)\leq m_k\)</span>{% endraw %}, proving the necessary cumulative inequalities. Moreover,</p>

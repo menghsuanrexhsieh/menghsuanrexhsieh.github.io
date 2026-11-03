@@ -259,7 +259,7 @@ T(A,f;\rho)
 <h3 data-note-section="4" id="24-0-construction">4. Construction and coverage of the tF procedure</h3>
 <p><span id="24-0-the-main-inference-result"></span></p>
 
-<p>For a measurable candidate critical-value function {% raw %}<span class="math inline">\(k:[0,\infty)\to(0,\infty]\)</span>{% endraw %}, define its null rejection probability in the Gaussian experiment by</p>
+<p>For a measurable critical-value function {% raw %}<span class="math inline">\(k:[0,\infty)\to(0,\infty]\)</span>{% endraw %}, define its null rejection probability in the Gaussian experiment by</p>
 
 {% raw %}<span id="eq:tf-size-function"></span><div class="math display">\[
 r_k(f_0,\rho)
@@ -309,7 +309,7 @@ T(A,f;1)=\frac{f^2(f-f_0)^2}{f_0^2}.
 <p>The <a href="#24-0-curve-proof">construction appendix</a> states the scope of that result and derives the map used to extend the curve. The expansion is local; evaluating its leading terms at an arbitrary {% raw %}<span class="math inline">\(F\)</span>{% endraw %} is not an implementation of the {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} test.</p>
 
 <h4 data-note-section="4.2" id="24-0-plateau">4.2. The decreasing segment and the plateau</h4>
-<p>The paper considers functions that are infinite on {% raw %}<span class="math inline">\(F\leq q_\alpha\)</span>{% endraw %}, decrease on an interval immediately above {% raw %}<span class="math inline">\(q_\alpha\)</span>{% endraw %}, and then become constant. Online Appendix B.2, Propositions 1 and 2, establish that its candidate class is nonempty and that two candidates agree wherever both decrease. Their plateau locations can differ. The {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} choice uses the lowest plateau consistent with the size restriction and the construction’s acceptance-region condition.</p>
+<p>The paper considers functions that are infinite on {% raw %}<span class="math inline">\(F\leq q_\alpha\)</span>{% endraw %}, decrease on an interval immediately above {% raw %}<span class="math inline">\(q_\alpha\)</span>{% endraw %}, and then become constant. Online Appendix B.2, Propositions 1 and 2, establish that the specified function class is nonempty and that two functions in that class agree wherever both decrease. Their plateau locations can differ. The {% raw %}<span class="math inline">\(tF\)</span>{% endraw %} choice uses the lowest plateau consistent with the size restriction and the construction’s acceptance-region condition.</p>
 
 <p>For the published calibrations, the relevant values are:</p>
 
@@ -354,7 +354,7 @@ T(A,f;1)=\frac{f^2(f-f_0)^2}{f_0^2}.
 \frac{(\widehat\beta-\beta_0)^2}{\widehat s_\beta^2}
 &gt;c_\alpha(\widehat F).
 \]</div>{% endraw %}
-<p>On all other samples, do not reject any candidate coefficient and set the confidence set to {% raw %}<span class="math inline">\(\mathbb R\)</span>{% endraw %}. For the convergence argument, assign {% raw %}<span class="math inline">\(\widehat t=\widehat F=0\)</span>{% endraw %} on these samples. This convention avoids evaluating an undefined IV estimate or standard error.</p>
+<p>On all other samples, do not reject any coefficient value and set the confidence set to {% raw %}<span class="math inline">\(\mathbb R\)</span>{% endraw %}. For the convergence argument, assign {% raw %}<span class="math inline">\(\widehat t=\widehat F=0\)</span>{% endraw %} on these samples. This convention avoids evaluating an undefined IV estimate or standard error.</p>
 
 <p>Because {% raw %}<span class="math inline">\(\widehat\beta\)</span>{% endraw %}, {% raw %}<span class="math inline">\(\widehat s_\beta\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\widehat F\)</span>{% endraw %} do not change with the hypothesized value {% raw %}<span class="math inline">\(\beta_0\)</span>{% endraw %}, inversion gives</p>
 
@@ -435,7 +435,7 @@ a_{0.05}(10)
 <h3 data-note-section="6" id="24-0-ar-comparison">6. Anderson–Rubin confidence sets and interval length</h3>
 <p><span id="24-0-inverting-andersonrubin-for-comparison"></span></p>
 
-<p>Anderson–Rubin inference tests a candidate coefficient {% raw %}<span class="math inline">\(b\)</span>{% endraw %} using the reduced-form null score</p>
+<p>Anderson–Rubin inference tests a hypothesized coefficient value {% raw %}<span class="math inline">\(b\)</span>{% endraw %} using the reduced-form null score</p>
 
 {% raw %}<div class="math display">\[
 \widehat A(b)=
@@ -676,14 +676,14 @@ F_+&amp;=r^2,\\
 \]</div>{% endraw %}
 <p>then the two solutions coincide on some neighborhood of the boundary. This uniqueness is restricted to solutions of the functional equation with the stated remainder. The paper proves Lemma 9 by transforming the equation into an invariant-curve problem for a degenerate map. We use that lemma for existence and local uniqueness; its invariant-curve proof is in the supplement.</p>
 
-<p>The candidate class in online Appendix B.1 has four restrictions. Write {% raw %}<span class="math inline">\(\widetilde c(F;\overline F)\)</span>{% endraw %} for a candidate with plateau point {% raw %}<span class="math inline">\(\overline F\)</span>{% endraw %}. It is continuous and positive for {% raw %}<span class="math inline">\(F&gt;q_\alpha\)</span>{% endraw %}, strictly decreasing up to {% raw %}<span class="math inline">\(\overline F\)</span>{% endraw %}, and constant thereafter. Put</p>
+<p>The class of critical-value functions in online Appendix B.1 has four restrictions. Write {% raw %}<span class="math inline">\(\widetilde c(F;\overline F)\)</span>{% endraw %} for a function with plateau point {% raw %}<span class="math inline">\(\overline F\)</span>{% endraw %}. It is continuous and positive for {% raw %}<span class="math inline">\(F&gt;q_\alpha\)</span>{% endraw %}, strictly decreasing up to {% raw %}<span class="math inline">\(\overline F\)</span>{% endraw %}, and constant thereafter. Put</p>
 
 {% raw %}<div class="math display">\[
 \overline f_0=
 \frac{\overline F}
 {\sqrt{\overline F}+\sqrt{\widetilde c(\overline F;\overline F)}}.
 \]</div>{% endraw %}
-<p>The candidate must give rejection probability exactly {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} at {% raw %}<span class="math inline">\(|\rho|=1\)</span>{% endraw %} for {% raw %}<span class="math inline">\(0&lt;|f_0|&lt;\overline f_0\)</span>{% endraw %}. Its acceptance set in {% raw %}<span class="math inline">\(f\)</span>{% endraw %} must be a single interval for {% raw %}<span class="math inline">\(0&lt;|f_0|\leq\overline f_0\)</span>{% endraw %}. Finally, it must satisfy the preceding expansion with the {% raw %}<span class="math inline">\(o((F-q_\alpha)^{1/3})\)</span>{% endraw %} remainder. The single-interval and expansion-remainder restrictions delimit the extension and the uniqueness class. Within that class, the authors choose the largest admissible plateau point subject also to the full size restriction. Since the common segment decreases, this selects the lowest admissible plateau.</p>
+<p>The function must give rejection probability exactly {% raw %}<span class="math inline">\(\alpha\)</span>{% endraw %} at {% raw %}<span class="math inline">\(|\rho|=1\)</span>{% endraw %} for {% raw %}<span class="math inline">\(0&lt;|f_0|&lt;\overline f_0\)</span>{% endraw %}. Its acceptance set in {% raw %}<span class="math inline">\(f\)</span>{% endraw %} must be a single interval for {% raw %}<span class="math inline">\(0&lt;|f_0|\leq\overline f_0\)</span>{% endraw %}. Finally, it must satisfy the preceding expansion with the {% raw %}<span class="math inline">\(o((F-q_\alpha)^{1/3})\)</span>{% endraw %} remainder. The single-interval and expansion-remainder restrictions delimit the extension and the uniqueness class. Within that class, the authors choose the largest admissible plateau point subject also to the full size restriction. Since the common segment decreases, this selects the lowest admissible plateau.</p>
 
 <p>The critical value diverges from above and is defined to be infinite at and below the boundary:</p>
 

@@ -177,7 +177,7 @@ b_m^2=\eta Qm^{-(2\beta+1)},\qquad
 \le(2m)^{2\beta}m b_m^2
 =2^{2\beta}\eta Q\le Q.
 \]</div>{% endraw %}
-<p>Every candidate therefore belongs to the ellipsoid. Choose the vectors {% raw %}<span class="math inline">\(\omega^{(0)},\ldots,\omega^{(M)}\)</span>{% endraw %} from Lemma 1, including {% raw %}<span class="math inline">\(\omega^{(0)}=0\)</span>{% endraw %}. Their squared separation is</p>
+<p>Every constructed sequence therefore belongs to the ellipsoid. Choose the vectors {% raw %}<span class="math inline">\(\omega^{(0)},\ldots,\omega^{(M)}\)</span>{% endraw %} from Lemma 1, including {% raw %}<span class="math inline">\(\omega^{(0)}=0\)</span>{% endraw %}. Their squared separation is</p>
 {% raw %}<div class="math display">\[
 \|\theta^{\omega^{(j)}}-\theta^{\omega^{(k)}}\|_{\ell^2}^2
 =b_m^2H(\omega^{(j)},\omega^{(k)})\ge\frac{m b_m^2}{8}.

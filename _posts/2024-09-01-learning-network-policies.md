@@ -11,7 +11,7 @@ redirect_from: ["/2024/09/01/learning-network-policies-nuisance-estimation-regre
 
 <div class="note-content" markdown="0">
 
-<p>When exposure probabilities are estimated, inverse weighting inherits their estimation error. An outcome regression can reduce that error, provided the correction uses both estimates in the right combination. For the network-policy score in <span class="citation" data-cites="viviano_policy_2025"><a href="#ref-viviano_policy_2025" role="doc-biblioref">Viviano (2025)</a></span>, the leading bias is a product of the two errors. Learning a policy requires this cancellation to hold uniformly over the exposures that candidate rules can induce.</p>
+<p>When exposure probabilities are estimated, inverse weighting inherits their estimation error. An outcome regression can reduce that error, provided the correction uses both estimates in the right combination. For the network-policy score in <span class="citation" data-cites="viviano_policy_2025"><a href="#ref-viviano_policy_2025" role="doc-biblioref">Viviano (2025)</a></span>, the leading bias is a product of the two errors. Learning a policy requires this cancellation to hold uniformly over the exposures that rules in the policy class can induce.</p>
 
 <h3 data-note-section="1" id="10-628-the-augmented-score">1. The augmented score</h3>
 <p>For a rule {% raw %}<span class="math inline">\(\pi\)</span>{% endraw %}, let {% raw %}<span class="math inline">\(m_i(\pi)\)</span>{% endraw %} be the conditional mean outcome at its induced own treatment and peer exposure. Define</p>
@@ -21,7 +21,7 @@ redirect_from: ["/2024/09/01/learning-network-policies-nuisance-estimation-regre
 \left[\widehat m_i(\pi)+\frac{I_i(\pi)}{\widehat e_i(\pi)}
 (Y_i-\widehat m_i(\pi))\right].
 \]</div>{% endraw %}
-<p>For each candidate rule, first calculate the exposure it would induce. Evaluate both nuisance functions at that exposure. Evaluating them only at the observed exposure would fail to evaluate the candidate intervention.</p>
+<p>For each policy rule, first calculate the exposure it would induce. Evaluate both nuisance functions at that exposure. Evaluating them only at the observed exposure would fail to evaluate that intervention.</p>
 
 <div id="network-policy-nuisance" class="theorem" data-note-number="1" data-note-kind="Theorem">
 <p><strong>Theorem 1</strong>. Under the paper’s interference, sampling, local-dependence, overlap, boundedness, and network cross-fitting conditions, the learned policy has expected regret</p>
@@ -66,7 +66,7 @@ W(\pi^*)-W(\widehat\pi)
 \left|\mathbb{E}\left[\widehat m+\frac I{\widehat e}(Y-\widehat m)\right]-m\right|
 \leq\kappa^{-1}|\widehat e-e|\,|\widehat m-m|.
 \]</div>{% endraw %}
-<p>Averaging and applying Cauchy–Schwarz gives a bound by {% raw %}<span class="math inline">\(\kappa^{-1}r_er_m\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(r_e,r_m\)</span>{% endraw %} are the relevant average {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} errors. For policy learning this control must hold uniformly over exposures induced by candidate rules, or through error measures strong enough to bound their supremum. Good prediction at commonly observed cells alone need not control the rare cells chosen by an optimizing rule.</p>
+<p>Averaging and applying Cauchy–Schwarz gives a bound by {% raw %}<span class="math inline">\(\kappa^{-1}r_er_m\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(r_e,r_m\)</span>{% endraw %} are the relevant average {% raw %}<span class="math inline">\(L^2\)</span>{% endraw %} errors. For policy learning, this control must hold uniformly over exposures induced by rules in the policy class, or through error measures strong enough to bound their supremum. Good prediction at commonly observed cells alone need not control the rare cells chosen by an optimizing rule.</p>
 
 <p>Split estimated-welfare error into a centered empirical fluctuation and this conditional bias. The <a href="{% post_url 2024-06-10-network-policy-targeting %}">oracle concentration argument</a> controls the first part under network separation and boundedness; the product bound controls the second. Inserting their sum into the basic regret inequality yields the oracle term, the nuisance-product term, and any optimization gap. The paper’s {% raw %}<span class="math inline">\(\mathcal R_n,\mathcal B_n\)</span>{% endraw %} encode the corresponding uniform error measures and network factors.</p>
 
@@ -77,10 +77,10 @@ W(\pi^*)-W(\widehat\pi)
 
 <p>The calculation {% raw %}<span class="math inline">\(\mathbb{E}[IY\mid\text{training information}]=em\)</span>{% endraw %} requires the training information to be conditionally separated from the evaluation contribution in the stipulated model. Removing a network buffer or constructing independent color classes can supply this separation under local-dependence assumptions. It reduces the available training data, and the larger dependence neighborhood must be reflected in the rate calculation.</p>
 
-<p>Causal exposure and disturbance dependence need not have the same radius. Outcomes may depend causally on immediate neighbors’ treatments while unobservables remain related over several graph steps. The training separation must follow the disturbance-dependence radius when it is larger. The paper’s extension to {% raw %}<span class="math inline">\(M\)</span>{% endraw %}-step dependence adds an oracle factor of order {% raw %}<span class="math inline">\(M\mathcal{N}_n^{M/2-1}\)</span>{% endraw %}, together with its strengthened boundedness and nuisance conditions.</p>
+<p>Causal exposure and disturbance dependence need not have the same radius. Outcomes may depend causally on immediate neighbors’ treatments while unobservables remain related over several graph steps. The training separation must follow the disturbance-dependence radius when it is larger. The paper’s extension to {% raw %}<span class="math inline">\(M\)</span>{% endraw %}-step dependence multiplies the oracle term by a factor of order {% raw %}<span class="math inline">\(M\mathcal{N}_n^{M/2-1}\)</span>{% endraw %}. Its nuisance term is different: without that cross-fitting construction, the bound uses {% raw %}<span class="math inline">\(\delta_n^{-1}\sqrt{\max\{\widetilde{\mathcal R}_n,\widetilde{\mathcal B}_n\}}\)</span>{% endraw %}, where the errors are measured relative to pseudo-true functions. The result requires at least one of those functions to be correct, as well as the stated boundedness, overlap, and dependence conditions.</p>
 
 <h3 data-note-section="7" id="10-628-trimming-trades-weight-size-against-missing-welfare">7. Trimming trades weight size against missing welfare</h3>
-<p>Let {% raw %}<span class="math inline">\(W_\kappa(\pi)\)</span>{% endraw %} retain only contributions whose exposure probabilities exceed {% raw %}<span class="math inline">\(\kappa\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(|Y|\leq\Gamma\)</span>{% endraw %},</p>
+<p>Let {% raw %}<span class="math inline">\(W_\kappa(\pi)\)</span>{% endraw %} retain only contributions whose exposure probabilities are at least {% raw %}<span class="math inline">\(\kappa\)</span>{% endraw %}. For {% raw %}<span class="math inline">\(|Y|\leq\Gamma\)</span>{% endraw %},</p>
 
 {% raw %}<div class="math display">\[
 \sup_\pi|W(\pi)-W_\kappa(\pi)|

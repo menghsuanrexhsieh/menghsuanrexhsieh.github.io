@@ -29,7 +29,7 @@ W_n=\frac1{\sqrt{pRb}}\sum_{r=1}^R\sum_{j=1}^b Z_{\pi_r(j)}.
 
 <p>The inverse square root is symmetric. All inverse-covariance expressions are understood on the nonsingularity event, which the maintained assumptions must give probability tending to one. Conditional on the data, {% raw %}<span class="math inline">\(W_n\)</span>{% endraw %} is centered and has covariance {% raw %}<span class="math inline">\((n-b)I_p/[p(n-1)]\)</span>{% endraw %}. Its variation is of order one when {% raw %}<span class="math inline">\(b/n\to0\)</span>{% endraw %}.</p>
 
-<p>Song uses {% raw %}<span class="math inline">\(T_M(\mu)=S_M(\mu)-Rb/n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(T_U(\mu)=S_U(\mu)-\sqrt R(b-1)/n\)</span>{% endraw %}. Their reference distributions are generated with the empirical center {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}. To compare a candidate statistic with its reference, use the same permutations for both centerings. Expanding gives the exact identities</p>
+<p>Song uses {% raw %}<span class="math inline">\(T_M(\mu)=S_M(\mu)-Rb/n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(T_U(\mu)=S_U(\mu)-\sqrt R(b-1)/n\)</span>{% endraw %}. Their reference distributions are generated with the empirical center {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}. To compare the statistic at the hypothesized mean with its reference, use the same permutations for both centerings. Expanding gives the exact identities</p>
 
 {% raw %}<div class="math display">\[
 \begin{aligned}
@@ -296,7 +296,7 @@ R_Mb_M\asymp n\omega_n^2,
 
 <p>The reference simulations retain the empirical center {% raw %}<span class="math inline">\(\overline X\)</span>{% endraw %}, so increasing {% raw %}<span class="math inline">\(L\)</span>{% endraw %} cannot relax the restrictions on {% raw %}<span class="math inline">\(R,b\)</span>{% endraw %}. Repeating an entire test and combining its decisions requires a separate calibration argument; Song’s confidence-function procedure is one such construction.</p>
 
-<p>The <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">next post</a> fixes the number of observations drawn per repetition at one for M and two for U. This makes it possible to prove the conditional limit from empirical moment conditions alone and to construct a test for moment inequalities. Its practical tuning rule balances drift against detection scale, a different criterion from matching size-error orders here.</p>
+<p>The <a href="{% post_url 2024-12-09-dependence-robust-resampling-and-moment-tests %}">fixed-subsample resampling method</a> fixes the number of observations drawn per repetition at one for M and two for U. This makes it possible to prove the conditional limit from empirical moment conditions alone and to construct a test for moment inequalities. Its practical tuning rule balances drift against detection scale, a different criterion from matching size-error orders here.</p>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-song_ordering-free_2018" class="csl-entry" role="listitem">

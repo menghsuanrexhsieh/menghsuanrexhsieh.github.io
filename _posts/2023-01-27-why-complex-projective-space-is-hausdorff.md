@@ -19,7 +19,7 @@ redirect_from: ["/2024/05/14/why-complex-projective-space-is-hausdorff/"]
 
 </div>
 <h3 data-note-section="1" id="app:CPn-hausdorff">1. Proof that {% raw %}<span class="math inline">\(\mathbb CP^n\)</span>{% endraw %} is Hausdorff</h3>
-<p>We prove the separation property directly from the quotient construction. We first collect the compactness and separation facts used in the quotient argument.</p>
+
 
 <div id="lem:hausdorff-facts" class="lemma" data-note-number="1" data-note-kind="Lemma">
 <p><strong>Lemma 1</strong>.  </p>

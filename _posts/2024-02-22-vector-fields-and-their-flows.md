@@ -13,7 +13,7 @@ redirect_from: ["/2024/02/22/vector-fields/", "/2024/03/07/flows-on-vector-field
 
 <p>A vector field assigns an infinitesimal direction of motion at each point. An integral curve follows those directions, and a flow collects the integral curves for all starting points. The passage from a field to its flow is governed locally by ordinary differential equations; global existence requires additional control.</p>
 
-<p>We first describe vector fields as sections and as derivations on smooth functions. We then examine how smooth maps carry integral curves, and use uniqueness to obtain the composition law for a flow.</p>
+
 
 <div id="app:flows" data-note-section="title">
 
