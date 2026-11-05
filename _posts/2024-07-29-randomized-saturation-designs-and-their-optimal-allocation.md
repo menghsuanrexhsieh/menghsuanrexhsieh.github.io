@@ -237,63 +237,6 @@ n\rho=\frac{2(1-\rho)(2x-1)}{(1-x)^2},
 {1+\sqrt{1+n\rho/[2(1-\rho)]}}}.
 \]</div>{% endraw %}
 </div>
-<p><strong>A discrepancy in the published formula.</strong> Proposition 2 on page 850 of the <a href="https://drive.google.com/file/d/1_hJqhjK9Jb1XWG2yXrr0k0Xu0ozmEvbH/view">published article</a> prints {% raw %}<span class="math inline">\(n\rho/[8(1-\rho)]\)</span>{% endraw %} on the left. Its proof on page 860 gives the reduced objective</p>
-
-{% raw %}<div class="math display">\[
-G(x)=\frac{n\rho}{x}+\frac{8(1-\rho)}{x(1-x)}.
-\]</div>{% endraw %}
-<p>Differentiating {% raw %}<span class="math inline">\(G\)</span>{% endraw %} does give the printed denominator 8. The discrepancy is in the reduction to {% raw %}<span class="math inline">\(G\)</span>{% endraw %}: equation (4) gives {% raw %}<span class="math inline">\(4n\rho+8(1-\rho)/(1-x)\)</span>{% endraw %} inside the variance brackets, and dividing both terms by four gives {% raw %}<span class="math inline">\(F\)</span>{% endraw %}, with coefficient 2 on the individual-variance term. The appendix’s reduced objective has four times that relative weight. A common multiplicative constant cannot reconcile the objectives when {% raw %}<span class="math inline">\(\rho&gt;0\)</span>{% endraw %}. The paper explicitly defines {% raw %}<span class="math inline">\(\Delta=p_2-p_1\)</span>{% endraw %}, so a half-gap convention does not explain the difference either.</p>
-
-<p>A direct check rules out the printed gap. If {% raw %}<span class="math inline">\(x_{\mathrm{printed}}\)</span>{% endraw %} solves the paper’s equation, then</p>
-
-{% raw %}<div class="math display">\[
-\frac{2x_{\mathrm{printed}}-1}{(1-x_{\mathrm{printed}})^2}
-=\frac{n\rho}{8(1-\rho)},
-\qquad
-F&#x27;(x_{\mathrm{printed}})
-=-\frac{3n\rho}{4x_{\mathrm{printed}}^2}&lt;0
-\quad\text{when }0&lt;\rho&lt;1.
-\]</div>{% endraw %}
-<p>Increasing the gap therefore still reduces the sum of standard errors at the printed solution. For example, take {% raw %}<span class="math inline">\(n=100\)</span>{% endraw %}, {% raw %}<span class="math inline">\(C=100\)</span>{% endraw %}, and {% raw %}<span class="math inline">\(\tau^2+\sigma^2=1\)</span>{% endraw %} with {% raw %}<span class="math inline">\(\rho=0.1\)</span>{% endraw %}. Evaluating equation (4) in the continuous relaxation gives:</p>
-
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;">Gap equation</th>
-<th style="text-align: right;">Lower saturation</th>
-<th style="text-align: right;">Upper saturation</th>
-<th style="text-align: right;">Gap</th>
-<th style="text-align: right;">Sum of slope standard errors</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Derived from equation (4), denominator 2</td>
-<td style="text-align: right;">0.075992</td>
-<td style="text-align: right;">0.924008</td>
-<td style="text-align: right;">0.848016</td>
-<td style="text-align: right;">0.191070</td>
-</tr>
-<tr>
-<td style="text-align: left;">Printed Proposition 2, denominator 8</td>
-<td style="text-align: right;">0.110396</td>
-<td style="text-align: right;">0.889604</td>
-<td style="text-align: right;">0.779208</td>
-<td style="text-align: right;">0.196027</td>
-</tr>
-</tbody>
-</table>
-<p>The printed formula gives a smaller gap and about 2.59% larger standard-error sum in this example. Both formulas agree at {% raw %}<span class="math inline">\(\rho=0\)</span>{% endraw %}, where {% raw %}<span class="math inline">\(\Delta=1/\sqrt2\)</span>{% endraw %}, and both approach one as {% raw %}<span class="math inline">\(\rho\uparrow1\)</span>{% endraw %}; those limiting checks alone do not detect the error.</p>
-
-<p>The coefficient 2 in this note is an algebraic correction derived from the paper’s stated variance formula. A search for an erratum or corrigendum on October 24, 2026, using the paper’s title and DOI, its <a href="https://api.crossref.org/works/10.1162/rest_a_00716">Crossref record</a>, and the publication pages of <a href="https://www.aislinnbohren.com/">Bohren</a> and <a href="https://sites.google.com/site/decrgberkozler/publications">Özler</a>, located no correction. The publisher’s article page was unavailable for direct inspection. This check does not establish that no erratum exists, and the correction here should not be attributed to the authors.</p>
-
 <p>When {% raw %}<span class="math inline">\(\sigma^2=0\)</span>{% endraw %}, variance falls as the gap increases. A finite experiment that must estimate both slopes still needs treated and untreated individuals at both saturations, giving extreme feasible values {% raw %}<span class="math inline">\(1/n\)</span>{% endraw %} and {% raw %}<span class="math inline">\(1-1/n\)</span>{% endraw %}. With {% raw %}<span class="math inline">\(\sigma^2&gt;0\)</span>{% endraw %}, cells that become too small make the idiosyncratic variance grow. Integer counts and cluster shares should be chosen by evaluating the objective over feasible designs near the continuous optimum.</p>
 
 <h3 data-note-section="5" id="10-406-why-varying-saturation-costs-precision-for-pooled-effects">5. Why varying saturation costs precision for pooled effects</h3>
